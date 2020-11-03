@@ -21,7 +21,7 @@ class CategoriesTableSeeder extends Seeder
             'parent_id'     =>  null,
             'menu'          =>  0,
         ]);
-        \App\Models\Category::factory(10)->create(); 
+        // \App\Models\Category::factory(10)->create(); 
 
  
     }
