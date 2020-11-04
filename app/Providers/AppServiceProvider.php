@@ -33,8 +33,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     { 
      
-       // config(['services.stripe.key'=>Setting::get('stripe_key')]);
-        // config(['services.stripe.secret'=>Setting::get('stripe_secret_key')]);
+       config(['services.stripe.key'=>Setting::get('stripe_key')]);
+        config(['services.stripe.secret'=>Setting::get('stripe_secret_key')]);
         
         // Inertia::share([  
         //     "SiteOptions" => [

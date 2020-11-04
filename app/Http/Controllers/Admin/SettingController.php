@@ -35,44 +35,30 @@ class SettingController extends Controller
      */
     public function update(Request $request)
     { 
-        
-        $OldSiteLogo =  config('settings.site_logo');        
+ 
+
+      
+
+            if($request->hasFile('site_logo')){             
+                $OldSiteLogo =  config('settings.site_logo');        
+                $NewPath = $request->file('site_logo')->store('public/setting');  
+                if(Storage::exists($OldSiteLogo)){
+                    Storage::delete($OldSiteLogo);
+                }  
+                Setting::set('site_logo', $NewPath);             
+            } 
     
-        if($request->hasFile('site_logo')){             
-            $NewPath = $request->file('site_logo')->store('public/setting');  
-            if(Storage::exists($OldSiteLogo)){
-                Storage::delete($OldSiteLogo);
-            }  
-            Setting::set('site_logo', $NewPath);             
-        } 
 
-        $OldSiteFavicon =  config('settings.site_favicon');      
-
-        if($request->hasFile('site_favicon')){             
-            $NewPath = $request->file('site_favicon')->store('public/setting');  
-            if(Storage::exists($OldSiteFavicon)){
-                Storage::delete($OldSiteFavicon);
-            }  
-            Setting::set('site_favicon', $NewPath);             
-        } 
-
-        // if ($request->has('site_logo') && ($request->file('site_logo') ) {
-
-        //     if (config('settings.site_logo') != null) {
-        //         $this->deleteOne(config('settings.site_logo'));
-        //     }
-        //     $logo = $this->uploadOne($request->file('site_logo'), 'img');
-        //     Setting::set('site_logo', $logo);
-
-        // } elseif ($request->has('site_favicon') && ($request->file('site_favicon') instanceof UploadedFile)) {
-
-        //     if (config('settings.site_favicon') != null) {
-        //         $this->deleteOne(config('settings.site_favicon'));
-        //     }
-        //     $favicon = $this->uploadOne($request->file('site_favicon'), 'img');
-        //     Setting::set('site_favicon', $favicon);
-
-        // } else {
+        
+            if($request->hasFile('site_favicon')){             
+                $OldSiteFavicon =  config('settings.site_favicon');      
+                $NewPath = $request->file('site_favicon')->store('public/setting');  
+                if(Storage::exists($OldSiteFavicon)){
+                    Storage::delete($OldSiteFavicon);
+                }  
+                Setting::set('site_favicon', $NewPath);             
+            } 
+ 
 
             $settings = $request->except(['_method','site_favicon','site_logo']);
 
@@ -80,7 +66,7 @@ class SettingController extends Controller
             { 
                 Setting::set($key, $setting);
             }
-        // }
+     
         return back()->with('success', 'Successfull ! settings updated');
 
     }

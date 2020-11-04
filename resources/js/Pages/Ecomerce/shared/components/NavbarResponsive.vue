@@ -60,41 +60,31 @@
             <nav class="slicknav_nav slicknav_hidden mobile-menu">
     
                 <ul>
-    
-                    <cus-nav-link href="/" :active="path == '/'">
-                        Home
-                    </cus-nav-link>    
+                
+                    <cus-nav-link 
+                        :href="$route('welcome')" 
+                        :active="$page.currentRouteName == 'welcome'" 
+                    >Home</cus-nav-link>
 
-                    <cus-nav-link href="/shop" :active="path == '/shop'">
-                        shop
-                    </cus-nav-link>                      
-  
+                    <cus-nav-link  
+                        :href="$route('shop')" 
+                        :active="$page.currentRouteName == 'shop'" 
+                    >Shop</cus-nav-link>                     
 
-                    <cus-nav-link href="/shop-details" :active="path == '/shop-details'">
-                        Shop Details
-                    </cus-nav-link>                      
+                    <cus-nav-link 
+                        :href="$route('blog')" 
+                        :active="$page.currentRouteName == 'blog'" 
+                    >Blog</cus-nav-link>                    
 
-                    <cus-nav-link href="/shopping-cart" :active="path == '/shopping-cart'">
-                        Shoping Cart
-                    </cus-nav-link>                      
+                    <cus-nav-link 
+                        :href="$route('blog.details')" 
+                        :active="$page.currentRouteName == 'blog.details'" 
+                    >Blog Details</cus-nav-link>             
 
-                    <cus-nav-link href="/checkout" :active="path == '/checkout'">
-                        Check Out
-                    </cus-nav-link>                      
-
-                    <cus-nav-link href="/blog-details" :active="path == '/blog-details'">
-                        Blog Details
-                    </cus-nav-link>                      
-
-  
-                    <cus-nav-link href="/blog" :active="path == '/Blog'">
-                        Blog
-                    </cus-nav-link>                      
- 
-                    
-                    <cus-nav-link href="/contact" :active="path == '/Contactshop'">
-                        Contact
-                    </cus-nav-link>                      
+                    <cus-nav-link 
+                        :href="$route('contact')" 
+                        :active="$page.currentRouteName == 'contact'"
+                    >Contact</cus-nav-link>              
 
  
                 </ul>
