@@ -4,7 +4,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'name' => Str::random(10),
                 'email' => Str::random(10).'@gmail.com',
                 'email_verified_at' => now(),
-                'is_admin' => ($i==0)?'1':'0',
+                'is_admin' => ($i==0)?1:0,
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
             ]);
