@@ -20,6 +20,7 @@ class CategoryController extends Controller
     {
         $Category = new Category;
         $Categories = $Category->orderBy('name')->get(); 
+
         return Inertia::render('Admin/category/Index',compact('Categories'));
     }
  
@@ -28,7 +29,6 @@ class CategoryController extends Controller
         $Category = new Category;
         $Categories = $Category->all();  
         return Inertia::render('Admin/category/Create',compact('Categories'));
- 
     }
  
     public function store(Request $request)

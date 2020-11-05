@@ -35,7 +35,10 @@ export default {
     value: String,
     label: String,
     error: String,
-    labelRequire:Boolean,
+    labelRequire:{
+        type:Boolean,
+        default:false,
+    },
   },
   methods: {
     focus() {
