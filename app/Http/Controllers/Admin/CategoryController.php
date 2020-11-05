@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $Category = new Category;
-        $Categories = $Category->orderBy('name')->get(); 
+        $Categories = $Category->all(); 
 
         return Inertia::render('Admin/category/Index',compact('Categories'));
     }
