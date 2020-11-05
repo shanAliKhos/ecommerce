@@ -34,10 +34,8 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
 
-        $this->validate($request, [
-            'name'      =>  'required|unique:categories|min:2|max:255',
-            'image'     =>  'mimes:jpg,jpeg,png|max:1000'
-        ]); 
+        $this->validate($request->name,'required|unique:categories|min:2|max:255'); 
+        // $this->validate($request->image, 'mimes:jpg,jpeg,png|max:1000'); 
         
         $Category = new Category; 
         if ($request->hasFile('image')) {

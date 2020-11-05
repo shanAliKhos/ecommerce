@@ -121,7 +121,7 @@ export default {
             data.append('parent_id', self.form.parent_id || '')
             data.append('is_featured', self.form.is_featured || '')
             data.append('menu', self.form.menu || '')
-            data.append('image', self.form.image || '') 
+            data.append('image', self.form.image || null) 
             data.append('is_active', self.form.is_active || '') 
 
             self.$inertia.post(route('admin.category.store'), data, {
