@@ -36,8 +36,7 @@ class CategoryController extends Controller
 
         $this->validate($request, [
             'name'      =>  'required|unique:categories|min:2|max:255',
-            'parent_id' =>  'required',
-            'image'     =>  'required|mimes:jpg,jpeg,png|max:1000'
+            'image'     =>  'mimes:jpg,jpeg,png|max:1000'
         ]); 
         
         $Category = new Category; 
