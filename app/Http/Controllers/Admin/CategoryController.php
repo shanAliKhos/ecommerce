@@ -53,7 +53,7 @@ class CategoryController extends Controller
         $Category->is_active = $request->is_active?1:0; 
         $Category->save();
 
-        return back()->with('success','success ! Category Created');
+        return redirect()->route('admin.category.index')->with('success','success ! Category Created');
         
     }
  
