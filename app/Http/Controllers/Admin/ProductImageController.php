@@ -20,6 +20,7 @@ class ProductImageController extends Controller
     public function UploadProductImage(Product $Product ,ProductImage $ProductImage,Request $request)
     {
         $path = $request->file('file')->store('public/Products');
+        dd($path);
         if(!$Product->image){
             $Product->image = $path;
             $Product->save();
