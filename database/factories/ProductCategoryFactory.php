@@ -23,7 +23,7 @@ class ProductCategoryFactory extends Factory
     {
         return [
             'category_id'=>rand(2,11),
-            'product_id'=>rand(1,100),
+            'product_id'=>rand(1,50),
         ];
     }
 }

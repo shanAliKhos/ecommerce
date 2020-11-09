@@ -20,9 +20,6 @@ class CategoriesTableSeeder extends Seeder
             'description'   =>  'This is the root category, don\'t delete this one',
             'parent_id'     =>  null,
             'menu'          =>  0,
-        ]);
-        // \App\Models\Category::factory(10)->create(); 
-
- 
+        ]);  
     }
 }
