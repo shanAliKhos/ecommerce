@@ -18,7 +18,7 @@ class ProductCategorySeeder extends Seeder
         
         for ($i=1; $i <= 50; $i++) {
 
-            DB::table('product_attributes')->insert([
+            ProductCategory::create([
                 'category_id'=>rand(2,11),
                 'product_id'=>rand(1,50),
             ]);
