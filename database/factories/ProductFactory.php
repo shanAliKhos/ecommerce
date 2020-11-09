@@ -23,7 +23,7 @@ class ProductFactory extends Factory
     {
         return [ 
             'name'=>$this->faker->name,
-            'brand_id'=>  rand(1,20),
+            'brand_id'=>  rand(1,10),
             'slug'=>  $this->faker->unique()->slug,
             'description'=> $this->faker->realText(100),
             'image'=> 'img/product/product-'.rand(1,12).'.jpg',
