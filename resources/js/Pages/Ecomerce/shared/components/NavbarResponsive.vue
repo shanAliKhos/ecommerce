@@ -6,55 +6,44 @@
         <div class="humberger__menu__wrapper">
     
             <div class="humberger__menu__logo">
-     
                 <ApplicationLogo></ApplicationLogo>
-    
             </div>
     
             <div class="humberger__menu__cart">
-    
                 <ul>
-    
                     <li>
                         <a href="#">
                             <i class="fa fa-heart"></i> <span>1</span>
                         </a>
                     </li>
-    
                     <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-    
                 </ul>
-    
                 <div class="header__cart__price">item: <span>$150.00</span></div>
-    
             </div>
     
             <div class="humberger__menu__widget">
-    
                 <div class="header__top__right__language">
-    
                     <LangImage></LangImage> 
-    
                     <div>English</div>
-    
                     <span class="arrow_carrot-down"></span>
-    
                     <ul>
-    
-                        <li><a href="#">Spanis</a></li>
-    
+                        <li><a href="#">Spanis</a></li>    
                         <li><a href="#">English</a></li>
-    
                     </ul>
-    
                 </div>
     
                 <div class="header__top__right__auth">
-    
-                    <a href="#"><i class="fa fa-user"></i> Login</a>
-    
+                    <inertia-link v-if="$page.user"
+                        :href="$route('logout')" 
+                        method="post"  
+                        as="button" 
+                        class="transition duration-500 ease-in-out bg-transparent hover:text-green-400 text-green-400 font-semibold hover:text-green-400 py-1 px-3 border border-blue-500 hover:border-transparent rounded" 
+                        type="button">Logout
+                    </inertia-link>                
+                    <inertia-link v-else
+                    class="transition duration-500 ease-in-out bg-transparent hover:text-green-400 text-green-400 font-semibold hover:text-green-400 py-1 px-3 border border-blue-500 hover:border-transparent rounded" 
+                    :href="$route('login')"><i class="fa fa-user"></i> Login</inertia-link>                
                 </div>
-    
             </div>
     
             <nav class="slicknav_nav slicknav_hidden mobile-menu">
@@ -91,7 +80,7 @@
     
             </nav>
     
-            <div id="mobile-menu-wrap"></div>
+            <!-- <div id="mobile-menu-wrap"></div>
     
             <div class="header__top__right__social">
     
@@ -115,7 +104,7 @@
     
                 </ul>
     
-            </div>
+            </div> -->
     
         </div>
     
