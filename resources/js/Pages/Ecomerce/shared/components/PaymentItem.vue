@@ -5,7 +5,7 @@
 export default {
      data() {
           return {
-              Logo: APP_URL +"/img/payment-item.png",
+              Logo: "/img/payment-item.png",
           }
      },     
 }

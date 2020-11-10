@@ -20,7 +20,7 @@
  export default {
     computed: {
         BreadCrumbImg(){
-            var  img = APP_URL +'/img/breadcrumb.jpg';
+            var  img = '/img/breadcrumb.jpg';
             return img;
         }
     },   

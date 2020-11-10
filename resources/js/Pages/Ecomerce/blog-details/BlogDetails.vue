@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Blog Details Hero Begin -->
-        <section class="blog-details-hero set-bg"  
+        <!-- <section class="blog-details-hero set-bg"  
         :style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + BlogDetailsHero + '\');'">
             <div class="container">
                 <div class="row">
@@ -17,13 +17,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Blog Details Hero End -->
 
         <!-- Blog Details Section Begin -->
         <section class="blog-details spad">
             <div class="container">
-                <div class="row">
+                <div class="row">               
                     <div class="col-lg-4 col-md-5 order-md-1 order-2">
                         <div class="blog__sidebar">
                             <div class="blog__sidebar__search">
@@ -89,6 +89,7 @@
                     </div>
                     <div class="col-lg-8 col-md-7 order-md-1 order-1">
                         <div class="blog__details__text">
+                            <h2>The Moment You Need To Remove Garlic From The Menu</h2>
                             <img src="img/blog/details/details-pic.jpg" alt="">
                             <p>Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
                                 dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit
@@ -212,7 +213,7 @@ export default {
     metaInfo: { title: 'Blog-details' },
     computed: {
         BlogDetailsHero(){
-            var  img = APP_URL +'/img/blog/details/details-hero.jpg';
+            var  img = '/img/blog/details/details-hero.jpg';
             return img;
         }
     }, 

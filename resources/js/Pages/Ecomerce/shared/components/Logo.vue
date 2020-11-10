@@ -5,7 +5,7 @@
 export default {
      data() {
           return {
-              Logo:this.$page.SiteOptions.Logo?APP_URL +"/"+this.$page.SiteOptions.Logo.replace("public", "storage"):'',
+              Logo:this.$page.SiteOptions.Logo?this.$page.SiteOptions.Logo.replace("public", "storage"):'',
           }
      },     
 }

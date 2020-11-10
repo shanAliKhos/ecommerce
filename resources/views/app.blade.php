@@ -6,12 +6,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
-        
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
         <link rel="stylesheet" href="/css/frontend/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="/css/frontend/font-awesome.min.css" type="text/css">        
         <link rel="stylesheet" href="/backend/css/main.css" type="text/css"  />
@@ -32,9 +30,6 @@
         @php 
             $RouteType = explode(".",Route::currentRouteName()); 
         @endphp        
-        {{-- <script>  
-            const APP_URL = {!! json_encode(url('/')) !!};   
-        </script>  --}}
 
     </head>  
     
@@ -44,7 +39,7 @@
 
  
         <script src="/js/frontend/jquery-3.3.1.min.js"></script>
-        <script src="/js/frontend/bootstrap.min.js') }}"></script> 
+        <script src="/js/frontend/bootstrap.min.js"></script> 
  
         {{-- <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script> --}}
         <script src="/js/frontend/jquery.nice-select.min.js"></script>

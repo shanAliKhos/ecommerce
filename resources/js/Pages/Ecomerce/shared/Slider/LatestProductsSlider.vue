@@ -5,7 +5,7 @@
             <div class="latest-prdouct__slider__item">
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-1.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-1.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -14,7 +14,7 @@
                 </a>
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-2.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-2.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -23,7 +23,7 @@
                 </a>
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-3.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-3.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -34,7 +34,7 @@
             <div class="latest-prdouct__slider__item">
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-1.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-1.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -43,7 +43,7 @@
                 </a>
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-2.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-2.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -52,7 +52,7 @@
                 </a>
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">
-                        <img :src="AppUrl+'/img/latest-product/lp-3.jpg'" alt="">
+                        <img :src="'/img/latest-product/lp-3.jpg'" alt="">
                     </div>
                     <div class="latest-product__item__text">
                         <h6>Crab Pool Security</h6>
@@ -65,11 +65,7 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            AppUrl:APP_URL,
-        }
-    },
+ 
     mounted() {
         $(".latest-product__slider").owlCarousel({
             loop: true,

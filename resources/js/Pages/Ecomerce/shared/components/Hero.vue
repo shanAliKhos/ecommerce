@@ -70,7 +70,7 @@ export default {
             return this.$page.Categories;
         },
         HeroMainImage(){
-            var  img = APP_URL +'/img/hero/banner.jpg';
+            var  img = '/img/hero/banner.jpg';
             return img;
         },
     },

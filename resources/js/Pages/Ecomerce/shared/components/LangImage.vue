@@ -5,7 +5,7 @@
 export default {
      data() {
           return {
-              Logo: APP_URL +"/img/language.png",
+              Logo: "/img/language.png",
           }
      },     
 }

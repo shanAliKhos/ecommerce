@@ -1,11 +1,11 @@
 <template>
     <div>
         <!-- Breadcrumb Section Begin -->
-        <BreadCrumb>
+        <!-- <BreadCrumb>
             <template #CurrentPage>
                 Blog
             </template>
-        </BreadCrumb>        
+        </BreadCrumb>         -->
         <!-- Breadcrumb Section End -->
 
         <!-- Blog Section Begin -->
