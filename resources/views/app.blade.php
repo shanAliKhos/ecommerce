@@ -5,44 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
         <!-- Fonts -->
-         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
         
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        <link rel="stylesheet" href="/css/frontend/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/font-awesome.min.css" type="text/css">        
+        <link rel="stylesheet" href="/backend/css/main.css" type="text/css"  />
+        <link rel="stylesheet" href="/css/frontend/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/frontend/style.css" type="text/css">         
         
         <!-- Scripts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
-
         <script src="{{ mix('js/app.js') }}" defer></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
 
         @routes
-        
-        <link rel="stylesheet" href="/css/frontend/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="/css/frontend/font-awesome.min.css" type="text/css">
-        
+
         @php 
             $RouteType = explode(".",Route::currentRouteName()); 
-        @endphp
-        
-      
-            <link rel="stylesheet" type="text/css" href="/backend/css/main.css" />
-       
-            <link rel="stylesheet" href="/css/frontend/elegant-icons.css" type="text/css">
-            <link rel="stylesheet" href="/css/frontend/nice-select.css" type="text/css">
-            <link rel="stylesheet" href="/css/frontend/jquery-ui.min.css" type="text/css">
-            <link rel="stylesheet" href="/css/frontend/owl.carousel.min.css" type="text/css">
-            <link rel="stylesheet" href="/css/frontend/slicknav.min.css" type="text/css">
-            <link rel="stylesheet" href="/css/frontend/style.css" type="text/css"> 
-        
-<script> 
-    const APP_URL = {!! json_encode(url('/')) !!};   
-</script>
+        @endphp        
+        {{-- <script>  
+            const APP_URL = {!! json_encode(url('/')) !!};   
+        </script>  --}}
 
-{{--//localhost:3000/storage/Products/tZ0ZcrjM5rITTyXvGkNyYtNlXSM9X0iHa7EqyCFc.jpeg --}}
     </head>  
     
     <body class="@if($RouteType[0] === "admin") app sidebar-mini rtl @else font-sans antialiased @endif">
