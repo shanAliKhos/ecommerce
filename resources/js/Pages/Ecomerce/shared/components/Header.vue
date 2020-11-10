@@ -41,7 +41,12 @@ import ApplicationLogo from './Logo'
 import HeaderCart from './HeaderCart'   
 
 export default {
-    components:{NavBar,TopBar,ApplicationLogo,HeaderCart},
+    components:{
+        NavBar,
+        TopBar,
+        ApplicationLogo,
+        HeaderCart
+    },
 
     computed: {
         path() {

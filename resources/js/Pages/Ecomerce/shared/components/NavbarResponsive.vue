@@ -5,47 +5,78 @@
     
         <div class="humberger__menu__wrapper">
     
-            <div class="humberger__menu__logo">
-                <ApplicationLogo></ApplicationLogo>
-            </div>
-    
-            <div class="humberger__menu__cart">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-heart"></i> <span>1</span>
-                        </a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-                </ul>
-                <div class="header__cart__price">item: <span>$150.00</span></div>
-            </div>
-    
-            <div class="humberger__menu__widget">
-                <div class="header__top__right__language">
-                    <LangImage></LangImage> 
-                    <div>English</div>
-                    <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li><a href="#">Spanis</a></li>    
-                        <li><a href="#">English</a></li>
-                    </ul>
-                </div>
-    
-                <div class="header__top__right__auth">
-                    <inertia-link v-if="$page.user"
+            <jet-dropdown align="right" width="48" class="p-0">
+                <template #trigger>
+                    <div class="flex justify-center">
+                        <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out text-center">
+                            <img class="h-32 w-32 rounded-full object-center" :src="$page.user.profile_photo_url" :alt="$page.user.name" />
+                        </button>
+                    </div>
+                </template>
+
+                <template #content>
+                    <!-- Account Management -->
+                    <div class="block px-4 py-2 text-xs text-gray-400">
+                        Manage Account
+                    </div>
+        
+
+                    <jet-dropdown-link v-if="$page.user.is_admin" :href="$route('admin.dashboard')">
+                        Dashboard
+                    </jet-dropdown-link>                            
+
+                    <jet-dropdown-link href="/user/profile">
+                        Profile
+                    </jet-dropdown-link>                            
+
+                    <jet-dropdown-link href="/user/api-tokens" v-if="$page.jetstream.hasApiFeatures">
+                        API Tokens
+                    </jet-dropdown-link>
+                    
+                    <div class="border-t border-gray-100"></div>
+
+        
+                    <!-- Authentication --> 
+                    <inertia-link 
                         :href="$route('logout')" 
                         method="post"  
                         as="button" 
-                        class="transition duration-500 ease-in-out bg-transparent hover:text-green-400 text-green-400 font-semibold hover:text-green-400 py-1 px-3 border border-blue-500 hover:border-transparent rounded" 
+                        class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" 
                         type="button">Logout
-                    </inertia-link>                
-                    <inertia-link v-else
-                    class="transition duration-500 ease-in-out bg-transparent hover:text-green-400 text-green-400 font-semibold hover:text-green-400 py-1 px-3 border border-blue-500 hover:border-transparent rounded" 
-                    :href="$route('login')"><i class="fa fa-user"></i> Login</inertia-link>                
-                </div>
+                    </inertia-link>
+
+                </template>
+            </jet-dropdown>     
+       
+     
+            <div class="humberger__menu__cart">
+                <header-cart></header-cart> 
+            </div> 
+
+            <div class="humberger__menu__widget">
+     
+                <lang-section></lang-section>  
+
+                <div class="header__top__right__auth" v-if="$page.user">
+                    <inertia-link 
+                        :href="$route('logout')" 
+                        method="post"  
+                        as="button" 
+                        class="transition duration-500 ease-in-out bg-transparent hover:text-red-400 text-green-400 font-semibold py-1 px-3 border border-red-500 hover:border-transparent rounded" 
+                        type="button"><i class="fa fa-sign-out"></i> Logout
+                    </inertia-link>                    
+                </div> 
+                <div class="header__top__right__auth" v-else> 
+                    <inertia-link 
+                        class="transition duration-500 ease-in-out bg-transparent text-green-400 font-semibold hover:text-green-400 py-1 px-3 border border-blue-500 hover:border-transparent rounded" 
+                        :href="$route('login')"><i class="fa fa-user"></i> Login
+                    </inertia-link>
+                </div>             
+     
             </div>
     
+            <div id="mobile-menu-wrap"></div>
+
             <nav class="slicknav_nav slicknav_hidden mobile-menu">
     
                 <ul>
@@ -80,31 +111,8 @@
     
             </nav>
     
-            <!-- <div id="mobile-menu-wrap"></div>
-    
-            <div class="header__top__right__social">
-    
-                <a href="#"><i class="fa fa-facebook"></i></a>
-    
-                <a href="#"><i class="fa fa-twitter"></i></a>
-    
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-    
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-    
-            </div>
-    
-            <div class="humberger__menu__contact">
-    
-                <ul>
-    
-                    <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-    
-                    <li>Free Shipping for all Order of $99</li>
-    
-                </ul>
-    
-            </div> -->
+   
+     
     
         </div>
     
@@ -113,15 +121,22 @@
 <script>
 import CusNavLink from './NavLink'
 import ApplicationLogo from './Logo'  
-import LangImage from './LangImage'  
+import LangSection from './LangSection' 
+import JetDropdown from './Dropdown'
+import JetDropdownLink from './DropdownLink'  
+import HeaderCart from './HeaderCart'   
+
 export default {
 
-    components: { CusNavLink,ApplicationLogo,LangImage },
-    computed: {
-        path() {
-            return window.location.pathname
-        }
+    components: { 
+        CusNavLink,
+        ApplicationLogo,
+        LangSection,
+        JetDropdown,
+        JetDropdownLink,    
+        HeaderCart         
     },
+     
 
     mounted() {
 

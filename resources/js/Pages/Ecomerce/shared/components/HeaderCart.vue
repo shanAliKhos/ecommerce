@@ -4,7 +4,7 @@
             <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
             <li><inertia-link :href="$route('cart.show','show')"><i class="fa fa-shopping-bag "></i> <span syle="font-size:20px;" >{{CountCartItems}}</span></inertia-link></li>
         </ul>
-        <div class="header__cart__price shadow-inner p-2"><span > item: ${{ CartTotalPrice }}</span></div>
+        <div class="header__cart__price"><span > item: ${{ CartTotalPrice }}</span></div>
     </div>
 </template>
 <script>

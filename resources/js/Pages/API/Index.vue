@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container flex">
          
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 API Tokens

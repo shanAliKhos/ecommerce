@@ -9,58 +9,13 @@
             <button class="app-search__button">
                 <i class="fa fa-search"></i>
             </button>
-        </li>
-        <!-- <li class="dropdown">
-            <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
-            <ul class="app-notification dropdown-menu dropdown-menu-right">
-                <li class="app-notification__title">
-                    You have 4 new notifications.
-                </li>
-                <div class="app-notification__content">
-                    <li>
-                        <a class="app-notification__item" href="javascript:;">
-                            <span class="app-notification__icon">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x text-danger"></i>
-                                    <i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </span>
-                            <div>
-                                <p class="app-notification__message">
-                                    Mail server not working
-                                </p>
-                                <p class="app-notification__meta">5 min ago</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="app-notification__item" href="javascript:;">
-                            <span class="app-notification__icon">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x text-success"></i>
-                                    <i class="fa fa-money fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </span>
-                            <div>
-                                <p class="app-notification__message">
-                                    Transaction complete
-                                </p>
-                                <p class="app-notification__meta">2 days ago</p>
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <li class="app-notification__footer">
-                    <a href="#">See all notifications.</a>
-                </li>
-            </ul>
-        </li> -->
+        </li> 
  
-        <div class="hidden sm:flex sm:items-center sm:ml-6">
+        <div class="hidden sm:flex sm:items-center sm:ml-3 app-nav__item">
             <div class="ml-3 relative">
                 <jet-dropdown align="right" width="56">
                     <template #trigger>
-                        <i class="fa fa-bell-o fa-lg"></i>
+                        <i class="fa fa-bell-o fa-lg "></i>
                     </template>
 
                     <template #content>
@@ -112,13 +67,11 @@
             </div>
         </div>        
  
-        <div class="hidden sm:flex sm:items-center sm:ml-6">
+        <div class="hidden sm:flex sm:items-center sm:ml-3 app-nav__item">
             <div class="ml-3 relative">
                 <jet-dropdown align="right" width="48">
                     <template #trigger>
-                        <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                            <img class="h-8 w-8 rounded-full object-cover" :src="$page.user.profile_photo_url" :alt="$page.user.name" />
-                        </button>
+                        <i class="fa fa-user fa-lg "></i>
                     </template>
 
                     <template #content>
