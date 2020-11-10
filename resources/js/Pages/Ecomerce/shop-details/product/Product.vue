@@ -152,7 +152,7 @@
         computed: {
             ProductMainImage(){
                 self = this ;
-                var  img = (this.Product.image)?APP_URL+'/'+this.Product.image.replace("public", "storage"):APP_URL+'/'+self.Product.image;
+                var  img = (this.Product.image)?'/'+this.Product.image.replace("public", "storage"):'/'+self.Product.image;
                 return img;
                       
             },
