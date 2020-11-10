@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row featured__filter">
-                <div v-for="(FeaturedProduct, FeaturedProductIndex) in FeaturedProducts" :key="FeaturedProductIndex" class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div v-for="(FeaturedProduct, FeaturedProductIndex) in FeaturedProducts" :key="FeaturedProductIndex" class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat mb-3">
                     <shop-product :Product="FeaturedProduct">
                     </shop-product>
                     <!-- <div class="featured__item">
@@ -156,21 +156,10 @@ export default {
         ShopProduct,
     },
     
-    // data() {
-    //     return {
-    //         FeaturedProducts:{},
-    //     }
-    // },
+ 
 
     methods: {
-        // FetchFeaturedProducts(){ 
-
-        //     return axios.get(route('shop.FeaturedProducts'))
-        //         .then((response) => {
-        //             this.FeaturedProducts = response.data;
-        //     });
-
-        // },
+ 
         AddToCart(Item){   
             this.$root.$emit('Add-To-Cart',{
                 "id":(Item.id)?Item.id:'',

@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'product__item':!Product.sale_price,'product__discount__item':Product.sale_price}" class="shadow-md">
+    <div :class="{'product__item':!Product.sale_price,'product__discount__item':Product.sale_price}" class="shadow-sm">
         <div :class="{'product__item__pic':!Product.sale_price, 'product__discount__item__pic':Product.sale_price}" class="shadow-sm p-2 i" 
         :style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + ProductImage + '\');'"
         >
@@ -54,6 +54,4 @@ export default {
  
 }
 </script>
-<style scoped>
-
- </style>
+ 
