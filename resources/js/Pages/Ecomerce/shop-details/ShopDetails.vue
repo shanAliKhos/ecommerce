@@ -34,7 +34,7 @@ export default {
         setTimeout(function(){  
             $('.set-bg').each(function() {
                 var bg = $(this).data('setbg')
-                $(this).css('background-image', 'url('+ APP_URL +'/'+ bg + ')');
+                $(this).css('background-image', 'url(''/'+ bg + ')');
             });  
         }, 1200);
     }      
