@@ -99,7 +99,6 @@ class CheckOutController extends Controller
             $CreatedOrder = $Order->create([
                 'user_id'=>Auth()->user()->id,
                 'OrderNumber'=>$NewOrder['OrderNumber'],
-                'Status'=>1,
                 'CardHolderName'=>$request->name_on_card,
                 'Address' => $request->address,
                 'PaymentToken' => $charge['payment_method'],
