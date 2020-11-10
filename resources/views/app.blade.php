@@ -51,7 +51,7 @@
 
  
         <script src="/js/frontend/jquery-3.3.1.min.js"></script>
-        <script src="{{ asset('js/frontend/bootstrap.min.js') }}"></script> 
+        <script src="/js/frontend/bootstrap.min.js') }}"></script> 
  
         {{-- <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script> --}}
         <script src="/js/frontend/jquery.nice-select.min.js"></script>
