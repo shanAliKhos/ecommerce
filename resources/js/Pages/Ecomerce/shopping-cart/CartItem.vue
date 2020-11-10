@@ -53,7 +53,7 @@ export default {
         },        
         ProductMainImage(){
             self = this ;
-            var  img = (self.CartItem.image)?APP_URL+'/'+self.CartItem.image.replace("public", "storage"):APP_URL+'/'+self.CartItem.image;
+            var  img = (self.CartItem.image)?'/'+self.CartItem.image.replace("public", "storage"):'/'+self.CartItem.image;
             return img; 
         },     
         InStock(){
