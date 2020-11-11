@@ -2,7 +2,7 @@
 <header class="app-header">
     <!-- <a class="app-header__logo" href="#">{{ config('app.name') }}</a> -->
     <a class="app-header__logo" href="#">Adminsitration</a>
-    <button class="app-sidebar__toggle" @click="SidebarToggle()" ></button>
+    <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
     <ul class="app-nav">
         <li class="app-search">
             <input class="app-search__input" type="search" placeholder="Search" />
@@ -66,47 +66,6 @@
                 </jet-dropdown>
             </div>
         </div>        
- 
-        <!-- <div class="hidden sm:flex sm:items-center sm:ml-3 app-nav__item">
-            <div class="ml-3 relative">
-                <jet-dropdown align="right" width="48">
-                    <template #trigger>
-                        <i class="fa fa-user fa-lg "></i>
-                    </template>
-
-                    <template #content> 
-                        <div class="block px-4 py-2 text-xs text-gray-400">
-                            Manage Account
-                        </div>
-                         
-
-                        <jet-dropdown-link :href="$route('welcome')">
-                            Website
-                        </jet-dropdown-link>
-
-                        <jet-dropdown-link href="/user/profile">
-                            Profile
-                        </jet-dropdown-link>
-
-                        <jet-dropdown-link href="/user/api-tokens" v-if="$page.jetstream.hasApiFeatures">
-                            API Tokens
-                        </jet-dropdown-link>
-
-                        <div class="border-t border-gray-100"></div>
-
-                     
-                        <inertia-link 
-                            :href="$route('logout')" 
-                            method="post"  
-                            as="button" 
-                            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" 
-                            type="button">Logout
-                        </inertia-link>
-                    </template>
-                </jet-dropdown>
-            </div>
-        </div>         -->
-
     </ul>
 </header>
 </template>
@@ -119,16 +78,7 @@
             JetDropdown,
             JetDropdownLink
         },
-        computed: {
-            path() {
-                return window.location.pathname
-            }
-        },
-        methods: {
-            SidebarToggle(){
-                $('body').toggleClass('sidenav-toggled'); 
-            },            
-        },    
+  
   
         
     }

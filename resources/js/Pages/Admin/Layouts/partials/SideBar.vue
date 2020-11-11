@@ -19,8 +19,8 @@
                     </div>
         
 
-                    <jet-dropdown-link v-if="$page.user.is_admin" :href="$route('admin.dashboard')">
-                        Dashboard
+                    <jet-dropdown-link v-if="$page.user.is_admin" :href="$route('welcome')">
+                        Websitw
                     </jet-dropdown-link>                            
 
                     <jet-dropdown-link href="/user/profile">
