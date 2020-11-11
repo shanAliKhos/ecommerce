@@ -2,9 +2,3 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@media screen and (max-width: 600px) {
-    .Addnew{
-        position: absolute !important;
-        right: 20px !important;
-    }
-}     
