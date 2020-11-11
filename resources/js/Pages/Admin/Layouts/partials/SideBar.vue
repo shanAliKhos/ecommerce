@@ -20,7 +20,7 @@
         
 
                     <jet-dropdown-link v-if="$page.user.is_admin" :href="$route('welcome')">
-                        Websitw
+                        Website
                     </jet-dropdown-link>                            
 
                     <jet-dropdown-link href="/user/profile">
