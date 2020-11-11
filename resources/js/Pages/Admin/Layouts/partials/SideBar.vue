@@ -49,43 +49,43 @@
             <hr class="mb-2">
             <ul class="app-menu">
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.dashboard','app-menu__item':true}" @click="SidebarToggle('admin.dashboard')" :href="$route('admin.dashboard')">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.dashboard','app-menu__item':true}"  :href="$route('admin.dashboard')">
                         <i class="app-menu__icon fa fa-dashboard"></i>
                         <span class="app-menu__label">Dashboard</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.order.index','app-menu__item':true}" @click="SidebarToggle('admin.order.index')" :href="$route('admin.order.index')">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.order.index','app-menu__item':true}"  :href="$route('admin.order.index')">
                         <i class="app-menu__icon fa fa-bar-chart"></i>
                         <span class="app-menu__label">Orders</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.product.index','app-menu__item':true}" @click="SidebarToggle('admin.product.index')" :href="$route('admin.product.index') ">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.product.index','app-menu__item':true}"  :href="$route('admin.product.index') ">
                         <i class="app-menu__icon fa fa-shopping-bag"></i>
                         <span class="app-menu__label">Products</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.brand.index','app-menu__item':true}" @click="SidebarToggle('admin.brand.index')" :href="$route('admin.brand.index') ">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.brand.index','app-menu__item':true}"  :href="$route('admin.brand.index') ">
                         <i class="app-menu__icon fa fa-briefcase"></i>
                         <span class="app-menu__label">Brands</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.category.index','app-menu__item':true}"  @click="SidebarToggle('admin.category.index')" :href="$route('admin.category.index') ">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.category.index','app-menu__item':true}" :href="$route('admin.category.index') ">
                         <i class="app-menu__icon fa fa-tags"></i>
                         <span class="app-menu__label">Categories</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.attribute.index','app-menu__item':true}"  @click="SidebarToggle('admin.attribute.index')" :href="$route('admin.attribute.index') ">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.attribute.index','app-menu__item':true}" :href="$route('admin.attribute.index') ">
                         <i class="app-menu__icon fa fa-th"></i>
                         <span class="app-menu__label">Attributes</span>
                     </inertia-link>
                 </li>
                 <li>
-                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.setting','app-menu__item':true}" @click="SidebarToggle('admin.setting')" :href="$route('admin.setting') ">
+                    <inertia-link :class="{'active':$page.currentRouteName == 'admin.setting','app-menu__item':true}" :href="$route('admin.setting') ">
                         <i class="app-menu__icon fa fa-cogs"></i>
                         <span class="app-menu__label">Settings</span>
                     </inertia-link>
@@ -104,14 +104,6 @@
             JetDropdown,
             JetDropdownLink
         },
-        methods: {
-            SidebarToggle(current){
-                if(current !== this.$page.currentRouteName){
-                    $('body').toggleClass('sidenav-toggled');  
-                }
-            },        
-        },          
-      
-        
+       
     }
 </script>
