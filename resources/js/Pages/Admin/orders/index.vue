@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-body table-responsive">
-                    <table class="table table-hover table-bordered" id="sampleTable">
+                    <table class="table table-condensed table-striped">
                         <thead>
                         <tr>
                             <th> Order Number </th>

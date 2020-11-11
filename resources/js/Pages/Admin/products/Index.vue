@@ -14,23 +14,26 @@
                 <div class="tile-body pb-5">
                     <!-- <ItemPerPage></ItemPerPage> -->
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered">
+                        <table class="table table-condensed table-striped ">
                             <thead>
                             <tr>
                                 <th> # </th>
+                                <th class="text-center"> Image </th>
                                 <th> SKU </th>
                                 <th> Name </th>
                                 <th class="text-center"> Brand </th>
                                 <th class="text-center"> Categories </th>
                                 <th class="text-center"> Price </th>
                                 <th class="text-center"> Status </th>
-                                <th class="text-center"> Image </th>
                                 <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                             </tr>
                             </thead>
                             <tbody> 
                                 <tr v-for="(Product, ProductIndex) in Products" :key="ProductIndex">
                                     <td>{{ Product.id }}</td>
+                                    <td>
+                                        <img class="img-thumbnail" :src="ProductImage(Product.image)"/>
+                                    </td>                                    
                                     <td>{{ Product.sku }}</td>
                                     <td>{{ Product.name }}</td>
                                     <td>{{ Product.brand.name }}</td>
@@ -44,9 +47,7 @@
                                         <span v-if="Product.is_active" class="badge badge-success">Active</span>
                                         <span v-else class="badge badge-danger">Not Active</span>
                                     </td>
-                                    <td>
-                                        <img class="img-thumbnail" :src="ProductImage(Product.image)">
-                                    </td>
+
                                     <td class="text-center">
                                         <div class="btn-group" role="group" aria-label="Second group">
                                             <inertia-link :href="$route('admin.product.edit',Product.id)" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></inertia-link>
@@ -96,3 +97,8 @@ export default {
    
 }
 </script>
+<style scoped>
+    .img-thumbnail{
+        height:45px !important;
+    }
+</style>

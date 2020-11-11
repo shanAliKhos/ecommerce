@@ -107,9 +107,7 @@ export default {
             this.$inertia.post(route('admin.brand.update', this.$page.brand.id), data, {
                 preserveState: true,
                 preserveScroll: true,             
-                onStart: () => {
-                    alert('oko');
-                },                
+                onSuccess: (page) => {alert(';ok')},               
             })
 
                                       
