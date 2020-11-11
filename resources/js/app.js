@@ -2,8 +2,8 @@ require('./bootstrap');
 import Vue from 'vue';
 import VueMeta from 'vue-meta'
 import PortalVue from 'portal-vue';
-import { InertiaApp } from '@inertiajs/inertia-vue';
-// import { InertiaProgress } from '@inertiajs/progress/src'
+import { InertiaApp } from '@inertiajs/inertia-vue'; 
+import { InertiaProgress } from '@inertiajs/progress'
 import { InertiaForm } from 'laravel-jetstream';
 import Toasted from 'vue-toasted';
 import 'animate.css/animate.min.css'
@@ -20,8 +20,21 @@ Vue.use(Toasted, {
     position:'bottom-right',
 })
 Vue.use(VueMeta) 
-// InertiaProgress.init()
 
+InertiaProgress.init({
+  // The delay after which the progress bar will
+  // appear during navigation, in milliseconds.
+  delay: 250,
+
+  // The color of the progress bar.
+  color: '#29d',
+
+  // Whether to include the default NProgress styles.
+  includeCSS: true,
+
+  // Whether the NProgress spinner will be shown.
+  showSpinner: false,
+})
 
 let app = document.getElementById('app')
 

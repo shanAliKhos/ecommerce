@@ -5,7 +5,7 @@
     
         <div class="humberger__menu__wrapper">
     
-            <jet-dropdown align="right" width="48" class="p-0">
+            <jet-dropdown align="right" width="48" class="p-0" v-if="$page.user">
                 <template #trigger>
                     <div class="flex justify-center">
                         <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out text-center">

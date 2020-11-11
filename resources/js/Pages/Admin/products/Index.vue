@@ -80,7 +80,7 @@ export default {
     methods: {
         ProductImage(image){
             self = this ;
-            var  img = (image)?APP_URL+'/'+image.replace("public", "storage"):APP_URL+'/'+image;
+            var  img = (image)?'/'+image.replace("public", "storage"):'/'+image;
             return img;      
         },        
     },    

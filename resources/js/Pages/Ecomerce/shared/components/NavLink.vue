@@ -1,6 +1,6 @@
 <template>
     <li :class="IsActive">
-        <inertia-link :href="href"  preserve-scroll>
+        <inertia-link :href="href" :class="IsActiveLink" preserve-scroll>
             <slot></slot>
         </inertia-link>
     </li>
@@ -13,9 +13,14 @@
         computed: {
             IsActive() {
                 return this.active
-                            ? 'transition duration-500 ease-in-out active  shadow-md   mr-4 border border-green-500 btn'
-                            : 'transition duration-500 ease-in-out hover:shadow-md p-1 mr-4 mr-4  border-green-500 btn' 
-            }
+                            ? 'transition duration-500 active mr-4 '
+                            : 'mr-4' 
+            },
+            IsActiveLink() {
+                return this.active
+                            ? 'transition duration-500 ease-in-out p-1 shadow-md border border-green-500 btn'
+                            : 'transition duration-500 ease-in-out p-1 hover:shadow-md  btn' 
+            },
         }
     }
 </script> 

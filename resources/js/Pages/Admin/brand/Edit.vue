@@ -106,8 +106,10 @@ export default {
 
             this.$inertia.post(route('admin.brand.update', this.$page.brand.id), data, {
                 preserveState: true,
-                preserveScroll: true,                
-         
+                preserveScroll: true,             
+                onStart: () => {
+                    self.sending = true;
+                },                
             })
 
                                       
@@ -145,7 +147,7 @@ export default {
             self = this ;
             var  img ;
             if(image){
-                img = (image)?APP_URL+'/'+image.replace("public", "storage"):APP_URL+'/'+image;
+                img = (image)?'/'+image.replace("public", "storage"):'/'+image;
             }
             return img;      
         }, 

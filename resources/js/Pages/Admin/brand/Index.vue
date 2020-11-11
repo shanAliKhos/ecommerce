@@ -12,33 +12,35 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-body">
-                    <table class="table table-hover table-bordered" id="sampleTable">
-                        <thead>
-                        <tr>
-                            <th> # </th>
-                            <th> Name </th>
-                            <th> Slug </th>
-                            <th> img </th>
-                            <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
-                        </tr>
-                        </thead>
-                        <tbody> 
-                            <tr v-for="(Brand, index) in Brands" :key="index">
-                                <td>{{ Brand.id }}</td>
-                                <td>{{ Brand.name }}</td>
-                                <td>{{ Brand.slug }}</td>
-                                <td class="text-center">
-                                    <img class="img-thumbnail" :src="ProductImage(Brand.logo)">
-                                </td>
-                                <td class="text-center">
-                                    <div class="btn-group" role="group" aria-label="Second group">
-                                        <inertia-link :href="$route('admin.brand.edit', Brand.id)" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></inertia-link>
-                                        <inertia-link :href="$route('admin.brand.destroy', Brand.id)" method="delete"  preserve-scroll class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></inertia-link> 
-                                    </div>
-                                </td>
-                            </tr> 
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Name </th>
+                                <th> Slug </th>
+                                <th> img </th>
+                                <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
+                            </tr>
+                            </thead>
+                            <tbody> 
+                                <tr v-for="(Brand, index) in Brands" :key="index">
+                                    <td>{{ Brand.id }}</td>
+                                    <td>{{ Brand.name }}</td>
+                                    <td>{{ Brand.slug }}</td>
+                                    <td class="text-center">
+                                        <img class="img-thumbnail" :src="ProductImage(Brand.logo)">
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group" aria-label="Second group">
+                                            <inertia-link :href="$route('admin.brand.edit', Brand.id)" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></inertia-link>
+                                            <inertia-link :href="$route('admin.brand.destroy', Brand.id)" method="delete"  preserve-scroll class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></inertia-link> 
+                                        </div>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,7 +64,7 @@ export default {
         },   
         ProductImage(image){
             self = this ;
-            var  img = (image)?APP_URL+'/'+image.replace("public", "storage"):APP_URL+'/'+image;
+            var  img = (image)?'/'+image.replace("public", "storage"):'/'+image;
             return img;      
         },             
     },
