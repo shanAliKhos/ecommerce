@@ -36,7 +36,7 @@ class CheckOutController extends Controller
         }
         
         $this->validate($request,[ 
-            "email" => "required|email",
+            "email" => "required|email_address",
             "name_on_card" => "required",
             "address" => "required",
             "city" => "required",
