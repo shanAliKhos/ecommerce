@@ -37,19 +37,15 @@
        
         @inertia
 
- 
-        <script src="/js/frontend/jquery-3.3.1.min.js"></script>
-        <script src="/js/frontend/bootstrap.min.js"></script> 
- 
-        {{-- <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script> --}}
-        <script src="/js/frontend/jquery.nice-select.min.js"></script>
-        <script src="/js/frontend/jquery-ui.min.js"></script>
-        <script src="/js/frontend/jquery.slicknav.js"></script>
-        <script src="/js/frontend/mixitup.min.js"></script>
-        <script src="/js/frontend/owl.carousel.min.js"></script>
-        <script src="/js/frontend/main.js"></script>        
-  
-  
-
+    <script src="/js/frontend/jquery-3.3.1.min.js"></script>
+    <script src="/js/frontend/bootstrap.min.js"></script> 
+    {{-- <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script> --}}
+    <script src="/js/frontend/jquery.nice-select.min.js"></script>
+    <script src="/js/frontend/jquery-ui.min.js"></script>
+    <script src="/js/frontend/jquery.slicknav.js"></script>
+    <script src="/js/frontend/mixitup.min.js"></script>
+    <script src="/js/frontend/owl.carousel.min.js"></script>
+    <script src="/js/frontend/main.js"></script>          
+   
     </body>
 </html>

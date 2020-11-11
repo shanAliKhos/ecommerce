@@ -6,9 +6,8 @@
         id="payment-form"
         @submit.prevent="pay()"
         novalidate
-    >
-      
-
+     >
+     <h4>Checkout Form</h4>
         <div class="form-group">
             <label for="inputEmail"
                 >Email address
