@@ -27,13 +27,10 @@
 
         @routes
 
-        @php 
-            $RouteType = explode(".",Route::currentRouteName()); 
-        @endphp        
-
+ 
     </head>  
     
-    <body class="@if($RouteType[0] === "admin") app sidebar-mini rtl @else font-sans antialiased @endif">
+    <body class="app sidebar-mini rtl  font-sans antialiased  ">
        
         @inertia
 

@@ -107,9 +107,9 @@
         methods: {
             SidebarToggle(current){
                 if(current !== this.$page.currentRouteName){
-                    $('.app').toggleClass('sidenav-toggled');  
+                    $('body').toggleClass('sidenav-toggled');  
                 }
-            },            
+            },        
         },          
       
         

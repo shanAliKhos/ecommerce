@@ -126,7 +126,7 @@
         },
         methods: {
             SidebarToggle(){
-                $('.app').toggleClass('sidenav-toggled'); 
+                $('body').toggleClass('sidenav-toggled'); 
             },            
         },    
   
