@@ -2,7 +2,7 @@
 <header class="app-header">
     <!-- <a class="app-header__logo" href="#">{{ config('app.name') }}</a> -->
     <a class="app-header__logo" href="#">Adminsitration</a>
-    <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+    <button class="app-sidebar__toggle" @click="SidebarToggle()" ></button>
     <ul class="app-nav">
         <li class="app-search">
             <input class="app-search__input" type="search" placeholder="Search" />
@@ -125,13 +125,11 @@
             path() {
                 return window.location.pathname
             }
-        },   
+        },
         methods: {
-            logout() {
-                axios.post('/logout').then(response => {
-                    window.location = '/';
-                })
-            },
+            SidebarToggle(){
+                $('.app').toggleClass('sidenav-toggled');    
+            },            
         },    
   
         
