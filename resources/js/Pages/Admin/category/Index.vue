@@ -5,7 +5,7 @@
             <h1><i class="fa fa-tags"></i> Category </h1>
             <p>Listing</p>
         </div>
-        <inertia-link :href="$route('admin.category.create') " class="btn btn-primary pull-right">Add Category</inertia-link>
+        <inertia-link :href="$route('admin.category.create') " class="btn btn-primary pull-right Addnew">Add Category</inertia-link>
     </div>
  
     <div class="row">

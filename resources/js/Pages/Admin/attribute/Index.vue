@@ -5,7 +5,7 @@
             <h1><i class="fa fa-tags"></i> Attribute </h1>
             <p>Listing</p>
         </div>
-        <inertia-link :href="$route('admin.attribute.create')" class="btn btn-primary pull-right">Add Attribute</inertia-link>
+        <inertia-link :href="$route('admin.attribute.create')" class="btn btn-primary pull-right Addnew">Add Attribute</inertia-link>
     </div>
    
     <div class="row">

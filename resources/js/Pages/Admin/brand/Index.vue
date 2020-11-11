@@ -5,7 +5,7 @@
             <h1><i class="fa fa-briefcase"></i> Brand </h1>
             <p>Listing</p>
         </div>
-        <inertia-link :href="$route('admin.brand.create') " class="btn btn-primary pull-right">Add Brand</inertia-link>
+        <inertia-link :href="$route('admin.brand.create') " class="btn btn-primary pull-right Addnew">Add Brand</inertia-link>
     </div>
      
     <div class="row">

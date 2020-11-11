@@ -5,7 +5,7 @@
             <h1><i class="fa fa-bar-chart"></i>Order</h1>
             <p>Show </p>
         </div>
-        <inertia-link class="btn btn-danger pull-right" :href="$route('admin.order.index')" as="button" type="button"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
+        <inertia-link class="btn btn-danger pull-right Addnew" :href="$route('admin.order.index')" as="button" type="button"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
 
     </div>
     <div class="row">

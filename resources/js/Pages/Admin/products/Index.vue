@@ -5,7 +5,7 @@
             <h1><i class="fa fa-shopping-bag"></i>  Products </h1>
             <p>Lisiting</p>
         </div>
-        <inertia-link :href="$route('admin.product.create')" class="btn btn-primary pull-right">Add Product</inertia-link>
+        <inertia-link :href="$route('admin.product.create')" class="btn btn-primary pull-right Addnew">Add Product</inertia-link>
     </div>
     <!-- @include('admin.partials.flash') -->
     <div class="row">
