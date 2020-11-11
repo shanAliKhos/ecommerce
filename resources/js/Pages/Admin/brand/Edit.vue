@@ -108,7 +108,7 @@ export default {
                 preserveState: true,
                 preserveScroll: true,             
                 onStart: () => {
-                    self.sending = true;
+                    alert('oko');
                 },                
             })
 
