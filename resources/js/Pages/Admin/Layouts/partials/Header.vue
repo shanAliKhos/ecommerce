@@ -67,15 +67,14 @@
             </div>
         </div>        
  
-        <div class="hidden sm:flex sm:items-center sm:ml-3 app-nav__item">
+        <!-- <div class="hidden sm:flex sm:items-center sm:ml-3 app-nav__item">
             <div class="ml-3 relative">
                 <jet-dropdown align="right" width="48">
                     <template #trigger>
                         <i class="fa fa-user fa-lg "></i>
                     </template>
 
-                    <template #content>
-                        <!-- Account Management -->
+                    <template #content> 
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             Manage Account
                         </div>
@@ -95,8 +94,7 @@
 
                         <div class="border-t border-gray-100"></div>
 
-                    
-                        <!-- Authentication -->
+                     
                         <inertia-link 
                             :href="$route('logout')" 
                             method="post"  
@@ -107,7 +105,7 @@
                     </template>
                 </jet-dropdown>
             </div>
-        </div>        
+        </div>         -->
 
     </ul>
 </header>
@@ -128,7 +126,7 @@
         },
         methods: {
             SidebarToggle(){
-                $('.app').toggleClass('sidenav-toggled');    
+                $('.app').toggleClass('sidenav-toggled'); 
             },            
         },    
   
