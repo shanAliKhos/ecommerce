@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row featured__filter">
-                <div v-for="(FeaturedProduct, FeaturedProductIndex) in FeaturedProducts" :key="FeaturedProductIndex" class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat mb-3">
+                <div v-for="(FeaturedProduct, FeaturedProductIndex) in FeaturedProducts" :key="FeaturedProductIndex" class="col-lg-3 col-md-4 col-sm-6 col-6 mix oranges fresh-meat mb-3">
                     <shop-product :Product="FeaturedProduct">
                     </shop-product>
                     <!-- <div class="featured__item">
