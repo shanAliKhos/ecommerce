@@ -24,6 +24,13 @@
         <script src="https://js.stripe.com/v3/"></script>
 
         @routes
+
+        <style>
+            .Addnew{
+                position: absolute !important;
+                right: 20px !important ;
+            }              
+        </style>
  
     </head>  
     
