@@ -27,8 +27,7 @@
 <script>
 import AppLayout from './../shared/AppLayout'  
 import YourOrder from './YourOrder' 
-import PaymentForm from './stripe/PaymentForm';
-// import CustomerForm from './CustomerForm' 
+import PaymentForm from './PaymentForm'; 
 
 
 export default {

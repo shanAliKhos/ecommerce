@@ -21,18 +21,10 @@ Vue.use(Toasted, {
 })
 Vue.use(VueMeta) 
 
-InertiaProgress.init({
-  // The delay after which the progress bar will
-  // appear during navigation, in milliseconds.
-  delay: 250,
-
-  // The color of the progress bar.
-  color: '#ea4335',
-
-  // Whether to include the default NProgress styles.
-  includeCSS: true,
-
-  // Whether the NProgress spinner will be shown.
+InertiaProgress.init({ 
+  delay: 250, 
+  color: '#ea4335', 
+  includeCSS: true, 
   showSpinner: false,
 })
 

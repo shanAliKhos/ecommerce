@@ -59,7 +59,8 @@ export default {
             const self = this;
             self.$inertia.delete(route('admin.brand.destroy',id),{
                 preserveState: true,
-                preserveScroll: true
+                preserveScroll: true,
+                onStart: () => confirm('Are you sure you want to delete this user?'),
             })             
         },   
         ProductImage(image){

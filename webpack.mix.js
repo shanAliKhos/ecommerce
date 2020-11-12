@@ -15,6 +15,13 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
+        ...mix.inProduction() ? [
+            purgecss({
+              content: ['./resources/views/**/*.blade.php', './resources/js/**/*.vue'],
+              defaultExtractor: content => content.match(/[\w-/:.]+(?<!:)/g) || [],
+              whitelistPatternsChildren: [/nprogress/],
+            }),
+          ] : [],        
     ])
     .webpackConfig({ 
         output: {
