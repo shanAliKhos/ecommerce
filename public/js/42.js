@@ -1331,7 +1331,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "button",
-    { staticClass: "flex items-center", attrs: { disabled: _vm.loading } },
+    _vm._b(
+      { staticClass: "flex items-center", attrs: { disabled: _vm.loading } },
+      "button",
+      _vm.$attrs,
+      false
+    ),
     [
       _vm.loading ? _c("div", { staticClass: "btn-spinner mr-2" }) : _vm._e(),
       _vm._v(" "),

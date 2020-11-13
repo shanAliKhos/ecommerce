@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="loading" class="flex items-center">
+  <button :disabled="loading" v-bind="$attrs" class="flex items-center">
     <div v-if="loading" class="btn-spinner mr-2" />
     
     
