@@ -137,9 +137,7 @@
         </div>
 
         <div class="text-center mt-4 mb-3">
-            <button type="submit" class="site-btn">PLACE ORDER</button>
-
-            <!-- <button type="submit" class="c-btn-main">Submit Payment</button> -->
+            <button type="submit" class="site-btn">PLACE ORDER</button> 
         </div>
     </form>
 </template>

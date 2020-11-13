@@ -88,7 +88,7 @@ export default {
     },    
     computed: {
         Orders(){
-            return this.$page.Orders;
+            return this.$page.Orders.data;
         },
     },
 }

@@ -17,7 +17,7 @@ class OrderController extends Controller
     public function index()
     {    
         $Order = new Order; 
-        $Orders = $Order->with('user')->orderBy('Status', 'asc')->latest()->get()->toArray(); 
+        $Orders = $Order->with('user')->orderBy('Status', 'asc')->latest()->paginate(20); 
            
         return Inertia::render('Admin/orders/index',compact('Orders'));
         // return view('admin.orders.index', compact('orders'));

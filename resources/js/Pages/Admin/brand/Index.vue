@@ -60,7 +60,9 @@ export default {
             self.$inertia.delete(route('admin.brand.destroy',id),{
                 preserveState: true,
                 preserveScroll: true,
-                onStart: () => confirm('Are you sure you want to delete this user?'),
+                    onSuccess: () => {
+                      alert('ok');
+                    },
             })             
         },   
         ProductImage(image){
@@ -71,7 +73,7 @@ export default {
     },
     computed: {
         Brands(){
-            return this.$page.Brands;
+            return this.$page.Brands.data;
         }
     },
 

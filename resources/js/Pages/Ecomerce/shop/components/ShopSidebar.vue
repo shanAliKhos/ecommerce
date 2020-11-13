@@ -87,11 +87,10 @@ export default {
     components: {
         LatestProductsSlider,
         PriceSlider,
-
     }, 
     computed: {        
         Categories(){
-            return this.$page.Categories;
+            return this.$page.props.Categories;
         },    
     },
  

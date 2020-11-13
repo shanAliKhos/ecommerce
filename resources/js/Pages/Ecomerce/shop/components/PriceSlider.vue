@@ -3,11 +3,11 @@
     <h4>Price</h4>
     <div class="row"> 
         <text-input 
-        v-model="minamount" :error="$page.errors.minamount" 
+        v-model="minamount" :error="$page.props.errors.minamount" 
         class="form-group col-lg-6" label="MinPrice" placeholder="MinPrice" />
     
         <text-input 
-        v-model="maxamount" :error="$page.errors.maxamount" 
+        v-model="maxamount" :error="$page.props.errors.maxamount" 
         class="form-group col-lg-6" label="MaxPrice" placeholder="MaxPrice" />
   
     </div> 

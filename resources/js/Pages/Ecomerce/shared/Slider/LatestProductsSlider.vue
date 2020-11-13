@@ -1,7 +1,7 @@
 <template>
-    <div class="latest-product__text shadow-lg p-2">
+    <div class="latest-product__text">
         <h4>Latest Products</h4>
-        <div class="latest-product__slider owl-carousel shadow-lg p-1">
+        <div class="latest-product__slider owl-carousel shadow p-2">
             <div class="latest-prdouct__slider__item">
                 <a href="#" class="latest-product__item">
                     <div class="latest-product__item__pic">

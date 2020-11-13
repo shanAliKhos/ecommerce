@@ -35,11 +35,7 @@
                 </div>
                 <div class="tile-footer">
                     <!-- <button class="btn btn-primary" type="button" @click="store()"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Brand</button> -->
-                    <button class="btn btn-primary" type="submit"> 
-                        <span v-show="sending" class="btn-spinner mr-2" /></span>
-                        <i  class="fa fa-fw fa-lg fa-check-circle"></i>
-                        Save Brand
-                    </button>
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Brand</loading-button>
                     
                     <inertia-link class="btn btn-secondary" :href="$route('admin.brand.index')"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
                 </div>
@@ -54,6 +50,7 @@
 <script>
 import AppLayout from './../Layouts/AppLayout'   
 import FileInput from './../../Shared/FileInput'   
+import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
     metaInfo: { title: 'Brand-create' },
@@ -62,11 +59,12 @@ export default {
     remember: 'form',
     components:{
         FileInput,
+        LoadingButton,
     },
     data() {
         return {
             form: {
-                name: '', 
+                name: null, 
                 logo: null,
             },  
             sending:false,  
@@ -80,11 +78,16 @@ export default {
             let formData = new FormData();
             formData.append("name", self.form.name); 
             formData.append("logo", self.form.logo);
-            this.$inertia.post(route('admin.brand.store'), formData,{
-                preserveState: true,
-                preserveScroll: true,               
-                onBefore: () => confirm('Are you sure you want to delete this user?'), 
-                onStart: () => alert('onStart'),
+            this.$inertia.post(this.route('admin.brand.store'), formData,{
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,
+                onSuccess: () => {
+                    if (Object.keys(this.$page.errors).length === 0) {
+                        this.form.name = null
+                        this.form.logo = null
+                    }
+                },
+                
             });
         },
   

@@ -16,7 +16,7 @@ class BrandController extends Controller
     public function index()
     {
         $Brand = new Brand;
-        $Brands = $Brand->all(); 
+        $Brands = $Brand->paginate(20); 
 
         return Inertia::render('Admin/brand/Index',compact('Brands'));
  

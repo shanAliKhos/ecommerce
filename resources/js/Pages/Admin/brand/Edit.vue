@@ -60,11 +60,8 @@
                         </div>                        
                     </div>
                     <div class="tile-footer">
-                    <button class="btn btn-primary" type="submit"> 
-                        <span v-show="sending" class="btn-spinner mr-2" /></span>
-                        <i  class="fa fa-fw fa-lg fa-check-circle"></i>
-                        Update Brand
-                    </button>
+            
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Brand</loading-button>
                     
                     <inertia-link class="btn btn-secondary" :href="$route('admin.brand.index')"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
                     </div>
@@ -77,8 +74,13 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
+import LoadingButton from './../../Shared/LoadingButton'   
+
 export default {
     metaInfo: { title: 'Brand-edit' },
+    components:{
+        LoadingButton,
+    },
     layout: AppLayout, 
     remember: 'form',
     data() {
@@ -107,7 +109,8 @@ export default {
             this.$inertia.post(route('admin.brand.update', this.$page.brand.id), data, {
                 preserveState: true,
                 preserveScroll: true,             
-                onSuccess: (page) => {alert(';ok')},               
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,           
             })
 
                                       

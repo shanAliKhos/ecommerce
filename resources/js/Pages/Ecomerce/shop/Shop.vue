@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5 ">
-                    <shop-sidebar class="shadow"></shop-sidebar>
+                    <shop-sidebar ></shop-sidebar>
                 </div>
                 <div class="col-lg-9 col-md-7">
                     
