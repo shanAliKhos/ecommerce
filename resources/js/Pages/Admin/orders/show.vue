@@ -5,7 +5,7 @@
             <h1><i class="fa fa-bar-chart"></i>Order</h1>
             <p>Show </p>
         </div>
-        <inertia-link class="btn btn-danger pull-right Addnew" :href="$route('admin.order.index')" as="button" type="button"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
+        <inertia-link class="btn btn-danger pull-right Addnew" :href="route('admin.order.index')" as="button" type="button"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
 
     </div>
     <div class="row">
@@ -84,7 +84,7 @@
                                 as="button" type="button" 
                                 :data="{ Status: 'pending' }"  
                                 method="put" preserve-scroll 
-                                :href="$route('admin.order.update', this.Order.id)"  
+                                :href="route('admin.order.update', this.Order.id)"  
                                 >
                                 <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Pending</span>
                             </inertia-link>
@@ -94,7 +94,7 @@
                                 as="button" type="button" 
                                 :data="{ Status: 'processing' }"  
                                 method="put" preserve-scroll 
-                                :href="$route('admin.order.update', this.Order.id)"  
+                                :href="route('admin.order.update', this.Order.id)"  
                                 >
                                 <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Process</span>
                             </inertia-link>
@@ -104,7 +104,7 @@
                                 as="button" type="button" 
                                 method="put" preserve-scroll 
                                 :data="{ Status: 'completed' }"  
-                                :href="$route('admin.order.update', this.Order.id)" 
+                                :href="route('admin.order.update', this.Order.id)" 
                                 >
                                 <i class="fa fa-fw fa-lg fa-check-circle"></i><span>Completed</span>
                             </inertia-link>
@@ -113,7 +113,7 @@
                                 v-if="Order.Status !== 'decline'"
                                 as="button" type="button"
                                 method="delete" preserve-scroll  
-                                :href="$route('admin.order.destroy', this.Order.id)" 
+                                :href="route('admin.order.destroy', this.Order.id)" 
                                 >
                                 <i class="fa fa-fw fa-lg fa-remove"></i> <span>Cancell</span>
                             </inertia-link>

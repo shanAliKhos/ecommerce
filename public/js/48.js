@@ -435,7 +435,7 @@ var render = function() {
           {
             staticClass: "btn btn-danger pull-right Addnew",
             attrs: {
-              href: _vm.$route("admin.order.index"),
+              href: _vm.route("admin.order.index"),
               as: "button",
               type: "button"
             }
@@ -599,10 +599,7 @@ var render = function() {
                             data: { Status: "pending" },
                             method: "put",
                             "preserve-scroll": "",
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
+                            href: _vm.route("admin.order.update", this.Order.id)
                           }
                         },
                         [
@@ -625,10 +622,7 @@ var render = function() {
                             data: { Status: "processing" },
                             method: "put",
                             "preserve-scroll": "",
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
+                            href: _vm.route("admin.order.update", this.Order.id)
                           }
                         },
                         [
@@ -651,10 +645,7 @@ var render = function() {
                             method: "put",
                             "preserve-scroll": "",
                             data: { Status: "completed" },
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
+                            href: _vm.route("admin.order.update", this.Order.id)
                           }
                         },
                         [
@@ -676,7 +667,7 @@ var render = function() {
                             type: "button",
                             method: "delete",
                             "preserve-scroll": "",
-                            href: _vm.$route(
+                            href: _vm.route(
                               "admin.order.destroy",
                               this.Order.id
                             )
