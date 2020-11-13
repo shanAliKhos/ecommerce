@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     Categories: function Categories() {
-      return this.$page.props.Categories;
+      return this.$page.Categories;
     }
   }
 });

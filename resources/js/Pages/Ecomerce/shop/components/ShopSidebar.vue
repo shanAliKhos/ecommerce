@@ -90,7 +90,7 @@ export default {
     }, 
     computed: {        
         Categories(){
-            return this.$page.props.Categories;
+            return this.$page.Categories;
         },    
     },
  
