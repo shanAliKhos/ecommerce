@@ -109,15 +109,18 @@
                                 <i class="fa fa-fw fa-lg fa-check-circle"></i><span>Completed</span>
                             </inertia-link>
 
-                            <inertia-link   class="btn btn-danger"
+                            <button type="button" 
                                 v-if="Order.Status !== 'decline'"
- 
-                                method="delete" preserve-scroll  
-                                :href="route('admin.order.destroy', this.Order.id)" 
+                                :disabled="sending" 
+                                class="flex items-center btn btn-danger" 
+                                @click="cancel"
                                 >
-                                <i class="fa fa-fw fa-lg fa-remove"></i> <span>Cancell</span>
-                            </inertia-link>
+                                <div v-if="sending" class="btn-spinner mr-2" />
+                                <i v-else class="fa fa-fw fa-lg fa-remove"></i>
+                                Cancel
+                            </button>        
 
+                     
                         </div> 
                     </div>
                 </div>                
@@ -131,10 +134,41 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout' 
+import LoadingButton from './../../Shared/LoadingButton'   
  
 export default {
     layout: AppLayout, 
     metaInfo: { title: 'Order-show' },
+    components:{
+        LoadingButton,
+    },
+    data() {
+        return {
+            sending:false,
+        }
+    },
+    methods: {
+        cancel(){
+            const self= this;
+            self.$swal.fire({
+                title: 'Are you sure?',
+                text: "You will be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, cancel it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    self.$inertia.delete(self.route('admin.order.destroy', self.Order.id), {
+                        preserveState: true,
+                        preserveScroll: true,              
+
+                    })                    
+                }
+            })                   
+        },
+    },
  
     computed: {
         StatusIcon(){

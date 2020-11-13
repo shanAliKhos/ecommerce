@@ -748,9 +748,7 @@ var render = function() {
     "button",
     { staticClass: "flex items-center", attrs: { disabled: _vm.loading } },
     [
-      _vm.loading
-        ? _c("div", { staticClass: "btn-spinner mr-2" })
-        : _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
+      _vm.loading ? _c("div", { staticClass: "btn-spinner mr-2" }) : _vm._e(),
       _vm._v(" "),
       _vm._t("default")
     ],
