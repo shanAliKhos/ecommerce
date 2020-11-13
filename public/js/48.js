@@ -663,8 +663,6 @@ var render = function() {
                         {
                           staticClass: "btn btn-danger",
                           attrs: {
-                            as: "button",
-                            type: "button",
                             method: "delete",
                             "preserve-scroll": "",
                             href: _vm.route(

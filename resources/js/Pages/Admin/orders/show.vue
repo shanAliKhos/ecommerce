@@ -111,7 +111,7 @@
 
                             <inertia-link   class="btn btn-danger"
                                 v-if="Order.Status !== 'decline'"
-                                as="button" type="button"
+ 
                                 method="delete" preserve-scroll  
                                 :href="route('admin.order.destroy', this.Order.id)" 
                                 >
