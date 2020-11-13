@@ -7,10 +7,7 @@ import { InertiaProgress } from '@inertiajs/progress'
 import { InertiaForm } from 'laravel-jetstream';
 import Toasted from 'vue-toasted';
 import 'animate.css/animate.min.css'
-import VueSweetalert2 from 'vue-sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
-
-
+ 
 // Vue.config.productionTip = false 
 Vue.mixin({ methods: { route: window.route } })
  
@@ -23,12 +20,19 @@ Vue.use(Toasted, {
     position:'bottom-right',
 })
 Vue.use(VueMeta) 
-Vue.use(VueSweetalert2);
 
-InertiaProgress.init({ 
-  delay: 250, 
-  color: '#ea4335', 
-  includeCSS: true, 
+InertiaProgress.init({
+  // The delay after which the progress bar will
+  // appear during navigation, in milliseconds.
+  delay: 250,
+
+  // The color of the progress bar.
+  color: '#ea4335',
+
+  // Whether to include the default NProgress styles.
+  includeCSS: true,
+
+  // Whether the NProgress spinner will be shown.
   showSpinner: false,
 })
 

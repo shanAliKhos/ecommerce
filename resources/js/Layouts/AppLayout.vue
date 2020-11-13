@@ -7,13 +7,14 @@
                     <div class="flex">
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
-                       
-                            <h4>Administration</h4>
+                            <inertia-link :href="route('dashboard')">
+                                <jet-application-mark class="block h-9 w-auto" />
+                            </inertia-link>
                         </div>
 
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                            <jet-nav-link :href="route('admin.dashboard')" :active="route().current('admin.dashboard')" v-if="$page.user.is_admin" >
                                 Dashboard
                             </jet-nav-link>
                         </div>
@@ -44,6 +45,7 @@
                                     <div class="block px-4 py-2 text-xs text-gray-400">
                                         Manage Account
                                     </div>
+ 
 
                                     <jet-dropdown-link :href="route('profile.show')">
                                         Profile
@@ -92,11 +94,14 @@
                                     </template>
 
                                     <!-- Authentication -->
-                                    <form @submit.prevent="logout">
-                                        <jet-dropdown-link as="button">
+                                 
+                                        <jet-dropdown-link  
+                                            :href="route('logout')" 
+                                            method="post"   
+                                        >
                                             Logout
                                         </jet-dropdown-link>
-                                    </form>
+                                    
                                 </template>
                             </jet-dropdown>
                         </div>
@@ -145,11 +150,14 @@
                         </jet-responsive-nav-link>
 
                         <!-- Authentication -->
-                        <form method="POST" @submit.prevent="logout">
-                            <jet-responsive-nav-link as="button">
+                        
+                            <jet-responsive-nav-link 
+                                :href="route('logout')" 
+                                method="post"                           
+                            >
                                 Logout
                             </jet-responsive-nav-link>
-                        </form>
+                     
 
                         <!-- Team Management -->
                         <template v-if="$page.jetstream.hasTeamFeatures">
@@ -240,11 +248,7 @@
                 })
             },
 
-            logout() {
-                axios.post(route('logout').url()).then(response => {
-                    window.location = '/';
-                })
-            },
+          
         }
     }
 </script>

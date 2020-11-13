@@ -1,5 +1,27 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      Logo: this.$page.SiteOptions.Logo ? '/' + this.$page.SiteOptions.Logo.replace("public", "storage") : ''
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Jetstream/Dropdown.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Jetstream/Dropdown.vue?vue&type=script&lang=js& ***!
@@ -402,6 +424,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -427,11 +457,6 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         preserveState: false
       });
-    },
-    logout: function logout() {
-      axios.post(route('logout').url()).then(function (response) {
-        window.location = '/';
-      });
     }
   }
 });
@@ -453,33 +478,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "svg",
-    {
-      attrs: {
-        viewBox: "0 0 48 48",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
-      }
-    },
-    [
-      _c("path", {
-        attrs: {
-          d:
-            "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-          fill: "#6875F5"
-        }
-      }),
-      _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-          fill: "#6875F5"
-        }
-      })
-    ]
-  )
+  return _c("inertia-link", { attrs: { href: "/" } }, [
+    _c("img", { attrs: { src: _vm.Logo, alt: "" } })
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -616,21 +617,31 @@ var render = function() {
       _vm.as == "button"
         ? _c(
             "button",
-            {
-              staticClass:
-                "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { type: "submit" }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { type: "submit" }
+              },
+              "button",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
         : _c(
             "inertia-link",
-            {
-              staticClass:
-                "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { href: _vm.href }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { href: _vm.href }
+              },
+              "inertia-link",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
@@ -662,7 +673,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "inertia-link",
-    { class: _vm.classes, attrs: { href: _vm.href } },
+    _vm._b(
+      { class: _vm.classes, attrs: { href: _vm.href } },
+      "inertia-link",
+      _vm.$attrs,
+      false
+    ),
     [_vm._t("default")],
     2
   )
@@ -695,13 +711,23 @@ var render = function() {
       _vm.as == "button"
         ? _c(
             "button",
-            { staticClass: "w-full text-left", class: _vm.classes },
+            _vm._b(
+              { staticClass: "w-full text-left", class: _vm.classes },
+              "button",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
         : _c(
             "inertia-link",
-            { class: _vm.classes, attrs: { href: _vm.href } },
+            _vm._b(
+              { class: _vm.classes, attrs: { href: _vm.href } },
+              "inertia-link",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
@@ -739,26 +765,44 @@ var render = function() {
         _c("div", { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, [
           _c("div", { staticClass: "flex justify-between h-16" }, [
             _c("div", { staticClass: "flex" }, [
-              _vm._m(0),
+              _c(
+                "div",
+                { staticClass: "flex-shrink-0 flex items-center" },
+                [
+                  _c(
+                    "inertia-link",
+                    { attrs: { href: _vm.route("dashboard") } },
+                    [
+                      _c("jet-application-mark", {
+                        staticClass: "block h-9 w-auto"
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex" },
                 [
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: _vm.route("dashboard"),
-                        active: _vm.route().current("dashboard")
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Dashboard\n                        "
+                  _vm.$page.user.is_admin
+                    ? _c(
+                        "jet-nav-link",
+                        {
+                          attrs: {
+                            href: _vm.route("admin.dashboard"),
+                            active: _vm.route().current("admin.dashboard")
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Dashboard\n                        "
+                          )
+                        ]
                       )
-                    ]
-                  )
+                    : _vm._e()
                 ],
                 1
               )
@@ -1029,27 +1073,18 @@ var render = function() {
                                 : _vm._e(),
                               _vm._v(" "),
                               _c(
-                                "form",
+                                "jet-dropdown-link",
                                 {
-                                  on: {
-                                    submit: function($event) {
-                                      $event.preventDefault()
-                                      return _vm.logout($event)
-                                    }
+                                  attrs: {
+                                    href: _vm.route("logout"),
+                                    method: "post"
                                   }
                                 },
                                 [
-                                  _c(
-                                    "jet-dropdown-link",
-                                    { attrs: { as: "button" } },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Logout\n                                    "
-                                      )
-                                    ]
+                                  _vm._v(
+                                    "\n                                        Logout\n                                    "
                                   )
-                                ],
-                                1
+                                ]
                               )
                             ]
                           },
@@ -1212,28 +1247,13 @@ var render = function() {
                     : _vm._e(),
                   _vm._v(" "),
                   _c(
-                    "form",
-                    {
-                      attrs: { method: "POST" },
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                          return _vm.logout($event)
-                        }
-                      }
-                    },
+                    "jet-responsive-nav-link",
+                    { attrs: { href: _vm.route("logout"), method: "post" } },
                     [
-                      _c(
-                        "jet-responsive-nav-link",
-                        { attrs: { as: "button" } },
-                        [
-                          _vm._v(
-                            "\n                            Logout\n                        "
-                          )
-                        ]
+                      _vm._v(
+                        "\n                            Logout\n                        "
                       )
-                    ],
-                    1
+                    ]
                   ),
                   _vm._v(" "),
                   _vm.$page.jetstream.hasTeamFeatures
@@ -1384,16 +1404,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex-shrink-0 flex items-center" }, [
-      _c("h4", [_vm._v("Administration")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1410,15 +1421,17 @@ render._withStripped = true
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ApplicationMark_vue_vue_type_template_id_6ed2e539___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApplicationMark.vue?vue&type=template&id=6ed2e539& */ "./resources/js/Jetstream/ApplicationMark.vue?vue&type=template&id=6ed2e539&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ApplicationMark_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApplicationMark.vue?vue&type=script&lang=js& */ "./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ApplicationMark_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ApplicationMark_vue_vue_type_template_id_6ed2e539___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ApplicationMark_vue_vue_type_template_id_6ed2e539___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -1432,6 +1445,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/Jetstream/ApplicationMark.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationMark_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ApplicationMark.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Jetstream/ApplicationMark.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationMark_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

@@ -38,9 +38,10 @@
                     <inertia-link 
                         :href="$route('logout')" 
                         method="post"  
+                        type="button"
                         as="button" 
                         class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" 
-                        type="button">Logout
+                        >Logout
                     </inertia-link>
 
                 </template>

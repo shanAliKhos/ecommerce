@@ -247,21 +247,31 @@ var render = function() {
       _vm.as == "button"
         ? _c(
             "button",
-            {
-              staticClass:
-                "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { type: "submit" }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { type: "submit" }
+              },
+              "button",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
         : _c(
             "inertia-link",
-            {
-              staticClass:
-                "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { href: _vm.href }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { href: _vm.href }
+              },
+              "inertia-link",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )

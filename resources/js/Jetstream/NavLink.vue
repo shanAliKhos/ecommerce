@@ -1,5 +1,5 @@
 <template>
-    <inertia-link :href="href" :class="classes">
+    <inertia-link :href="href" v-bind="$attrs" :class="classes">
         <slot></slot>
     </inertia-link>
 </template>

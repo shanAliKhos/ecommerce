@@ -227,6 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -366,21 +367,31 @@ var render = function() {
       _vm.as == "button"
         ? _c(
             "button",
-            {
-              staticClass:
-                "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { type: "submit" }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { type: "submit" }
+              },
+              "button",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
         : _c(
             "inertia-link",
-            {
-              staticClass:
-                "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
-              attrs: { href: _vm.href }
-            },
+            _vm._b(
+              {
+                staticClass:
+                  "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+                attrs: { href: _vm.href }
+              },
+              "inertia-link",
+              _vm.$attrs,
+              false
+            ),
             [_vm._t("default")],
             2
           )
@@ -513,8 +524,8 @@ var render = function() {
                             attrs: {
                               href: _vm.$route("logout"),
                               method: "post",
-                              as: "button",
-                              type: "button"
+                              type: "button",
+                              as: "button"
                             }
                           },
                           [_vm._v("Logout\n                ")]
@@ -526,7 +537,7 @@ var render = function() {
                 ],
                 null,
                 false,
-                1783485146
+                403969754
               )
             })
           : _vm._e(),

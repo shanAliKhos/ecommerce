@@ -9,13 +9,13 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
-/* harmony import */ var _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../Jetstream/FormSection */ "./resources/js/Jetstream/FormSection.vue");
-/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
-/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
-/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
-/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
-/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/FormSection */ "./resources/js/Jetstream/FormSection.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
+/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
 //
 //
 //
@@ -103,13 +103,13 @@ __webpack_require__.r(__webpack_exports__);
     JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_4__["default"],
     JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
-  props: ['name', 'email'],
+  props: ['user'],
   data: function data() {
     return {
       form: this.$inertia.form({
         '_method': 'PUT',
-        name: this.name,
-        email: this.email,
+        name: this.user.name,
+        email: this.user.email,
         photo: null
       }, {
         bag: 'updateProfileInformation',
@@ -124,7 +124,7 @@ __webpack_require__.r(__webpack_exports__);
         this.form.photo = this.$refs.photo.files[0];
       }
 
-      this.form.post('/user/profile-information', {
+      this.form.post(route('user-profile-information.update'), {
         preserveScroll: true
       });
     },
@@ -145,7 +145,7 @@ __webpack_require__.r(__webpack_exports__);
     deletePhoto: function deletePhoto() {
       var _this2 = this;
 
-      this.$inertia["delete"]('/user/profile-photo', {
+      this.$inertia["delete"](route('current-user-photo.destroy'), {
         preserveScroll: true
       }).then(function () {
         _this2.photoPreview = null;
@@ -229,7 +229,7 @@ var render = function() {
                         _c("img", {
                           staticClass: "rounded-full h-20 w-20 object-cover",
                           attrs: {
-                            src: _vm.$page.user.profile_photo_url,
+                            src: _vm.user.profile_photo_url,
                             alt: "Current Profile Photo"
                           }
                         })
@@ -279,7 +279,7 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _vm.$page.user.profile_photo_path
+                    _vm.user.profile_photo_path
                       ? _c(
                           "jet-secondary-button",
                           {

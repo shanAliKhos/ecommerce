@@ -139,7 +139,7 @@ export default {
                 preserveScroll: true,     
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,
-                                      
+
             })
 
         }
