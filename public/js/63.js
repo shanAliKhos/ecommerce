@@ -1,93 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[63],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
-/* harmony import */ var _shared_components_BreadCrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/components/BreadCrumb */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+/* harmony import */ var _shared_components_BreadCrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/components/BreadCrumb */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue");
 //
 //
 //
@@ -114,9 +37,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'Contact'
-  },
   components: {
     BreadCrumb: _shared_components_BreadCrumb__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
@@ -162,10 +82,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -177,139 +97,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _c("BreadCrumb", {
+        scopedSlots: _vm._u([
+          {
+            key: "CurrentPage",
+            fn: function() {
+              return [_vm._v("\n        Dashboard\n    ")]
+            },
+            proxy: true
+          }
+        ])
+      }),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("section", { staticClass: "contact spad" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-3 col-md-3 col-sm-6 text-center" },
-              [
-                _c("div", { staticClass: "contact__widget shadow-2xl p-2" }, [
-                  _c("span", { staticClass: "icon_phone" }),
-                  _vm._v(" "),
-                  _c("h4", [_vm._v("Phone")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("+01-3-8888-6868")])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-lg-3 col-md-3 col-sm-6 text-center" },
-              [
-                _c("div", { staticClass: "contact__widget shadow-2xl p-2" }, [
-                  _c("span", { staticClass: "icon_pin_alt" }),
-                  _vm._v(" "),
-                  _c("h4", [_vm._v("Address")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("60-49 Road 11378 New York")])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-lg-3 col-md-3 col-sm-6 text-center" },
-              [
-                _c("div", { staticClass: "contact__widget shadow-2xl p-2" }, [
-                  _c("span", { staticClass: "icon_clock_alt" }),
-                  _vm._v(" "),
-                  _c("h4", [_vm._v("Open time")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("10:00 am to 23:00 pm")])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-lg-3 col-md-3 col-sm-6 text-center" },
-              [
-                _c("div", { staticClass: "contact__widget shadow-2xl p-2" }, [
-                  _c("span", { staticClass: "icon_mail_alt" }),
-                  _vm._v(" "),
-                  _c("h4", [_vm._v("Email")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("hello@colorlib.com")])
-                ])
-              ]
-            )
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "contact-form spad" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "contact__form__title" }, [
-                _c("h2", [_vm._v("Leave Message")])
-              ])
-            ])
-          ]),
+    return _c("section", { staticClass: "product spad" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-5" }),
           _vm._v(" "),
-          _c("form", { attrs: { action: "#" } }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                _c("input", {
-                  attrs: { type: "text", placeholder: "Your name" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                _c("input", {
-                  attrs: { type: "text", placeholder: "Your Email" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-12 text-center" }, [
-                _c("textarea", { attrs: { placeholder: "Your message" } }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "site-btn", attrs: { type: "submit" } },
-                  [_vm._v("SEND MESSAGE")]
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "map" }, [
-        _c("iframe", {
-          staticStyle: { border: "0" },
-          attrs: {
-            src:
-              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd",
-            height: "500",
-            allowfullscreen: "",
-            "aria-hidden": "false",
-            tabindex: "0"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "map-inside" }, [
-          _c("i", { staticClass: "icon_pin" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "inside-widget" }, [
-            _c("h4", [_vm._v("New York")]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [_vm._v("Phone: +12-345-6789")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("Add: 16 Creek Ave. Farmingdale, NY")])
-            ])
-          ])
+          _c("div", { staticClass: "col-lg-9 col-md-7" })
         ])
       ])
     ])
@@ -490,18 +308,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue":
-/*!*********************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue ***!
-  \*********************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Dashboard.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Dashboard.vue ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contact.vue?vue&type=template&id=3cf07014& */ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&");
-/* harmony import */ var _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=template&id=57916cce& */ "./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce&");
+/* harmony import */ var _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -510,9 +328,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -522,38 +340,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/contact/Contact.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/Dashboard.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Dashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014& ***!
-  \****************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce& ***!
+  \**********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=template&id=3cf07014& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Dashboard.vue?vue&type=template&id=57916cce& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Dashboard.vue?vue&type=template&id=57916cce&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_57916cce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

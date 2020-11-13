@@ -58,18 +58,15 @@ class CategoryController extends Controller
     }
  
     public function edit(Category $Category)
-    {   
+    {     
         $Categories = $Category->all();  
+        $Category = $Category->with('parent')->firstOrFail();
         return Inertia::render('Admin/category/Edit',compact('Categories', 'Category'));
- 
-    }
+    }  
 
-  
     public function update(Category $category, Request $request)
-    {
- 
+    {    
         $this->validate($request,['name'=>'required|min:2|max:255|unique:categories,name,' .$category->id]); 
-
         if($request->hasFile('image')){
             $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']); 
             $OldPath = $category->image;        
@@ -87,8 +84,7 @@ class CategoryController extends Controller
                 }                  
             }
         }
-
-    
+ 
         $category->update([
             'name' => $request->name, 
             'slug' => Str::slug($request->name),

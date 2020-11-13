@@ -14,7 +14,7 @@
                         <div class="tile-body">
                             <text-input  
                             v-model="form.name" :error="$page.errors.name" 
-                            class="form-group" label="Name" labelRequire="true" placeholder="Enter Name" />                        
+                            class="form-group" label="Name" :labelRequire="true" placeholder="Enter Name" />                        
  
                             <!-- <div class="form-group">
                                 <label class="control-label" for="name">Name <span class="m-l-5 text-danger"> *</span></label>
@@ -32,19 +32,23 @@
                                 <textarea  v-model="form.description" placeholder="add multiple lines" class="form-control" rows="4" name="description" id="description"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="parent">Parent Category <span class="m-l-5 text-danger"> *</span></label>
-                                <select 
-                                    v-model="form.parent_id"
-                                    :class="{'is-invalid': $page.errors.parent_id ,'form-control custom-select mt-15':true}" 
-                                    name="parent_id"
-                                    >
-                                    <option>Select a parent category</option>
-                                    <option v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex" :value="Category.id"> {{ Category.name }} </option>
-                                </select> 
+                                <label class="control-label" for="ParentCategory"> <i class="fa fa-exclamation-circle fa-fw"></i> Parent Category</label>
+                                <multiselect 
+                                    v-model="form.parent" 
+                                    deselect-label="Can't remove this value" 
+                                    track-by="name" 
+                                    :class="{'is-invalid': $page.errors.parent}"
+                                    label="name" 
+                                    placeholder="Parent Category" 
+                                    :options="Categories" 
+                                    :searchable="false" 
+                                    :allow-empty="true">
+                                </multiselect>                                            
                                 <div class="invalid-feedback active">
-                                    <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.parent_id }}</span> 
-                                </div>                                              
-                            </div>
+                                    <i class="fa fa-exclamation-circle fa-fw"></i> <span>{{ $page.errors.parent }}</span>
+                                </div>
+                            </div>                            
+                          
                             <div class="form-group">
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -89,6 +93,7 @@ import FileInput from './../../Shared/FileInput'
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
+import Multiselect from 'vue-multiselect'
 
 export default {
     metaInfo: { title: 'Category-create' },
@@ -98,7 +103,7 @@ export default {
         TextInput,
         SelectInput,
         LoadingButton,
-
+        Multiselect,
     },
    
     data() {
@@ -106,7 +111,7 @@ export default {
             form:{
                 name:null,
                 description:null,
-                parent_id:null,
+                parent:null,
                 is_featured:false,
                 menu:null,
                 image: null,
@@ -121,7 +126,7 @@ export default {
             const data = new FormData()
             data.append('name', self.form.name || '')
             data.append('description', self.form.description || '')
-            data.append('parent_id', self.form.parent_id || '')
+            data.append('parent_id', self.form.parent.id || '')
             data.append('is_featured', self.form.is_featured || '')
             data.append('menu', self.form.menu || '')
             data.append('image', self.form.image || null) 

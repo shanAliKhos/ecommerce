@@ -71,7 +71,7 @@
                                 <div class="row d-print-none mt-2">
                                     <div class="col-12 text-right">
                                         <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Attribute</loading-button> 
-                                        <inertia-link class="btn btn-danger" :href="$route('admin.attributes.index')"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
+                                        <inertia-link class="btn btn-danger" :href="route('admin.attributes.index')"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
                                     </div>
                                 </div>
                             </div>

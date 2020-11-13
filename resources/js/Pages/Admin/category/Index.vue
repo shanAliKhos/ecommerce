@@ -27,29 +27,9 @@
                                 </tr>
                             </thead>
                             <tbody>  
-                                <tr v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex" v-if="(CategoryIndex > 0)">
-                                    <td>{{ CategoryIndex }}</td>
-                                    <td>{{ Category.name }}</td>
-                                    <td>{{ Category.slug }}</td>
-                                    <!-- <td>{{ Category.parent }}</td> -->
-                                    <td class="text-center"> 
-                                        <span v-if="Category.is_featured" class="badge badge-success">Yes</span>
-                                        <span v-else class="badge badge-danger">No</span>
-                                    </td>
-                                    <td class="text-center">
-                                        <span v-if="Category.menu" class="badge badge-success">Yes</span>
-                                        <span v-else class="badge badge-danger">No</span>
-                                    </td>
-                                    <!-- <td class="text-center">
-                                            Category.order 
-                                    </td> -->
-                                    <td class="text-center">
-                                        <div class="btn-group" role="group" aria-label="Second group">
-                                            <inertia-link :href="$route('admin.category.edit', Category.id)" preserve-scroll class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></inertia-link>
-                                            <inertia-link :href="$route('admin.category.destroy', Category.id)" method="delete"  preserve-scroll class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></inertia-link>
-                                        </div>
-                                    </td>
-                                </tr> 
+
+                                <category-item v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex" v-if="(CategoryIndex > 0)" :CategoryIndex="CategoryIndex" :Category="Category"></category-item>
+                            
                             </tbody>
                         </table>
                     </div>
@@ -61,9 +41,13 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
+import CategoryItem from './components/CategoryItem'   
 export default {
     layout: AppLayout, 
     metaInfo: { title: 'Category' },
+    components:{
+        CategoryItem,
+    },
     computed: {
         Categories(){
             return this.$page.Categories;

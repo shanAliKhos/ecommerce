@@ -28,16 +28,19 @@
                         </div>
                         <div class="form-group">
                             <label for="parent">Parent Category <span class="m-l-5 text-danger"> *</span></label>
-                            <select 
-                                v-model="form.parent_id"
-                                :class="{'is-invalid': $page.errors.parent_id ,'form-control custom-select mt-15':true}" 
-                                name="parent_id"                            
-                            >
-                                <option value="0">Select a parent category</option> 
-                                <option v-for="(Cat, CatIndex) in Categories" :key="CatIndex" v-if="(Cat.id !== $page.Category.id)" :value="Cat.id" :selected="(Cat.id === $page.Category.parent_id)"> {{ Cat.name }} </option>
-                            </select>
+                            <multiselect 
+                                v-model="form.parent" 
+                                deselect-label="Can't remove this value" 
+                                track-by="name" 
+                                :class="{'is-invalid': $page.errors.parent}"
+                                label="name" 
+                                placeholder="Parent Category" 
+                                :options="Categories" 
+                                :searchable="false" 
+                                :allow-empty="true">
+                            </multiselect>  
                             <div class="invalid-feedback active">
-                                <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.parent_id }}</span> 
+                                <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.parent }}</span> 
                             </div>                                                                          
                         </div>
                         <div class="form-group">
@@ -102,11 +105,13 @@
 <script>
 import AppLayout from './../Layouts/AppLayout'   
 import LoadingButton from './../../Shared/LoadingButton'   
+import Multiselect from 'vue-multiselect'
 
 export default {
     layout: AppLayout, 
     components:{
         LoadingButton,
+        Multiselect,
     },    
     metaInfo: { title: 'Category-edit' },
     remember: 'form',
@@ -115,7 +120,7 @@ export default {
             form:{
                 name:this.$page.Category.name,
                 description:this.$page.Category.description,
-                parent_id:this.$page.Category.parent_id,
+                parent:this.$page.Category.parent, 
                 is_featured:this.$page.Category.is_featured,
                 menu:this.$page.Category.menu,
                 image: this.$page.Category.image,
@@ -133,7 +138,7 @@ export default {
             let data = new FormData()
             data.append('name', self.form.name || '')
             data.append('description', self.form.description || '')
-            data.append('parent_id', self.form.parent_id || '')
+            data.append('parent_id', self.form.parent.id || '')
             data.append('menu', self.form.menu || '')
             data.append('image', self.form.image || '')
             data.append('is_active', self.form.is_active || '')
