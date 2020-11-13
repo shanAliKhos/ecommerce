@@ -60,7 +60,7 @@ class CategoryController extends Controller
     public function edit(Category $Category)
     {     
         $Categories = $Category->all();  
-        $Category = $Category->with('parent')->firstOrFail();
+        $Category->load('parent');
         return Inertia::render('Admin/category/Edit',compact('Categories', 'Category'));
     }  
 
