@@ -21,7 +21,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Settings</button>
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Settings</loading-button>
                 </div>
             </div>
         </div>
@@ -30,12 +30,17 @@
 </template>
 <script>
 import TextInput from './../../../Shared/TextInput'   
+import LoadingButton from './../../../Shared/LoadingButton' 
+
 export default {
     components:{
         TextInput,
+        LoadingButton
     },
     props:{
         settings:Object,
+        sending:Boolean,
+
     },    
     data() {
         return {

@@ -158,8 +158,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       var formData = new FormData();
-      formData.append("name", self.form.name);
-      formData.append("logo", self.form.logo);
+      formData.append("name", self.form.name || '');
+      formData.append("logo", self.form.logo || '');
       this.$inertia.post(this.route('admin.brand.store'), formData, {
         onStart: function onStart() {
           return _this.sending = true;

@@ -88,8 +88,8 @@
                 
                     </div>
                     <div class="tile-footer">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Category</button>
-                        &nbsp;&nbsp;&nbsp;
+                        <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Category</loading-button>
+
                         <inertia-link class="btn btn-secondary" :href="$route('admin.category.index')"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
                     </div>
                 </form>
@@ -101,8 +101,13 @@
 </template> 
 <script>
 import AppLayout from './../Layouts/AppLayout'   
+import LoadingButton from './../../Shared/LoadingButton'   
+
 export default {
     layout: AppLayout, 
+    components:{
+        LoadingButton,
+    },    
     metaInfo: { title: 'Category-edit' },
     remember: 'form',
     data() {
@@ -137,7 +142,8 @@ export default {
             self.$inertia.post(route('admin.category.update', this.$page.Category.id), data, {
                 preserveState: true,
                 preserveScroll: true,                
-                
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,                
             })
 
                                       

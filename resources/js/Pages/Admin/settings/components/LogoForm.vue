@@ -44,7 +44,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Settings</button>
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Settings</loading-button>
                 </div>
             </div>
         </div>
@@ -54,14 +54,18 @@
 <script> 
 import TextInput from './../../../Shared/TextInput'   
 import FileInput from './../../../Shared/FileInput'   
+import LoadingButton from './../../../Shared/LoadingButton' 
 
 export default {
     components:{
-        TextInput,FileInput
+        TextInput,
+        FileInput,
+        LoadingButton
     },
     props:{
         site_logo:String,
         site_favicon:String,
+        sending:Boolean,
     },    
     data() {
         return {

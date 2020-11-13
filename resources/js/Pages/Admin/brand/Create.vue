@@ -76,8 +76,8 @@ export default {
   
             const self = this;
             let formData = new FormData();
-            formData.append("name", self.form.name); 
-            formData.append("logo", self.form.logo);
+            formData.append("name", self.form.name || ''); 
+            formData.append("logo", self.form.logo || '');
             this.$inertia.post(this.route('admin.brand.store'), formData,{
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,

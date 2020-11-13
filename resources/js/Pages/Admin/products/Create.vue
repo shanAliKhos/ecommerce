@@ -18,7 +18,7 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="general">
                     <div class="tile">
-                        <form> 
+                        <form @submit.prevent="store"> 
                             <h3 class="tile-title">Product Information</h3>
                             <hr>
                             <div class="tile-body">
@@ -30,7 +30,7 @@
                                         placeholder="Enter attribute name"
                                         id="name"
                                         name="name" 
-                                        v-model="Product.name"
+                                        v-model="form.name"
                                     />
                                     <div class="invalid-feedback active">
                                         <i class="fa fa-exclamation-circle fa-fw"></i>  <span> {{$page.errors.name}} </span>
@@ -46,7 +46,7 @@
                                                 placeholder="Enter product sku"
                                                 id="sku"
                                                 name="sku" 
-                                                v-model="Product.sku"
+                                                v-model="form.sku"
                                             />
                                             <div class="invalid-feedback active">
                                                 <i class="fa fa-exclamation-circle fa-fw"></i> <span>{{$page.errors.sku}}</span>
@@ -57,7 +57,7 @@
                                         <div class="form-group">
                                             <label class="control-label" for="brand_id">Brand</label>
                                             <multiselect 
-                                                v-model="Product.brand" 
+                                                v-model="form.brand" 
                                                 deselect-label="Can't remove this value" 
                                                 track-by="name" 
                                                 :class="{'is-invalid': $page.errors.regular_price}"
@@ -79,7 +79,7 @@
                                         <div class="form-group">
                                             <label class="control-label" for="categories">Categories</label>
                                             <multiselect 
-                                                v-model="Product.categories" 
+                                                v-model="form.categories" 
                                                 :options="CategoriesOption" 
                                                 :multiple="true" 
                                                 :close-on-select="false" 
@@ -106,7 +106,7 @@
                                                 placeholder="Enter product price"
                                                 id="price"
                                                 name="price" 
-                                                v-model.number="Product.regular_price"
+                                                v-model.number="form.regular_price"
 
                                             />
                                             <div class="invalid-feedback active">
@@ -123,7 +123,7 @@
                                                 placeholder="Enter product sale price"
                                                 id="special_price"
                                                 name="special_price" 
-                                                v-model.number="Product.sale_price"
+                                                v-model.number="form.sale_price"
                                             />
                                             <div class="invalid-feedback active">
                                                 <i class="fa fa-exclamation-circle fa-fw"></i> <span>{{ $page.errors.sale_price }}</span> 
@@ -139,7 +139,7 @@
                                                 placeholder="Enter product quantity"
                                                 id="quantity"
                                                 name="quantity" 
-                                                v-model.number="Product.quantity"
+                                                v-model.number="form.quantity"
                                             />
                                             <div class="invalid-feedback active">
                                                 <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.quantity }}</span> 
@@ -155,14 +155,14 @@
                                                 placeholder="Enter product weight"
                                                 id="weight"
                                                 name="weight" 
-                                                v-model.number="Product.weight"
+                                                v-model.number="form.weight"
                                             />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="description">Description</label>
-                                    <textarea  v-model="Product.description" name="description" id="description" rows="8" class="form-control"></textarea>
+                                    <textarea  v-model="form.description" name="description" id="description" rows="8" class="form-control"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-check">
@@ -171,8 +171,8 @@
                                                 type="checkbox"
                                                 id="status"
                                                 name="is_active"
-                                                v-model="Product.is_active"
-                                                />Status : {{(Product.is_active)?"Active":"Disabled"}}
+                                                v-model="form.is_active"
+                                                />Status : {{(form.is_active)?"Active":"Disabled"}}
                                         </label>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@
                                                 type="checkbox"
                                                 id="featured"
                                                 name="featured"
-                                                v-model="Product.is_featured"
+                                                v-model="form.is_featured"
                                                 />Featured 
                                         </label>
                                     </div>
@@ -193,7 +193,7 @@
                             <div class="tile-footer">
                                 <div class="row d-print-none mt-2">
                                     <div class="col-12 text-right">
-                                        <button type="button" class="btn btn-success" @click="Store()"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Product</button>
+                                        <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Product</loading-button>
                                         <inertia-link class="btn btn-danger" :href="$route('admin.product.index')"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
                                     </div>
                                 </div>
@@ -209,19 +209,21 @@
 <script>
 import AppLayout from './../Layouts/AppLayout' 
 import Multiselect from 'vue-multiselect'
-  
+import LoadingButton from './../../Shared/LoadingButton'   
+
 export default { 
     layout: AppLayout,  
     metaInfo: { title: 'Product create' }, 
     components: { 
         Multiselect,
+        LoadingButton,
      
     },
     remember: 'form',
 
     data() {
         return  {              
-            Product:{
+            form:{
                 name:null,
                 sku:null,
                 brand:null,
@@ -235,12 +237,23 @@ export default {
                 is_featured:false,
                 images:[]
             },
+            sending:false,
         }
     }, 
     methods: {
-        Store() {
+        store() {
             self = this;
-            self.$inertia.post(route('admin.product.store'), self.Product);  
+            self.$inertia.post(route('admin.product.store'), self.form, {
+                preserveState: true,
+                preserveScroll: true,                
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,
+                onSuccess: () => {
+                    if (Object.keys(this.$page.errors).length === 0) {
+                       
+                    }
+                },             
+            });  
         },
  
     },

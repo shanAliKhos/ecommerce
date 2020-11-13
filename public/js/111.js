@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[111],{
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f&":
-/*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f& ***!
-  \**********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b& ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22,191 +22,59 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "related-product" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c(
-              "div",
-              { staticClass: "section-title related__product__title" },
-              [_c("h2", [_vm._v("Related Product")])]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-3 col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "product__item" }, [
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm-6" }, [
+        _c(
+          "div",
+          {
+            staticClass: "dataTables_length",
+            attrs: { id: "example1_length" }
+          },
+          [
+            _c("label", [
+              _vm._v("Show entries\n                "),
               _c(
-                "div",
+                "select",
                 {
-                  staticClass: "product__item__pic set-bg",
-                  attrs: { "data-setbg": "img/product/product-1.jpg" }
+                  staticClass: "form-control input-sm",
+                  attrs: {
+                    name: "example1_length",
+                    "aria-controls": "example1"
+                  }
                 },
                 [
-                  _c("ul", { staticClass: "product__item__pic__hover" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-heart" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-retweet" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-shopping-cart" })
-                      ])
-                    ])
-                  ])
+                  _c("option", { attrs: { value: "10" } }, [_vm._v("10")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "25" } }, [_vm._v("25")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "50" } }, [_vm._v("50")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "100" } }, [_vm._v("100")])
                 ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "product__item__text" }, [
-                _c("h6", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Crab Pool Security")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("h5", [_vm._v("$30.00")])
-              ])
+              )
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "product__item" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "product__item__pic set-bg",
-                  attrs: { "data-setbg": "img/product/product-2.jpg" }
-                },
-                [
-                  _c("ul", { staticClass: "product__item__pic__hover" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-heart" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-retweet" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-shopping-cart" })
-                      ])
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "product__item__text" }, [
-                _c("h6", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Crab Pool Security")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("h5", [_vm._v("$30.00")])
-              ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-6" }, [
+        _c(
+          "div",
+          { staticClass: "pull-right", attrs: { id: "example1_filter" } },
+          [
+            _c("label", [
+              _vm._v("Search:\n                "),
+              _c("input", {
+                staticClass: "form-control input-sm",
+                attrs: {
+                  type: "search",
+                  placeholder: "",
+                  "aria-controls": "example1"
+                }
+              })
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "product__item" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "product__item__pic set-bg",
-                  attrs: { "data-setbg": "img/product/product-3.jpg" }
-                },
-                [
-                  _c("ul", { staticClass: "product__item__pic__hover" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-heart" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-retweet" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-shopping-cart" })
-                      ])
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "product__item__text" }, [
-                _c("h6", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Crab Pool Security")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("h5", [_vm._v("$30.00")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "product__item" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "product__item__pic set-bg",
-                  attrs: { "data-setbg": "img/product/product-7.jpg" }
-                },
-                [
-                  _c("ul", { staticClass: "product__item__pic__hover" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-heart" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-retweet" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fa fa-shopping-cart" })
-                      ])
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "product__item__text" }, [
-                _c("h6", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Crab Pool Security")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("h5", [_vm._v("$30.00")])
-              ])
-            ])
-          ])
-        ])
+          ]
+        )
       ])
     ])
   }
@@ -329,16 +197,16 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue ***!
-  \*********************************************************************************/
+/***/ "./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RelatedProducts.vue?vue&type=template&id=7de0071f& */ "./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f&");
+/* harmony import */ var _ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ItemPerPage.vue?vue&type=template&id=790ff82b& */ "./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 var script = {}
@@ -348,8 +216,8 @@ var script = {}
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
   script,
-  _RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -359,24 +227,24 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue"
+component.options.__file = "resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f& ***!
-  \****************************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b& ***!
+  \**************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./RelatedProducts.vue?vue&type=template&id=7de0071f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue?vue&type=template&id=7de0071f&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ItemPerPage.vue?vue&type=template&id=790ff82b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue?vue&type=template&id=790ff82b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RelatedProducts_vue_vue_type_template_id_7de0071f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPerPage_vue_vue_type_template_id_790ff82b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

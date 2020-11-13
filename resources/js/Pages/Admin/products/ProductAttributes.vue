@@ -53,7 +53,6 @@
                     <div class="row d-print-none mt-2">
                         <div class="col-12 text-right">
                             <loading-button :loading="sending" class="btn btn-info" type="submit">Add</loading-button>
-                            <!-- <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-plus"></i>Add</button> -->
                         </div>
                     </div>
                 </div>
@@ -96,9 +95,17 @@ import LoadingButton from './../../Shared/LoadingButton'
             store(){ 
                 const self = this
                 self.$inertia.post(route('admin.product-attributes.store'), self.form, {
-                    preserveScroll: true,
-                    onStart: () => {alert('ok')},
-                    onFinish: () => this.sending = false,                    
+                    preserveState: true,
+                    preserveScroll: true,                
+                    onStart: () => this.sending = true,
+                    onFinish: () => this.sending = false,
+                    onSuccess: () => {
+                        if (Object.keys(this.$page.errors).length === 0) {
+                            this.form.Attribute = null
+                            this.form.AttributeValues = null              
+                        }
+                    },     
+                                       
                 })
             }, 
         },
@@ -109,7 +116,7 @@ import LoadingButton from './../../Shared/LoadingButton'
             },
             AttributesValues(){  
                 this.form.AttributeValues = []
-                return this.form.Attribute.values?this.form.Attribute.values:[];
+                return this.form.Attribute?this.form.Attribute.values:[];
             }, 
             ProductsAttributes(){   
                 return this.$page.Product.product_attributes;

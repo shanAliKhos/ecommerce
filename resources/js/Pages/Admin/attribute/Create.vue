@@ -70,7 +70,7 @@
                             <div class="tile-footer">
                                 <div class="row d-print-none mt-2">
                                     <div class="col-12 text-right">
-                                        <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Attribute</button>
+                                        <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Attribute</loading-button> 
                                         <inertia-link class="btn btn-danger" :href="$route('admin.attributes.index')"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
                                     </div>
                                 </div>
@@ -89,6 +89,8 @@
 import AppLayout from './../Layouts/AppLayout'   
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
+import LoadingButton from './../../Shared/LoadingButton'   
+
 export default {
     metaInfo: { title: 'Attribute-create' },
 
@@ -96,6 +98,7 @@ export default {
     components:{
         TextInput,
         SelectInput,
+        LoadingButton,
     },
     data() {
         return {
@@ -131,9 +134,11 @@ export default {
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,
                 onSuccess: () => {
-       
-                 alert(';ok')
-                },                
+                    if (Object.keys(this.$page.errors).length === 0) {
+                        this.form.name = null
+                        this.form.logo = null
+                    }
+                },             
             });
         },
   

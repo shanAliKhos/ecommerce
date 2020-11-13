@@ -73,8 +73,8 @@
                             </div>
                         </div>
                         <div class="tile-footer">
-                            <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Category</button>
-                            &nbsp;&nbsp;&nbsp;
+                            <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Category</loading-button>
+
                             <inertia-link class="btn btn-secondary" :href="$route('admin.category.index') "><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
                         </div>
                     </form>
@@ -88,6 +88,7 @@ import AppLayout from './../Layouts/AppLayout'
 import FileInput from './../../Shared/FileInput'        
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
+import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
     metaInfo: { title: 'Category-create' },
@@ -96,6 +97,8 @@ export default {
         FileInput,
         TextInput,
         SelectInput,
+        LoadingButton,
+
     },
    
     data() {
@@ -125,9 +128,16 @@ export default {
             data.append('is_active', self.form.is_active || '') 
 
             self.$inertia.post(route('admin.category.store'), data, {
- 
-                preserveScroll: true,                     
-                onStart: () => self.sending = true, 
+                preserveState: true,
+                preserveScroll: true,                
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,
+                onSuccess: () => {
+                    if (Object.keys(this.$page.errors).length === 0) {
+                        this.form.name = null
+                        this.form.logo = null
+                    }
+                },             
             })
         },
     },  

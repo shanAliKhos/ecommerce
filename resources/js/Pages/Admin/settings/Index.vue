@@ -23,38 +23,39 @@
         <div class="col-md-9">
             <div class="tab-content">
                 <div class="tab-pane active" id="general">
-                    <general-form :settings="settings" 
+                    <general-form :sending="sending"
+                        :settings="settings" 
                         @form-is-updated="update">
                     </general-form>
                 </div>
                 <div class="tab-pane fade" id="site-logo"> 
-                    <logo-form 
+                    <logo-form :sending="sending"
                         :site_logo="settings.site_logo" 
                         :site_favicon="settings.site_favicon" 
                         @form-is-updated="update">
                     </logo-form> 
                 </div>
                 <div class="tab-pane fade" id="footer-seo">
-                    <footer-seo-form 
+                    <footer-seo-form :sending="sending"
                         :settings="settings" 
                         @form-is-updated="update">
                     </footer-seo-form> 
                 </div>
                 <div class="tab-pane fade" id="social-links">
-                    <social-links-form 
+                    <social-links-form :sending="sending"
                         :settings="settings" 
                         @form-is-updated="update">
                     </social-links-form> 
                 </div>
                 <div class="tab-pane fade" id="analytics">
-                    <analytics-form 
+                    <analytics-form :sending="sending"
                         :google_analytics="settings.google_analytics" 
                         :facebook_pixels="settings.facebook_pixels" 
                         @form-is-updated="update">
                     </analytics-form> 
                 </div>
                 <div class="tab-pane fade" id="payments">
-                    <payments-form 
+                    <payments-form :sending="sending"
                         :settings="settings" 
                         @form-is-updated="update">
                     </payments-form> 
@@ -83,11 +84,18 @@ export default {
         PaymentsForm,
         SocialLinksForm,
     },
+    data() {
+        return {
+            sending:false,
+        }
+    },
     methods: {
         update(formData){ 
             this.$inertia.post(route('admin.setting.update'), formData, {
                 preserveState: true,
-                preserveScroll: true,  
+                preserveScroll: true,                
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,
             })            
              
         }

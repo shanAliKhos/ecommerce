@@ -151,6 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -171,11 +172,24 @@ __webpack_require__.r(__webpack_exports__);
     PaymentsForm: _components_PaymentsForm__WEBPACK_IMPORTED_MODULE_5__["default"],
     SocialLinksForm: _components_SocialLinksForm__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
+  data: function data() {
+    return {
+      sending: false
+    };
+  },
   methods: {
     update: function update(formData) {
+      var _this = this;
+
       this.$inertia.post(route('admin.setting.update'), formData, {
         preserveState: true,
-        preserveScroll: true
+        preserveScroll: true,
+        onStart: function onStart() {
+          return _this.sending = true;
+        },
+        onFinish: function onFinish() {
+          return _this.sending = false;
+        }
       });
     }
   },
@@ -198,6 +212,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextareaInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextareaInput */ "./resources/js/Pages/Shared/TextareaInput.vue");
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 //
 //
 //
@@ -225,13 +240,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    TextareaInput: _Shared_TextareaInput__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TextareaInput: _Shared_TextareaInput__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: {
     google_analytics: String,
-    facebook_pixels: String
+    facebook_pixels: String,
+    sending: Boolean
   },
   data: function data() {
     return {
@@ -265,6 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 //
 //
 //
@@ -296,12 +315,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: {
-    settings: Object
+    settings: Object,
+    sending: Boolean
   },
   data: function data() {
     return {
@@ -337,106 +359,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  props: {
-    settings: Object
-  },
-  data: function data() {
-    return {
-      form: {
-        site_name: this.settings.site_name,
-        site_title: this.settings.site_title,
-        default_email_address: this.settings.default_email_address,
-        currency_code: this.settings.currency_code,
-        currency_symbol: this.settings.currency_symbol
-      }
-    };
-  },
-  methods: {
-    update: function update() {
-      var self = this;
-      var formData = new FormData();
-      formData.append("site_name", self.form.site_name || '');
-      formData.append("site_title", self.form.site_title || '');
-      formData.append("default_email_address", self.form.default_email_address || '');
-      formData.append("currency_code", self.form.currency_code || '');
-      formData.append("currency_symbol", self.form.currency_symbol || '');
-      formData.append('_method', 'put');
-      self.$emit('form-is-updated', formData);
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/LogoForm.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/LogoForm.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
-/* harmony import */ var _Shared_FileInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/FileInput */ "./resources/js/Pages/Shared/FileInput.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 //
 //
 //
@@ -482,11 +405,118 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"],
-    FileInput: _Shared_FileInput__WEBPACK_IMPORTED_MODULE_1__["default"]
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  props: {
+    settings: Object,
+    sending: Boolean
+  },
+  data: function data() {
+    return {
+      form: {
+        site_name: this.settings.site_name,
+        site_title: this.settings.site_title,
+        default_email_address: this.settings.default_email_address,
+        currency_code: this.settings.currency_code,
+        currency_symbol: this.settings.currency_symbol
+      }
+    };
+  },
+  methods: {
+    update: function update() {
+      var self = this;
+      var formData = new FormData();
+      formData.append("site_name", self.form.site_name || '');
+      formData.append("site_title", self.form.site_title || '');
+      formData.append("default_email_address", self.form.default_email_address || '');
+      formData.append("currency_code", self.form.currency_code || '');
+      formData.append("currency_symbol", self.form.currency_symbol || '');
+      formData.append('_method', 'put');
+      self.$emit('form-is-updated', formData);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/LogoForm.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/LogoForm.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
+/* harmony import */ var _Shared_FileInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/FileInput */ "./resources/js/Pages/Shared/FileInput.vue");
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"],
+    FileInput: _Shared_FileInput__WEBPACK_IMPORTED_MODULE_1__["default"],
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   props: {
     site_logo: String,
-    site_favicon: String
+    site_favicon: String,
+    sending: Boolean
   },
   data: function data() {
     return {
@@ -520,6 +550,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 //
 //
 //
@@ -555,12 +586,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: {
-    settings: Object
+    settings: Object,
+    sending: Boolean
   },
   data: function data() {
     return {
@@ -804,7 +838,7 @@ var render = function() {
             { staticClass: "tab-pane active", attrs: { id: "general" } },
             [
               _c("general-form", {
-                attrs: { settings: _vm.settings },
+                attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
               })
             ],
@@ -817,6 +851,7 @@ var render = function() {
             [
               _c("logo-form", {
                 attrs: {
+                  sending: _vm.sending,
                   site_logo: _vm.settings.site_logo,
                   site_favicon: _vm.settings.site_favicon
                 },
@@ -831,7 +866,7 @@ var render = function() {
             { staticClass: "tab-pane fade", attrs: { id: "footer-seo" } },
             [
               _c("footer-seo-form", {
-                attrs: { settings: _vm.settings },
+                attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
               })
             ],
@@ -843,7 +878,7 @@ var render = function() {
             { staticClass: "tab-pane fade", attrs: { id: "social-links" } },
             [
               _c("social-links-form", {
-                attrs: { settings: _vm.settings },
+                attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
               })
             ],
@@ -856,6 +891,7 @@ var render = function() {
             [
               _c("analytics-form", {
                 attrs: {
+                  sending: _vm.sending,
                   google_analytics: _vm.settings.google_analytics,
                   facebook_pixels: _vm.settings.facebook_pixels
                 },
@@ -870,7 +906,7 @@ var render = function() {
             { staticClass: "tab-pane fade", attrs: { id: "payments" } },
             [
               _c("payments-form", {
-                attrs: { settings: _vm.settings },
+                attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
               })
             ],
@@ -1045,32 +1081,30 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "tile-footer" }, [
+          _c("div", { staticClass: "row d-print-none mt-2" }, [
+            _c(
+              "div",
+              { staticClass: "col-12 text-right" },
+              [
+                _c(
+                  "loading-button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { loading: _vm.sending, type: "submit" }
+                  },
+                  [_vm._v("Update Settings")]
+                )
+              ],
+              1
+            )
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile-footer" }, [
-      _c("div", { staticClass: "row d-print-none mt-2" }, [
-        _c("div", { staticClass: "col-12 text-right" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-success", attrs: { type: "submit" } },
-            [
-              _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-              _vm._v("Update Settings")
-            ]
-          )
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1164,32 +1198,30 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "tile-footer" }, [
+          _c("div", { staticClass: "row d-print-none mt-2" }, [
+            _c(
+              "div",
+              { staticClass: "col-12 text-right" },
+              [
+                _c(
+                  "loading-button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { loading: _vm.sending, type: "submit" }
+                  },
+                  [_vm._v("Update Settings")]
+                )
+              ],
+              1
+            )
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile-footer" }, [
-      _c("div", { staticClass: "row d-print-none mt-2" }, [
-        _c("div", { staticClass: "col-12 text-right" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-success", attrs: { type: "submit" } },
-            [
-              _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-              _vm._v("Update Settings")
-            ]
-          )
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1321,7 +1353,14 @@ var render = function() {
               "div",
               { staticClass: "col-12 text-right" },
               [
-                _vm._m(0),
+                _c(
+                  "loading-button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { loading: _vm.sending, type: "submit" }
+                  },
+                  [_vm._v("Update Settings")]
+                ),
                 _vm._v(" "),
                 _c(
                   "inertia-link",
@@ -1343,21 +1382,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-success", attrs: { type: "submit" } },
-      [
-        _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-        _vm._v("Update Settings")
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1461,32 +1486,30 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "tile-footer" }, [
+          _c("div", { staticClass: "row d-print-none mt-2" }, [
+            _c(
+              "div",
+              { staticClass: "col-12 text-right" },
+              [
+                _c(
+                  "loading-button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { loading: _vm.sending, type: "submit" }
+                  },
+                  [_vm._v("Update Settings")]
+                )
+              ],
+              1
+            )
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile-footer" }, [
-      _c("div", { staticClass: "row d-print-none mt-2" }, [
-        _c("div", { staticClass: "col-12 text-right" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-success", attrs: { type: "submit" } },
-            [
-              _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-              _vm._v("Update Settings")
-            ]
-          )
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1595,32 +1618,30 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "tile-footer" }, [
+          _c("div", { staticClass: "row d-print-none mt-2" }, [
+            _c(
+              "div",
+              { staticClass: "col-12 text-right" },
+              [
+                _c(
+                  "loading-button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { loading: _vm.sending, type: "submit" }
+                  },
+                  [_vm._v("Update Settings")]
+                )
+              ],
+              1
+            )
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile-footer" }, [
-      _c("div", { staticClass: "row d-print-none mt-2" }, [
-        _c("div", { staticClass: "col-12 text-right" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-success", attrs: { type: "submit" } },
-            [
-              _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-              _vm._v("Update Settings")
-            ]
-          )
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -51,7 +51,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Settings</button>
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Settings</loading-button>
                 </div>
             </div>
         </div>
@@ -61,13 +61,18 @@
 <script> 
 import TextInput from './../../../Shared/TextInput'   
 import SelectInput from './../../../Shared/SelectInput'   
+import LoadingButton from './../../../Shared/LoadingButton' 
+
 export default { 
     components:{
         TextInput,
         SelectInput,
+        LoadingButton
     },
     props:{
         settings:Object,
+        sending:Boolean,
+
     },     
     data() {
         return {
@@ -78,8 +83,7 @@ export default {
                 paypal_payment_method:this.settings.paypal_payment_method,
                 paypal_client_id: this.settings.paypal_client_id,
                 paypal_secret_id: this.settings.paypal_secret_id,               
-            },
-            sending:false,
+            }, 
         };
     }, 
     methods: {

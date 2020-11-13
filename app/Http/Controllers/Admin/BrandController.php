@@ -38,6 +38,7 @@ class BrandController extends Controller
      */
     public function store(Brand $brand,Request $request)
     {  
+ 
         $this->validate($request, [
             'name' => 'required|unique:brands|min:2|max:255', 
             'logo '=> 'mimes:jpg,jpeg,png|max:1000'

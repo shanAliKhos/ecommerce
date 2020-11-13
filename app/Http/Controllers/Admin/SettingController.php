@@ -35,10 +35,7 @@ class SettingController extends Controller
      */
     public function update(Request $request)
     { 
- 
-
-      
-
+  
             if($request->hasFile('site_logo')){             
                 $OldSiteLogo =  config('settings.site_logo');        
                 $NewPath = $request->file('site_logo')->store('public/setting');  
@@ -46,10 +43,7 @@ class SettingController extends Controller
                     Storage::delete($OldSiteLogo);
                 }  
                 Setting::set('site_logo', $NewPath);             
-            } 
-    
-
-        
+            }  
             if($request->hasFile('site_favicon')){             
                 $OldSiteFavicon =  config('settings.site_favicon');      
                 $NewPath = $request->file('site_favicon')->store('public/setting');  

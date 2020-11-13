@@ -1,5 +1,5 @@
 <template>
-    <form> 
+    <form @submit.prevent="update"> 
         <h3 class="tile-title">Product Information</h3>
         <hr>
         <div class="tile-body">
@@ -173,7 +173,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button type="button" class="btn btn-success" @click="Update()"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Product</button>
+                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Product</loading-button>
                     <inertia-link class="btn btn-danger" :href="$route('admin.product.index')"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</inertia-link>
                 </div>
             </div>
@@ -182,10 +182,13 @@
 </template>
 <script>
 import Multiselect from 'vue-multiselect'
+import LoadingButton from './../../Shared/LoadingButton'   
+
 export default {
     props:['Product','Categories','Brands'],
     components:{
-        Multiselect
+        Multiselect,
+        LoadingButton,
     }, 
     remember: 'form',
 
@@ -204,14 +207,20 @@ export default {
                 description: this.Product.description,
                 is_active: this.Product.is_active,
                 is_featured: this.Product.is_featured,
-            },             
+            },    
+            sending:false,
         }
     },
 
     methods: {
-        Update(){
+        update(){
             self = this; 
-            self.$inertia.put(route('admin.product.update', self.Product.id), self.form); 
+            self.$inertia.put(route('admin.product.update', self.Product.id), self.form,{
+                preserveState: true,
+                preserveScroll: true,                
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,             
+            }); 
         },
     },
   

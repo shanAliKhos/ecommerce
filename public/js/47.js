@@ -69,10 +69,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -140,104 +140,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   metaInfo: {
-    title: 'Order-show'
+    title: 'Category'
   },
   computed: {
-    StatusIcon: function StatusIcon() {
-      switch (this.$page.Order.Status) {
-        case 'pending':
-          return 'fa-spinner badge badge-warning text-white p-2';
-          break;
-
-        case 'processing':
-          return 'fa-circle-o-notch badge badge-info p-2';
-          break;
-
-        case 'completed':
-          return 'fa-check-square-o badge badge-success p-2';
-          break;
-
-        case 'decline':
-          return 'fa-times badge badge-danger p-2';
-          break;
-      }
-    },
-    Order: function Order() {
-      return this.$page.Order;
+    Categories: function Categories() {
+      return this.$page.Categories;
     }
   }
 });
@@ -384,10 +295,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e& ***!
-  \***************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca& ***!
+  \******************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -409,17 +320,10 @@ var render = function() {
         _c(
           "inertia-link",
           {
-            staticClass: "btn btn-danger pull-right Addnew",
-            attrs: {
-              href: _vm.$route("admin.order.index"),
-              as: "button",
-              type: "button"
-            }
+            staticClass: "btn btn-primary pull-right Addnew",
+            attrs: { href: _vm.$route("admin.category.create") }
           },
-          [
-            _c("i", { staticClass: "fa fa-fw fa-lg fa-arrow-left" }),
-            _vm._v("Go Back")
-          ]
+          [_vm._v("Add Category")]
         )
       ],
       1
@@ -428,245 +332,104 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "tile" }, [
-          _c("h3", { staticClass: "tile-title" }, [
-            _c("i", { staticClass: "fa fa-globe" }),
-            _vm._v(" " + _vm._s(_vm.Order.OrderNumber))
-          ]),
-          _vm._v(" "),
           _c("div", { staticClass: "tile-body" }, [
-            _c("section", { staticClass: "invoice" }, [
-              _c("div", { staticClass: "invoice-info" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-12 col-md-4 sm-4" }, [
-                    _c("span", [
-                      _vm._v(
-                        "\n                                        Placed By\n                                        "
-                      ),
-                      _c("address", [
-                        _c("strong", [_vm._v(_vm._s(_vm.Order.user.name))]),
-                        _c("br"),
-                        _vm._v("Email: " + _vm._s(_vm.Order.user.email))
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("span", [
-                      _c("address", [
-                        _c("strong", [_vm._v("Created_at  - ")]),
-                        _vm._v(_vm._s(_vm.Order.created_at))
-                      ]),
-                      _vm._v(" "),
-                      _c("address", [
-                        _c("strong", [_vm._v("Updated_at  - ")]),
-                        _vm._v(_vm._s(_vm.Order.updated_at))
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-12 col-md-4 sm-4" }, [
-                    _vm._v("Ship To\n                                    "),
-                    _c("address", [
-                      _c("strong", [_vm._v(_vm._s(_vm.Order.CardHolderName))]),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(_vm._s(_vm.Order.Address)),
-                      _c("br"),
-                      _vm._v(
-                        _vm._s(_vm.Order.City) +
-                          ", " +
-                          _vm._s(_vm.Order.Country) +
-                          " " +
-                          _vm._s(_vm.Order.PostalCode)
-                      ),
-                      _c("br"),
-                      _vm._v(_vm._s(_vm.Order.PhoneNumber)),
-                      _c("br")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-12 col-md-4 sm-4" }, [
-                    _c("span", [
-                      _c("b", [_vm._v("Order ID:")]),
-                      _vm._v(" " + _vm._s(_vm.Order.OrderNumber)),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [_vm._v("Order Status:")]),
-                      _vm._v(" "),
-                      _c(
-                        "i",
-                        {
-                          staticClass: "fa",
-                          class: _vm.StatusIcon,
-                          attrs: { "aria-hidden": "true" }
-                        },
-                        [_c("span", [_vm._v(" " + _vm._s(_vm.Order.Status))])]
-                      ),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [_vm._v("Amount:")]),
-                      _vm._v(" $" + _vm._s(_vm.Order.GrandTotal)),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [_vm._v("Payment Method:")]),
-                      _vm._v(" " + _vm._s(_vm.Order.PaymentMethod)),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [_vm._v("Payment Status:")]),
-                      _vm._v(
-                        " " +
-                          _vm._s(
-                            _vm.Order.PaymentStatus == 1
-                              ? "Completed"
-                              : "Not Completed"
-                          )
-                      ),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [_vm._v("Payment Track:")]),
-                      _vm._v(" " + _vm._s(_vm.Order.PaymentToken)),
-                      _c("br")
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12 table-responsive" }, [
-                  _c("table", { staticClass: "table table-striped" }, [
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c(
-                      "tbody",
-                      _vm._l(_vm.Order.items, function(item, index) {
-                        return _c("tr", { key: index }, [
-                          _c("td", [_vm._v(_vm._s(item.id))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.product.name))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.product.sku))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.Quantity))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("$" + _vm._s(item.Price))])
-                        ])
-                      }),
-                      0
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tile-footer" }, [
-            _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "table-responsive" }, [
               _c(
-                "div",
-                { staticClass: "btn-group", attrs: { role: "group" } },
+                "table",
+                { staticClass: "table table-condensed table-striped" },
                 [
-                  _vm.Order.Status !== "pending"
-                    ? _c(
-                        "inertia-link",
-                        {
-                          staticClass: "btn btn-warning",
-                          attrs: {
-                            as: "button",
-                            type: "button",
-                            data: { Status: "pending" },
-                            method: "put",
-                            "preserve-scroll": "",
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-fw fa-lg fa-circle-o-notch"
-                          }),
-                          _c("span", [_vm._v("Pending")])
-                        ]
-                      )
-                    : _vm._e(),
+                  _vm._m(1),
                   _vm._v(" "),
-                  _vm.Order.Status !== "processing"
-                    ? _c(
-                        "inertia-link",
-                        {
-                          staticClass: "btn btn-info",
-                          attrs: {
-                            as: "button",
-                            type: "button",
-                            data: { Status: "processing" },
-                            method: "put",
-                            "preserve-scroll": "",
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-fw fa-lg fa-circle-o-notch"
-                          }),
-                          _c("span", [_vm._v("Process")])
-                        ]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.Order.Status !== "completed"
-                    ? _c(
-                        "inertia-link",
-                        {
-                          staticClass: "btn btn-success",
-                          attrs: {
-                            as: "button",
-                            type: "button",
-                            method: "put",
-                            "preserve-scroll": "",
-                            data: { Status: "completed" },
-                            href: _vm.$route(
-                              "admin.order.update",
-                              this.Order.id
-                            )
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-fw fa-lg fa-check-circle"
-                          }),
-                          _c("span", [_vm._v("Completed")])
-                        ]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.Order.Status !== "decline"
-                    ? _c(
-                        "inertia-link",
-                        {
-                          staticClass: "btn btn-danger",
-                          attrs: {
-                            as: "button",
-                            type: "button",
-                            method: "delete",
-                            "preserve-scroll": "",
-                            href: _vm.$route(
-                              "admin.order.destroy",
-                              this.Order.id
-                            )
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-fw fa-lg fa-remove" }),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("Cancell")])
-                        ]
-                      )
-                    : _vm._e()
-                ],
-                1
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.Categories, function(Category, CategoryIndex) {
+                      return CategoryIndex > 0
+                        ? _c("tr", { key: CategoryIndex }, [
+                            _c("td", [_vm._v(_vm._s(CategoryIndex))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(Category.name))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(Category.slug))]),
+                            _vm._v(" "),
+                            _c("td", { staticClass: "text-center" }, [
+                              Category.is_featured
+                                ? _c(
+                                    "span",
+                                    { staticClass: "badge badge-success" },
+                                    [_vm._v("Yes")]
+                                  )
+                                : _c(
+                                    "span",
+                                    { staticClass: "badge badge-danger" },
+                                    [_vm._v("No")]
+                                  )
+                            ]),
+                            _vm._v(" "),
+                            _c("td", { staticClass: "text-center" }, [
+                              Category.menu
+                                ? _c(
+                                    "span",
+                                    { staticClass: "badge badge-success" },
+                                    [_vm._v("Yes")]
+                                  )
+                                : _c(
+                                    "span",
+                                    { staticClass: "badge badge-danger" },
+                                    [_vm._v("No")]
+                                  )
+                            ]),
+                            _vm._v(" "),
+                            _c("td", { staticClass: "text-center" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "btn-group",
+                                  attrs: {
+                                    role: "group",
+                                    "aria-label": "Second group"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "inertia-link",
+                                    {
+                                      staticClass: "btn btn-sm btn-primary",
+                                      attrs: {
+                                        href: _vm.$route(
+                                          "admin.category.edit",
+                                          Category.id
+                                        ),
+                                        "preserve-scroll": ""
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-edit" })]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "inertia-link",
+                                    {
+                                      staticClass: "btn btn-sm btn-danger",
+                                      attrs: {
+                                        href: _vm.$route(
+                                          "admin.category.destroy",
+                                          Category.id
+                                        ),
+                                        method: "delete",
+                                        "preserve-scroll": ""
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-trash" })]
+                                  )
+                                ],
+                                1
+                              )
+                            ])
+                          ])
+                        : _vm._e()
+                    }),
+                    0
+                  )
+                ]
               )
             ])
           ])
@@ -681,9 +444,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h1", [_c("i", { staticClass: "fa fa-bar-chart" }), _vm._v("Order")]),
+      _c("h1", [_c("i", { staticClass: "fa fa-tags" }), _vm._v(" Category ")]),
       _vm._v(" "),
-      _c("p", [_vm._v("Show ")])
+      _c("p", [_vm._v("Listing")])
     ])
   },
   function() {
@@ -692,15 +455,24 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("Qty")]),
+        _c("th", [_vm._v(" # ")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Product")]),
+        _c("th", [_vm._v(" Name ")]),
         _vm._v(" "),
-        _c("th", [_vm._v("SKU #")]),
+        _c("th", [_vm._v(" Slug ")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Qty")]),
+        _c("th", { staticClass: "text-center" }, [_vm._v(" Featured ")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Subtotal")])
+        _c("th", { staticClass: "text-center" }, [_vm._v(" Menu ")]),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass: "text-center text-danger",
+            staticStyle: { width: "100px", "min-width": "100px" }
+          },
+          [_c("i", { staticClass: "fa fa-bolt" })]
+        )
       ])
     ])
   }
@@ -934,17 +706,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/orders/show.vue":
-/*!**************************************************!*\
-  !*** ./resources/js/Pages/Admin/orders/show.vue ***!
-  \**************************************************/
+/***/ "./resources/js/Pages/Admin/category/Index.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/Index.vue ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./show.vue?vue&type=template&id=758f674e& */ "./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e&");
-/* harmony import */ var _show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./show.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=3280d7ca& */ "./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -954,9 +726,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -966,38 +738,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/orders/show.vue"
+component.options.__file = "resources/js/Pages/Admin/category/Index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************/
+/***/ "./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./show.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/orders/show.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e& ***!
-  \*********************************************************************************/
+/***/ "./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca& ***!
+  \************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./show.vue?vue&type=template&id=758f674e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/orders/show.vue?vue&type=template&id=758f674e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=3280d7ca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/Index.vue?vue&type=template&id=3280d7ca&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_show_vue_vue_type_template_id_758f674e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_3280d7ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
