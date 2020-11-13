@@ -432,6 +432,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -802,7 +805,20 @@ var render = function() {
                           )
                         ]
                       )
-                    : _vm._e()
+                    : _c(
+                        "jet-nav-link",
+                        {
+                          attrs: {
+                            href: _vm.route("welcome"),
+                            active: _vm.route().current("welcome")
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Home\n                        "
+                          )
+                        ]
+                      )
                 ],
                 1
               )
