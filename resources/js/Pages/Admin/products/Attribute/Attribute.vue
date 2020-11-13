@@ -52,9 +52,10 @@
             <div class="row d-print-none mt-4">
                 <div class="col-12 text-right">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" v-if="!ShowEdit" class="btn btn-sm btn-warning" @click="AttributeEdit()" title="Edit"><i class="fa fa-fw fa-lg fa-edit" ></i></button>
-                        <button type="button" v-else class="btn btn-sm btn-info" @click="AttributeUpdate()" title="Update"><i class="fa fa-fw fa-lg fa-check" ></i>  </button>
-                        <inertia-link :href="$route('admin.product-attributes.destroy',ProductsAttribute.id)" preserve-scroll preserve-state method="delete" type="button" as="button"  class="btn btn-sm btn-danger" title="Remove"><i class="fa fa-fw fa-lg fa-remove" ></i></inertia-link>
+                        <button type="button" v-if="!ShowEdit" class="btn btn-sm btn-warning" @click="edit()" title="Edit"><i class="fa fa-fw fa-lg fa-edit" ></i></button>
+                        <button type="button" v-else class="btn btn-sm btn-info" @click="update()" title="Update"><i class="fa fa-fw fa-lg fa-check" ></i>  </button>
+                        <button type="button"  class="btn btn-sm btn-danger" @click="destroy()" title="Update"><i class="fa fa-fw fa-lg fa-remove" ></i>  </button>
+                        <!-- <inertia-link :href="$route('admin.product-attributes.destroy',ProductsAttribute.id)" preserve-scroll preserve-state method="delete" type="button" as="button"  class="btn btn-sm btn-danger" title="Remove"><i class="fa fa-fw fa-lg fa-remove" ></i></inertia-link> -->
  
                     </div>                
                 </div>
@@ -82,17 +83,38 @@ export default {
         }
     }, 
     methods: {
-        AttributeEdit(){
+        edit(){
             const self= this;
             self.ShowEdit = true; 
         },         
-        AttributeUpdate(){
+        update(){
             const self= this;
             self.$inertia.put(route('admin.product-attributes.update',self.ProductsAttribute.id), self.form, {
                 preserveScroll: true,
             })            
             self.ShowEdit = false; 
-        },         
+        },     
+        destroy(){
+            const self= this;
+            self.$swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    self.$inertia.delete(route('admin.product-attributes.destroy',self.ProductsAttribute.id), {
+                        preserveState: true,
+                        preserveScroll: true,              
+                    
+                    })                    
+                }
+            })            
+
+        }    
     },
     computed:{ 
         Attributes(){ 

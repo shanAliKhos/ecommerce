@@ -18,7 +18,7 @@
 <script>   
     import Header from './partials/Header' 
     import SideBar from './partials/SideBar' 
-    import Flash from './../../Shared/Flash' 
+    import Flash from './partials/Flash' 
 
     export default {
         components: {  

@@ -1,18 +1,15 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[79],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue2_dropzone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-dropzone */ "./node_modules/vue2-dropzone/dist/vue2Dropzone.js");
-/* harmony import */ var vue2_dropzone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue2_dropzone__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue2_dropzone_dist_vue2Dropzone_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-dropzone/dist/vue2Dropzone.min.css */ "./node_modules/vue2-dropzone/dist/vue2Dropzone.min.css");
-/* harmony import */ var vue2_dropzone_dist_vue2Dropzone_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue2_dropzone_dist_vue2Dropzone_min_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
 //
 //
 //
@@ -49,47 +46,187 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['id', 'Images'],
-  components: {
-    vueDropzone: vue2_dropzone__WEBPACK_IMPORTED_MODULE_0___default.a
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
+  metaInfo: {
+    title: 'Blog-details'
   },
-  data: function data() {
-    return {
-      dropzoneOptions: {
-        url: route('admin.product.images.upload', this.id),
-        thumbnailWidth: 150,
-        maxFilesize: 0.5,
-        headers: {
-          "X-CSRF-TOKEN": this.$page.__csrf_token
-        }
-      },
-      sending: false
-    };
-  },
-  methods: {
-    UploadSuccess: function UploadSuccess() {
-      var self = this;
-      self.$root.$emit('image-upload-success');
-      setTimeout(function () {
-        self.$root.$emit('image-upload-success');
-      }, 500);
-    },
-    destroy: function destroy(id) {
-      var self = this;
-      self.$inertia["delete"](route('admin.product.images.destroy', id), {
-        preserveState: true,
-        preserveScroll: true
-      });
-      setTimeout(function () {
-        self.$root.$emit('image-upload-success');
-      }, 500);
-    },
-    ProductImage: function ProductImage(image) {
-      self = this;
-      var img = image ? '/' + image.replace("public", "storage") : '/' + image;
+  computed: {
+    BlogDetailsHero: function BlogDetailsHero() {
+      var img = '/img/blog/details/details-hero.jpg';
       return img;
     }
   }
@@ -97,10 +234,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6& ***!
-  \**************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -112,86 +249,411 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "product-image-section" }, [
-    _c("h3", { staticClass: "tile-title" }, [_vm._v("Upload Image")]),
-    _vm._v(" "),
-    _c("hr"),
-    _vm._v(" "),
-    _c("div", { staticClass: "tile-body" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-12" },
-          [
-            _c(
-              "vue-dropzone",
-              {
-                ref: "myVueDropzone",
-                attrs: {
-                  options: _vm.dropzoneOptions,
-                  useCustomSlot: true,
-                  id: "dropzone"
-                },
-                on: { "vdropzone-success": _vm.UploadSuccess }
-              },
-              [
-                _c("div", { staticClass: "dropzone-custom-content" }, [
-                  _c("h3", { staticClass: "dropzone-custom-title" }, [
-                    _vm._v("Drag and drop to upload content!")
-                  ]),
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("section", { staticClass: "blog-details spad" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-4 col-md-5 order-md-1 order-2" }, [
+              _c("div", { staticClass: "blog__sidebar" }, [
+                _c("div", { staticClass: "blog__sidebar__search" }, [
+                  _c("form", { attrs: { action: "#" } }, [
+                    _c("input", {
+                      attrs: { type: "text", placeholder: "Search..." }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("span", { staticClass: "icon_search" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__sidebar__item" }, [
+                  _c("h4", [_vm._v("Categories")]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "subtitle" }, [
-                    _vm._v("...or click to select a file from your computer")
+                  _c("ul", [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("All")])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Beauty (20)")])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Food (5)")])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _vm._v("Life Style (9)")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Travel (10)")])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__sidebar__item" }, [
+                  _c("h4", [_vm._v("Recent News")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "blog__sidebar__recent" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "blog__sidebar__recent__item",
+                        attrs: { href: "#" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__pic" },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "img/blog/sidebar/sr-1.jpg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__text" },
+                          [
+                            _c("h6", [
+                              _vm._v("09 Kinds Of Vegetables"),
+                              _c("br"),
+                              _vm._v(" Protect The Liver")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("MAR 05, 2019")])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "blog__sidebar__recent__item",
+                        attrs: { href: "#" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__pic" },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "img/blog/sidebar/sr-2.jpg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__text" },
+                          [
+                            _c("h6", [
+                              _vm._v("Tips You To Balance"),
+                              _c("br"),
+                              _vm._v(" Nutrition Meal Day")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("MAR 05, 2019")])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "blog__sidebar__recent__item",
+                        attrs: { href: "#" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__pic" },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "img/blog/sidebar/sr-3.jpg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "blog__sidebar__recent__item__text" },
+                          [
+                            _c("h6", [
+                              _vm._v("4 Principles Help You Lose "),
+                              _c("br"),
+                              _vm._v("Weight With Vegetables")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("MAR 05, 2019")])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__sidebar__item" }, [
+                  _c("h4", [_vm._v("Search By")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "blog__sidebar__item__tags" }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Apple")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Beauty")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Vegetables")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Fruit")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Healthy Food")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])
                   ])
                 ])
-              ]
-            )
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "row" },
-        _vm._l(_vm.Images, function(Image, index) {
-          return _c("div", { key: index, staticClass: "col-md-3" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-body" }, [
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-8 col-md-7 order-md-1 order-1" }, [
+              _c("div", { staticClass: "blog__details__text" }, [
+                _c("h2", [
+                  _vm._v("The Moment You Need To Remove Garlic From The Menu")
+                ]),
+                _vm._v(" "),
                 _c("img", {
-                  staticClass: "img-fluid",
-                  attrs: {
-                    src: _vm.ProductImage(Image.image),
-                    id: "brandLogo",
-                    alt: "img"
-                  }
+                  attrs: { src: "img/blog/details/details-pic.jpg", alt: "" }
                 }),
                 _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "card-link float-right text-danger",
-                    attrs: { href: "javascript:;" },
-                    on: {
-                      click: function($event) {
-                        return _vm.destroy(Image.id)
-                      }
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-fw fa-lg fa-trash" })]
-                )
+                _c("p", [
+                  _vm._v(
+                    "Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet\n                            dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit\n                            aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur\n                            sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada.\n                            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.\n                            Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis\n                            quis ac lectus. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada\n                            feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("h3", [
+                  _vm._v(
+                    "The corner window forms a place within a place that is a resting point within the large\n                            space."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "The study area is located at the back with a view of the vast nature. Together with the other\n                            buildings, a congruent story has been managed in which the whole has a reinforcing effect on\n                            the components. The use of materials seeks connection to the main house, the adjacent\n                            stables"
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "blog__details__content" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6" }, [
+                    _c("div", { staticClass: "blog__details__author" }, [
+                      _c("div", { staticClass: "blog__details__author__pic" }, [
+                        _c("img", {
+                          attrs: {
+                            src: "img/blog/details/details-author.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "blog__details__author__text" },
+                        [
+                          _c("h6", [_vm._v("Michael Scofield")]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("Admin")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-6" }, [
+                    _c("div", { staticClass: "blog__details__widget" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("span", [_vm._v("Categories:")]),
+                          _vm._v(" Food")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("span", [_vm._v("Tags:")]),
+                          _vm._v(
+                            " All, Trending, Cooking, Healthy Food, Life Style"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "blog__details__social" }, [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fa fa-facebook" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fa fa-twitter" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fa fa-google-plus" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fa fa-linkedin" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fa fa-envelope" })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
-        }),
-        0
-      )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "related-blog spad" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("div", { staticClass: "section-title related-blog-title" }, [
+                _c("h2", [_vm._v("Post You May Like")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
+              _c("div", { staticClass: "blog__item" }, [
+                _c("div", { staticClass: "blog__item__pic" }, [
+                  _c("img", { attrs: { src: "img/blog/blog-1.jpg", alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__item__text" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-calendar-o" }),
+                      _vm._v(" May 4,2019")
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-comment-o" }),
+                      _vm._v(" 5")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Cooking tips make cooking simple")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
+              _c("div", { staticClass: "blog__item" }, [
+                _c("div", { staticClass: "blog__item__pic" }, [
+                  _c("img", { attrs: { src: "img/blog/blog-2.jpg", alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__item__text" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-calendar-o" }),
+                      _vm._v(" May 4,2019")
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-comment-o" }),
+                      _vm._v(" 5")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("6 ways to prepare breakfast for 30")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
+              _c("div", { staticClass: "blog__item" }, [
+                _c("div", { staticClass: "blog__item__pic" }, [
+                  _c("img", { attrs: { src: "img/blog/blog-3.jpg", alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "blog__item__text" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-calendar-o" }),
+                      _vm._v(" May 4,2019")
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("i", { staticClass: "fa fa-comment-o" }),
+                      _vm._v(" 5")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Visit the clean farm in the US")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
-  ])
-}
-var staticRenderFns = []
+  }
+]
 render._withStripped = true
 
 
@@ -310,17 +772,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/products/ProductImages.vue":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Admin/products/ProductImages.vue ***!
-  \*************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue ***!
+  \******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductImages.vue?vue&type=template&id=2d53c0b6& */ "./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6&");
-/* harmony import */ var _ProductImages_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductImages.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js&");
+/* harmony import */ var _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
+/* harmony import */ var _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -330,9 +792,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ProductImages_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -342,38 +804,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/products/ProductImages.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductImages_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProductImages.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductImages_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6& ***!
-  \********************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
+  \*************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProductImages.vue?vue&type=template&id=2d53c0b6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/products/ProductImages.vue?vue&type=template&id=2d53c0b6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductImages_vue_vue_type_template_id_2d53c0b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

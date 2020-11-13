@@ -402,7 +402,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -740,23 +739,7 @@ var render = function() {
         _c("div", { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, [
           _c("div", { staticClass: "flex justify-between h-16" }, [
             _c("div", { staticClass: "flex" }, [
-              _c(
-                "div",
-                { staticClass: "flex-shrink-0 flex items-center" },
-                [
-                  _c(
-                    "inertia-link",
-                    { attrs: { href: _vm.route("dashboard") } },
-                    [
-                      _c("jet-application-mark", {
-                        staticClass: "block h-9 w-auto"
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
+              _vm._m(0),
               _vm._v(" "),
               _c(
                 "div",
@@ -1401,7 +1384,16 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-shrink-0 flex items-center" }, [
+      _c("h4", [_vm._v("Administration")])
+    ])
+  }
+]
 render._withStripped = true
 
 

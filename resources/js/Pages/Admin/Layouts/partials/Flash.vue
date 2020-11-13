@@ -6,24 +6,29 @@
 <script>
 export default {
   
-
-    methods: {
-        success(text){
-            this.$toasted.success(text); 
-        },
-        error(text){
-            this.$toasted.error(text); 
-        },
-    },
-
-
     computed: {
         Alert(){
             if(this.$page.flash.success){
-                this.success(this.$page.flash.success); 
+                this.$swal({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    icon: 'success',
+                    title: this.$page.flash.success,
+                })                              
             }
             if(this.$page.flash.error){
-                this.error(this.$page.flash.error); 
+                this.$swal({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    icon: 'error',
+                    title: this.$page.flash.error,
+                })             
             }
         }
     },

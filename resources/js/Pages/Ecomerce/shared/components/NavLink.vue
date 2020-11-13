@@ -1,6 +1,6 @@
 <template>
     <li :class="IsActive">
-        <inertia-link :href="href" :class="IsActiveLink" preserve-scroll>
+        <inertia-link :href="href" :class="IsActiveLink" preserve-scroll >
             <slot></slot>
         </inertia-link>
     </li>

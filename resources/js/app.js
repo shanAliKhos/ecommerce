@@ -7,7 +7,10 @@ import { InertiaProgress } from '@inertiajs/progress'
 import { InertiaForm } from 'laravel-jetstream';
 import Toasted from 'vue-toasted';
 import 'animate.css/animate.min.css'
- 
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+
 // Vue.config.productionTip = false 
 Vue.mixin({ methods: { route: window.route } })
  
@@ -20,6 +23,7 @@ Vue.use(Toasted, {
     position:'bottom-right',
 })
 Vue.use(VueMeta) 
+Vue.use(VueSweetalert2);
 
 InertiaProgress.init({ 
   delay: 250, 
