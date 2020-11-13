@@ -99,7 +99,13 @@ import LoadingButton from './../../Shared/LoadingButton'
                     preserveScroll: true,                
                     onStart: () => this.sending = true,
                     onFinish: () => this.sending = false,
-           
+                    onSuccess: () => {
+                        if (Object.keys(this.$page.errors).length === 0) {
+                            this.form.Attribute = null
+                            this.form.AttributeValues = null               
+                        }
+                    },     
+                                       
                 })
             }, 
         },

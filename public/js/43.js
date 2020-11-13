@@ -260,6 +260,12 @@ __webpack_require__.r(__webpack_exports__);
         },
         onFinish: function onFinish() {
           return _this.sending = false;
+        },
+        onSuccess: function onSuccess() {
+          if (Object.keys(_this.$page.errors).length === 0) {
+            _this.form.Attribute = null;
+            _this.form.AttributeValues = null;
+          }
         }
       });
     }
