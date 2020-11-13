@@ -162,7 +162,9 @@ export default {
                 if (result.isConfirmed) {
                     self.$inertia.delete(self.route('admin.order.destroy', self.Order.id), {
                         preserveState: true,
-                        preserveScroll: true,              
+                        preserveScroll: true,  
+                        onStart: () => this.sending = true,
+                        onFinish: () => this.sending = false,                                    
 
                     })                    
                 }

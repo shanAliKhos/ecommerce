@@ -277,6 +277,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     cancel: function cancel() {
+      var _this = this;
+
       var self = this;
       self.$swal.fire({
         title: 'Are you sure?',
@@ -290,7 +292,13 @@ __webpack_require__.r(__webpack_exports__);
         if (result.isConfirmed) {
           self.$inertia["delete"](self.route('admin.order.destroy', self.Order.id), {
             preserveState: true,
-            preserveScroll: true
+            preserveScroll: true,
+            onStart: function onStart() {
+              return _this.sending = true;
+            },
+            onFinish: function onFinish() {
+              return _this.sending = false;
+            }
           });
         }
       });
