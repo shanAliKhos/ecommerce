@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+Route::get('/tailwind', function(){
+    return Inertia\Inertia::render('tail/Home');
+})->name('tail');
+
 Route::get('/login', function(){
     return Inertia\Inertia::render('Auth/Login');
     })->name('login')->middleware('guest');

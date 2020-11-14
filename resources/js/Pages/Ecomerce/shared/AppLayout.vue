@@ -1,50 +1,40 @@
 <template>
-  <div> 
-    <!-- Humberger Begin -->
-    <navbar-responsive></navbar-responsive>
-     
-    <Header></Header>
-
-    <!-- Hero Section Begin -->
-    <Hero></Hero>
+<div> 
+    
+    <app-header></app-header>
     
     <main>
-        <Flash v-if="$page.flash"></Flash> 
-
         <slot></slot>
-    </main>
- 
-    <Footer></Footer>
+    </main>        
 
-    <!-- Page Preloder -->
-    <Loader></Loader>
+    <app-footer></app-footer>
 
-    <!-- Modal Portal -->
     <portal-target name="modal" multiple>
     </portal-target>
 
-  </div>
+</div> 
 </template>
 
-<script> 
-    import Hero from './components/Hero' 
-    import NavbarResponsive from './components/NavbarResponsive'  
-    import Loader from './components/Loader'  
-    import Header from './components/Header' 
-    import Footer from './components/Footer'  
+<script>  
+    import AppHeader from './Partials/AppHeader' 
+    import AppFooter from './Partials/AppFooter'  
     import Flash from './../../Shared/Flash'  
  
 
     export default {
-        components: {
-            NavbarResponsive,
-            Loader,
-            Header,
-            Footer,
-            Hero,
+        components: {  
+            AppHeader,
+            AppFooter, 
             Flash,
 
         },        
+        data() {
+            return {
+    
+                categories:false,
+                subcategory:false,
+            }
+        },
 
         computed: {
             path() {

@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"2f00e4e979b05c802e74","2":"d4508bebd5911bdb3f8d","3":"8937c4a5bc35d078646e","4":"bb2d73ae518fc0f92ab1","5":"bdcbcff2ce6e836c7886","6":"5c897eac6880d4131ead","7":"9b06851be5143f16430e","9":"18c6f25b6393cec3d381","10":"2db54d392bd25322d57f","11":"bf79c94f13d75c01fee3","12":"e658a7abc32a52911a56","13":"aa14f52ae5b95865e9f3","15":"8109b69cbae7855e3dc1","16":"fa0ae396dd76ab532257","19":"0002cfa573fbaaa260bc","20":"5d8c3a19e9d2100ffaa3","21":"3d172f6ef40db53dedd1","22":"f55ea8fd6417dc865e14","23":"2e4407278d3359bac162","24":"0ce6b1bde43caf05df6a","25":"7a2ce678b275ccbe409d","26":"42c57fab658dd7e6cf18","27":"898ab79a28929598ce84","28":"f26ad4b7b47b1f941f83","29":"a6b14a09118caedf14b7","30":"7a3da142846485a7a754","31":"284e81278b88be88936c","32":"1452447a4de8380aef7c","33":"c2261b1efa5fa6be33f1","35":"8442af394f40813f0111","42":"646ada9c992813ca416a","43":"8ff22696a6a10d65d844","46":"6d859395934cad023831","47":"419f2badbbc4c80bc470","48":"7da4947cbca59b3a620f","49":"16768ff8b3c941a5cca7","50":"bef85afa41d72cb86c61","51":"26537728bab200150be2","52":"449e46331c0a60b54d05","53":"56244a98eed089797e94","54":"737f700aa6702dee76ca","55":"714fd830d5fc4815a6e0","56":"1a9f99cf848e5b2cc79b","57":"bd5229bf5aeccd7c0b4f","58":"db279c11e6e6e2f6e090","59":"8ae69a69d29d77d79ca1","60":"6872a96cb9afd24ed3a0","61":"4b0cda4e18d377c4b823","62":"85f655b3d8e6414a50e6","63":"03f7912877f1c0d5c475","64":"5fb89ad1023a6c8b472e","65":"41d5ca50abdc5331fd1d","66":"65dfe88a0be733dd5b48","67":"a2f03b8a958542fa4c0c","68":"49591d305d66117dc097","69":"6cf55971171c96708c8f","70":"9dc0b97007c7ffd79a3c","71":"383caf2994b06f92f15a","72":"61b74a8bc39384ce25ea","73":"0bfa137ed0ba979e3ca3","74":"72291391b04c804b7973","75":"a9f9ee27e783c077d9d0","76":"bfe6a8778e1122b76805","77":"bcaf8a7f31f71a719782","78":"33f07472a6f44c94ea41","79":"1170f9d976021c46bdf3","80":"96af015aba765c670a68","81":"034f1bfc0f37ee21f412","82":"95a684da61e6fe974475","83":"3d1cf28ceea705d72f7e","84":"2103ffa6b5cb58547582","85":"7460e4404acad9fd1b5b","86":"afab1f802597d4ca3731","87":"061359b1bf2bff60d055","88":"6c107b09220105950ed9","89":"00318b8b8984eb325ee1","90":"306c17a5dec0170936b5","91":"4ad57749fc017bb3efbe","92":"d905aaad706cbe142cce","93":"daa260735a09628888a5","94":"e146908d1db99103286c","95":"690a65fdb152c3f557c0","96":"a3e9b19628e1fb0e146a","97":"3d5868a5992ce696e8d8","98":"a85b98dbf12c8eb8ea60","99":"24eb48132d27179e8a5b","100":"c3072cd9ba6d3fe70f1b","101":"4af4ec70cd7c6a0ae338","102":"a79a05350efb672065ba","103":"1e9645ce9ae13cbfe0ec","104":"5e404893003ea3a1d035","105":"d30605dbf36645f64da0","106":"711a10930afe7d24a202","107":"e4a374c39e0bd3cfaec7","108":"e3577ac56ae9757c6dd9","109":"284b033ceb4302b42473","110":"50a93bfde815de3d4837","111":"7394ea9cfbcc7e25aacc","112":"e5570f4f4b2b11652989","113":"2bfbf763fe4c423e7a78","114":"ef6a9a3098fe6656e177","115":"fc2755bf710f4d29d98f","116":"25c0e2a13eb9a9720c0b","117":"d8e0d758437e078a582a","118":"1fce11e0d84343803098","119":"c49b0d7f9f879d210c74","120":"4dd5d67f4fe7d91f847f","121":"bae072baf3d288c45c34","122":"0fdad8b995ccf29e624c","123":"238f7a99b10966af8d0e","124":"86d98c289f1f275ec754","125":"326ca658f970d85abce5","126":"544dd86b082256cb2f2b","127":"2dea3dd4665b4d5483bc","128":"de64bc9d072770234f93","129":"c6832cfda0f536cd656a","130":"7e24e9b88494bbbcabc9","131":"ae0ef32c1bab8200b00b","132":"4585719a0ce507716e90","133":"81aa84e94756d6a25549","134":"20c82e735e5221289944","135":"c28fc0f475581fecb883","136":"ea0aca9ce8a71d1d2e97","137":"5618768220c2138b6bd1","139":"07018e3e5ed45edb6e41","140":"09fb9376b7195b2ae5cc","141":"df841f18194fc4c5ea3b"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"4e11f37a185a4fede35e","2":"2876fc5433a03d0d9976","3":"d3ac027f265a95b9b33f","4":"356256e9e9876acc09db","5":"ebc16c6939e454191e5d","6":"727512c83c50123ea725","7":"0d58e00649aa00805a05","8":"04ac3ed79e2295614b86","9":"fd2591a70ce3e5d97f6f","10":"51688d5f998bb3ee8695","11":"bf79c94f13d75c01fee3","12":"451826d6f486bd99b9d4","13":"1d2815aad7fe56020bb9","14":"b8aff8c51d8cd7829fae","15":"e45806d897b0e57c9329","16":"fa0ae396dd76ab532257","17":"10c66b98dd6202c75a8a","18":"d3b3404d223a2628e280","19":"1dc2997b5d1116bf22a4","20":"39276d75c1b9c39ee8d3","21":"fb939d6f66f7807f1d45","22":"cd3a89e9dce0bdc4f8f2","23":"2e4407278d3359bac162","24":"0ce6b1bde43caf05df6a","25":"120a370e66fa044b25cd","26":"6394bbdb04981988dc9e","27":"6ebd04ff606a17de808f","29":"996b1d488ab080bd4c95","30":"7a3da142846485a7a754","31":"284e81278b88be88936c","32":"1452447a4de8380aef7c","33":"76b3b9b430aae7ce06cd","34":"c63f5a2bb49c250ae37b","35":"fd11639788422a94d12f","37":"8d1b1c170b0116587be2","38":"b645e94de8b470ea95b5","39":"00f47118f94890f4e9e1","40":"2cfe810deb41caed5e48","41":"989b8fe3de4f620ff0e1","42":"6af740ca5924822b1831","43":"20b45e0028f539d367d3","44":"d9a48f5848cfc8e275a4","46":"431bb206844cdc76ef1b","47":"74cfaf481266a4e12c0f","48":"3fb7235660358c5c4300","49":"9117147cc2a0fb24acae","50":"1e4945d1c72887829f33","51":"8ddeeff42e75edbb3782","52":"f7d9734ed6796541d7ae","53":"69577a95825b6e73af05","54":"c5e768af17f0d316ff80","55":"fddb9e7be862c28f7796","56":"c3448b5eab9883e6b001","57":"facbf37c5f8ac60c0015","59":"65cdaa7c78ad43ddc4f2","60":"ab039fda2f69f6f8de6b","61":"31ddcd4c175350171e8e","62":"e95a361562d09514b741","63":"43a7673f28d90971175f","64":"e6a92f4fbb3b254f2f63","65":"a7cdbfdb78476a501293","66":"8b9edb2af33a70b377a2","68":"3cacf71c82480c66a954","69":"349993dfea4f433ec4ec","70":"14a1d5f021fd3f17d822","71":"b7e7529ca993d908fccc","72":"bf6009fe38ceb36d94e7","73":"fd7b821d76bd91b0205f","74":"c876ce2132f53462593e","75":"53a8ecbec68988866a6c","76":"e00ade6fb4be9b6f481b","77":"2c5559d312bb1d7ac6ff","78":"c1c3f3d616f040cccfaa","79":"109d608421ddb1e00f9c","80":"8ace2b2f1fd20b5cf41f","81":"4a3f5dbdfcc92d76bdfd","82":"8b50d790b79256537c5c","83":"596707d26a4d71fc1844","84":"75d300e4cdbe6c05ff63","85":"d5ddc9a2da2c2ee4e31a","86":"b3fe7a9a3956d092468e","87":"72811b435a7995579d52","88":"52755100482f951cd793","89":"7d88b89359875702b426","90":"d8de80882a59eca16ee0","91":"ae2ba424bc4d98963110","92":"8fde83dd4d98d9b8f2e0","93":"8920d11018c155cccd90","94":"7b81ae83098a854b7a49","95":"1f2962a0caca5323fdfe","96":"aeb73c81642bba5d037c","97":"196222b394dd495cd598","98":"d6e1f926b53d7c818cfe","99":"87616e294821ff893fdb","100":"23d4e2d05ecacfbe67a0","101":"e97f23d1128c2bbc9254","102":"28fa3f9a4ffa0c9481be","103":"a6afd0020c5d641d19cc","104":"3894fbfab27ae8d0e0d9","105":"9cdabf726364367bd1f4","106":"09d3aae65926a43f3cf2","107":"6483d739d8362f8b536b","108":"25cdec2a32b1d7a17d29","109":"dd53b37d7a184d919105","110":"1c101b5093e785127694","111":"09170d32c3fc8afe091d","112":"49c2e602f0fcf0022d18","113":"ae0db37ab99dd498d5f2","114":"90549cecce330c9db642","115":"be8485340f213f6c0f32","116":"b1b4a8904298f76347ff","117":"eb8a4342770578ecad59","119":"07911f7de5ac68efd5d8","120":"e9cbd53ae1450f9a9218","121":"b51e8e916220688ef52f","122":"48d6c47651dc4a08e506","123":"0a1e46892f3c467ee1bd","124":"436a4e85c29b959d1bc6","125":"c4aa5a7e49ab407a0017","126":"544dd86b082256cb2f2b","127":"97e203d432c27f41d8c9","131":"658b65fd4a16819dde9a","132":"34673797687a12d77968","133":"075516d0e91ff002364c","134":"d2d1081fe67ff523433a","135":"bf72f91b74923f7d94f6","136":"5ce257d4f27c0e7cb31c","137":"9e1ac23ce7bb22801451","139":"2640e4707cde57e0fe28","143":"29793874cd23ea6c3578","144":"bd0bc944481f14000e04","145":"54e46b1658110138c27d","146":"2c2fdb922d84050b96a3","147":"797a51114a1d03da5c0b","148":"6a0589ff028dbc0b5cb6"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -39567,6 +39567,1267 @@ if (inBrowser) {
 
 /***/ }),
 
+/***/ "./node_modules/vuex/dist/vuex.esm.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
+  \********************************************/
+/*! exports provided: default, Store, createLogger, createNamespacedHelpers, install, mapActions, mapGetters, mapMutations, mapState */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createLogger", function() { return createLogger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
+/*!
+ * vuex v3.5.1
+ * (c) 2020 Evan You
+ * @license MIT
+ */
+function applyMixin (Vue) {
+  var version = Number(Vue.version.split('.')[0]);
+
+  if (version >= 2) {
+    Vue.mixin({ beforeCreate: vuexInit });
+  } else {
+    // override init and inject vuex init procedure
+    // for 1.x backwards compatibility.
+    var _init = Vue.prototype._init;
+    Vue.prototype._init = function (options) {
+      if ( options === void 0 ) options = {};
+
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit;
+      _init.call(this, options);
+    };
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+  function vuexInit () {
+    var options = this.$options;
+    // store injection
+    if (options.store) {
+      this.$store = typeof options.store === 'function'
+        ? options.store()
+        : options.store;
+    } else if (options.parent && options.parent.$store) {
+      this.$store = options.parent.$store;
+    }
+  }
+}
+
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+    ? global
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+function devtoolPlugin (store) {
+  if (!devtoolHook) { return }
+
+  store._devtoolHook = devtoolHook;
+
+  devtoolHook.emit('vuex:init', store);
+
+  devtoolHook.on('vuex:travel-to-state', function (targetState) {
+    store.replaceState(targetState);
+  });
+
+  store.subscribe(function (mutation, state) {
+    devtoolHook.emit('vuex:mutation', mutation, state);
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
+}
+
+/**
+ * Get the first item that pass the test
+ * by second argument function
+ *
+ * @param {Array} list
+ * @param {Function} f
+ * @return {*}
+ */
+function find (list, f) {
+  return list.filter(f)[0]
+}
+
+/**
+ * Deep copy the given object considering circular structure.
+ * This function caches all nested objects and its copies.
+ * If it detects circular structure, use cached copy to avoid infinite loop.
+ *
+ * @param {*} obj
+ * @param {Array<Object>} cache
+ * @return {*}
+ */
+function deepCopy (obj, cache) {
+  if ( cache === void 0 ) cache = [];
+
+  // just return if obj is immutable value
+  if (obj === null || typeof obj !== 'object') {
+    return obj
+  }
+
+  // if obj is hit, it is in circular structure
+  var hit = find(cache, function (c) { return c.original === obj; });
+  if (hit) {
+    return hit.copy
+  }
+
+  var copy = Array.isArray(obj) ? [] : {};
+  // put the copy into cache at first
+  // because we want to refer it in recursive deepCopy
+  cache.push({
+    original: obj,
+    copy: copy
+  });
+
+  Object.keys(obj).forEach(function (key) {
+    copy[key] = deepCopy(obj[key], cache);
+  });
+
+  return copy
+}
+
+/**
+ * forEach for object
+ */
+function forEachValue (obj, fn) {
+  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isPromise (val) {
+  return val && typeof val.then === 'function'
+}
+
+function assert (condition, msg) {
+  if (!condition) { throw new Error(("[vuex] " + msg)) }
+}
+
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
+var Module = function Module (rawModule, runtime) {
+  this.runtime = runtime;
+  // Store some children item
+  this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
+  this._rawModule = rawModule;
+  var rawState = rawModule.state;
+
+  // Store the origin module's state
+  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
+};
+
+var prototypeAccessors = { namespaced: { configurable: true } };
+
+prototypeAccessors.namespaced.get = function () {
+  return !!this._rawModule.namespaced
+};
+
+Module.prototype.addChild = function addChild (key, module) {
+  this._children[key] = module;
+};
+
+Module.prototype.removeChild = function removeChild (key) {
+  delete this._children[key];
+};
+
+Module.prototype.getChild = function getChild (key) {
+  return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
+};
+
+Module.prototype.update = function update (rawModule) {
+  this._rawModule.namespaced = rawModule.namespaced;
+  if (rawModule.actions) {
+    this._rawModule.actions = rawModule.actions;
+  }
+  if (rawModule.mutations) {
+    this._rawModule.mutations = rawModule.mutations;
+  }
+  if (rawModule.getters) {
+    this._rawModule.getters = rawModule.getters;
+  }
+};
+
+Module.prototype.forEachChild = function forEachChild (fn) {
+  forEachValue(this._children, fn);
+};
+
+Module.prototype.forEachGetter = function forEachGetter (fn) {
+  if (this._rawModule.getters) {
+    forEachValue(this._rawModule.getters, fn);
+  }
+};
+
+Module.prototype.forEachAction = function forEachAction (fn) {
+  if (this._rawModule.actions) {
+    forEachValue(this._rawModule.actions, fn);
+  }
+};
+
+Module.prototype.forEachMutation = function forEachMutation (fn) {
+  if (this._rawModule.mutations) {
+    forEachValue(this._rawModule.mutations, fn);
+  }
+};
+
+Object.defineProperties( Module.prototype, prototypeAccessors );
+
+var ModuleCollection = function ModuleCollection (rawRootModule) {
+  // register root module (Vuex.Store options)
+  this.register([], rawRootModule, false);
+};
+
+ModuleCollection.prototype.get = function get (path) {
+  return path.reduce(function (module, key) {
+    return module.getChild(key)
+  }, this.root)
+};
+
+ModuleCollection.prototype.getNamespace = function getNamespace (path) {
+  var module = this.root;
+  return path.reduce(function (namespace, key) {
+    module = module.getChild(key);
+    return namespace + (module.namespaced ? key + '/' : '')
+  }, '')
+};
+
+ModuleCollection.prototype.update = function update$1 (rawRootModule) {
+  update([], this.root, rawRootModule);
+};
+
+ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
+    var this$1 = this;
+    if ( runtime === void 0 ) runtime = true;
+
+  if ((true)) {
+    assertRawModule(path, rawModule);
+  }
+
+  var newModule = new Module(rawModule, runtime);
+  if (path.length === 0) {
+    this.root = newModule;
+  } else {
+    var parent = this.get(path.slice(0, -1));
+    parent.addChild(path[path.length - 1], newModule);
+  }
+
+  // register nested modules
+  if (rawModule.modules) {
+    forEachValue(rawModule.modules, function (rawChildModule, key) {
+      this$1.register(path.concat(key), rawChildModule, runtime);
+    });
+  }
+};
+
+ModuleCollection.prototype.unregister = function unregister (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+  var child = parent.getChild(key);
+
+  if (!child) {
+    if ((true)) {
+      console.warn(
+        "[vuex] trying to unregister module '" + key + "', which is " +
+        "not registered"
+      );
+    }
+    return
+  }
+
+  if (!child.runtime) {
+    return
+  }
+
+  parent.removeChild(key);
+};
+
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  return parent.hasChild(key)
+};
+
+function update (path, targetModule, newModule) {
+  if ((true)) {
+    assertRawModule(path, newModule);
+  }
+
+  // update target module
+  targetModule.update(newModule);
+
+  // update nested modules
+  if (newModule.modules) {
+    for (var key in newModule.modules) {
+      if (!targetModule.getChild(key)) {
+        if ((true)) {
+          console.warn(
+            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
+            'manual reload is needed'
+          );
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      );
+    }
+  }
+}
+
+var functionAssert = {
+  assert: function (value) { return typeof value === 'function'; },
+  expected: 'function'
+};
+
+var objectAssert = {
+  assert: function (value) { return typeof value === 'function' ||
+    (typeof value === 'object' && typeof value.handler === 'function'); },
+  expected: 'function or object with "handler" function'
+};
+
+var assertTypes = {
+  getters: functionAssert,
+  mutations: functionAssert,
+  actions: objectAssert
+};
+
+function assertRawModule (path, rawModule) {
+  Object.keys(assertTypes).forEach(function (key) {
+    if (!rawModule[key]) { return }
+
+    var assertOptions = assertTypes[key];
+
+    forEachValue(rawModule[key], function (value, type) {
+      assert(
+        assertOptions.assert(value),
+        makeAssertionMessage(path, key, type, value, assertOptions.expected)
+      );
+    });
+  });
+}
+
+function makeAssertionMessage (path, key, type, value, expected) {
+  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  if (path.length > 0) {
+    buf += " in module \"" + (path.join('.')) + "\"";
+  }
+  buf += " is " + (JSON.stringify(value)) + ".";
+  return buf
+}
+
+var Vue; // bind on install
+
+var Store = function Store (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #731
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  if ((true)) {
+    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
+    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
+    assert(this instanceof Store, "store must be called with the new operator.");
+  }
+
+  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  var strict = options.strict; if ( strict === void 0 ) strict = false;
+
+  // store internal state
+  this._committing = false;
+  this._actions = Object.create(null);
+  this._actionSubscribers = [];
+  this._mutations = Object.create(null);
+  this._wrappedGetters = Object.create(null);
+  this._modules = new ModuleCollection(options);
+  this._modulesNamespaceMap = Object.create(null);
+  this._subscribers = [];
+  this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
+
+  // bind commit and dispatch to self
+  var store = this;
+  var ref = this;
+  var dispatch = ref.dispatch;
+  var commit = ref.commit;
+  this.dispatch = function boundDispatch (type, payload) {
+    return dispatch.call(store, type, payload)
+  };
+  this.commit = function boundCommit (type, payload, options) {
+    return commit.call(store, type, payload, options)
+  };
+
+  // strict mode
+  this.strict = strict;
+
+  var state = this._modules.root.state;
+
+  // init root module.
+  // this also recursively registers all sub-modules
+  // and collects all module getters inside this._wrappedGetters
+  installModule(this, state, [], this._modules.root);
+
+  // initialize the store vm, which is responsible for the reactivity
+  // (also registers _wrappedGetters as computed properties)
+  resetStoreVM(this, state);
+
+  // apply plugins
+  plugins.forEach(function (plugin) { return plugin(this$1); });
+
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
+    devtoolPlugin(this);
+  }
+};
+
+var prototypeAccessors$1 = { state: { configurable: true } };
+
+prototypeAccessors$1.state.get = function () {
+  return this._vm._data.$$state
+};
+
+prototypeAccessors$1.state.set = function (v) {
+  if ((true)) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
+  }
+};
+
+Store.prototype.commit = function commit (_type, _payload, _options) {
+    var this$1 = this;
+
+  // check object-style commit
+  var ref = unifyObjectStyle(_type, _payload, _options);
+    var type = ref.type;
+    var payload = ref.payload;
+    var options = ref.options;
+
+  var mutation = { type: type, payload: payload };
+  var entry = this._mutations[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown mutation type: " + type));
+    }
+    return
+  }
+  this._withCommit(function () {
+    entry.forEach(function commitIterator (handler) {
+      handler(payload);
+    });
+  });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  if (
+    ( true) &&
+    options && options.silent
+  ) {
+    console.warn(
+      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
+      'Use the filter functionality in the vue-devtools'
+    );
+  }
+};
+
+Store.prototype.dispatch = function dispatch (_type, _payload) {
+    var this$1 = this;
+
+  // check object-style dispatch
+  var ref = unifyObjectStyle(_type, _payload);
+    var type = ref.type;
+    var payload = ref.payload;
+
+  var action = { type: type, payload: payload };
+  var entry = this._actions[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown action type: " + type));
+    }
+    return
+  }
+
+  try {
+    this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if ((true)) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
+
+  var result = entry.length > 1
+    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
+    : entry[0](payload);
+
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
+      }
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
+  })
+};
+
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
+};
+
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers, options)
+};
+
+Store.prototype.watch = function watch (getter, cb, options) {
+    var this$1 = this;
+
+  if ((true)) {
+    assert(typeof getter === 'function', "store.watch only accepts a function.");
+  }
+  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
+};
+
+Store.prototype.replaceState = function replaceState (state) {
+    var this$1 = this;
+
+  this._withCommit(function () {
+    this$1._vm._data.$$state = state;
+  });
+};
+
+Store.prototype.registerModule = function registerModule (path, rawModule, options) {
+    if ( options === void 0 ) options = {};
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+    assert(path.length > 0, 'cannot register the root module by using registerModule.');
+  }
+
+  this._modules.register(path, rawModule);
+  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
+  // reset store to update getters...
+  resetStoreVM(this, this.state);
+};
+
+Store.prototype.unregisterModule = function unregisterModule (path) {
+    var this$1 = this;
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  this._modules.unregister(path);
+  this._withCommit(function () {
+    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    Vue.delete(parentState, path[path.length - 1]);
+  });
+  resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
+};
+
+Store.prototype.hotUpdate = function hotUpdate (newOptions) {
+  this._modules.update(newOptions);
+  resetStore(this, true);
+};
+
+Store.prototype._withCommit = function _withCommit (fn) {
+  var committing = this._committing;
+  this._committing = true;
+  fn();
+  this._committing = committing;
+};
+
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
+
+function genericSubscribe (fn, subs, options) {
+  if (subs.indexOf(fn) < 0) {
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
+  }
+  return function () {
+    var i = subs.indexOf(fn);
+    if (i > -1) {
+      subs.splice(i, 1);
+    }
+  }
+}
+
+function resetStore (store, hot) {
+  store._actions = Object.create(null);
+  store._mutations = Object.create(null);
+  store._wrappedGetters = Object.create(null);
+  store._modulesNamespaceMap = Object.create(null);
+  var state = store.state;
+  // init all modules
+  installModule(store, state, [], store._modules.root, true);
+  // reset vm
+  resetStoreVM(store, state, hot);
+}
+
+function resetStoreVM (store, state, hot) {
+  var oldVm = store._vm;
+
+  // bind store public getters
+  store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
+  var wrappedGetters = store._wrappedGetters;
+  var computed = {};
+  forEachValue(wrappedGetters, function (fn, key) {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
+    Object.defineProperty(store.getters, key, {
+      get: function () { return store._vm[key]; },
+      enumerable: true // for local getters
+    });
+  });
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed: computed
+  });
+  Vue.config.silent = silent;
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store);
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(function () {
+        oldVm._data.$$state = null;
+      });
+    }
+    Vue.nextTick(function () { return oldVm.$destroy(); });
+  }
+}
+
+function installModule (store, rootState, path, module, hot) {
+  var isRoot = !path.length;
+  var namespace = store._modules.getNamespace(path);
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+  // set state
+  if (!isRoot && !hot) {
+    var parentState = getNestedState(rootState, path.slice(0, -1));
+    var moduleName = path[path.length - 1];
+    store._withCommit(function () {
+      if ((true)) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
+      Vue.set(parentState, moduleName, module.state);
+    });
+  }
+
+  var local = module.context = makeLocalContext(store, namespace, path);
+
+  module.forEachMutation(function (mutation, key) {
+    var namespacedType = namespace + key;
+    registerMutation(store, namespacedType, mutation, local);
+  });
+
+  module.forEachAction(function (action, key) {
+    var type = action.root ? key : namespace + key;
+    var handler = action.handler || action;
+    registerAction(store, type, handler, local);
+  });
+
+  module.forEachGetter(function (getter, key) {
+    var namespacedType = namespace + key;
+    registerGetter(store, namespacedType, getter, local);
+  });
+
+  module.forEachChild(function (child, key) {
+    installModule(store, rootState, path.concat(key), child, hot);
+  });
+}
+
+/**
+ * make localized dispatch, commit, getters and state
+ * if there is no namespace, just use root ones
+ */
+function makeLocalContext (store, namespace, path) {
+  var noNamespace = namespace === '';
+
+  var local = {
+    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._actions[type]) {
+          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._mutations[type]) {
+          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      store.commit(type, payload, options);
+    }
+  };
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? function () { return store.getters; }
+        : function () { return makeLocalGetters(store, namespace); }
+    },
+    state: {
+      get: function () { return getNestedState(store.state, path); }
+    }
+  });
+
+  return local
+}
+
+function makeLocalGetters (store, namespace) {
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
+
+      // extract local getter type
+      var localType = type.slice(splitPos);
+
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
+    });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
+
+  return store._makeLocalGettersCache[namespace]
+}
+
+function registerMutation (store, type, handler, local) {
+  var entry = store._mutations[type] || (store._mutations[type] = []);
+  entry.push(function wrappedMutationHandler (payload) {
+    handler.call(store, local.state, payload);
+  });
+}
+
+function registerAction (store, type, handler, local) {
+  var entry = store._actions[type] || (store._actions[type] = []);
+  entry.push(function wrappedActionHandler (payload) {
+    var res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload);
+    if (!isPromise(res)) {
+      res = Promise.resolve(res);
+    }
+    if (store._devtoolHook) {
+      return res.catch(function (err) {
+        store._devtoolHook.emit('vuex:error', err);
+        throw err
+      })
+    } else {
+      return res
+    }
+  });
+}
+
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if ((true)) {
+      console.error(("[vuex] duplicate getter key: " + type));
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  };
+}
+
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, function () {
+    if ((true)) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
+    }
+  }, { deep: true, sync: true });
+}
+
+function getNestedState (state, path) {
+  return path.reduce(function (state, key) { return state[key]; }, state)
+}
+
+function unifyObjectStyle (type, payload, options) {
+  if (isObject(type) && type.type) {
+    options = payload;
+    payload = type;
+    type = type.type;
+  }
+
+  if ((true)) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
+  }
+
+  return { type: type, payload: payload, options: options }
+}
+
+function install (_Vue) {
+  if (Vue && _Vue === Vue) {
+    if ((true)) {
+      console.error(
+        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
+      );
+    }
+    return
+  }
+  Vue = _Vue;
+  applyMixin(Vue);
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+var mapState = normalizeNamespace(function (namespace, states) {
+  var res = {};
+  if (( true) && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(states).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedState () {
+      var state = this.$store.state;
+      var getters = this.$store.getters;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        if (!module) {
+          return
+        }
+        state = module.context.state;
+        getters = module.context.getters;
+      }
+      return typeof val === 'function'
+        ? val.call(this, state, getters)
+        : state[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapMutations = normalizeNamespace(function (namespace, mutations) {
+  var res = {};
+  if (( true) && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(mutations).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedMutation () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // Get the commit method from store
+      var commit = this.$store.commit;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        if (!module) {
+          return
+        }
+        commit = module.context.commit;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+var mapGetters = normalizeNamespace(function (namespace, getters) {
+  var res = {};
+  if (( true) && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(getters).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val;
+    res[key] = function mappedGetter () {
+      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
+        return
+      }
+      if (( true) && !(val in this.$store.getters)) {
+        console.error(("[vuex] unknown getter: " + val));
+        return
+      }
+      return this.$store.getters[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapActions = normalizeNamespace(function (namespace, actions) {
+  var res = {};
+  if (( true) && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(actions).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedAction () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // get dispatch function from store
+      var dispatch = this.$store.dispatch;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
+var createNamespacedHelpers = function (namespace) { return ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+}); };
+
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}
+
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn) {
+  return function (namespace, map) {
+    if (typeof namespace !== 'string') {
+      map = namespace;
+      namespace = '';
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/';
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store, helper, namespace) {
+  var module = store._modulesNamespaceMap[namespace];
+  if (( true) && !module) {
+    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
+  }
+  return module
+}
+
+// Credits: borrowed code from fcomb/redux-logger
+
+function createLogger (ref) {
+  if ( ref === void 0 ) ref = {};
+  var collapsed = ref.collapsed; if ( collapsed === void 0 ) collapsed = true;
+  var filter = ref.filter; if ( filter === void 0 ) filter = function (mutation, stateBefore, stateAfter) { return true; };
+  var transformer = ref.transformer; if ( transformer === void 0 ) transformer = function (state) { return state; };
+  var mutationTransformer = ref.mutationTransformer; if ( mutationTransformer === void 0 ) mutationTransformer = function (mut) { return mut; };
+  var actionFilter = ref.actionFilter; if ( actionFilter === void 0 ) actionFilter = function (action, state) { return true; };
+  var actionTransformer = ref.actionTransformer; if ( actionTransformer === void 0 ) actionTransformer = function (act) { return act; };
+  var logMutations = ref.logMutations; if ( logMutations === void 0 ) logMutations = true;
+  var logActions = ref.logActions; if ( logActions === void 0 ) logActions = true;
+  var logger = ref.logger; if ( logger === void 0 ) logger = console;
+
+  return function (store) {
+    var prevState = deepCopy(store.state);
+
+    if (typeof logger === 'undefined') {
+      return
+    }
+
+    if (logMutations) {
+      store.subscribe(function (mutation, state) {
+        var nextState = deepCopy(state);
+
+        if (filter(mutation, prevState, nextState)) {
+          var formattedTime = getFormattedTime();
+          var formattedMutation = mutationTransformer(mutation);
+          var message = "mutation " + (mutation.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c prev state', 'color: #9E9E9E; font-weight: bold', transformer(prevState));
+          logger.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
+          logger.log('%c next state', 'color: #4CAF50; font-weight: bold', transformer(nextState));
+          endMessage(logger);
+        }
+
+        prevState = nextState;
+      });
+    }
+
+    if (logActions) {
+      store.subscribeAction(function (action, state) {
+        if (actionFilter(action, state)) {
+          var formattedTime = getFormattedTime();
+          var formattedAction = actionTransformer(action);
+          var message = "action " + (action.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c action', 'color: #03A9F4; font-weight: bold', formattedAction);
+          endMessage(logger);
+        }
+      });
+    }
+  }
+}
+
+function startMessage (logger, message, collapsed) {
+  var startMessage = collapsed
+    ? logger.groupCollapsed
+    : logger.group;
+
+  // render
+  try {
+    startMessage.call(logger, message);
+  } catch (e) {
+    logger.log(message);
+  }
+}
+
+function endMessage (logger) {
+  try {
+    logger.groupEnd();
+  } catch (e) {
+    logger.log('—— log end ——');
+  }
+}
+
+function getFormattedTime () {
+  var time = new Date();
+  return (" @ " + (pad(time.getHours(), 2)) + ":" + (pad(time.getMinutes(), 2)) + ":" + (pad(time.getSeconds(), 2)) + "." + (pad(time.getMilliseconds(), 3)))
+}
+
+function repeat (str, times) {
+  return (new Array(times + 1)).join(str)
+}
+
+function pad (num, maxLength) {
+  return repeat('0', maxLength - num.toString().length) + num
+}
+
+var index = {
+  Store: Store,
+  install: install,
+  version: '3.5.1',
+  mapState: mapState,
+  mapMutations: mapMutations,
+  mapGetters: mapGetters,
+  mapActions: mapActions,
+  createNamespacedHelpers: createNamespacedHelpers,
+  createLogger: createLogger
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -39652,1195 +40913,1217 @@ module.exports = function(module) {
 var map = {
 	"./API/ApiTokenManager": [
 		"./resources/js/Pages/API/ApiTokenManager.vue",
-		6,
 		7,
 		9,
-		19
+		10,
+		18
 	],
 	"./API/ApiTokenManager.vue": [
 		"./resources/js/Pages/API/ApiTokenManager.vue",
-		6,
 		7,
 		9,
-		19
+		10,
+		18
 	],
 	"./API/Index": [
 		"./resources/js/Pages/API/Index.vue",
-		6,
 		7,
 		9,
+		10,
 		11,
-		19,
-		109
+		18,
+		115
 	],
 	"./API/Index.vue": [
 		"./resources/js/Pages/API/Index.vue",
-		6,
 		7,
 		9,
+		10,
 		11,
-		19,
-		109
+		18,
+		115
 	],
 	"./Admin/Layouts/AppLayout": [
 		"./resources/js/Pages/Admin/Layouts/AppLayout.vue",
 		0,
-		127,
-		61,
-		140
+		1,
+		2,
+		62
 	],
 	"./Admin/Layouts/AppLayout.vue": [
 		"./resources/js/Pages/Admin/Layouts/AppLayout.vue",
 		0,
-		127,
-		61,
-		140
+		1,
+		2,
+		62
 	],
 	"./Admin/Layouts/partials/Flash": [
 		"./resources/js/Pages/Admin/Layouts/partials/Flash.vue",
-		80
+		83
 	],
 	"./Admin/Layouts/partials/Flash.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Flash.vue",
-		80
+		83
 	],
 	"./Admin/Layouts/partials/Header": [
 		"./resources/js/Pages/Admin/Layouts/partials/Header.vue",
-		61,
-		62
+		2,
+		63
 	],
 	"./Admin/Layouts/partials/Header.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Header.vue",
-		61,
-		62
+		2,
+		63
 	],
 	"./Admin/Layouts/partials/ItemPerPage": [
 		"./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue",
-		114
+		120
 	],
 	"./Admin/Layouts/partials/ItemPerPage.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/ItemPerPage.vue",
-		114
+		120
 	],
 	"./Admin/Layouts/partials/Pagination": [
 		"./resources/js/Pages/Admin/Layouts/partials/Pagination.vue",
-		81
+		84
 	],
 	"./Admin/Layouts/partials/Pagination.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Pagination.vue",
-		81
+		84
 	],
 	"./Admin/Layouts/partials/SideBar": [
 		"./resources/js/Pages/Admin/Layouts/partials/SideBar.vue",
-		127,
-		120
+		1,
+		126
 	],
 	"./Admin/Layouts/partials/SideBar.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/SideBar.vue",
-		127,
-		120
+		1,
+		126
 	],
 	"./Admin/attribute/Create": [
 		"./resources/js/Pages/Admin/attribute/Create.vue",
 		0,
-		127,
-		61,
-		133
+		1,
+		2,
+		38
 	],
 	"./Admin/attribute/Create.vue": [
 		"./resources/js/Pages/Admin/attribute/Create.vue",
 		0,
-		127,
-		61,
-		133
+		1,
+		2,
+		38
 	],
 	"./Admin/attribute/Edit": [
 		"./resources/js/Pages/Admin/attribute/Edit.vue",
 		0,
-		127,
-		61,
-		134
+		1,
+		2,
+		39
 	],
 	"./Admin/attribute/Edit.vue": [
 		"./resources/js/Pages/Admin/attribute/Edit.vue",
 		0,
-		127,
-		61,
-		134
+		1,
+		2,
+		39
 	],
 	"./Admin/attribute/Index": [
 		"./resources/js/Pages/Admin/attribute/Index.vue",
 		0,
-		127,
-		61,
-		50
+		1,
+		2,
+		41
 	],
 	"./Admin/attribute/Index.vue": [
 		"./resources/js/Pages/Admin/attribute/Index.vue",
 		0,
-		127,
-		61,
-		50
+		1,
+		2,
+		41
 	],
 	"./Admin/attribute/components/AttributeItem": [
 		"./resources/js/Pages/Admin/attribute/components/AttributeItem.vue",
-		21
+		64
 	],
 	"./Admin/attribute/components/AttributeItem.vue": [
 		"./resources/js/Pages/Admin/attribute/components/AttributeItem.vue",
-		21
+		64
 	],
 	"./Admin/brand/Create": [
 		"./resources/js/Pages/Admin/brand/Create.vue",
 		0,
-		127,
-		61,
-		132
+		1,
+		2,
+		37
 	],
 	"./Admin/brand/Create.vue": [
 		"./resources/js/Pages/Admin/brand/Create.vue",
 		0,
-		127,
-		61,
-		132
+		1,
+		2,
+		37
 	],
 	"./Admin/brand/Edit": [
 		"./resources/js/Pages/Admin/brand/Edit.vue",
 		0,
-		127,
-		61,
-		137
+		1,
+		2,
+		44
 	],
 	"./Admin/brand/Edit.vue": [
 		"./resources/js/Pages/Admin/brand/Edit.vue",
 		0,
-		127,
-		61,
-		137
+		1,
+		2,
+		44
 	],
 	"./Admin/brand/Index": [
 		"./resources/js/Pages/Admin/brand/Index.vue",
 		0,
-		127,
-		61,
-		136
+		1,
+		2,
+		43
 	],
 	"./Admin/brand/Index.vue": [
 		"./resources/js/Pages/Admin/brand/Index.vue",
 		0,
-		127,
-		61,
-		136
+		1,
+		2,
+		43
 	],
 	"./Admin/category/Create": [
 		"./resources/js/Pages/Admin/category/Create.vue",
 		0,
-		10,
-		127,
-		61,
-		131
+		8,
+		1,
+		2,
+		35
 	],
 	"./Admin/category/Create.vue": [
 		"./resources/js/Pages/Admin/category/Create.vue",
 		0,
-		10,
-		127,
-		61,
-		131
+		8,
+		1,
+		2,
+		35
 	],
 	"./Admin/category/Edit": [
 		"./resources/js/Pages/Admin/category/Edit.vue",
 		0,
-		10,
-		127,
-		61,
-		1
+		8,
+		1,
+		2,
+		47
 	],
 	"./Admin/category/Edit.vue": [
 		"./resources/js/Pages/Admin/category/Edit.vue",
 		0,
-		10,
-		127,
-		61,
-		1
+		8,
+		1,
+		2,
+		47
 	],
 	"./Admin/category/Index": [
 		"./resources/js/Pages/Admin/category/Index.vue",
 		0,
-		127,
-		61,
-		51
+		1,
+		2,
+		42
 	],
 	"./Admin/category/Index.vue": [
 		"./resources/js/Pages/Admin/category/Index.vue",
 		0,
-		127,
-		61,
-		51
+		1,
+		2,
+		42
 	],
 	"./Admin/category/components/CategoryItem": [
 		"./resources/js/Pages/Admin/category/components/CategoryItem.vue",
-		22
+		65
 	],
 	"./Admin/category/components/CategoryItem.vue": [
 		"./resources/js/Pages/Admin/category/components/CategoryItem.vue",
-		22
+		65
 	],
 	"./Admin/dashboard": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		127,
-		61,
-		128
+		1,
+		2,
+		19
 	],
 	"./Admin/dashboard/": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		127,
-		61,
-		128
+		1,
+		2,
+		19
 	],
 	"./Admin/dashboard/index": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		127,
-		61,
-		128
+		1,
+		2,
+		19
 	],
 	"./Admin/dashboard/index.vue": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		127,
-		61,
-		128
+		1,
+		2,
+		19
 	],
 	"./Admin/orders": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
-		127,
-		61,
-		129
+		1,
+		2,
+		20
 	],
 	"./Admin/orders/": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
-		127,
-		61,
-		129
+		1,
+		2,
+		20
 	],
 	"./Admin/orders/index": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
-		127,
-		61,
-		129
+		1,
+		2,
+		20
 	],
 	"./Admin/orders/index.vue": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
-		127,
-		61,
-		129
+		1,
+		2,
+		20
 	],
 	"./Admin/orders/show": [
 		"./resources/js/Pages/Admin/orders/show.vue",
 		0,
-		127,
-		61,
-		139
+		1,
+		2,
+		48
 	],
 	"./Admin/orders/show.vue": [
 		"./resources/js/Pages/Admin/orders/show.vue",
 		0,
-		127,
-		61,
-		139
+		1,
+		2,
+		48
 	],
 	"./Admin/products/Attribute/Attribute": [
 		"./resources/js/Pages/Admin/products/Attribute/Attribute.vue",
 		0,
-		10,
-		110
+		8,
+		116
 	],
 	"./Admin/products/Attribute/Attribute.vue": [
 		"./resources/js/Pages/Admin/products/Attribute/Attribute.vue",
 		0,
-		10,
-		110
+		8,
+		116
 	],
 	"./Admin/products/Create": [
 		"./resources/js/Pages/Admin/products/Create.vue",
 		0,
-		10,
-		127,
-		61,
-		46
+		8,
+		1,
+		2,
+		49
 	],
 	"./Admin/products/Create.vue": [
 		"./resources/js/Pages/Admin/products/Create.vue",
 		0,
-		10,
-		127,
-		61,
-		46
+		8,
+		1,
+		2,
+		49
 	],
 	"./Admin/products/Edit": [
 		"./resources/js/Pages/Admin/products/Edit.vue",
 		0,
-		10,
+		8,
 		32,
-		127,
-		61,
+		1,
+		2,
 		24,
 		23,
-		47
+		50
 	],
 	"./Admin/products/Edit.vue": [
 		"./resources/js/Pages/Admin/products/Edit.vue",
 		0,
-		10,
+		8,
 		32,
-		127,
-		61,
+		1,
+		2,
 		24,
 		23,
-		47
+		50
 	],
 	"./Admin/products/EditForm": [
 		"./resources/js/Pages/Admin/products/EditForm.vue",
 		0,
-		10,
+		8,
 		24
 	],
 	"./Admin/products/EditForm.vue": [
 		"./resources/js/Pages/Admin/products/EditForm.vue",
 		0,
-		10,
+		8,
 		24
 	],
 	"./Admin/products/Index": [
 		"./resources/js/Pages/Admin/products/Index.vue",
 		0,
-		127,
-		61,
-		135
+		1,
+		2,
+		40
 	],
 	"./Admin/products/Index.vue": [
 		"./resources/js/Pages/Admin/products/Index.vue",
 		0,
-		127,
-		61,
-		135
+		1,
+		2,
+		40
 	],
 	"./Admin/products/ProductAttributes": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
-		10,
+		8,
 		23,
-		113
+		119
 	],
 	"./Admin/products/ProductAttributes.vue": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
-		10,
+		8,
 		23,
-		113
+		119
 	],
 	"./Admin/products/ProductImages": [
 		"./resources/js/Pages/Admin/products/ProductImages.vue",
 		32,
-		82
+		85
 	],
 	"./Admin/products/ProductImages.vue": [
 		"./resources/js/Pages/Admin/products/ProductImages.vue",
 		32,
-		82
+		85
 	],
 	"./Admin/settings/Index": [
 		"./resources/js/Pages/Admin/settings/Index.vue",
 		0,
-		127,
-		61,
+		1,
+		2,
+		15,
 		25,
-		33,
-		130
+		34
 	],
 	"./Admin/settings/Index.vue": [
 		"./resources/js/Pages/Admin/settings/Index.vue",
 		0,
-		127,
-		61,
+		1,
+		2,
+		15,
 		25,
-		33,
-		130
+		34
 	],
 	"./Admin/settings/components/AnalyticsForm": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		53
+		54
 	],
 	"./Admin/settings/components/AnalyticsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		53
+		54
 	],
 	"./Admin/settings/components/FooterSeoForm": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		54
+		55
 	],
 	"./Admin/settings/components/FooterSeoForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		54
+		55
 	],
 	"./Admin/settings/components/GeneralForm": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		55
+		56
 	],
 	"./Admin/settings/components/GeneralForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		55
+		56
 	],
 	"./Admin/settings/components/LogoForm": [
 		"./resources/js/Pages/Admin/settings/components/LogoForm.vue",
-		25,
-		141
+		15,
+		127
 	],
 	"./Admin/settings/components/LogoForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/LogoForm.vue",
-		25,
-		141
+		15,
+		127
 	],
 	"./Admin/settings/components/PaymentsForm": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		33,
-		71
+		25,
+		74
 	],
 	"./Admin/settings/components/PaymentsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		33,
-		71
+		25,
+		74
 	],
 	"./Admin/settings/components/SocialLinksForm": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		56
+		57
 	],
 	"./Admin/settings/components/SocialLinksForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		56
+		57
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login.vue",
-		48
+		51
 	],
 	"./Auth/Login.vue": [
 		"./resources/js/Pages/Auth/Login.vue",
-		48
+		51
 	],
 	"./Dashboard": [
 		"./resources/js/Pages/Dashboard.vue",
 		11,
-		60
+		61
 	],
 	"./Dashboard.vue": [
 		"./resources/js/Pages/Dashboard.vue",
 		11,
-		60
+		61
 	],
 	"./Ecomerce/Dashboard": [
 		"./resources/js/Pages/Ecomerce/Dashboard.vue",
-		2,
 		3,
 		4,
-		5,
-		63
+		5
 	],
 	"./Ecomerce/Dashboard.vue": [
 		"./resources/js/Pages/Ecomerce/Dashboard.vue",
-		2,
 		3,
 		4,
-		5,
-		63
+		5
 	],
 	"./Ecomerce/blog-details/BlogDetails": [
 		"./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue",
-		2,
 		3,
 		4,
-		5,
-		83
+		144
 	],
 	"./Ecomerce/blog-details/BlogDetails.vue": [
 		"./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue",
-		2,
 		3,
 		4,
-		5,
-		83
+		144
 	],
 	"./Ecomerce/blog/Blog": [
 		"./resources/js/Pages/Ecomerce/blog/Blog.vue",
-		2,
 		3,
 		4,
-		5,
-		64
+		68
 	],
 	"./Ecomerce/blog/Blog.vue": [
 		"./resources/js/Pages/Ecomerce/blog/Blog.vue",
-		2,
 		3,
 		4,
-		5,
-		64
+		68
 	],
 	"./Ecomerce/checkout/CheckOutSuccess": [
 		"./resources/js/Pages/Ecomerce/checkout/CheckOutSuccess.vue",
-		2,
 		3,
 		4,
-		5,
-		76
+		143
 	],
 	"./Ecomerce/checkout/CheckOutSuccess.vue": [
 		"./resources/js/Pages/Ecomerce/checkout/CheckOutSuccess.vue",
-		2,
 		3,
 		4,
-		5,
-		76
+		143
 	],
 	"./Ecomerce/checkout/Checkout": [
 		"./resources/js/Pages/Ecomerce/checkout/Checkout.vue",
-		13,
-		2,
+		14,
 		3,
 		4,
-		5,
-		26,
-		74
+		17,
+		139
 	],
 	"./Ecomerce/checkout/Checkout.vue": [
 		"./resources/js/Pages/Ecomerce/checkout/Checkout.vue",
-		13,
-		2,
+		14,
 		3,
 		4,
-		5,
-		26,
-		74
+		17,
+		139
 	],
 	"./Ecomerce/checkout/PaymentForm": [
 		"./resources/js/Pages/Ecomerce/checkout/PaymentForm.vue",
-		13,
-		26
+		14,
+		17
 	],
 	"./Ecomerce/checkout/PaymentForm.vue": [
 		"./resources/js/Pages/Ecomerce/checkout/PaymentForm.vue",
-		13,
-		26
+		14,
+		17
 	],
 	"./Ecomerce/checkout/YourOrder": [
 		"./resources/js/Pages/Ecomerce/checkout/YourOrder.vue",
-		84
+		87
 	],
 	"./Ecomerce/checkout/YourOrder.vue": [
 		"./resources/js/Pages/Ecomerce/checkout/YourOrder.vue",
-		84
+		87
 	],
 	"./Ecomerce/checkout/stripe/StripeCardElement": [
 		"./resources/js/Pages/Ecomerce/checkout/stripe/StripeCardElement.vue",
-		13,
-		111
+		14,
+		117
 	],
 	"./Ecomerce/checkout/stripe/StripeCardElement.vue": [
 		"./resources/js/Pages/Ecomerce/checkout/stripe/StripeCardElement.vue",
-		13,
-		111
+		14,
+		117
 	],
 	"./Ecomerce/contact/Contact": [
 		"./resources/js/Pages/Ecomerce/contact/Contact.vue",
-		2,
 		3,
 		4,
-		5,
-		65
+		136
 	],
 	"./Ecomerce/contact/Contact.vue": [
 		"./resources/js/Pages/Ecomerce/contact/Contact.vue",
-		2,
 		3,
 		4,
-		5,
-		65
+		136
 	],
 	"./Ecomerce/shared/AppLayout": [
 		"./resources/js/Pages/Ecomerce/shared/AppLayout.vue",
-		2,
 		3,
 		4,
-		5,
-		121
+		146
 	],
 	"./Ecomerce/shared/AppLayout.vue": [
 		"./resources/js/Pages/Ecomerce/shared/AppLayout.vue",
-		2,
 		3,
 		4,
-		5,
-		121
+		146
+	],
+	"./Ecomerce/shared/Partials/AppFooter": [
+		"./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue",
+		4,
+		77
+	],
+	"./Ecomerce/shared/Partials/AppFooter.vue": [
+		"./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue",
+		4,
+		77
+	],
+	"./Ecomerce/shared/Partials/AppHeader": [
+		"./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue",
+		3,
+		79
+	],
+	"./Ecomerce/shared/Partials/AppHeader.vue": [
+		"./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue",
+		3,
+		79
 	],
 	"./Ecomerce/shared/Product/Product": [
 		"./resources/js/Pages/Ecomerce/shared/Product/Product.vue",
-		85
+		88
 	],
 	"./Ecomerce/shared/Product/Product.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Product/Product.vue",
-		85
+		88
 	],
 	"./Ecomerce/shared/Slider/CategoriesSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/CategoriesSlider.vue",
-		67
+		70
 	],
 	"./Ecomerce/shared/Slider/CategoriesSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/CategoriesSlider.vue",
-		67
+		70
 	],
 	"./Ecomerce/shared/Slider/LatestProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/LatestProductsSlider.vue",
-		86
+		89
 	],
 	"./Ecomerce/shared/Slider/LatestProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/LatestProductsSlider.vue",
-		86
+		89
 	],
 	"./Ecomerce/shared/Slider/ReviewProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/ReviewProductsSlider.vue",
-		87
+		90
 	],
 	"./Ecomerce/shared/Slider/ReviewProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/ReviewProductsSlider.vue",
-		87
+		90
 	],
 	"./Ecomerce/shared/Slider/SaleProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleProductsSlider.vue",
-		12,
-		75
+		13,
+		78
 	],
 	"./Ecomerce/shared/Slider/SaleProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleProductsSlider.vue",
-		12,
-		75
+		13,
+		78
 	],
 	"./Ecomerce/shared/Slider/TopRatedProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TopRatedProductsSlider.vue",
-		88
+		91
 	],
 	"./Ecomerce/shared/Slider/TopRatedProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TopRatedProductsSlider.vue",
-		88
+		91
 	],
 	"./Ecomerce/shared/Slider/components/Category": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/components/Category.vue",
-		89
+		92
 	],
 	"./Ecomerce/shared/Slider/components/Category.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/components/Category.vue",
-		89
+		92
 	],
 	"./Ecomerce/shared/components/BreadCrumb": [
 		"./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue",
-		90
+		93
 	],
 	"./Ecomerce/shared/components/BreadCrumb.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue",
-		90
+		93
 	],
 	"./Ecomerce/shared/components/Dropdown": [
 		"./resources/js/Pages/Ecomerce/shared/components/Dropdown.vue",
-		91
+		94
 	],
 	"./Ecomerce/shared/components/Dropdown.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Dropdown.vue",
-		91
+		94
 	],
 	"./Ecomerce/shared/components/DropdownLink": [
 		"./resources/js/Pages/Ecomerce/shared/components/DropdownLink.vue",
-		92
+		95
 	],
 	"./Ecomerce/shared/components/DropdownLink.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/DropdownLink.vue",
-		92
+		95
 	],
 	"./Ecomerce/shared/components/Footer": [
 		"./resources/js/Pages/Ecomerce/shared/components/Footer.vue",
-		58
+		59
 	],
 	"./Ecomerce/shared/components/Footer.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Footer.vue",
-		58
+		59
 	],
 	"./Ecomerce/shared/components/Header": [
 		"./resources/js/Pages/Ecomerce/shared/components/Header.vue",
-		2,
-		43
+		137,
+		46
 	],
 	"./Ecomerce/shared/components/Header.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Header.vue",
-		2,
-		43
+		137,
+		46
 	],
 	"./Ecomerce/shared/components/HeaderCart": [
 		"./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue",
-		93
+		96
 	],
 	"./Ecomerce/shared/components/HeaderCart.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue",
-		93
+		96
 	],
 	"./Ecomerce/shared/components/Hero": [
 		"./resources/js/Pages/Ecomerce/shared/components/Hero.vue",
-		4,
-		122
+		147
 	],
 	"./Ecomerce/shared/components/Hero.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Hero.vue",
-		4,
-		122
+		147
 	],
 	"./Ecomerce/shared/components/LangImage": [
 		"./resources/js/Pages/Ecomerce/shared/components/LangImage.vue",
-		94
+		97
 	],
 	"./Ecomerce/shared/components/LangImage.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/LangImage.vue",
-		94
+		97
 	],
 	"./Ecomerce/shared/components/LangSection": [
 		"./resources/js/Pages/Ecomerce/shared/components/LangSection.vue",
-		68
+		71
 	],
 	"./Ecomerce/shared/components/LangSection.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/LangSection.vue",
-		68
+		71
 	],
 	"./Ecomerce/shared/components/Loader": [
 		"./resources/js/Pages/Ecomerce/shared/components/Loader.vue",
-		95
+		98
 	],
 	"./Ecomerce/shared/components/Loader.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Loader.vue",
-		95
+		98
 	],
 	"./Ecomerce/shared/components/Logo": [
 		"./resources/js/Pages/Ecomerce/shared/components/Logo.vue",
-		96
+		99
 	],
 	"./Ecomerce/shared/components/Logo.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Logo.vue",
-		96
+		99
 	],
 	"./Ecomerce/shared/components/NavBar": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavBar.vue",
-		69
+		72
 	],
 	"./Ecomerce/shared/components/NavBar.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavBar.vue",
-		69
+		72
 	],
 	"./Ecomerce/shared/components/NavLink": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavLink.vue",
-		97
+		100
 	],
 	"./Ecomerce/shared/components/NavLink.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavLink.vue",
-		97
+		100
 	],
 	"./Ecomerce/shared/components/NavbarResponsive": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavbarResponsive.vue",
-		3,
-		57
+		29
 	],
 	"./Ecomerce/shared/components/NavbarResponsive.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/NavbarResponsive.vue",
-		3,
-		57
+		29
 	],
 	"./Ecomerce/shared/components/Pagination": [
 		"./resources/js/Pages/Ecomerce/shared/components/Pagination.vue",
-		77
+		80
 	],
 	"./Ecomerce/shared/components/Pagination.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/Pagination.vue",
-		77
+		80
 	],
 	"./Ecomerce/shared/components/PaymentItem": [
 		"./resources/js/Pages/Ecomerce/shared/components/PaymentItem.vue",
-		98
+		101
 	],
 	"./Ecomerce/shared/components/PaymentItem.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/PaymentItem.vue",
-		98
+		101
 	],
 	"./Ecomerce/shared/components/TopBar": [
 		"./resources/js/Pages/Ecomerce/shared/components/TopBar.vue",
-		2,
-		123
+		137
 	],
 	"./Ecomerce/shared/components/TopBar.vue": [
 		"./resources/js/Pages/Ecomerce/shared/components/TopBar.vue",
-		2,
-		123
+		137
 	],
 	"./Ecomerce/shop-details/ShopDetails": [
 		"./resources/js/Pages/Ecomerce/shop-details/ShopDetails.vue",
-		2,
 		3,
 		4,
-		5,
-		29,
-		59
+		86,
+		26
 	],
 	"./Ecomerce/shop-details/ShopDetails.vue": [
 		"./resources/js/Pages/Ecomerce/shop-details/ShopDetails.vue",
-		2,
 		3,
 		4,
-		5,
-		29,
-		59
+		86,
+		26
 	],
 	"./Ecomerce/shop-details/components/ProductAttributes": [
 		"./resources/js/Pages/Ecomerce/shop-details/components/ProductAttributes.vue",
-		78
+		81
 	],
 	"./Ecomerce/shop-details/components/ProductAttributes.vue": [
 		"./resources/js/Pages/Ecomerce/shop-details/components/ProductAttributes.vue",
-		78
+		81
 	],
 	"./Ecomerce/shop-details/components/RelatedProducts": [
 		"./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue",
-		115
+		121
 	],
 	"./Ecomerce/shop-details/components/RelatedProducts.vue": [
 		"./resources/js/Pages/Ecomerce/shop-details/components/RelatedProducts.vue",
-		115
+		121
 	],
 	"./Ecomerce/shop-details/product/Product": [
 		"./resources/js/Pages/Ecomerce/shop-details/product/Product.vue",
-		29
+		86
 	],
 	"./Ecomerce/shop-details/product/Product.vue": [
 		"./resources/js/Pages/Ecomerce/shop-details/product/Product.vue",
-		29
+		86
 	],
 	"./Ecomerce/shop/Shop": [
 		"./resources/js/Pages/Ecomerce/shop/Shop.vue",
-		12,
-		2,
+		13,
 		3,
 		4,
-		5,
 		16,
-		35
+		148
 	],
 	"./Ecomerce/shop/Shop.vue": [
 		"./resources/js/Pages/Ecomerce/shop/Shop.vue",
-		12,
-		2,
+		13,
 		3,
 		4,
-		5,
 		16,
-		35
+		148
 	],
 	"./Ecomerce/shop/components/FliterOptions": [
 		"./resources/js/Pages/Ecomerce/shop/components/FliterOptions.vue",
-		99
+		102
 	],
 	"./Ecomerce/shop/components/FliterOptions.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/FliterOptions.vue",
-		99
+		102
 	],
 	"./Ecomerce/shop/components/PriceSlider": [
 		"./resources/js/Pages/Ecomerce/shop/components/PriceSlider.vue",
-		70
+		73
 	],
 	"./Ecomerce/shop/components/PriceSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/PriceSlider.vue",
-		70
+		73
 	],
 	"./Ecomerce/shop/components/ShopProducts": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShopProducts.vue",
-		66
+		69
 	],
 	"./Ecomerce/shop/components/ShopProducts.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShopProducts.vue",
-		66
+		69
 	],
 	"./Ecomerce/shop/components/ShopSidebar": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShopSidebar.vue",
 		16,
-		124
+		131
 	],
 	"./Ecomerce/shop/components/ShopSidebar.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShopSidebar.vue",
 		16,
-		124
+		131
 	],
 	"./Ecomerce/shopping-cart/CartItem": [
 		"./resources/js/Pages/Ecomerce/shopping-cart/CartItem.vue",
-		28
+		66
 	],
 	"./Ecomerce/shopping-cart/CartItem.vue": [
 		"./resources/js/Pages/Ecomerce/shopping-cart/CartItem.vue",
-		28
+		66
 	],
 	"./Ecomerce/shopping-cart/ShoppingCart": [
 		"./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue",
-		2,
 		3,
 		4,
-		5,
-		28,
-		112
+		66,
+		145
 	],
 	"./Ecomerce/shopping-cart/ShoppingCart.vue": [
 		"./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue",
-		2,
 		3,
 		4,
-		5,
-		28,
-		112
+		66,
+		145
 	],
 	"./Ecomerce/welcome/Welcome": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
-		12,
-		2,
+		13,
 		3,
 		4,
-		5,
-		15,
-		27,
-		42
+		6,
+		60,
+		27
 	],
 	"./Ecomerce/welcome/Welcome.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
-		12,
-		2,
+		13,
 		3,
 		4,
-		5,
-		15,
-		27,
-		42
+		6,
+		60,
+		27
 	],
 	"./Ecomerce/welcome/components/Banner": [
 		"./resources/js/Pages/Ecomerce/welcome/components/Banner.vue",
-		116
+		122
 	],
 	"./Ecomerce/welcome/components/Banner.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/Banner.vue",
-		116
+		122
 	],
 	"./Ecomerce/welcome/components/BlogPost": [
 		"./resources/js/Pages/Ecomerce/welcome/components/BlogPost.vue",
-		117
+		123
 	],
 	"./Ecomerce/welcome/components/BlogPost.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/BlogPost.vue",
-		117
+		123
 	],
 	"./Ecomerce/welcome/components/FeaturedProducts": [
 		"./resources/js/Pages/Ecomerce/welcome/components/FeaturedProducts.vue",
-		27,
-		125
+		60,
+		132
 	],
 	"./Ecomerce/welcome/components/FeaturedProducts.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/FeaturedProducts.vue",
-		27,
-		125
+		60,
+		132
 	],
 	"./Ecomerce/welcome/components/MultiProductsSliders": [
 		"./resources/js/Pages/Ecomerce/welcome/components/MultiProductsSliders.vue",
-		15,
-		126
+		6,
+		133
 	],
 	"./Ecomerce/welcome/components/MultiProductsSliders.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/MultiProductsSliders.vue",
-		15,
-		126
+		6,
+		133
 	],
 	"./Profile/DeleteUserForm": [
 		"./resources/js/Pages/Profile/DeleteUserForm.vue",
-		6,
 		7,
-		73
+		9,
+		76
 	],
 	"./Profile/DeleteUserForm.vue": [
 		"./resources/js/Pages/Profile/DeleteUserForm.vue",
-		6,
 		7,
-		73
+		9,
+		76
 	],
 	"./Profile/LogoutOtherBrowserSessionsForm": [
 		"./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue",
-		6,
 		7,
+		9,
 		30,
-		72
+		75
 	],
 	"./Profile/LogoutOtherBrowserSessionsForm.vue": [
 		"./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue",
-		6,
 		7,
+		9,
 		30,
-		72
+		75
 	],
 	"./Profile/Show": [
 		"./resources/js/Pages/Profile/Show.vue",
-		6,
 		7,
 		9,
+		10,
 		11,
-		20,
+		21,
 		30,
 		31,
-		52
+		53
 	],
 	"./Profile/Show.vue": [
 		"./resources/js/Pages/Profile/Show.vue",
-		6,
 		7,
 		9,
+		10,
 		11,
-		20,
+		21,
 		30,
 		31,
-		52
+		53
 	],
 	"./Profile/TwoFactorAuthenticationForm": [
 		"./resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue",
-		6,
 		7,
-		20,
-		108
+		9,
+		21,
+		114
 	],
 	"./Profile/TwoFactorAuthenticationForm.vue": [
 		"./resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue",
-		6,
 		7,
-		20,
-		108
+		9,
+		21,
+		114
 	],
 	"./Profile/UpdatePasswordForm": [
 		"./resources/js/Pages/Profile/UpdatePasswordForm.vue",
-		9,
-		49
+		10,
+		52
 	],
 	"./Profile/UpdatePasswordForm.vue": [
 		"./resources/js/Pages/Profile/UpdatePasswordForm.vue",
-		9,
-		49
+		10,
+		52
 	],
 	"./Profile/UpdateProfileInformationForm": [
 		"./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
-		6,
-		9,
+		7,
+		10,
 		31
 	],
 	"./Profile/UpdateProfileInformationForm.vue": [
 		"./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
-		6,
-		9,
+		7,
+		10,
 		31
 	],
 	"./Shared/FileInput": [
 		"./resources/js/Pages/Shared/FileInput.vue",
-		79
+		82
 	],
 	"./Shared/FileInput.vue": [
 		"./resources/js/Pages/Shared/FileInput.vue",
-		79
+		82
 	],
 	"./Shared/Flash": [
 		"./resources/js/Pages/Shared/Flash.vue",
-		100
+		103
 	],
 	"./Shared/Flash.vue": [
 		"./resources/js/Pages/Shared/Flash.vue",
-		100
+		103
 	],
 	"./Shared/FlashMessages": [
 		"./resources/js/Pages/Shared/FlashMessages.vue",
-		101
+		104
 	],
 	"./Shared/FlashMessages.vue": [
 		"./resources/js/Pages/Shared/FlashMessages.vue",
-		101
+		104
 	],
 	"./Shared/Icon": [
 		"./resources/js/Pages/Shared/Icon.vue",
-		102
+		105
 	],
 	"./Shared/Icon.vue": [
 		"./resources/js/Pages/Shared/Icon.vue",
-		102
+		105
 	],
 	"./Shared/LoadingButton": [
 		"./resources/js/Pages/Shared/LoadingButton.vue",
-		103
+		106
 	],
 	"./Shared/LoadingButton.vue": [
 		"./resources/js/Pages/Shared/LoadingButton.vue",
-		103
+		106
 	],
 	"./Shared/Logo": [
 		"./resources/js/Pages/Shared/Logo.vue",
-		118
+		124
 	],
 	"./Shared/Logo.vue": [
 		"./resources/js/Pages/Shared/Logo.vue",
-		118
+		124
 	],
 	"./Shared/Pagination": [
 		"./resources/js/Pages/Shared/Pagination.vue",
-		104
+		107
 	],
 	"./Shared/Pagination.vue": [
 		"./resources/js/Pages/Shared/Pagination.vue",
-		104
+		107
 	],
 	"./Shared/SearchFilter": [
 		"./resources/js/Pages/Shared/SearchFilter.vue",
-		119
+		125
 	],
 	"./Shared/SearchFilter.vue": [
 		"./resources/js/Pages/Shared/SearchFilter.vue",
-		119
+		125
 	],
 	"./Shared/SelectInput": [
 		"./resources/js/Pages/Shared/SelectInput.vue",
-		105
+		108
 	],
 	"./Shared/SelectInput.vue": [
 		"./resources/js/Pages/Shared/SelectInput.vue",
-		105
+		108
 	],
 	"./Shared/TextInput": [
 		"./resources/js/Pages/Shared/TextInput.vue",
-		106
+		109
 	],
 	"./Shared/TextInput.vue": [
 		"./resources/js/Pages/Shared/TextInput.vue",
-		106
+		109
 	],
 	"./Shared/TextareaInput": [
 		"./resources/js/Pages/Shared/TextareaInput.vue",
-		107
+		110
 	],
 	"./Shared/TextareaInput.vue": [
 		"./resources/js/Pages/Shared/TextareaInput.vue",
-		107
+		110
+	],
+	"./tail/Dashboard": [
+		"./resources/js/Pages/tail/Dashboard.vue",
+		12,
+		22,
+		134
+	],
+	"./tail/Dashboard.vue": [
+		"./resources/js/Pages/tail/Dashboard.vue",
+		12,
+		22,
+		134
+	],
+	"./tail/Footer": [
+		"./resources/js/Pages/tail/Footer.vue",
+		111
+	],
+	"./tail/Footer.vue": [
+		"./resources/js/Pages/tail/Footer.vue",
+		111
+	],
+	"./tail/Home": [
+		"./resources/js/Pages/tail/Home.vue",
+		33,
+		12,
+		22,
+		112
+	],
+	"./tail/Home.vue": [
+		"./resources/js/Pages/tail/Home.vue",
+		33,
+		12,
+		22,
+		112
+	],
+	"./tail/Navbar": [
+		"./resources/js/Pages/tail/Navbar.vue",
+		113
+	],
+	"./tail/Navbar.vue": [
+		"./resources/js/Pages/tail/Navbar.vue",
+		113
+	],
+	"./tail/Sidebar": [
+		"./resources/js/Pages/tail/Sidebar.vue",
+		12,
+		135
+	],
+	"./tail/Sidebar.vue": [
+		"./resources/js/Pages/tail/Sidebar.vue",
+		12,
+		135
 	]
 };
 function webpackAsyncContext(req) {
@@ -40891,7 +42174,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-sweetalert2 */ "./node_modules/vue-sweetalert2/dist/index.js");
 /* harmony import */ var sweetalert2_dist_sweetalert2_min_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! sweetalert2/dist/sweetalert2.min.css */ "./node_modules/sweetalert2/dist/sweetalert2.min.css");
 /* harmony import */ var sweetalert2_dist_sweetalert2_min_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(sweetalert2_dist_sweetalert2_min_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -40924,14 +42209,9 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_toasted__WEBPACK_IMPORTED_MO
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_meta__WEBPACK_IMPORTED_MODULE_1__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_sweetalert2__WEBPACK_IMPORTED_MODULE_8__["default"]);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__["InertiaProgress"].init({
-  // The delay after which the progress bar will
-  // appear during navigation, in milliseconds.
   delay: 250,
-  // The color of the progress bar.
   color: '#ea4335',
-  // Whether to include the default NProgress styles.
   includeCSS: true,
-  // Whether the NProgress spinner will be shown.
   showSpinner: false
 });
 var app = document.getElementById('app');
@@ -40952,7 +42232,8 @@ new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
         }
       }
     });
-  }
+  },
+  store: _store__WEBPACK_IMPORTED_MODULE_10__["default"]
 }).$mount(app);
 
 /***/ }),
@@ -40992,6 +42273,43 @@ window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/store/index.js":
+/*!*************************************!*\
+  !*** ./resources/js/store/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+
+
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
+  state: {
+    sideBarOpen: false
+  },
+  getters: {
+    sideBarOpen: function sideBarOpen(state) {
+      return state.sideBarOpen;
+    }
+  },
+  mutations: {
+    toggleSidebar: function toggleSidebar(state) {
+      state.sideBarOpen = !state.sideBarOpen;
+    }
+  },
+  actions: {
+    toggleSidebar: function toggleSidebar(context) {
+      context.commit('toggleSidebar');
+    }
+  }
+}));
 
 /***/ }),
 

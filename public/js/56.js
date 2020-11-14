@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[56],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,6 +11,12 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
 /* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -59,10 +65,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        social_facebook: this.settings.social_facebook,
-        social_twitter: this.settings.social_twitter,
-        social_instagram: this.settings.social_instagram,
-        social_linkedin: this.settings.social_linkedin
+        site_name: this.settings.site_name,
+        site_title: this.settings.site_title,
+        default_email_address: this.settings.default_email_address,
+        currency_code: this.settings.currency_code,
+        currency_symbol: this.settings.currency_symbol
       }
     };
   },
@@ -70,10 +77,11 @@ __webpack_require__.r(__webpack_exports__);
     update: function update() {
       var self = this;
       var formData = new FormData();
-      formData.append("social_facebook", self.form.social_facebook || '');
-      formData.append("social_twitter", self.form.social_twitter || '');
-      formData.append("social_instagram", self.form.social_instagram || '');
-      formData.append("social_linkedin", self.form.social_linkedin || '');
+      formData.append("site_name", self.form.site_name || '');
+      formData.append("site_title", self.form.site_title || '');
+      formData.append("default_email_address", self.form.default_email_address || '');
+      formData.append("currency_code", self.form.currency_code || '');
+      formData.append("currency_symbol", self.form.currency_symbol || '');
       formData.append('_method', 'put');
       self.$emit('form-is-updated', formData);
     }
@@ -173,10 +181,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&":
-/*!***************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c& ***!
-  \***************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -200,7 +208,7 @@ var render = function() {
         }
       },
       [
-        _c("h3", { staticClass: "tile-title" }, [_vm._v("Social Links")]),
+        _c("h3", { staticClass: "tile-title" }, [_vm._v("General Settings")]),
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
@@ -211,64 +219,81 @@ var render = function() {
             _c("text-input", {
               staticClass: "form-group",
               attrs: {
-                error: _vm.$page.errors.social_facebook,
-                label: "Facebook Profile",
-                placeholder: "Enter facebook profile link"
+                error: _vm.$page.errors.site_name,
+                label: "Site Name",
+                placeholder: "Enter site name"
               },
               model: {
-                value: _vm.form.social_facebook,
+                value: _vm.form.site_name,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "social_facebook", $$v)
+                  _vm.$set(_vm.form, "site_name", $$v)
                 },
-                expression: "form.social_facebook"
+                expression: "form.site_name"
               }
             }),
             _vm._v(" "),
             _c("text-input", {
               staticClass: "form-group",
               attrs: {
-                error: _vm.$page.errors.social_twitter,
-                label: "Twitter Profile",
-                placeholder: "Enter twitter profile link"
+                error: _vm.$page.errors.site_title,
+                label: "Site Title",
+                placeholder: "Enter site title"
               },
               model: {
-                value: _vm.form.social_twitter,
+                value: _vm.form.site_title,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "social_twitter", $$v)
+                  _vm.$set(_vm.form, "site_title", $$v)
                 },
-                expression: "form.social_twitter"
+                expression: "form.site_title"
               }
             }),
             _vm._v(" "),
             _c("text-input", {
               staticClass: "form-group",
               attrs: {
-                error: _vm.$page.errors.social_instagram,
-                label: "Instagram Profile",
-                placeholder: "Enter instagram profile link"
+                type: "email",
+                error: _vm.$page.errors.default_email_address,
+                label: "Default Email Address",
+                placeholder: "Enter store default email address"
               },
               model: {
-                value: _vm.form.social_instagram,
+                value: _vm.form.default_email_address,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "social_instagram", $$v)
+                  _vm.$set(_vm.form, "default_email_address", $$v)
                 },
-                expression: "form.social_instagram"
+                expression: "form.default_email_address"
               }
             }),
             _vm._v(" "),
             _c("text-input", {
               staticClass: "form-group",
               attrs: {
-                error: _vm.$page.errors.social_linkedin,
-                label: "LinkedIn Profile",
-                placeholder: "Enter linkedin profile link"
+                error: _vm.$page.errors.currency_code,
+                label: "Currency Code",
+                placeholder: "Enter store currency code"
               },
               model: {
-                value: _vm.form.social_linkedin,
+                value: _vm.form.currency_code,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "social_linkedin", $$v)
+                  _vm.$set(_vm.form, "currency_code", $$v)
                 },
-                expression: "form.social_linkedin"
+                expression: "form.currency_code"
+              }
+            }),
+            _vm._v(" "),
+            _c("text-input", {
+              staticClass: "form-group",
+              attrs: {
+                error: _vm.$page.errors.currency_symbol,
+                label: "Currency Symbol",
+                placeholder: "Enter store currency symbol"
+              },
+              model: {
+                value: _vm.form.currency_symbol,
+                callback: function($$v) {
+                  _vm.$set(_vm.form, "currency_symbol", $$v)
+                },
+                expression: "form.currency_symbol"
               }
             })
           ],
@@ -288,6 +313,18 @@ var render = function() {
                     attrs: { loading: _vm.sending, type: "submit" }
                   },
                   [_vm._v("Update Settings")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass: "btn btn-danger",
+                    attrs: { href: _vm.$route("admin.dashboard") }
+                  },
+                  [
+                    _c("i", { staticClass: "fa fa-fw fa-lg fa-arrow-left" }),
+                    _vm._v("Go Back")
+                  ]
                 )
               ],
               1
@@ -517,17 +554,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue":
-/*!**************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue ***!
-  \**************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/GeneralForm.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/GeneralForm.vue ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SocialLinksForm.vue?vue&type=template&id=45cd202c& */ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&");
-/* harmony import */ var _SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SocialLinksForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GeneralForm.vue?vue&type=template&id=45b79986& */ "./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986&");
+/* harmony import */ var _GeneralForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GeneralForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -537,9 +574,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _GeneralForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -549,38 +586,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/settings/components/SocialLinksForm.vue"
+component.options.__file = "resources/js/Pages/Admin/settings/components/GeneralForm.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SocialLinksForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GeneralForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./GeneralForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GeneralForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986& ***!
+  \*****************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SocialLinksForm.vue?vue&type=template&id=45cd202c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./GeneralForm.vue?vue&type=template&id=45b79986& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/GeneralForm.vue?vue&type=template&id=45b79986&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GeneralForm_vue_vue_type_template_id_45b79986___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

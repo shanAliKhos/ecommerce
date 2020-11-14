@@ -9,6 +9,8 @@ import Toasted from 'vue-toasted';
 import 'animate.css/animate.min.css'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import store from './store'
+   
  
 // Vue.config.productionTip = false 
 Vue.mixin({ methods: { route: window.route } })
@@ -23,19 +25,13 @@ Vue.use(Toasted, {
 })
 Vue.use(VueMeta) 
 Vue.use(VueSweetalert2);
+ 
+ 
 
-InertiaProgress.init({
-  // The delay after which the progress bar will
-  // appear during navigation, in milliseconds.
-  delay: 250,
-
-  // The color of the progress bar.
-  color: '#ea4335',
-
-  // Whether to include the default NProgress styles.
+InertiaProgress.init({ 
+  delay: 250, 
+  color: '#ea4335', 
   includeCSS: true,
-
-  // Whether the NProgress spinner will be shown.
   showSpinner: false,
 })
 
@@ -51,4 +47,5 @@ new Vue({
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
     },
   }),
+  store,
 }).$mount(app) 
