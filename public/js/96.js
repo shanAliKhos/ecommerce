@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[96],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -18,70 +18,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      CartTotalPricess: 0
-    };
-  },
-  methods: {
-    store: function store(Item) {
-      var self = this;
-      self.$inertia.post(route('cart.store'), Item, {
-        preserveState: true,
-        preserveScroll: true
-      });
-    },
-    update: function update(Items) {
-      self = this;
-      this.$inertia.put(route('cart.update', 'update'), Items, {
-        preserveState: true,
-        preserveScroll: true
-      });
-    },
-    destory: function destory(Index) {
-      self = this;
-      self.$inertia["delete"](route('cart.destroy', Index), {
-        preserveState: true,
-        preserveScroll: true
-      });
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    self = this;
-    this.$root.$on('Add-To-Cart', function (Item) {
-      _this.store(Item);
-    });
-    this.$root.$on('destory-this-item', function (Item) {
-      _this.destory(Item);
-    });
-    this.$root.$on('update-cart', function (Items) {
-      _this.update(Items);
-    });
-  },
   computed: {
-    CountCartItems: function CountCartItems() {
-      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
-      }, 0) : 0;
-      return Qty;
-    },
-    CartTotalPrice: function CartTotalPrice() {
-      var sum = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-        return TotalPrice + Item.Qty * Item.price;
-      }, 0) : 0;
-      return sum;
+    BreadCrumbImg: function BreadCrumbImg() {
+      var img = '/img/breadcrumb.jpg';
+      return img;
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&":
 /*!***********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746& ***!
   \***********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -94,48 +53,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "header__cart" }, [
-    _c("ul", [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "inertia-link",
-            { attrs: { href: _vm.$route("cart.show", "show") } },
-            [
-              _c("i", { staticClass: "fa fa-shopping-bag " }),
+  return _c(
+    "section",
+    {
+      staticClass: "breadcrumb-section set-bg",
+      style:
+        "background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('" +
+        _vm.BreadCrumbImg +
+        "');"
+    },
+    [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12 text-center" }, [
+            _c("div", { staticClass: "breadcrumb__text" }, [
+              _c("h2", [_vm._t("CurrentPage")], 2),
               _vm._v(" "),
-              _c("span", { attrs: { syle: "font-size:20px;" } }, [
-                _vm._v(_vm._s(_vm.CountCartItems))
-              ])
-            ]
-          )
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "header__cart__price" }, [
-      _c("span", [_vm._v(" item: $" + _vm._s(_vm.CartTotalPrice))])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fa fa-heart" }),
-        _vm._v(" "),
-        _c("span", [_vm._v("0")])
+              _c(
+                "div",
+                { staticClass: "breadcrumb__option" },
+                [
+                  _c("inertia-link", { attrs: { href: "/" } }, [
+                    _vm._v("Home")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [_vm._t("CurrentPage")], 2)
+                ],
+                1
+              )
+            ])
+          ])
+        ])
       ])
-    ])
-  }
-]
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -254,17 +207,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue":
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue":
 /*!**********************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue ***!
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue ***!
   \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderCart.vue?vue&type=template&id=cf250a72& */ "./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72&");
-/* harmony import */ var _HeaderCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeaderCart.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js&");
+/* harmony import */ var _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BreadCrumb.vue?vue&type=template&id=70228746& */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&");
+/* harmony import */ var _BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BreadCrumb.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -274,9 +227,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _HeaderCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -286,38 +239,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./HeaderCart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./BreadCrumb.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72&":
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&":
 /*!*****************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72& ***!
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746& ***!
   \*****************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./HeaderCart.vue?vue&type=template&id=cf250a72& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/HeaderCart.vue?vue&type=template&id=cf250a72&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./BreadCrumb.vue?vue&type=template&id=70228746& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderCart_vue_vue_type_template_id_cf250a72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

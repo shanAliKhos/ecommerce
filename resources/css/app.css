@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-/* @import url('https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'); */
+@import url('https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';

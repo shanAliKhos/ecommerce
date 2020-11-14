@@ -1,24 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[144],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _shared_components_BreadCrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/components/BreadCrumb */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue");
 //
 //
 //
@@ -219,16 +211,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'Blog-details'
-  },
-  computed: {
-    BlogDetailsHero: function BlogDetailsHero() {
-      var img = '/img/blog/details/details-hero.jpg';
-      return img;
-    }
+  components: {
+    BreadCrumb: _shared_components_BreadCrumb__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -271,23 +258,43 @@ __webpack_require__.r(__webpack_exports__);
     AppHeader: _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
     Flash: _Shared_Flash__WEBPACK_IMPORTED_MODULE_2__["default"]
-  },
-  data: function data() {
-    return {
-      categories: false,
-      subcategory: false
-    };
-  },
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
   computed: {
-    path: function path() {
-      return window.location.pathname;
-    }
-  },
-  methods: {
-    logout: function logout() {
-      axios.post('/logout').then(function (response) {
-        window.location = '/';
-      });
+    BreadCrumbImg: function BreadCrumbImg() {
+      var img = '/img/breadcrumb.jpg';
+      return img;
     }
   }
 });
@@ -340,10 +347,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
-/*!*******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
-  \*******************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -363,10 +370,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("section", { staticClass: "blog-details spad" }, [
+      _c("section", { staticClass: "blog spad" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4 col-md-5 order-md-1 order-2" }, [
+            _c("div", { staticClass: "col-lg-4 col-md-5" }, [
               _c("div", { staticClass: "blog__sidebar" }, [
                 _c("div", { staticClass: "blog__sidebar__search" }, [
                   _c("form", { attrs: { action: "#" } }, [
@@ -542,215 +549,296 @@ var staticRenderFns = [
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-8 col-md-7 order-md-1 order-1" }, [
-              _c("div", { staticClass: "blog__details__text" }, [
-                _c("h2", [
-                  _vm._v("The Moment You Need To Remove Garlic From The Menu")
-                ]),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: { src: "img/blog/details/details-pic.jpg", alt: "" }
-                }),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet\n                            dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit\n                            aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur\n                            sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada.\n                            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.\n                            Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis\n                            quis ac lectus. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada\n                            feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("h3", [
-                  _vm._v(
-                    "The corner window forms a place within a place that is a resting point within the large\n                            space."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "The study area is located at the back with a view of the vast nature. Together with the other\n                            buildings, a congruent story has been managed in which the whole has a reinforcing effect on\n                            the components. The use of materials seeks connection to the main house, the adjacent\n                            stables"
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "blog__details__content" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "blog__details__author" }, [
-                      _c("div", { staticClass: "blog__details__author__pic" }, [
-                        _c("img", {
-                          attrs: {
-                            src: "img/blog/details/details-author.jpg",
-                            alt: ""
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "blog__details__author__text" },
-                        [
-                          _c("h6", [_vm._v("Michael Scofield")]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("Admin")])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "blog__details__widget" }, [
+            _c("div", { staticClass: "col-lg-8 col-md-7" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-2.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
                       _c("ul", [
                         _c("li", [
-                          _c("span", [_vm._v("Categories:")]),
-                          _vm._v(" Food")
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
                         ]),
                         _vm._v(" "),
                         _c("li", [
-                          _c("span", [_vm._v("Tags:")]),
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("6 ways to prepare breakfast for 30")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-3.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Visit the clean farm in the US")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-1.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Cooking tips make cooking simple")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-4.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Cooking tips make cooking simple")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-4.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
                           _vm._v(
-                            " All, Trending, Cooking, Healthy Food, Life Style"
+                            "The Moment You Need To Remove Garlic From The Menu"
                           )
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "blog__details__social" }, [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-facebook" })
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6" }, [
+                  _c("div", { staticClass: "blog__item" }, [
+                    _c("div", { staticClass: "blog__item__pic" }, [
+                      _c("img", {
+                        attrs: { src: "img/blog/blog-6.jpg", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "blog__item__text" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-calendar-o" }),
+                          _vm._v(" May 4,2019")
                         ]),
                         _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-twitter" })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-google-plus" })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-linkedin" })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-envelope" })
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-comment-o" }),
+                          _vm._v(" 5")
                         ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Cooking tips make cooking simple")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam\n                                        quaerat "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "blog__btn", attrs: { href: "#" } },
+                        [
+                          _vm._v("READ MORE "),
+                          _c("span", { staticClass: "arrow_right" })
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-12" }, [
+                  _c(
+                    "div",
+                    { staticClass: "product__pagination blog__pagination" },
+                    [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-long-arrow-right" })
                       ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "related-blog spad" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "section-title related-blog-title" }, [
-                _c("h2", [_vm._v("Post You May Like")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
-              _c("div", { staticClass: "blog__item" }, [
-                _c("div", { staticClass: "blog__item__pic" }, [
-                  _c("img", { attrs: { src: "img/blog/blog-1.jpg", alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "blog__item__text" }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-calendar-o" }),
-                      _vm._v(" May 4,2019")
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-comment-o" }),
-                      _vm._v(" 5")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("h5", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("Cooking tips make cooking simple")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
-                    )
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
-              _c("div", { staticClass: "blog__item" }, [
-                _c("div", { staticClass: "blog__item__pic" }, [
-                  _c("img", { attrs: { src: "img/blog/blog-2.jpg", alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "blog__item__text" }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-calendar-o" }),
-                      _vm._v(" May 4,2019")
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-comment-o" }),
-                      _vm._v(" 5")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("h5", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("6 ways to prepare breakfast for 30")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
-                    )
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-6" }, [
-              _c("div", { staticClass: "blog__item" }, [
-                _c("div", { staticClass: "blog__item__pic" }, [
-                  _c("img", { attrs: { src: "img/blog/blog-3.jpg", alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "blog__item__text" }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-calendar-o" }),
-                      _vm._v(" May 4,2019")
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("i", { staticClass: "fa fa-comment-o" }),
-                      _vm._v(" 5")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("h5", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("Visit the clean farm in the US")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat "
-                    )
-                  ])
+                    ]
+                  )
                 ])
               ])
             ])
@@ -793,6 +881,63 @@ var render = function() {
       _c("portal-target", { attrs: { name: "modal", multiple: "" } })
     ],
     1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    {
+      staticClass: "breadcrumb-section set-bg",
+      style:
+        "background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('" +
+        _vm.BreadCrumbImg +
+        "');"
+    },
+    [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12 text-center" }, [
+            _c("div", { staticClass: "breadcrumb__text" }, [
+              _c("h2", [_vm._t("CurrentPage")], 2),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "breadcrumb__option" },
+                [
+                  _c("inertia-link", { attrs: { href: "/" } }, [
+                    _vm._v("Home")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [_vm._t("CurrentPage")], 2)
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ])
+    ]
   )
 }
 var staticRenderFns = []
@@ -938,17 +1083,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue":
-/*!******************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue ***!
-  \******************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
-/* harmony import */ var _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Blog.vue?vue&type=template&id=491133b4& */ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&");
+/* harmony import */ var _Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Blog.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -958,9 +1103,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -970,38 +1115,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/blog/Blog.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Blog.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4& ***!
+  \**********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Blog.vue?vue&type=template&id=491133b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -1071,6 +1216,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppLayout_vue_vue_type_template_id_0b5ac64c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppLayout_vue_vue_type_template_id_0b5ac64c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BreadCrumb.vue?vue&type=template&id=70228746& */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&");
+/* harmony import */ var _BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BreadCrumb.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./BreadCrumb.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./BreadCrumb.vue?vue&type=template&id=70228746& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/components/BreadCrumb.vue?vue&type=template&id=70228746&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BreadCrumb_vue_vue_type_template_id_70228746___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
