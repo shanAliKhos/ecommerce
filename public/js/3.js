@@ -494,7 +494,9 @@ var render = function() {
             }
           })
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm._m(3)
     ]),
     _vm._v(" "),
     _c(
@@ -535,9 +537,9 @@ var render = function() {
             ),
             _vm._v(" "),
             _c("ul", [
-              _vm._m(3),
-              _vm._v(" "),
               _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
               _vm._v(" "),
               _c(
                 "li",
@@ -648,7 +650,7 @@ var render = function() {
                                 "mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height",
                               class: { active: _vm.subcategory }
                             },
-                            [_vm._m(5)]
+                            [_vm._m(6)]
                           )
                         ]
                       ),
@@ -708,7 +710,7 @@ var render = function() {
                                 "mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height",
                               class: { active: _vm.subcategory }
                             },
-                            [_vm._m(6)]
+                            [_vm._m(7)]
                           )
                         ]
                       ),
@@ -768,7 +770,7 @@ var render = function() {
                                 "mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height",
                               class: { active: _vm.subcategory }
                             },
-                            [_vm._m(7)]
+                            [_vm._m(8)]
                           )
                         ]
                       )
@@ -777,15 +779,15 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(8),
-              _vm._v(" "),
               _vm._m(9),
               _vm._v(" "),
               _vm._m(10),
               _vm._v(" "),
               _vm._m(11),
               _vm._v(" "),
-              _vm._m(12)
+              _vm._m(12),
+              _vm._v(" "),
+              _vm._m(13)
             ])
           ]
         )
@@ -934,6 +936,403 @@ var staticRenderFns = [
             })
           ]
         )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-center lg:pt-8" }, [
+      _c("ul", { staticClass: "list-reset flex items-center" }, [
+        _c("li", { staticClass: " mr-10 hidden lg:block" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "block text-lg font-hkregular hover:font-hkbold   transition-all text-secondary hover:text-primary border-b-2 border-white hover:border-primary px-2",
+              attrs: { href: "/" }
+            },
+            [_vm._v("Home")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: " mr-10 hidden lg:block" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "block text-lg font-hkregular hover:font-hkbold   transition-all text-secondary hover:text-primary border-b-2 border-white hover:border-primary px-2",
+              attrs: { href: "/about" }
+            },
+            [_vm._v("About")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mr-10 hidden lg:block group" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "border-b-2 border-white transition-colors group-hover:border-primary flex items-center"
+            },
+            [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "cursor-pointer text-lg font-hkregular group-hover:font-hkbold text-secondary group-hover:text-primary px-2 transition-all"
+                },
+                [_vm._v("Collections")]
+              ),
+              _vm._v(" "),
+              _c("i", {
+                staticClass:
+                  "bx bx-chevron-down text-secondary group-hover:text-primary pl-2 px-2 transition-colors"
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "pt-10 absolute mt-40 top-0 left-0 right-0 -z-1 group-hover:z-50 w-2/3 mx-auto"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "opacity-0 pointer-events-none  group-hover:opacity-100 group-hover:pointer-events-auto   transition-all flex bg-white shadow-lg p-8 rounded-b relative "
+                },
+                [
+                  _c("div", { staticClass: "flex-1 relative z-20" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "font-hkbold text-base text-secondary mb-2"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                                    Man\r\n                                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Boots")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Blutcher\r\n                                            Boot"
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Chelsea\r\n                                            Boot"
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Chukka\r\n                                            Boot"
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Dress\r\n                                            Boot"
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Work\r\n                                            Boot"
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex-1 relative z-20" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "font-hkbold text-base text-secondary mb-2"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                                    Woman\r\n                                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Accessories")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Belts")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Caps")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Laces")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Socks")]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex-1 relative z-20" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "font-hkbold text-base text-secondary mb-2"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                                    Kids\r\n                                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Shoes")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [
+                            _vm._v(
+                              "Derby\r\n                                            Shoes"
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Belts")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Caps")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Laces")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "text-sm font-hkregular text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter",
+                            attrs: { href: "/collection-grid" }
+                          },
+                          [_vm._v("Socks")]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex-1" }, [
+                    _c("div", {
+                      staticClass:
+                        "z-0 bg-contain bg-right-bottom bg-no-repeat absolute inset-0",
+                      staticStyle: {
+                        "background-image": "url(./img/bg-mega-menu.png)"
+                      }
+                    })
+                  ])
+                ]
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: " mr-10 hidden lg:block" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "block text-lg font-hkregular hover:font-hkbold   transition-all text-secondary hover:text-primary border-b-2 border-white hover:border-primary px-2",
+              attrs: { href: "/blog" }
+            },
+            [_vm._v("Blog")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: " mr-10 hidden lg:block" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "block text-lg font-hkregular hover:font-hkbold   transition-all text-secondary hover:text-primary border-b-2 border-white hover:border-primary px-2",
+              attrs: { href: "/contact#faq" }
+            },
+            [_vm._v("FAQ")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: " mr-10 hidden lg:block" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "block text-lg font-hkregular hover:font-hkbold   transition-all text-secondary hover:text-primary border-b-2 border-white hover:border-primary px-2",
+              attrs: { href: "/contact" }
+            },
+            [_vm._v("Contact")]
+          )
+        ])
       ])
     ])
   },

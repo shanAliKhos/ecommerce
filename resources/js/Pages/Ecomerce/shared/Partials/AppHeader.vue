@@ -50,7 +50,7 @@
                 <i class="bx bx-menu text-primary text-3xl" @click="mobileMenu = true"></i>
             </div>
         </div>
-        <!-- <div class="flex justify-center lg:pt-8">
+        <div class="flex justify-center lg:pt-8">
             <ul class="list-reset flex items-center">
 
 
@@ -230,7 +230,7 @@
 
 
             </ul>
-        </div> -->
+        </div>
     </div>
 
     <div class="fixed inset-0 flex z-50 justify-end opacity-0 pointer-events-none   transition-all"
