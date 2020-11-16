@@ -8,12 +8,26 @@ use Auth;
 
 class HomeController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');  
+    }    
+
+
     protected function redirectTo(Request $request){
-        $User = Auth()->User();
-        if($User->is_admin){
-            return redirect(RouteServiceProvider::ADMIN);
-        }else{
+        $Auth = Auth();  
+        
+        if($Auth->check()){
+
+            if($Auth->user()->is_admin){
+            
+                return redirect(RouteServiceProvider::ADMIN);
+            } 
+
             return redirect(RouteServiceProvider::USER); 
-        }
+        } 
+
     }
 }

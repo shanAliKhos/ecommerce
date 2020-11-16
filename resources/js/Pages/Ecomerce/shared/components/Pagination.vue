@@ -1,34 +1,22 @@
 <template>
-    <div class="product__pagination" v-if="links.length">
-        <inertia-link v-for="(link, linkindex) in links" 
-        :key="linkindex" 
-        v-if="link.url"
-        :href="link.url"
-        :class="{'active':link.active}"
-        class="transition duration-500 ease-in-out  transform hover:-translate-x-1 hover:scale-100 "
-        preserve-scroll
-
-        >
-        {{link.label}}
-        </inertia-link> 
-    </div> 
+<div class="pb-16 flex justify-center mx-auto" v-if="Links.length"> 
+    <pagination-link v-for="(Link, Linkindex) in Links" :key="Linkindex"  :Link="Link"></pagination-link> 
+</div>     
 </template>
 <script>
+import PaginationLink from './PaginationLink'
 export default {
-    props:['links'],
+    props:['Links'],
+    components: {
+        PaginationLink,
+    },
+    
 }
 </script>
-<style scoped> 
- 
-.product__pagination a, .blog__pagination a {
-    width: unset;
-    padding: 10px;
-    line-height: 0.5;
-}
-
-.active {
-    background: #7fad39;
-    color: #ffffff !important;
-}
-    
-</style>
+<!-- <div class="pb-16 flex justify-center mx-auto">
+    <span class="font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer">Previous</span>
+    <span class="font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer">1</span>
+    <span class="font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer">2</span>
+    <span class="font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer">3</span>
+    <span class=" font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer">Next</span>
+</div> -->

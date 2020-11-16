@@ -21,14 +21,15 @@ class CheckOutController extends Controller
         $CartItems = session()->get('CartItems'); 
         $stripekey = Setting::get('stripe_key');
         if(!$CartItems){
-            return redirect()->route('shop')->with('info','Okay ! Add some items to cart');
+            return redirect()->route('shop')->with('info','Add some items to cart');
         } 
  
-        return Inertia::render('Ecomerce/checkout/Checkout',compact('stripekey'));        
+        return Inertia::render('Ecomerce/checkout/CustomerInformation',compact('stripekey'));        
     }
 
     public function checkout(Request $request)
     {          
+        dd($request->all());
         $CartItems = session()->get('CartItems'); 
 
         if(!$CartItems){
@@ -36,13 +37,7 @@ class CheckOutController extends Controller
         }
         
         $this->validate($request,[ 
-            "email" => "required|email:rfc,dns",
-            "name_on_card" => "required",
-            "address" => "required",
-            "city" => "required",
-            "postal_code" => "required",
-            "country" => "required",
-            "phone" => "required",
+            "NameOnCard" => "required",
             "stripeToken" => "required",
         ]); 
 

@@ -6,13 +6,36 @@
             <span class=" ml-auto p-2" @click="$emit('mobile-menu-is-disabled')"><i
                     class="bx bx-x text-secondary text-3xl"></i></span>
             <ul> 
-                <li>
-                    <a href="/" class="p-3 uppercase text-secondary border-t border-grey-darker block">Home</a>
-                </li>  
-                <li>
-                    <a href="/about"
-                        class="p-3 uppercase text-secondary border-t border-grey-darker block">About</a>
-                </li> 
+                <MobileNavLink 
+                    :href="route('welcome')" 
+                    :active="$page.currentRouteName == 'welcome'" 
+                >Home</MobileNavLink>
+
+                <MobileNavLink  
+                    :href="route('shop.index')" 
+                    :active="$page.currentRouteName == 'shop.index'" 
+                >Shop</MobileNavLink>                     
+
+                <MobileNavLink 
+                    :href="route('blog')" 
+                    :active="$page.currentRouteName == 'blog'" 
+                >Blog</MobileNavLink>                    
+
+                <MobileNavLink 
+                    :href="route('blog.details')" 
+                    :active="$page.currentRouteName == 'blog.details'" 
+                >Blog Details</MobileNavLink>             
+
+                <MobileNavLink 
+                    :href="route('contact')" 
+                    :active="$page.currentRouteName == 'contact'"
+                >Contact</MobileNavLink>              
+
+                <MobileNavLink 
+                    :href="route('dashboard')" 
+                    :active="$page.currentRouteName == 'dashboard'"
+                >Account</MobileNavLink>              
+                <!--  
                 <li class="flex justify-between flex-col" x-data="{ categories: false }"
                     @blur="categories=false ">
                     <div class="flex justify-between border-t border-grey-darker">
@@ -177,15 +200,18 @@
                 <li>
                     <a href="/cart"
                         class="p-3 uppercase text-secondary border-t border-b border-grey-darker block">Cart</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>   
 </template>
 <script>
+import MobileNavLink from './MobileNavLink'
 export default {
     props:['mobileMenu','categories','subcategory'],
- 
+    components:{
+        MobileNavLink
+    }, 
 }
 </script>
  

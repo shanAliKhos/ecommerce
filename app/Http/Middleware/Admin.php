@@ -17,14 +17,10 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     { 
-        if( Auth::check() && $request->User()->is_admin ){
-
+        if( Auth::check() && $request->user()->is_admin ){
             return $next($request);
-
         }else{
-
             return abort('404');
-
         }
     }
 

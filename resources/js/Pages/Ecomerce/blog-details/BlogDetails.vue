@@ -1,222 +1,297 @@
 <template>
-    <div>
-        <!-- Blog Details Hero Begin -->
-        <!-- <section class="blog-details-hero set-bg"  
-        :style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + BlogDetailsHero + '\');'">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="blog__details__hero__text">
-                            <h2>The Moment You Need To Remove Garlic From The Menu</h2>
-                            <ul>
-                                <li>By Michael Scofield</li>
-                                <li>January 14, 2019</li>
-                                <li>8 Comments</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Blog Details Hero End -->
+    <div class="container">
+        <div class="bg-no-repeat bg-cover bg-center w-full h-64 sm:h-76 md:h-90 xl:h-96"
+            style="background-image:url(./img/blog-hero.jpg)">
+        </div>
 
-        <!-- Blog Details Section Begin -->
-        <section class="blog-details spad">
-            <div class="container">
-                <div class="row">               
-                    <div class="col-lg-4 col-md-5 order-md-1 order-2">
-                        <div class="blog__sidebar">
-                            <div class="blog__sidebar__search">
-                                <form action="#">
-                                    <input type="text" placeholder="Search...">
-                                    <button type="submit"><span class="icon_search"></span></button>
-                                </form>
-                            </div>
-                            <div class="blog__sidebar__item">
-                                <h4>Categories</h4>
-                                <ul>
-                                    <li><a href="#">All</a></li>
-                                    <li><a href="#">Beauty (20)</a></li>
-                                    <li><a href="#">Food (5)</a></li>
-                                    <li><a href="#">Life Style (9)</a></li>
-                                    <li><a href="#">Travel (10)</a></li>
-                                </ul>
-                            </div>
-                            <div class="blog__sidebar__item">
-                                <h4>Recent News</h4>
-                                <div class="blog__sidebar__recent">
-                                    <a href="#" class="blog__sidebar__recent__item">
-                                        <div class="blog__sidebar__recent__item__pic">
-                                            <img src="img/blog/sidebar/sr-1.jpg" alt="">
-                                        </div>
-                                        <div class="blog__sidebar__recent__item__text">
-                                            <h6>09 Kinds Of Vegetables<br /> Protect The Liver</h6>
-                                            <span>MAR 05, 2019</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="blog__sidebar__recent__item">
-                                        <div class="blog__sidebar__recent__item__pic">
-                                            <img src="img/blog/sidebar/sr-2.jpg" alt="">
-                                        </div>
-                                        <div class="blog__sidebar__recent__item__text">
-                                            <h6>Tips You To Balance<br /> Nutrition Meal Day</h6>
-                                            <span>MAR 05, 2019</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="blog__sidebar__recent__item">
-                                        <div class="blog__sidebar__recent__item__pic">
-                                            <img src="img/blog/sidebar/sr-3.jpg" alt="">
-                                        </div>
-                                        <div class="blog__sidebar__recent__item__text">
-                                            <h6>4 Principles Help You Lose <br />Weight With Vegetables</h6>
-                                            <span>MAR 05, 2019</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="blog__sidebar__item">
-                                <h4>Search By</h4>
-                                <div class="blog__sidebar__item__tags">
-                                    <a href="#">Apple</a>
-                                    <a href="#">Beauty</a>
-                                    <a href="#">Vegetables</a>
-                                    <a href="#">Fruit</a>
-                                    <a href="#">Healthy Food</a>
-                                    <a href="#">Lifestyle</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-7 order-md-1 order-1">
-                        <div class="blog__details__text">
-                            <h2>The Moment You Need To Remove Garlic From The Menu</h2>
-                            <img src="img/blog/details/details-pic.jpg" alt="">
-                            <p>Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                                dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit
-                                aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur
-                                sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada.
-                                Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.
-                                Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis
-                                quis ac lectus. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada
-                                feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
-                            <h3>The corner window forms a place within a place that is a resting point within the large
-                                space.</h3>
-                            <p>The study area is located at the back with a view of the vast nature. Together with the other
-                                buildings, a congruent story has been managed in which the whole has a reinforcing effect on
-                                the components. The use of materials seeks connection to the main house, the adjacent
-                                stables</p>
-                        </div>
-                        <div class="blog__details__content">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="blog__details__author">
-                                        <div class="blog__details__author__pic">
-                                            <img src="img/blog/details/details-author.jpg" alt="">
-                                        </div>
-                                        <div class="blog__details__author__text">
-                                            <h6>Michael Scofield</h6>
-                                            <span>Admin</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="blog__details__widget">
-                                        <ul>
-                                            <li><span>Categories:</span> Food</li>
-                                            <li><span>Tags:</span> All, Trending, Cooking, Healthy Food, Life Style</li>
-                                        </ul>
-                                        <div class="blog__details__social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-envelope"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="flex flex-col sm:flex-row">
+            <div class="bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 -mt-10 ml-5 md:ml-8"
+                style="background-image:url(./img/blog-author.jpg)">
             </div>
-        </section>
-        <!-- Blog Details Section End -->
+            <div
+                class="flex justify-center items-center sm:pl-10 md:pl-12 py-3 sm:py-4 md:py-6 font-hkregular text-base text-secondary">
+                <span>By
+                    <span class="font-hkbold">Abdullah</span></span>
+                <span class="px-3">|</span>
+                <span>03 May 2019</span>
+            </div>
+            <div
+                class="flex sm:flex-col md:flex-row justify-center items-center sm:pl-10 md:pl-16 py-3 sm:py-4 md:py-6">
+                <span class="font-hkbold text-base text-secondary">678</span>
+                <span class="font-hkregular text-base text-secondary pl-3 sm:pl-0 md:pl-3">Share</span>
+            </div>
+            <div
+                class="flex sm:flex-col md:flex-row justify-center items-center sm:pl-10 md:pl-16 py-3 sm:py-4 md:py-6">
+                <span class="font-hkbold text-base text-secondary">30</span>
+                <span class="font-hkregular text-base text-secondary pl-3 sm:pl-3">Comments</span>
+            </div>
+        </div>
 
-        <!-- Related Blog Section Begin -->
-        <section class="related-blog spad">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title related-blog-title">
-                            <h2>Post You May Like</h2>
+        <div class="border-b border-grey-dark">
+            <div class="xl:w-11/12 pt-10 pb-20 flex flex-col lg:flex-row justify-between">
+                <div class="lg:w-2/3 text-center sm:text-left content">
+                    <h1 class="pb-3 md:pb-5">The 3 Golden Rules Professional Graphic Designers</h1>
+                    <div class="content">
+                        <p>Affiliate marketing is the latest trend online. With so
+                            many products to sell and services to offer, sometimes
+                            displaying it on one site isn’t enough. Thus,
+                            advertisers or merchants need affiliates, some sites
+                            which are willing to display ads for a particular cost.
+                            On the other hand, this is an opportunity for potential
+                            affiliates to earn extra income online.</p>
+
+                        <p>The easy way to earn from affiliate marketing is to join
+                            an affiliate marketing network. Joining poses several
+                            benefits to both the advertiser and the affiliate. For
+                            the advertisers, this opens a new door of opportunity to
+                            get more leads and sales, get higher return on
+                            investment and pay only for results. Affiliate marketing
+                            network lessens the risk of venturing into marketing
+                            without proper management and guidance.</p>
+
+                        <blockquote>"For the affiliates, joining an affiliate
+                            network makes earning money online a whole lot easier.
+                            Instead of going after many merchants for payment, the
+                            affiliate has only one contact"</blockquote>
+
+                        <p>Affiliate marketing will continually grow as the need for
+                            more sales and leads continue. People are beginning to
+                            look at this type of marketing as an important aspect of
+                            pushing websites forward. More and more websites and
+                            online businesses are looking into one day joining the
+                            ever growing affiliate marketing networks.</p>
+
+                        <p>The common affiliate marketing sectors include financial
+                            services, travel, retail, telecoms, mobile, broadband,
+                            gaming and even online gambling. Because of the
+                            increasing affiliate marketing networks also drastically
+                            increased. This means there will be more networks
+                            competing against each other. UK Affiliate Marketing
+                            Networks.</p>
+
+                        <p>Affiliate marketing has become the trend in UK, as well.
+                            There are already a number of UK based affiliate
+                            marketing networks. Who are the major UK affiliate
+                            marketing networks and which one should you join?</p>
+
+                        <p>The major affiliate marketing networks in UK include
+                            advertising.com, affiliatefuture.com,
+                            affiliatemarketing.co.uk, affiliatewindow.com,
+                            affili.net, brandconversions.com, buy.at,
+                            clash-media.co.uk, cj.com, dgmaffiliates.com,
+                            onlinemediagroup.co.uk, paidonresults.com, primeq.co.uk,
+                            silvertap.com, smart-quotes.com, tradedoubler.com,
+                            webgains.com and zanox.com. This is according to
+                            e-consultancy report.</p>
+
+                        <img :src="'./img/blog-image.jpg'" alt="blog image" />
+
+                        <p>These affiliate marketing networks all vies for merchants
+                            and affiliates. They will get an override commission for
+                            the sales so it would be best to have more merchants and
+                            affiliates on the network. The standard override fee is
+                            30% although that still depends on the network. But
+                            whatever network you choose, whether you are a merchant
+                            or an affiliate, as long as you set things up properly,
+                            you will still get your share of higher sales.</p>
+
+                        <p>Affiliate marketing is the latest trend online. With so
+                            many products to sell and services to offer, sometimes
+                            displaying it on one site isn’t enough. Thus,
+                            advertisers or merchants need affiliates, some sites
+                            which are willing to display ads for a particular cost.
+                            On the other hand, this is an opportunity for potential
+                            affiliates to earn extra income online.</p>
+
+                        <p>The easy way to earn from affiliate marketing is to join
+                            an affiliate marketing network. Joining poses several
+                            benefits to both the advertiser and the affiliate. For
+                            the advertisers, this opens a new door of opportunity to
+                            get more leads and sales, get higher return on
+                            investment and pay only for results. Affiliate marketing
+                            network lessens the risk of venturing into marketing
+                            without proper management and guidance.</p>
+
+
+                    </div>
+                </div>
+                <div class="w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0">
+                    <form class="flex items-center w-full mb-16 relative">
+                        <label for="search_form" class="block relative h-0 w-0 overflow-hidden">Search</label>
+                        <input type="text" id="search_form" placeholder="Search the Blog"
+                            class="form-input   transition-all pr-10 text-grey-darkest text-base" />
+                        <button class="focus:outline-none absolute right-0 top-0 mt-4 mr-3"
+                            aria-label="Search button">
+                            <i class="bx bx-search text-2xl"></i>
+                        </button>
+                    </form>
+                    <div class="mb-16 text-center sm:text-left">
+                        <h4
+                            class="font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark">
+                            Recent Post</h4>
+
+                        <a href="/post" class="block mt-8 border-b border-grey-dark pb-5 group">
+                            <p
+                                class="font-hkregular text-secondary text-base transition-colors group-hover:text-primary">
+                                How to make the most of the rest of the year</p>
+                            <p
+                                class="font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4">
+                                02 May 2019</p>
+                        </a>
+
+                        <a href="/post" class="block mt-8 border-b border-grey-dark pb-5 group">
+                            <p
+                                class="font-hkregular text-secondary text-base transition-colors group-hover:text-primary">
+                                3 top OOTD to play with while traveling!</p>
+                            <p
+                                class="font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4">
+                                03 May 2019</p>
+                        </a>
+
+                        <a href="/post" class="block mt-8 border-b border-grey-dark pb-5 group">
+                            <p
+                                class="font-hkregular text-secondary text-base transition-colors group-hover:text-primary">
+                                Looking forward: Planning for the winter’s outfits</p>
+                            <p
+                                class="font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4">
+                                04 May 2019</p>
+                        </a>
+
+                    </div>
+                    <div class="mb-16">
+                        <h4
+                            class="font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left">
+                            Categories</h4>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Stylish Fashion
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">5</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Makeup Tips
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">23</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Traveling Tips
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">45</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Empowerment
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">65</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Instagram
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">32</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Skin Care
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">21</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Hair Care
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">2</span>
+                        </a>
+
+                        <a href="#" class="flex justify-between group pb-4 border-b border-grey-dark mt-8">
+                            <p
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize">
+                                Coming up
+                            </p>
+                            <span
+                                class="font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base">11</span>
+                        </a>
+
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h4
+                            class="font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark">
+                            Follow Us</h4>
+                        <div class="flex justify-center sm:justify-start pt-8">
+
+                            <a href="https://www.google.com"
+                                class="bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center"><i
+                                    class="bx bxl-facebook text-white"></i></a>
+
+                            <a href="https://www.google.com"
+                                class="bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center"><i
+                                    class="bx bxl-twitter text-white"></i></a>
+
+                            <a href="https://www.google.com"
+                                class="bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center"><i
+                                    class="bx bxl-instagram text-white"></i></a>
+
+                            <a href="https://www.google.com"
+                                class="bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center"><i
+                                    class="bx bxl-pinterest text-white"></i></a>
+
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="img/blog/blog-1.jpg" alt="">
-                            </div>
-                            <div class="blog__item__text">
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
-                                </ul>
-                                <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="img/blog/blog-2.jpg" alt="">
-                            </div>
-                            <div class="blog__item__text">
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
-                                </ul>
-                                <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="img/blog/blog-3.jpg" alt="">
-                            </div>
-                            <div class="blog__item__text">
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
-                                </ul>
-                                <h5><a href="#">Visit the clean farm in the US</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-        </section>
-        <!-- Related Blog Section End -->
- 
+        </div>
+
+        <div class="pt-16 pb-16 sm:pb-20">
+            <h2
+                class="font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center">
+                Related Post
+            </h2>
+            <p
+                class="font-hkregular text-secondary-lighter text-base md:text-lg text-center pb-5 sm:pb-12 md:pb-0">
+                For powerful features, great design and support from the developer.
+            </p>
+
+            <blog-posts-slider></blog-posts-slider>
+        </div>
     </div>
 </template>
 
 <script>
+import BlogPostsSlider from './../shared/Slider/BlogPostsSlider'  
 import AppLayout from './../shared/AppLayout'  
 export default {
     layout: AppLayout,  
-    metaInfo: { title: 'Blog-details' },
-    computed: {
-        BlogDetailsHero(){
-            var  img = '/img/blog/details/details-hero.jpg';
-            return img;
-        }
-    }, 
+    metaInfo: { 
+        title: 'Blog-details' 
+    },
+    components: {
+        BlogPostsSlider,
+    }
+   
 }
  
 </script>

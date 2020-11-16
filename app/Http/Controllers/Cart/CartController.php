@@ -1,12 +1,9 @@
 <?php
-
-
 namespace App\Http\Controllers\Cart;
-
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Setting;
 use Auth;
 
 class CartController extends Controller
@@ -14,41 +11,12 @@ class CartController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except('index','create');  
-    }    
-    
-    // public function index(Request $request)
-    // { 
-    //     if(!$request->ajax()){
-    //         abort('404');
-    //     }
-    
-    //     $CartItems = session()->get('CartItems');
-    
-    //     if(!empty($CartItems)){
-        
-    //         $CartItemsCollection = collect($CartItems);
-    //         $CartTotalPrice = $CartItemsCollection->sum(function($Item){
-    //             return ( $Item['Qty'] * $Item['price'] );  
-    //         });  
-    //         $CountCartItems = $CartItemsCollection->sum(function($Item){
-    //             return $Item['Qty'];  
-    //         });  
- 
-            
-    //     }else{
-            
-    //         $CartTotalPrice = 0; 
-    //         $CountCartItems = 0;
-    //     } 
-    //     return response()->json([
-    //         'CountCartItems'=>$CountCartItems,
-    //         'CartTotalPrice'=>$CartTotalPrice,
-    //         'CartItems'=>($CartItems)?$CartItems:[]
-    //     ]);      
-
-    //     // return response()->json($CartItems);        
-    //     // return Inertia::render('Ecomerce/shopping-cart/ShoppingCart');
-    // } 
+    }
+     
+    public function index(Request $request)
+    {  
+        return Inertia::render('Ecomerce/shared/Partials/Cart/Cart'); 
+    } 
 
     public function FetchCartItems()
     {
@@ -126,8 +94,61 @@ class CartController extends Controller
     {  
         $CartItems = session()->forget('CartItems'); 
         return back()->with('success', 'Success ! cart is clear ');
+    } 
+
+    public function CustomerInformation()
+    { 
+        $CustomerInformation = session()->get('CustomerInformation'); 
+ 
+        $CartItems = session()->get('CartItems'); 
+        if(!$CartItems){
+            return redirect()->route('shop')->with('info','Add some items to cart');
+        }         
+        if(!$CartItems){
+            return redirect()->route('shop')->with('info','Add some items to cart');
+        } 
+
+        return Inertia::render('Ecomerce/shared/Partials/Cart/CustomerInformation',compact('CustomerInformation'));         
     }
 
+    public function CustomerInformStore(Request $request)
+    {  
+        $this->validate($request,[ 
+            "email" => "required|email:rfc,dns",
+            "first_name" => "required",
+            "last_name" => "required",
+            "address" => "required",
+            "city" => "required",
+            "country" => "required",
+            "postal_code" => "required",
+            "mobile" => "required", 
+        ]);  
+        session()->put('CustomerInformation', $request->all()); 
+        return redirect()->back()->with('success','information saved');          
+    }
 
+    public function ShippingMethod()
+    {
+        $CustomerInformation = session()->get('CustomerInformation'); 
+        return Inertia::render('Ecomerce/shared/Partials/Cart/ShippingMethod',compact('CustomerInformation'));         
+    }
+
+    public function ShippingMethodStore(Request $request)
+    { 
+        $this->validate($request,[ 
+            "shipment_type" => "required", 
+        ]);   
+        session()->put('ShipmentInformation', $request->all()); 
+        return redirect()->back()->with('success','information saved');
+    }
+
+    public function PaymentMethod()
+    { 
+        $stripekey = Setting::get('stripe_key');
+        $CustomerInformation = session()->get('CustomerInformation'); 
+        $ShipmentInformation = session()->get('ShipmentInformation');  
+        return Inertia::render('Ecomerce/shared/Partials/Cart/PaymentMethod',compact('CustomerInformation','ShipmentInformation','stripekey'));         
  
+    }
+    
 }

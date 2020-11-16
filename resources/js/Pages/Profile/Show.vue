@@ -1,39 +1,32 @@
 <template>
-    <app-layout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Profile
-            </h2>
-        </template>
+<acounts-layout>
+    <div class="lg:w-3/4 mt-12 lg:mt-0">
+        <update-profile-information-form :user="$page.user" />
 
-        <div>
-            <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-                <update-profile-information-form :user="$page.user" />
+        <jet-section-border />
 
-                <jet-section-border />
+        <update-password-form class="mt-10 sm:mt-0" />
 
-                <update-password-form class="mt-10 sm:mt-0" />
+        <div v-if="$page.jetstream.canManageTwoFactorAuthentication">
+            <jet-section-border />
 
-                <div v-if="$page.jetstream.canManageTwoFactorAuthentication">
-                    <jet-section-border />
-
-                    <two-factor-authentication-form class="mt-10 sm:mt-0" />
-                </div>
-
-                <jet-section-border />
-
-                <logout-other-browser-sessions-form :sessions="sessions" class="mt-10 sm:mt-0" />
-
-                <jet-section-border />
-
-                <delete-user-form class="mt-10 sm:mt-0" />
-            </div>
+            <two-factor-authentication-form class="mt-10 sm:mt-0" />
         </div>
-    </app-layout>
+
+        <jet-section-border />
+
+        <logout-other-browser-sessions-form :sessions="sessions" class="mt-10 sm:mt-0" />
+
+        <jet-section-border />
+
+        <delete-user-form class="mt-10 sm:mt-0" />
+    </div>                    
+</acounts-layout>
 </template>
 
 <script>
-    import AppLayout from '@/Layouts/AppLayout'
+    import AppLayout from './../Ecomerce/shared/AppLayout'
+    import AcountsLayout from './../Ecomerce/shared/AcountsLayout'  
     import DeleteUserForm from './DeleteUserForm'
     import JetSectionBorder from '@/Jetstream/SectionBorder'
     import LogoutOtherBrowserSessionsForm from './LogoutOtherBrowserSessionsForm'
@@ -43,9 +36,9 @@
 
     export default {
         props: ['sessions'],
-
-        components: {
-            AppLayout,
+        layout:AppLayout,
+        components: { 
+            AcountsLayout,
             DeleteUserForm,
             JetSectionBorder,
             LogoutOtherBrowserSessionsForm,

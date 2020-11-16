@@ -76,16 +76,16 @@
             </div>
         </div> -->
         <div class="sidebar__item p-3">
-            <LatestProductsSlider></LatestProductsSlider>
+            <!-- <LatestProductsSlider></LatestProductsSlider> -->
         </div>
     </div>
 </template>
 <script> 
-import LatestProductsSlider from './../../shared/Slider/LatestProductsSlider'
+// import LatestProductsSlider from './../../shared/Slider/LatestProductsSlider'
 import PriceSlider from './PriceSlider'
 export default {
     components: {
-        LatestProductsSlider,
+        // LatestProductsSlider,
         PriceSlider,
     }, 
     computed: {        

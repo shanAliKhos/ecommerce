@@ -65,7 +65,7 @@ class CategoryController extends Controller
     }  
 
     public function update(Category $category, Request $request)
-    {    
+    {     
         $this->validate($request,['name'=>'required|min:2|max:255|unique:categories,name,' .$category->id]); 
         if($request->hasFile('image')){
             $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']); 

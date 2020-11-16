@@ -25,15 +25,18 @@ Route::get('/login', function(){
     return Inertia\Inertia::render('Auth/Login');
     })->name('login')->middleware('guest');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia\Inertia::render('Ecomerce/Dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+//     return Inertia\Inertia::render('Ecomerce/dashboard/Dashboard');
+// })->name('dashboard');
 
-Route::get('/home','HomeController@redirectTo')->name('home');
 
-Route::get('/','Shop\ShopController@index')->name('welcome');
 
-Route::get('/shop', 'Shop\ShopController@shop')->name('shop');
+ 
+
+
+Route::get('/','Shop\ShopController@Home')->name('welcome');
+
+Route::get('/shop', 'Shop\ShopController@index')->name('shop.index');
 
 Route::get('/category/{slug}/products','Shop\ShopController@GetCategoryProducts')->name('shop.category-products');
 
@@ -44,8 +47,36 @@ Route::get('/featured/products','Shop\ShopController@GetFeaturedProducts')->name
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+    Route::prefix('dashboard')->group(function () { 
+
+        Route::get('/',function(){
+            return Inertia\Inertia::render('Ecomerce/dashboard/Dashboard');
+        })->name('dashboard');
+
+        Route::get('/Orders',function(){
+            return Inertia\Inertia::render('Ecomerce/dashboard/Order');
+        })->name('dashboard.order');
+
+        Route::get('/wishList',function(){
+            return Inertia\Inertia::render('Ecomerce/dashboard/WishList');
+        })->name('dashboard.wishlist');
+
+    });
+
+
+  
+
+    Route::get('/home','HomeController@redirectTo')->name('home');
     Route::Resource('/cart','Cart\CartController')->except('create'); 
-    Route::post('/cart/flush','Cart\CartController@CartEmpty')->name('cart.flush');  
+    Route::post('/cart/flush','Cart\CartController@CartEmpty')->name('cart.flush');   
+
+    Route::get('/customer-info','Cart\CartController@CustomerInformation')->name('cart.CustomerInfomation');   
+    Route::post('/customer-info','Cart\CartController@CustomerInformStore')->name('cart.CustomerInfomationStore');   
+    Route::get('/shipping-method','Cart\CartController@ShippingMethod')->name('cart.ShippingMethod');   
+    Route::post('/shipping-method','Cart\CartController@ShippingMethodStore')->name('cart.ShippingMethodStore');   
+    
+    Route::get('/payment-method','Cart\CartController@PaymentMethod')->name('cart.PaymentMethod');   
+
     Route::get('/checkout','Checkout\CheckOutController@index')->name('checkout.index');
     Route::post('/checkout', 'Checkout\CheckOutController@checkout')->name('checkout.post');
     
