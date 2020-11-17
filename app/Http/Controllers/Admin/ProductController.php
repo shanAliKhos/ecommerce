@@ -12,6 +12,7 @@ use App\Models\ProductImage;
 use App\Models\Attribute; 
 use Inertia\Inertia;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
  
 class ProductController extends Controller
@@ -21,10 +22,8 @@ class ProductController extends Controller
     public function index()
     {
         $Product = new Product;
-        $ProductsPaginate = $Product->with('categories','brand','images')->latest()->paginate(20)->toArray();
-        $Products = $ProductsPaginate['data'];
-        $Links = $ProductsPaginate['links'];  
-        return Inertia::render('Admin/products/Index',compact('Products','Links'));
+        $Products = $Product->with('categories','brand','images')->latest()->paginate(20); 
+        return Inertia::render('Admin/products/Index',compact('Products'));
     }
 
     public function create(Brand $brand ,Category $category)
@@ -34,38 +33,63 @@ class ProductController extends Controller
         return Inertia::render('Admin/products/Create',compact('Categories', 'Brands'));
     }
 
-    public function store(Request $request)
-    {   
+    public function store(Request $request,Product $Product)
+    {      
+
         $this->validate($request,[ 
-            'name'      =>  'required|max:255',
-            'sku'       =>  'required',
-            'brand'  =>  'required',
-            'regular_price'     =>  'required|regex:/^\d+(\.\d{1,2})?$/', 
-            'quantity'  =>  'required|numeric',            
+            "name" => 'required|string|min:2|max:255',
+            "sku" => 'required|string|min:2|max:255',
+            // "brand" => null
+            // "categories" => []
+            "regular_price" => 'required|numeric|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "sale_price" => 'numeric|min:0|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "quantity" => 'required|numeric|min:1|max:100',
+            "weight" => 'numeric|max:100', 
+            "is_active" => 'required|boolean',
+            "is_featured" => 'required|boolean',
+            "image" => 'required|mimes:jpg,jpeg,png|max:100',   
         ]);  
-
-        $Product = new Product;
  
-        $Product = $Product->create([
-            'brand_id'=>$request->brand['id'],
-            'name'=>$request->name,
-            'slug'=>Str::slug($request->name),
-            'description'=>$request->description,
-            'image'=>null,
-            'is_featured'=>$request->is_featured,
-            'is_active'=>$request->is_active,
-            'sku'=>$request->sku,
-            'quantity'=>$request->quantity,
-            'weight'=>$request->weight,
-            'regular_price'=>$request->regular_price,
-            'sale_price'=>$request->sale_price,
-        ]);
+ 
+        if ($request->hasFile('image')) {
 
-        if ($request->has('categories')) {
-            $Product->categories()->sync(array_column($request->categories,'id'));
-        }     
+            $NewImage = $request->file('image')->store('public/Products');  
+            
+            $Product->image = $NewImage;
+            
+        }   
+
+        try {
+
+            $Product = $Product->create([
+                'brand_id'=>$request->brand_id,
+                'name'=>$request->name,
+                'slug'=>Str::slug($request->name),
+                'description'=>$request->description,
+                'image'=>$NewImage?$NewImage:null,
+                'is_featured'=>$request->is_featured,
+                'is_active'=>$request->is_active,
+                'sku'=>$request->sku,
+                'quantity'=>$request->quantity,
+                'weight'=>$request->weight,
+                'regular_price'=>$request->regular_price,
+                'sale_price'=>$request->sale_price,
+            ]);
+
+        } catch (\Throwable $th) {
+             
+            return back()->with('error','OPPS fail to store in database, Please contact support team ');
+        }       
+
+
+        $ProductCategories = json_decode($request->categories,true);
+            
+        if(!empty($ProductCategories)){
+            $Product->categories()->sync(array_column($ProductCategories,'id'));
+        }
+   
       
-        return back()->with('success', 'Successfull ! Product Created');
+        return redirect()->route('admin.product.index')->with('success', 'Successfull ! Product Created');
   
     }
 
@@ -98,23 +122,56 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, Product $Product)
-    {
-        
+    { 
+
         $this->validate($request,[ 
-            'name'      =>  'required|max:255',
-            'sku'       =>  'required',
-            'brand'  =>  'required',
-            'regular_price'     =>  'required|regex:/^\d+(\.\d{1,2})?$/|min:1', 
-            'quantity'  =>  'required|numeric|min:1',            
+            "name" => 'required|string|min:2|max:255',
+            "sku" => 'required|string|min:2|max:255',
+            // "brand" => null
+            // "categories" => []
+            "regular_price" => 'required|numeric|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "sale_price" => 'numeric|min:0|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "quantity" => 'required|numeric|min:1|max:100',
+            "weight" => 'numeric|max:100', 
+            "is_active" => 'required|boolean',
+            "is_featured" => 'required|boolean', 
         ]);  
+             
+
+
+        // dd($request->all());
+        if($request->hasFile('image')){
+
+            $this->validate($request,[ 
+                "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            ]);              
             
-     
+            $NewFile = $request->file('image')->store('public/Products');  
+            
+            if(Storage::exists($Product->image)){
+
+                Storage::delete($Product->image);
+
+            }  
+
+            $Product->update(['image' => $NewFile]);               
+        } 
+
+        if(empty($request->image) && $Product->image){
+
+            if(Storage::exists($Product->image)){
+            
+                Storage::delete($Product->image);
+            
+            }          
+            
+            $Product->update(['image' => null]);
+        }        
 
         $Product->update([
-            'brand_id'=>$request->brand['id'],
+            'brand_id'=>$request->brand_id,
             'name'=>$request->name,
             'description'=>$request->description,
-            'image'=>null,
             'is_featured'=>$request->is_featured,
             'is_active'=>$request->is_active,
             'sku'=>$request->sku,
@@ -124,9 +181,15 @@ class ProductController extends Controller
             'sale_price'=>$request->sale_price,
         ]);
 
-        if ($request->has('categories')) {
-            $Product->categories()->sync(array_column($request->categories,'id'));
-        }     
+        
+        $ProductCategories = json_decode($request->categories,true);
+        if(!empty($ProductCategories)){
+            $Product->categories()->sync(array_column($ProductCategories,'id'));
+        }else{
+            if($Product->categories()){ 
+                $Product->categories()->sync($ProductCategories);
+            }
+        }
               
         return back()->with('success', 'Successfull ! Product updated');
 

@@ -21,23 +21,40 @@
                     </svg>
                   </button>
                 </div>
-              </div>
-
+              </div> 
+              
               <!-- right navbar -->
-              <div class="flex items-center relative">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="fill-current mr-3 hover:text-blue-500"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-                <img src="https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg" class="w-12 h-12 rounded-full shadow-lg" @click="dropDownOpen = !dropDownOpen">
-              </div>
+              <div class="ml-3 relative">
+                  <button class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid" id="user-menu" aria-label="User menu" aria-haspopup="true"  @click="dropDownOpen = !dropDownOpen">
+                    <img class="w-12 h-12 rounded-full shadow-lg" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </button> 
+                  <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg" :class="dropDownOpen ? '' : 'hidden'">
+                    <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
 
-            </div>
+                      <inertia-link 
+                       :href="route('profile.show')" 
+                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" 
+                       role="menuitem"
+                       preserve-scroll
+                       >Your Profile</inertia-link>
 
-            <!-- dropdown menu -->
-            <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 bottom-10 right-0 mr-6" :class="dropDownOpen ? '' : 'hidden'">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Account</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+                      <inertia-link 
+                          :href="route('logout')" 
+                          method="post"   
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" 
+                          type="button">  
+                          <span>Logout</span>
+                      </inertia-link>  
+
+
+                      
+                    </div>
+                  </div>
+              </div>        
+
+   
             </div>
-            <!-- dropdown menu end -->
+ 
 
     </div>
 </template>

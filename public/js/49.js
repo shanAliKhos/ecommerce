@@ -105,6 +105,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -130,9 +171,9 @@ __webpack_require__.r(__webpack_exports__);
         description: null,
         parent: null,
         is_featured: false,
-        menu: null,
+        menu: true,
         image: null,
-        is_active: false
+        is_active: true
       },
       sending: false
     };
@@ -145,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = new FormData();
       data.append('name', self.form.name || '');
       data.append('description', self.form.description || '');
-      data.append('parent_id', self.form.parent.id || '');
+      data.append('parent_id', self.form.parent ? self.form.parent.id :  false || '');
       data.append('is_featured', self.form.is_featured || '');
       data.append('menu', self.form.menu || '');
       data.append('image', self.form.image || null);
@@ -213,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    value: File,
+    value: null,
     label: String,
     accept: String,
     preview: false,
@@ -483,124 +524,279 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-8 mx-auto" }, [
-        _c("div", { staticClass: "tile" }, [
-          _c("h3", { staticClass: "tile-title" }, [_vm._v(" Create ")]),
+    _c(
+      "nav",
+      {
+        staticClass: "text-sm font-semibold mb-5",
+        attrs: { "aria-label": "Breadcrumb" }
+      },
+      [
+        _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
+          _c(
+            "li",
+            { staticClass: "flex items-center text-blue-500" },
+            [
+              _c(
+                "inertia-link",
+                {
+                  staticClass: "text-gray-700",
+                  attrs: { href: _vm.route("admin.dashboard") }
+                },
+                [_vm._v("Home")]
+              ),
+              _vm._v(" "),
+              _c(
+                "svg",
+                {
+                  staticClass: "fill-current w-3 h-3 mx-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 320 512"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                    }
+                  })
+                ]
+              )
+            ],
+            1
+          ),
           _vm._v(" "),
+          _vm._m(0)
+        ]),
+        _vm._v(" "),
+        _c(
+          "inertia-link",
+          {
+            staticClass:
+              "transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right",
+            attrs: { href: _vm.route("admin.category.index") }
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticClass: "fill-current w-4 h-4 mr-2",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 20 20",
+                  fill: "currentColor"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "fill-rule": "evenodd",
+                    d:
+                      "M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z",
+                    "clip-rule": "evenodd"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v("Back")])
+          ]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
+      _vm._v("Create Category")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex justify-center" }, [
+      _c("div", { staticClass: "w-full lg:w-1/2 pl-0 lg:pl-2" }, [
+        _c("div", { staticClass: "leading-loose " }, [
           _c(
             "form",
             {
+              staticClass: "p-10 bg-white rounded shadow-xl",
               on: {
                 submit: function($event) {
                   $event.preventDefault()
-                  return _vm.store()
+                  return _vm.store($event)
                 }
               }
             },
             [
               _c(
+                "p",
+                { staticClass: "text-lg text-gray-800 font-medium pb-4" },
+                [_vm._v("Category information")]
+              ),
+              _vm._v(" "),
+              _c("div", {}, [
+                _c(
+                  "label",
+                  {
+                    staticClass:
+                      "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2",
+                    attrs: { for: "cus_name" }
+                  },
+                  [_vm._v("Name")]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.name,
+                      expression: "form.name"
+                    }
+                  ],
+                  staticClass:
+                    "w-full px-5 py-2 text-gray-700 bg-gray-200 rounded",
+                  attrs: {
+                    id: "cus_name",
+                    name: "cus_name",
+                    type: "text",
+                    placeholder: "Name",
+                    "aria-label": "Name"
+                  },
+                  domProps: { value: _vm.form.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "name", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.$page.errors.name
+                  ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                      _vm._v(_vm._s(_vm.$page.errors.name))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-2" }, [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.description,
+                      expression: "form.description"
+                    }
+                  ],
+                  staticClass:
+                    "resize-none border w-full py-5 px-5 text-gray-700 bg-gray-200  rounded focus:outline-none focus:shadow-outline",
+                  attrs: { placeholder: "Category Description here ... " },
+                  domProps: { value: _vm.form.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "description", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.$page.errors.description
+                  ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                      _vm._v(_vm._s(_vm.$page.errors.description))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c(
                 "div",
-                { staticClass: "tile-body" },
+                { staticClass: "mt-2" },
                 [
-                  _c("text-input", {
-                    staticClass: "form-group",
+                  _c("multiselect", {
                     attrs: {
-                      error: _vm.$page.errors.name,
-                      label: "Name",
-                      labelRequire: true,
-                      placeholder: "Enter Name"
+                      "deselect-label": "Can't remove this value",
+                      "track-by": "name",
+                      label: "name",
+                      placeholder: "Parent Category",
+                      options: _vm.Categories,
+                      searchable: false,
+                      "allow-empty": true
                     },
                     model: {
-                      value: _vm.form.name,
+                      value: _vm.form.parent,
                       callback: function($$v) {
-                        _vm.$set(_vm.form, "name", $$v)
+                        _vm.$set(_vm.form, "parent", $$v)
                       },
-                      expression: "form.name"
+                      expression: "form.parent"
                     }
                   }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
+                  _vm.$page.errors.parent
+                    ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                        _vm._v(_vm._s(_vm.$page.errors.parent))
+                      ])
+                    : _vm._e()
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mt-2" },
+                [
+                  _c("file-input", {
+                    staticClass:
+                      "pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-gray-200 rounded",
+                    attrs: {
+                      error: _vm.$page.errors.image,
+                      type: "file",
+                      accept: "image/*",
+                      label: "Photo",
+                      preview: true
+                    },
+                    model: {
+                      value: _vm.form.image,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "image", $$v)
+                      },
+                      expression: "form.image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.$page.errors.parent
+                    ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                        _vm._v(_vm._s(_vm.$page.errors.parent))
+                      ])
+                    : _vm._e()
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+                _c(
+                  "div",
+                  { staticClass: "w-full md:w-1/3 px-3 mb-6 md:mb-0" },
+                  [
                     _c(
                       "label",
                       {
-                        staticClass: "control-label",
-                        attrs: { for: "description" }
+                        staticClass:
+                          "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2",
+                        attrs: { for: "featured" }
                       },
-                      [_vm._v("Description")]
+                      [
+                        _vm._v(
+                          "\n                                Is Featured ?\n                            "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
-                    _c("textarea", {
-                      directives: [
+                    _c("div", { staticClass: "relative" }, [
+                      _c(
+                        "select",
                         {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.description,
-                          expression: "form.description"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        placeholder: "add multiple lines",
-                        rows: "4",
-                        name: "description",
-                        id: "description"
-                      },
-                      domProps: { value: _vm.form.description },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form, "description", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _vm._m(1),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        class: { "is-invalid": _vm.$page.errors.parent },
-                        attrs: {
-                          "deselect-label": "Can't remove this value",
-                          "track-by": "name",
-                          label: "name",
-                          placeholder: "Parent Category",
-                          options: _vm.Categories,
-                          searchable: false,
-                          "allow-empty": true
-                        },
-                        model: {
-                          value: _vm.form.parent,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "parent", $$v)
-                          },
-                          expression: "form.parent"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback active" }, [
-                        _c("i", {
-                          staticClass: "fa fa-exclamation-circle fa-fw"
-                        }),
-                        _vm._v(" "),
-                        _c("span", [_vm._v(_vm._s(_vm.$page.errors.parent))])
-                      ])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("div", { staticClass: "form-check" }, [
-                      _c("label", { staticClass: "form-check-label" }, [
-                        _c("input", {
                           directives: [
                             {
                               name: "model",
@@ -609,59 +805,100 @@ var render = function() {
                               expression: "form.is_featured"
                             }
                           ],
-                          staticClass: "form-check-input",
-                          attrs: {
-                            type: "checkbox",
-                            id: "featured",
-                            name: "featured"
-                          },
-                          domProps: {
-                            checked: Array.isArray(_vm.form.is_featured)
-                              ? _vm._i(_vm.form.is_featured, null) > -1
-                              : _vm.form.is_featured
-                          },
+                          staticClass:
+                            "block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
                           on: {
                             change: function($event) {
-                              var $$a = _vm.form.is_featured,
-                                $$el = $event.target,
-                                $$c = $$el.checked ? true : false
-                              if (Array.isArray($$a)) {
-                                var $$v = null,
-                                  $$i = _vm._i($$a, $$v)
-                                if ($$el.checked) {
-                                  $$i < 0 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "is_featured",
-                                      $$a.concat([$$v])
-                                    )
-                                } else {
-                                  $$i > -1 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "is_featured",
-                                      $$a
-                                        .slice(0, $$i)
-                                        .concat($$a.slice($$i + 1))
-                                    )
-                                }
-                              } else {
-                                _vm.$set(_vm.form, "is_featured", $$c)
-                              }
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.form,
+                                "is_featured",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
                             }
                           }
-                        }),
-                        _vm._v(
-                          "Featured Category\n                                "
+                        },
+                        [
+                          _c("option", { domProps: { value: true } }, [
+                            _vm._v("YES")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { domProps: { value: false } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "fill-current h-4 w-4",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm.$page.errors.frontend_type
+                      ? _c(
+                          "p",
+                          { staticClass: "text-red-500 text-xs italic" },
+                          [_vm._v(_vm._s(_vm.$page.errors.frontend_type))]
                         )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("div", { staticClass: "form-check" }, [
-                      _c("label", { staticClass: "form-check-label" }, [
-                        _c("input", {
+                      : _vm._e()
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "w-full md:w-1/3 px-3 mb-6 md:mb-0" },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2",
+                        attrs: { for: "MENU" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                MENU ?\n                            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "relative" }, [
+                      _c(
+                        "select",
+                        {
                           directives: [
                             {
                               name: "model",
@@ -670,53 +907,100 @@ var render = function() {
                               expression: "form.menu"
                             }
                           ],
-                          staticClass: "form-check-input",
-                          attrs: { type: "checkbox", id: "menu", name: "menu" },
-                          domProps: {
-                            checked: Array.isArray(_vm.form.menu)
-                              ? _vm._i(_vm.form.menu, null) > -1
-                              : _vm.form.menu
-                          },
+                          staticClass:
+                            "block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
                           on: {
                             change: function($event) {
-                              var $$a = _vm.form.menu,
-                                $$el = $event.target,
-                                $$c = $$el.checked ? true : false
-                              if (Array.isArray($$a)) {
-                                var $$v = null,
-                                  $$i = _vm._i($$a, $$v)
-                                if ($$el.checked) {
-                                  $$i < 0 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "menu",
-                                      $$a.concat([$$v])
-                                    )
-                                } else {
-                                  $$i > -1 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "menu",
-                                      $$a
-                                        .slice(0, $$i)
-                                        .concat($$a.slice($$i + 1))
-                                    )
-                                }
-                              } else {
-                                _vm.$set(_vm.form, "menu", $$c)
-                              }
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.form,
+                                "menu",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
                             }
                           }
-                        }),
-                        _vm._v("Show in Menu\n                                ")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("div", { staticClass: "form-check" }, [
-                      _c("label", { staticClass: "form-check-label" }, [
-                        _c("input", {
+                        },
+                        [
+                          _c("option", { domProps: { value: true } }, [
+                            _vm._v("YES")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { domProps: { value: false } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "fill-current h-4 w-4",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm.$page.errors.menu
+                      ? _c(
+                          "p",
+                          { staticClass: "text-red-500 text-xs italic" },
+                          [_vm._v(_vm._s(_vm.$page.errors.menu))]
+                        )
+                      : _vm._e()
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "w-full md:w-1/3 px-3 mb-6 md:mb-0" },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2",
+                        attrs: { for: "grid-state" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Status\n                            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "relative" }, [
+                      _c(
+                        "select",
+                        {
                           directives: [
                             {
                               name: "model",
@@ -725,108 +1009,98 @@ var render = function() {
                               expression: "form.is_active"
                             }
                           ],
-                          class: {
-                            "is-invalid": _vm.$page.errors.is_active,
-                            "form-check-input": true
-                          },
-                          attrs: {
-                            type: "checkbox",
-                            id: "is_active",
-                            name: "is_active"
-                          },
-                          domProps: {
-                            checked: Array.isArray(_vm.form.is_active)
-                              ? _vm._i(_vm.form.is_active, null) > -1
-                              : _vm.form.is_active
-                          },
+                          staticClass:
+                            "block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
                           on: {
                             change: function($event) {
-                              var $$a = _vm.form.is_active,
-                                $$el = $event.target,
-                                $$c = $$el.checked ? true : false
-                              if (Array.isArray($$a)) {
-                                var $$v = null,
-                                  $$i = _vm._i($$a, $$v)
-                                if ($$el.checked) {
-                                  $$i < 0 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "is_active",
-                                      $$a.concat([$$v])
-                                    )
-                                } else {
-                                  $$i > -1 &&
-                                    _vm.$set(
-                                      _vm.form,
-                                      "is_active",
-                                      $$a
-                                        .slice(0, $$i)
-                                        .concat($$a.slice($$i + 1))
-                                    )
-                                }
-                              } else {
-                                _vm.$set(_vm.form, "is_active", $$c)
-                              }
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.form,
+                                "is_active",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
                             }
                           }
-                        }),
-                        _vm._v("Active\n                                ")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("file-input", {
-                        staticClass: "pr-6 pb-8 w-full",
-                        attrs: {
-                          error: _vm.$page.errors.image,
-                          type: "file",
-                          accept: "image/*",
-                          label: "Photo",
-                          preview: true
                         },
-                        model: {
-                          value: _vm.form.image,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "image", $$v)
-                          },
-                          expression: "form.image"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
+                        [
+                          _c("option", { domProps: { value: false } }, [
+                            _vm._v("Disable")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { domProps: { value: true } }, [
+                            _vm._v("Active")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "fill-current h-4 w-4",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm.$page.errors.is_active
+                      ? _c(
+                          "p",
+                          { staticClass: "text-red-500 text-xs italic" },
+                          [_vm._v(_vm._s(_vm.$page.errors.is_active))]
+                        )
+                      : _vm._e()
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "tile-footer" },
+                { staticClass: "mt-6" },
                 [
                   _c(
                     "loading-button",
                     {
-                      staticClass: "btn btn-primary",
-                      attrs: { loading: _vm.sending, type: "submit" }
-                    },
-                    [_vm._v("Save Category")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "inertia-link",
-                    {
-                      staticClass: "btn btn-secondary",
-                      attrs: { href: _vm.$route("admin.category.index") }
+                      staticClass:
+                        "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded",
+                      attrs: {
+                        loading: _vm.sending,
+                        type: "submit",
+                        as: "button"
+                      }
                     },
                     [
-                      _c("i", {
-                        staticClass: "fa fa-fw fa-lg fa-times-circle"
-                      }),
-                      _vm._v("Cancel")
+                      _vm._v(
+                        "     \n                            Save Attribute\n                        "
+                      )
                     ]
                   )
                 ],
@@ -844,27 +1118,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "app-title" }, [
-      _c("div", [
-        _c("h1", [
-          _c("i", { staticClass: "fa fa-tags" }),
-          _vm._v("  Categories ")
-        ])
+    return _c("li", { staticClass: "flex items-center" }, [
+      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
+        _vm._v("Create Category")
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "control-label", attrs: { for: "ParentCategory" } },
-      [
-        _c("i", { staticClass: "fa fa-exclamation-circle fa-fw" }),
-        _vm._v(" Parent Category")
-      ]
-    )
   }
 ]
 render._withStripped = true
@@ -924,12 +1182,14 @@ var render = function() {
               "div",
               { staticClass: "flex items-center justify-between p-2" },
               [
-                _c("div", { staticClass: "flex-1 pr-1" }, [
-                  _vm._v(_vm._s(_vm.value.name) + " "),
-                  _c("span", { staticClass: "text-gray-500 text-xs" }, [
-                    _vm._v("(" + _vm._s(_vm.filesize(_vm.value.size)) + ")")
-                  ])
-                ]),
+                _vm.value.name
+                  ? _c("div", { staticClass: "flex-1 pr-1" }, [
+                      _vm._v(_vm._s(_vm.value.name) + " "),
+                      _c("span", { staticClass: "text-gray-500 text-xs" }, [
+                        _vm._v("(" + _vm._s(_vm.filesize(_vm.value.size)) + ")")
+                      ])
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "button",

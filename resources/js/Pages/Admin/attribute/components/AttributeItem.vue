@@ -1,12 +1,16 @@
 <template>
     <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+            <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
+             <p class="py-5 font-bold lg:p-1  ">{{ (AttributeIndex+1) }}</p>
+        </td>
+        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
             <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">CODE</p>
              <p class="py-5  lg:p-1 ">{{ Attribute.code }}</p>
         </td>
         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
             <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
-             <p class="py-5  lg:p-1 ">{{ Attribute.code }}</p>
+             <p class="py-5  lg:p-1 ">{{ Attribute.name }}</p>
         </td>
         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
             <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">FORNTEND TYPE</p>
@@ -16,6 +20,13 @@
             <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">REQUIRED</p>
             <p class="py-5  lg:p-1 ">
                 <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" v-if="Attribute.is_required">YES</span>
+                <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold" v-else>NO</span>
+            </p>
+        </td>
+        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+            <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">FILTERABLE</p>
+            <p class="py-5  lg:p-1 ">
+                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" v-if="Attribute.is_filterable">YES</span>
                 <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold" v-else>NO</span>
             </p>
         </td>
@@ -47,7 +58,7 @@
 <script>
 import LoadingButton from './../../../Shared/LoadingButton'   
 export default {
-    props:['Attribute'],
+    props:['Attribute','AttributeIndex'],
     data() {
         return {
             sending:false,

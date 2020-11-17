@@ -55,6 +55,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -216,58 +230,74 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "app-title sec" }, [
-      _c("div", [
-        _c("h1", [
-          _c("i", { staticClass: "fa fa-shopping-bag" }),
-          _vm._v(" Products - " + _vm._s(_vm.Product.name))
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row user sec" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-9" }, [
-        _c("div", { staticClass: "tab-content" }, [
+    _c(
+      "nav",
+      {
+        staticClass: "text-sm font-semibold mb-5",
+        attrs: { "aria-label": "Breadcrumb" }
+      },
+      [
+        _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
           _c(
-            "div",
-            { staticClass: "tab-pane active", attrs: { id: "general" } },
+            "li",
+            { staticClass: "flex items-center text-blue-500" },
             [
               _c(
-                "div",
-                { staticClass: "tile" },
+                "inertia-link",
+                {
+                  staticClass: "text-gray-700",
+                  attrs: { href: _vm.route("admin.dashboard") }
+                },
+                [_vm._v("Home")]
+              ),
+              _vm._v(" "),
+              _c(
+                "svg",
+                {
+                  staticClass: "fill-current w-3 h-3 mx-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 320 512"
+                  }
+                },
                 [
-                  _c("edit-form", {
+                  _c("path", {
                     attrs: {
-                      Product: _vm.Product,
-                      Categories: _vm.Categories,
-                      Brands: _vm.Brands
+                      d:
+                        "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
                     }
                   })
-                ],
-                1
+                ]
               )
-            ]
+            ],
+            1
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "tab-pane", attrs: { id: "images" } }, [
-            _c(
-              "div",
-              { staticClass: "tile" },
-              [
-                _c("product-images", {
-                  attrs: { id: _vm.Product.id, Images: _vm.Images }
-                })
-              ],
-              1
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tab-pane", attrs: { id: "attributes" } }, [
-            _c("div", { staticClass: "tile" }, [_c("product-attributes")], 1)
-          ])
+          _vm._m(0)
         ])
+      ]
+    ),
+    _vm._v(" "),
+    _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
+      _vm._v("Create Product")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex justify-center lg:px-20" }, [
+      _c("div", { staticClass: "w-full  pl-0 lg:pl-2" }, [
+        _c(
+          "div",
+          { staticClass: "leading-loose" },
+          [
+            _c("edit-form", {
+              attrs: {
+                Product: _vm.Product,
+                Categories: _vm.Categories,
+                Brands: _vm.Brands
+              }
+            })
+          ],
+          1
+        )
       ])
     ])
   ])
@@ -277,42 +307,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("div", { staticClass: "tile p-0" }, [
-        _c("ul", { staticClass: "nav flex-column nav-tabs user-tabs" }, [
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link active",
-                attrs: { href: "#general", "data-toggle": "tab" }
-              },
-              [_vm._v("General")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { href: "#images", "data-toggle": "tab" }
-              },
-              [_vm._v("Images")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { href: "#attributes", "data-toggle": "tab" }
-              },
-              [_vm._v("Attributes")]
-            )
-          ])
-        ])
+    return _c("li", { staticClass: "flex items-center" }, [
+      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
+        _vm._v("Create Product")
       ])
     ])
   }

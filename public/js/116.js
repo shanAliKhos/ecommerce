@@ -65,7 +65,8 @@ var render = function() {
                   staticClass:
                     "mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white focus:border-indigo-500 focus:text-indigo-500",
                   class: {
-                    "bg-white": link.active,
+                    "bg-white text-indigo-500 border  border-indigo-500 ":
+                      link.active,
                     "ml-auto": link.label === "Next"
                   },
                   attrs: { href: link.url }

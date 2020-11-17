@@ -9,7 +9,7 @@
                 <Navbar />
     
                 <div class="p-6 bg-gray-100 mb-10">
-                    <slot class="py-5"></slot>
+                    <slot class="py-5"></slot> 
                 </div>
     
                 <Footer />
@@ -21,25 +21,25 @@
         </div>
     </div>
 </template>
-  
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <script>
-import { mapState } from 'vuex'
-import Sidebar from './partials/Sidebar'
-import Navbar from './partials/Navbar'
-import Footer from './partials/Footer'
-import Flash from './partials/Flash' 
+    import { mapState } from 'vuex'
+    import Sidebar from './partials/Sidebar'
+    import Navbar from './partials/Navbar'
+    import Footer from './partials/Footer'
+    import Flash from './partials/Flash' 
 
 
-export default {
-    name: 'Dashboard',
-    computed: {
-        ...mapState(['sideBarOpen'])
-    },
-    components: {
-        Sidebar,
-        Navbar,
-        Footer,
-        Flash
+    export default {
+        name: 'Dashboard',
+        computed: {
+            ...mapState(['sideBarOpen'])
+        },
+        components: {
+            Sidebar,
+            Navbar,
+            Footer,
+            Flash
+        }
     }
-}
 </script>

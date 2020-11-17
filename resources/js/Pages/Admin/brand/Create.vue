@@ -7,51 +7,60 @@
                 <svg class="  w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
             </li>
             <li class="flex items-center">
-                <a href="#" class="text-gray-600">Brand Listing</a>
+                <a href="#" class="text-gray-600">Create Brand</a>
             </li>
         </ol>
+        <inertia-link 
+            :href="route('admin.brand.index')" 
+            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
+            >  
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+            </svg>            
+            <span>Back</span>            
+       
+        </inertia-link>                
  
     </nav>
-  
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="tile">
-            <form @submit.prevent="store()">
-            
-                <h3 class="tile-title">Create</h3>
-                <div class="tile-body">
-                    <div class="form-group">
-                        <label class="control-label" for="name">Name <span class="m-l-5 text-danger"> *</span></label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        name="name"
-                        :class="{'is-invalid': $page.errors.name ,'form-control':true}" 
-                        v-model="form.name"
-                        />
-                        <div class="invalid-feedback active">
-                            <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.name }}</span> 
-                        </div>                        
-                    </div>
-                   
-                    <div class="form-group">    
+    <p class="text-xl pb-6 flex items-center">Create Brand</p>        
+    <div class="flex justify-center">
+        <div class="w-full lg:w-1/2 pl-0 lg:pl-2">
+            <div class="leading-loose ">
 
-                        <file-input v-model="form.logo" :error="$page.errors.logo" class="pr-6 pb-8 w-full" type="file" accept="image/*" label="Photo" :preview="true"/>
-                        
+                <form @submit.prevent="store"  class="p-10 bg-white rounded shadow-xl">
+                    <p class="text-lg text-gray-800 font-medium pb-4">Brand information</p>
+
+
+                    <div class="">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="Name">Name</label>
+                        <input v-model="form.name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text"  placeholder="Name" aria-label="Name">
+                        <p class="text-red-500 text-xs italic" v-if="$page.errors.name">{{$page.errors.name}}</p>
                     </div>
-                </div>
-                <div class="tile-footer">
-                    <!-- <button class="btn btn-primary" type="button" @click="store()"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Brand</button> -->
-                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Save Brand</loading-button>
+
+                    <div class="mt-2">
+                        <file-input 
+                            v-model="form.logo" 
+                            :error="$page.errors.logo" 
+                            class="pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" 
+                            type="file" 
+                            accept="image/*" 
+                            label="MainImage" 
+                            :preview="true"/>
+                    </div>
                     
-                    <inertia-link class="btn btn-secondary" :href="$route('admin.brand.index')"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
-                </div>
-                     
-            </form>
+              
+                    <div class="mt-6">
+                        <loading-button :loading="sending" class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit" as="button">
+                            
+                            Save Brand
+                        </loading-button>                      
+                    </div>                    
+                    
+                </form> 
+
             </div>
-        </div>
-    </div>
- 
+        </div>    
+    </div>            
 </div>
 </template>
 <script>

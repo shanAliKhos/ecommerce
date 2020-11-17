@@ -13,7 +13,7 @@ class Category extends Model
  
 
     protected $fillable = [
-        'name', 'slug', 'description', 'parent_id', 'featured', 'menu', 'image'
+        'name', 'slug', 'description', 'parent_id', 'featured', 'menu', 'image','is_active'
     ];
  
     protected $casts = [

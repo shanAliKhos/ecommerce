@@ -12,7 +12,7 @@ class Product extends Model
 
 
     protected $fillable = [
-        'brand_id', 'sku', 'name', 'slug', 'description', 'quantity',
+        'brand_id', 'sku', 'name', 'slug', 'description', 'quantity','image',
         'weight', 'regular_price', 'sale_price', 'is_active', 'is_featured',
     ];
  

@@ -10,82 +10,62 @@
                 <a href="#" class="text-gray-600">Edit Brand</a>
             </li>
         </ol>
+        <inertia-link 
+            :href="route('admin.brand.index')" 
+            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
+            >  
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+            </svg>            
+            <span>Back</span>            
+       
+        </inertia-link>                
+ 
     </nav>
+    <p class="text-xl pb-6 flex items-center">Edit Brand</p>        
+    <div class="flex justify-center">
+        <div class="w-full lg:w-1/2 pl-0 lg:pl-2">
+            <div class="leading-loose ">
 
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="tile">
-                <h3 class="tile-title">Edit</h3>
-                 <form @submit.prevent="update()" id="myForm">
-                    <div class="tile-body">
-                        <div class="form-group">
-                            <label class="control-label" for="name">Name <span class="m-l-5 text-danger"> *</span></label>
-                            <input 
-                                type="text" 
-                                id="name"
-                                name="name"
-                                :class="{'is-invalid': $page.errors.name ,'form-control':true}" 
-                                v-model="form.name"                            
-                            /> 
-                            <div class="invalid-feedback active">
-                                <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.name }}</span> 
-                            </div>                                      
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="name">Slug <span class="m-l-5 text-danger"> *</span></label>
-                            <input 
-                            type="text" 
-                            name="slug"
-                            id="slug"
-                            :class="{'is-invalid': $page.errors.slug ,'form-control':true}" 
-                            v-model="form.slug"
-                            />
-                            <div class="invalid-feedback active">
-                                <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.slug }}</span> 
-                            </div>                           
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Brand Logo</label>                          
+                <form @submit.prevent="update"  class="p-10 bg-white rounded shadow-xl">
+                    <p class="text-lg text-gray-800 font-medium pb-4">Brand information</p>
 
-                            <div class="col-12"> 
 
-                                <input type="file" name="logo"
-                                :class="{'is-invalid': $page.errors.logo }" 
-                                id="logo" @change="onFileChange">
-                                
-                                <a class="card-link float-right text-danger" href="javascript:;" @click="removeImage()" v-if="showPreview">
-                                    <i class="fa fa-fw fa-lg fa-trash"></i>
-                                </a> 
-                                <img :src="imagePreview" width="100" height="100"  class="img-thumbnail" v-if="showPreview"/> 
-                                <img :src="ProductImage($page.brand.logo)" width="100" height="100"  class="img-thumbnail" v-else-if="($page.brand.logo !== '' && !showPreview)"/> 
-                            </div>
-                        
-                            <div class="invalid-feedback active">
-                                <i class="fa fa-exclamation-circle fa-fw"></i>  <span>{{ $page.errors.logo }}</span> 
-                            </div>
-                        </div>                        
+                    <div class="">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="Name">Name</label>
+                        <input v-model="form.name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text"  placeholder="Name" aria-label="Name">
+                        <p class="text-red-500 text-xs italic" v-if="$page.errors.name">{{$page.errors.name}}</p>
                     </div>
-                    <div class="tile-footer">
-            
-                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Brand</loading-button>
+
+                    <div class="mt-2">
+                        <file-input v-model="form.logo" :preview_img="form.logo" :error="$page.errors.logo" class="pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" type="file" accept="image/*" label="Photo" :preview="true"/>
+                    </div>
                     
-                    <inertia-link class="btn btn-secondary" :href="$route('admin.brand.index')"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</inertia-link>
-                    </div>
-                </form>
+              
+                    <div class="mt-6">
+                        <loading-button :loading="sending" class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit" as="button">
+                            
+                            Update Brand
+                        </loading-button>                      
+                    </div>                    
+                    
+                </form> 
+
             </div>
-        </div>
-    </div>
-     
+        </div>    
+    </div>            
 </div>
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
+import FileInput from './../../Shared/FileInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
     metaInfo: { title: 'Brand-edit' },
     components:{
         LoadingButton,
+        FileInput,
     },
     layout: AppLayout, 
     remember: 'form',

@@ -44,6 +44,7 @@ Route::get('/shop/product/{slug}','Shop\ShopController@GetProductsDetails')->nam
 
 Route::get('/featured/products','Shop\ShopController@GetFeaturedProducts')->name('shop.FeaturedProducts');
 
+ 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 

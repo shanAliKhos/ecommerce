@@ -68,6 +68,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -154,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    value: File,
+    value: null,
     label: String,
     accept: String,
     preview: false,
@@ -396,112 +405,162 @@ var render = function() {
           ),
           _vm._v(" "),
           _vm._m(0)
-        ])
-      ]
+        ]),
+        _vm._v(" "),
+        _c(
+          "inertia-link",
+          {
+            staticClass:
+              "transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right",
+            attrs: { href: _vm.route("admin.brand.index") }
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticClass: "fill-current w-4 h-4 mr-2",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 20 20",
+                  fill: "currentColor"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    "fill-rule": "evenodd",
+                    d:
+                      "M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z",
+                    "clip-rule": "evenodd"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v("Back")])
+          ]
+        )
+      ],
+      1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-8 mx-auto" }, [
-        _c("div", { staticClass: "tile" }, [
+    _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
+      _vm._v("Create Brand")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex justify-center" }, [
+      _c("div", { staticClass: "w-full lg:w-1/2 pl-0 lg:pl-2" }, [
+        _c("div", { staticClass: "leading-loose " }, [
           _c(
             "form",
             {
+              staticClass: "p-10 bg-white rounded shadow-xl",
               on: {
                 submit: function($event) {
                   $event.preventDefault()
-                  return _vm.store()
+                  return _vm.store($event)
                 }
               }
             },
             [
-              _c("h3", { staticClass: "tile-title" }, [_vm._v("Create")]),
+              _c(
+                "p",
+                { staticClass: "text-lg text-gray-800 font-medium pb-4" },
+                [_vm._v("Brand information")]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "tile-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.name,
-                        expression: "form.name"
-                      }
-                    ],
-                    class: {
-                      "is-invalid": _vm.$page.errors.name,
-                      "form-control": true
-                    },
-                    attrs: { type: "text", id: "name", name: "name" },
-                    domProps: { value: _vm.form.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "name", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "invalid-feedback active" }, [
-                    _c("i", { staticClass: "fa fa-exclamation-circle fa-fw" }),
-                    _vm._v(" "),
-                    _c("span", [_vm._v(_vm._s(_vm.$page.errors.name))])
-                  ])
-                ]),
-                _vm._v(" "),
+              _c("div", {}, [
                 _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("file-input", {
-                      staticClass: "pr-6 pb-8 w-full",
-                      attrs: {
-                        error: _vm.$page.errors.logo,
-                        type: "file",
-                        accept: "image/*",
-                        label: "Photo",
-                        preview: true
-                      },
-                      model: {
-                        value: _vm.form.logo,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "logo", $$v)
-                        },
-                        expression: "form.logo"
-                      }
-                    })
+                  "label",
+                  {
+                    staticClass:
+                      "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2",
+                    attrs: { for: "Name" }
+                  },
+                  [_vm._v("Name")]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.name,
+                      expression: "form.name"
+                    }
                   ],
-                  1
-                )
+                  staticClass:
+                    "w-full px-5 py-2 text-gray-700 bg-gray-200 rounded",
+                  attrs: {
+                    id: "cus_name",
+                    name: "cus_name",
+                    type: "text",
+                    placeholder: "Name",
+                    "aria-label": "Name"
+                  },
+                  domProps: { value: _vm.form.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "name", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.$page.errors.name
+                  ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                      _vm._v(_vm._s(_vm.$page.errors.name))
+                    ])
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "tile-footer" },
+                { staticClass: "mt-2" },
+                [
+                  _c("file-input", {
+                    staticClass:
+                      "pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-gray-200 rounded",
+                    attrs: {
+                      error: _vm.$page.errors.logo,
+                      type: "file",
+                      accept: "image/*",
+                      label: "MainImage",
+                      preview: true
+                    },
+                    model: {
+                      value: _vm.form.logo,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "logo", $$v)
+                      },
+                      expression: "form.logo"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mt-6" },
                 [
                   _c(
                     "loading-button",
                     {
-                      staticClass: "btn btn-primary",
-                      attrs: { loading: _vm.sending, type: "submit" }
-                    },
-                    [_vm._v("Save Brand")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "inertia-link",
-                    {
-                      staticClass: "btn btn-secondary",
-                      attrs: { href: _vm.$route("admin.brand.index") }
+                      staticClass:
+                        "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded",
+                      attrs: {
+                        loading: _vm.sending,
+                        type: "submit",
+                        as: "button"
+                      }
                     },
                     [
-                      _c("i", {
-                        staticClass: "fa fa-fw fa-lg fa-times-circle"
-                      }),
-                      _vm._v("Cancel")
+                      _vm._v(
+                        "\n                            \n                            Save Brand\n                        "
+                      )
                     ]
                   )
                 ],
@@ -521,22 +580,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
       _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
-        _vm._v("Brand Listing")
+        _vm._v("Create Brand")
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "control-label", attrs: { for: "name" } },
-      [
-        _vm._v("Name "),
-        _c("span", { staticClass: "m-l-5 text-danger" }, [_vm._v(" *")])
-      ]
-    )
   }
 ]
 render._withStripped = true
@@ -596,12 +642,14 @@ var render = function() {
               "div",
               { staticClass: "flex items-center justify-between p-2" },
               [
-                _c("div", { staticClass: "flex-1 pr-1" }, [
-                  _vm._v(_vm._s(_vm.value.name) + " "),
-                  _c("span", { staticClass: "text-gray-500 text-xs" }, [
-                    _vm._v("(" + _vm._s(_vm.filesize(_vm.value.size)) + ")")
-                  ])
-                ]),
+                _vm.value.name
+                  ? _c("div", { staticClass: "flex-1 pr-1" }, [
+                      _vm._v(_vm._s(_vm.value.name) + " "),
+                      _c("span", { staticClass: "text-gray-500 text-xs" }, [
+                        _vm._v("(" + _vm._s(_vm.filesize(_vm.value.size)) + ")")
+                      ])
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "button",
@@ -695,118 +743,6 @@ var render = function() {
 var staticRenderFns = []
 render._withStripped = true
 
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functional component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
 
 
 /***/ }),

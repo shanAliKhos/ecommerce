@@ -44,15 +44,15 @@ class BrandController extends Controller
             'logo '=> 'mimes:jpg,jpeg,png|max:1000'
         ]);        
         if ($request->hasFile('logo')) {
+
             $path = $request->file('logo')->store('public/Brands');  
-       
             $brand->logo = $path;
         }    
         $brand->name = $request->name; 
         $brand->slug = Str::slug($request->name); 
         $brand->save();
                 
-        return back()->with('success', 'success ! brand created');
+        return redirect()->route('admin.brand.index')->with('success', 'Brand created');
  
     }
 
@@ -76,26 +76,24 @@ class BrandController extends Controller
         $this->validate($request, [
             'name'      =>  'required|unique:brands,name,' .$brand->id, 
             // 'logo'     =>  'mimes:jpg,jpeg,png|max:1000'
-        ]);        
-
-        $OldPath = $brand->logo;
+        ]);         
         
         if($request->hasFile('logo')){
-
+            $OldPath = $brand->logo;
             $NewPath = $request->file('logo')->store('public/Brands');  
             if(Storage::exists($OldPath)){
                 Storage::delete($OldPath);
             }  
             $brand->update(['logo' => $NewPath]);               
+        } 
 
-        }else{
-            
-            if(empty($request->logo)){
-                if(Storage::exists($brand->logo)){
-                    Storage::delete($brand->logo);
-                }                  
-            }
+        if(empty($request->logo) && $brand->logo){
+            if(Storage::exists($brand->logo)){
+                Storage::delete($brand->logo);
+            }          
+            $brand->update(['logo' => null]);
         }
+
 
         $brand->update([
             'name' => $request->name, 

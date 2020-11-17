@@ -68,12 +68,13 @@
                     </td>
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">BRAND</p>
-                        <p class="py-5  lg:p-1">{{ Product.brand.name }}</p>
+                        <p class="py-5  lg:p-1" v-if="Product.brand">{{ Product.brand.name }}</p>
+                        <p class="py-5  lg:p-1" v-else>N/A</p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 border border-b md:text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">CATEGORY</p>
-                        <div class="py-5 lg:p-1 h-auto">
-                            <p v-for="(Category, CategoryIndex) in Product.categories" :key="CategoryIndex" class="rounded bg-green-400 py-1 px-3 text-xs font-bold ">{{ Category.name }}</p>     
+                        <div class="py-5 lg:py-0 lg:p-1 h-auto">
+                            <p v-for="(Category, CategoryIndex) in Product.categories" :key="CategoryIndex" v-if="Category" class=" lg:py-0 lg:px-0 py-1 px-2 bg-yellow-100 text-xs font-bold "> {{(CategoryIndex+1)}} {{ Category.name }}</p>      
                         </div>
                         
                     </td>
@@ -106,80 +107,22 @@
                 </tr>               
                
             </tbody>
-        </table>    
+        </table> 
     </div>
 
 
-    <!-- <div class="app-title">
-        <div>
-            <h1><i class="fa fa-shopping-bag"></i>  Products </h1>
-            <p>Lisiting</p>
-        </div>
-        <inertia-link :href="$route('admin.product.create')" class="btn btn-primary pull-right Addnew">Add Product</inertia-link>
-    </div>
- 
-    <div class="row">
-        <div class="col-md-12"> 
-            <div class="tile">
-                <div class="tile-body pb-5"> 
-                    <div class="table-responsive">
-                        <table class="table table-condensed table-striped ">
-                            <thead>
-                            <tr>
-                                <th> # </th>
-                                <th class="text-center"> Image </th>
-                                <th> SKU </th>
-                                <th> Name </th>
-                                <th class="text-center"> Brand </th>
-                                <th class="text-center"> Categories </th>
-                                <th class="text-center"> Price </th>
-                                <th class="text-center"> Status </th>
-                                <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
-                            </tr>
-                            </thead>
-                            <tbody> 
-                                <tr v-for="(Product, ProductIndex) in Products" :key="ProductIndex">
-                                    <td>{{ Product.id }}</td>
-                                    <td>
-                                        <img class="img-thumbnail" :src="ProductImage(Product.image)"/>
-                                    </td>                                    
-                                    <td>{{ Product.sku }}</td>
-                                    <td>{{ Product.name }}</td>
-                                    <td>{{ Product.brand.name }}</td>
-                                    <td> 
-                                        <span v-for="(Category, CategoryIndex) in Product.categories" :key="CategoryIndex" class="badge badge-info">{{ Category.name }}</span>     
-                                    </td>
-                                        
-                                    <td>${{ (Product.sale_price)?Product.sale_price:Product.regular_price }}</td>
-                                   <td class="text-center">
-                                        <span v-if="Product.is_active" class="badge badge-success">Active</span>
-                                        <span v-else class="badge badge-danger">Not Active</span>
-                                    </td>
+    <pagination :links="Links"></pagination>
 
-                                    <td class="text-center">
-                                        <div class="btn-group" role="group" aria-label="Second group">
-                                            <inertia-link :href="$route('admin.product.edit',Product.id)" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></inertia-link>
-                                        </div>
-                                        
-                                    </td>
-                                </tr> 
-                            </tbody>                         
-                        </table>                 
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </div>
-     -->
  </div> 
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'  
+import Pagination from './../../Shared/Pagination'  
 export default {
     layout: AppLayout,  
     metaInfo: { title: 'Product' },
     components: {
-        // Pagination,
+        Pagination,
         // ItemPerPage,
     },
     methods: {
@@ -191,10 +134,10 @@ export default {
     },    
     computed:{
         Products(){
-            return this.$page.Products;
+            return this.$page.Products.data;
         },
         Links(){
-            return this.$page.Links;
+            return this.$page.Products.links;
         },
     },
 

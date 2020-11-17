@@ -13,65 +13,57 @@ class AttributeController extends Controller
     public function index()
     {
         $Attribute = new Attribute;
-        $Attributes = $Attribute->all(); 
+        $Attributes = $Attribute->paginate(20); 
         return Inertia::render('Admin/attribute/Index',compact('Attributes'));
     }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+ 
     public function create()
     { 
         return Inertia::render('Admin/attribute/Create');
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    public function store(Request $request)
+ 
+    public function store(Request $request,Attribute $attribute)
     {
+ 
         $this->validate($request, [
-            'code'          =>  'required',
-            'name'          =>  'required',
-            'frontend_type' =>  'required'
+            'code'          =>  'required|min:1|max:2|unique:attributes',
+            'name'          =>  'required|min:2|unique:attributes',
+            'frontend_type' =>  'required', 
         ]);
-        $attribute = new Attribute ;
+        
+        try {
+            $attribute->create([
+                'code'=> $request->code,
+                'name'=>$request->name,
+                'frontend_type'=>$request->frontend_type,
+                'is_filterable' => $request->is_filterable?1:0,
+                'is_required' => $request->is_required?1:0, 
+            ]);             
+        } catch (\Throwable $th) {
+             
+            return back()->with('error','OPPS fail to store in database, Please contact support team ');
+        }       
+        
 
-        $attribute->create([
-            'code'=> $request->code,
-            'name'=>$request->name,
-            'frontend_type'=>$request->frontend_type,
-            'is_filterable' => $request->is_filterable?1:0,
-            'is_required' => $request->is_required?1:0, 
-        ]); 
 
-        return redirect()->route('admin.attribute.index')->with('success', 'Success ! Attribute created ');
+        return redirect()->route('admin.attribute.index')->with('success', 'Attribute created');
     }
-
-    /**
-     * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+ 
     public function edit(Attribute $Attribute)
     { 
         $Attribute->values;
         return Inertia::render('Admin/attribute/Edit',compact('Attribute')); 
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Validation\ValidationException
-     */
+ 
     public function update(Request $request, Attribute $attribute)
     { 
         
         $this->validate($request, [
-            'code'          =>  'required',
-            'name'          =>  'required',
-            'frontend_type' =>  'required'
+            'name'=> 'required|min:2|max:255|unique:attributes,name,' .$attribute->id,
+            'code'=> 'required|min:1|max:2|unique:attributes,code,' .$attribute->id,
+            'frontend_type' =>  'required',
         ]);
      
         $attribute->update([
@@ -81,15 +73,12 @@ class AttributeController extends Controller
             'is_filterable' => $request->is_filterable?1:0,
             'is_required' => $request->is_required?1:0, 
         ]);
-        return back()->with('success', 'Success ! Attribute updated ');
+        return back()->with('success', 'Attribute updated');
  
         // $attribute = $this->attributeRepository->updateAttribute($params);
     }
 
-    /**
-     * @param $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
+ 
     public function destroy(Attribute $attribute)
     {
 
@@ -98,7 +87,7 @@ class AttributeController extends Controller
             return back()->with('success','Sucess ! attribute removed');
         } catch (\Throwable $th) {
              
-            return back()->with('error','Fail ! could not delete ');
+            return back()->with('error','Delete is not possible . Record may have children records');
         }        
          
         

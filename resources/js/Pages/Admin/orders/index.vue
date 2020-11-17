@@ -20,6 +20,7 @@
         <table class="border-collapse w-full table-auto">
             <thead>
                 <tr>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden  lg:table-cell">#</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ORDER NUMBER</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">PLACED BY</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">TOTAL PRICE</th>
@@ -31,6 +32,10 @@
             </thead>
             <tbody>
                 <tr v-for="(Order, OrderIndex) in Orders" :key="OrderIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
+                        <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
+                        <p class="py-5  lg:p-1 ">{{ (OrderIndex+1) }}</p>
+                    </td>
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ORDER NUMBER</p>
                         <p class="py-5  lg:p-1 ">{{ Order.OrderNumber }}</p>

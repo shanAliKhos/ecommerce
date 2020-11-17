@@ -65,8 +65,10 @@ class CategoryController extends Controller
     }  
 
     public function update(Category $category, Request $request)
-    {     
-        $this->validate($request,['name'=>'required|min:2|max:255|unique:categories,name,' .$category->id]); 
+    {      
+        $this->validate($request,[
+            'name'=> 'required|min:2|max:255|unique:categories,name,' .$category->id
+        ]); 
         if($request->hasFile('image')){
             $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']); 
             $OldPath = $category->image;        
@@ -78,7 +80,7 @@ class CategoryController extends Controller
 
         }else{
             
-            if(empty($request->image)){
+            if(empty($request->image && $category->image)){
                 if(Storage::exists($category->image)){
                     Storage::delete($category->image);
                 }                  

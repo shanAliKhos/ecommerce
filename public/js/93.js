@@ -60,6 +60,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Navbar',
@@ -194,78 +211,87 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "flex items-center relative" }, [
+        _c("div", { staticClass: "ml-3 relative" }, [
           _c(
-            "svg",
+            "button",
             {
-              staticClass: "fill-current mr-3 hover:text-blue-500",
+              staticClass:
+                "max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid",
               attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                height: "24",
-                viewBox: "0 0 24 24",
-                width: "24"
+                id: "user-menu",
+                "aria-label": "User menu",
+                "aria-haspopup": "true"
+              },
+              on: {
+                click: function($event) {
+                  _vm.dropDownOpen = !_vm.dropDownOpen
+                }
               }
             },
             [
-              _c("path", { attrs: { d: "M0 0h24v24H0z", fill: "none" } }),
-              _c("path", {
+              _c("img", {
+                staticClass: "w-12 h-12 rounded-full shadow-lg",
                 attrs: {
-                  d:
-                    "M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"
+                  src:
+                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+                  alt: ""
                 }
               })
             ]
           ),
           _vm._v(" "),
-          _c("img", {
-            staticClass: "w-12 h-12 rounded-full shadow-lg",
-            attrs: {
-              src: "https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg"
+          _c(
+            "div",
+            {
+              staticClass:
+                "origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg",
+              class: _vm.dropDownOpen ? "" : "hidden"
             },
-            on: {
-              click: function($event) {
-                _vm.dropDownOpen = !_vm.dropDownOpen
-              }
-            }
-          })
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "py-1 rounded-md bg-white shadow-xs",
+                  attrs: {
+                    role: "menu",
+                    "aria-orientation": "vertical",
+                    "aria-labelledby": "user-menu"
+                  }
+                },
+                [
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
+                      attrs: {
+                        href: _vm.route("profile.show"),
+                        role: "menuitem",
+                        "preserve-scroll": ""
+                      }
+                    },
+                    [_vm._v("Your Profile")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
+                      attrs: {
+                        href: _vm.route("logout"),
+                        method: "post",
+                        type: "button"
+                      }
+                    },
+                    [_c("span", [_vm._v("Logout")])]
+                  )
+                ],
+                1
+              )
+            ]
+          )
         ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 bottom-10 right-0 mr-6",
-        class: _vm.dropDownOpen ? "" : "hidden"
-      },
-      [
-        _c(
-          "a",
-          {
-            staticClass: "block px-4 py-2 hover:bg-gray-200",
-            attrs: { href: "#" }
-          },
-          [_vm._v("Account")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "block px-4 py-2 hover:bg-gray-200",
-            attrs: { href: "#" }
-          },
-          [_vm._v("Settings")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "block px-4 py-2 hover:bg-gray-200",
-            attrs: { href: "#" }
-          },
-          [_vm._v("Logout")]
-        )
       ]
     )
   ])
