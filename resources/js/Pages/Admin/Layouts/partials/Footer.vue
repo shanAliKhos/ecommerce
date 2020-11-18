@@ -8,7 +8,7 @@
             <a href="#" class="hover:text-gray-900">About Us</a>
         </div>
     </div>
-</template>
+</template> 
 
 <script>
 export default {
