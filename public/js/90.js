@@ -301,7 +301,7 @@ var render = function() {
             "inertia-link",
             {
               staticClass:
-                "bg-blue-300 hover:bg-blue-600 hover:text-white text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center float-right",
+                "transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right",
               attrs: { href: _vm.route("admin.product.create") }
             },
             [

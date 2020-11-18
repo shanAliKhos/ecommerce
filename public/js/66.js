@@ -401,7 +401,10 @@ var render = function() {
   return _c(
     "button",
     _vm._b(
-      { staticClass: "flex items-center", attrs: { disabled: _vm.loading } },
+      {
+        staticClass: "flex items-center uppercase",
+        attrs: { disabled: _vm.loading }
+      },
       "button",
       _vm.$attrs,
       false
@@ -411,7 +414,7 @@ var render = function() {
         ? _c(
             "svg",
             {
-              staticClass: "animate-spin h-5 w-5 mr-1",
+              staticClass: "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
               attrs: {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 20 20",

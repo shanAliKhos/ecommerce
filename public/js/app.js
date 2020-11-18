@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"8ec6d08db59b61ee386f","2":"ab23fa7c864d3f2c903b","3":"1d7683b9b46e731b38fa","4":"356256e9e9876acc09db","5":"b740c01602322956a915","6":"343595b1bf8f834afcb6","7":"bd7dee1345bec6a775d2","8":"7bf37e64c21a5d45990e","9":"15bd70114214eb4c3c09","10":"c66c787c253c5ff96b69","11":"40c7bacfa26da8373422","12":"263d32652be5010e2be4","13":"19bb25f23037d001e390","14":"be416f107228d4c47b9a","15":"9514847273b033ac7225","16":"70ac5e7d2d8df3543343","17":"b084d13caffa867a50b2","18":"d3b3404d223a2628e280","19":"da2ad512e11a69794ac0","20":"524d36b83d44fd06f9ad","21":"f23c9415448e145f7d59","22":"1b85b2dbbccd7dcab06a","23":"2e38352eac6dc08f7073","24":"cfe0a24f4008f2ce25db","25":"63e57f3cd4d8c6b9f084","26":"c59db4aa127c4f592385","27":"7eefef0e6fa9aa895d34","28":"5480638ae92b0f617683","29":"fc9fc747ee0f3457a160","30":"1b7a99d8ca3adf3dcd30","31":"45fd66b51dbcdd74c71f","32":"8f19bf161040d8644bf1","33":"e7b7d149f73ca00dd12a","34":"a83128e98f20c31db0df","35":"ad445e58eb9f8d569f9a","36":"f80072d14afd3f8c485a","37":"af74f838dbfe2f1f088e","38":"dda8bf4c5c9b5b56e9fd","39":"142cd3bf5b45fd994768","40":"d0ae50ec2fa7c158950d","41":"b4b86de9fa202d9477fc","42":"917fd2f66287c5a6d62a","43":"1a228ee824accd9c4bf8","44":"57e528f13d201471a9dd","45":"96661cd1ad1365fa2f61","46":"87c76acb4af09ddb1778","47":"de0a953ebc1b53fed497","48":"d1088b07772c1469a291","49":"a07bd5f3ac8429c42d1c","50":"5aaa4649830635345fd4","51":"ac664fdc0e33f1f03bd9","52":"4ccbb4b786b3c6cb5e5e","53":"01f1384dc0ce285e0905","54":"8e9a063767b1f3252afb","55":"1eb8b9595d78fc6f40fc","56":"4ff0884054e6a23f2d3c","57":"f8925faae8454f4b8526","58":"cd70007e54a70fb0deed","59":"2c051d666c17ea7a8fce","60":"1be4412f8a372b51d73f","61":"61a19d04b9fd68e2cbcb","62":"fcd18569212e4f51d682","63":"2df05a01f2623daa10b5","64":"9baaf9dc9b2a2de9ac77","65":"564403d8e99365be537c","66":"feee6b599c4df40d5c9f","67":"6df54736c6e8f932492b","68":"0c4b48fbdbe3281b7d21","69":"0db0e1b00af8b217b916","70":"fe6cc8330779c9218a4f","71":"64264e1f718ff6a3195d","72":"a0d22bfb23d418395e19","73":"7f7e58a1d398a0ce8ebf","74":"96536962969f6284e2e1","75":"6ecfebb30853a214dfdb","76":"ceabe04087c11b67f707","77":"876734012193d38075c5","78":"b75756adf3611064ad5d","79":"0c314afe16701567c828","80":"a82a9a94b9c56ee5045b","81":"d349779545d6009718c8","82":"6d53c8b38e4f20a1d0bf","83":"53c82290c21fde3c0fff","84":"63e7edfe0440066eef29","85":"42ca99b0693cfbbe4225","86":"b377e8a757fb63cee1ba","87":"31dfb5d0de6a34bc5c09","88":"f5949230bb85f502bb6c","89":"ad0b52b60c341d503dd7","90":"65eb8eee74271373fb94","91":"90682c2593243da9e1e5","92":"10a6b60fbe21cf065638","93":"38b65ffde94f12da4571","94":"ba04e08bca3a1b94d50f","95":"0949aa393f457c6d9477","96":"d3672caf84ba847a3b58","97":"eb65397743546474cc2a","98":"b4ba67faa75ae3d64449","99":"bc73e8989c8bbf9c5f31","100":"f282442d72b3b49696d9","101":"cb34c3894a40aee92a9b","102":"2f4b60c9ad157dc752bc","103":"601284ea4e8fda4e41da","104":"e7d7e6f1c492a89755d5","105":"9b1d87bf66398a6d3a92","106":"0bc83c99aafd42be8690","107":"63c8cba5aa43f762d7cf","108":"a744d3f3246c61845fa3","109":"fac182405e182ad900f4","110":"020dbd0e6f038a9e5e9b","111":"2a21009482e233a61185","112":"4411553b3d5259f631e8","113":"a7e9ff1456b11cd52307","114":"94f963dd4f5acf2e30bb","115":"5559d6c4b7f7fcb7c405","116":"9704225fd02dde706c82","117":"e5da37c8cf35417be944","118":"afa2a5196d0788df9350","119":"bd7b79d624bfd7e40d43","120":"1024273b35f03ba258d6","121":"c2c0742016a007eacc63","122":"31c622adbe339cc5de77","123":"bc696b3a69412c4a9396","124":"ee1a5125525fed27eb3b","125":"610d933e84cecf1b2255","126":"37230e4a4d036fb72c22","127":"3fbbc2f95ece12620983","128":"cbcce047da9620566eca","129":"4aa25b7dcffb6508c77a","130":"8728182924588f6b0cae","131":"699156050930f4ebb800","132":"5c40771777ccfc75e35f","133":"287993dc9410ab9d0069","134":"10279a7db977b8cf205a","135":"d28a70effdd8a2bc1057","136":"642f733727001165861d","137":"08cceaa092d08c5b60ea","138":"5e8ae1bb6b6d4f59608e","139":"71eb4f2d7fe418a17de3","140":"f60288ae47cfc98e4622","141":"df841f18194fc4c5ea3b","142":"ff21313e92decd90774e","143":"05c7270d06bdfcc2c269","144":"0c2f10faabcc4f478f49","145":"7d84856328817590c6f4","146":"929aa4585cd324e65212","147":"7bd9a79d4fe3d9f6ef8a"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"8ec6d08db59b61ee386f","2":"ab23fa7c864d3f2c903b","3":"1d7683b9b46e731b38fa","4":"356256e9e9876acc09db","5":"b740c01602322956a915","6":"343595b1bf8f834afcb6","7":"bd7dee1345bec6a775d2","8":"7bf37e64c21a5d45990e","9":"15bd70114214eb4c3c09","10":"c66c787c253c5ff96b69","11":"40c7bacfa26da8373422","12":"263d32652be5010e2be4","13":"19bb25f23037d001e390","14":"be416f107228d4c47b9a","15":"9514847273b033ac7225","16":"70ac5e7d2d8df3543343","17":"3d18beb88847f5ba5271","18":"d3b3404d223a2628e280","19":"da2ad512e11a69794ac0","20":"524d36b83d44fd06f9ad","21":"f23c9415448e145f7d59","22":"1b85b2dbbccd7dcab06a","23":"626773a6272d57917d82","24":"3a19faefbe4ce365c208","25":"63e57f3cd4d8c6b9f084","26":"12e5aa402234f38afb91","27":"0b102bf7106433825f01","28":"5480638ae92b0f617683","29":"fc9fc747ee0f3457a160","30":"1b7a99d8ca3adf3dcd30","31":"45fd66b51dbcdd74c71f","32":"8f19bf161040d8644bf1","33":"e7b7d149f73ca00dd12a","34":"a83128e98f20c31db0df","35":"ad445e58eb9f8d569f9a","36":"f80072d14afd3f8c485a","37":"af74f838dbfe2f1f088e","38":"dda8bf4c5c9b5b56e9fd","39":"142cd3bf5b45fd994768","40":"d0ae50ec2fa7c158950d","41":"b4b86de9fa202d9477fc","42":"917fd2f66287c5a6d62a","43":"1a228ee824accd9c4bf8","44":"f7df7428541eda2001c6","45":"96661cd1ad1365fa2f61","46":"87c76acb4af09ddb1778","47":"de0a953ebc1b53fed497","48":"d1088b07772c1469a291","49":"1de9fdaec7914088f8f9","50":"5aaa4649830635345fd4","51":"ac664fdc0e33f1f03bd9","52":"b6a53822e545a311a84a","53":"4848937e14f29fe1cfd2","54":"8e9a063767b1f3252afb","55":"1eb8b9595d78fc6f40fc","56":"4ff0884054e6a23f2d3c","57":"91f4cb1bd0dfb8b85840","58":"2fee03450ec7e2cea493","59":"2c051d666c17ea7a8fce","60":"1be4412f8a372b51d73f","61":"0915f8d6f05019345330","62":"fb3e13b599e8c6f2859b","63":"9fbfa6e248bf1254ddbe","64":"ff0b0afe0c6d7a157e3e","66":"08d74299baac1c7ea04f","67":"6df54736c6e8f932492b","68":"0c4b48fbdbe3281b7d21","69":"0db0e1b00af8b217b916","70":"fe6cc8330779c9218a4f","71":"64264e1f718ff6a3195d","72":"a0d22bfb23d418395e19","73":"7f7e58a1d398a0ce8ebf","74":"96536962969f6284e2e1","75":"6ecfebb30853a214dfdb","76":"ceabe04087c11b67f707","77":"876734012193d38075c5","78":"2001824d0e6640d1ecb7","79":"0c314afe16701567c828","80":"a82a9a94b9c56ee5045b","81":"5fab4a6d2d93d012a3e1","82":"31dfa2a9eb7e48850ef2","83":"fde1e3904ce55434c445","84":"63e7edfe0440066eef29","85":"42ca99b0693cfbbe4225","86":"b377e8a757fb63cee1ba","87":"31dfb5d0de6a34bc5c09","88":"f5949230bb85f502bb6c","89":"b4345e78579b81318505","90":"6c7b622cb7dc5714bd32","91":"90682c2593243da9e1e5","92":"10a6b60fbe21cf065638","93":"38b65ffde94f12da4571","94":"ba04e08bca3a1b94d50f","95":"0949aa393f457c6d9477","96":"d3672caf84ba847a3b58","97":"eb65397743546474cc2a","98":"b4ba67faa75ae3d64449","99":"bc73e8989c8bbf9c5f31","100":"f282442d72b3b49696d9","101":"cb34c3894a40aee92a9b","102":"2f4b60c9ad157dc752bc","103":"601284ea4e8fda4e41da","104":"e7d7e6f1c492a89755d5","105":"9b1d87bf66398a6d3a92","106":"0bc83c99aafd42be8690","107":"63c8cba5aa43f762d7cf","108":"a744d3f3246c61845fa3","109":"fac182405e182ad900f4","110":"020dbd0e6f038a9e5e9b","111":"2a21009482e233a61185","112":"4411553b3d5259f631e8","113":"a7e9ff1456b11cd52307","114":"94f963dd4f5acf2e30bb","115":"d966f144471c1ba07acb","116":"9704225fd02dde706c82","117":"e5da37c8cf35417be944","118":"afa2a5196d0788df9350","119":"bd7b79d624bfd7e40d43","120":"1024273b35f03ba258d6","121":"c2c0742016a007eacc63","122":"31c622adbe339cc5de77","123":"bc696b3a69412c4a9396","124":"6ac013d09a08f66e0811","125":"610d933e84cecf1b2255","126":"37230e4a4d036fb72c22","127":"3fbbc2f95ece12620983","128":"cbcce047da9620566eca","129":"4aa25b7dcffb6508c77a","130":"eeb279ef93aa179345bd","131":"699156050930f4ebb800","132":"5c40771777ccfc75e35f","133":"287993dc9410ab9d0069","134":"10279a7db977b8cf205a","135":"d28a70effdd8a2bc1057","136":"642f733727001165861d","137":"08cceaa092d08c5b60ea","138":"5e8ae1bb6b6d4f59608e","139":"71eb4f2d7fe418a17de3","140":"3bf810f833e4b354e308","141":"df841f18194fc4c5ea3b","142":"ff21313e92decd90774e","143":"05c7270d06bdfcc2c269","144":"0c2f10faabcc4f478f49","145":"7d84856328817590c6f4","146":"929aa4585cd324e65212","147":"7bd9a79d4fe3d9f6ef8a","148":"02719a763b1b85e84b9a","149":"761e66d8c8389f7f2174","150":"2436dc2565b9176a1f3a","151":"d234bc22d6497e38b27f","152":"a203f4b77eccbe2e31cf","153":"f2430b33418c88f8dfc0","154":"8cc20d46b5ba6ba02f90","155":"420a35328821f4136b2e"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -41322,7 +41322,11 @@ var map = {
 		5,
 		17,
 		27,
-		44
+		44,
+		151,
+		64,
+		154,
+		155
 	],
 	"./Admin/settings/Index.vue": [
 		"./resources/js/Pages/Admin/settings/Index.vue",
@@ -41331,59 +41335,71 @@ var map = {
 		5,
 		17,
 		27,
-		44
+		44,
+		151,
+		64,
+		154,
+		155
 	],
 	"./Admin/settings/components/AnalyticsForm": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		62
+		64,
+		153
 	],
 	"./Admin/settings/components/AnalyticsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		62
+		64,
+		153
 	],
 	"./Admin/settings/components/FooterSeoForm": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		63
+		154,
+		62
 	],
 	"./Admin/settings/components/FooterSeoForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		63
+		154,
+		62
 	],
 	"./Admin/settings/components/GeneralForm": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		64
+		44,
+		152
 	],
 	"./Admin/settings/components/GeneralForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		64
+		44,
+		152
 	],
 	"./Admin/settings/components/LogoForm": [
 		"./resources/js/Pages/Admin/settings/components/LogoForm.vue",
-		17,
+		27,
 		140
 	],
 	"./Admin/settings/components/LogoForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/LogoForm.vue",
-		17,
+		27,
 		140
 	],
 	"./Admin/settings/components/PaymentsForm": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		27,
+		17,
 		78
 	],
 	"./Admin/settings/components/PaymentsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		27,
+		17,
 		78
 	],
 	"./Admin/settings/components/SocialLinksForm": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		65
+		151,
+		63
 	],
 	"./Admin/settings/components/SocialLinksForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		65
+		151,
+		63
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login.vue",
@@ -42233,6 +42249,14 @@ var map = {
 		"./resources/js/Pages/Shared/FlashMessages.vue",
 		113
 	],
+	"./Shared/FormSection": [
+		"./resources/js/Pages/Shared/FormSection.vue",
+		149
+	],
+	"./Shared/FormSection.vue": [
+		"./resources/js/Pages/Shared/FormSection.vue",
+		149
+	],
 	"./Shared/Icon": [
 		"./resources/js/Pages/Shared/Icon.vue",
 		114
@@ -42272,6 +42296,22 @@ var map = {
 	"./Shared/SearchFilter.vue": [
 		"./resources/js/Pages/Shared/SearchFilter.vue",
 		136
+	],
+	"./Shared/SectionBorder": [
+		"./resources/js/Pages/Shared/SectionBorder.vue",
+		148
+	],
+	"./Shared/SectionBorder.vue": [
+		"./resources/js/Pages/Shared/SectionBorder.vue",
+		148
+	],
+	"./Shared/SectionTitle": [
+		"./resources/js/Pages/Shared/SectionTitle.vue",
+		150
+	],
+	"./Shared/SectionTitle.vue": [
+		"./resources/js/Pages/Shared/SectionTitle.vue",
+		150
 	],
 	"./Shared/SelectInput": [
 		"./resources/js/Pages/Shared/SelectInput.vue",
