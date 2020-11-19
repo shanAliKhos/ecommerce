@@ -41,18 +41,20 @@ class ProductController extends Controller
             "sku" => 'required|string|min:2|max:255',
             // "brand" => null
             // "categories" => []
-            "regular_price" => 'required|numeric|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "regular_price" => 'required|numeric|min:0.1|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
             "sale_price" => 'numeric|min:0|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
             "quantity" => 'required|numeric|min:1|max:100',
             "weight" => 'numeric|max:100', 
             "is_active" => 'required|boolean',
-            "is_featured" => 'required|boolean',
-            "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            "is_featured" => 'required|boolean', 
         ]);  
  
  
         if ($request->hasFile('image')) {
 
+            $this->validate($request,[  
+                "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            ]);              
             $NewImage = $request->file('image')->store('public/Products');  
             
             $Product->image = $NewImage;
@@ -66,7 +68,7 @@ class ProductController extends Controller
                 'name'=>$request->name,
                 'slug'=>Str::slug($request->name),
                 'description'=>$request->description,
-                'image'=>$NewImage?$NewImage:null,
+                'image'=> isset($NewImage)?$NewImage:null,
                 'is_featured'=>$request->is_featured,
                 'is_active'=>$request->is_active,
                 'sku'=>$request->sku,
@@ -129,12 +131,12 @@ class ProductController extends Controller
             "sku" => 'required|string|min:2|max:255',
             // "brand" => null
             // "categories" => []
-            "regular_price" => 'required|numeric|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
+            "regular_price" => 'required|numeric|min:0.1|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
             "sale_price" => 'numeric|min:0|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
             "quantity" => 'required|numeric|min:1|max:100',
             "weight" => 'numeric|max:100', 
             "is_active" => 'required|boolean',
-            "is_featured" => 'required|boolean', 
+            "is_featured" => 'required|boolean',             
         ]);  
              
 

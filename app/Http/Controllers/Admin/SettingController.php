@@ -34,16 +34,29 @@ class SettingController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request)
-    { 
+    {  
   
             if($request->hasFile('site_logo')){             
                 $OldSiteLogo =  config('settings.site_logo');        
                 $NewPath = $request->file('site_logo')->store('public/setting');  
                 if(Storage::exists($OldSiteLogo)){
                     Storage::delete($OldSiteLogo);
-                }  
+                }   
                 Setting::set('site_logo', $NewPath);             
-            }  
+            }
+
+            if(empty($request->site_logo) && config('settings.site_logo')){
+
+                if(Storage::exists(config('settings.site_logo'))){
+
+                    Storage::delete(config('settings.site_logo'));
+                }
+                Setting::set('site_logo', null);             
+            }               
+
+          
+
+            
             if($request->hasFile('site_favicon')){             
                 $OldSiteFavicon =  config('settings.site_favicon');      
                 $NewPath = $request->file('site_favicon')->store('public/setting');  
@@ -52,7 +65,17 @@ class SettingController extends Controller
                 }  
                 Setting::set('site_favicon', $NewPath);             
             } 
+
+            if(empty($request->site_favicon) && config('settings.site_favicon')){
+
+                if(Storage::exists(config('settings.site_favicon'))){
+
+                    Storage::delete(config('settings.site_favicon'));
+                }
+                Setting::set('site_favicon', null);             
+            }                 
  
+
 
             $settings = $request->except(['_method','site_favicon','site_logo']);
 

@@ -32,6 +32,7 @@
             <thead>
                 <tr>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Image</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Featured</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Menu</th>
@@ -57,8 +58,11 @@ export default {
     },
     computed: {
         Categories(){
-            return this.$page.Categories;
-        }
+            return this.$page.Categories.data;
+        },
+        Links(){
+            return this.$page.Categories.links;
+        },
     },
 }
 </script>

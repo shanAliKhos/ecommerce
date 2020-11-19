@@ -23,86 +23,89 @@
     </nav>
     <p class="text-xl pb-6 flex items-center">Create Attributes</p>        
     <div class="flex justify-center">
-        <div class="w-full lg:w-1/2 pl-0 lg:pl-2">
+        <div class="w-full  pl-0 lg:pl-2">
             <div class="leading-loose ">
 
                 <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="store">
 
                     <p class="text-lg text-gray-800 font-medium pb-4">Attribute information</p>
-                    
-                    <div class="">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="cus_name">Name</label>
-                        <input v-model="form.name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text"  placeholder="Name" aria-label="Name">
-                        <p class="text-red-500 text-xs italic" v-if="$page.errors.name">{{$page.errors.name}}</p>
-                    </div>
 
-                    <div class="mt-2">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="code">code</label>
-                        <input v-model="form.code" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="code" name="code" type="text"  placeholder="code" aria-label="code">
-                        <p class="text-red-500 text-xs italic" v-if="$page.errors.code">{{$page.errors.code}}</p>
-                    </div>
+
+                    <text-input 
+                        id="name" 
+                        type="text" 
+                        class="col-span-8"  
+                        v-model="form.name" 
+                        autocomplete="name" 
+                        :error="$page.errors.name"
+                        label='Name'    
+                        :labelRequire='true'    
+                            placeholder="Name" 
+                    aria-label="Name"/>                     
                     
                     <div class="flex flex-wrap -mx-3 mb-2">
-    
-                        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" 
-                                for="grid-state">
-                                Frontend Type
-                            </label>
-                            <div class="relative">
-                                <select v-model="form.frontend_type" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                    <option v-for="(FrontEndType, index) in FrontEndTypes" :key="index" :value="index">{{ FrontEndType }}</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-red-500 text-xs italic" v-if="$page.errors.frontend_type">{{$page.errors.frontend_type}}</p>                        
-                        </div>
+ 
+                        <text-input 
+                            id="code" 
+                            type="text" 
+                            class="w-full md:w-1/2 px-3  md:mb-0"  
+                            :fixedClasses="'right-3 z-50'"
 
-                        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="grid-state">
-                                IS Required ?
-                            </label>
-                            <div class="relative">
-                                <select v-model="form.is_required" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                    <option :value="true">YES</option>
-                                    <option :value="false">No</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-red-500 text-xs italic" v-if="$page.errors.is_required">{{$page.errors.is_required}}</p>                        
-                        </div>
+                            v-model="form.code" 
+                            autocomplete="code" 
+                            :error="$page.errors.code"
+                            label='Code'    
+                            :labelRequire='true'    
+                            placeholder="eg: S, M, L | R, G, B" 
+                        aria-label="code"/> 
 
-                        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="grid-state">
-                                Filterable
-                            </label>
-                            <div class="relative">
-                                <select v-model="form.is_filterable" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                    <option :value="true">YES</option>
-                                    <option :value="false">No</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-red-500 text-xs italic" v-if="$page.errors.is_filterable">{{$page.errors.is_filterable}}</p>                        
-                        </div> 
 
-                    </div>                     
-              
-                    <div class="mt-6">
+                        <select-input 
+                            v-model="form.frontend_type" 
+                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            :fixedClasses="'right-3 z-50'"
+                            :error="$page.errors.frontend_type"
+                            label='Frontend Type'    
+                            :labelRequire='true'>
+                        <option v-for="(FrontEndType, index) in FrontEndTypes" :key="index" :value="index">{{ FrontEndType }}</option>                                                   
+                        </select-input>                         
 
-                        <loading-button :loading="sending" class="transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
-                            SAVE
-                                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>                
-                        </loading-button>                     
                     </div>
+ 
+                    <div class="flex flex-wrap -mx-3 mb-2">
+ 
+                        <select-input 
+                            v-model="form.is_required" 
+                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            :fixedClasses="'right-3 z-50'"
+                            :error="$page.errors.is_required"
+                            label='Required'    
+                            :labelRequire='true'>
+                        <option :value="0">No</option>
+                        <option :value="1">YES</option>                        
+                        </select-input> 
+
+                        <select-input 
+                            v-model="form.is_filterable" 
+                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            :fixedClasses="'right-3 z-50'"
+                            :error="$page.errors.is_filterable"
+                            label='Filterable'    
+                            :labelRequire='true'>
+                        <option :value="0">No</option>
+                        <option :value="1">YES</option>                        
+                        </select-input> 
+ 
+                    </div>   
+
+                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
+                            <span>Save</span>
+                            <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>                
+                        </loading-button>          
+                    </div>         
 
                 </form>
                 
@@ -132,8 +135,8 @@ export default {
                 code:'',
                 name:'',
                 frontend_type:'',
-                is_filterable:false,
-                is_required:false, 
+                is_filterable:0,
+                is_required:0, 
             },
             FrontEndTypes:{
                 select:'Select Box', 

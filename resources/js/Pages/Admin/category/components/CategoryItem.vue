@@ -6,6 +6,15 @@
                 {{ CategoryIndex }}
             </p>
         </td>
+        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+            <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">IMAGE</p>
+
+            <div class="flex items-center py-5  lg:p-1">
+                <div class="flex-shrink-0 h-10 w-10">
+                    <img class="h-10 w-10 rounded-full" :src="Image(Category)" alt="">
+                </div> 
+            </div>             
+        </td>              
         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
             <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
             <p class="py-5  lg:p-1">{{ Category.name }}</p>
@@ -85,7 +94,16 @@ export default {
                     })                    
                 }
             })                   
-        },        
+        },     
+        Image(item){
+            self = this ;
+            var  img = (item.image)?'/'+item.image.replace("public", "storage"):self.defaultPhotoUrl(this.Category.name);
+            return img;      
+        },             
+        defaultPhotoUrl(text)
+        {
+            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
+        },              
     },     
 }
 </script>

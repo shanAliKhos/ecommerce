@@ -11,17 +11,32 @@
 
         <template #form>       
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="site_name">google_analytics</label>
-                <input v-model="form.google_analytics" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="google_analytics" name="google_analytics" type="text"  placeholder="Enter google analytics code" aria-label="google_analytics">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.google_analytics">{{$page.errors.google_analytics}}</p>
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="site_name">facebook_pixels</label>
-                <input v-model="form.facebook_pixels" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="facebook_pixels" name="facebook_pixels" type="text"  placeholder="Enter facebook pixel code" aria-label="facebook_pixels">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.facebook_pixels">{{$page.errors.facebook_pixels}}</p>
-            </div>                    
+
+            <text-input 
+                id="google_analytics" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.google_analytics"  
+                :error="$page.errors.google_analytics"
+                label='google_analytics'    
+                :labelRequire='true'    
+                placeholder="google_analytics" 
+            aria-label="google_analytics"/>       
+
+
+
+            <text-input 
+                id="facebook_pixels" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.facebook_pixels"  
+                :error="$page.errors.facebook_pixels"
+                label='facebook_pixels'    
+                :labelRequire='true'    
+                placeholder="facebook_pixels" 
+            aria-label="facebook_pixels"/>       
+
  
         </template>
 
@@ -40,31 +55,12 @@
         </template>
     </form-section>   
 
-    <!-- <div class="tile">
-        <form @submit.prevent="update()"> 
-            <h3 class="tile-title">Analytics</h3>
-            <hr>
-            <div class="tile-body">
-
-       
-     
-                <textarea-input 
-                v-model="form.facebook_pixels" :error="$page.errors.facebook_pixels"
-                class="form-group" label="Facebook Pixel Code" placeholder="Enter facebook pixel code" />        
-            
-            </div>
-            <div class="tile-footer">
-                <div class="row d-print-none mt-2">
-                    <div class="col-12 text-right">
-                        <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Settings</loading-button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>  -->
+ 
 </template>
 <script> 
 import TextareaInput from './../../../Shared/TextareaInput'   
+import TextInput from './../../../Shared/TextInput'   
+
 import LoadingButton from './../../../Shared/LoadingButton' 
 import FormSection from './../../../Shared/FormSection'   
 
@@ -73,11 +69,11 @@ export default {
         TextareaInput,
         LoadingButton,
         FormSection,
+        TextInput,
     },
     props:{
         google_analytics:String, 
         facebook_pixels:String, 
-        sending:Boolean,
 
     },    
     data() {
@@ -85,7 +81,8 @@ export default {
             form:{
                 google_analytics:this.google_analytics,
                 facebook_pixels:this.facebook_pixels, 
-            }
+            },
+            sending:false,
         };
     },
     methods: {
@@ -96,8 +93,13 @@ export default {
             formData.append("facebook_pixels", self.form.facebook_pixels || '') 
             formData.append('_method', 'put')
             self.$emit('form-is-updated',formData)
+            this.sending=true;
+
         },
     },
+    mounted() {
+        this.$root.$on('sending-finished',()=>this.sending=false );
+    },    
 }
 </script>
 

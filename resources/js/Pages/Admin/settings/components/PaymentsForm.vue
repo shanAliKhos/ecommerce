@@ -10,59 +10,85 @@
         </template>
 
         <template #form>       
-  
+   
+            <p class="text-lg text-gray-800 font-bold pb-4 col-span-6">Stripe</p>
+
+            <select-input 
+                v-model="form.stripe_payment_method" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full"  
+                :fixedClasses="'right-0 z-50'"
+                :error="$page.errors.stripe_payment_method"
+                label='stripe_payment_method'    
+                :labelRequire='true'>
+            <option :value="0">Disable</option>
+            <option :value="1">Active</option>                        
+            </select-input>             
+      
+            <text-input 
+                id="stripe_key" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full p-1" 
+                v-model="form.stripe_key"  
+                :error="$page.errors.stripe_key"
+                label='stripe_key'    
+                :labelRequire='true'    
+                placeholder="stripe_key" 
+            aria-label="stripe_key"/>                              
+
+            <text-input 
+                id="stripe_secret_key" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full p-1" 
+                v-model="form.stripe_secret_key"  
+                :error="$page.errors.stripe_secret_key"
+                label='stripe_secret_key'    
+                :labelRequire='true'    
+                placeholder="stripe_secret_key" 
+            aria-label="stripe_secret_key"/>         
+
+
+            <SectionBorder class="col-span-6"/>
             
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="grid-stripe_payment_method">stripe_payment_method</label>
-                <div class="relative">
-                    <select v-model="form.stripe_payment_method" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                        <option :value="0">Disable</option>
-                        <option :value="1">Active</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
-                </div>
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.stripe_payment_method">{{$page.errors.stripe_payment_method}}</p>    
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="stripe_key">stripe_key</label>
-                <input v-model="form.stripe_key" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="stripe_key" name="stripe_key" type="text"  placeholder="stripe_key" aria-label="stripe_key">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.stripe_key">{{$page.errors.stripe_key}}</p>
-            </div>
+            <p class="text-lg text-gray-800 font-bold pb-4 col-span-6">PayPal</p>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="stripe_secret_key">stripe_secret_key</label>
-                <input v-model="form.stripe_secret_key" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="stripe_secret_key" name="stripe_secret_key" type="text"  placeholder="stripe_secret_key" aria-label="stripe_secret_key">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.stripe_secret_key">{{$page.errors.stripe_secret_key}}</p>
-            </div>
+       
+            <select-input 
+                v-model="form.paypal_payment_method" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full"  
+                :fixedClasses="'right-0 z-50'"
+                :error="$page.errors.paypal_payment_method"
+                label='paypal_payment_method'    
+                :labelRequire='true'>
+            <option :value="0">Disable</option>
+            <option :value="1">Active</option>                        
+            </select-input>            
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="grid-stripe_payment_method">paypal_payment_method</label>
-                <div class="relative">
-                    <select v-model="form.paypal_payment_method" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                        <option :value="0">Disable</option>
-                        <option :value="1">Active</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
-                </div>
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.paypal_payment_method">{{$page.errors.paypal_payment_method}}</p>    
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="paypal_client_id">paypal_client_id</label>
-                <input v-model="form.paypal_client_id" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="paypal_client_id" name="paypal_client_id" type="text"  placeholder="paypal_client_id" aria-label="paypal_client_id">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.paypal_client_id">{{$page.errors.paypal_client_id}}</p>
-            </div>
+            <text-input 
+                id="paypal_client_id" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.paypal_client_id"  
+                :error="$page.errors.paypal_client_id"
+                label='paypal_client_id'    
+                :labelRequire='true'    
+                placeholder="paypal_client_id" 
+            aria-label="paypal_client_id"/>                              
+ 
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="paypal_secret_id">paypal_secret_id</label>
-                <input v-model="form.paypal_secret_id" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="paypal_secret_id" name="paypal_secret_id" type="text"  placeholder="paypal_secret_id" aria-label="paypal_secret_id">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.paypal_secret_id">{{$page.errors.paypal_secret_id}}</p>
-            </div>
+            <text-input 
+                id="paypal_secret_id" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.paypal_secret_id"  
+                :error="$page.errors.paypal_secret_id"
+                label='paypal_secret_id'    
+                :labelRequire='true'    
+                placeholder="paypal_secret_id" 
+            aria-label="paypal_secret_id"/>                  
+
+   
 
 
         </template>
@@ -102,19 +128,21 @@ export default {
     },
     props:{
         settings:Object,
-        sending:Boolean,
+   
 
     },     
     data() {
         return {
             form:{
-                stripe_payment_method:this.settings.stripe_payment_method,
+                stripe_payment_method:this.settings.stripe_payment_method?this.settings.stripe_payment_method:0,
                 stripe_key: this.settings.stripe_key,
                 stripe_secret_key: this.settings.stripe_secret_key,
-                paypal_payment_method:this.settings.paypal_payment_method,
+                paypal_payment_method:this.settings.paypal_payment_method?this.settings.paypal_payment_method:0,
                 paypal_client_id: this.settings.paypal_client_id,
                 paypal_secret_id: this.settings.paypal_secret_id,               
             }, 
+            sending:false,
+
         };
     }, 
     methods: {
@@ -129,9 +157,14 @@ export default {
             formData.append("paypal_secret_id", self.form.paypal_secret_id || '')
             formData.append('_method', 'put')
             self.$emit('form-is-updated',formData)
+            this.sending=true;
+
         },
   
-    },        
+    },      
+    mounted() {
+        this.$root.$on('sending-finished',()=>this.sending=false );
+    },         
 
 }
 </script>

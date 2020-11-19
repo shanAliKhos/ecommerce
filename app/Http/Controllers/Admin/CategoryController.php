@@ -19,8 +19,8 @@ class CategoryController extends Controller
     public function index()
     {
         $Category = new Category;
-        $Categories = $Category->all(); 
-
+        $Categories = $Category->paginate(20); 
+ 
         return Inertia::render('Admin/category/Index',compact('Categories'));
     }
  
@@ -78,14 +78,16 @@ class CategoryController extends Controller
             }  
             $category->update(['image' => $NewPath]);               
 
-        }else{
-            
-            if(empty($request->image && $category->image)){
-                if(Storage::exists($category->image)){
-                    Storage::delete($category->image);
-                }                  
-            }
         }
+            
+        if(empty($request->image && $category->image)){
+            if(Storage::exists($category->image)){
+                Storage::delete($category->image);
+            }                  
+            $category->update(['image' => null]);               
+
+        }
+    
  
         $category->update([
             'name' => $request->name, 

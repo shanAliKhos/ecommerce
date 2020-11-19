@@ -36,11 +36,11 @@
                  
                  <SectionBorder/>
                     
-                <logo-form :sending="sending"
+                <!-- <logo-form :sending="sending"
                     :site_logo="settings.site_logo" 
                     :site_favicon="settings.site_favicon" 
                     @form-is-updated="update">
-                </logo-form>     
+                </logo-form>      -->
 
                  <SectionBorder/>
 
@@ -87,8 +87,7 @@ import SectionBorder from './../../Shared/SectionBorder'
 
 import AnalyticsForm from './components/AnalyticsForm'  
 import FooterSeoForm from './components/FooterSeoForm'  
-import GeneralForm from './components/GeneralForm'  
-import LogoForm from './components/LogoForm'  
+import GeneralForm from './components/GeneralForm'   
 import PaymentsForm from './components/PaymentsForm'  
 import SocialLinksForm from './components/SocialLinksForm'  
 export default {
@@ -97,8 +96,7 @@ export default {
     components:{
         AnalyticsForm,
         FooterSeoForm,
-        GeneralForm,
-        LogoForm,
+        GeneralForm, 
         PaymentsForm,
         SocialLinksForm,
         SectionBorder, 
@@ -113,8 +111,7 @@ export default {
             this.$inertia.post(route('admin.setting.update'), formData, {
                 preserveState: true,
                 preserveScroll: true,                
-                onStart: () => this.sending = true,
-                onFinish: () => this.sending = false,
+                onFinish: () => this.$root.$emit('sending-finished'),
             })            
              
         }

@@ -18,6 +18,13 @@ class Attribute extends Model
         'is_required'   =>  'boolean',
     ];
 
+
+
+    protected function defaultPhotoUrl()
+    {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
+    }
+
     public function values()
     {
         return $this->hasMany(AttributeValue::class);

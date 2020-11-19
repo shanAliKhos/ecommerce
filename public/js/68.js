@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[68],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -218,17 +218,185 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'Contact'
-  },
-  data: function data() {
-    return {
-      faqIndex: null
-    };
-  }
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 
 /***/ }),
@@ -323,10 +491,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -338,667 +506,1164 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "pb-16 md:pb-20 lg:pb-24", attrs: { id: "faq" } },
-      [
-        _c(
-          "div",
-          { staticClass: "text-center sm:w-5/6 md:w-full mx-auto md:mx-0" },
-          [
-            _c(
-              "h2",
-              {
-                staticClass:
-                  "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl"
-              },
-              [_vm._v("\n                Frequently Asked Questions")]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass:
-                  "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2"
-              },
-              [
-                _vm._v(
-                  "\n                Get the latest news & updates from Ciloe"
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "pt-12",
-                attrs: { "x-data": "{ faqIndex: null }" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "faq-wrapper border-t border-l border-r border-primary last:border-b cursor-pointer"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "faq-question   transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
-                        class: { "border-b": _vm.faqIndex === 1 },
-                        on: {
-                          click: function($event) {
-                            _vm.faqIndex === 1
-                              ? (_vm.faqIndex = null)
-                              : (_vm.faqIndex = 1)
-                          }
-                        }
-                      },
-                      [
-                        _vm._m(3),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "w-1/6 text-right" }, [
-                          _c("i", {
-                            staticClass: "bx text-primary text-2xl",
-                            class: _vm.faqIndex === 1 ? "bx-minus" : "bx-plus"
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "item-height   transition-all overflow-auto cursor-text",
-                        class: { active: _vm.faqIndex === 1 }
-                      },
-                      [_vm._m(4)]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "faq-wrapper border-t border-l border-r border-primary last:border-b cursor-pointer"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "faq-question   transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
-                        class: { "border-b": _vm.faqIndex === 2 },
-                        on: {
-                          click: function($event) {
-                            _vm.faqIndex === 2
-                              ? (_vm.faqIndex = null)
-                              : (_vm.faqIndex = 2)
-                          }
-                        }
-                      },
-                      [
-                        _vm._m(5),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "w-1/6 text-right" }, [
-                          _c("i", {
-                            staticClass: "bx text-primary text-2xl",
-                            class: _vm.faqIndex === 2 ? "bx-minus" : "bx-plus"
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "item-height   transition-all overflow-auto cursor-text",
-                        class: { active: _vm.faqIndex === 2 }
-                      },
-                      [_vm._m(6)]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex relative" }, [
-      _c("div", {
-        staticClass:
-          "bg-no-repeat bg-cover bg-center w-3/4 ml-auto h-56 sm:h-64 md:h-68",
-        staticStyle: { "background-image": "url(./img/bg-footer.png)" }
-      }),
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "flex relative" }, [
+        _c("div", {
+          staticClass:
+            "bg-no-repeat bg-cover bg-center w-3/4 ml-auto h-56 sm:h-64 md:h-68",
+          staticStyle: { "background-image": "url(./img/hero-image-01.jpg)" }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "w-full h-56 sm:h-64 md:h-68 bg-no-repeat bg-cover absolute top-0 left-0",
+            staticStyle: {
+              "background-image":
+                "linear-gradient(90deg, rgba(55,36,31,1) 40%, rgba(0,0,0,0) 100%)"
+            }
+          },
+          [
+            _c("div", { staticClass: "py-20 px-6 sm:px-12 lg:px-20" }, [
+              _c(
+                "h1",
+                {
+                  staticClass:
+                    "font-butlerregular text-white text-2xl sm:text-3xl md:text-7xl lg:text-5xl"
+                },
+                [_vm._v("\n                    Our Blog")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex pt-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "font-hkregular text-white text-base hover:text-primary transition-colors",
+                    attrs: { href: "/" }
+                  },
+                  [_vm._v("Home")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  { staticClass: "font-hkregular text-white text-base px-2" },
+                  [_vm._v(".")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  { staticClass: "font-hkregular text-white text-base" },
+                  [_vm._v("Our Blog")]
+                )
+              ])
+            ])
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "w-full h-56 sm:h-64 md:h-68 bg-no-repeat bg-cover absolute top-0 left-0",
-          staticStyle: {
-            "background-image":
-              "linear-gradient(90deg, rgba(55,36,31,1) 40%, rgba(0,0,0,0) 100%)"
-          }
+            "pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark"
         },
         [
-          _c("div", { staticClass: "py-20 px-6 sm:px-12 lg:px-20" }, [
-            _c(
-              "h1",
-              {
-                staticClass:
-                  "font-butlerregular text-white text-2xl sm:text-3xl md:text-7xl lg:text-5xl"
-              },
-              [_vm._v("\n                    Contact Us")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex pt-2" }, [
+          _c(
+            "h2",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"
+            },
+            [_vm._v(" Top Feature Blog")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5"
+            },
+            [
               _c(
-                "a",
-                {
-                  staticClass:
-                    "font-hkregular text-white text-base hover:text-primary transition-colors",
-                  attrs: { href: "/" }
-                },
-                [_vm._v("Home")]
+                "div",
+                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "block rounded-lg shadow border border-grey group",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _c("div", {
+                        staticClass:
+                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
+                        staticStyle: {
+                          "background-image": "url(./img/post-05.jpg)"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        _c("div", {
+                          staticClass:
+                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          staticStyle: {
+                            "background-image": "url(./img/blog-author.jpg)"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                          },
+                          [
+                            _c("span", [
+                              _vm._v("By "),
+                              _c("span", { staticClass: "font-hkbold" }, [
+                                _vm._v("Katherine S.")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("02 May 2019")])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                          _c(
+                            "h4",
+                            {
+                              staticClass:
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            },
+                            [
+                              _vm._v(
+                                "\n                                How to make the most of the rest of the year\n                            "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
+                            },
+                            [
+                              _vm._v(
+                                "Read\n                                more"
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
               ),
               _vm._v(" "),
               _c(
-                "span",
-                { staticClass: "font-hkregular text-white text-base px-2" },
-                [_vm._v(".")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                { staticClass: "font-hkregular text-white text-base" },
-                [_vm._v("Contact Us")]
+                "div",
+                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "block rounded-lg shadow border border-grey group",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _c("div", {
+                        staticClass:
+                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
+                        staticStyle: {
+                          "background-image": "url(./img/post-04.jpg)"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        _c("div", {
+                          staticClass:
+                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          staticStyle: {
+                            "background-image": "url(./img/blog-author.jpg)"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                          },
+                          [
+                            _c("span", [
+                              _vm._v("By "),
+                              _c("span", { staticClass: "font-hkbold" }, [
+                                _vm._v("Katherine S.")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("03 May 2019")])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                          _c(
+                            "h4",
+                            {
+                              staticClass:
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Looking forward: Planning for the winter’s outfits\n                            "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
+                            },
+                            [
+                              _vm._v(
+                                "Read\n                                more"
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
               )
-            ])
-          ])
+            ]
+          )
         ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "flex flex-col md:flex-row py-20 md:py-24" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          },
-          [
-            _c("div", [
-              _c("img", {
-                staticClass: "w-auto h-12",
-                attrs: {
-                  src:
-                    "https://d33wubrfki0l68.cloudfront.net/3c5b77be07c217ce310e179b30e44da59d358fb8/1fd98/assets/img/icons/icon-shipping.svg",
-                  alt: "icon"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
-              _c(
-                "h3",
-                {
-                  staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
-                },
-                [_vm._v("\n                    Free shipping")]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
-                },
-                [_vm._v("\n                    On all orders over $30")]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          },
-          [
-            _c("div", [
-              _c("img", {
-                staticClass: "w-auto h-12",
-                attrs: {
-                  src:
-                    "https://d33wubrfki0l68.cloudfront.net/2e7e83f4e008c5efc2301e9ca7dde06e98c9a2b3/0b6dc/assets/img/icons/icon-support.svg",
-                  alt: "icon"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
-              _c(
-                "h3",
-                {
-                  staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
-                },
-                [_vm._v("\n                    Always available")]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
-                },
-                [_vm._v("\n                    24/7 call center available")]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          },
-          [
-            _c("div", [
-              _c("img", {
-                staticClass: "w-auto h-12",
-                attrs: {
-                  src:
-                    "https://d33wubrfki0l68.cloudfront.net/c5fe62fc1adbb5e1e57a703b0f916a2ff38b4f77/efebf/assets/img/icons/icon-return.svg",
-                  alt: "icon"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
-              _c(
-                "h3",
-                {
-                  staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
-                },
-                [_vm._v("\n                    Free returns")]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
-                },
-                [_vm._v("\n                    30 days free return policy")]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "pb-16 md:pb-20 lg:pb-24 flex flex-col lg:flex-row justify-between"
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "w-full lg:w-3/8 xl:w-1/3 mx-auto lg:mx-0 border border-grey-darker shadow px-6 xl:px-8 py-10 lg:py-8 text-center lg:text-left"
-          },
-          [
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 flex flex-col lg:flex-row justify-between"
+        },
+        [
+          _c("div", { staticClass: "lg:w-2/3" }, [
             _c(
               "h2",
               {
                 staticClass:
-                  "font-butlerregular border-b border-grey-dark pb-6 text-secondary text-2xl sm:text-3xl md:text-4xl"
+                  "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center lg:text-left"
               },
-              [_vm._v("\n                Quick contact")]
+              [_vm._v("\n                Our Blog")]
             ),
             _vm._v(" "),
             _c(
-              "h4",
+              "a",
               {
                 staticClass:
-                  "font-hkbold text-secondary text-lg sm:text-xl uppercase pt-8"
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
               },
-              [_vm._v("\n                Email")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "font-hkregular text-secondary" }, [
-              _vm._v("information@elyssi.com\n            ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "h4",
-              {
-                staticClass:
-                  "font-hkbold text-secondary text-lg sm:text-xl uppercase pt-8"
-              },
-              [_vm._v("\n                Phone")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "font-hkregular text-secondary" }, [
-              _vm._v("+0 321-654-0987\n            ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "h4",
-              {
-                staticClass:
-                  "font-hkbold text-secondary text-lg sm:text-xl uppercase pt-8"
-              },
-              [_vm._v("\n                WORKING HOURS")]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              { staticClass: "font-hkbold text-secondary text-lg pt-3" },
-              [_vm._v("Summer\n            ")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "font-hkregular text-secondary" }, [
-              _c("span", { staticClass: "text-primary" }, [
-                _vm._v("(May to Nov) :")
-              ]),
-              _vm._v("\n                Mon - Sat: 9.00 to 18.00")
-            ]),
-            _vm._v(" "),
-            _c(
-              "p",
-              { staticClass: "font-hkbold text-secondary text-lg pt-3" },
-              [_vm._v("Winter\n            ")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "font-hkregular text-secondary" }, [
-              _c("span", { staticClass: "text-primary" }, [
-                _vm._v("(Dic to Apr) :")
-              ]),
-              _vm._v("\n                Mon - Sat: 9.00 to 17.00")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "pt-8" }, [
-              _c(
-                "h4",
-                {
+              [
+                _c("div", {
                   staticClass:
-                    "font-hkbold text-secondary text-lg sm:text-xl uppercase"
-                },
-                [_vm._v("\n                    Follow Us")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "flex justify-center lg:justify-start pt-3" },
-                [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "bg-secondary-lighter transition-colors hover:bg-primary p-3 rounded-full mr-2 flex items-center text-xl",
-                      attrs: { href: "/" }
-                    },
-                    [_c("i", { staticClass: "bx bxl-facebook text-white" })]
-                  ),
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
                   _vm._v(" "),
                   _c(
-                    "a",
+                    "div",
                     {
                       staticClass:
-                        "bg-secondary-lighter transition-colors hover:bg-primary p-3 rounded-full mr-2 flex items-center text-xl",
-                      attrs: { href: "/" }
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
                     },
-                    [_c("i", { staticClass: "bx bxl-twitter text-white" })]
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("02 May 2019")])
+                    ]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "bg-secondary-lighter transition-colors hover:bg-primary p-3 rounded-full mr-2 flex items-center text-xl",
-                      attrs: { href: "/" }
-                    },
-                    [_c("i", { staticClass: "bx bxl-google text-white" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "bg-secondary-lighter hover:bg-primary transition-colors p-3 rounded-full flex items-center text-xl",
-                      attrs: { href: "/" }
-                    },
-                    [_c("i", { staticClass: "bx bxl-linkedin text-white" })]
-                  )
-                ]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "lg:w-3/5 border border-grey-darker shadow px-8 py-10 lg:py-8 mt-10 md:mt-12 lg:mt-0"
-          },
-          [
-            _c("form", [
-              _c(
-                "p",
-                { staticClass: "font-hkregular text-secondary text-lg pb-8" },
-                [
-                  _vm._v(
-                    "\n                    Any questions? Contact us through whats app or on our contact from below."
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex flex-col sm:flex-row justify-between mb-5 -mx-5"
-                },
-                [
-                  _c("div", { staticClass: "sm:w-1/2 px-5 mb-8 sm:mb-0" }, [
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
                     _c(
-                      "label",
+                      "h4",
                       {
-                        staticClass: "font-hkregular text-secondary block mb-2",
-                        attrs: { for: "name" }
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
                       },
-                      [_vm._v("Name")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-input",
-                      attrs: {
-                        type: "text",
-                        placeholder: "Enter your name",
-                        id: "name"
-                      }
-                    })
+                      [
+                        _vm._v(
+                          "\n                            How to make the most of the rest of the year"
+                        )
+                      ]
+                    )
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
                     _c(
-                      "label",
+                      "p",
                       {
-                        staticClass: "font-hkregular text-secondary block mb-2",
-                        attrs: { for: "email" }
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
                       },
-                      [_vm._v("Email\n                            address")]
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
                     ),
                     _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-input",
-                      attrs: {
-                        type: "text",
-                        placeholder: "Enter your email",
-                        id: "email"
-                      }
-                    })
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
                   ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
+              },
+              [
+                _c("div", {
+                  staticClass:
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                    },
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("03 May 2019")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            3 top OOTD to play with while traveling!"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
+              },
+              [
+                _c("div", {
+                  staticClass:
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                    },
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("04 May 2019")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Looking forward: Planning for the winter’s outfits"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "pt-12 flex justify-center mx-auto" }, [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer"
+                },
+                [_vm._v("Previous")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+                },
+                [_vm._v("1")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+                },
+                [_vm._v("2")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer"
+                },
+                [_vm._v("3")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
+                },
+                [_vm._v("Next")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0"
+            },
+            [
+              _c(
+                "form",
+                { staticClass: "flex items-center w-full mb-16 relative" },
+                [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "block relative h-0 w-0 overflow-hidden",
+                      attrs: { for: "search_form" }
+                    },
+                    [_vm._v("Search")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass:
+                      "form-input   transition-all pr-10 text-grey-darkest text-base",
+                    attrs: {
+                      type: "text",
+                      id: "search_form",
+                      placeholder: "Search the Blog"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "focus:outline-none absolute right-0 top-0 mt-4 mr-3",
+                      attrs: { "aria-label": "Search button" }
+                    },
+                    [_c("i", { staticClass: "bx bx-search text-2xl" })]
+                  )
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "w-full mb-8" }, [
+              _c("div", { staticClass: "mb-16 text-center sm:text-left" }, [
                 _c(
-                  "label",
+                  "h4",
                   {
-                    staticClass: "font-hkregular text-secondary block mb-2",
-                    attrs: { for: "subject" }
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
                   },
-                  [_vm._v("Subject*")]
+                  [_vm._v("\n                    Recent Post")]
                 ),
                 _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-input",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter your subject",
-                    id: "subject"
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "w-full mb-8" }, [
                 _c(
-                  "label",
+                  "a",
                   {
-                    staticClass: "font-hkregular text-secondary block mb-2",
-                    attrs: { for: "message" }
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
                   },
-                  [_vm._v("Message*")]
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        How to make the most of the rest of the year"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        02 May 2019")]
+                    )
+                  ]
                 ),
                 _vm._v(" "),
-                _c("textarea", {
-                  staticClass: "form-textarea",
-                  attrs: {
-                    rows: "5",
-                    placeholder: "Enter your message",
-                    id: "message"
-                  }
-                })
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        3 top OOTD to play with while traveling!"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        03 May 2019")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Looking forward: Planning for the winter’s outfits"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        04 May 2019")]
+                    )
+                  ]
+                )
               ]),
               _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { "aria-label": "Submit button" }
-                },
-                [_vm._v("SUBMIT")]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-5/6 text-left" }, [
-      _c(
-        "span",
-        { staticClass: "font-hkmedium text-secondary md:text-lg uppercase" },
-        [
-          _vm._v(
-            "How many days does\n                                the product takes to arrive?"
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-5 md:px-8 py-5" }, [
-      _c(
-        "p",
-        {
-          staticClass:
-            "font-hkregular text-secondary text-sm leading-loose text-left"
-        },
-        [
-          _vm._v(
-            "\n                                It depends on the product, but it can take 3-5 days max."
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-5/6 text-left" }, [
-      _c(
-        "span",
-        { staticClass: "font-hkmedium text-secondary md:text-lg uppercase" },
-        [_vm._v("How much is\n                                shipping?")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-5 md:px-8 py-5" }, [
-      _c(
-        "p",
-        {
-          staticClass:
-            "font-hkregular text-secondary text-sm leading-loose text-left"
-        },
-        [
-          _vm._v(
-            "\n                                It depends on a lot of factors like where you're located and how many things\n                                you buy. We do have a free shipping special if you buy more than $50."
+              _c("div", { staticClass: "mb-16" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
+                  },
+                  [_vm._v("\n                    Categories")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Stylish Fashion\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("5")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Makeup Tips\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("23")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Traveling Tips\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("45")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Empowerment\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("65")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Instagram\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("32")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Skin Care\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("21")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Hair Care\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("2")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Coming up\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("11")]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center sm:text-left" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+                  },
+                  [_vm._v("\n                    Follow Us")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "flex justify-center sm:justify-start pt-8" },
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-facebook text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-twitter text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-instagram text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-pinterest text-white" })]
+                    )
+                  ]
+                )
+              ])
+            ]
           )
         ]
       )
@@ -1185,17 +1850,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue":
-/*!*********************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue ***!
-  \*********************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contact.vue?vue&type=template&id=3cf07014& */ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&");
-/* harmony import */ var _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Blog.vue?vue&type=template&id=491133b4& */ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&");
+/* harmony import */ var _Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Blog.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1205,9 +1870,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1217,38 +1882,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/contact/Contact.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/blog/Blog.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Blog.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014& ***!
-  \****************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4& ***!
+  \**********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=template&id=3cf07014& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/contact/Contact.vue?vue&type=template&id=3cf07014&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Blog.vue?vue&type=template&id=491133b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog/Blog.vue?vue&type=template&id=491133b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_3cf07014___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Blog_vue_vue_type_template_id_491133b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

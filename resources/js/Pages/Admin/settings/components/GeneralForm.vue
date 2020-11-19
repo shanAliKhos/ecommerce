@@ -10,33 +10,101 @@
         </template>
 
         <template #form>       
+            
+          
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="site_name">site_name</label>
-                <input v-model="form.site_name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="site_name" name="site_name" type="text"  placeholder="site_name" aria-label="site_name">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.site_name">{{$page.errors.site_name}}</p>
-            </div>
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="site_title">site_title</label>
-                <input v-model="form.site_title" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="site_title" name="site_title" type="text"  placeholder="site_title" aria-label="site_title">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.site_title">{{$page.errors.site_title}}</p>
-            </div>
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="default_email_address">default_email_address</label>
-                <input v-model="form.default_email_address" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="default_email_address" name="default_email_address" type="text"  placeholder="default_email_address" aria-label="default_email_address">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.default_email_address">{{$page.errors.default_email_address}}</p>
-            </div>
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="currency_code">currency_code</label>
-                <input v-model="form.currency_code" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="currency_code" name="currency_code" type="text"  placeholder="currency_code" aria-label="currency_code">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.currency_code">{{$page.errors.currency_code}}</p>
-            </div>
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="currency_symbol">currency_symbol</label>
-                <input v-model="form.currency_symbol" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="currency_symbol" name="currency_symbol" type="text"  placeholder="currency_symbol" aria-label="currency_symbol">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.currency_symbol">{{$page.errors.currency_symbol}}</p>
-            </div>
- 
+            <div class="col-span-6 sm:col-span-3 mt-1 block w-full">
+                <file-input 
+                    v-model="form.site_logo" 
+                    :error="$page.errors.site_logo" 
+                    class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
+                    type="file" 
+                    accept="image/*" 
+                    label="Site Logo" 
+                    :preview="true"
+                    :preview_img="form.site_logo" 
+                    :defualt_preview_img="'Site Logo'" 
+                />                        
+            </div>            
+
+            <div class="col-span-6 sm:col-span-3 mt-1 block w-full">
+                <file-input 
+                    v-model="form.site_favicon" 
+                    :error="$page.errors.site_favicon" 
+                    class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
+                    type="file" 
+                    accept="image/*" 
+                    label="Site Favicon" 
+                    :preview="true"
+                    :preview_img="form.site_favicon" 
+                    :defualt_preview_img="'Site Favicon'" 
+
+                />                                
+            </div>      
+
+            <text-input 
+                id="site_name" 
+                type="text" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full" 
+                v-model="form.site_name" 
+                autocomplete="site_name" 
+                :error="$page.errors.site_name"
+                label='site_name'    
+                :labelRequire='true'    
+                placeholder="site_name" 
+            aria-label="site_name"/>       
+
+            <text-input 
+                id="site_title" 
+                type="text" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full" 
+                v-model="form.site_title" 
+                autocomplete="site_title" 
+                :error="$page.errors.site_title"
+                label='site_title'    
+                :labelRequire='true'    
+                placeholder="site_title" 
+            aria-label="site_title"/>                        
+
+
+            <text-input 
+                id="currency_code" 
+                type="text" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full" 
+                v-model="form.currency_code" 
+                autocomplete="currency_codeite_name" 
+                :error="$page.errors.currency_codename"
+                label='currency_code'    
+                :labelRequire='true'    
+                placeholder="currency_codename" 
+            aria-label="currency_code"/>            
+
+            <text-input 
+                id="currency_symbol" 
+                type="text" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full" 
+                v-model="form.currency_symbol" 
+                autocomplete="currency_symbole_name" 
+                :error="$page.errors.currency_symbolme"
+                label='currency_symbol'    
+                :labelRequire='true'    
+                placeholder="currency_symbolme" 
+            aria-label="currency_symbol"/>            
+
+
+            <text-input 
+                id="default_email_address" 
+                type="email" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.default_email_address" 
+                autocomplete="default_email_address" 
+                :error="$page.errors.default_email_address"
+                label='default_email_address'    
+                :labelRequire='true'    
+                placeholder="default_email_address" 
+            aria-label="default_email_address"/>            
+
+          
  
         </template>
 
@@ -60,20 +128,20 @@
 
 </template>
 <script>
+import FormSection from './../../../Shared/FormSection'   
+import FileInput from './../../../Shared/FileInput'   
 import TextInput from './../../../Shared/TextInput'   
 import LoadingButton from './../../../Shared/LoadingButton' 
-import FormSection from './../../../Shared/FormSection'   
 
 export default {
     components:{
+        FormSection,
+        FileInput,
         TextInput,
         LoadingButton,
-        FormSection,
     },
     props:{
         settings:Object,
-        sending:Boolean,
-
     },    
     data() {
         return {
@@ -83,7 +151,10 @@ export default {
                 default_email_address:this.settings.default_email_address,
                 currency_code:this.settings.currency_code,
                 currency_symbol:this.settings.currency_symbol,
-            }
+                site_logo:this.settings.site_logo?this.settings.site_logo:null,
+                site_favicon:this.settings.site_favicon?this.settings.site_favicon:null,                 
+            },
+            sending:false,
         };
     },
     methods: {
@@ -95,9 +166,15 @@ export default {
             formData.append("default_email_address", self.form.default_email_address || '')
             formData.append("currency_code", self.form.currency_code || '')
             formData.append("currency_symbol", self.form.currency_symbol || '')
+            formData.append('site_logo', self.form.site_logo || '')
+            formData.append('site_favicon', self.form.site_favicon || '')            
             formData.append('_method', 'put')
             self.$emit('form-is-updated',formData)
+            this.sending=true;
         },
+    },
+    mounted() {
+        this.$root.$on('sending-finished',()=>this.sending=false );
     },
 }
 </script>

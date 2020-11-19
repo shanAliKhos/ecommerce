@@ -11,29 +11,59 @@
 
         <template #form>       
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="social_facebook">social_facebook</label>
-                <input v-model="form.social_facebook" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="social_facebook" name="social_facebook" type="text"  placeholder="social_facebook" aria-label="social_facebook">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.social_facebook">{{$page.errors.social_facebook}}</p>
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="social_twitter">social_twitter</label>
-                <input v-model="form.social_twitter" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="social_twitter" name="social_twitter" type="text"  placeholder="social_twitter" aria-label="social_twitter">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.social_twitter">{{$page.errors.social_twitter}}</p>
-            </div>
+            <text-input 
+                id="social_facebook" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.social_facebook" 
+                autocomplete="social_facebook" 
+                :error="$page.errors.social_facebook"
+                label='social_facebook'    
+                :labelRequire='true'    
+                placeholder="social_facebook" 
+            aria-label="social_facebook"/>                            
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="social_instagram">social_instagram</label>
-                <input v-model="form.social_instagram" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="social_instagram" name="social_instagram" type="text"  placeholder="social_instagram" aria-label="social_instagram">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.social_instagram">{{$page.errors.social_instagram}}</p>
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="social_linkedin">social_linkedin</label>
-                <input v-model="form.social_linkedin" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="social_linkedin" name="social_linkedin" type="text"  placeholder="social_linkedin" aria-label="social_linkedin">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.social_linkedin">{{$page.errors.social_linkedin}}</p>
-            </div>                                            
+            <text-input 
+                id="social_twitter" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.social_twitter" 
+                autocomplete="social_twitter" 
+                :error="$page.errors.social_twitter"
+                label='social_twitter'    
+                :labelRequire='true'    
+                placeholder="social_twitter" 
+            aria-label="social_twitter"/>                            
+
+
+            <text-input 
+                id="social_instagram" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.social_instagram" 
+                autocomplete="social_instagram" 
+                :error="$page.errors.social_instagram"
+                label='social_instagram'    
+                :labelRequire='true'    
+                placeholder="social_instagram" 
+            aria-label="social_instagram"/>                            
+
+
+            <text-input 
+                id="social_linkedin" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.social_linkedin" 
+                autocomplete="social_linkedin" 
+                :error="$page.errors.social_linkedin"
+                label='social_linkedin'    
+                :labelRequire='true'    
+                placeholder="social_linkedin" 
+            aria-label="social_linkedin"/>                            
+
+
  
         </template>
 
@@ -50,40 +80,7 @@
        
  
         </template>
-    </form-section>   
-
-<!-- <div class="tile">
-    <form @submit.prevent="update()">    
-        <h3 class="tile-title">Social Links</h3>
-        <hr>
-        <div class="tile-body">
-
-            <text-input 
-            v-model="form.social_facebook" :error="$page.errors.social_facebook" 
-            class="form-group" label="Facebook Profile" placeholder="Enter facebook profile link" />        
-     
-            <text-input 
-            v-model="form.social_twitter" :error="$page.errors.social_twitter" 
-            class="form-group" label="Twitter Profile" placeholder="Enter twitter profile link" />        
-             
-            <text-input 
-            v-model="form.social_instagram" :error="$page.errors.social_instagram" 
-            class="form-group" label="Instagram Profile" placeholder="Enter instagram profile link" />        
-      
-            <text-input 
-            v-model="form.social_linkedin" :error="$page.errors.social_linkedin" 
-            class="form-group" label="LinkedIn Profile" placeholder="Enter linkedin profile link" />        
-         
-        </div>
-        <div class="tile-footer">
-            <div class="row d-print-none mt-2">
-                <div class="col-12 text-right">
-                    <loading-button :loading="sending" class="btn btn-primary" type="submit">Update Settings</loading-button>
-                </div>
-            </div>
-        </div>
-    </form>
-</div> -->
+    </form-section>    
 </template>
 <script> 
 import TextInput from './../../../Shared/TextInput'   
@@ -98,8 +95,7 @@ export default {
         FormSection,
     },
     props:{
-        settings:Object,
-        sending:Boolean,
+        settings:Object, 
     },    
     data() {
         return {
@@ -108,7 +104,9 @@ export default {
                 social_twitter:this.settings.social_twitter,
                 social_instagram:this.settings.social_instagram,
                 social_linkedin:this.settings.social_linkedin, 
-            }
+            },
+            sending:false,
+
         };
     },
     methods: {
@@ -123,8 +121,13 @@ export default {
             formData.append('_method', 'put');
 
             self.$emit('form-is-updated',formData)
+            this.sending=true;
+
         },
     },
+    mounted() {
+        this.$root.$on('sending-finished',()=>this.sending=false );
+    },    
 }
 </script>
 

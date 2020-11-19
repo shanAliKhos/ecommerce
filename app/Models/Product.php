@@ -10,6 +10,10 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected function defaultPhotoUrl()
+    {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
+    }
 
     protected $fillable = [
         'brand_id', 'sku', 'name', 'slug', 'description', 'quantity','image',

@@ -1,5 +1,158 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[73],{
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+/* harmony import */ var _YourOrder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YourOrder */ "./resources/js/Pages/Ecomerce/checkout/YourOrder.vue");
+/* harmony import */ var _PaymentForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentForm */ "./resources/js/Pages/Ecomerce/checkout/PaymentForm.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
+  components: {
+    YourOrder: _YourOrder__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PaymentForm: _PaymentForm__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    return {
+      form: {},
+      sending: false
+    };
+  },
+  methods: {
+    store: function store() {
+      var _this = this;
+
+      var self = this;
+      var formData = new FormData();
+      formData.append("code", self.form.code || '');
+      formData.append("name", self.form.name || '');
+      formData.append("frontend_type", self.form.frontend_type || '');
+      formData.append("is_required", self.form.is_required || '');
+      formData.append("is_filterable", self.form.is_filterable || '');
+      self.$inertia.post(this.route('cart.CustomerInfomationStore'), formData, {
+        preserveState: true,
+        preserveScroll: true,
+        onStart: function onStart() {
+          return _this.sending = true;
+        },
+        onFinish: function onFinish() {
+          return _this.sending = false;
+        },
+        onSuccess: function onSuccess() {
+          if (Object.keys(_this.$page.errors).length === 0) {
+            _this.form.name = null;
+            _this.form.logo = null;
+          }
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AppLayout.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/AppLayout.vue?vue&type=script&lang=js& ***!
@@ -90,198 +243,364 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
-/* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartItem */ "./resources/js/Pages/Ecomerce/shopping-cart/CartItem.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
- // import BreadCrumb from './../components/BreadCrumb' 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'Shopping-cart'
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container border-t border-grey-dark" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "flex flex-col lg:flex-row justify-between items-center pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24"
+      },
+      [
+        _c("div", { staticClass: "lg:w-2/3 lg:pr-16 xl:pr-20" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "pt-4 pb-10" }, [
+            _c(
+              "h4",
+              {
+                staticClass:
+                  "font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
+              },
+              [
+                _vm._v(
+                  "\n                    Shipping address\n                "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "flex flex-col sm:flex-row justify-between items-center pt-8 sm:pt-12"
+              },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all",
+                    attrs: {
+                      "preserve-scroll": "",
+                      href: _vm.route("cart.index")
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass:
+                        "bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
+                    }),
+                    _vm._v(
+                      "\n                        Return to Cart\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { href: "/cart/shipping-method" }
+                  },
+                  [_vm._v("Continue to shipping method")]
+                )
+              ],
+              1
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("your-order")
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+          attrs: { href: "/cart/" }
+        },
+        [_vm._v("Cart")]
+      ),
+      _vm._v(" "),
+      _c("i", {
+        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass:
+            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
+          attrs: { href: "/cart/customer-info" }
+        },
+        [_vm._v("Customer information")]
+      ),
+      _vm._v(" "),
+      _c("i", {
+        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass:
+            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+          attrs: { href: "/cart/shipping-method" }
+        },
+        [_vm._v("Shipping method")]
+      ),
+      _vm._v(" "),
+      _c("i", {
+        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass:
+            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
+          attrs: { href: "/cart/payment-method" }
+        },
+        [_vm._v("Payment method")]
+      ),
+      _vm._v(" "),
+      _c("i", {
+        staticClass: "bx bx-chevron-right text-sm text-transparent px-2"
+      })
+    ])
   },
-  components: {
-    CartItem: _CartItem__WEBPACK_IMPORTED_MODULE_1__["default"]
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pt-10 md:pt-12" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex flex-col-reverse sm:flex-row items-center justify-between"
+        },
+        [
+          _c(
+            "h1",
+            { staticClass: "font-hkmedium text-secondary text-xl md:text-2xl" },
+            [_vm._v(" Contact information ")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "pt-4 md:pt-5" }, [
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "email" }
+          },
+          [_vm._v("Email")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-input",
+          attrs: {
+            type: "email",
+            placeholder: "Enter your email address",
+            id: "email"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex items-center pt-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block relative h-0 w-0 overflow-hidden",
+              attrs: { for: "offers" }
+            },
+            [_vm._v("Sign up to exclusive offers")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-checkbox",
+            attrs: { type: "checkbox", id: "offers" }
+          }),
+          _vm._v(" "),
+          _c(
+            "p",
+            { staticClass: "font-hkregular text-sm pl-3 text-secondary" },
+            [
+              _vm._v(
+                "\n                            Keep me up to date on news and exclusive offers\n                        "
+              )
+            ]
+          )
+        ])
+      ])
+    ])
   },
-  data: function data() {
-    return {
-      TotalPrice: 0,
-      SubTotalPrice: 0
-    };
-  },
-  methods: {
-    update: function update() {
-      self = this;
-      this.$root.$emit('update-cart', self.CartItems);
-    }
-  },
-  computed: {
-    CartItems: function CartItems() {
-      return this.$page.Cart.Items;
-    },
-    CountCartItems: function CountCartItems() {
-      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
-      }, 0) : 0;
-      return Qty;
-    },
-    CartTotalPrice: function CartTotalPrice() {
-      var sum = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-        return TotalPrice + Item.Qty * Item.price;
-      }, 0) : 0;
-      return sum;
-    }
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pt-4 md:pt-5" }, [
+      _c("div", { staticClass: "flex justify-between" }, [
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "first_name" }
+          },
+          [_vm._v("First\n                            Name")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-input mb-4 sm:mb-5 mr-2",
+          attrs: { type: "text", placeholder: "First Name", id: "first_name" }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "last_name" }
+          },
+          [_vm._v("Last\n                            Name")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-input mb-4 sm:mb-5 ml-1",
+          attrs: { type: "text", placeholder: "Last Name", id: "last_name" }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "label",
+        {
+          staticClass: "block relative h-0 w-0 overflow-hidden",
+          attrs: { for: "address" }
+        },
+        [_vm._v("Address")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-input mb-4 sm:mb-5",
+        attrs: { type: "text", placeholder: "You address", id: "address" }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        {
+          staticClass: "block relative h-0 w-0 overflow-hidden",
+          attrs: { for: "address2" }
+        },
+        [_vm._v("Address 2")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-input mb-4 sm:mb-5",
+        attrs: {
+          type: "text",
+          placeholder: "Apartment, Suite, etc",
+          id: "address2"
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        {
+          staticClass: "block relative h-0 w-0 overflow-hidden",
+          attrs: { for: "city" }
+        },
+        [_vm._v("City")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-input mb-4 sm:mb-5",
+        attrs: { type: "text", placeholder: "City", id: "city" }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-between" }, [
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "country" }
+          },
+          [_vm._v("Country")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-input mb-4 sm:mb-5 mr-2",
+          attrs: { type: "text", placeholder: "Country/Region", id: "country" }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "post_code" }
+          },
+          [_vm._v("Post code")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-input mb-4 sm:mb-5 ml-1",
+          attrs: { type: "number", placeholder: "Post code", id: "post_code" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex items-center pt-2" }, [
+        _c(
+          "label",
+          {
+            staticClass: "block relative h-0 w-0 overflow-hidden",
+            attrs: { for: "save_info" }
+          },
+          [_vm._v("Save Info")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-checkbox",
+          attrs: { type: "checkbox", id: "save_info" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-hkregular text-sm pl-3 text-secondary" }, [
+          _vm._v(" Save this information for next time ")
+        ])
+      ])
+    ])
   }
-});
+]
+render._withStripped = true
+
+
 
 /***/ }),
 
@@ -347,178 +666,70 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46&":
-/*!*********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46& ***!
-  \*********************************************************************************************************************************************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CustomerInformation.vue?vue&type=template&id=40cf4c70& */ "./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70&");
+/* harmony import */ var _CustomerInformation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CustomerInformation.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CustomerInformation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomerInformation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CustomerInformation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomerInformation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70& ***!
+  \*****************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("section", { staticClass: "shoping-cart spad" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c(
-              "div",
-              { staticClass: "shoping__cart__btns" },
-              [
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "primary-btn cart-btn",
-                    attrs: { href: _vm.$route("shop") }
-                  },
-                  [_vm._v("CONTINUE SHOPPING\n                        ")]
-                ),
-                _vm._v(" "),
-                (_vm.CartItems
-                ? _vm.CartItems.length
-                : false)
-                  ? _c(
-                      "inertia-link",
-                      {
-                        staticClass: "primary-btn cart-btn cart-btn-right",
-                        attrs: {
-                          href: _vm.$route("cart.flush"),
-                          "preserve-state": "",
-                          "preserve-scroll": "",
-                          method: "post"
-                        }
-                      },
-                      [_c("span", {}, [_vm._v("Empty Cart")])]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "shoping__cart__table" }, [
-              _c("table", [
-                _vm._m(0),
-                _vm._v(" "),
-                _c(
-                  "tbody",
-                  _vm._l(_vm.CartItems, function(CartItem, CartItemindex) {
-                    return _c("cart-item", {
-                      key: CartItemindex,
-                      attrs: { CartItem: CartItem, cartindex: CartItemindex },
-                      on: {
-                        "update-this-item": function($event) {
-                          return _vm.update()
-                        }
-                      }
-                    })
-                  }),
-                  1
-                )
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "div",
-              { staticClass: "shoping__checkout" },
-              [
-                _c("h5", [_vm._v("Cart Total")]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _vm._v("Subtotal "),
-                    _c("span", [_vm._v("$" + _vm._s(_vm.CartTotalPrice))])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _vm._v("Total "),
-                    _c("span", [_vm._v("$" + _vm._s(_vm.CartTotalPrice))])
-                  ])
-                ]),
-                _vm._v(" "),
-                (_vm.CartItems
-                ? _vm.CartItems.length
-                : false)
-                  ? _c(
-                      "inertia-link",
-                      {
-                        staticClass: "primary-btn",
-                        attrs: { href: _vm.$route("checkout.index") }
-                      },
-                      [_vm._v("PROCEED TO CHECKOUT")]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ])
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", { staticClass: "shoping__product" }, [_vm._v("Products")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Price")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Quantity")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Total")]),
-        _vm._v(" "),
-        _c("th")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-6" }, [
-      _c("div", { staticClass: "shoping__continue" }, [
-        _c("div", { staticClass: "shoping__discount" }, [
-          _c("h5", [_vm._v("Discount Codes")]),
-          _vm._v(" "),
-          _c("form", { attrs: { action: "#" } }, [
-            _c("input", {
-              attrs: { type: "text", placeholder: "Enter your coupon code" }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "site-btn", attrs: { type: "submit" } },
-              [_vm._v("APPLY COUPON")]
-            )
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CustomerInformation.vue?vue&type=template&id=40cf4c70& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/checkout/CustomerInformation.vue?vue&type=template&id=40cf4c70&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomerInformation_vue_vue_type_template_id_40cf4c70___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -657,75 +868,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FlashMessage_vue_vue_type_template_id_8bf7123c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FlashMessage_vue_vue_type_template_id_8bf7123c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue":
-/*!********************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShoppingCart.vue?vue&type=template&id=4f6c3e46& */ "./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46&");
-/* harmony import */ var _ShoppingCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShoppingCart.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ShoppingCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShoppingCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ShoppingCart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShoppingCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46& ***!
-  \***************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ShoppingCart.vue?vue&type=template&id=4f6c3e46& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shopping-cart/ShoppingCart.vue?vue&type=template&id=4f6c3e46&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShoppingCart_vue_vue_type_template_id_4f6c3e46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

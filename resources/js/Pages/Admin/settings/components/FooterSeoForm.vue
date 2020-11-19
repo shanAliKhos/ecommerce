@@ -11,25 +11,44 @@
 
         <template #form>       
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="footer_copyright_text">footer_copyright_text</label>
-                <input v-model="form.footer_copyright_text" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="footer_copyright_text" name="footer_copyright_text" type="text"  placeholder="footer copyright text" aria-label="footer_copyright_text">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.footer_copyright_text">{{$page.errors.footer_copyright_text}}</p>
-            </div>
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="seo_meta_title">seo_meta_title</label>
-                <input v-model="form.seo_meta_title" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="seo_meta_title" name="seo_meta_title" type="text"  placeholder="seo_meta_title" aria-label="seo_meta_title">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.seo_meta_title">{{$page.errors.seo_meta_title}}</p>
-            </div>
+            <text-input 
+                id="footer_copyright_text" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.footer_copyright_text" 
+                autocomplete="footer_copyright_text" 
+                :error="$page.errors.footer_copyright_text"
+                label='footer_copyright_text'    
+                :labelRequire='true'    
+                placeholder="footer_copyright_text" 
+            aria-label="footer_copyright_text"/>    
 
-            <div class="col-span-6 sm:col-span-4 mt-1 block w-full">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="seo_meta_description">seo_meta_description</label>
-                <input v-model="form.seo_meta_description" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="seo_meta_description" name="seo_meta_description" type="text"  placeholder="seo_meta_description" aria-label="seo_meta_description">
-                <p class="text-red-500 text-xs italic" v-if="$page.errors.seo_meta_description">{{$page.errors.seo_meta_description}}</p>
-            </div>
+            <text-input 
+                id="seo_meta_title" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.seo_meta_title" 
+                autocomplete="seo_meta_title" 
+                :error="$page.errors.seo_meta_title"
+                label='seo_meta_title'    
+                :labelRequire='true'    
+                placeholder="seo_meta_title" 
+            aria-label="seo_meta_title"/>    
+            
+            <text-input 
+                id="seo_meta_description" 
+                type="text" 
+                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                v-model="form.seo_meta_description" 
+                autocomplete="seo_meta_description" 
+                :error="$page.errors.seo_meta_description"
+                label='seo_meta_description'    
+                :labelRequire='true'    
+                placeholder="seo_meta_description" 
+            aria-label="seo_meta_description"/>                            
 
-
+ 
  
         </template>
 
@@ -62,9 +81,7 @@ export default {
         FormSection
     },
     props:{
-        settings:Object,
-        sending:Boolean,
-
+        settings:Object,  
     },    
     data() {
         return {
@@ -72,7 +89,9 @@ export default {
                 footer_copyright_text:this.settings.footer_copyright_text,
                 seo_meta_title:this.settings.seo_meta_title,
                 seo_meta_description:this.settings.seo_meta_description, 
-            }
+            },
+            sending:false,
+
         };
     },
     methods: {
@@ -84,8 +103,13 @@ export default {
             formData.append("seo_meta_description", self.form.seo_meta_description || '')
             formData.append('_method', 'put')
             self.$emit('form-is-updated',formData)
+            this.sending=true;
+
         },
     },
+    mounted() {
+        this.$root.$on('sending-finished',()=>this.sending=false );
+    },    
 }
 </script>
 

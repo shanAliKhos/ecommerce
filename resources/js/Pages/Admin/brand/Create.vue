@@ -24,41 +24,59 @@
     </nav>
     <p class="text-xl pb-6 flex items-center">Create Brand</p>        
     <div class="flex justify-center">
-        <div class="w-full lg:w-1/2 pl-0 lg:pl-2">
+        <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
 
                 <form @submit.prevent="store"  class="p-10 bg-white rounded shadow-xl">
                     <p class="text-lg text-gray-800 font-medium pb-4">Brand information</p>
 
+                    <div class="flex flex-wrap -mx-3 mb-2">
+             
+                        <div class="w-full md:w-1/2 px-3  md:mb-0">
 
-                    <div class="">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 mt-2" for="Name">Name</label>
-                        <input v-model="form.name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text"  placeholder="Name" aria-label="Name">
-                        <p class="text-red-500 text-xs italic" v-if="$page.errors.name">{{$page.errors.name}}</p>
-                    </div>
+                            <div class="mt-2">
+                                <file-input 
+                                v-model="form.logo" 
+                                :defualt_preview_img="form.logo" 
+                                :error="$page.errors.logo" 
+                                class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
+                                type="file" 
+                                accept="image/*" 
+                                label="Logo" 
+                                :preview="true"/>
+                            </div>                                  
+                            
+                        </div>  
 
-                    <div class="mt-2">
-                        <file-input 
-                            v-model="form.logo" 
-                            :error="$page.errors.logo" 
-                            class="pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" 
-                            type="file" 
-                            accept="image/*" 
-                            label="MainImage" 
-                            :preview="true"/>
-                    </div>
-                    
-              
-                    <div class="mt-6">
+                        <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        
+                            <text-input 
+                                id="name" 
+                                type="text" 
+                                class="w-full " 
+                                v-model="form.name" 
+                                autocomplete="name" 
+                                :error="$page.errors.name"
+                                label='Name'    
+                                :labelRequire='true'    
+                                 placeholder="Name" 
+                            aria-label="Name"/>
+ 
+                        </div>      
 
-                        <loading-button :loading="sending" class="transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
-                            Save
-                                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>                
-                        </loading-button>                                             
-                    </div>                    
-                    
+                    </div>   
+
+        
+
+                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
+                            <span>Save</span>
+                            <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>                
+                        </loading-button>          
+                    </div>                          
+ 
                 </form> 
 
             </div>
@@ -68,7 +86,8 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
-import FileInput from './../../Shared/FileInput'   
+import FileInput from './../../Shared/FileInput' 
+import TextInput from './../../Shared/TextInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
@@ -78,6 +97,7 @@ export default {
     remember: 'form',
     components:{
         FileInput,
+        TextInput,
         LoadingButton,
     },
     data() {

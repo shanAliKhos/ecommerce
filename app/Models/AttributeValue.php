@@ -20,6 +20,11 @@ class AttributeValue extends Model
         'attribute_id'  =>  'integer',
     ];
 
+    protected function defaultPhotoUrl()
+    {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->value).'&color=7F9CF5&background=EBF4FF';
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

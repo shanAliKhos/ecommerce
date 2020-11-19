@@ -22,6 +22,11 @@ class Category extends Model
         'menu'      =>  'boolean',
         'is_active' => 'boolean',
     ];
+
+    protected function defaultPhotoUrl()
+    {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
+    }
  
     public function setNameAttribute($value)
     {

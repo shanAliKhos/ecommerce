@@ -31,6 +31,7 @@
         <table class="border-collapse w-full ">
             <thead>
                 <tr> 
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">IMAGE</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">NAME</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SLUG</th>
@@ -44,6 +45,15 @@
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
                          <p class="py-5  lg:p-1 ">{{ (index+1) }}</p>
                     </td>
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                        <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">IMAGE</p>
+
+                        <div class="flex items-center py-5  lg:p-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-10 w-10 rounded-full" :src="Image(Brand)" alt="">
+                            </div> 
+                        </div>             
+                    </td>                    
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
                          <p class="py-5  lg:p-1 ">{{ Brand.name }}</p>
@@ -117,16 +127,21 @@ export default {
             })                
          
         },   
-        ProductImage(image){
+        Image(item){
             self = this ;
-            var  img = (image)?'/'+image.replace("public", "storage"):'/'+image;
+            var  img = (item.logo)?'/'+item.logo.replace("public", "storage"):this.defaultPhotoUrl(item.name);
             return img;      
         },             
+        defaultPhotoUrl(text)
+        {
+            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
+        },        
     },
     computed: {
         Brands(){
             return this.$page.Brands.data;
-        }
+        },
+           
     },
 
 }
