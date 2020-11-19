@@ -1,21 +1,10 @@
 <template>
-    <inertia-link preserve-scroll :href="route('cart.index')"
-        class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group">
-        <img src="https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg"
-            class="w-8 h-8 block group-hover:hidden" alt="icon cart" />
-        <img src="https://d33wubrfki0l68.cloudfront.net/bcbeda5344e5934d7eaa7a3e7f6e86b78d79755b/6df24/assets/img/icons/icon-cart-hover.svg"
-            class="w-8 h-8 hidden group-hover:block" alt="icon cart hover" />
-            <span class="text-white border-2 border-white shadow  absolute py-auto  px-2 my-0 mx-1 rounded-full"
-            :class="{'bg-v-green':CountCartItems>0,'bg-red-400':CountCartItems === 0 }"
-            >{{CountCartItems}}</span>
+    <inertia-link preserve-scroll :href="route('cart.index')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group">
+
+        <span class="transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  w-8 h-8 block hover:bg-icon-cart-hover"></span>
+        <span class="text-white border-2 border-white shadow  absolute py-auto  px-2 my-0 mx-1 rounded-full" :class="{'bg-v-green':CountCartItems>0,'bg-red-400':CountCartItems === 0 }" >{{CountCartItems}}</span>
+
     </inertia-link>
-    <!-- <div class="header__cart">
-        <ul>
-            <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-            <li><inertia-link :href="$route('cart.show','show')"><i class="fa fa-shopping-bag "></i> <span syle="font-size:20px;" >{{CountCartItems}}</span></inertia-link></li>
-        </ul>
-        <div class="header__cart__price"><span > item: ${{ CartTotalPrice }}</span></div>
-    </div> -->
 </template>
 <script>
 export default {

@@ -53,31 +53,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   data: function data() {
@@ -1081,13 +1056,7 @@ var render = function() {
                         "font-hkbold text-sm uppercase tracking-wide",
                       class: _vm.Label.Color
                     },
-                    [
-                      _vm._v(
-                        "\n                " +
-                          _vm._s(_vm.Label.Title) +
-                          "\n            "
-                      )
-                    ]
+                    [_vm._v(" " + _vm._s(_vm.Label.Title))]
                   )
                 ]
               )
@@ -1118,13 +1087,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("img", {
-                    staticClass: "h-6 w-6",
-                    attrs: {
-                      src:
-                        "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                      alt: "icon cart"
-                    }
+                  _c("span", {
+                    staticClass:
+                      "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
                   })
                 ]
               ),
@@ -1166,18 +1131,18 @@ var render = function() {
                 _c(
                   "p",
                   { staticClass: "font-hkregular text-sm text-secondary ml-2" },
-                  [_vm._v("\n                        (45)")]
+                  [_vm._v("\r\n                        (45)")]
                 )
               ])
             ]),
             _vm._v(" "),
             _c("span", { staticClass: "font-hkbold text-primary text-md" }, [
               _vm._v(
-                "\n                " +
+                "\r\n                " +
                   _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
                   " " +
                   _vm._s(_vm.CurrentPrice) +
-                  " \n            "
+                  " \r\n            "
               )
             ])
           ])
@@ -1197,16 +1162,11 @@ var staticRenderFns = [
       {
         staticClass:
           "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
-        attrs: { href: "/account/wishlist/" }
+        attrs: { href: "javascript:;" }
       },
       [
-        _c("img", {
-          staticClass: "h-6 w-6",
-          attrs: {
-            src:
-              "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-            alt: "icon heart"
-          }
+        _c("span", {
+          staticClass: "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
         })
       ]
     )

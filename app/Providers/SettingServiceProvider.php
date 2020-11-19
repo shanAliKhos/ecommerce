@@ -29,7 +29,6 @@ class SettingServiceProvider extends ServiceProvider
             });
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('Setting', Setting::class);
-    
         }
     }
 

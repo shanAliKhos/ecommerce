@@ -1,6 +1,6 @@
 <template>
     <div class="w-full relative">
-        <div class="absolute inset-y-0 right-0 w-13/14 bg-center bg-no-repeat bg-cover" style="background-image:url(./img/bg-products.png)"></div>
+        <div class="absolute inset-y-0 right-0 w-13/14 bg-center bg-no-repeat bg-cover bg-products-bg"></div>
         <div class="w-2/3 md:max-w-screen-sm lg:w-5/6 lg:max-w-full xl:w-5/6 xxl:max-w-screen-xxl mx-auto lg:ml-auto lg:mr-10 xl:mr-16 xxl:mx-auto relative z-10">
           
             <div class="py-16 flex">

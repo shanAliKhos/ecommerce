@@ -2,7 +2,7 @@
 <div class="shop-section">
     <div class="container">
         
-        <div class="flex relative">
+        <!-- <div class="flex relative">
             <div class="bg-no-repeat bg-cover bg-center w-3/4 ml-auto h-56 sm:h-64 md:h-68"
                 style="background-image:url(./img/hero-image-04.jpg)">
             </div>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="py-10 flex flex-col sm:flex-row justify-between">
             <div class="flex items-center justify-center sm:justify-start">

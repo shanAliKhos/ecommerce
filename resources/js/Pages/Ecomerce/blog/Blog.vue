@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <div class="flex relative">
+    <!-- <div class="flex relative">
         <div class="bg-no-repeat bg-cover bg-center w-3/4 ml-auto h-56 sm:h-64 md:h-68"
             style="background-image:url(./img/hero-image-01.jpg)">
         </div>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark">
         <h2 class="font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"> Top Feature Blog</h2>

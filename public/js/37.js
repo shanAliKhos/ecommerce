@@ -1072,8 +1072,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "w-full relative" }, [
       _c("div", {
         staticClass:
-          "absolute inset-y-0 right-0 w-13/14 bg-center bg-no-repeat bg-cover",
-        staticStyle: { "background-image": "url(./img/bg-products.png)" }
+          "absolute inset-y-0 right-0 w-13/14 bg-center bg-no-repeat bg-cover bg-products-bg"
       }),
       _vm._v(" "),
       _c(

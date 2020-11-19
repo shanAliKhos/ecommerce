@@ -2,7 +2,7 @@
 <footer class="xxstheme-footer">
 
     <div class="container">
-        <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(./img/bg-cta.png)">
+        <div class="bg-center bg-no-repeat bg-cover bg-cta-bg">
             <div class="py-16 md:py-20 text-center">
                 <h3 class="font-butlerregular text-white text-3xl sm:text-4xl tracking-wide">
                     Let's keep in touch</h3>
@@ -23,17 +23,14 @@
     </div>
     
     <div class="container text-center pt-20 md:pt-28 lg:pt-32">
-        <span class="font-hkregular md:text-lg text-secondary uppercase pb-1 md:pb-2 block">Follow
-            US</span>
-        <h4 class="font-butlermedium text-3xl text-secondary pb-8 md:pb-10 lg:pb-12">
-            Instagram Feed
-        </h4>
+        <!-- <span class="font-hkregular md:text-lg text-secondary uppercase pb-1 md:pb-2 block">Follow US</span>
+        <h4 class="font-butlermedium text-3xl text-secondary pb-8 md:pb-10 lg:pb-12"> Instagram Feed </h4>
 
-        <!-- <div id="instafeed" x-data x-init="instagramGallery"></div> -->
+        <div id="instafeed" x-data x-init="instagramGallery"></div> -->
 
     </div>
 
-    <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(./img/bg-footer.png)">
+    <div class="bg-center bg-no-repeat bg-cover bg-footer-bg">
         <div class="container py-16 sm:py-20 md:py-24">
             <div class="w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-between">
                 <div class="text-center lg:text-left">
@@ -41,60 +38,65 @@
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
-                            <a href="mailto:test.email0123@elyssi.com"
-                                class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">test.email0123@elyssi.com</a>
+                            <a href="mailto:test.email0123@elyssi.com" class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">{{$page.SiteOptions.Email}}</a>
                         </li>
 
                         <li class="pb-2 block">
-                            <a href="tel:0123234222"
-                                class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">0123
-                                234 222</a>
+                            <a href="tel:0123234222" class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">0123 234 222</a>
                         </li>
 
                         <li class="pb-2 block">
-                            <a href="https://elyssi.tailwindmade.com"
-                                class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">Elyssi</a>
+                            
+                            <inertia-link  
+                                :href="route('welcome')" 
+                                class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide"> 
+                                {{$page.SiteOptions.Title}}
+                            </inertia-link>
+
                         </li>
 
                     </ul>
                 </div>
                 <div class="text-center py-16 lg:py-0">
-                    <a href="/" class="font-butlerregular text-white text-4xl uppercase tracking-wider">Elyssi.</a>
+                    <inertia-link 
+                        :href="route('welcome')" class="font-butlerregular text-white text-4xl uppercase tracking-wider">
+                        {{$page.SiteOptions.Title}}
+                        
+                    </inertia-link>
                     <div class="flex items-center justify-center pt-5">
 
-                        <a href="https://www.google.com" class="group">
+                        <a :href="$page.SiteOptions.Social.Facebook" v-if="$page.SiteOptions.Social.Facebook" class="group" target="_blank" >
                             <span class="sr-only">Social link</span>
-                            <div
-                                class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
-                                <i
-                                    class="bx bxl-facebook text-secondary transition-colors group-hover:text-white"></i>
+                            <div class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
+                                <i class="bx bxl-facebook text-secondary transition-colors group-hover:text-white"></i>
                             </div>
                         </a>
 
-                        <a href="https://www.google.com" class="group">
+                        <a :href="$page.SiteOptions.Social.Twitter" v-if="$page.SiteOptions.Social.Twitter" class="group" target="_blank" >
                             <span class="sr-only">Social link</span>
-                            <div
-                                class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
-                                <i
-                                    class="bx bxl-twitter text-secondary transition-colors group-hover:text-white"></i>
+                            <div class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
+                                <i class="bx bxl-twitter text-secondary transition-colors group-hover:text-white"></i>
                             </div>
                         </a>
 
-                        <a href="https://www.google.com" class="group">
+                        <a :href="$page.SiteOptions.Social.Instagram" v-if="$page.SiteOptions.Social.Instagram" class="group" target="_blank" >
                             <span class="sr-only">Social link</span>
-                            <div
-                                class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
-                                <i
-                                    class="bx bxl-instagram text-secondary transition-colors group-hover:text-white"></i>
+                            <div class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
+                                <i class="bx bxl-instagram text-secondary transition-colors group-hover:text-white"></i>
                             </div>
                         </a>
 
-                        <a href="https://www.google.com" class="group">
+                        <a :href="$page.SiteOptions.Social.Pinterest" v-if="$page.SiteOptions.Social.Pinterest"  class="group" target="_blank" > 
                             <span class="sr-only">Social link</span>
-                            <div
-                                class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
-                                <i
-                                    class="bx bxl-pinterest text-secondary transition-colors group-hover:text-white"></i>
+                            <div class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
+                                <i class="bx bxl-pinterest text-secondary transition-colors group-hover:text-white"></i>
+                            </div>
+                        </a>
+
+                        <a :href="$page.SiteOptions.Social.LinkedIn" v-if="$page.SiteOptions.Social.LinkedIn"  class="group" target="_blank" > 
+                            <span class="sr-only">Social link</span>
+                            <div class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors">
+                                <i class="bx bxl-linkedin text-secondary transition-colors group-hover:text-white"></i>
                             </div>
                         </a>
 
@@ -105,22 +107,12 @@
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
-                            <a href="/collection-list"
-                                class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">Shop</a>
+                            <inertia-link :href="route('shop.index')" class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">Shop</inertia-link>
                         </li>
 
                         <li class="pb-2 block">
-                            <a href="/contact"
-                                class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">Contact
-                                Us</a>
-                        </li>
-
-                        <li class="pb-2 block">
-                            <a href="/single"
-                                class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">Terms
-                                & Conditions</a>
-                        </li>
-
+                            <inertia-link :href="route('contact')" class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">Contact Us</inertia-link>
+                        </li> 
                     </ul>
                 </div>
             </div>
@@ -128,16 +120,18 @@
     </div>
 
     <div class="container py-8">
-        <p class="font-hkregular text-secondary text-base text-center">All rights
-            reserved © 2020 shanalikhos12@gmail.com .</p>
+        <p class="font-hkregular text-secondary text-base text-center">{{$page.SiteOptions.FooterCopyRightText}}</p>
     </div>    
  
 
 </footer>
 </template>
 <script> 
+import ApplicationLogo from './components/ApplicationLogo'
+
 export default { 
-
-
+    components:{
+        ApplicationLogo,
+    },
 }
 </script>

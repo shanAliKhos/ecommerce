@@ -514,62 +514,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "flex relative" }, [
-        _c("div", {
-          staticClass:
-            "bg-no-repeat bg-cover bg-center w-3/4 ml-auto h-56 sm:h-64 md:h-68",
-          staticStyle: { "background-image": "url(./img/hero-image-01.jpg)" }
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "w-full h-56 sm:h-64 md:h-68 bg-no-repeat bg-cover absolute top-0 left-0",
-            staticStyle: {
-              "background-image":
-                "linear-gradient(90deg, rgba(55,36,31,1) 40%, rgba(0,0,0,0) 100%)"
-            }
-          },
-          [
-            _c("div", { staticClass: "py-20 px-6 sm:px-12 lg:px-20" }, [
-              _c(
-                "h1",
-                {
-                  staticClass:
-                    "font-butlerregular text-white text-2xl sm:text-3xl md:text-7xl lg:text-5xl"
-                },
-                [_vm._v("\n                    Our Blog")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex pt-2" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "font-hkregular text-white text-base hover:text-primary transition-colors",
-                    attrs: { href: "/" }
-                  },
-                  [_vm._v("Home")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  { staticClass: "font-hkregular text-white text-base px-2" },
-                  [_vm._v(".")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  { staticClass: "font-hkregular text-white text-base" },
-                  [_vm._v("Our Blog")]
-                )
-              ])
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
       _c(
         "div",
         {

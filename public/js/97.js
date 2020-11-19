@@ -17,17 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -124,22 +113,9 @@ var render = function() {
       attrs: { "preserve-scroll": "", href: _vm.route("cart.index") }
     },
     [
-      _c("img", {
-        staticClass: "w-8 h-8 block group-hover:hidden",
-        attrs: {
-          src:
-            "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg",
-          alt: "icon cart"
-        }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "w-8 h-8 hidden group-hover:block",
-        attrs: {
-          src:
-            "https://d33wubrfki0l68.cloudfront.net/bcbeda5344e5934d7eaa7a3e7f6e86b78d79755b/6df24/assets/img/icons/icon-cart-hover.svg",
-          alt: "icon cart hover"
-        }
+      _c("span", {
+        staticClass:
+          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  w-8 h-8 block hover:bg-icon-cart-hover"
       }),
       _vm._v(" "),
       _c(

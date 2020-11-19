@@ -121,8 +121,9 @@ import SelectInput from './../../Shared/SelectInput'
 import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
-    metaInfo: { title: 'Attribute-create' },
-
+    metaInfo: { 
+        title: 'Attribute-create' 
+    },
     layout: AppLayout,  
     components:{
         TextInput,
@@ -172,7 +173,7 @@ export default {
         },
   
     },        
-
+ 
 }
 </script>
  

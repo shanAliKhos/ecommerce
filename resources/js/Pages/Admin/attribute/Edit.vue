@@ -119,15 +119,15 @@ import SelectInput from './../../Shared/SelectInput'
 import LoadingButton from './../../Shared/LoadingButton'   
 
 export default {
-    metaInfo: { title: 'Attribute-edit' },
+    metaInfo: { 
+        title: 'Attribute-edit' 
+    },
     layout: AppLayout,  
     components:{
         TextInput,
         SelectInput,
         LoadingButton,
     },    
- 
- 
     data() {
         return {
             form:{
