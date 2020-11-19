@@ -31,7 +31,7 @@ export default {
     label: String,
     accept: String,
     preview: false,
-    preview_img: String,
+    preview_img: null,
     defualt_preview_img: String,
     error:String,
   },

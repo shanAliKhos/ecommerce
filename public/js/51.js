@@ -372,7 +372,7 @@ __webpack_require__.r(__webpack_exports__);
     label: String,
     accept: String,
     preview: false,
-    preview_img: String,
+    preview_img: null,
     defualt_preview_img: String,
     error: String
   },
