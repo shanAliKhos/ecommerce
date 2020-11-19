@@ -10,6 +10,7 @@
             <div class="mt-2">
                 <file-input 
                 v-model="form.image" 
+                :preview_img="form.image" 
                 :defualt_preview_img="form.name" 
                 :error="$page.errors.image" 
                 class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 

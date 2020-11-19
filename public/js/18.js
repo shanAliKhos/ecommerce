@@ -198,6 +198,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -597,6 +598,7 @@ var render = function() {
                 staticClass:
                   "pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded",
                 attrs: {
+                  preview_img: _vm.form.image,
                   defualt_preview_img: _vm.form.name,
                   error: _vm.$page.errors.image,
                   type: "file",
