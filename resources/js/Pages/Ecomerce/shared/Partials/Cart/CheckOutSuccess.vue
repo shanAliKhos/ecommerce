@@ -1,5 +1,5 @@
 <template>
-<div class="jumbotron text-center">
+   <div class="container border-t border-grey-dark">
   <h1 class="display-3">Thank You!</h1>
   <p class="lead"><strong>Please check your email</strong> for further.</p>
   <hr>
@@ -16,6 +16,12 @@ import AppLayout from './../../AppLayout'
    
 export default {
     layout: AppLayout,  
+
+    mounted() {
+      setTimeout(() => { 
+        this.$inertia.get(route('shop.index'))
+      }, 15000);
+    },
 }
 </script>
 <style scoped>

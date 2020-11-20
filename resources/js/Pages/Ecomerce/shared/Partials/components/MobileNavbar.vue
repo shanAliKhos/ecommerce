@@ -32,10 +32,28 @@
                 >Contact</MobileNavLink>              
 
                 <MobileNavLink 
-                    :href="route('dashboard')" 
-                    :active="$page.currentRouteName == 'dashboard'"
+                     v-if="$page.user?$page.user.is_admin:false" 
+                    :href="route('admin.dashboard')" 
+                    :active="$page.currentRouteName == 'admin.dashboard'"
+                >Dashboard</MobileNavLink>           
+
+                <MobileNavLink 
+                    v-if="$page.user?!$page.user.is_admin:false" 
+                    :href="route('dashboard.index')" 
+                    :active="$page.currentRouteName == 'dashboard.index'"
                 >Account</MobileNavLink>           
-                   
+                
+                <MobileNavLink 
+                    v-if="!$page.user"
+                    :href="route('login')" 
+                    :active="$page.currentRouteName == 'login'"
+                >Login</MobileNavLink>           
+
+     
+ 
+                
+                <!-- <nav-cart></nav-cart>                 -->
+
                 <!--  
                 <li class="flex justify-between flex-col" x-data="{ categories: false }"
                     @blur="categories=false ">

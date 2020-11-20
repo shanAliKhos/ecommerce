@@ -196,14 +196,10 @@ export default {
             formData.append("saveinformation", self.form.saveinformation || '');
 
             self.$inertia.post(this.route('cart.CustomerInfomationStore'), formData,{
-                preserveState: true,
-                preserveScroll: true,                
+                preserveState: true,              
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,
-                onSuccess: () => {
-                    this.$inertia.get(this.route('cart.ShippingMethod'));
-                 
-                },             
+                      
             });
         },
   

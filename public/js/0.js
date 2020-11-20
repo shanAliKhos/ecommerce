@@ -382,7 +382,7 @@ var render = function() {
                         "border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group",
                       attrs: {
                         "preserve-scroll": "",
-                        href: _vm.route("dashboard")
+                        href: _vm.route("dashboard.index")
                       }
                     },
                     [

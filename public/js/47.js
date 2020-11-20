@@ -31,14 +31,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+ // import DialogModal from './../../Shared/DialogModal'  
+// import SecondaryButton from './../../Shared/SecondaryButton'  
+// import LoginForm from './../../Auth/Login'  
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     AppHeader: _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FlashMessage: _Partials_components_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"]
+    FlashMessage: _Partials_components_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"] // DialogModal,
+    // LoginForm,
+    // SecondaryButton,
+
+  },
+  // data() {
+  //     return {
+  //         LoginModal:true,
+  //     }
+  // },
+  created: function created() {
+    var _this = this;
+
+    this.$root.$on('open-login-modal', function () {
+      _this.LoginModal = true;
+    });
   }
 });
 
@@ -270,15 +307,11 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("shipment_type", self.form.shipment_type || '');
       self.$inertia.post(this.route('cart.ShippingMethodStore'), formData, {
         preserveState: true,
-        preserveScroll: true,
         onStart: function onStart() {
           return _this.sending = true;
         },
         onFinish: function onFinish() {
           return _this.sending = false;
-        },
-        onSuccess: function onSuccess() {
-          _this.$inertia.get(_this.route('cart.PaymentMethod'));
         }
       });
     }
@@ -701,7 +734,13 @@ var render = function() {
                   _vm._v(" "),
                   _c("div", { staticClass: "w-3/5" }, [
                     _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                      _vm._v(_vm._s(_vm.CustomerInformation.email))
+                      _vm._v(
+                        _vm._s(
+                          _vm.CustomerInformation
+                            ? _vm.CustomerInformation.email
+                            : ""
+                        )
+                      )
                     ])
                   ]),
                   _vm._v(" "),
@@ -728,7 +767,13 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "w-3/5" }, [
                   _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                    _vm._v(_vm._s(_vm.CustomerInformation.address))
+                    _vm._v(
+                      _vm._s(
+                        _vm.CustomerInformation
+                          ? _vm.CustomerInformation.address
+                          : ""
+                      )
+                    )
                   ])
                 ]),
                 _vm._v(" "),

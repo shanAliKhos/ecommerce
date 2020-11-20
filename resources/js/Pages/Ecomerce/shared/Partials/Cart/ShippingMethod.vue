@@ -20,7 +20,7 @@
                             <p class="font-hkregular text-secondary">Contact</p>
                         </div>
                         <div class="w-3/5">
-                            <p class="font-hkregular text-secondary">{{CustomerInformation.email}}</p>
+                            <p class="font-hkregular text-secondary">{{CustomerInformation?CustomerInformation.email:""}}</p>
                         </div>
                         <div class="w-1/5 text-right">
                             <inertia-link :href="route('cart.CustomerInfomation')" class="font-hkregular text-primary underline">Change</inertia-link>
@@ -31,7 +31,7 @@
                             <p class="font-hkregular text-secondary">Ship to</p>
                         </div>
                         <div class="w-3/5">
-                            <p class="font-hkregular text-secondary">{{CustomerInformation.address}}</p>
+                            <p class="font-hkregular text-secondary">{{CustomerInformation?CustomerInformation.address:""}}</p>
                         </div>
                         <div class="w-1/5 text-right">
                             <inertia-link :href="route('cart.CustomerInfomation')" class="font-hkregular text-primary underline">Change</inertia-link>
@@ -111,14 +111,9 @@ export default {
             formData.append("shipment_type", self.form.shipment_type || ''); 
 
             self.$inertia.post(this.route('cart.ShippingMethodStore'), formData,{
-                preserveState: true,
-                preserveScroll: true,                
+                preserveState: true, 
                 onStart: () => this.sending = true,
-                onFinish: () => this.sending = false,
-                onSuccess: () => {
-                    this.$inertia.get(this.route('cart.PaymentMethod'));
-                 
-                },             
+                onFinish: () => this.sending = false, 
             });
         },
     },

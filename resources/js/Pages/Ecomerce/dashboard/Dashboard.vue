@@ -25,39 +25,34 @@
                 </div>
             </div>
 
-            <div
+            <div v-for="(HistoryItem, index) in HistoryItems" :key="index"
                 class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
                 <div
                     class="w-full sm:w-1/3 md:w-2/5 flex flex-col md:flex-row md:items-center border-b sm:border-b-0 border-grey-dark pb-4 sm:pb-0 text-center sm:text-left">
-                    <span
-                        class="font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden">Product
-                        Name</span>
+                    <span class="font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden">Product Name</span>
                     <div class="w-20 mx-auto sm:mx-0 relative sm:mr-3 sm:pr-0">
                         <div class="h-20 rounded flex items-center justify-center">
-                            <div class="w-12 h-16 mx-auto bg-center bg-no-repeat bg-cover"
-                                style="background-image:url(./img/shoes-3.png)">
-                            </div>
+                            <div class="w-12 h-16 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url('+Image(HistoryItem)+')'"> </div>
                         </div>
                     </div>
-                    <span class="font-hkregular text-secondary text-base mt-2">Classic Beige</span>
+                        <span class="transition duration-500 ease-in-out hover:text-blue-600  font-hkregular text-primary text-base mt-2 text-lg text-bold  ">{{HistoryItem.ProductName}}</span>
                 </div>
                 <div
                     class="w-full sm:w-1/5 text-center border-b sm:border-b-0 border-grey-dark pb-4 sm:pb-0">
-                    <span
-                        class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Quantity</span>
-                    <span class="font-hkregular text-secondary">11</span>
+                    <span class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Quantity</span>
+                    <span class="font-hkregular text-secondary">{{HistoryItem.Quantity}}</span>
                 </div>
                 <div
                     class="w-full sm:w-1/6 xl:w-1/5 text-center sm:text-right sm:pr-6 xl:pr-16 pb-4 sm:pb-0">
                     <span
                         class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Price</span>
-                    <span class="font-hkregular text-secondary">$1045</span>
+                    <span class="font-hkregular text-secondary">${{HistoryItem.Price}}</span>
                 </div>
-                <a href="/collection-grid" class="btn btn-primary whitespace-no-wrap">
-                    Buy Again
-                </a>
+                <inertia-link :href="route('shop.product',HistoryItem.ProductSlug)" class="px-4 py-3 inline-block rounded font-hkregular bg-v-blue-light border border-v-blue text-v-blue hover:bg-blue-400 hover:text-white hover:border-white "">
+                    <span>Buy Again</span>
+                </inertia-link>                                     
             </div>
-
+<!-- 
             <div
                 class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
                 <div
@@ -221,9 +216,9 @@
                 <a href="/collection-grid" class="btn btn-primary whitespace-no-wrap">
                     Buy Again
                 </a>
-            </div>
+            </div> -->
 
-            <div class="pt-6 flex justify-center md:justify-end">
+            <!-- <div class="pt-6 flex justify-center md:justify-end">
                 <span
                     class="font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer">Previous</span>
                 <span
@@ -233,7 +228,7 @@
                 <span
                     class=" font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer">Next</span>
 
-            </div>
+            </div> -->
         </div>
     </div>
 </acounts-layout>
@@ -247,5 +242,39 @@ export default {
     components:{
         AcountsLayout,
     },  
+    methods: {
+        Stutus(Status){
+            
+            switch (Status) {
+                case 'pending':
+                    return 'bg-primary-lightest border-primary-light text-primary';
+                break;
+                case 'processing':
+                    return 'bg-v-blue-light border border-v-blue text-v-blue';
+                break;
+                case 'completed':
+                    return 'bg-v-green-light  border-v-green text-v-green'; 
+                break;
+                case 'decline':
+                    return 'bg-red-lightest border-red-light text-red';
+                break;
+            }
+          return   
+        },
+        Image(item){
+            self = this ;
+            var  img = (item.ProductImage)?'/'+item.ProductImage.replace("public", "storage"):this.defaultPhotoUrl(item.ProductName);
+            return img;      
+        },      
+        defaultPhotoUrl(text)
+        {
+            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
+        },                 
+    },
+    computed:{
+        HistoryItems(){
+            return this.$page.HistoryItems;
+        },     
+    },    
 }
 </script>

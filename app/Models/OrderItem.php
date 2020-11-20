@@ -18,11 +18,12 @@ class OrderItem extends Model
         return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
     }
     
-    public function product()
+    public function Product()
     {
         return $this->belongsTo(Product::class, 'product_id');
     }
-    public function Oreder()
+
+    public function Order()
     {
         return $this->belongsTo(Order::class, 'product_id');
     }

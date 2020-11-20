@@ -30,7 +30,7 @@
                         <span class="transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat w-8 h-8 block bg-icon-user  hover:bg-icon-user-hover"></span>
                     </inertia-link>
 
-                    <inertia-link v-if="$page.user?!$page.user.is_admin:false" preserve-scroll :href="route('dashboard')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group">
+                    <inertia-link v-if="$page.user?!$page.user.is_admin:false" preserve-scroll :href="route('dashboard.index')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group">
                         <span class="transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat w-8 h-8 block bg-icon-user  hover:bg-icon-user-hover"></span>
                     </inertia-link>
                     

@@ -18,7 +18,7 @@
             </div>
 
             <inertia-link 
-                :href="route('dashboard')"  
+                :href="route('dashboard.index')"  
                 preserve-scroll
                 preserve-state
                 as="button" 

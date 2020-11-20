@@ -88,7 +88,7 @@ var render = function() {
                 _vm.$page.currentRouteName != "dashboard"
             },
             attrs: {
-              href: _vm.route("dashboard"),
+              href: _vm.route("dashboard.index"),
               "preserve-scroll": "",
               "preserve-state": "",
               as: "button",

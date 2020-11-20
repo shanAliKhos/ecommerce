@@ -338,7 +338,7 @@
                     Instock:(this.Product.quantity)?this.Product.quantity:'',
                     Qty:1,
                     price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
-                    image:(this.Product.image)?this.Product.image:'',
+                    image:(this.Product.image)?this.Product.image:'./img/shoes-4.png', 
                 },                 
                 Label:{
                     Color:null,
