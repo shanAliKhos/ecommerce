@@ -34,7 +34,8 @@
                 <MobileNavLink 
                     :href="route('dashboard')" 
                     :active="$page.currentRouteName == 'dashboard'"
-                >Account</MobileNavLink>              
+                >Account</MobileNavLink>           
+                   
                 <!--  
                 <li class="flex justify-between flex-col" x-data="{ categories: false }"
                     @blur="categories=false ">

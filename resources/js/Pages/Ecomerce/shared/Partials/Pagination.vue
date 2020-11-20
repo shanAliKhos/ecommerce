@@ -1,16 +1,22 @@
 <template>
 <div class="pb-16 flex justify-center mx-auto" v-if="Links.length"> 
-    <pagination-link v-for="(Link, Linkindex) in Links" :key="Linkindex"  :Link="Link"></pagination-link> 
+    <span v-if="Pagination.prev_page_url" class="font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer">Previous</span>
+    <pagination-link v-for="(Link, Linkindex) in Links" :key="Linkindex" :Link="Link" ></pagination-link> 
+    <span v-if="Pagination.next_page_url" class="font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer">Next</span>
 </div>     
 </template>
 <script>
 import PaginationLink from './components/PaginationLink'
 export default {
-    props:['Links'],
+    props:['Pagination'],
     components: {
         PaginationLink,
     },
-    
+    computed: {
+        Links(){
+            return this.Pagination.links;
+        }
+    },
 }
 </script>
 <!-- <div class="pb-16 flex justify-center mx-auto">

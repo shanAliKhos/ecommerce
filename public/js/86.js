@@ -66,10 +66,16 @@ __webpack_require__.r(__webpack_exports__);
 
           _this.$el.appendChild(hiddenInput); // Submit the form
           // this.$el.submit();
-          // let payment_Form =  document.getElementById("#payment-form");
 
 
-          _this.$inertia.post(_this.route('checkout.post'), options, {
+          var payment_Form = {
+            CustomerInformation: _this.$page.CustomerInformation,
+            ShipmentInformation: _this.$page.ShipmentInformation,
+            stripeToken: result.token.id,
+            NameOnCard: options.NameOnCard
+          };
+
+          _this.$inertia.post(_this.route('cart.checkout'), payment_Form, {
             preserveState: true
           });
         }

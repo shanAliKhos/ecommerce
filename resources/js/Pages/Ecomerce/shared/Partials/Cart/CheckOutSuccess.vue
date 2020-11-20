@@ -12,8 +12,8 @@
 </div>
 </template>
 <script>
-import AppLayout from './../shared/AppLayout'  
-
+import AppLayout from './../../AppLayout'  
+   
 export default {
     layout: AppLayout,  
 }

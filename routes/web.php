@@ -75,11 +75,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('/customer-info','Cart\CartController@CustomerInformStore')->name('cart.CustomerInfomationStore');   
     Route::get('/shipping-method','Cart\CartController@ShippingMethod')->name('cart.ShippingMethod');   
     Route::post('/shipping-method','Cart\CartController@ShippingMethodStore')->name('cart.ShippingMethodStore');   
-    
     Route::get('/payment-method','Cart\CartController@PaymentMethod')->name('cart.PaymentMethod');   
+    Route::post('/checkout', 'Cart\CartController@CheckOut')->name('cart.checkout');
+    
 
     Route::get('/checkout','Checkout\CheckOutController@index')->name('checkout.index');
-    Route::post('/checkout', 'Checkout\CheckOutController@checkout')->name('checkout.post');
     
 });
  

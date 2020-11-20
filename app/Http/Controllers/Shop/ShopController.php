@@ -21,11 +21,13 @@ class ShopController extends Controller
 
     public function index(Request $request, Product $Product)
     {      
-        if(isset($request->MinPrice) && isset($request->MaxPrice)){
-            $Product = $Product->whereBetween('regular_price', [$request->MinPrice, $request->MaxPrice]);
-            $Product = $Product->orWhereBetween('sale_price', [$request->MinPrice, $request->MaxPrice]);
-        }
-        $Products = $Product->where('quantity','>',0)->latest()->paginate(20)->toArray(); 
+        // if(isset($request->MinPrice) && isset($request->MaxPrice)){
+        //     $Product = $Product->whereBetween('regular_price', [$request->MinPrice, $request->MaxPrice]);
+        //     $Product = $Product->orWhereBetween('sale_price', [$request->MinPrice, $request->MaxPrice]);
+        // }
+        $Products = $Product->where('quantity','>',0)->where('regular_price','>',0)->where('sale_price','>',0)->latest()->paginate(20)->toArray(); 
+
+       
        
         // $SaleProducts = $Product->where('sale_price','>',0)->latest()->take(12)->get(); 
         return Inertia::render('Ecomerce/shop/Shop',compact('Products'));

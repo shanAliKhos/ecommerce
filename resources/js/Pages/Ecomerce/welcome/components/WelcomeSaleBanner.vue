@@ -4,7 +4,7 @@
             </div>
             <div class="lg:absolute right-0 bottom-0 bg-right bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 ml-auto h-76 sm:h-82 md:h-86 lg:h-90 bg-coupon-bg">
                 <div
-                    class="py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5 lg:w-full mx-auto text-center lg:text-left">
+                    class="py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5  mx-auto text-center lg:text-left">
                     <span class="font-hkmedium text-white text-lg md:text-xl uppercase">New Arrivals</span>
                     <h2
                         class="font-butlermedium text-white text-3xl sm:text-4xl md:text-7xl xl:text-5xl pt-5 leading-tight">

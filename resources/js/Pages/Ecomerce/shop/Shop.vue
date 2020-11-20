@@ -46,7 +46,7 @@
 
         <shop-products :Products="Products"></shop-products>   
         
-        <pagination :Links="Links"></pagination>
+        <pagination :Pagination="Pagination"></pagination>
  
     </div>
  
@@ -71,8 +71,14 @@ export default {
         Products(){
             return this.$page.Products.data;
         },  
-        Links(){
-            return this.$page.Products.links;
+        Pagination(){
+            return {
+                first_page_url:this.$page.Products.first_page_url,
+                prev_page_url:this.$page.Products.prev_page_url,
+                links:this.$page.Products.links,
+                next_page_url:this.$page.Products.next_page_url,
+                last_page_url:this.$page.Products.last_page_url,
+            };
         },  
         CountTotalProducts(){ 
             return this.$page.Products.data.length;

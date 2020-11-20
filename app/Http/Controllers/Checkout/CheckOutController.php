@@ -21,7 +21,7 @@ class CheckOutController extends Controller
         $CartItems = session()->get('CartItems'); 
         $stripekey = Setting::get('stripe_key');
         if(!$CartItems){
-            return redirect()->route('shop')->with('info','Add some items to cart');
+            return redirect()->route('shop.index')->with('info','Add some items to cart');
         } 
  
         return Inertia::render('Ecomerce/checkout/CustomerInformation',compact('stripekey'));        
@@ -29,7 +29,7 @@ class CheckOutController extends Controller
 
     public function checkout(Request $request)
     {          
-        dd($request->all());
+      
         $CartItems = session()->get('CartItems'); 
 
         if(!$CartItems){
@@ -94,7 +94,7 @@ class CheckOutController extends Controller
             $CreatedOrder = $Order->create([
                 'user_id'=>Auth()->user()->id,
                 'OrderNumber'=>$NewOrder['OrderNumber'],
-                'CardHolderName'=>$request->name_on_card,
+                'CardHolderName'=>$request->NameOnCard,
                 'Address' => $request->address,
                 'PaymentToken' => $charge['payment_method'],
                 'City' => $request->city,

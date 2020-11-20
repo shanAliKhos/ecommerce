@@ -3,6 +3,7 @@
         v-if="Link.url"
         :href="Link.url"
         :class="{'bg-primary':Link.active}"
+        v-bind="$attrs"
         class="font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
         preserve-scroll
         >

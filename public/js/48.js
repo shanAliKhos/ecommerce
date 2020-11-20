@@ -200,7 +200,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
-/* harmony import */ var _shared_Slider_WelcomeSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/Slider/WelcomeSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeSlider.vue");
+/* harmony import */ var _shared_Slider_WelcomeMainSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/Slider/WelcomeMainSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue");
 /* harmony import */ var _shared_Slider_WelcomeSaleSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../shared/Slider/WelcomeSaleSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeSaleSlider.vue");
 /* harmony import */ var _shared_Slider_WelcomeTrendingSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../shared/Slider/WelcomeTrendingSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeTrendingSlider.vue");
 /* harmony import */ var _shared_Slider_WelcomeTrendingMultiSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../shared/Slider/WelcomeTrendingMultiSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeTrendingMultiSlider.vue");
@@ -255,7 +255,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
-    WelcomeSlider: _shared_Slider_WelcomeSlider__WEBPACK_IMPORTED_MODULE_1__["default"],
+    WelcomeSlider: _shared_Slider_WelcomeMainSlider__WEBPACK_IMPORTED_MODULE_1__["default"],
     WelcomeIcons: _shared_Partials_components_WelcomeIcons__WEBPACK_IMPORTED_MODULE_5__["default"],
     WelcomeTrendingCollection: _components_WelcomeTrendingCollection__WEBPACK_IMPORTED_MODULE_6__["default"],
     WelcomeTrendingSlider: _shared_Slider_WelcomeTrendingSlider__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -780,7 +780,7 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5 lg:w-full mx-auto text-center lg:text-left"
+                  "py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5  mx-auto text-center lg:text-left"
               },
               [
                 _c(

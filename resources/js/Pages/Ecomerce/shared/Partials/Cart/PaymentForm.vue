@@ -51,10 +51,16 @@ export default {
                     this.$el.appendChild(hiddenInput);
                     // Submit the form
                     // this.$el.submit();
-                    // let payment_Form =  document.getElementById("#payment-form");
+                    
+                    let payment_Form =  {
+                        CustomerInformation:this.$page.CustomerInformation,
+                        ShipmentInformation:this.$page.ShipmentInformation,
+                        stripeToken:result.token.id,
+                        NameOnCard:options.NameOnCard,
+                    };
                      
 
-                    this.$inertia.post(this.route('checkout.post'), options,{
+                    this.$inertia.post(this.route('cart.checkout'), payment_Form,{
                         preserveState: true,              
                     });                    
 

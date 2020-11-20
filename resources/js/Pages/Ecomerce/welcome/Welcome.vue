@@ -32,7 +32,7 @@
 
 <script>
 import AppLayout from './../shared/AppLayout'  
-import WelcomeSlider from './../shared/Slider/WelcomeSlider'  
+import WelcomeSlider from './../shared/Slider/WelcomeMainSlider'  
 import WelcomeSaleSlider from './../shared/Slider/WelcomeSaleSlider'  
 import WelcomeTrendingSlider from './../shared/Slider/WelcomeTrendingSlider'  
 import WelcomeTrendingMultiSlider from './../shared/Slider/WelcomeTrendingMultiSlider'  
