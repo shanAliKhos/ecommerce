@@ -162,8 +162,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("footer", { staticClass: "xxstheme-footer" }, [
-    this.$page.currentRouteName != "login" ||
-    this.$page.currentRouteName != "cart.checkout"
+    this.$page.currentRouteName != "login"
       ? _c("div", { staticClass: "container" }, [_vm._m(0)])
       : _vm._e(),
     _vm._v(" "),
