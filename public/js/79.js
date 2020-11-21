@@ -290,340 +290,344 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "my-8 p-2 pt-10 bg-white rounded shadow-xl" }, [
+      _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
         _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
           _vm._v("\n           Order Listing\n       ")
         ]),
         _vm._v(" "),
-        _c("table", { staticClass: "border-collapse w-full table-auto p-5" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.Products, function(Product, ProductIndex) {
-              return _c(
-                "tr",
-                {
-                  key: ProductIndex,
-                  staticClass:
-                    "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
-                },
-                [
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("#")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "py-5  lg:p-1" }, [
-                        _vm._v(
-                          "\n                           " +
-                            _vm._s(ProductIndex + 1) +
-                            "\n                       "
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("IMAGE")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "flex items-center py-5  lg:p-1" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "flex-shrink-0 h-full w-full" },
-                            [
-                              _c("img", {
-                                staticClass: "h-full w-full rounded",
-                                attrs: { src: _vm.Image(Product), alt: "" }
-                              })
-                            ]
+        _c(
+          "table",
+          { staticClass: "border-collapse w-full table-auto lg:-mx-5 mb-2" },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.Products, function(Product, ProductIndex) {
+                return _c(
+                  "tr",
+                  {
+                    key: ProductIndex,
+                    staticClass:
+                      "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+                  },
+                  [
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("#")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1" }, [
+                          _vm._v(
+                            "\n                           " +
+                              _vm._s(ProductIndex + 1) +
+                              "\n                       "
                           )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("NAME")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "py-5  lg:p-1" }, [
-                        _vm._v(_vm._s(Product.name))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("SKU")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "py-5  lg:p-1" }, [
-                        _vm._v(_vm._s(Product.sku))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("BRAND")]
-                      ),
-                      _vm._v(" "),
-                      Product.brand
-                        ? _c("p", { staticClass: "py-5  lg:p-1" }, [
-                            _vm._v(_vm._s(Product.brand.name))
-                          ])
-                        : _c("p", { staticClass: "py-5  lg:p-1" }, [
-                            _vm._v("N/A")
-                          ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 border border-b md:text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("CATEGORY")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "py-5 lg:py-0 lg:p-1 h-auto" },
-                        _vm._l(Product.categories, function(
-                          Category,
-                          CategoryIndex
-                        ) {
-                          return Category
-                            ? _c(
-                                "p",
-                                {
-                                  key: CategoryIndex,
-                                  staticClass:
-                                    " lg:py-0 lg:px-0 py-1 px-2 bg-yellow-100 text-xs font-bold "
-                                },
-                                [
-                                  _vm._v(
-                                    " " +
-                                      _vm._s(CategoryIndex + 1) +
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("IMAGE")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "flex items-center py-5  lg:p-1" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "flex-shrink-0 h-full w-full" },
+                              [
+                                _c("img", {
+                                  staticClass: "h-full w-full rounded",
+                                  attrs: { src: _vm.Image(Product), alt: "" }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("NAME")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1" }, [
+                          _vm._v(_vm._s(Product.name))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("SKU")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1" }, [
+                          _vm._v(_vm._s(Product.sku))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("BRAND")]
+                        ),
+                        _vm._v(" "),
+                        Product.brand
+                          ? _c("p", { staticClass: "py-5  lg:p-1" }, [
+                              _vm._v(_vm._s(Product.brand.name))
+                            ])
+                          : _c("p", { staticClass: "py-5  lg:p-1" }, [
+                              _vm._v("N/A")
+                            ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 border border-b md:text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("CATEGORY")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "py-5 lg:py-0 lg:p-1 h-auto" },
+                          _vm._l(Product.categories, function(
+                            Category,
+                            CategoryIndex
+                          ) {
+                            return Category
+                              ? _c(
+                                  "p",
+                                  {
+                                    key: CategoryIndex,
+                                    staticClass:
+                                      " lg:py-0 lg:px-0 py-1 px-2 bg-yellow-100 text-xs font-bold "
+                                  },
+                                  [
+                                    _vm._v(
                                       " " +
-                                      _vm._s(Category.name)
-                                  )
-                                ]
-                              )
-                            : _vm._e()
-                        }),
-                        0
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("PRICE")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "py-5  lg:p-1" }, [
-                        _vm._v(
-                          "\n                           $" +
-                            _vm._s(
-                              Product.sale_price
-                                ? Product.sale_price
-                                : Product.regular_price
-                            ) +
-                            "\n                       "
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("STATUS")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "py-5  lg:p-1" }, [
-                        Product.is_active
-                          ? _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "rounded bg-green-400 py-1 px-3 text-xs font-bold"
-                              },
-                              [_vm._v("ACTIVE")]
-                            )
-                          : _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "rounded bg-red-400 py-1 px-3 text-xs font-bold"
-                              },
-                              [_vm._v("IN ACTIVE")]
-                            )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    {
-                      staticClass:
-                        "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-                        },
-                        [_vm._v("ACTIONS")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "inline-flex py-5  lg:p-1" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass:
-                                "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
-                              attrs: {
-                                href: _vm.route(
-                                  "admin.product.edit",
-                                  Product.id
+                                        _vm._s(CategoryIndex + 1) +
+                                        " " +
+                                        _vm._s(Category.name)
+                                    )
+                                  ]
                                 )
-                              }
-                            },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass: "w-4 h-4",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d:
-                                        "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]
+                              : _vm._e()
+                          }),
+                          0
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("PRICE")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1" }, [
+                          _vm._v(
+                            "\n                           $" +
+                              _vm._s(
+                                Product.sale_price
+                                  ? Product.sale_price
+                                  : Product.regular_price
+                              ) +
+                              "\n                       "
                           )
-                        ],
-                        1
-                      )
-                    ]
-                  )
-                ]
-              )
-            }),
-            0
-          )
-        ])
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("STATUS")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1" }, [
+                          Product.is_active
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "rounded bg-green-400 py-1 px-3 text-xs font-bold"
+                                },
+                                [_vm._v("ACTIVE")]
+                              )
+                            : _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "rounded bg-red-400 py-1 px-3 text-xs font-bold"
+                                },
+                                [_vm._v("IN ACTIVE")]
+                              )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("ACTIONS")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "inline-flex py-5  lg:p-1" },
+                          [
+                            _c(
+                              "inertia-link",
+                              {
+                                staticClass:
+                                  "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
+                                attrs: {
+                                  href: _vm.route(
+                                    "admin.product.edit",
+                                    Product.id
+                                  )
+                                }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass: "w-4 h-4",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d:
+                                          "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    )
+                  ]
+                )
+              }),
+              0
+            )
+          ]
+        )
       ]),
       _vm._v(" "),
       _c("pagination", { attrs: { links: _vm.Links } })
@@ -654,7 +658,7 @@ var staticRenderFns = [
             staticClass:
               "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
           },
-          [_vm._v("IMAGE")]
+          [_vm._v("#")]
         ),
         _vm._v(" "),
         _c(

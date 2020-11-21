@@ -176,31 +176,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -249,19 +224,23 @@ __webpack_require__.r(__webpack_exports__);
     StatusIcon: function StatusIcon() {
       switch (this.$page.Order.Status) {
         case 'pending':
-          return 'fa-spinner badge badge-warning text-white p-2';
+          // return 'fa-spinner badge badge-warning text-white p-2'
+          return 'text-yellow-600 text-bold uppercase';
           break;
 
         case 'processing':
-          return 'fa-circle-o-notch badge badge-info p-2';
+          // return 'fa-circle-o-notch badge badge-info p-2'
+          return 'text-blue-600 text-bold uppercase';
           break;
 
         case 'completed':
-          return 'fa-check-square-o badge badge-success p-2';
+          // return 'fa-check-square-o badge badge-success p-2'
+          return 'text-green-600 text-bold uppercase';
           break;
 
         case 'decline':
-          return 'fa-times badge badge-danger p-2';
+          // return 'fa-times badge badge-danger p-2'
+          return 'text-red-600 text-bold uppercase';
           break;
       }
     },
@@ -467,11 +446,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "i",
-              {
-                staticClass: "fa",
-                class: _vm.StatusIcon,
-                attrs: { "aria-hidden": "true" }
-              },
+              { class: _vm.StatusIcon, attrs: { "aria-hidden": "true" } },
               [_c("span", [_vm._v(" " + _vm._s(_vm.Order.Status))])]
             ),
             _vm._v(" "),
@@ -499,7 +474,260 @@ var render = function() {
             _c("br")
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("div", {}, [
+        _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
+          _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
+            _vm._v("\n                    Order Listing\n                ")
+          ]),
+          _vm._v(" "),
+          _c("table", { staticClass: "border-collapse w-full table-auto" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.Order.items, function(Order, OrderIndex) {
+                return _c(
+                  "tr",
+                  {
+                    key: OrderIndex,
+                    staticClass:
+                      "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+                  },
+                  [
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static "
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("#")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1 " }, [
+                          _vm._v(_vm._s(OrderIndex + 1))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static "
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("PRODUCT")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1 " }, [
+                          _vm._v(_vm._s(Order.product.name))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("SKU")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1 " }, [
+                          _vm._v(_vm._s(Order.product.sku))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("QTY")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1 " }, [
+                          _vm._v(_vm._s(Order.Quantity))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+                          },
+                          [_vm._v("SUBTOTAL")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "py-5  lg:p-1 " }, [
+                          _vm._v(_vm._s(Order.Price))
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              }),
+              0
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+        },
+        [
+          _vm.Order.Status !== "pending"
+            ? _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                  attrs: {
+                    as: "button",
+                    type: "button",
+                    data: { Status: "pending" },
+                    method: "put",
+                    "preserve-scroll": "",
+                    href: _vm.route("admin.order.update", this.Order.id)
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-fw fa-lg fa-circle-o-notch" }),
+                  _c("span", [_vm._v("Pending")])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.Order.Status !== "processing"
+            ? _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                  attrs: {
+                    as: "button",
+                    type: "button",
+                    data: { Status: "processing" },
+                    method: "put",
+                    "preserve-scroll": "",
+                    href: _vm.route("admin.order.update", this.Order.id)
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-fw fa-lg fa-circle-o-notch" }),
+                  _c("span", [_vm._v("Process")])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.Order.Status !== "completed"
+            ? _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                  attrs: {
+                    as: "button",
+                    type: "button",
+                    method: "put",
+                    "preserve-scroll": "",
+                    data: { Status: "completed" },
+                    href: _vm.route("admin.order.update", this.Order.id)
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
+                  _c("span", [_vm._v("Completed")])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.Order.Status !== "decline"
+            ? _c(
+                "button",
+                {
+                  staticClass:
+                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                  attrs: { type: "button", disabled: _vm.sending },
+                  on: { click: _vm.cancel }
+                },
+                [
+                  _vm.sending
+                    ? _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "transition  ease-in-out  animate-spin h-5 w-5 ",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 20 20",
+                            fill: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "fill-rule": "evenodd",
+                              d:
+                                "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                              "clip-rule": "evenodd"
+                            }
+                          })
+                        ]
+                      )
+                    : _c("i", { staticClass: "fa fa-fw fa-lg fa-remove" }),
+                  _vm._v("\n                Cancel\n            ")
+                ]
+              )
+            : _vm._e()
+        ],
+        1
+      )
     ])
   ])
 }
@@ -511,6 +739,59 @@ var staticRenderFns = [
     return _c("li", { staticClass: "flex items-center" }, [
       _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
         _vm._v("Order Listing")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c(
+          "th",
+          {
+            staticClass:
+              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden  lg:table-cell"
+          },
+          [_vm._v("#")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+          },
+          [_vm._v("PRODUCT")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+          },
+          [_vm._v("SKU")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+          },
+          [_vm._v("QTY")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+          },
+          [_vm._v("SUBTOTAL")]
+        )
       ])
     ])
   }

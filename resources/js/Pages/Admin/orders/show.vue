@@ -57,7 +57,7 @@
                 <span>
                     <b>Order ID:</b> {{ Order.OrderNumber }}<br>
                     <b>Order Status:</b>  
-                    <i class="fa" :class="StatusIcon" aria-hidden="true"> <span> {{Order.Status}}</span> </i> 
+                    <i   :class="StatusIcon" aria-hidden="true"> <span> {{Order.Status}}</span> </i> 
                     <br>
                     <b>Amount:</b> ${{ Order.GrandTotal  }}<br> 
                     <b>Payment Method:</b> {{ Order.PaymentMethod }}<br>
@@ -66,125 +66,100 @@
                 </span>            
             </div>
         </div>
+        
+        <div class="">
+            <div class="my-8 p-10 bg-white rounded shadow-xl">
+                <p class="text-xl pb-6 flex items-center">
+                    Order Listing
+                </p>    
+                <table class="border-collapse w-full table-auto">
+                    <thead>
+                        <tr>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden  lg:table-cell">#</th> 
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">PRODUCT</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">QTY</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SUBTOTAL</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(Order, OrderIndex) in Order.items" :key="OrderIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
+                                <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
+                                <p class="py-5  lg:p-1 ">{{ (OrderIndex+1) }}</p>
+                            </td>
+                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
+                                <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PRODUCT</p>
+                                <p class="py-5  lg:p-1 ">{{ Order.product.name }}</p>
+                            </td>
+                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SKU</span>
+                                <p class="py-5  lg:p-1 ">{{ Order.product.sku }}</p>
+                            </td>
+                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">QTY</span>
+                                <p class="py-5  lg:p-1 ">{{ Order.Quantity }}</p>
+                            </td>
+                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SUBTOTAL</span>
+                                <p class="py-5  lg:p-1 ">{{  Order.Price }}</p>
+                            </td>
+                      
+                        </tr>               
+                    </tbody>
+                </table>    
+            </div>         
+        </div>     
+        
+        <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+
+            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+                v-if="Order.Status !== 'pending'"
+                as="button" type="button" 
+                :data="{ Status: 'pending' }"  
+                method="put" preserve-scroll 
+                :href="route('admin.order.update', this.Order.id)"  
+                >
+                <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Pending</span>
+            </inertia-link>
+            
+            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+                v-if="Order.Status !== 'processing'"
+                as="button" type="button" 
+                :data="{ Status: 'processing' }"  
+                method="put" preserve-scroll 
+                :href="route('admin.order.update', this.Order.id)"  
+                >
+                <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Process</span>
+            </inertia-link>
+            
+            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+                v-if="Order.Status !== 'completed'"
+                as="button" type="button" 
+                method="put" preserve-scroll 
+                :data="{ Status: 'completed' }"  
+                :href="route('admin.order.update', this.Order.id)" 
+                >
+                <i class="fa fa-fw fa-lg fa-check-circle"></i><span>Completed</span>
+            </inertia-link>
+
+            <button type="button" 
+                v-if="Order.Status !== 'decline'"
+                :disabled="sending" 
+                class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" 
+                @click="cancel"
+                >
+                <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                </svg>                  
+                <i v-else class="fa fa-fw fa-lg fa-remove"></i>
+                Cancel
+            </button>        
+
+        </div>        
+
   
-    <!-- <div class="row">
-        <div class="col-md-12">
-            <div class="tile">
-                <h3 class="tile-title"><i class="fa fa-globe"></i> {{ Order.OrderNumber }}</h3>
-                <div class="tile-body">
-                    <section class="invoice"> 
-                        <div class="invoice-info">
-                            <div class="row">
-                                <div class="col-12 col-md-4 sm-4">
-                                    <span>
-                                        Placed By
-                                        <address><strong>{{ Order.user.name }}</strong><br>Email: {{ Order.user.email }}</address>
-                                    </span>
-                                    <span>
-                                        <address><strong>Created_at  - </strong>{{ Order.created_at }}</address>
-                                        <address><strong>Updated_at  - </strong>{{ Order.updated_at }}</address>
-                                        
-                                    </span> 
 
-                                </div>
-                                <div class="col-12 col-md-4 sm-4">Ship To
-                                    <address>
-                                        <strong>{{ Order.CardHolderName }}</strong>
-                                        <br>{{ Order.Address }}<br>{{ Order.City }}, {{ Order.Country }} {{ Order.PostalCode }}<br>{{ Order.PhoneNumber }}<br>
-                                    </address>
-                                </div>
-                                <div class="col-12 col-md-4 sm-4">
-                                    <span>
-                                    <b>Order ID:</b> {{ Order.OrderNumber }}<br>
-                                    <b>Order Status:</b>  
-                                    <i class="fa" :class="StatusIcon" aria-hidden="true"> <span> {{Order.Status}}</span> </i> 
-                                    <br>
-                                    <b>Amount:</b> ${{ Order.GrandTotal  }}<br> 
-                                    <b>Payment Method:</b> {{ Order.PaymentMethod }}<br>
-                                    <b>Payment Status:</b> {{ Order.PaymentStatus == 1 ? 'Completed' : 'Not Completed' }}<br>
-                                    <b>Payment Track:</b> {{ Order.PaymentToken }}<br>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>Qty</th>
-                                        <th>Product</th>
-                                        <th>SKU #</th>
-                                        <th>Qty</th>
-                                        <th>Subtotal</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody> 
-                                        <tr v-for="(item, index) in Order.items" :key="index">
-                                            <td>{{ item.id }}</td>
-                                            <td>{{ item.product.name }}</td>
-                                            <td>{{ item.product.sku }}</td>
-                                            <td>{{ item.Quantity }}</td>
-                                            <td>${{ item.Price }}</td>
-                                        </tr> 
-                                    </tbody> 
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="tile-footer">
-                    <div class="row"> 
-                        <div class="btn-group" role="group">
-                            
-                            <inertia-link  class="btn btn-warning"
-                                v-if="Order.Status !== 'pending'"
-                                as="button" type="button" 
-                                :data="{ Status: 'pending' }"  
-                                method="put" preserve-scroll 
-                                :href="route('admin.order.update', this.Order.id)"  
-                                >
-                                <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Pending</span>
-                            </inertia-link>
-                            
-                            <inertia-link  class="btn btn-info"
-                                v-if="Order.Status !== 'processing'"
-                                as="button" type="button" 
-                                :data="{ Status: 'processing' }"  
-                                method="put" preserve-scroll 
-                                :href="route('admin.order.update', this.Order.id)"  
-                                >
-                                <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Process</span>
-                            </inertia-link>
-                            
-                            <inertia-link  class="btn btn-success"
-                                v-if="Order.Status !== 'completed'"
-                                as="button" type="button" 
-                                method="put" preserve-scroll 
-                                :data="{ Status: 'completed' }"  
-                                :href="route('admin.order.update', this.Order.id)" 
-                                >
-                                <i class="fa fa-fw fa-lg fa-check-circle"></i><span>Completed</span>
-                            </inertia-link>
-
-                            <button type="button" 
-                                v-if="Order.Status !== 'decline'"
-                                :disabled="sending" 
-                                class="flex items-center btn btn-danger" 
-                                @click="cancel"
-                                >
-                                <div v-if="sending" class="btn-spinner mr-2" />
-                                <i v-else class="fa fa-fw fa-lg fa-remove"></i>
-                                Cancel
-                            </button>        
-
-                     
-                        </div> 
-                    </div>
-                </div>                
-            </div>
-        </div>
-    </div>   -->
     </div> 
 </div>     
 </template>
@@ -232,19 +207,25 @@ export default {
         StatusIcon(){
             switch (this.$page.Order.Status) {
                 case 'pending':
-                    return 'fa-spinner badge badge-warning text-white p-2'
+                    // return 'fa-spinner badge badge-warning text-white p-2'
+                    return 'text-yellow-600 text-bold uppercase'
                     break;
              
                 case 'processing':
-                    return 'fa-circle-o-notch badge badge-info p-2'
+                    // return 'fa-circle-o-notch badge badge-info p-2'
+                    return 'text-blue-600 text-bold uppercase'
                     break;
              
                 case 'completed':
-                    return 'fa-check-square-o badge badge-success p-2'
+                    // return 'fa-check-square-o badge badge-success p-2'
+                    return 'text-green-600 text-bold uppercase'
+
                     break;
              
                 case 'decline':
-                    return 'fa-times badge badge-danger p-2'
+                    // return 'fa-times badge badge-danger p-2'
+                    return 'text-red-600 text-bold uppercase'
+
                     break;
              
             } 

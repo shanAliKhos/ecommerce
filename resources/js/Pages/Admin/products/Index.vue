@@ -23,14 +23,14 @@
          
     </nav>    
 
-    <div class="my-8 p-2 pt-10 bg-white rounded shadow-xl">
+    <div class="my-8 p-10 bg-white rounded shadow-xl">
         <p class="text-xl pb-6 flex items-center">
             Order Listing
         </p>    
-        <table class="border-collapse w-full table-auto p-5">
+        <table class="border-collapse w-full table-auto lg:-mx-5 mb-2">
             <thead>
                 <tr>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">IMAGE</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">IMAGE</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">NAME</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th>
