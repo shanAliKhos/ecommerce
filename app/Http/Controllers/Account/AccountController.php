@@ -55,10 +55,8 @@ class AccountController extends Controller
                     "OrderNumber" => $Order->OrderNumber,               
                 ];
             });
-        })->collapse(); 
-     
+        })->collapse();  
 
-        
         return Inertia::render('Ecomerce/dashboard/Order',compact('OrderItems'));
     }
 

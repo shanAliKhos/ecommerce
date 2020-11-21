@@ -363,7 +363,8 @@ var render = function() {
                               { staticClass: "flex-shrink-0 h-full w-full" },
                               [
                                 _c("img", {
-                                  staticClass: "h-full w-full rounded",
+                                  staticClass:
+                                    "h-full w-full sm:h-44 sm:w-44 lg:h-full lg:w-full rounded",
                                   attrs: { src: _vm.Image(Product), alt: "" }
                                 })
                               ]

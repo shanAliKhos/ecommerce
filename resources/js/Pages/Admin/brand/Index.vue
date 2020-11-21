@@ -28,7 +28,7 @@
         <p class="text-xl pb-6 flex items-center">
             Brand Listing
         </p>    
-        <table class="border-collapse w-full ">
+        <table class="border-collapse w-full table-auto">
             <thead>
                 <tr> 
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
@@ -50,10 +50,10 @@
 
                         <div class="flex items-center py-5  lg:p-1">
                             <div class="flex-shrink-0 h-full w-full">
-                                <img class="h-full w-full rounded" :src="Image(Brand)" alt="">
+                                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded" :src="Image(Brand)" alt="">
                             </div> 
                         </div>             
-                    </td>                    
+                    </td>                     
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
                          <p class="py-5  lg:p-1 ">{{ Brand.name }}</p>

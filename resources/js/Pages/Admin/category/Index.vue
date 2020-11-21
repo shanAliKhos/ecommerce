@@ -28,7 +28,7 @@
         <p class="text-xl pb-6 flex items-center">
             Category Listing
         </p>    
-        <table class="border-collapse w-full ">
+        <table class="border-collapse w-full table-auto ">
             <thead>
                 <tr>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>

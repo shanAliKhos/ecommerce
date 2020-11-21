@@ -212,7 +212,8 @@ var render = function() {
           _c("div", { staticClass: "flex items-center py-5  lg:p-1" }, [
             _c("div", { staticClass: "flex-shrink-0 h-full w-full" }, [
               _c("img", {
-                staticClass: "h-full w-full rounded",
+                staticClass:
+                  "h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",
                 attrs: { src: _vm.Image(_vm.Category), alt: "" }
               })
             ])

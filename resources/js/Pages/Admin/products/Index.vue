@@ -55,7 +55,7 @@
 
                         <div class="flex items-center py-5  lg:p-1">
                             <div class="flex-shrink-0 h-full w-full">
-                                <img class="h-full w-full rounded" :src="Image(Product)" alt="">
+                                <img class="h-full w-full sm:h-44 sm:w-44 lg:h-full lg:w-full rounded" :src="Image(Product)" alt="">
                             </div> 
                         </div>             
                     </td>

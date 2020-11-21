@@ -6,6 +6,7 @@
             <span class=" ml-auto p-2" @click="$emit('mobile-menu-is-disabled')"><i
                     class="bx bx-x text-secondary text-3xl"></i></span>
             <ul> 
+            
                 <MobileNavLink 
                     :href="route('welcome')" 
                     :active="$page.currentRouteName == 'welcome'" 
@@ -30,6 +31,12 @@
                     :href="route('contact')" 
                     :active="$page.currentRouteName == 'contact'"
                 >Contact</MobileNavLink>              
+
+                <MobileNavLink 
+                     v-if="$page.user" 
+                    :href="route('cart')" 
+                    :active="$page.currentRouteName == 'cart'"
+                >Cart</MobileNavLink>     
 
                 <MobileNavLink 
                      v-if="$page.user?$page.user.is_admin:false" 

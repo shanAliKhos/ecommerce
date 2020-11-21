@@ -186,7 +186,7 @@ var render = function() {
         _vm._v("\n            Category Listing\n        ")
       ]),
       _vm._v(" "),
-      _c("table", { staticClass: "border-collapse w-full " }, [
+      _c("table", { staticClass: "border-collapse w-full table-auto " }, [
         _vm._m(1),
         _vm._v(" "),
         _c(

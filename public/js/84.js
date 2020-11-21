@@ -314,7 +314,7 @@ var render = function() {
         _vm._v("\n            Brand Listing\n        ")
       ]),
       _vm._v(" "),
-      _c("table", { staticClass: "border-collapse w-full " }, [
+      _c("table", { staticClass: "border-collapse w-full table-auto" }, [
         _vm._m(1),
         _vm._v(" "),
         _c(
@@ -375,7 +375,8 @@ var render = function() {
                           { staticClass: "flex-shrink-0 h-full w-full" },
                           [
                             _c("img", {
-                              staticClass: "h-full w-full rounded",
+                              staticClass:
+                                "h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",
                               attrs: { src: _vm.Image(Brand), alt: "" }
                             })
                           ]
