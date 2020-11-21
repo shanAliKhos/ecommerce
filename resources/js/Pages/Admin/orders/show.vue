@@ -22,7 +22,7 @@
         </inertia-link>                
     </nav>    
 
-    <div class="my-8 p-10 bg-white rounded shadow-xl">
+    <div class="my-8 p-10">
         <p class="text-xl pb-6 flex items-center">
             <span>Order # / {{ Order.OrderNumber}}</span>
         </p>    

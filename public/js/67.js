@@ -1,5 +1,312 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[67],{
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_Slider_BlogPostsSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/Slider/BlogPostsSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/BlogPostsSlider.vue");
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_1__["default"],
+  metaInfo: {
+    title: 'Blog-details'
+  },
+  components: {
+    BlogPostsSlider: _shared_Slider_BlogPostsSlider__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AppLayout.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/AppLayout.vue?vue&type=script&lang=js& ***!
@@ -11,7 +318,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Partials/AppHeader */ "./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue");
 /* harmony import */ var _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Partials/AppFooter */ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue");
-/* harmony import */ var _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Shared/FlashMessage */ "./resources/js/Pages/Shared/FlashMessage.vue");
+/* harmony import */ var _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Shared/FlashMessage */ "./resources/js/Pages/Shared/FlashMessage.vue");
 //
 //
 //
@@ -61,7 +368,7 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     AppHeader: _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_3__["default"] // DialogModal,
+    FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"] // DialogModal,
     // LoginForm,
     // SecondaryButton,
 
@@ -131,224 +438,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
-/* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartItem */ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/CartItem.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
- // import BreadCrumb from './../components/BreadCrumb' 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  layout: _AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'Shopping-cart'
-  },
-  components: {
-    CartItem: _CartItem__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
-  data: function data() {
-    return {
-      TotalPrice: 0,
-      SubTotalPrice: 0,
-      sending: false
-    };
-  },
-  methods: {
-    update: function update() {
-      self = this;
-      this.$root.$emit('update-cart', self.CartItems);
-    },
-    EmptyCart: function EmptyCart() {
-      var _this = this;
-
-      var self = this;
-      self.$swal.fire({
-        title: 'Are you sure?',
-        text: "You will be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, clear it!'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          self.$inertia.post(self.route('cart.flush'), {
-            preserveState: true,
-            preserveScroll: true,
-            onStart: function onStart() {
-              return _this.sending = true;
-            },
-            onFinish: function onFinish() {
-              return _this.sending = false;
-            }
-          });
-        }
-      });
-    }
-  },
-  computed: {
-    CartItems: function CartItems() {
-      return this.$page.Cart.Items;
-    },
-    CountCartItems: function CountCartItems() {
-      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
-      }, 0) : 0;
-      return Qty;
-    },
-    CartTotalPrice: function CartTotalPrice() {
-      var sum = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-        return TotalPrice + Item.Qty * Item.price;
-      }, 0) : 0;
-      return sum;
-    },
-    Currency: function Currency() {
-      return this.$page.SiteOptions.Currency.Symbol;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/FlashMessage.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/FlashMessage.vue?vue&type=script&lang=js& ***!
@@ -392,6 +481,702 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", {
+      staticClass:
+        "bg-no-repeat bg-cover bg-center w-full h-64 sm:h-76 md:h-90 xl:h-96",
+      staticStyle: { "background-image": "url(./img/blog-hero.jpg)" }
+    }),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "border-b border-grey-dark" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "xl:w-11/12 pt-10 pb-20 flex flex-col lg:flex-row justify-between"
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "lg:w-2/3 text-center sm:text-left content" },
+            [
+              _c("h1", { staticClass: "pb-3 md:pb-5" }, [
+                _vm._v("The 3 Golden Rules Professional Graphic Designers")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content" }, [
+                _c("p", [
+                  _vm._v(
+                    "Affiliate marketing is the latest trend online. With so\n                        many products to sell and services to offer, sometimes\n                        displaying it on one site isn’t enough. Thus,\n                        advertisers or merchants need affiliates, some sites\n                        which are willing to display ads for a particular cost.\n                        On the other hand, this is an opportunity for potential\n                        affiliates to earn extra income online."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "The easy way to earn from affiliate marketing is to join\n                        an affiliate marketing network. Joining poses several\n                        benefits to both the advertiser and the affiliate. For\n                        the advertisers, this opens a new door of opportunity to\n                        get more leads and sales, get higher return on\n                        investment and pay only for results. Affiliate marketing\n                        network lessens the risk of venturing into marketing\n                        without proper management and guidance."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("blockquote", [
+                  _vm._v(
+                    '"For the affiliates, joining an affiliate\n                        network makes earning money online a whole lot easier.\n                        Instead of going after many merchants for payment, the\n                        affiliate has only one contact"'
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Affiliate marketing will continually grow as the need for\n                        more sales and leads continue. People are beginning to\n                        look at this type of marketing as an important aspect of\n                        pushing websites forward. More and more websites and\n                        online businesses are looking into one day joining the\n                        ever growing affiliate marketing networks."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "The common affiliate marketing sectors include financial\n                        services, travel, retail, telecoms, mobile, broadband,\n                        gaming and even online gambling. Because of the\n                        increasing affiliate marketing networks also drastically\n                        increased. This means there will be more networks\n                        competing against each other. UK Affiliate Marketing\n                        Networks."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Affiliate marketing has become the trend in UK, as well.\n                        There are already a number of UK based affiliate\n                        marketing networks. Who are the major UK affiliate\n                        marketing networks and which one should you join?"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "The major affiliate marketing networks in UK include\n                        advertising.com, affiliatefuture.com,\n                        affiliatemarketing.co.uk, affiliatewindow.com,\n                        affili.net, brandconversions.com, buy.at,\n                        clash-media.co.uk, cj.com, dgmaffiliates.com,\n                        onlinemediagroup.co.uk, paidonresults.com, primeq.co.uk,\n                        silvertap.com, smart-quotes.com, tradedoubler.com,\n                        webgains.com and zanox.com. This is according to\n                        e-consultancy report."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: "./img/blog-image.jpg", alt: "blog image" }
+                }),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "These affiliate marketing networks all vies for merchants\n                        and affiliates. They will get an override commission for\n                        the sales so it would be best to have more merchants and\n                        affiliates on the network. The standard override fee is\n                        30% although that still depends on the network. But\n                        whatever network you choose, whether you are a merchant\n                        or an affiliate, as long as you set things up properly,\n                        you will still get your share of higher sales."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Affiliate marketing is the latest trend online. With so\n                        many products to sell and services to offer, sometimes\n                        displaying it on one site isn’t enough. Thus,\n                        advertisers or merchants need affiliates, some sites\n                        which are willing to display ads for a particular cost.\n                        On the other hand, this is an opportunity for potential\n                        affiliates to earn extra income online."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "The easy way to earn from affiliate marketing is to join\n                        an affiliate marketing network. Joining poses several\n                        benefits to both the advertiser and the affiliate. For\n                        the advertisers, this opens a new door of opportunity to\n                        get more leads and sales, get higher return on\n                        investment and pay only for results. Affiliate marketing\n                        network lessens the risk of venturing into marketing\n                        without proper management and guidance."
+                  )
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "pt-16 pb-16 sm:pb-20" },
+      [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center"
+          },
+          [_vm._v("\n            Related Post\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass:
+              "font-hkregular text-secondary-lighter text-base md:text-lg text-center pb-5 sm:pb-12 md:pb-0"
+          },
+          [
+            _vm._v(
+              "\n            For powerful features, great design and support from the developer.\n        "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("blog-posts-slider")
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col sm:flex-row" }, [
+      _c("div", {
+        staticClass:
+          "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 -mt-10 ml-5 md:ml-8",
+        staticStyle: { "background-image": "url(./img/blog-author.jpg)" }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex justify-center items-center sm:pl-10 md:pl-12 py-3 sm:py-4 md:py-6 font-hkregular text-base text-secondary"
+        },
+        [
+          _c("span", [
+            _vm._v("By\n                "),
+            _c("span", { staticClass: "font-hkbold" }, [_vm._v("Abdullah")])
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+          _vm._v(" "),
+          _c("span", [_vm._v("03 May 2019")])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex sm:flex-col md:flex-row justify-center items-center sm:pl-10 md:pl-16 py-3 sm:py-4 md:py-6"
+        },
+        [
+          _c("span", { staticClass: "font-hkbold text-base text-secondary" }, [
+            _vm._v("678")
+          ]),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass:
+                "font-hkregular text-base text-secondary pl-3 sm:pl-0 md:pl-3"
+            },
+            [_vm._v("Share")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex sm:flex-col md:flex-row justify-center items-center sm:pl-10 md:pl-16 py-3 sm:py-4 md:py-6"
+        },
+        [
+          _c("span", { staticClass: "font-hkbold text-base text-secondary" }, [
+            _vm._v("30")
+          ]),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass:
+                "font-hkregular text-base text-secondary pl-3 sm:pl-3"
+            },
+            [_vm._v("Comments")]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0" },
+      [
+        _c("form", { staticClass: "flex items-center w-full mb-16 relative" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block relative h-0 w-0 overflow-hidden",
+              attrs: { for: "search_form" }
+            },
+            [_vm._v("Search")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass:
+              "form-input   transition-all pr-10 text-grey-darkest text-base",
+            attrs: {
+              type: "text",
+              id: "search_form",
+              placeholder: "Search the Blog"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "focus:outline-none absolute right-0 top-0 mt-4 mr-3",
+              attrs: { "aria-label": "Search button" }
+            },
+            [_c("i", { staticClass: "bx bx-search text-2xl" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-16 text-center sm:text-left" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+            },
+            [_vm._v("\n                        Recent Post")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
+              attrs: { href: "/post" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                },
+                [
+                  _vm._v(
+                    "\n                            How to make the most of the rest of the year"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                },
+                [_vm._v("\n                            02 May 2019")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
+              attrs: { href: "/post" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                },
+                [
+                  _vm._v(
+                    "\n                            3 top OOTD to play with while traveling!"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                },
+                [_vm._v("\n                            03 May 2019")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
+              attrs: { href: "/post" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                },
+                [
+                  _vm._v(
+                    "\n                            Looking forward: Planning for the winter’s outfits"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                },
+                [_vm._v("\n                            04 May 2019")]
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-16" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
+            },
+            [_vm._v("\n                        Categories")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Stylish Fashion\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("5")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Makeup Tips\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("23")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Traveling Tips\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("45")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Empowerment\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("65")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Instagram\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("32")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Skin Care\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("21")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Hair Care\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("2")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [
+                  _vm._v(
+                    "\n                            Coming up\n                        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("11")]
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center sm:text-left" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+            },
+            [_vm._v("\n                        Follow Us")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex justify-center sm:justify-start pt-8" },
+            [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-facebook text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-twitter text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-instagram text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-pinterest text-white" })]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
 
 /***/ }),
 
@@ -491,423 +1276,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be&":
-/*!********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be& ***!
-  \********************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container border-t border-grey-dark pt-10 sm:pt-12" },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "flex flex-col-reverse lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24"
-        },
-        [
-          _c("div", { staticClass: "lg:w-3/5" }, [
-            _c("div", { staticClass: "pt-10" }, [
-              _c(
-                "h1",
-                {
-                  staticClass:
-                    "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
-                },
-                [_vm._v("Cart Items")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "pt-8" },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _vm._l(_vm.CartItems, function(item, index) {
-                    return _c("cart-item", {
-                      key: index,
-                      attrs: { CartItem: item, cartindex: index },
-                      on: {
-                        "update-this-item": function($event) {
-                          return _vm.update()
-                        }
-                      }
-                    })
-                  })
-                ],
-                2
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 sm:pt-12"
-              },
-              [
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-outline",
-                    attrs: { href: _vm.route("shop.index") }
-                  },
-                  [_vm._v("CONTINUE SHOPPING\n                ")]
-                ),
-                _vm._v(" "),
-                (_vm.CartItems
-                ? _vm.CartItems.length
-                : false)
-                  ? _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary mt-5 sm:mt-0",
-                        attrs: { type: "submit" },
-                        on: { click: _vm.EmptyCart }
-                      },
-                      [
-                        _vm.sending
-                          ? _c("div", { staticClass: "btn-spinner mr-2" })
-                          : _c("i", {
-                              staticClass: "fa fa-fw fa-lg fa-remove"
-                            }),
-                        _vm._v(
-                          "                                \n                    Empty cart\n                "
-                        )
-                      ]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "sm:w-2/3 md:w-full lg:w-1/3 mx-auto lg:mx-0 mt-16 lg:mt-0"
-            },
-            [
-              _c(
-                "div",
-                { staticClass: "bg-grey-light py-8 px-8" },
-                [
-                  _c(
-                    "h4",
-                    {
-                      staticClass:
-                        "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
-                    },
-                    [_vm._v("\n                    Cart Totals")]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(2),
-                  _vm._v(" "),
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mb-12 pt-4" }, [
-                    _c(
-                      "p",
-                      { staticClass: "font-hkbold text-secondary pt-1 pb-2" },
-                      [_vm._v("Cart Total\n                    ")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "border-b border-grey-darker pb-1 flex justify-between"
-                      },
-                      [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkregular text-secondary" },
-                          [_vm._v("Subtotal")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "font-hkregular text-secondary" },
-                          [
-                            _vm._v(
-                              _vm._s(_vm.Currency) + _vm._s(_vm.CartTotalPrice)
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm._m(4),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "pt-3 flex justify-between" }, [
-                      _c(
-                        "span",
-                        { staticClass: "font-hkbold text-secondary" },
-                        [_vm._v("Total")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "font-hkbold text-secondary" },
-                        [
-                          _vm._v(
-                            _vm._s(_vm.Currency) + _vm._s(_vm.CartTotalPrice)
-                          )
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  (_vm.CartItems
-                  ? _vm.CartItems.length
-                  : false)
-                    ? _c(
-                        "inertia-link",
-                        {
-                          staticClass: "btn btn-primary w-full",
-                          attrs: { href: _vm.route("cart.CustomerInfomation") }
-                        },
-                        [
-                          _vm._v(
-                            "\n                    PROCEED TO CHECKOUT\n                "
-                          )
-                        ]
-                      )
-                    : _vm._e()
-                ],
-                1
-              )
-            ]
-          )
-        ]
-      )
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
-          attrs: { href: "/cart/" }
-        },
-        [_vm._v("Cart")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
-          attrs: { href: "/cart/customer-info" }
-        },
-        [_vm._v("Customer information")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
-          attrs: { href: "/cart/shipping-method" }
-        },
-        [_vm._v("Shipping method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
-          attrs: { href: "/cart/payment-method" }
-        },
-        [_vm._v("Payment method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-transparent px-2"
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hidden sm:block" }, [
-      _c(
-        "div",
-        { staticClass: "flex justify-between border-b border-grey-darker" },
-        [
-          _c(
-            "div",
-            { staticClass: "w-1/2 lg:w-3/5 xl:w-1/2 pl-8 sm:pl-12 pb-2" },
-            [
-              _c(
-                "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Product Name")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "w-1/4 sm:w-1/6 lg:w-1/5 xl:w-1/4 pb-2 text-right sm:mr-2 md:mr-18 lg:mr-12 xl:mr-18"
-            },
-            [
-              _c(
-                "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Quantity")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "w-1/4 lg:w-1/5 xl:w-1/4 pb-2 text-right md:pr-10" },
-            [
-              _c(
-                "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Price")]
-              )
-            ]
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-2" }, [
-        _vm._v("Cart Note\n                    ")
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "font-hkregular text-secondary text-sm pb-4" }, [
-        _vm._v("\n                        Special instructions for us")
-      ]),
-      _vm._v(" "),
-      _c(
-        "label",
-        {
-          staticClass: "block relative h-0 w-0 overflow-hidden",
-          attrs: { for: "cart_note" }
-        },
-        [_vm._v("Cart\n                        Note")]
-      ),
-      _vm._v(" "),
-      _c("textarea", {
-        staticClass: "form-textarea",
-        attrs: { rows: "5", placeholder: "Enter your text", id: "cart_note" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pt-4" }, [
-      _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-4" }, [
-        _vm._v("Add Coupon\n                    ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex justify-between" }, [
-        _c(
-          "label",
-          {
-            staticClass: "block relative h-0 w-0 overflow-hidden",
-            attrs: { for: "discount_code" }
-          },
-          [_vm._v("Discount\n                            Code")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "w-3/5 xl:w-2/3 form-input",
-          attrs: {
-            type: "text",
-            placeholder: "Discount code",
-            id: "discount_code"
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass:
-              "w-2/5 xl:w-1/3 ml-4 lg:ml-2 xl:ml-4 btn btn-outline btn-sm",
-            attrs: { "aria-label": "Apply button" }
-          },
-          [_vm._v("Apply")]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "border-b border-grey-darker pt-2 pb-1 flex justify-between"
-      },
-      [
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
-          _vm._v("Coupon\n                            applied")
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
-          _vm._v("-$0")
-        ])
-      ]
-    )
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/FlashMessage.vue?vue&type=template&id=fdf19e30&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/FlashMessage.vue?vue&type=template&id=fdf19e30& ***!
@@ -927,6 +1295,75 @@ var render = function() {
 }
 var staticRenderFns = []
 render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
+/* harmony import */ var _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogDetails.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BlogDetails.vue?vue&type=template&id=66c6a993& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/blog-details/BlogDetails.vue?vue&type=template&id=66c6a993&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogDetails_vue_vue_type_template_id_66c6a993___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -1065,75 +1502,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_082068e0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_082068e0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue":
-/*!*******************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cart.vue?vue&type=template&id=c62725be& */ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be&");
-/* harmony import */ var _Cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cart.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Cart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be& ***!
-  \**************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Cart.vue?vue&type=template&id=c62725be& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/Cart/Cart.vue?vue&type=template&id=c62725be&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_c62725be___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
