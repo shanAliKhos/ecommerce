@@ -49,8 +49,8 @@
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">IMAGE</p>
 
                         <div class="flex items-center py-5  lg:p-1">
-                            <div class="flex-shrink-0 h-10 w-10">
-                                <img class="h-10 w-10 rounded-full" :src="Image(Brand)" alt="">
+                            <div class="flex-shrink-0 h-full w-full">
+                                <img class="h-full w-full rounded" :src="Image(Brand)" alt="">
                             </div> 
                         </div>             
                     </td>                    

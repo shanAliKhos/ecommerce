@@ -18,15 +18,16 @@
             </div>
 
             <inertia-link 
+                v-if="$page?!$page.user.is_admin:false"
                 :href="route('dashboard.index')"  
                 preserve-scroll
                 preserve-state
                 as="button" 
                 class="transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center" 
-                :class="{'text-primary border-primary':($page.currentRouteName == 'dashboard'),'font-hkregular text-grey-darkest':($page.currentRouteName != 'dashboard')}" 
+                :class="{'text-primary border-primary':($page.currentRouteName == 'dashboard.index'),'font-hkregular text-grey-darkest':($page.currentRouteName != 'dashboard.index')}" 
                 type="button">
                 <svg  class="w-8 h-8 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"/></svg>
-            Dashboard
+            Dashboard user
             </inertia-link>                       
  
             <inertia-link 

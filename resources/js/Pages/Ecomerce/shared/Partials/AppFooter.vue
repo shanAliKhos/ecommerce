@@ -1,7 +1,7 @@
 <template>
-<footer class="xxstheme-footer">
+<footer class="xxstheme-footer" v-if="IsVisible">
 
-    <div class="container" v-if="this.$page.currentRouteName != 'login' ">
+    <div class="container">
         <div class="bg-center bg-no-repeat bg-cover bg-cta-bg">
             <div class="py-16 md:py-20 text-center">
                 <h3 class="font-butlerregular text-white text-3xl sm:text-4xl tracking-wide">
@@ -132,5 +132,31 @@ export default {
     components:{
         ApplicationLogo,
     },
+    computed: {
+        IsVisible() {
+            switch (this.$page.currentRouteName) {
+                case 'login':
+                    return false;      
+                break;
+                case 'password.request':
+                    return false;      
+                break;
+                case 'register':
+                    return false;      
+                break;
+            
+                default:
+                    return true;      
+                break;
+            }
+            // if($page.currentRouteName !== 'login') ($page.currentRouteName !== '')){
+
+            //     return false;   
+            // }
+
+            // return true;
+        },        
+    },
+
 }
 </script>

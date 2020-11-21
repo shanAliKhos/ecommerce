@@ -6,7 +6,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', function(){
     return Inertia\Inertia::render('Auth/Login');
 })->name('login')->middleware('guest');
+
+Route::get('/forgot-password', function(){
+    return Inertia\Inertia::render('Auth/ForgetPassword');
+})->name('password.request')->middleware('guest');
  
+Route::get('/register', function(){
+    return Inertia\Inertia::render('Auth/NewRegister');
+})->name('register')->middleware('guest');
+ 
+
 Route::get('/contact', function () {
     return Inertia\Inertia::render('Ecomerce/contact/Contact');
 })->name('contact');
