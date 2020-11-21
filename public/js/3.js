@@ -149,11 +149,19 @@ __webpack_require__.r(__webpack_exports__);
           return false;
           break;
 
+        case 'register':
+          return false;
+          break;
+
         case 'password.request':
           return false;
           break;
 
-        case 'register':
+        case 'password.reset':
+          return false;
+          break;
+
+        case 'verification.notice':
           return false;
           break;
 

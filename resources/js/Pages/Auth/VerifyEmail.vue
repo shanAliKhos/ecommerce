@@ -58,7 +58,7 @@ import AppLayout from './../Ecomerce/shared/AppLayout'
 
 export default {
   layout:AppLayout,
-  metaInfo: { title: 'forger-password' },
+  metaInfo: { title: 'email verification' },
  
  
   data() {
@@ -92,7 +92,7 @@ export default {
               timer: 3000,
               timerProgressBar: true,
               icon: 'success',
-              title: 'Mail sent ! check your email address',
+              title: 'verification-link-sent',
           }) 
           setTimeout(() => {
             this.$inertia.get(route('welcome'))

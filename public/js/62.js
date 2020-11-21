@@ -68,7 +68,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   metaInfo: {
-    title: 'forger-password'
+    title: 'email verification'
   },
   data: function data() {
     return {
@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
             timer: 3000,
             timerProgressBar: true,
             icon: 'success',
-            title: 'Mail sent ! check your email address'
+            title: 'verification-link-sent'
           });
 
           setTimeout(function () {

@@ -3,15 +3,35 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
  
 
 Route::get('/login', function(){
     return Inertia\Inertia::render('Auth/Login');
 })->name('login')->middleware('guest');
 
-Route::get('/forgot-password', function(){
-    return Inertia\Inertia::render('Auth/ForgetPassword');
-})->name('password.request')->middleware('guest');
+Route::get('/forgot-password', function () {
+    return Inertia\Inertia::render('Auth/ForgetPassword'); 
+})->middleware(['guest'])->name('password.request');
+ 
+Route::post('/forgot-password', function (Request $request) {
+    $request->validate(['email' => 'required|email']);
+
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+
+    return $status === Password::RESET_LINK_SENT
+                ? back()->with(['success' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
+})->middleware(['guest'])->name('password.email');
+
+Route::get('/reset-password/{token}', function ($token,Request $request) {
+    return Inertia\Inertia::render('Auth/ResetPassword',[
+        'ResetToken' => $token,
+        'email' => old('email', $request->email),
+    ]); 
+})->middleware(['guest'])->name('password.reset'); 
  
 Route::get('/register', function(){
     return Inertia\Inertia::render('Auth/NewRegister');
