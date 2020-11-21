@@ -13,7 +13,7 @@
                 </div>
     
                 <Footer />
-                <Flash v-if="$page.flash"></Flash>
+                <FlashMessage v-if="$page.flash"></FlashMessage>
                 <portal-target name="modal" multiple>
                 </portal-target>
     
@@ -27,7 +27,8 @@
     import Sidebar from './partials/Sidebar'
     import Navbar from './partials/Navbar'
     import Footer from './partials/Footer'
-    import Flash from './partials/Flash' 
+    import FlashMessage from './../../Shared/FlashMessage'   
+
 
 
     export default {
@@ -39,7 +40,7 @@
             Sidebar,
             Navbar,
             Footer,
-            Flash
+            FlashMessage,
         }
     }
 </script>

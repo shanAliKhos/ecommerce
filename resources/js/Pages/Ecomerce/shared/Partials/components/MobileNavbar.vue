@@ -34,8 +34,8 @@
 
                 <MobileNavLink 
                      v-if="$page.user" 
-                    :href="route('cart')" 
-                    :active="$page.currentRouteName == 'cart'"
+                    :href="route('cart.index')" 
+                    :active="$page.currentRouteName == 'cart.index'"
                 >Cart</MobileNavLink>     
 
                 <MobileNavLink 

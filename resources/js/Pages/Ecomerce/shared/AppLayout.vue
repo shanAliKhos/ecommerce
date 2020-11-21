@@ -42,7 +42,8 @@
     // import DialogModal from './../../Shared/DialogModal'  
     // import SecondaryButton from './../../Shared/SecondaryButton'  
     // import LoginForm from './../../Auth/Login'  
-    import FlashMessage from './Partials/components/FlashMessage'  
+    // import FlashMessage from './Partials/components/FlashMessage'  
+    import FlashMessage from './../../Shared/FlashMessage'  
  
 
     export default {
