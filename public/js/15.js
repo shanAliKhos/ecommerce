@@ -199,6 +199,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -951,48 +955,55 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "mt-6" },
-        [
-          _c(
-            "loading-button",
-            {
-              staticClass:
-                "transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
-              attrs: { loading: _vm.sending, type: "submit", as: "button" }
-            },
-            [
-              _vm._v("\r\n            UPDATE PRODUCTS\r\n                "),
-              !_vm.sending
-                ? _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "transition duration-700 ease-in-out  h-5 w-5 ml-2",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 20 20",
-                        fill: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
+      _c("div", { staticClass: "mt-6" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+          },
+          [
+            _c(
+              "loading-button",
+              {
+                staticClass:
+                  "transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                attrs: { loading: _vm.sending, type: "submit", as: "button" }
+              },
+              [
+                _vm._v(
+                  "\r\n                UPDATE PRODUCTS\r\n                    "
+                ),
+                !_vm.sending
+                  ? _c(
+                      "svg",
+                      {
+                        staticClass:
+                          "transition duration-700 ease-in-out  h-5 w-5 ml-2",
                         attrs: {
-                          "fill-rule": "evenodd",
-                          d:
-                            "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                          "clip-rule": "evenodd"
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "currentColor"
                         }
-                      })
-                    ]
-                  )
-                : _vm._e()
-            ]
-          )
-        ],
-        1
-      )
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "fill-rule": "evenodd",
+                            d:
+                              "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
+                            "clip-rule": "evenodd"
+                          }
+                        })
+                      ]
+                    )
+                  : _vm._e()
+              ]
+            )
+          ],
+          1
+        )
+      ])
     ]
   )
 }
