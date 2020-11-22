@@ -415,7 +415,6 @@ var render = function() {
                         type: "email",
                         name: "email",
                         placeholder: "E-Mail Address",
-                        required: "",
                         autofocus: ""
                       },
                       domProps: { value: _vm.form.email },
