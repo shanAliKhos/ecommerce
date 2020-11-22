@@ -48,7 +48,7 @@ export default {
       }
     },
     defualt_preview_img(){
-      if (!value) {
+      if (!this.value) {
         this.imagePreview = this.defaultPhotoUrl();
       }
 
