@@ -1,1 +1,1466 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[36,51,104,115],{0:function(t,e,l){"use strict";function i(t,e,l,i,o,r,a,s){var n,c="function"==typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=l,c._compiled=!0),i&&(c.functional=!0),r&&(c._scopeId="data-v-"+r),a?(n=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(a)},c._ssrRegister=n):o&&(n=s?function(){o.call(this,(c.functional?this.parent:this).$root.$options.shadowRoot)}:o),n)if(c.functional){c._injectStyles=n;var d=c.render;c.render=function(t,e){return n.call(e),d(t,e)}}else{var p=c.beforeCreate;c.beforeCreate=p?[].concat(p,n):[n]}return{exports:t,options:c}}l.d(e,"a",(function(){return i}))},256:function(t,e,l){"use strict";l.r(e);var i=l(4),o=l(33),r={layout:i.default,metaInfo:{title:"Product"},components:{Pagination:o.default},methods:{Image:function(t){return self=this,t.image?"/"+t.image.replace("public","storage"):this.defaultPhotoUrl(t.name)},defaultPhotoUrl:function(t){return"https://ui-avatars.com/api/?name="+t+"&color=7F9CF5&background=EBF4FF"}},computed:{Products:function(){return this.$page.Products.data},Links:function(){return this.$page.Products.links}}},a=l(0),s=Object(a.a)(r,(function(){var t=this,e=t.$createElement,l=t._self._c||e;return l("div",[l("nav",{staticClass:"text-sm font-semibold mb-6",attrs:{"aria-label":"Breadcrumb"}},[l("ol",{staticClass:"list-none p-0 inline-flex"},[l("li",{staticClass:"flex items-center text-blue-500"},[l("inertia-link",{staticClass:"text-gray-700",attrs:{href:t.route("admin.dashboard")}},[t._v("Home")]),t._v(" "),l("svg",{staticClass:"  w-3 h-3 mx-3",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 320 512"}},[l("path",{attrs:{d:"M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"}})])],1),t._v(" "),t._m(0)]),t._v(" "),l("inertia-link",{staticClass:"transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right",attrs:{href:t.route("admin.product.create")}},[l("svg",{staticClass:"fill-current w-4 h-4 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[l("path",{attrs:{"fill-rule":"evenodd",d:"M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z","clip-rule":"evenodd"}})]),t._v(" "),l("span",[t._v("Add New")])])],1),t._v(" "),l("div",{staticClass:"my-8 p-10 bg-white rounded shadow-xl"},[l("p",{staticClass:"text-xl pb-6 flex items-center"},[t._v("\n           Product Listing\n       ")]),t._v(" "),l("table",{staticClass:"border-collapse w-full table-auto "},[t._m(1),t._v(" "),l("tbody",t._l(t.Products,(function(e,i){return l("tr",{key:i,staticClass:"bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"},[l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("#")]),t._v(" "),l("p",{staticClass:"py-5  lg:p-1"},[t._v("\n                           "+t._s(i+1)+"\n                       ")])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("IMAGE")]),t._v(" "),l("div",{staticClass:"flex items-center py-5  lg:p-1"},[l("div",{staticClass:"flex-shrink-0 h-full w-full"},[l("img",{staticClass:"h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",attrs:{src:t.Image(e),alt:""}})])])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("NAME")]),t._v(" "),l("p",{staticClass:"py-5  lg:p-1"},[t._v(t._s(e.name))])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("SKU")]),t._v(" "),l("p",{staticClass:"py-5  lg:p-1"},[t._v(t._s(e.sku))])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("PRICE")]),t._v(" "),l("p",{staticClass:"py-5  lg:p-1"},[t._v("\n                           $"+t._s(e.sale_price?e.sale_price:e.regular_price)+"\n                       ")])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("STATUS")]),t._v(" "),l("p",{staticClass:"py-5  lg:p-1"},[e.is_active?l("span",{staticClass:"rounded bg-green-400 py-1 px-3 text-xs font-bold"},[t._v("ACTIVE")]):l("span",{staticClass:"rounded bg-red-400 py-1 px-3 text-xs font-bold"},[t._v("IN ACTIVE")])])]),t._v(" "),l("td",{staticClass:"w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"},[l("p",{staticClass:"lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"},[t._v("ACTIONS")]),t._v(" "),l("div",{staticClass:"inline-flex py-5  lg:p-1"},[l("inertia-link",{staticClass:"transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",attrs:{href:t.route("admin.product.edit",e.id)}},[l("svg",{staticClass:"w-4 h-4",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[l("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"}})])])],1)])])})),0)])]),t._v(" "),l("pagination",{attrs:{links:t.Links}})],1)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("li",{staticClass:"flex items-center"},[e("a",{staticClass:"text-gray-600",attrs:{href:"#"}},[this._v("Order Listing")])])},function(){var t=this,e=t.$createElement,l=t._self._c||e;return l("thead",[l("tr",[l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("#")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("IMAGE")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("NAME")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("SKU")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("Price")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("Status")]),t._v(" "),l("th",{staticClass:"p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"},[t._v("ACTIONS")])])])}],!1,null,null,null);e.default=s.exports},300:function(t,e,l){(t.exports=l(18)(!1)).push([t.i,'fieldset[disabled] .multiselect{pointer-events:none}.multiselect__spinner{position:absolute;right:1px;top:1px;width:48px;height:35px;background:#fff;display:block}.multiselect__spinner:after,.multiselect__spinner:before{position:absolute;content:"";top:50%;left:50%;margin:-8px 0 0 -8px;width:16px;height:16px;border-radius:100%;border:2px solid transparent;border-top-color:#41b883;box-shadow:0 0 0 1px transparent}.multiselect__spinner:before{-webkit-animation:spinning 2.4s cubic-bezier(.41,.26,.2,.62);animation:spinning 2.4s cubic-bezier(.41,.26,.2,.62);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__spinner:after{-webkit-animation:spinning 2.4s cubic-bezier(.51,.09,.21,.8);animation:spinning 2.4s cubic-bezier(.51,.09,.21,.8);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__loading-enter-active,.multiselect__loading-leave-active{transition:opacity .4s ease-in-out;opacity:1}.multiselect__loading-enter,.multiselect__loading-leave-active{opacity:0}.multiselect,.multiselect__input,.multiselect__single{font-family:inherit;font-size:16px;touch-action:manipulation}.multiselect{box-sizing:content-box;display:block;position:relative;width:100%;min-height:40px;text-align:left;color:#35495e}.multiselect *{box-sizing:border-box}.multiselect:focus{outline:none}.multiselect--disabled{background:#ededed;pointer-events:none;opacity:.6}.multiselect--active{z-index:50}.multiselect--active:not(.multiselect--above) .multiselect__current,.multiselect--active:not(.multiselect--above) .multiselect__input,.multiselect--active:not(.multiselect--above) .multiselect__tags{border-bottom-left-radius:0;border-bottom-right-radius:0}.multiselect--active .multiselect__select{transform:rotate(180deg)}.multiselect--above.multiselect--active .multiselect__current,.multiselect--above.multiselect--active .multiselect__input,.multiselect--above.multiselect--active .multiselect__tags{border-top-left-radius:0;border-top-right-radius:0}.multiselect__input,.multiselect__single{position:relative;display:inline-block;min-height:20px;line-height:20px;border:none;border-radius:5px;background:#fff;padding:0 0 0 5px;width:100%;transition:border .1s ease;box-sizing:border-box;margin-bottom:8px;vertical-align:top}.multiselect__input:-ms-input-placeholder{color:#35495e}.multiselect__input::-moz-placeholder{color:#35495e}.multiselect__input::placeholder{color:#35495e}.multiselect__tag~.multiselect__input,.multiselect__tag~.multiselect__single{width:auto}.multiselect__input:hover,.multiselect__single:hover{border-color:#cfcfcf}.multiselect__input:focus,.multiselect__single:focus{border-color:#a8a8a8;outline:none}.multiselect__single{padding-left:5px;margin-bottom:8px}.multiselect__tags-wrap{display:inline}.multiselect__tags{min-height:40px;display:block;padding:8px 40px 0 8px;border-radius:5px;border:1px solid #e8e8e8;background:#fff;font-size:14px}.multiselect__tag{position:relative;display:inline-block;padding:4px 26px 4px 10px;border-radius:5px;margin-right:10px;color:#fff;line-height:1;background:#41b883;margin-bottom:5px;white-space:nowrap;overflow:hidden;max-width:100%;text-overflow:ellipsis}.multiselect__tag-icon{cursor:pointer;margin-left:7px;position:absolute;right:0;top:0;bottom:0;font-weight:700;font-style:normal;width:22px;text-align:center;line-height:22px;transition:all .2s ease;border-radius:5px}.multiselect__tag-icon:after{content:"\\D7";color:#266d4d;font-size:14px}.multiselect__tag-icon:focus,.multiselect__tag-icon:hover{background:#369a6e}.multiselect__tag-icon:focus:after,.multiselect__tag-icon:hover:after{color:#fff}.multiselect__current{min-height:40px;overflow:hidden;padding:8px 30px 0 12px;white-space:nowrap;border-radius:5px;border:1px solid #e8e8e8}.multiselect__current,.multiselect__select{line-height:16px;box-sizing:border-box;display:block;margin:0;text-decoration:none;cursor:pointer}.multiselect__select{position:absolute;width:40px;height:38px;right:1px;top:1px;padding:4px 8px;text-align:center;transition:transform .2s ease}.multiselect__select:before{position:relative;right:0;top:65%;color:#999;margin-top:4px;border-color:#999 transparent transparent;border-style:solid;border-width:5px 5px 0;content:""}.multiselect__placeholder{color:#adadad;display:inline-block;margin-bottom:10px;padding-top:2px}.multiselect--active .multiselect__placeholder{display:none}.multiselect__content-wrapper{position:absolute;display:block;background:#fff;width:100%;max-height:240px;overflow:auto;border:1px solid #e8e8e8;border-top:none;border-bottom-left-radius:5px;border-bottom-right-radius:5px;z-index:50;-webkit-overflow-scrolling:touch}.multiselect__content{list-style:none;display:inline-block;padding:0;margin:0;min-width:100%;vertical-align:top}.multiselect--above .multiselect__content-wrapper{bottom:100%;border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:none;border-top:1px solid #e8e8e8}.multiselect__content::webkit-scrollbar{display:none}.multiselect__element{display:block}.multiselect__option{display:block;padding:12px;min-height:40px;line-height:16px;text-decoration:none;text-transform:none;vertical-align:middle;position:relative;cursor:pointer;white-space:nowrap}.multiselect__option:after{top:0;right:0;position:absolute;line-height:40px;padding-right:12px;padding-left:20px;font-size:13px}.multiselect__option--highlight{background:#41b883;outline:none;color:#fff}.multiselect__option--highlight:after{content:attr(data-select);background:#41b883;color:#fff}.multiselect__option--selected{background:#f3f3f3;color:#35495e;font-weight:700}.multiselect__option--selected:after{content:attr(data-selected);color:silver}.multiselect__option--selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect--disabled .multiselect__current,.multiselect--disabled .multiselect__select{background:#ededed;color:#a6a6a6}.multiselect__option--disabled{background:#ededed!important;color:#a6a6a6!important;cursor:text;pointer-events:none}.multiselect__option--group{background:#ededed;color:#35495e}.multiselect__option--group.multiselect__option--highlight{background:#35495e;color:#fff}.multiselect__option--group.multiselect__option--highlight:after{background:#35495e}.multiselect__option--disabled.multiselect__option--highlight{background:#dedede}.multiselect__option--group-selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--group-selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect-enter-active,.multiselect-leave-active{transition:all .15s ease}.multiselect-enter,.multiselect-leave-active{opacity:0}.multiselect__strong{margin-bottom:8px;line-height:20px;display:inline-block;vertical-align:top}[dir=rtl] .multiselect{text-align:right}[dir=rtl] .multiselect__select{right:auto;left:1px}[dir=rtl] .multiselect__tags{padding:8px 8px 0 40px}[dir=rtl] .multiselect__content{text-align:right}[dir=rtl] .multiselect__option:after{right:auto;left:0}[dir=rtl] .multiselect__clear{right:auto;left:12px}[dir=rtl] .multiselect__spinner{right:auto;left:1px}@-webkit-keyframes spinning{0%{transform:rotate(0)}to{transform:rotate(2turn)}}@keyframes spinning{0%{transform:rotate(0)}to{transform:rotate(2turn)}}',""])},33:function(t,e,l){"use strict";l.r(e);var i={props:{links:Array}},o=l(0),r=Object(o.a)(i,(function(){var t=this,e=t.$createElement,l=t._self._c||e;return l("div",{staticClass:"mt-6 -mb-1 flex flex-wrap"},[t._l(t.links,(function(e,i){return[null===e.url?l("div",{key:i,staticClass:"mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-400",class:{"ml-auto":"Next"===e.label}},[t._v(t._s(e.label))]):l("inertia-link",{key:i,staticClass:"mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white focus:border-indigo-500 focus:text-indigo-500",class:{"bg-white text-indigo-500 border  border-indigo-500 ":e.active,"ml-auto":"Next"===e.label},attrs:{href:e.url}},[t._v(t._s(e.label))])]}))],2)}),[],!1,null,null,null);e.default=r.exports},38:function(t,e,l){"use strict";l(99)},99:function(t,e,l){var i=l(300);"string"==typeof i&&(i=[[t.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};l(19)(i,o);i.locals&&(t.exports=i.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[36],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    Product: {
+      type: Object,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      CartItem: {
+        id: this.Product.id ? this.Product.id : null,
+        name: this.Product.name ? this.Product.name : '',
+        slug: this.Product.slug ? this.Product.slug : '',
+        Instock: this.Product.quantity ? this.Product.quantity : '',
+        Qty: 1,
+        price: this.Product.sale_price ? this.Product.sale_price : this.Product.regular_price,
+        image: this.Product.image ? this.Product.image : './img/shoes-4.png'
+      },
+      Label: {
+        Color: null,
+        Title: null,
+        Active: false
+      },
+      activeTab: 'description',
+      selectedImage: null
+    };
+  },
+  watch: {
+    CartItemQty: function CartItemQty(newQty, oldQty) {
+      if (newQty > this.ProductQuantity || newQty < 1) {
+        this.CartItem.Qty = oldQty;
+      }
+    }
+  },
+  methods: {
+    AddToCart: function AddToCart() {
+      this.$root.$emit('Add-To-Cart', this.CartItem);
+    },
+    SetLable: function SetLable() {
+      if (this.Product.sale_price > 0) {
+        var RegualPrice = this.Product.regular_price;
+        var SalePrice = this.Product.sale_price;
+        var Discount = Math.round((RegualPrice - SalePrice) / RegualPrice * 100) + '%OFF';
+        this.Label = {
+          Color: 'bg-primary',
+          Title: Discount,
+          Active: true
+        };
+      } else if (this.Product.is_featured) {
+        this.Label = {
+          Color: 'bg-v-blue',
+          Title: 'Trend',
+          Active: true
+        };
+      } else {
+        this.Label = {
+          Color: 'bg-v-green',
+          Title: 'new',
+          Active: true
+        };
+      }
+    }
+  },
+  computed: {
+    ProductImages: function ProductImages() {
+      self = this;
+      var img = './../../' + self.Product.image.replace("public", "storage");
+      return img;
+    },
+    CurrentPrice: function CurrentPrice() {
+      return this.$page.Product.sale_price ? this.$page.Product.sale_price : this.$page.Product.regular_price;
+    },
+    RegularPrice: function RegularPrice() {
+      return this.$page.Product.regular_price;
+    },
+    ProductQuantity: function ProductQuantity() {
+      return this.Product.quantity;
+    },
+    ProductDescription: function ProductDescription() {
+      return this.Product.description;
+    },
+    IsOnSale: function IsOnSale() {
+      return this.$page.Product.sale_price > 0;
+    },
+    CartItemQty: function CartItemQty() {
+      self = this;
+      return self.CartItem.Qty;
+    }
+  },
+  mounted: function mounted() {
+    this.SetLable();
+  } // data() {
+  //     return {
+  //         ProductImages:[],
+  //         CartProduct:{
+  //             id:(this.Product.id)?this.Product.id:null,
+  //             name:(this.Product.name)?this.Product.name:'',
+  //             slug:(this.Product.slug)?this.Product.slug:'',
+  //             Instock:(this.Product.quantity)?this.Product.quantity:'',
+  //             Qty:1,
+  //             price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
+  //             image:(this.Product.image)?this.Product.image:'',
+  //         }, 
+  //     }
+  // },
+  // methods: {
+  //     AddToCart(Item){ 
+  //         this.$root.$emit('Add-To-Cart',Item);      
+  //     },
+  // },
+  // watch: { 
+  //     CartQty: function (newQty, oldQty) {  
+  //         if(newQty > this.ProductQuantity || newQty < 1 ){
+  //             this.CartProduct.Qty =  oldQty
+  //         }
+  //     }
+  // },
+  // computed: {
+  // ProductMainImage(){
+  //     self = this ;
+  //     var  img = (this.Product.image)?'/'+this.Product.image.replace("public", "storage"):'/'+self.Product.image;
+  //     return img;
+  // },
+  // ProductAttributes(){
+  //     self = this ;  
+  //     return self.Product.Attributes;
+  // },
+  // ProductPrice(){
+  //     self = this ;
+  //     return (self.Product.sale_price)?self.Product.sale_price:self.Product.regular_price;
+  // },
+  // CartQty(){
+  //     self = this;
+  //     return self.CartProduct.Qty;
+  // },
+  // },
+
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "pt-16 pb-24 flex flex-col lg:flex-row justify-between -mx-5"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "lg:1/2 flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between px-5"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
+                      },
+                      [
+                        _c("div", {
+                          staticClass:
+                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
+                          staticStyle: {
+                            "background-image":
+                              "url(./../../img/backpack-1.png)"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.selectedImage =
+                                $event.target.style.backgroundImage
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
+                      },
+                      [
+                        _c("div", {
+                          staticClass:
+                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
+                          staticStyle: {
+                            "background-image":
+                              "url(./../../img/backpack-2.png)"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.selectedImage =
+                                $event.target.style.backgroundImage
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
+                      },
+                      [
+                        _c("div", {
+                          staticClass:
+                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
+                          staticStyle: {
+                            "background-image":
+                              "url(./../../img/backpack-3.png)"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.selectedImage =
+                                $event.target.style.backgroundImage
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
+                      },
+                      [
+                        _c("div", {
+                          staticClass:
+                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
+                          staticStyle: {
+                            "background-image":
+                              "url(./../../img/backpack-4.png)"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.selectedImage =
+                                $event.target.style.backgroundImage
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full sm:w-96 lg:w-80 xl:w-90 relative pb-5 sm:pb-0"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "bg-v-pink border border-grey relative h-80 sm:h-94 xl:h-96 rounded flex items-center justify-center"
+                  },
+                  [
+                    _c("div", {
+                      staticClass:
+                        "w-56 xl:w-64 h-76 sm:h-82 xl:h-86 my-6 sm:my-12 xl:my-24 bg-center bg-no-repeat bg-cover",
+                      style: "background-image:" + _vm.selectedImage + ""
+                    })
+                  ]
+                )
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "lg:w-1/2 pt-12 sm:pt-16 lg:pt-0 px-5" }, [
+          _c("div", { staticClass: "product-title" }, [
+            _c("div", { staticClass: "border-b border-grey-dark mb-8" }, [
+              _c("div", { staticClass: "flex items-center" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-butlerregular text-3xl md:text-4xl lg:text-7xl"
+                  },
+                  [_vm._v(_vm._s(_vm.Product.name))]
+                ),
+                _vm._v(" "),
+                _vm.Label.Active
+                  ? _c(
+                      "small",
+                      {
+                        staticClass:
+                          "rounded-full font-hkbold text-white uppercase text-sm text-center px-4 py-2 m-2",
+                        class: _vm.Label.Color
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(_vm.Label.Title) +
+                            "\n                        "
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex items-center pt-3" }, [
+                _c(
+                  "span",
+                  { staticClass: "font-hkregular text-secondary text-2xl" },
+                  [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                        " " +
+                        _vm._s(_vm.CurrentPrice) +
+                        " \n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.IsOnSale
+                  ? _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular text-grey-darker text-xl line-through pl-5"
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                            " " +
+                            _vm._s(_vm.RegularPrice) +
+                            " \n                        "
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _vm._m(0)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-availablity" }, [
+            _c("div", { staticClass: "flex pb-5" }, [
+              _c("p", { staticClass: "font-hkregular text-secondary" }, [
+                _vm._v("Availability:")
+              ]),
+              _vm._v(" "),
+              _vm.ProductQuantity > 0
+                ? _c("p", { staticClass: "font-hkbold text-v-green pl-3" }, [
+                    _vm._v("In Stock " + _vm._s(_vm.ProductQuantity))
+                  ])
+                : _c("p", { staticClass: "font-hkbold text-v-red pl-3" }, [
+                    _vm._v("Out of Stock " + _vm._s(_vm.ProductQuantity))
+                  ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex items-center justify-between pb-8" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "w-2/3 sm:w-5/6 flex",
+                attrs: { "x-data": "{ productQuantity: 1 }" }
+              },
+              [
+                _c(
+                  "label",
+                  {
+                    staticClass: "block relative h-0 w-0 overflow-hidden",
+                    attrs: { for: "quantity-form" }
+                  },
+                  [_vm._v("Quantity\n                        form")]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.number",
+                      value: _vm.CartItem.Qty,
+                      expression: "CartItem.Qty",
+                      modifiers: { number: true }
+                    }
+                  ],
+                  staticClass:
+                    "form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center",
+                  attrs: { type: "number", id: "quantity-form", min: "1" },
+                  domProps: { value: _vm.CartItem.Qty },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.CartItem, "Qty", _vm._n($event.target.value))
+                    },
+                    blur: function($event) {
+                      return _vm.$forceUpdate()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "flex flex-col" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer",
+                      on: {
+                        click: function($event) {
+                          _vm.CartItem.Qty++
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "bx bxs-up-arrow text-xs text-primary pointer-events-none"
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer",
+                      on: {
+                        click: function($event) {
+                          _vm.CartItem.Qty--
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "bx bxs-down-arrow text-xs text-primary pointer-events-none"
+                      })
+                    ]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex pb-8 group" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-outline mr-4 md:mr-6",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.AddToCart()
+                  }
+                }
+              },
+              [_vm._v("\n                    Add to cart\n                ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              { staticClass: "btn btn-primary", attrs: { href: "/cart" } },
+              [_vm._v("\n                    BUY NOW\n                ")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-short-description" }, [
+            _c("p", { staticClass: "font-hkregular text-secondary pb-5" }, [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(_vm.ProductDescription.substring(0, 70) + "...") +
+                  "\n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3)
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "pb-16 sm:pb-20 md:pb-24",
+        attrs: { "x-data": "{ activeTab: 'description' }" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "tabs flex flex-col sm:flex-row",
+            attrs: { role: "tablist" }
+          },
+          [
+            _c(
+              "span",
+              {
+                staticClass:
+                  "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
+                class: { active: _vm.activeTab === "description" },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = "description"
+                  }
+                }
+              },
+              [_vm._v("\n                Description\n            ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
+                class: { active: _vm.activeTab === "additional-information" },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = "additional-information"
+                  }
+                }
+              },
+              [_vm._v("\n                Additional Information\n            ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
+                class: { active: _vm.activeTab === "reviews" },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = "reviews"
+                  }
+                }
+              },
+              [_vm._v("\n                Reviews\n            ")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content relative" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "tab-pane bg-grey-light py-10 md:py-16   transition-opacity",
+              class: { active: _vm.activeTab === "description" },
+              attrs: { role: "tabpanel" }
+            },
+            [_vm._m(4)]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "tab-pane bg-grey-light py-10 md:py-16   transition-opacity",
+              class: { active: _vm.activeTab === "additional-information" },
+              attrs: { role: "tabpanel" }
+            },
+            [_vm._m(5)]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "tab-pane bg-grey-light py-10 md:py-16   transition-opacity",
+              class: { active: _vm.activeTab === "reviews" },
+              attrs: { role: "tabpanel" }
+            },
+            [
+              _vm._m(6),
+              _vm._v(" "),
+              _vm._m(7),
+              _vm._v(" "),
+              _vm._m(8),
+              _vm._v(" "),
+              _vm._m(9)
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex items-center pt-3 pb-8" }, [
+      _c("div", { staticClass: "flex items-center" }, [
+        _c("i", { staticClass: "bx bxs-star text-primary" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "bx bxs-star text-primary" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "bx bxs-star text-primary" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "bx bxs-star text-primary" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "bx bxs-star text-primary" })
+      ]),
+      _vm._v(" "),
+      _c(
+        "span",
+        { staticClass: "font-hkregular text-sm text-secondary ml-2" },
+        [_vm._v("(45)")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+      _c("p", { staticClass: "font-hkregular text-secondary" }, [
+        _vm._v("Quantity")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex pb-2" }, [
+      _c("p", { staticClass: "font-hkregular text-secondary" }, [
+        _vm._v("SKU:")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-hkbold text-secondary pl-3" }, [
+        _vm._v("\n                    KH12345")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "font-hkregular text-secondary" }, [
+      _c("span", { staticClass: "pr-2" }, [_vm._v("Categories:")]),
+      _vm._v("Bag, Hand bag, Travel bag, Black\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-5/6 mx-auto text-center sm:text-left" },
+      [
+        _c("div", { staticClass: "font-hkregular text-secondary text-base" }, [
+          _vm._v(
+            "\n                        Versatile, comfortable, and chic! Three words that describe Blake by Elyssi. This\n                        backpack purse is A durable leather backpack with two large compartments and 2\n                        smaller compartments on the front and back of it so you can carry all your\n                        belongings.\n\n                    "
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-5/6 mx-auto" }, [
+      _c("div", { staticClass: "font-hkregular text-secondary text-base" }, [
+        _vm._v(
+          "\n                        On the main compartment has multiple pockets available for your tools, chargers,\n                        make up, keys, etc. "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" Size::13.4”Lx 6.5”W x 15.4”H. "),
+        _c("br"),
+        _vm._v(" Weight:\n                        1.57pounds. "),
+        _c("br"),
+        _vm._v(" Color: light brown.\n\n                    ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-5/6 mx-auto border-b border-grey-darker pb-8 text-center sm:text-left"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+          },
+          [
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" })
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
+          _vm._v("\n                        Perfect for everyday use")
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+          },
+          [
+            _vm._v(
+              "\n                        I loooveeeee this product!!! It feels so soft and smells like real leather!!! I\n                        ordered this fancy backpack looking for something that can be used at work and, at\n                        the same time, after work; and I found it. Honestly.. Amazing!!"
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3"
+          },
+          [
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_c("span", [_vm._v("By")]), _vm._v(" Melanie Ashwood")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "font-hkregular text-grey-darkest text-sm block px-4"
+              },
+              [_vm._v(".")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_vm._v("\n                            6 days ago")]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-5/6 mx-auto border-b border-transparent pb-8 text-center sm:text-left"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+          },
+          [
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" })
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
+          _vm._v("\n                        Gift for my girlfriend")
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+          },
+          [
+            _vm._v(
+              "\n                        I paid this thing thinking about my girlfriend’s birthday present, however I had my\n                        doubts cuz’ she is kind of picky. But Seriously, from now on, Elyssi is my best\n                        friend! She loved it!! She’s crazy about it! DISCLAIMER: It is smaller than it\n                        appears. "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3"
+          },
+          [
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_c("span", [_vm._v("By")]), _vm._v(" Jake Houston")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "font-hkregular text-grey-darkest text-sm block px-4"
+              },
+              [_vm._v(".")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_vm._v("\n                            4 days ago")]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "w-5/6 mx-auto" }, [
+      _c(
+        "div",
+        {
+          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+        },
+        [
+          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "name" }
+              },
+              [_vm._v("Name")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input",
+              attrs: {
+                type: "text",
+                placeholder: "Enter your Name",
+                id: "name"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "email" }
+              },
+              [_vm._v("Email\n                                address")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input ",
+              attrs: {
+                type: "email",
+                placeholder: "Enter your email",
+                id: "email"
+              }
+            })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+        },
+        [
+          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "review_title" }
+              },
+              [_vm._v("Review\n                                Title")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input ",
+              attrs: {
+                type: "text",
+                placeholder: "Enter your review title",
+                id: "review_title"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2"
+              },
+              [_vm._v("Rating")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex pt-4" }, [
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "bx bxs-star text-grey-darker text-xl" })
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "sm:w-12/25 pt-10" }, [
+        _c(
+          "label",
+          {
+            staticClass: "font-hkregular text-secondary text-sm block mb-2",
+            attrs: { for: "message" }
+          },
+          [_vm._v("Review\n                            Message")]
+        ),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-textarea",
+          attrs: { placeholder: "Give your review tittle", id: "message" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left"
+      },
+      [
+        _c("a", { staticClass: "btn btn-primary", attrs: { href: "/" } }, [
+          _vm._v(
+            "\n                        Submit Review\n                    "
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shop-details/product/Product.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shop-details/product/Product.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Product.vue?vue&type=template&id=63c41176& */ "./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176&");
+/* harmony import */ var _Product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shop-details/product/Product.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Product.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Product.vue?vue&type=template&id=63c41176& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shop-details/product/Product.vue?vue&type=template&id=63c41176&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Product_vue_vue_type_template_id_63c41176___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

@@ -38,8 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-            <customer-item v-for="(Customer, CustomerIndex) in Customers" :key="CustomerIndex" :CustomerIndex="CustomerIndex" :Customer="Customer"></customer-item>
-                 <!-- <category-item v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex" v-if="(CategoryIndex > 0)" :CategoryIndex="CategoryIndex" :Category="Category"></category-item> -->
+                <customer-item v-for="(Customer, CustomerIndex) in Customers" :key="CustomerIndex" :CustomerIndex="CustomerIndex" :Customer="Customer"></customer-item> 
             </tbody>
         </table>    
     </div>

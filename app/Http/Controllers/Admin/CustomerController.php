@@ -2,93 +2,83 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Laravel\Jetstream\Contracts\DeletesUsers;
+
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-use App\Models\User;
-
-class CustomerController extends Controller
+class CustomerController extends Controller implements DeletesUsers
 {
     public function __construct()
     {
         $this->middleware('admin');  
     }    
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
-        $User = new User;
-        $Customers = $User->where('is_admin',false)->latest()->paginate(10);  
+        $customer = new User;
+        $Customers = $customer->where('is_admin',false)->latest()->paginate(10);  
         return Inertia::render('Admin/customers/index',compact('Customers'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function create()
     {
-        //
+ 
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function store(Request $request)
     {
-        //
+       
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+ 
+    public function show(User $customer)
     {
-        //
+        dd($customer);
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+ 
+    public function edit(User $customer)
     {
-        //
+        dd($customer);
+
+    }
+ 
+    public function update(Request $request, User $customer)
+    {
+        dd($customer);
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+  
+    public function destroy(User $customer)
     {
-        //
+        try { 
+            $customer->deleteProfilePhoto();
+            $customer->tokens->each->delete();
+            $customer->delete();         
+            return back()->with('success','user deleted');
+        } catch (\Throwable $th) {
+             
+            
+            return back()->with('error','before deleteting user delete other related records   ');
+            
+        }        
+       
+        return back()->with('error','before deleteting user delete other related records   ');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function delete($user)
     {
-        //
-    }
+        // $user->deleteProfilePhoto();
+        // $user->tokens->each->delete();
+        // $user->delete();
+        return back();
+    }    
 }

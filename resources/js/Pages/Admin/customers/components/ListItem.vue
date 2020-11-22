@@ -40,12 +40,22 @@
                         </svg>
                     </inertia-link>
 
-                    <inertia-link :href="route('admin.customer.show', Customer.id)" class=" transition duration-500 ease-in-out bg-transparent hover:bg-yellow-300 text-yellow-400 font-semibold hover:text-white py-1 px-1 border border-yellow-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
+                    <!-- <inertia-link :href="route('admin.customer.show', Customer.id)" class=" transition duration-500 ease-in-out bg-transparent hover:bg-yellow-300 text-yellow-400 font-semibold hover:text-white py-1 px-1 border border-yellow-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
                         <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                    </inertia-link>
+                    </inertia-link> -->
+
+                    <button type="button" @click="destroy" class=" transition duration-500 ease-in-out bg-transparent hover:bg-yellow-300 text-yellow-400 font-semibold hover:text-white py-1 px-1 border border-yellow-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
+                        <svg v-if="sending" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg> 
+                        <svg v-else class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>                          
+                    </button>
 
                     <!-- <form @submit.prevent="destroy">
                         <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1 border border-red-500 hover:border-transparent rounded inline-flex items-center" type="submit">
@@ -88,14 +98,14 @@ export default {
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
-                if (result.isConfirmed) {
-                    // self.$inertia.delete(self.route('admin.category.destroy', self.Category.id), {
-                    //     preserveState: true,
-                    //     preserveScroll: true,  
-                    //     onStart: () => self.sending = true,
-                    //     onFinish: () => self.sending = false,                                    
+                if (result.isConfirmed) { 
+                    self.$inertia.delete(self.route('admin.customer.destroy',self.Customer.id), {
+                        preserveState: true,
+                        preserveScroll: true,  
+                        onStart: () => self.sending = true,
+                        onFinish: () => self.sending = false,                                    
 
-                    // })                    
+                    })                    
                 }
             })                   
         },                
