@@ -4,7 +4,7 @@
 
 <div class="min-h-screen flex flex-col items-center justify-center bg-gray-300 py-5">
   <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
-    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Password Reset</div>
+    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-primary">Password Reset</div>
     <!-- <button class="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
       <span class="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500"><i class="fab fa-facebook-f"></i></span>
       <span>Login with Facebook</span>
@@ -64,7 +64,7 @@
  
 
         <div class="flex w-full">
-          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in">
+          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-700 rounded py-2 w-full transition duration-150 ease-in">
             <span class="mr-2 uppercase">Reset Password</span>
             <span class="relative">
               <svg v-if="sending" class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

@@ -92,45 +92,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -512,7 +473,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "font-medium self-center text-xl sm:text-2xl uppercase text-gray-800"
+                "font-medium self-center text-xl sm:text-2xl uppercase text-primary"
             },
             [_vm._v("Login To Your Account")]
           ),
@@ -724,7 +685,7 @@ var render = function() {
                     "button",
                     {
                       staticClass:
-                        "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in",
+                        "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ",
                       attrs: { type: "submit" }
                     },
                     [

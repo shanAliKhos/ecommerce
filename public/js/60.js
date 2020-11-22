@@ -61,34 +61,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -336,7 +308,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "font-medium self-center text-xl sm:text-2xl uppercase text-gray-800"
+                "font-medium self-center text-xl sm:text-2xl uppercase text-primary"
             },
             [_vm._v("Forget Password")]
           ),
@@ -443,7 +415,7 @@ var render = function() {
                     "button",
                     {
                       staticClass:
-                        "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in",
+                        "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in",
                       attrs: { type: "submit" }
                     },
                     [
@@ -523,7 +495,7 @@ var staticRenderFns = [
         [
           _c(
             "span",
-            { staticClass: "bg-white px-4 text-xs text-gray-500 uppercase" },
+            { staticClass: "bg-white px-4 text-xs text-gray-400 uppercase" },
             [
               _vm._v(
                 "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one."

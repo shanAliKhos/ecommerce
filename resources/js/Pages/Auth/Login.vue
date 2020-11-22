@@ -1,46 +1,7 @@
-<template>
-<!-- <dialog-modal :show="LoginModal" @close="LoginModal = false">
-    <template #title>
-        Login
-    </template>
-
-    <template #content> -->
-<!-- 
-      <div class="bg-white min-h-screen flex justify-center">
-          <div class="w-full max-w-md">  
-            <form class="mt-8 bg-white rounded-lg shadow-xl overflow-hidden" @submit.prevent="submit">
-              <div class="px-10 py-12"> 
-                <h1 class="text-center font-bold text-3xl">LOGIN</h1>
-                <div class="mx-auto mt-6 w-24 border-b-2 relative" /> 
-                  <text-input v-model="form.email" :error="$page.errors.email" class="mt-10" label="Email" type="email" autofocus autocapitalize="off" />
-                  <text-input v-model="form.password" class="mt-6" label="Password" type="password" :readonly="true"/>
-                  <label class="mt-6 select-none flex items-center" for="remember">
-                    <input id="remember" v-model="form.remember"  class="mr-1" type="checkbox">
-                    <span class="text-sm">Remember Me</span>
-                  </label>
-              </div>
-              <div class="px-10 py-4 bg-gray-100 border-t border-gray-200 flex justify-between items-center">
-                <a class="hover:underline" tabindex="-1" :href="$route('password.request')">Forget password?</a>
-                <loading-button :loading="sending" class="btn btn-info" type="submit">Login</loading-button>
-              </div>
-            </form>
-          </div>
-      </div>     -->
-<!--     
-    </template>
-
-    <template #footer>
-        <secondary-button @click.native="LoginModal = false">
-            Nevermind
-        </secondary-button>
-    </template>
-</dialog-modal> -->
-
- 
-
+<template> 
 <div class="min-h-screen flex flex-col items-center justify-center bg-gray-300">
   <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
-    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
+    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-primary">Login To Your Account</div>
     <!-- <button class="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
       <span class="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500"><i class="fab fa-facebook-f"></i></span>
       <span>Login with Facebook</span>
@@ -87,7 +48,7 @@
         </div>
 
         <div class="flex w-full">
-          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in">
+          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ">
             <span class="mr-2 uppercase">Login</span>
             <span class="relative">
               <svg v-if="sending" class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
