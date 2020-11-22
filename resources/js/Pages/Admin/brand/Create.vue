@@ -37,7 +37,7 @@
                             <div class="mt-2">
                                 <file-input 
                                 v-model="form.logo" 
-                                :defualt_preview_img="form.logo" 
+                                :defualt_preview_img="form.name" 
                                 :error="$page.errors.logo" 
                                 class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
                                 type="file" 
