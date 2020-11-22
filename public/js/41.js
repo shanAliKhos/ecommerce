@@ -149,8 +149,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       sending: false,
       form: {
-        email: 'user@shopping.com',
-        password: 'password',
+        email: null,
+        password: null,
         remember: null
       },
       LoginModal: true
