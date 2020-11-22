@@ -129,6 +129,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -683,7 +685,15 @@ var render = function() {
                           _vm.$set(_vm.form, "password", $event.target.value)
                         }
                       }
-                    })
+                    }),
+                    _vm._v(" "),
+                    _vm.$page.errors.password
+                      ? _c(
+                          "p",
+                          { staticClass: " text-red-500 text-xs italic" },
+                          [_vm._v(_vm._s(_vm.$page.errors.password))]
+                        )
+                      : _vm._e()
                   ])
                 ]),
                 _vm._v(" "),
