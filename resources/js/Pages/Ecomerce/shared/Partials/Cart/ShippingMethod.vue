@@ -42,16 +42,16 @@
                     <h1 class="font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left">Shipping Type </h1>
 
                     <div class="mt-5 md:mt-6 border border-grey-darker rounded px-4 sm:px-5">
-                        <div class="flex justify-between border-b border-grey-dark py-2">
+                        <!-- <div class="flex justify-between border-b border-grey-dark py-2">
                             <div class="flex items-center">
                                 <label for="shipping_international" class="block relative h-0 w-0 overflow-hidden">International Shipping</label>
                                 <input type="radio" value="International Shipping" v-model="form.shipment_type" class="form-checkbox" id="InternationalShipping" > 
 
-                                <!-- <input type="checkbox" v-model="form.shipment_type" class="form-checkbox" id="shipping_international" /> -->
+                                <input type="checkbox" v-model="form.shipment_type" class="form-checkbox" id="shipping_international" />
                                 <p class="ml-3 font-hkregular text-secondary"> International Shipping</p>
                             </div>
                             <p class="font-hkregular uppercase text-secondary"> $20</p>
-                        </div>
+                        </div> -->
                         <div class="flex justify-between py-2">
                             <div class="flex items-center">
                                 <label for="shipping_normal" class="block relative h-0 w-0 overflow-hidden">Normal 3 days delivery</label>

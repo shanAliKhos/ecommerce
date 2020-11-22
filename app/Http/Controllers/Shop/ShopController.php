@@ -15,7 +15,7 @@ class ShopController extends Controller
     {
         $Product = new Product;
         $SaleProducts = $Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get()->toArray(); 
-        $FeatureProducts = $Product->where('quantity','>',0)->where('is_featured',true)->take(12)->latest()->get()->toArray(); 
+        $FeatureProducts = $Product->where('quantity','>',0)->where('regular_price','>',0)->where('sale_price','>',0)->where('is_featured',true)->take(12)->latest()->get()->toArray(); 
         return Inertia::render('Ecomerce/welcome/Welcome',compact('SaleProducts','FeatureProducts'));        
     }
 

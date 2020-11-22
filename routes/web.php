@@ -144,8 +144,11 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
             Route::resource('/attribute', 'Admin\AttributeController'); 
 
             Route::resource('/product', 'Admin\ProductController'); 
+            
+            Route::resource('/customer', 'Admin\CustomerController'); 
 
             Route::resource('/product-attributes', 'Admin\ProductAttributeController');
+
 
             Route::get('/product/{product}/image', 'Admin\ProductImageController@index')->name('product.images.index');
             

@@ -25,17 +25,17 @@
 
     <div class="my-8 p-10 bg-white rounded shadow-xl">
         <p class="text-xl pb-6 flex items-center">
-            Order Listing
+            Product Listing
         </p>    
-        <table class="border-collapse w-full table-auto lg:-mx-5 mb-2">
+        <table class="border-collapse w-full table-auto ">
             <thead>
                 <tr>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">IMAGE</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">NAME</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Brand</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Categories</th>
+                    <!-- <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Brand</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Categories</th> -->
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Price</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Status</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ACTIONS</th>
@@ -44,59 +44,59 @@
             <tbody>
 
                 <tr v-for="(Product, ProductIndex) in Products" :key="ProductIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
                         <p class="py-5  lg:p-1">
                             {{ (ProductIndex+1) }}
                         </p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">IMAGE</p>
 
                         <div class="flex items-center py-5  lg:p-1">
                             <div class="flex-shrink-0 h-full w-full">
-                                <img class="h-full w-full sm:h-44 sm:w-44 lg:h-full lg:w-full rounded" :src="Image(Product)" alt="">
+                                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded" :src="Image(Product)" alt="">
                             </div> 
                         </div>             
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
                         <p class="py-5  lg:p-1">{{ Product.name }}</p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SKU</p>
                         <p class="py-5  lg:p-1">{{ Product.sku }}</p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <!-- <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">BRAND</p>
                         <p class="py-5  lg:p-1" v-if="Product.brand">{{ Product.brand.name }}</p>
                         <p class="py-5  lg:p-1" v-else>N/A</p>
-                    </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 border border-b md:text-center block lg:table-cell relative lg:static">
+                    </td> -->
+                    <!-- <td class="w-full lg:w-auto p-3 text-gray-800 border border-b border-gray-300 md:text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">CATEGORY</p>
                         <div class="py-5 lg:py-0 lg:p-1 h-auto">
                             <p v-for="(Category, CategoryIndex) in Product.categories" :key="CategoryIndex" v-if="Category" class=" lg:py-0 lg:px-0 py-1 px-2 bg-yellow-100 text-xs font-bold "> {{(CategoryIndex+1)}} {{ Category.name }}</p>      
                         </div>
                         
-                    </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    </td> -->
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PRICE</p>
                         <p class="py-5  lg:p-1">
                             ${{ (Product.sale_price)?Product.sale_price:Product.regular_price }}
                         </p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">STATUS</p>
                         <p class="py-5  lg:p-1">
                             <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" v-if="Product.is_active">ACTIVE</span>
                             <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold" v-else>IN ACTIVE</span>
                         </p>
                     </td>
-                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ACTIONS</p>
                             <div class="inline-flex py-5  lg:p-1">
 
-                                <inertia-link :href="route('admin.product.edit',Product.id)" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
+                                <inertia-link :href="route('admin.product.edit',Product.id)" class="transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
                                     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                     </svg>

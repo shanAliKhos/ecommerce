@@ -25,9 +25,7 @@
     </nav>    
 
     <div class="my-8 p-10 bg-white rounded shadow-xl">
-        <p class="text-xl pb-6 flex items-center">
-            Category Listing
-        </p>    
+        <p class="text-xl pb-6 flex items-center">Category Listing</p>    
         <table class="border-collapse w-full table-auto ">
             <thead>
                 <tr>
