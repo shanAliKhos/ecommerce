@@ -45,7 +45,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                Trending Elyssi Collections\n            "
+                      "\n                Trending Collections\n            "
                     )
                   ]
                 ),
