@@ -33,6 +33,14 @@ export default {
             subcategory:false,                  
         }
     },
+    mounted() {
+      const self = this 
+
+        self.$root.$on('sidebar-close',()=>{ 
+            self.mobileMenu = false;
+        });
+
+    },    
 
 }
 </script>

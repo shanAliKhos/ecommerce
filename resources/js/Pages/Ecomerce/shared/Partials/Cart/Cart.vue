@@ -195,5 +195,11 @@
 
             
         },              
+
+    
+        mounted() {
+            const self = this
+            self.$root.$emit('sidebar-close');     
+        },            
     }
 </script>

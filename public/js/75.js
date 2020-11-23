@@ -141,6 +141,10 @@ __webpack_require__.r(__webpack_exports__);
     settings: function settings() {
       return this.$page.settings;
     }
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   }
 });
 

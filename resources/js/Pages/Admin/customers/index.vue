@@ -11,7 +11,7 @@
             </li>
         </ol>
         
-        <inertia-link 
+        <!-- <inertia-link 
             :href="route('admin.customer.create')" 
             class="transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
             >  
@@ -21,7 +21,7 @@
             <span>Add New</span>            
        
         </inertia-link>
-        
+         -->
     </nav>    
 
     <div class="my-8 p-10 bg-white rounded shadow-xl">
@@ -62,6 +62,12 @@ export default {
             return this.$page.Customers.links;
         },
     },
+ 
+    mounted() { 
+        const self = this
+        self.$root.$emit('sidebar-close');
+    },
+     
 }
 </script>
  

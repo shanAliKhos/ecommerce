@@ -7,6 +7,7 @@ use Laravel\Jetstream\Contracts\DeletesUsers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Carbon\Carbon;
 
 class CustomerController extends Controller implements DeletesUsers
 {
@@ -38,20 +39,22 @@ class CustomerController extends Controller implements DeletesUsers
 
  
     public function show(User $customer)
-    {
-        dd($customer);
-
+    { 
+      
+        return Inertia::render('Admin/customers/show',compact('customer'));
     }
 
  
     public function edit(User $customer)
     {
+        dd(Carbon::createFromFormat('Y-m-d H:i:s', $customer->updated_at)->format('d/m/Y'));
         dd($customer);
 
     }
  
     public function update(Request $request, User $customer)
     {
+        dd($customer->updated_at->format('Y-m-d'));
         dd($customer);
 
     }

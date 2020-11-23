@@ -9,7 +9,7 @@ import Toasted from 'vue-toasted';
 import 'animate.css/animate.min.css'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-import store from './store'
+// import store from './store'
 
  
 // Vue.config.productionTip = false 
@@ -47,5 +47,5 @@ new Vue({
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
     },
   }),
-  store,
+  // store,
 }).$mount(app) 

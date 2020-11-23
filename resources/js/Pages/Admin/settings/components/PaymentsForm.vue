@@ -16,7 +16,7 @@
             <select-input 
                 v-model="form.stripe_payment_method" 
                 class="col-span-6 sm:col-span-6 mt-1 block w-full"  
-                :fixedClasses="'right-0 z-50'"
+                :fixedClasses="'right-0 z-20'"
                 :error="$page.errors.stripe_payment_method"
                 label='stripe_payment_method'    
                 :labelRequire='true'>
@@ -56,7 +56,7 @@
             <select-input 
                 v-model="form.paypal_payment_method" 
                 class="col-span-6 sm:col-span-6 mt-1 block w-full"  
-                :fixedClasses="'right-0 z-50'"
+                :fixedClasses="'right-0 z-20'"
                 :error="$page.errors.paypal_payment_method"
                 label='paypal_payment_method'    
                 :labelRequire='true'>

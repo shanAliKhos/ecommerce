@@ -44,6 +44,12 @@ __webpack_require__.r(__webpack_exports__);
       categories: false,
       subcategory: false
     };
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$on('sidebar-close', function () {
+      self.mobileMenu = false;
+    });
   }
 });
 

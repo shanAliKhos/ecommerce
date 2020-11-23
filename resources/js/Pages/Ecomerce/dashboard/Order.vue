@@ -325,5 +325,9 @@ export default {
             return this.$page.OrderItems;
         },     
     },
+    mounted() {
+        const self = this
+        self.$root.$emit('sidebar-close');     
+    },    
 }
 </script>

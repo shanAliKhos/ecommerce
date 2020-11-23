@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Carbon\Carbon;
+
 
 class User extends Authenticatable  implements MustVerifyEmail
 {
@@ -62,5 +64,11 @@ class User extends Authenticatable  implements MustVerifyEmail
     public function Orders()
     {
         return $this->hasMany(Order::class);
-    }      
+    }    
+    
+    // public function getCreatedAttribute()
+    // { 
+
+    //     return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->format('d-m-Y');
+    // }    
 }

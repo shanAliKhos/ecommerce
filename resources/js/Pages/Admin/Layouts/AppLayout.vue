@@ -1,10 +1,12 @@
 <template>
     <div class="leading-normal tracking-normal" id="main-body">
+    
         <div class="flex flex-wrap">
     
             <Sidebar />
+            
     
-            <div class="w-full bg-gray-100 pl-0 lg:pl-64 min-h-screen" :class="sideBarOpen ? 'overlay' : ''" id="main-content">
+            <div class="w-full bg-gray-100 pl-0 lg:pl-64 min-h-screen " >
     
                 <Navbar />
     
@@ -22,8 +24,7 @@
     </div>
 </template>
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
-<script>
-    import { mapState } from 'vuex'
+<script> 
     import Sidebar from './partials/Sidebar'
     import Navbar from './partials/Navbar'
     import Footer from './partials/Footer'
@@ -33,14 +34,13 @@
 
     export default {
         name: 'Dashboard',
-        computed: {
-            ...mapState(['sideBarOpen'])
-        },
+     
         components: {
             Sidebar,
             Navbar,
             Footer,
             FlashMessage,
-        }
+        },
+  
     }
 </script>

@@ -1,5 +1,6 @@
 <template>
     <div class="sticky top-0 z-40">
+
             <div class="w-full h-20 px-6 bg-gray-100 border-b border-gray-300 flex items-center justify-between">
 
               <!-- left navbar -->
@@ -26,10 +27,14 @@
               <!-- right navbar -->
               <div class="ml-3 relative">
                   <button class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid" id="user-menu" aria-label="User menu" aria-haspopup="true"  @click="dropDownOpen = !dropDownOpen">
-                    <img class="w-12 h-12 rounded-full shadow-lg" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <img class="w-12 h-12 rounded-full shadow-lg" :src="UserProdileImage" alt="">
                   </button> 
                   <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg" :class="dropDownOpen ? '' : 'hidden'">
+
+
                     <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+
+                      <h2 class="block px-4 py-2 text-sm text-gray-300 ">{{AuthUser.name}}</h2>
 
                       <inertia-link 
                        :href="route('profile.show')" 
@@ -59,14 +64,10 @@
     </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script> 
 
 export default {
     name: 'Navbar',
-    computed: {
-        ...mapState(['sideBarOpen'])
-    },
     data() {
         return {
             dropDownOpen: false
@@ -74,8 +75,16 @@ export default {
     },
     methods: {
         toggleSidebar() {
-            this.$store.dispatch('toggleSidebar')
+            this.$root.$emit('toggle-sidebar')
         }
+    },
+    computed: {
+      UserProdileImage(){
+        return this.$page.user.profile_photo_url;
+      },
+      AuthUser(){
+        return this.$page.user;
+      },
     }
 }
 </script>

@@ -65,19 +65,12 @@ __webpack_require__.r(__webpack_exports__);
     // LoginForm,
     // SecondaryButton,
 
-  },
-  // data() {
+  } // data() {
   //     return {
   //         LoginModal:true,
   //     }
-  // },
-  created: function created() {
-    var _this = this;
+  // }, 
 
-    this.$root.$on('open-login-modal', function () {
-      _this.LoginModal = true;
-    });
-  }
 });
 
 /***/ }),
@@ -126,6 +119,12 @@ __webpack_require__.r(__webpack_exports__);
       categories: false,
       subcategory: false
     };
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$on('sidebar-close', function () {
+      self.mobileMenu = false;
+    });
   }
 });
 
@@ -304,6 +303,10 @@ __webpack_require__.r(__webpack_exports__);
     WelcomeSaleSlider: _shared_Slider_WelcomeSaleSlider__WEBPACK_IMPORTED_MODULE_2__["default"],
     WelcomeSaleBanner: _components_WelcomeSaleBanner__WEBPACK_IMPORTED_MODULE_7__["default"],
     WelcomeBrands: _components_WelcomeBrands__WEBPACK_IMPORTED_MODULE_8__["default"]
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   }
 });
 

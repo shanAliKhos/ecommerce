@@ -338,6 +338,10 @@ __webpack_require__.r(__webpack_exports__);
     OrderItems: function OrderItems() {
       return this.$page.OrderItems;
     }
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   }
 });
 
@@ -440,19 +444,12 @@ __webpack_require__.r(__webpack_exports__);
     // LoginForm,
     // SecondaryButton,
 
-  },
-  // data() {
+  } // data() {
   //     return {
   //         LoginModal:true,
   //     }
-  // },
-  created: function created() {
-    var _this = this;
+  // }, 
 
-    this.$root.$on('open-login-modal', function () {
-      _this.LoginModal = true;
-    });
-  }
 });
 
 /***/ }),
@@ -501,6 +498,12 @@ __webpack_require__.r(__webpack_exports__);
       categories: false,
       subcategory: false
     };
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$on('sidebar-close', function () {
+      self.mobileMenu = false;
+    });
   }
 });
 

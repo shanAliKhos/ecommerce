@@ -290,7 +290,11 @@ export default {
     },
     components: {
         BlogPostsSlider,
-    }
+    },
+    mounted() {
+        const self = this
+        self.$root.$emit('sidebar-close');     
+    },    
    
 }
  

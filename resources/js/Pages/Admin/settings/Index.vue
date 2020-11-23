@@ -121,6 +121,12 @@ export default {
             return this.$page.settings;
         }
     },
+ 
+    mounted() { 
+        const self = this
+        self.$root.$emit('sidebar-close');
+    },
+     
 
 }
  </script>

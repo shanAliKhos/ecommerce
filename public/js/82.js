@@ -158,6 +158,10 @@ __webpack_require__.r(__webpack_exports__);
     Links: function Links() {
       return this.$page.Products.links;
     }
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   }
 });
 

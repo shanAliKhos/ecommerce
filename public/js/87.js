@@ -156,6 +156,10 @@ __webpack_require__.r(__webpack_exports__);
     Brands: function Brands() {
       return this.$page.Brands.data;
     }
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   }
 });
 

@@ -59,14 +59,7 @@
         //     return {
         //         LoginModal:true,
         //     }
-        // },
-        created() {
-            this.$root.$on('open-login-modal',()=>{
-
-                this.LoginModal= true;
-
-            });
-        },
+        // }, 
  
 
         

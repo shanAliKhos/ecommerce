@@ -28,6 +28,7 @@ module.exports = {
                 'footer-bg': "url('/img/partials/bg/bg-footer.png')", 
                 'mega-menu-bg': "url('/img/partials/bg/bg-mega-menu.png')", 
                 'products-bg': "url('/img/partials/bg/bg-products.png')", 
+                'profile-bg': "url('/img/partials/bg/profile-bg.jpg')", 
             }),  
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

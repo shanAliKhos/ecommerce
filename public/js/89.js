@@ -9,13 +9,6 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -77,10 +70,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Navbar',
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])(['sideBarOpen'])),
   data: function data() {
     return {
       dropDownOpen: false
@@ -88,7 +84,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     toggleSidebar: function toggleSidebar() {
-      this.$store.dispatch('toggleSidebar');
+      this.$root.$emit('toggle-sidebar');
+    }
+  },
+  computed: {
+    UserProdileImage: function UserProdileImage() {
+      return this.$page.user.profile_photo_url;
+    },
+    AuthUser: function AuthUser() {
+      return this.$page.user;
     }
   }
 });
@@ -231,11 +235,7 @@ var render = function() {
             [
               _c("img", {
                 staticClass: "w-12 h-12 rounded-full shadow-lg",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-                  alt: ""
-                }
+                attrs: { src: _vm.UserProdileImage, alt: "" }
               })
             ]
           ),
@@ -259,6 +259,12 @@ var render = function() {
                   }
                 },
                 [
+                  _c(
+                    "h2",
+                    { staticClass: "block px-4 py-2 text-sm text-gray-300 " },
+                    [_vm._v(_vm._s(_vm.AuthUser.name))]
+                  ),
+                  _vm._v(" "),
                   _c(
                     "inertia-link",
                     {
