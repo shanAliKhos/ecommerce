@@ -32,35 +32,7 @@
         </div>    
     </div>               
         
-        <!-- <div class="col-md-3">
-            <div class="tile p-0">
-                <ul class="nav flex-column nav-tabs user-tabs">
-                    <li class="nav-item"><a class="nav-link active" href="#general" data-toggle="tab">General</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#attributes" data-toggle="tab">Attributes</a></li>
-                </ul>
-            </div>
-        </div> -->
-
-        <!-- <div class="col-md-9">
-            <div class="tab-content">
-                <div class="tab-pane active" id="general">
-                    <div class="tile">
-                        <edit-form :Product="Product" :Categories="Categories" :Brands="Brands"></edit-form>
-                    </div>
-                </div>
-                <div class="tab-pane" id="images">
-                    <div class="tile">
-                        <product-images :id="Product.id" :Images="Images" ></product-images>
-                    </div>
-                </div> 
-                <div class="tab-pane" id="attributes">
-                    <div class="tile">
-                        <product-attributes></product-attributes> 
-                    </div>
-                </div> 
-            </div>
-        </div> -->
+ 
  
 </div> 
 </template>

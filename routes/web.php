@@ -147,7 +147,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
             
             Route::resource('/customer', 'Admin\CustomerController'); 
 
-            Route::resource('/product-attributes', 'Admin\ProductAttributeController');
+            Route::resource('/product-attribute', 'Admin\ProductAttributeController');
 
 
             Route::get('/product/{product}/image', 'Admin\ProductImageController@index')->name('product.images.index');
@@ -172,7 +172,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
             //    Route::post('/delete-values', 'Admin\AttributeValueController@deleteValues');
         }); 
 
-        Route::group(['prefix' => 'products'], function () {
+        // Route::group(['prefix' => 'products'], function () {
 
             //   Route::get('/', 'Admin\ProductController@index')->name('admin.products.index');
             //   Route::get('/create', 'Admin\ProductController@create')->name('admin.products.create');
@@ -188,7 +188,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
             //   Route::post('attributes/add', 'Admin\ProductAttributeController@addAttribute');
             //   Route::post('attributes/delete', 'Admin\ProductAttributeController@deleteAttribute');
 
-        });
+        // });
    
 
      

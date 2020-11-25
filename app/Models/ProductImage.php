@@ -10,17 +10,11 @@ class ProductImage extends Model
     use HasFactory;
 
     protected $fillable = ['product_id', 'image'];
-
-    /**
-     * @var array
-     */
+ 
     protected $casts = [
         'product_id'    =>  'integer',
     ];
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
+ 
     public function product()
     {
         return $this->belongsTo(Product::class);

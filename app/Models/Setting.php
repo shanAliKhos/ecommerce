@@ -11,10 +11,7 @@ class Setting extends Model
     use HasFactory;
 
     protected $fillable = ['key', 'value'];
-
-    /**
-     * @param $key
-     */
+ 
     public static function get($key)
     {
         $setting = new Setting ;
@@ -24,12 +21,7 @@ class Setting extends Model
         }
         return $entry->value;
     }
-
-    /**
-     * @param $key
-     * @param null $value
-     * @return bool
-     */
+ 
     public static function set($key, $value = null)
     {
         $setting = new Setting;

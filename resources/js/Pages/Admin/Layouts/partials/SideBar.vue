@@ -19,10 +19,7 @@
     
         <div class="mb-4 px-4">
           <p class="pl-4 text-sm font-semibold mb-1">Shop</p> 
-          
-
-    
-
+            
           <inertia-link 
             :class="{'bg-gray-200':$page.currentRouteName == 'admin.order.index'}" 
             :href="$route('admin.order.index')"              
@@ -32,8 +29,7 @@
               </svg>
               <span class="text-gray-700">Orders</span>
           </inertia-link>           
-      
-
+       
           <inertia-link 
             :class="{'bg-gray-200':$page.currentRouteName == 'admin.product.index'}" 
             :href="$route('admin.product.index')"              
@@ -44,6 +40,18 @@
             <span class="text-gray-700">Products</span>
           </inertia-link>     
 
+          <!-- <inertia-link 
+            :class="{'bg-gray-200':$page.currentRouteName == 'admin.product.index'}" 
+            :href="$route('admin.product-attribute.index')"              
+            class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
+            
+            <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
+              <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+            </svg>
+
+            <span class="text-gray-700">Products Attributes</span>
+
+          </inertia-link>      -->
 
           <inertia-link 
             :class="{'bg-gray-200':$page.currentRouteName == 'admin.brand.index'}" 
@@ -55,7 +63,6 @@
               <span class="text-gray-700">Brands</span>
           </inertia-link>           
         
-          
           <inertia-link 
             :class="{'bg-gray-200':$page.currentRouteName == 'admin.category.index'}" 
             :href="$route('admin.category.index')"              
@@ -64,8 +71,7 @@
                 <path d="M18.303,4.742l-1.454-1.455c-0.171-0.171-0.475-0.171-0.646,0l-3.061,3.064H2.019c-0.251,0-0.457,0.205-0.457,0.456v9.578c0,0.251,0.206,0.456,0.457,0.456h13.683c0.252,0,0.457-0.205,0.457-0.456V7.533l2.144-2.146C18.481,5.208,18.483,4.917,18.303,4.742 M15.258,15.929H2.476V7.263h9.754L9.695,9.792c-0.057,0.057-0.101,0.13-0.119,0.212L9.18,11.36h-3.98c-0.251,0-0.457,0.205-0.457,0.456c0,0.253,0.205,0.456,0.457,0.456h4.336c0.023,0,0.899,0.02,1.498-0.127c0.312-0.077,0.55-0.137,0.55-0.137c0.08-0.018,0.155-0.059,0.212-0.118l3.463-3.443V15.929z M11.241,11.156l-1.078,0.267l0.267-1.076l6.097-6.091l0.808,0.808L11.241,11.156z"></path>
               </svg>
               <span class="text-gray-700">Categories</span>
-          </inertia-link>           
-
+          </inertia-link>          
 
           <inertia-link 
             :class="{'bg-gray-200':$page.currentRouteName == 'admin.attribute.index'}" 
@@ -77,7 +83,6 @@
             </svg>
             <span class="text-gray-700">Attributes</span>
           </inertia-link>                 
-          
 
         </div> 
         

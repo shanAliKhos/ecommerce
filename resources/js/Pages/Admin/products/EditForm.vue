@@ -1,7 +1,7 @@
 <template>
 <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="update">
 
-    <p class="text-lg text-gray-800 font-medium pb-4">Product information</p>
+    <p class="text-lg text-gray-800 font-medium pb-4">Product General information</p>
 
     <div class="flex flex-wrap -mx-3 mb-2">
 
@@ -98,45 +98,19 @@
         </div>      
 
     </div>             
-        
-    <div class="flex flex-wrap -mx-3 mb-2">
-
-        <select-input 
-            v-model="form.is_active" 
-            class="w-full md:w-1/2 px-3  md:mb-0 "  
-            :fixedClasses="'right-3 z-50'"
-            :error="$page.errors.is_active"
-            label='Status'    
-            :labelRequire='true'>
-        <option :value="0">Disable</option>
-        <option :value="1">Active</option>                        
-        </select-input> 
-
-        <select-input 
-            v-model="form.is_featured" 
-            class="w-full md:w-1/2 px-3  md:mb-0 "  
-            :fixedClasses="'right-3 z-50'"
-            :error="$page.errors.is_featured"
-            label='Featured'    
-            :labelRequire='true'>
-        <option :value="0">No</option>
-        <option :value="1">YES</option>                        
-        </select-input> 
-
-    </div>                
-
+      
     <div class="mt-2 relative"> 
         <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
         <textarea v-model="form.description" class="focus:bg-white resize-none w-full px-5 py-2 text-gray-700 bg-gray-100 rounded  appearance-none shadow focus:outline-none focus:shadow-outline"
             placeholder="Product Description here ... "
         ></textarea>                     
-        <p class="z-50 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
+        <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
     </div>     
 
     <div class="flex flex-wrap -mx-3 mb-2">
 
         <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-            <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
+            <label class="z-20 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
             <multiselect 
                 v-model="form.brand" 
                 deselect-label="Can't remove this value" 
@@ -147,11 +121,11 @@
                 :searchable="false" 
                 :allow-empty="false">
             </multiselect>             
-            <p class="z-50 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>
+            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>
         </div>            
 
         <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-            <label class=" z-50  absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Categories</label>
+            <label class=" z-20  absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Categories</label>
             <multiselect 
                 v-model="form.categories" 
                 :options="CategoriesOption" 
@@ -164,10 +138,103 @@
                 track-by="name"  
                 > 
             </multiselect>                        
-            <p class="z-50 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
-        </div>         
+            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
+        </div>   
+    </div>         
+
+        
+    <div class="flex flex-wrap -mx-3 mb-2">
+
+        <select-input 
+            v-model="form.is_active" 
+            class="w-full md:w-1/3 px-3  md:mb-0 "  
+            :fixedClasses="'right-3 z-20'"
+            :error="$page.errors.is_active"
+            label='Status'    
+            :labelRequire='true'>
+        <option :value="0">Disable</option>
+        <option :value="1">Active</option>                        
+        </select-input> 
+
+        <select-input 
+            v-model="form.is_featured" 
+            class="w-full md:w-1/3 px-3  md:mb-0 "  
+            :fixedClasses="'right-3 z-20'"
+            :error="$page.errors.is_featured"
+            label='Featured'    
+            :labelRequire='true'>
+        <option :value="0">No</option>
+        <option :value="1">YES</option>                        
+        </select-input> 
+
+        <select-input 
+            v-model="form.is_variable" 
+            class="w-full md:w-1/3 px-3  md:mb-0 "  
+            :fixedClasses="'right-3 z-20'"
+            :error="$page.errors.is_variable"
+            label='Type'    
+            :labelRequire='true'>
+        <option :value="0">Simple</option>
+        <option :value="1">Variable</option>                        
+        </select-input>         
+
+    </div>      
+
+    <div class="product-attributes" v-if="form.is_variable">
+
+        <SectionBorder/>
+
+        <p class="text-lg text-gray-800 font-medium pb-4">Product Attributes information</p>
+
+        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
+
+            <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
+                <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
+                <multiselect  
+                    v-model="form.Attributes" 
+                    deselect-label="remove this value" 
+                    :multiple="true" 
+                    :close-on-select="false" 
+                    :clear-on-select="false"                                     
+                    track-by="name" 
+                    :class="{'is-invalid': $page.errors.Attributes}"
+                    label="name" 
+                    placeholder="Select an Attribute" 
+                    :options="Attributes" 
+                    :searchable="true" 
+                    :allow-empty="true">
+                </multiselect>                                   
+                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.Attributes">{{$page.errors.Attributes}}</p>
+            </div>         
+            
+        </div>                 
+
+        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
+
+            <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2"   v-for="(Attribute, index) in form.Attributes" :key="index">
+                <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
+                <multiselect   
+                    v-model="form.AttributeValues[index]"
+                    deselect-label="remove this value" 
+                    :multiple="true" 
+                    :close-on-select="false" 
+                    :clear-on-select="false"                                     
+                    track-by="name" 
+                    :class="{'is-invalid': $page.errors.AttributeValues?$page.errors.AttributeValues[index]:''}"
+                    label="name" 
+                    placeholder="Select an Attribute" 
+                    :options="Attribute.attribute_values" 
+                    :searchable="true" 
+                    :allow-empty="true">
+                </multiselect>                                   
+                <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
+            </div>       
+        </div>          
 
     </div>         
+
+    <SectionBorder/>
+
 
     <div class="mt-6">
        
@@ -190,6 +257,7 @@ import LoadingButton from './../../Shared/LoadingButton'
 import FileInput from './../../Shared/FileInput'   
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
+import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
     props:['Product','Categories','Brands'],
@@ -199,6 +267,7 @@ export default {
         FileInput, 
         TextInput,
         SelectInput,        
+        SectionBorder,        
     }, 
     remember: 'form',
 
@@ -218,6 +287,9 @@ export default {
                 is_active: this.Product.is_active?1:0,
                 is_featured: this.Product.is_featured?1:0,
                 image: this.Product.image?this.Product.image:null,
+                is_variable:(this.Product.variations.length>0)?1:0,
+                Attributes:[],
+                AttributeValues:[],                  
             },    
             sending:false,
         }
@@ -232,6 +304,9 @@ export default {
             formData.append("sku", self.form.sku || '');
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '');
             formData.append("categories", JSON.stringify(self.form.categories) || '');
+            formData.append("is_variable", self.form.is_variable || 0);
+            formData.append("Attributes", JSON.stringify(self.form.Attributes) || '');
+            formData.append("AttributeValues", JSON.stringify(self.form.AttributeValues) || '');            
             formData.append("regular_price", self.form.regular_price || 0);
             formData.append("sale_price", self.form.sale_price || 0);
             formData.append("quantity", self.form.quantity || 0);
@@ -259,8 +334,18 @@ export default {
                     return category;
                 }
             });             
-        }        
+        },
+        Attributes(){ 
+            return this.$page.Attributes;
+        },         
     },    
+    mounted() {
+        self = this;
+        self.Product.variations.forEach(variation => {
+            self.form.Attributes.push(variation.attribute);
+            self.form.AttributeValues.push(variation.variant_options);
+        });
+    },
 }
 </script>
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>

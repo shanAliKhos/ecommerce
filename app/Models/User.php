@@ -19,44 +19,26 @@ class User extends Authenticatable  implements MustVerifyEmail
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+ 
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+ 
     protected $hidden = [
         'password',
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
     ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+ 
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
-     */
+ 
     protected $appends = [
         'profile_photo_url',
     ];
@@ -65,10 +47,5 @@ class User extends Authenticatable  implements MustVerifyEmail
     {
         return $this->hasMany(Order::class);
     }    
-    
-    // public function getCreatedAttribute()
-    // { 
-
-    //     return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->format('d-m-Y');
-    // }    
+ 
 }
