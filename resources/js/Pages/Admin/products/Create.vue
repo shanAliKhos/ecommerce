@@ -237,24 +237,32 @@
                                 
                             </div>                 
 
-                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
+                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.Attributes.length>0)">
 
-                                <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2"   v-for="(Attribute, index) in form.Attributes" :key="index">
-                                    <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
-                                    <multiselect   
-                                        v-model="form.AttributeValues[index]"
-                                        deselect-label="remove this value" 
-                                        :multiple="true" 
-                                        :close-on-select="false" 
-                                        :clear-on-select="false"                                     
-                                        track-by="name" 
-                                        label="name" 
-                                        placeholder="Select an Attribute" 
-                                        :options="Attribute.attribute_values" 
-                                        :searchable="true" 
-                                        :allow-empty="true">
-                                    </multiselect>                                   
-                                    <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
+                                <div class="w-full md:w-1/2">
+                                </div>
+
+                                <div class="w-full md:w-1/2">
+                                    <p class="text-lg text-gray-800 font-medium pb-4 md:text-right">Product Attributes Values </p>
+                                    
+                                    <div class="w-full px-3 md:mb-0 relative mt-5" v-for="(Attribute, index) in form.Attributes" :key="index">
+                                        <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
+                                        <multiselect   
+                                            v-model="form.AttributeValues"
+                                            deselect-label="remove this value" 
+                                            :multiple="true" 
+                                            :close-on-select="false" 
+                                            :clear-on-select="false"                                     
+                                            track-by="name" 
+                                            label="name" 
+                                            placeholder="Select an Attribute" 
+                                            :options="Attribute.attribute_values" 
+                                            :searchable="true" 
+                                            :allow-empty="true">
+                                        </multiselect>                                   
+                                        <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
+                                    </div>       
+
                                 </div>       
                             </div>                                                       
 

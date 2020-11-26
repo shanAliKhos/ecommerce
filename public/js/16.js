@@ -271,6 +271,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1127,61 +1133,79 @@ var render = function() {
                   ])
                 : _vm._e(),
               _vm._v(" "),
-              _vm.form.is_variable
-                ? _c(
-                    "div",
-                    { staticClass: "flex flex-wrap -mx-3 mb-2" },
-                    _vm._l(_vm.form.Attributes, function(Attribute, index) {
-                      return _c(
-                        "div",
-                        {
-                          key: index,
-                          staticClass:
-                            "w-full md:w-1/2 px-3 md:mb-0 relative mt-2"
-                        },
-                        [
-                          _c(
-                            "label",
+              _vm.form.is_variable && _vm.form.Attributes.length > 0
+                ? _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+                    _c("div", { staticClass: "w-full md:w-1/2" }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "w-full md:w-1/2" },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "text-lg text-gray-800 font-medium pb-4 md:text-right mx-5"
+                          },
+                          [_vm._v("Product Attributes Values ")]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(_vm.form.Attributes, function(Attribute, index) {
+                          return _c(
+                            "div",
                             {
-                              staticClass:
-                                " z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
-                              attrs: { for: "weight" }
+                              key: index,
+                              staticClass: "w-full px-3 md:mb-0 relative mt-5"
                             },
-                            [_vm._v("Attribute " + _vm._s(Attribute.name))]
-                          ),
-                          _vm._v(" "),
-                          _c("multiselect", {
-                            class: {
-                              "is-invalid": _vm.$page.errors.AttributeValues
-                                ? _vm.$page.errors.AttributeValues[index]
-                                : ""
-                            },
-                            attrs: {
-                              "deselect-label": "remove this value",
-                              multiple: true,
-                              "close-on-select": false,
-                              "clear-on-select": false,
-                              "track-by": "name",
-                              label: "name",
-                              placeholder: "Select an Attribute",
-                              options: Attribute.attribute_values,
-                              searchable: true,
-                              "allow-empty": true
-                            },
-                            model: {
-                              value: _vm.form.AttributeValues[index],
-                              callback: function($$v) {
-                                _vm.$set(_vm.form.AttributeValues, index, $$v)
-                              },
-                              expression: "form.AttributeValues[index]"
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    }),
-                    0
-                  )
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass:
+                                    " z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                                  attrs: { for: "weight" }
+                                },
+                                [_vm._v("Attribute " + _vm._s(Attribute.name))]
+                              ),
+                              _vm._v(" "),
+                              _c("multiselect", {
+                                class: {
+                                  "is-invalid": _vm.$page.errors.AttributeValues
+                                    ? _vm.$page.errors.AttributeValues[index]
+                                    : ""
+                                },
+                                attrs: {
+                                  "deselect-label": "remove this value",
+                                  multiple: true,
+                                  "close-on-select": false,
+                                  "clear-on-select": false,
+                                  "track-by": "name",
+                                  label: "name",
+                                  placeholder: "Select an Attribute",
+                                  options: Attribute.attribute_values,
+                                  searchable: true,
+                                  "allow-empty": true
+                                },
+                                model: {
+                                  value: _vm.form.AttributeValues[index],
+                                  callback: function($$v) {
+                                    _vm.$set(
+                                      _vm.form.AttributeValues,
+                                      index,
+                                      $$v
+                                    )
+                                  },
+                                  expression: "form.AttributeValues[index]"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ])
                 : _vm._e()
             ],
             1

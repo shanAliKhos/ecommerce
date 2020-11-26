@@ -38,6 +38,7 @@ class Product extends Model
         return $this->belongsToMany(Category::class, 'product_categories', 'product_id', 'category_id');
     }
 
+
     public function attributes()
     {
         return $this->belongsToMany(Attribute::class, 'variants','product_id','attribute_id');
@@ -57,6 +58,11 @@ class Product extends Model
     {
         return $this->belongsTo(Brand::class);
     }   
+
+    public function Skuds()
+    {
+        return $this->hasMany(Sku::class);
+    }    
   
 
 }

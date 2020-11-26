@@ -39,7 +39,7 @@ class ProductController extends Controller
     }
 
     public function store(Request $request,Product $Product)
-    {     
+    {      
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
             "sku" => 'required|string|min:2|max:255',
@@ -93,18 +93,21 @@ class ProductController extends Controller
         if($request->is_variable){ 
 
             $NewProductAttributes = json_decode($request->Attributes,true);
+            $NewProductAttributeValues = json_decode($request->AttributeValues,true);
+
+            
              
             if(!empty($NewProductAttributes)){
                 
                 $Product->attributes()->sync(array_column($NewProductAttributes,'id'));
 
-                $NewProductAttributeValues = json_decode($request->AttributeValues,true);
                  
                 foreach ($Product->variations as $attrkey => $variation) { 
 
                     $variation->VariantOptions()->sync(array_column($NewProductAttributeValues[$attrkey],'id'));
 
                 }
+ 
                  
             }  
         } 
@@ -155,8 +158,6 @@ class ProductController extends Controller
         ]);  
              
 
-
-        // dd($request->all());
         if($request->hasFile('image')){
 
             $this->validate($request,[ 
@@ -209,7 +210,7 @@ class ProductController extends Controller
 
             if($Product->categories()){ 
 
-                $Product->categories()->sync($ProductCategories);
+                $Product->categories()->sync([]);
 
             }
         }
@@ -218,24 +219,35 @@ class ProductController extends Controller
         if($request->is_variable){ 
 
             $UpdateProductAttributes = json_decode($request->Attributes,true);
-   
-             
-            if($UpdateProductAttributes){
+            $UpdateProductAttributeValues = json_decode($request->AttributeValues,true);  
 
+            if($UpdateProductAttributes){
+                
                 $Product->attributes()->sync(array_column($UpdateProductAttributes,'id'));
-                $UpdateProductAttributeValues = json_decode($request->AttributeValues,true);
+                
                 if($UpdateProductAttributeValues){
                     
                     $this->validate($request,[
                         'AttributeValues.*' => 'required',
                     ]);
-
+                    $CountSku = 0 ;    
                     foreach ($Product->variations as $attrkey => $variation) { 
                         $variation->VariantOptions()->sync(array_column($UpdateProductAttributeValues[$attrkey],'id'));
-                    }
-                }else{
+                        $CountSku += count($UpdateProductAttributeValues[$attrkey]);
 
+                        // $Product->Skuds->create([
+                        //     'product_id' => $Product->id,
+                        //     'sku' => '',
+                        //     'price' => '',
+                        //     'qty' => '',
+                        // ]);                        
+
+                    }
+                    
+                    
                 } 
+ 
+
                 
 
             }else{
@@ -247,6 +259,7 @@ class ProductController extends Controller
         }else{
             $Product->attributes()->sync([]);
         }
+ 
 
               
         return back()->with('success', 'Successfull ! Product updated');

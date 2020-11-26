@@ -63,7 +63,7 @@ class ShopController extends Controller
  
         $Product = $Product->where('slug',$slug)->firstOrFail();
          
-        $Product->load('images','ProductAttributes');
+        $Product->load('images');
         
         // $ProductAttributes =  $Product->ProductAttributes
         //     ->map(function($ProductAttribute){
