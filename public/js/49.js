@@ -1401,16 +1401,19 @@ var render = function() {
                                                 "allow-empty": true
                                               },
                                               model: {
-                                                value: _vm.form.AttributeValues,
+                                                value:
+                                                  _vm.form.AttributeValues[
+                                                    index
+                                                  ],
                                                 callback: function($$v) {
                                                   _vm.$set(
-                                                    _vm.form,
-                                                    "AttributeValues",
+                                                    _vm.form.AttributeValues,
+                                                    index,
                                                     $$v
                                                   )
                                                 },
                                                 expression:
-                                                  "form.AttributeValues"
+                                                  "form.AttributeValues[index]"
                                               }
                                             })
                                           ],

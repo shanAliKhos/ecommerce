@@ -248,7 +248,7 @@
                                     <div class="w-full px-3 md:mb-0 relative mt-5" v-for="(Attribute, index) in form.Attributes" :key="index">
                                         <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
                                         <multiselect   
-                                            v-model="form.AttributeValues"
+                                            v-model="form.AttributeValues[index]"
                                             deselect-label="remove this value" 
                                             :multiple="true" 
                                             :close-on-select="false" 
