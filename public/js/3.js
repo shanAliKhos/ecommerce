@@ -212,9 +212,10 @@ var render = function() {
               "inertia-link",
               {
                 staticClass:
-                  "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                  "w-full flex items-center h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                 class: {
-                  "bg-gray-200": _vm.$page.currentRouteName == "admin.dashboard"
+                  "text-red-500 shadow":
+                    _vm.$page.currentRouteName == "admin.dashboard"
                 },
                 attrs: { href: _vm.$route("admin.dashboard") }
               },
@@ -255,7 +256,7 @@ var render = function() {
                     staticClass:
                       "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                     class: {
-                      "bg-gray-200":
+                      "text-red-200 shadow":
                         _vm.$page.currentRouteName == "admin.order.index"
                     },
                     attrs: { href: _vm.$route("admin.order.index") }
@@ -289,7 +290,7 @@ var render = function() {
                     staticClass:
                       "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                     class: {
-                      "bg-gray-200":
+                      "text-red-200 shadow":
                         _vm.$page.currentRouteName == "admin.product.index"
                     },
                     attrs: { href: _vm.$route("admin.product.index") }
@@ -323,7 +324,7 @@ var render = function() {
                     staticClass:
                       "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                     class: {
-                      "bg-gray-200":
+                      "text-red-200 shadow":
                         _vm.$page.currentRouteName == "admin.brand.index"
                     },
                     attrs: { href: _vm.$route("admin.brand.index") }
@@ -357,7 +358,7 @@ var render = function() {
                     staticClass:
                       "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                     class: {
-                      "bg-gray-200":
+                      "text-red-200 shadow":
                         _vm.$page.currentRouteName == "admin.category.index"
                     },
                     attrs: { href: _vm.$route("admin.category.index") }
@@ -391,7 +392,7 @@ var render = function() {
                     staticClass:
                       "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                     class: {
-                      "bg-gray-200":
+                      "text-red-200 shadow":
                         _vm.$page.currentRouteName == "admin.attribute.index"
                     },
                     attrs: { href: _vm.$route("admin.attribute.index") }
@@ -428,7 +429,7 @@ var render = function() {
                 staticClass:
                   "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                 class: {
-                  "bg-gray-200":
+                  "text-red-200 shadow":
                     _vm.$page.currentRouteName == "admin.user.index"
                 },
                 attrs: { href: _vm.$route("admin.customer.index") }
@@ -469,7 +470,8 @@ var render = function() {
                 staticClass:
                   "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                 class: {
-                  "bg-gray-200": _vm.$page.currentRouteName == "admin.setting"
+                  "text-red-200 shadow":
+                    _vm.$page.currentRouteName == "admin.setting"
                 },
                 attrs: { href: _vm.$route("admin.setting") }
               },
@@ -506,7 +508,7 @@ var render = function() {
                 staticClass:
                   "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
                 class: {
-                  "bg-gray-200": _vm.$page.currentRouteName == "welcome"
+                  "text-red-200 shadow": _vm.$page.currentRouteName == "welcome"
                 },
                 attrs: { href: _vm.$route("welcome") }
               },

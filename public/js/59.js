@@ -153,16 +153,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  layout: _AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  mounted: function mounted() {
-    var _this = this;
-
-    setTimeout(function () {
-      _this.$inertia.get(route('shop.index'));
-    }, 15000);
-  }
+  layout: _AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 
 /***/ }),
@@ -373,49 +389,144 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container border-t border-grey-dark" }, [
-    _c("h1", { staticClass: "display-3" }, [_vm._v("Thank You!")]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _c("hr"),
-    _vm._v(" "),
-    _c(
-      "p",
-      [
-        _vm._v("\n    Having trouble? "),
-        _c("inertia-link", { attrs: { href: _vm.$route("contact") } }, [
-          _vm._v("Contact us")
-        ])
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "p",
-      { staticClass: "lead" },
-      [
-        _c(
-          "inertia-link",
-          {
-            staticClass: "primary-btn",
-            attrs: { href: _vm.$route("shop.index") }
-          },
-          [_vm._v("Continue to shopping")]
-        )
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    {
+      staticClass:
+        "min-h-screen flex flex-col items-center justify-center bg-gray-300"
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "font-medium self-center text-xl sm:text-2xl uppercase text-primary"
+            },
+            [_vm._v("Thank You For Shopping !")]
+          ),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex justify-center items-center mt-6" },
+            [
+              _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center",
+                  attrs: {
+                    "preserve-scroll": "",
+                    href: _vm.route("shop.index"),
+                    target: "_blank"
+                  }
+                },
+                [
+                  _c("span", [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-6 w-6",
+                        attrs: {
+                          fill: "none",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
+                            "clip-rule": "evenodd"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2" }, [
+                    _vm._v("Continue to shopping ")
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex justify-center items-center mt-6" },
+            [
+              _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center",
+                  attrs: {
+                    "preserve-scroll": "",
+                    href: _vm.route("contact"),
+                    target: "_blank"
+                  }
+                },
+                [
+                  _c("span", [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-6 w-6",
+                        attrs: {
+                          fill: "none",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ml-2" }, [_vm._v("Contact us ")])
+                ]
+              )
+            ],
+            1
+          )
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "lead" }, [
-      _c("strong", [_vm._v("Please check your email")]),
-      _vm._v(" for further.")
+    return _c("div", { staticClass: "mt-10" }, [
+      _c("p", { staticClass: "lead p-10" }, [
+        _c("strong", [_vm._v("Please check your email")]),
+        _vm._v(" for further.")
+      ])
     ])
   }
 ]

@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Cart;
+namespace App\Http\Controllers\Ecommerce;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;

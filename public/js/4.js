@@ -157,6 +157,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Navbar',
   data: function data() {
@@ -416,7 +419,7 @@ var render = function() {
           _c("div", { staticClass: "relative text-gray-600" }, [
             _c("input", {
               staticClass:
-                "bg-white h-10 w-full xl:w-64 px-5 rounded-lg border text-sm focus:outline-none",
+                "transition duration-500 ease-in-out bg-gray-100  px-5 py-2 rounded-lg border  text-sm focus:outline-none focus:shadow  border-gray-200 hover:shadow  focus:placeholder-green-400",
               attrs: {
                 type: "search",
                 name: "serch",
@@ -427,7 +430,8 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "absolute right-0 top-0 mt-3 mr-4",
+                staticClass:
+                  "absolute right-0 top-0 mt-3 mr-4 transition duration-500 ease-in-out text-gray-300 hover:text-blue-400 focus:outline-none focus:text-blue-500",
                 attrs: { type: "submit" }
               },
               [

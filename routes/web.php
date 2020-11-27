@@ -70,15 +70,15 @@ Route::get('/blog-details', function () {
 })->name('blog.details');
 
 
-Route::get('/','Shop\ShopController@Home')->name('welcome');
+Route::get('/','Ecommerce\ShopController@Home')->name('welcome');
 
-Route::get('/shop', 'Shop\ShopController@index')->name('shop.index');
+Route::get('/shop', 'Ecommerce\ShopController@index')->name('shop.index');
 
-Route::get('/category/{slug}/products','Shop\ShopController@GetCategoryProducts')->name('shop.category-products');
+Route::get('/category/{slug}/products','Ecommerce\ShopController@GetCategoryProducts')->name('shop.category-products');
 
-Route::get('/shop/product/{slug}','Shop\ShopController@GetProductsDetails')->name('shop.product');
+Route::get('/shop/product/{slug}','Ecommerce\ShopController@GetProductsDetails')->name('shop.product');
 
-Route::get('/featured/products','Shop\ShopController@GetFeaturedProducts')->name('shop.FeaturedProducts'); 
+Route::get('/featured/products','Ecommerce\ShopController@GetFeaturedProducts')->name('shop.FeaturedProducts'); 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
@@ -86,48 +86,31 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::prefix('dashboard')->group(function () { 
  
-
-        Route::get('/','Account\AccountController@index')->name('dashboard.index');
-        Route::get('/orders','Account\AccountController@Orders')->name('dashboard.order');
-
-        // Route::get('/orders',function(){
-        //     return Inertia\Inertia::render('Ecomerce/dashboard/Order');
-        // })->name('dashboard.order');
-
-        Route::get('/wishList',function(){
-            return Inertia\Inertia::render('Ecomerce/dashboard/WishList');
-        })->name('dashboard.wishlist');
+        Route::get('/','Ecommerce\AccountController@index')->name('dashboard.index');
+        Route::get('/orders','Ecommerce\AccountController@Orders')->name('dashboard.order');
+        Route::get('/wishList',function(){return Inertia\Inertia::render('Ecomerce/dashboard/WishList');})->name('dashboard.wishlist');
 
     });
     
-    Route::Resource('/cart','Cart\CartController')->except('create'); 
+    Route::Resource('/cart','Ecommerce\CartController')->except('create'); 
     
     Route::prefix('/cart')->group(function () {
         
-        Route::post('/flush','Cart\CartController@CartEmpty')->name('cart.flush');   
+        Route::post('/flush','Ecommerce\CartController@CartEmpty')->name('cart.flush');   
         
-        Route::get('/checkout/customer-info','Cart\CheckOutController@CustomerInformation')->name('cart.CustomerInfomation');   
-        Route::post('/checkout/customer-info','Cart\CheckOutController@CustomerInformStore')->name('cart.CustomerInfomationStore');   
+        Route::get('/checkout/customer-info','Ecommerce\CheckOutController@CustomerInformation')->name('cart.CustomerInfomation');   
+        Route::post('/checkout/customer-info','Ecommerce\CheckOutController@CustomerInformStore')->name('cart.CustomerInfomationStore');   
         
-        Route::get('/checkout/shippings','Cart\CheckOutController@ShippingMethod')->name('cart.ShippingMethod');   
-        Route::post('/cart/shippings','Cart\CheckOutController@ShippingMethodStore')->name('cart.ShippingMethodStore');   
+        Route::get('/checkout/shippings','Ecommerce\CheckOutController@ShippingMethod')->name('cart.ShippingMethod');   
+        Route::post('/cart/shippings','Ecommerce\CheckOutController@ShippingMethodStore')->name('cart.ShippingMethodStore');   
         
-        Route::get('/checkout/payment','Cart\CheckOutController@PaymentMethod')->name('cart.PaymentMethod');   
-        Route::post('/checkout/payment', 'Cart\CheckOutController@CheckOut')->name('cart.checkout');
-        Route::get('/checkout/success', 'Cart\CheckOutController@CheckOutSuccess')->name('cart.success');
+        Route::get('/checkout/payment','Ecommerce\CheckOutController@PaymentMethod')->name('cart.PaymentMethod');   
+        Route::post('/checkout/payment', 'Ecommerce\CheckOutController@CheckOut')->name('cart.checkout');
+        Route::get('/checkout/success', 'Ecommerce\CheckOutController@CheckOutSuccess')->name('cart.success');
     });
-     
-    // Route::get('/checkout','Checkout\CheckOutController@index')->name('checkout.index');
     
 });
  
- 
-
-
-
-
-
-
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function () {
 
     

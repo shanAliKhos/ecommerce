@@ -165,6 +165,10 @@ __webpack_require__.r(__webpack_exports__);
           return false;
           break;
 
+        case 'cart.success':
+          return false;
+          break;
+
         default:
           return true;
           break;

@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Cart;
+namespace App\Http\Controllers\Ecommerce;
 use App\Http\Controllers\Controller;
  
 
@@ -196,7 +196,7 @@ class CheckOutController extends Controller
     {
         if(session()->get('CartItems')){
             session()->forget('ShipmentInformation');        
-            session()->forget('CustomerInformation');        
+            // session()->forget('CustomerInformation');        
             session()->forget('CartItems');
             return Inertia::render('Ecomerce/shared/Partials/Cart/CheckOutSuccess');
         }

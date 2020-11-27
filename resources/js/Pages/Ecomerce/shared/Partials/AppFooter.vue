@@ -151,6 +151,10 @@ export default {
                 case 'verification.notice':
                     return false;      
                 break;
+
+                case 'cart.success':
+                    return false;      
+                break;
             
                 default:
                     return true;      
