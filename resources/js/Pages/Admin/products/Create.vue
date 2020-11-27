@@ -220,7 +220,7 @@
                                 <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
                                     <label class=" z-20  absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
                                     <multiselect  
-                                        v-model="form.Attributes" 
+                                        v-model="form.attributes" 
                                         deselect-label="remove this value" 
                                         :multiple="true" 
                                         :close-on-select="false" 
@@ -232,12 +232,12 @@
                                         :searchable="true" 
                                         :allow-empty="true">
                                     </multiselect>                                   
-                                    <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.Attributes">{{$page.errors.Attributes}}</p>
+                                    <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.Attribute">{{$page.errors.Attribute}}</p>
                                 </div>         
                                 
                             </div>                 
 
-                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.Attributes.length>0)">
+                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.attributes)">
 
                                 <div class="w-full md:w-1/2">
                                 </div>
@@ -245,10 +245,10 @@
                                 <div class="w-full md:w-1/2">
                                     <p class="text-lg text-gray-800 font-medium pb-4 md:text-right">Product Attributes Values </p>
                                     
-                                    <div class="w-full px-3 md:mb-0 relative mt-5" v-for="(Attribute, index) in form.Attributes" :key="index">
-                                        <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
+                                    <div class="w-full px-3 md:mb-0 relative mt-5" v-for="(attribute, index) in form.attributes" :key="index">
+                                        <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
                                         <multiselect   
-                                            v-model="form.AttributeValues[index]"
+                                            v-model="attribute.product_attribute_values"
                                             deselect-label="remove this value" 
                                             :multiple="true" 
                                             :close-on-select="false" 
@@ -256,7 +256,7 @@
                                             track-by="name" 
                                             label="name" 
                                             placeholder="Select an Attribute" 
-                                            :options="Attribute.attribute_values" 
+                                            :options="attribute.attribute_values" 
                                             :searchable="true" 
                                             :allow-empty="true">
                                         </multiselect>                                   
@@ -329,8 +329,7 @@ export default {
                 is_featured:0,
                 image:null,
                 is_variable:0,
-                Attributes:[],
-                AttributeValues:[],                
+                attributes:null, 
             },
             sending:false,
         }
@@ -339,8 +338,7 @@ export default {
     watch: { 
         IsVariable(val){ 
             if(!val){
-                this.form.Attributes = [];
-                this.form.AttributeValues = []; 
+                this.form.attributes = null; 
             }
         },
     },
@@ -353,8 +351,7 @@ export default {
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '');
             formData.append("categories", JSON.stringify(self.form.categories) || '');
             formData.append("is_variable", self.form.is_variable || 0);
-            formData.append("Attributes", JSON.stringify(self.form.Attributes) || '');
-            formData.append("AttributeValues", JSON.stringify(self.form.AttributeValues) || '');
+            formData.append("Attributes", JSON.stringify(self.form.attributes) || ''); 
             formData.append("regular_price", self.form.regular_price || 0);
             formData.append("sale_price", self.form.sale_price || 0);
             formData.append("quantity", self.form.quantity || 0);
@@ -385,8 +382,7 @@ export default {
                             is_active:1,
                             is_featured:0,
                             image:[],
-                            Attributes:[],
-                            AttributeValues:[],
+                            attributes:[], 
                         };
                     }
                 },             
@@ -396,20 +392,20 @@ export default {
     },
     computed: {
         CategoriesOption(){ 
-            return this.$page.Categories.filter((category,key) => {
+            return this.$page.categories.filter((category,key) => {
                 if(key > 0){
                     return category;
                 }
             });             
         }, 
         Brands(){
-            return this.$page.Brands
+            return this.$page.brands
         },
         Attributes(){ 
-            return this.$page.Attributes;
+            return this.$page.attributes;
         },
         ProductAttributes(){
-            return this.form.Attributes;
+            return this.form.attributes;
         },
         IsVariable(){ 
             return this.form.is_variable;

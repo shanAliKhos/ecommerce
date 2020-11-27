@@ -191,44 +191,42 @@
             <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
                 <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
                 <multiselect  
-                    v-model="form.Attributes" 
+                    v-model="form.attributes" 
                     deselect-label="remove this value" 
                     :multiple="true" 
                     :close-on-select="false" 
                     :clear-on-select="false"                                     
-                    track-by="name" 
-                    :class="{'is-invalid': $page.errors.Attributes}"
+                    track-by="name"  
                     label="name" 
                     placeholder="Select an Attribute" 
                     :options="Attributes" 
                     :searchable="true" 
                     :allow-empty="true">
                 </multiselect>                                   
-                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.Attributes">{{$page.errors.Attributes}}</p>
+                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>
             </div>         
             
         </div>                 
 
-        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.Attributes.length>0)">
+        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.attributes)">
             <div class="w-full md:w-1/2">
             </div>
             
             <div class="w-full md:w-1/2">
                 <p class="text-lg text-gray-800 font-medium pb-4 md:text-right mx-5">Product Attributes Values </p>
 
-                <div class="w-full px-3 md:mb-0 relative mt-5"   v-for="(Attribute, index) in form.Attributes" :key="index">
-                    <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{Attribute.name}}</label>
+                <div class="w-full px-3 md:mb-0 relative mt-5"   v-for="(attribute, index) in form.attributes" :key="index">
+                    <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
                     <multiselect   
-                        v-model="form.AttributeValues[index]"
+                        v-model="attribute.product_attribute_values"
                         deselect-label="remove this value" 
                         :multiple="true" 
                         :close-on-select="false" 
                         :clear-on-select="false"                                     
-                        track-by="name" 
-                        :class="{'is-invalid': $page.errors.AttributeValues?$page.errors.AttributeValues[index]:''}"
+                        track-by="name"  
                         label="name" 
                         placeholder="Select an Attribute" 
-                        :options="Attribute.attribute_values" 
+                        :options="attribute.attribute_values" 
                         :searchable="true" 
                         :allow-empty="true">
                     </multiselect>                                   
@@ -293,14 +291,13 @@ export default {
                 is_active: this.Product.is_active?1:0,
                 is_featured: this.Product.is_featured?1:0,
                 image: this.Product.image?this.Product.image:null,
-                is_variable:(this.Product.variations.length>0)?1:0,
-                Attributes:[],
-                AttributeValues:[],                  
+                is_variable:this.Product.variations.length?1:0,
+                attributes:this.Product.variations,                
             },    
             sending:false,
         }
     },
-
+  
     methods: {
         update(){
             self = this; 
@@ -311,8 +308,7 @@ export default {
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '');
             formData.append("categories", JSON.stringify(self.form.categories) || '');
             formData.append("is_variable", self.form.is_variable || 0);
-            formData.append("Attributes", JSON.stringify(self.form.Attributes) || '');
-            formData.append("AttributeValues", JSON.stringify(self.form.AttributeValues) || '');            
+            formData.append("Attributes", JSON.stringify(self.form.attributes) || '');          
             formData.append("regular_price", self.form.regular_price || 0);
             formData.append("sale_price", self.form.sale_price || 0);
             formData.append("quantity", self.form.quantity || 0);
@@ -342,17 +338,24 @@ export default {
             });             
         },
         Attributes(){ 
-            return this.$page.Attributes;
-        },         
+            return this.$page.attributes;
+        },
+        // ProductVaritations(){
+        //     const self= this
+        //     return self.Product.variations;
+        // }
            
-    },    
-    mounted() {
-        self = this;
-        self.Product.variations.forEach(variation => {
-            self.form.Attributes.push(variation.attribute);
-            self.form.AttributeValues.push(variation.variant_options);
-        });
     },
+
+    // created() {
+    //     const self = this;  
+    //     self.Product.variations.forEach((variation,index) => {  
+
+    //         self.form.attributes.push(variation.attribute)
+    //         self.form.attributes[index].product_attribute_values = variation.variant_options 
+
+    //     });  
+ 
+    // },
 }
 </script>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>

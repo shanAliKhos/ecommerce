@@ -18,7 +18,7 @@ class Variant extends Model
         return $this->belongsTo(Attribute::class);
     }    
 
-    public function VariantOptions()
+    public function variant_options()
     {
         return $this->belongsToMany(AttributeValue::class, 'variant_options','variant_id','attribute_value_id');
     }    

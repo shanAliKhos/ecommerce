@@ -31,15 +31,16 @@ class ProductController extends Controller
 
     public function create(Brand $brand ,Category $category,Attribute $attribute)
     {
-        $Attributes = $attribute->with('AttributeValues')->get();
+        $attributes = $attribute->with('attribute_values')->get();
+        $brands = $brand->all(['*'],'name','asc');
+        $categories = $category->all(['*'],'name','asc'); 
         
-        $Brands = $brand->all(['*'],'name','asc');
-        $Categories = $category->all(['*'],'name','asc'); 
-        return Inertia::render('Admin/products/Create',compact('Categories', 'Brands','Attributes'));
+        return Inertia::render('Admin/products/Create',compact('categories', 'brands','attributes'));
     }
 
     public function store(Request $request,Product $Product)
-    {      
+    {       
+ 
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
             "sku" => 'required|string|min:2|max:255',
@@ -91,22 +92,28 @@ class ProductController extends Controller
         }
         
         if($request->is_variable){ 
-
-            $NewProductAttributes = json_decode($request->Attributes,true);
-            $NewProductAttributeValues = json_decode($request->AttributeValues,true);
-
+ 
+            $ProductAttributes = json_decode($request->Attributes,true); 
             
-             
-            if(!empty($NewProductAttributes)){
+            if(!empty($ProductAttributes)){
                 
-                $Product->attributes()->sync(array_column($NewProductAttributes,'id'));
-
+                $Product->attributes()->sync(array_column($ProductAttributes,'id'));
                  
-                foreach ($Product->variations as $attrkey => $variation) { 
+                $AttributeValues = array_column($ProductAttributes,'product_attribute_values');
+                 
+                if($AttributeValues){
+                 
+                    $CountSku = 0 ;    
+                    foreach ($Product->variations as $attrkey => $variation) { 
 
-                    $variation->VariantOptions()->sync(array_column($NewProductAttributeValues[$attrkey],'id'));
-
-                }
+                        $variation->variant_options()->sync(array_column($AttributeValues[$attrkey],'id'));
+                        $CountSku += count($AttributeValues[$attrkey]);
+            
+                    }
+                    
+                    
+                }                  
+ 
  
                  
             }  
@@ -124,26 +131,35 @@ class ProductController extends Controller
     public function edit(Product $Product,Brand $brand ,Category $category, Attribute $attribute)
     {    
         $Product->load('categories','brand','images'); 
-
-        $Product->variations->load('VariantOptions');
-
-        $Product->variations->map(function($variation){
-            $variation->Attribute->load('AttributeValues');
-        });
- 
+        
+        $product_attributes = $Product->variations->map(function($variation){
+            return $variation->Attribute->load('attribute_values');
+        })->toArray();
+        
+        $product_attribute_values = $Product->variations->map(function($variation){
+            return $variation->variant_options;
+        })->toArray(); 
   
-        $Attributes = $attribute->with('AttributeValues')->get();
+        foreach ($product_attributes as $key => $product_attribute) {
+            $product_attributes[$key]['product_attribute_values'] = $product_attribute_values[$key]; 
+        }
+        $Product = $Product->toArray();
+        $Product['variations'] = $product_attributes;
+    
+   
+        $attributes = $attribute->with('attribute_values')->get();
  
         $Brands = $brand->all(['*'],'name','asc');
         $Categories = $category->all(['*'],'name','asc');  
         $__csrf_token = csrf_token();    
+        // dd('ok');
 
-        return Inertia::render('Admin/products/Edit',compact('Categories', 'Brands','Product','Attributes','__csrf_token')); 
+        return Inertia::render('Admin/products/Edit',compact('Categories', 'Brands','Product','attributes','__csrf_token')); 
     }
 
     public function update(Request $request, Product $Product)
     { 
-   
+          
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
             "sku" => 'required|string|min:2|max:255',
@@ -218,29 +234,20 @@ class ProductController extends Controller
 
         if($request->is_variable){ 
 
-            $UpdateProductAttributes = json_decode($request->Attributes,true);
-            $UpdateProductAttributeValues = json_decode($request->AttributeValues,true);  
-
-            if($UpdateProductAttributes){
+       
+            $ProductAttributes = json_decode($request->Attributes,true);
+             
+            if($ProductAttributes){
                 
-                $Product->attributes()->sync(array_column($UpdateProductAttributes,'id'));
+                $Product->attributes()->sync(array_column($ProductAttributes,'id'));
                 
-                if($UpdateProductAttributeValues){
-                    
-                    $this->validate($request,[
-                        'AttributeValues.*' => 'required',
-                    ]);
+                $ProductAttributesValues = array_column($ProductAttributes,'product_attribute_values');
+                if($ProductAttributesValues){
+                     
                     $CountSku = 0 ;    
                     foreach ($Product->variations as $attrkey => $variation) { 
-                        $variation->VariantOptions()->sync(array_column($UpdateProductAttributeValues[$attrkey],'id'));
-                        $CountSku += count($UpdateProductAttributeValues[$attrkey]);
-
-                        // $Product->Skuds->create([
-                        //     'product_id' => $Product->id,
-                        //     'sku' => '',
-                        //     'price' => '',
-                        //     'qty' => '',
-                        // ]);                        
+                        $variation->variant_options()->sync(array_column($ProductAttributesValues[$attrkey],'id'));
+                        $CountSku += count($ProductAttributesValues[$attrkey]);   
 
                     }
                     
@@ -266,6 +273,7 @@ class ProductController extends Controller
 
 
     } 
+
     public function destroy(Product $Product)
     {
         //

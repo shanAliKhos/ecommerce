@@ -1,1 +1,484 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34,90,91,114],{278:function(t,e,s){"use strict";s.r(e);var r=s(2),i=s(74),l=s(75),a=s(76),n=s(94),o=s(33),c=s(84),d=s(85),m=s(86),g={metaInfo:{title:"Welcome"},layout:r.default,components:{WelcomeSlider:i.default,WelcomeIcons:o.default,WelcomeTrendingCollection:c.default,WelcomeTrendingSlider:a.default,WelcomeTrendingMultiSlider:n.default,WelcomeSaleSlider:l.default,WelcomeSaleBanner:d.default,WelcomeBrands:m.default},mounted:function(){this.$root.$emit("sidebar-close")}},u=s(0),p=Object(u.a)(g,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{attrs:{id:"main"}},[e("div",{staticClass:"container"},[e("welcome-slider"),this._v(" "),e("welcome-icons"),this._v(" "),e("welcome-trending-collection"),this._v(" "),e("welcome-trending-slider")],1),this._v(" "),e("welcome-trending-multi-slider"),this._v(" "),e("div",{staticClass:"container"},[e("welcome-brands"),this._v(" "),e("welcome-sale-banner"),this._v(" "),e("welcome-sale-slider")],1)],1)}),[],!1,null,null,null);e.default=p.exports},33:function(t,e,s){"use strict";s.r(e);var r=s(0),i=Object(r.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"flex flex-col md:flex-row py-20 md:py-24"},[s("div",{staticClass:"sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"},[s("span",{staticClass:"bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-shipping"}),t._v(" "),s("div",{staticClass:"ml-6 mt-3 lg:mt-0"},[s("h3",{staticClass:"font-hksemibold text-primary text-xl tracking-wide"},[t._v(" Free shipping")]),t._v(" "),s("p",{staticClass:"font-hkregular text-secondary-lighter text-base tracking-wide"},[t._v(" On all orders over $50")])])]),t._v(" "),s("div",{staticClass:"sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"},[s("span",{staticClass:"bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-support"}),t._v(" "),s("div",{staticClass:"ml-6 mt-3 lg:mt-0"},[s("h3",{staticClass:"font-hksemibold text-primary text-xl tracking-wide"},[t._v(" Always available")]),t._v(" "),s("p",{staticClass:"font-hkregular text-secondary-lighter text-base tracking-wide"},[t._v(" 24/7 call center availabl e")])])]),t._v(" "),s("div",{staticClass:"sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"},[s("span",{staticClass:"bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-return"}),t._v(" "),s("div",{staticClass:"ml-6 mt-3 lg:mt-0"},[s("h3",{staticClass:"font-hksemibold text-primary text-xl tracking-wide"},[t._v(" Free returns")]),t._v(" "),s("p",{staticClass:"font-hkregular text-secondary-lighter text-base tracking-wide"},[t._v(" 7 days free return policy")])])])])}],!1,null,null,null);e.default=i.exports},74:function(t,e,s){"use strict";s.r(e);var r=s(15),i={mounted:function(){new r.a(".hero-slider",{autoplay:3e3,type:"carousel"}).mount()}},l=s(0),a=Object(l.a)(i,(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"hero-slider relative shadow-lg"},[s("div",{staticClass:"glide__track",attrs:{"data-glide-el":"track"}},[s("div",{staticClass:"glide__slides"},[s("div",{staticClass:"glide__slide"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover",staticStyle:{"background-image":"url(./img/hero-slide-01.jpg)"}},[s("div",{staticClass:"py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "},[s("h3",{staticClass:"font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"},[t._v("\n                            Store New Men’s Outdoor Collection\n                        ")]),t._v(" "),s("a",{staticClass:"btn btn-primary btn-lg mt-8",attrs:{href:"/collection-grid"}},[t._v("Know more")])])])]),t._v(" "),s("div",{staticClass:"glide__slide"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover",staticStyle:{"background-image":"url(./img/hero-slide-02.jpg)"}},[s("div",{staticClass:"py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "},[s("h3",{staticClass:"font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"},[t._v("\n                            Blake by Store "),s("br"),t._v(" 30% off\n                        ")]),t._v(" "),s("a",{staticClass:"btn btn-primary btn-lg mt-8",attrs:{href:"/collection-grid"}},[t._v("Know more")])])])]),t._v(" "),s("div",{staticClass:"glide__slide"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover",staticStyle:{"background-image":"url(./img/hero-slide-03.jpg)"}},[s("div",{staticClass:"py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "},[s("h3",{staticClass:"font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"},[t._v("\n                            Hoodie your way! "),s("br"),t._v(" For Men\n                        ")]),t._v(" "),s("a",{staticClass:"btn btn-primary btn-lg mt-8",attrs:{href:"/collection-grid"}},[t._v("Know more")])])])]),t._v(" "),s("div",{staticClass:"glide__slide"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover",staticStyle:{"background-image":"url(./img/hero-slide-04.jpg)"}},[s("div",{staticClass:"py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "},[s("h3",{staticClass:"font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"},[t._v("\n                            Match and play Women’s Dresses\n                        ")]),t._v(" "),s("a",{staticClass:"btn btn-primary btn-lg mt-8",attrs:{href:"/collection-grid"}},[t._v("Know more")])])])]),t._v(" "),s("div",{staticClass:"glide__slide"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover",staticStyle:{"background-image":"url(./img/hero-slide-05.jpg)"}},[s("div",{staticClass:"py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "},[s("h3",{staticClass:"font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"},[t._v("\n                            Back to school, "),s("br"),t._v(" the stylish way\n                        ")]),t._v(" "),s("a",{staticClass:"btn btn-primary btn-lg mt-8",attrs:{href:"/collection-grid"}},[t._v("Know more")])])])])])]),t._v(" "),s("div",{staticClass:"absolute bottom-0 inset-x-0 mb-6 z-30 text-center",attrs:{"data-glide-el":"controls[nav]"}},[s("span",{staticClass:"inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",attrs:{"data-glide-dir":"=0"}}),t._v(" "),s("span",{staticClass:"inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",attrs:{"data-glide-dir":"=1"}}),t._v(" "),s("span",{staticClass:"inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",attrs:{"data-glide-dir":"=2"}}),t._v(" "),s("span",{staticClass:"inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",attrs:{"data-glide-dir":"=3"}}),t._v(" "),s("span",{staticClass:"inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full focus:outline-none cursor-pointer",attrs:{"data-glide-dir":"=4"}})])])}],!1,null,null,null);e.default=a.exports},75:function(t,e,s){"use strict";s.r(e);var r=s(9),i=s(15),l={components:{ShopProduct:r.default},computed:{ProductsOnSale:function(){return this.$page.SaleProducts}},mounted:function(){new i.a(".product-slider",{type:"carousel",startAt:1,perView:4,gap:0,peek:{before:50,after:50},breakpoints:{1024:{perView:3,peek:{before:20,after:20}},768:{perView:2,peek:{before:10,after:10}},600:{perView:1,peek:{before:0,after:0}}}}).mount()}},a=s(0),n=Object(a.a)(l,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"pb-20 md:pb-32"},[this._m(0),this._v(" "),e("div",{staticClass:"product-slider relative"},[e("div",{staticClass:"glide__track",attrs:{"data-glide-el":"track"}},[e("div",{staticClass:"pt-12 relative glide__slides"},this._l(this.ProductsOnSale,(function(t,s){return e("div",{key:s,staticClass:"relative group glide__slide"},[e("div",{staticClass:"sm:px-5 lg:px-4"},[e("shop-product",{attrs:{Product:t}})],1)])})),0)]),this._v(" "),this._m(1)])])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"text-center pb-12 md:pb-0"},[e("h2",{staticClass:"font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"},[this._v("\n            On sale, only today\n        ")]),this._v(" "),e("p",{staticClass:"font-hkregular text-secondary-lighter text-lg md:text-xl"},[this._v("\n            Get it while they last!\n        ")])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{attrs:{"data-glide-el":"controls"}},[e("div",{staticClass:"transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-30 cursor-pointer group",attrs:{"data-glide-dir":"<"}},[e("i",{staticClass:"bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"})]),this._v(" "),e("div",{staticClass:"transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-30 cursor-pointer group",attrs:{"data-glide-dir":">"}},[e("i",{staticClass:"bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"})])])}],!1,null,null,null);e.default=n.exports},76:function(t,e,s){"use strict";s.r(e);var r=s(9),i=s(15),l={components:{ShopProduct:r.default},computed:{FeaturedProducts:function(){return this.$page.FeatureProducts}},mounted:function(){new i.a(".tranding-slider",{type:"carousel",startAt:1,perView:4,gap:0,peek:{before:50,after:50},breakpoints:{1024:{perView:3,peek:{before:20,after:20}},768:{perView:2,peek:{before:10,after:10}},600:{perView:1,peek:{before:0,after:0}}}}).mount()}},a=s(0),n=Object(a.a)(l,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"pb-20 md:pb-24 lg:pb-32"},[this._m(0),this._v(" "),e("div",{staticClass:"tranding-slider relative",attrs:{"x-data":""}},[e("div",{staticClass:"glide__track",attrs:{"data-glide-el":"track"}},[e("div",{staticClass:"pt-12 relative glide__slides"},this._l(this.FeaturedProducts,(function(t,s){return e("div",{key:s,staticClass:"relative group glide__slide"},[e("div",{staticClass:"sm:px-5 lg:px-4"},[e("shop-product",{attrs:{Product:t}})],1)])})),0)]),this._v(" "),this._m(1)])])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0"},[e("div",{staticClass:"text-center sm:text-left"},[e("h2",{staticClass:"font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"},[this._v("\n                 Elyssi’s trends\n             ")]),this._v(" "),e("p",{staticClass:"font-hkregular text-secondary-lighter text-lg md:text-xl pt-2"},[this._v("\n                 Be styling, no matter the season!\n             ")])]),this._v(" "),e("a",{staticClass:"flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-hkregular text-xl text-primary",attrs:{href:"/collection-grid"}},[this._v("\n             Show more\n             "),e("i",{staticClass:"bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"})])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{attrs:{"data-glide-el":"controls"}},[e("div",{staticClass:"transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-30 cursor-pointer group",attrs:{"data-glide-dir":"<"}},[e("i",{staticClass:"bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"})]),this._v(" "),e("div",{staticClass:"transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-30 cursor-pointer group",attrs:{"data-glide-dir":">"}},[e("i",{staticClass:"bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"})])])}],!1,null,null,null);e.default=n.exports},84:function(t,e,s){"use strict";s.r(e);var r=s(0),i=Object(r.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between"},[s("div",{staticClass:"lg:w-1/2 px-10 mx-auto lg:mx-0 text-center lg:text-left"},[s("div",{staticClass:"lg:w-3/4 xl:w-2/3 lg:pt-10 pb-4 md:pb-10"},[s("h1",{staticClass:"font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"},[t._v("\n                Trending Collections\n            ")]),t._v(" "),s("p",{staticClass:"font-hkregular text-secondary-lighter text-lg pt-4"},[t._v("\n                Checkout our newest trends this coming season\n            ")])])]),t._v(" "),s("div",{staticClass:"w-full lg:w-1/2 mt-6 sm:mt-10 lg:mt-0"},[s("div",{staticClass:"px-10 h-56 sm:h-76 bg-left sm:bg-center bg-no-repeat bg-cover relative",staticStyle:{"background-image":"url(./img/collection-01.jpg)"}},[s("div",{staticClass:"w-2/3 absolute inset-0 px-6 md:px-10 py-14 "},[s("h3",{staticClass:"font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"},[t._v("\n                    Passion Pearl "),s("br"),t._v(" Collection\n                ")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"})]),t._v(" "),s("span",[s("p",{staticClass:"font-hksemibold transition-colors text-primary group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("\n                            Get it now")])])])])])]),t._v(" "),s("div",{staticClass:"w-full lg:w-1/2 lg:px-10 mt-8 sm:mt-10"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68",staticStyle:{"background-image":"url(./img/collection-02.jpg)"}},[s("div",{staticClass:"md:w-2/3 absolute inset-0 px-6 md:px-10 py-14"},[s("h3",{staticClass:"font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"},[t._v("\n                    Hoodie your way! For Men\n                ")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"})]),t._v(" "),s("p",{staticClass:"font-hksemibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("\n                        Get it now")])])])]),t._v(" "),s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68 mt-8 sm:mt-10",staticStyle:{"background-image":"url(./img/collection-03.jpg)"}},[s("div",{staticClass:"w-2/3 absolute inset-0 px-6 md:px-10 py-14"},[s("h3",{staticClass:"font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"},[t._v("\n                    Anabelle Purses by Elyssi\n                ")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"})]),t._v(" "),s("p",{staticClass:"font-hksemibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("\n                        Get it now")])])])])]),t._v(" "),s("div",{staticClass:"w-full lg:w-1/2 px-10 h-82 sm:h-94 lg:h-96 bg-left sm:bg-center bg-no-repeat bg-cover relative mt-8 sm:mt-10",staticStyle:{"background-image":"url(./img/collection-shoes.jpg)"}},[s("div",{staticClass:"w-2/3 absolute inset-0 px-6 md:px-10 py-14 sm:py-16"},[s("h3",{staticClass:"font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"},[t._v("\n                W.W. Shoes "),s("br"),t._v(" by Elyssi\n            ")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"})]),t._v(" "),s("p",{staticClass:"font-hksemibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("\n                    Get it now")])])])])])}],!1,null,null,null);e.default=i.exports},85:function(t,e,s){"use strict";s.r(e);var r=s(0),i=Object(r.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"py-5 sm:py-16 mt-10 md:mt-16 mb-12 sm:mb-6 md:mb-12 lg:mb-28 relative w-full"},[e("div",{staticClass:"bg-left bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 h-76 sm:h-82 md:h-86 lg:h-90 z-20 relative",staticStyle:{"background-image":"url(./img/coupon-image.jpg)"}}),this._v(" "),e("div",{staticClass:"lg:absolute right-0 bottom-0 bg-right bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 ml-auto h-76 sm:h-82 md:h-86 lg:h-90 bg-coupon-bg"},[e("div",{staticClass:"py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5  mx-auto text-center lg:text-left"},[e("span",{staticClass:"font-hkmedium text-white text-lg md:text-xl uppercase"},[this._v("New Arrivals")]),this._v(" "),e("h2",{staticClass:"font-butlermedium text-white text-3xl sm:text-4xl md:text-7xl xl:text-5xl pt-5 leading-tight"},[this._v("\n                Blouses & Jeans Up to 70% Off\n            ")]),this._v(" "),e("a",{staticClass:"btn btn-primary btn-lg mt-8 md:mt-10",attrs:{href:"/"}},[this._v("Get it now")])])])])}],!1,null,null,null);e.default=i.exports},86:function(t,e,s){"use strict";s.r(e);var r=s(0),i=Object(r.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"pt-16 sm:pt-20 pb-5 sm:pb-12 border-b border-grey-dark"},[e("h4",{staticClass:"font-hkregular text-xl text-secondary uppercase text-center"},[this._v("\n          Our Brands\n      ")]),this._v(" "),e("div",{staticClass:"flex flex-wrap items-center justify-center pt-8 -mx-5"},[e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-01.png)"}}),this._v(" "),e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-02.png)"}}),this._v(" "),e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-03.png)"}}),this._v(" "),e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-04.png)"}}),this._v(" "),e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-05.png)"}}),this._v(" "),e("div",{staticClass:"bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",staticStyle:{"background-image":"url(./img/brand-06.png)"}})])])}],!1,null,null,null);e.default=i.exports},9:function(t,e,s){"use strict";s.r(e);var r={props:["Product"],data:function(){return{Label:{Color:null,Title:null,Active:!1}}},methods:{AddToCart:function(t){this.$root.$emit("Add-To-Cart",{id:t.id?t.id:"",name:t.name?t.name:"",slug:t.slug?t.slug:"",Instock:t.quantity?t.quantity:"",Qty:1,price:t.sale_price?t.sale_price:t.regular_price,image:this.Product.image?t.image:"./img/shoes-4.png"})},SetLable:function(){if(this.Product.sale_price>0){var t=this.Product.regular_price,e=this.Product.sale_price,s=Math.round((t-e)/t*100)+"%";this.Label={Color:"text-primary-light",Title:s,Active:!0}}else this.Product.is_featured?this.Label={Color:"text-v-blue",Title:"Trend",Active:!0}:this.Label={Color:"text-v-green",Title:"new",Active:!0}}},computed:{ProductImage:function(){return this.Product.image?this.Product.image.replace("public","storage"):"./img/shoes-4.png"},RegularPrice:function(){return this.Product.regular_price},SalePrice:function(){return this.Product.sale_price},CurrentPrice:function(){return this.Product.sale_price?this.Product.sale_price:this.Product.regular_price},ProductName:function(){return this.Product.name}},mounted:function(){this.SetLable()}},i=s(0),l=Object(i.a)(r,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"product-gird"},[s("div",{staticClass:"relative rounded flex justify-center items-center"},[s("div",{staticClass:"w-full h-68 bg-center bg-no-repeat bg-cover",style:"background-image:url('"+t.ProductImage+"')"}),t._v(" "),t.Label.Active?s("div",{staticClass:"absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"},[s("p",{staticClass:"font-hkbold text-sm uppercase tracking-wide",class:t.Label.Color},[t._v(" "+t._s(t.Label.Title))])]):t._e(),t._v(" "),s("div",{staticClass:"absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"}),t._v(" "),s("div",{staticClass:"absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"},[s("a",{staticClass:"bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",attrs:{href:"javascript:;"},on:{click:function(e){return t.AddToCart(t.Product)}}},[s("span",{staticClass:"bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"})]),t._v(" "),t._m(0)])]),t._v(" "),s("inertia-link",{attrs:{href:t.route("shop.product",t.Product.slug)}},[s("div",{staticClass:"flex justify-between items-center pt-6"},[s("div",[s("h3",{staticClass:"font-hkregular text-base text-secondary",attrs:{title:t.ProductName}},[t._v(t._s(t.ProductName.substring(0,15)+"..."))]),t._v(" "),s("div",{staticClass:"flex items-center"},[s("div",{staticClass:"flex items-center"},[s("i",{staticClass:"bx bxs-star text-primary"}),t._v(" "),s("i",{staticClass:"bx bxs-star text-primary"}),t._v(" "),s("i",{staticClass:"bx bxs-star text-primary"}),t._v(" "),s("i",{staticClass:"bx bxs-star text-primary"}),t._v(" "),s("i",{staticClass:"bx bxs-star text-primary"})]),t._v(" "),s("p",{staticClass:"font-hkregular text-sm text-secondary ml-2"},[t._v("\r\n                        (45)")])])]),t._v(" "),s("span",{staticClass:"font-hkbold text-primary text-md"},[t._v("\r\n                "+t._s(t.$page.SiteOptions.Currency.Symbol)+" "+t._s(t.CurrentPrice)+" \r\n            ")])])])],1)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("a",{staticClass:"bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",attrs:{href:"javascript:;"}},[e("span",{staticClass:"bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"})])}],!1,null,null,null);e.default=l.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[34],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero-slider', {
+      autoplay: 3000,
+      type: 'carousel'
+    }).mount();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-slider relative shadow-lg" }, [
+      _c(
+        "div",
+        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+        [
+          _c("div", { staticClass: "glide__slides" }, [
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image": "url(./img/hero-slide-01.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Store New Men’s Outdoor Collection\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "/collection-grid" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image": "url(./img/hero-slide-02.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Blake by Store "
+                          ),
+                          _c("br"),
+                          _vm._v(" 30% off\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "/collection-grid" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image": "url(./img/hero-slide-03.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Hoodie your way! "
+                          ),
+                          _c("br"),
+                          _vm._v(" For Men\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "/collection-grid" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image": "url(./img/hero-slide-04.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Match and play Women’s Dresses\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "/collection-grid" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image": "url(./img/hero-slide-05.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Back to school, "
+                          ),
+                          _c("br"),
+                          _vm._v(" the stylish way\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "/collection-grid" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "absolute bottom-0 inset-x-0 mb-6 z-30 text-center",
+          attrs: { "data-glide-el": "controls[nav]" }
+        },
+        [
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=0" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=1" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=2" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=3" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=4" }
+          })
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6& */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6&");
+/* harmony import */ var _WelcomeMainSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WelcomeMainSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _WelcomeMainSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeMainSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeMainSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeMainSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/WelcomeMainSlider.vue?vue&type=template&id=0e30d9c6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeMainSlider_vue_vue_type_template_id_0e30d9c6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
