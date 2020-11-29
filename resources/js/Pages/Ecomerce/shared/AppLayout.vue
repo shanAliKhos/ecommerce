@@ -76,7 +76,7 @@
         
     }
 </script>
-<style scoped>
+<style>
 #nprogress .bar {
   background: #fb6d11; 
 }
