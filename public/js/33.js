@@ -108,8 +108,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
@@ -184,7 +182,7 @@ var render = function() {
               _c(
                 "inertia-link",
                 {
-                  staticClass: "text-gray-700",
+                  staticClass: "text-gray-500",
                   attrs: { href: _vm.route("admin.dashboard") }
                 },
                 [_vm._v("Home")]
@@ -193,8 +191,9 @@ var render = function() {
               _c(
                 "svg",
                 {
-                  staticClass: "  w-3 h-3 mx-3",
+                  staticClass: "w-3 h-3 mx-3",
                   attrs: {
+                    stroke: "currentColor",
                     xmlns: "http://www.w3.org/2000/svg",
                     viewBox: "0 0 320 512"
                   }
@@ -253,9 +252,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
-      _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-        _vm._v("\n            Order Listing\n        ")
-      ]),
+      _c(
+        "p",
+        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Order Listing")]
+      ),
       _vm._v(" "),
       _c("table", { staticClass: "border-collapse w-full table-auto" }, [
         _vm._m(1),
@@ -510,7 +511,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
+      _c("a", { staticClass: "text-gray-400", attrs: { href: "#" } }, [
         _vm._v("Order Listing")
       ])
     ])

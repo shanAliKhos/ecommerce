@@ -22,4 +22,9 @@ class Variant extends Model
     {
         return $this->belongsToMany(AttributeValue::class, 'variant_options','variant_id','attribute_value_id');
     }    
+
+    public function Skuds()
+    {
+        return $this->belongsToMany(Sku::class, 'skus','variant_id','sku_id');
+    }    
 }

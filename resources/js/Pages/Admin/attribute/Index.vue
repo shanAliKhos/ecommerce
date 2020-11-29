@@ -1,5 +1,7 @@
 <template>
+
 <div>
+
     <nav class="text-sm font-semibold mb-6" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
             <li class="flex items-center text-blue-500"> 
@@ -23,9 +25,7 @@
         </inertia-link>
     </nav>
     <div class="my-8 p-10 bg-white rounded shadow-xl">
-        <p class="text-xl pb-6 flex items-center">
-            Attributes Listing
-        </p>    
+        <p class="pb-6 flex font-semibold text-xl text-gray-400">Attributes Listing</p>    
         <table class="border-collapse w-full ">
             <thead>
                 <tr>
@@ -39,6 +39,7 @@
                 </tr>
             </thead>
             <tbody>
+            
                 <attribute-item v-for="(Attribute, AttributeIndex) in Attributes" :key="AttributeIndex" :AttributeIndex="AttributeIndex" :Attribute='Attribute' ></attribute-item>
             </tbody>
         </table>    
@@ -48,6 +49,7 @@
 
     
 </div>
+
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   

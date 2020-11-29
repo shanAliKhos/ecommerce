@@ -9,3 +9,6 @@
 @import 'tailwindcss/utilities';
 @import "bundles";
  
+html {
+    scroll-behavior: smooth;
+}

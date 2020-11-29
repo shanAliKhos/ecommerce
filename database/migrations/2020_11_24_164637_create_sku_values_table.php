@@ -15,8 +15,8 @@ class CreateSkuValuesTable extends Migration
     {
         Schema::create('sku_values', function (Blueprint $table) {
             $table->id(); 
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');              
+            // $table->unsignedBigInteger('product_id');
+            // $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');              
             $table->unsignedBigInteger('variant_id');
             $table->foreign('variant_id')->references('id')->on('variants')->onDelete('cascade');              
             $table->unsignedBigInteger('variant_option_id');

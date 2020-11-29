@@ -4,7 +4,18 @@
     <app-header></app-header>
     
     <main>
-        <slot></slot>
+        
+        <transition enter-active-class="ease-out duration-400"
+            enter-class="opacity-0 transform translate-y-6"
+            enter-to-class="opacity-100"
+            leave-active-class="ease-in duration-500"
+            leave-class="opacity-100"
+            leave-to-class="opacity-0">       
+
+                <slot></slot>
+
+        </transition>    
+        
     </main>        
 
     <app-footer></app-footer>

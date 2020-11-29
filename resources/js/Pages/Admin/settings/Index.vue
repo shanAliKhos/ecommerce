@@ -23,7 +23,7 @@
     </nav>
     <SectionBorder/>
 
-    <p class="text-xl pb-6 flex items-center">Setting</p>        
+    <p class="pb-6 flex font-semibold text-xl text-gray-400">Setting</p>        
     <div class="flex justify-center">
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">

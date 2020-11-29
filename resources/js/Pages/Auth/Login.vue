@@ -115,7 +115,7 @@ export default {
 
       this.$inertia.post(route('login'), data, {
         preserveState: true,
-        preserveScroll: true,             
+        // preserveScroll: true,             
         onStart: () => this.sending = true,
         onFinish: () => this.sending = false,
       })

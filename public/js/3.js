@@ -141,6 +141,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Sidebar',
@@ -206,15 +214,15 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "overscroll-contain" },
+          { staticClass: "overscroll-contain mx-2" },
           [
             _c(
               "inertia-link",
               {
                 staticClass:
-                  "w-full flex items-center h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                  "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                 class: {
-                  "text-red-500 shadow":
+                  "transition duration-700 ease-in-out shadow animate-pulse":
                     _vm.$page.currentRouteName == "admin.dashboard"
                 },
                 attrs: { href: _vm.$route("admin.dashboard") }
@@ -244,7 +252,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "mb-4 px-4" },
+              { staticClass: "mb-4 mt-4 px-2" },
               [
                 _c("p", { staticClass: "pl-4 text-sm font-semibold mb-1" }, [
                   _vm._v("Shop")
@@ -254,9 +262,9 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                      "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                     class: {
-                      "text-red-200 shadow":
+                      "transition duration-700 ease-in-out shadow animate-pulse":
                         _vm.$page.currentRouteName == "admin.order.index"
                     },
                     attrs: { href: _vm.$route("admin.order.index") }
@@ -288,9 +296,9 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                      "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                     class: {
-                      "text-red-200 shadow":
+                      "transition duration-700 ease-in-out shadow animate-pulse":
                         _vm.$page.currentRouteName == "admin.product.index"
                     },
                     attrs: { href: _vm.$route("admin.product.index") }
@@ -322,9 +330,9 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                      "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                     class: {
-                      "text-red-200 shadow":
+                      "transition duration-700 ease-in-out shadow animate-pulse":
                         _vm.$page.currentRouteName == "admin.brand.index"
                     },
                     attrs: { href: _vm.$route("admin.brand.index") }
@@ -356,9 +364,9 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                      "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                     class: {
-                      "text-red-200 shadow":
+                      "transition duration-700 ease-in-out shadow animate-pulse":
                         _vm.$page.currentRouteName == "admin.category.index"
                     },
                     attrs: { href: _vm.$route("admin.category.index") }
@@ -390,9 +398,9 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                      "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                     class: {
-                      "text-red-200 shadow":
+                      "transition duration-700 ease-in-out shadow animate-pulse":
                         _vm.$page.currentRouteName == "admin.attribute.index"
                     },
                     attrs: { href: _vm.$route("admin.attribute.index") }
@@ -427,10 +435,10 @@ var render = function() {
               "inertia-link",
               {
                 staticClass:
-                  "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                  "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                 class: {
-                  "text-red-200 shadow":
-                    _vm.$page.currentRouteName == "admin.user.index"
+                  "transition duration-700 ease-in-out shadow animate-pulse":
+                    _vm.$page.currentRouteName == "admin.customer.index"
                 },
                 attrs: { href: _vm.$route("admin.customer.index") }
               },
@@ -468,9 +476,9 @@ var render = function() {
               "inertia-link",
               {
                 staticClass:
-                  "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
+                  "transition duration-500 ease-in-out w-full flex items-center text-blue-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer",
                 class: {
-                  "text-red-200 shadow":
+                  "transition duration-700 ease-in-out shadow animate-pulse":
                     _vm.$page.currentRouteName == "admin.setting"
                 },
                 attrs: { href: _vm.$route("admin.setting") }
@@ -498,41 +506,47 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("p", { staticClass: "pl-4 text-sm font-semibold mb-1" }, [
-              _vm._v("Visit")
-            ]),
-            _vm._v(" "),
             _c(
-              "inertia-link",
-              {
-                staticClass:
-                  "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer",
-                class: {
-                  "text-red-200 shadow": _vm.$page.currentRouteName == "welcome"
-                },
-                attrs: { href: _vm.$route("welcome") }
-              },
+              "div",
+              { staticClass: "mb-4 mt-4 px-2" },
               [
+                _c("p", { staticClass: "pl-4 text-sm font-semibold mb-1" }, [
+                  _vm._v("Visit")
+                ]),
+                _vm._v(" "),
                 _c(
-                  "svg",
+                  "inertia-link",
                   {
-                    staticClass: "h-6 w-6 fill-current mr-2",
-                    attrs: { viewBox: "0 0 20 20" }
+                    staticClass:
+                      "w-full flex items-center text-green-400 h-10 pl-4 hover:shadow rounded-lg cursor-pointer hover:text-red-400",
+                    class: {
+                      "transition duration-700 ease-in-out shadow animate-pulse":
+                        _vm.$page.currentRouteName == "welcome"
+                    },
+                    attrs: { href: _vm.$route("welcome") }
                   },
                   [
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"
-                      }
-                    })
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-6 w-6 fill-current mr-2",
+                        attrs: { viewBox: "0 0 20 20" }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Website")])
                   ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "text-gray-700" }, [
-                  _vm._v("Website")
-                ])
-              ]
+                )
+              ],
+              1
             )
           ],
           1

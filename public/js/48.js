@@ -50,6 +50,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import DialogModal from './../../Shared/DialogModal'  
 // import SecondaryButton from './../../Shared/SecondaryButton'  
@@ -368,7 +379,27 @@ var render = function() {
     [
       _c("app-header"),
       _vm._v(" "),
-      _c("main", [_vm._t("default")], 2),
+      _c(
+        "main",
+        [
+          _c(
+            "transition",
+            {
+              attrs: {
+                "enter-active-class": "ease-out duration-400",
+                "enter-class": "opacity-0 transform translate-y-6",
+                "enter-to-class": "opacity-100",
+                "leave-active-class": "ease-in duration-500",
+                "leave-class": "opacity-100",
+                "leave-to-class": "opacity-0"
+              }
+            },
+            [_vm._t("default")],
+            2
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),

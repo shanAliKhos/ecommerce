@@ -235,7 +235,17 @@
             </div>    
         </div>          
 
-    </div>         
+    </div> 
+
+    <div class="product-variations" v-if="form.is_variable">   
+        <SectionBorder/>
+
+        <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
+
+
+    
+    </div> 
+    
 
     <SectionBorder/>
 
@@ -264,7 +274,9 @@ import SelectInput from './../../Shared/SelectInput'
 import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
+
     props:['Product','Categories','Brands'],
+
     components:{
         Multiselect,
         LoadingButton,
@@ -273,6 +285,7 @@ export default {
         SelectInput,        
         SectionBorder,        
     }, 
+
     remember: 'form',
 
     data () {
@@ -339,23 +352,8 @@ export default {
         },
         Attributes(){ 
             return this.$page.attributes;
-        },
-        // ProductVaritations(){
-        //     const self= this
-        //     return self.Product.variations;
-        // }
-           
+        }, 
     },
 
-    // created() {
-    //     const self = this;  
-    //     self.Product.variations.forEach((variation,index) => {  
-
-    //         self.form.attributes.push(variation.attribute)
-    //         self.form.attributes[index].product_attribute_values = variation.variant_options 
-
-    //     });  
- 
-    // },
 }
 </script>

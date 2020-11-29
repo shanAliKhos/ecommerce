@@ -523,9 +523,11 @@ var render = function() {
       _vm._v(" "),
       _c("SectionBorder"),
       _vm._v(" "),
-      _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-        _vm._v("Setting")
-      ]),
+      _c(
+        "p",
+        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Setting")]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center" }, [
         _c("div", { staticClass: "w-full pl-0 lg:pl-2" }, [

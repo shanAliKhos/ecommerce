@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
       };
       this.$inertia.post(route('login'), data, {
         preserveState: true,
-        preserveScroll: true,
+        // preserveScroll: true,             
         onStart: function onStart() {
           return _this.sending = true;
         },
@@ -160,6 +160,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Partials/AppHeader */ "./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue");
 /* harmony import */ var _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Partials/AppFooter */ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue");
 /* harmony import */ var _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Shared/FlashMessage */ "./resources/js/Pages/Shared/FlashMessage.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -852,7 +863,27 @@ var render = function() {
     [
       _c("app-header"),
       _vm._v(" "),
-      _c("main", [_vm._t("default")], 2),
+      _c(
+        "main",
+        [
+          _c(
+            "transition",
+            {
+              attrs: {
+                "enter-active-class": "ease-out duration-400",
+                "enter-class": "opacity-0 transform translate-y-6",
+                "enter-to-class": "opacity-100",
+                "leave-active-class": "ease-in duration-500",
+                "leave-class": "opacity-100",
+                "leave-to-class": "opacity-0"
+              }
+            },
+            [_vm._t("default")],
+            2
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),

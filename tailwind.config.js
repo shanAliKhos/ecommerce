@@ -40,6 +40,9 @@ module.exports = {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
         fontSize: ['responsive', 'hover', 'focus', 'disabled'],
         backgroundImage: ['hover', 'focus'],    
+        extend: {
+           transform: ['hover', 'focus'],
+          }        
     },
 
     plugins: [require('@tailwindcss/ui')],

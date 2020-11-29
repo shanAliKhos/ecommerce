@@ -25,9 +25,7 @@
 
 
     <div class="my-8 p-10 bg-white rounded shadow-xl">
-        <p class="text-xl pb-6 flex items-center">
-            Brand Listing
-        </p>    
+        <p class="pb-6 flex font-semibold text-xl text-gray-400">Brand Listing</p>    
         <table class="border-collapse w-full table-auto">
             <thead>
                 <tr> 

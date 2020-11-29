@@ -3,11 +3,11 @@
      <nav class="text-sm font-semibold mb-6" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
             <li class="flex items-center text-blue-500"> 
-                <inertia-link :href="route('admin.dashboard')" class="text-gray-700">Home</inertia-link>        
+                <inertia-link :href="route('admin.dashboard')" class="text-gray-500">Home</inertia-link>              
                 <svg class="  w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
             </li>
             <li class="flex items-center">
-                <a href="#" class="text-gray-600">Order Listing</a>
+                <a href="#" class="text-gray-400">Order Show</a>
             </li>
         </ol>
         <inertia-link 
@@ -22,96 +22,91 @@
         </inertia-link>                
     </nav>    
 
-    <div class="my-8 p-10">
-        <p class="text-xl pb-6 flex items-center">
-            <span>Order # / {{ Order.OrderNumber}}</span>
-        </p>    
-        <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="my-8 p-10 bg-white">
+        <p class="pb-6 flex font-semibold text-xl text-gray-400">Order# {{ Order.OrderNumber}}</p>    
+
+        <div class="flex flex-wrap -mx-3 mb-5 ">
+            
             <div class="w-full md:w-1/3 px-3 md:mb-0">
-                <div>
-                    <span>
-                        <span>Placed By</span>
-                        <address>
-                            <strong>Name:  {{ Order.user.name }}</strong>
-                            <br>
-                            <strong>Email:  {{ Order.user.email }}</strong> 
-                        </address>
-                        <address><strong>Created_at  - </strong>{{ Order.created_at }}</address>
-                        <address><strong>Updated_at  - </strong>{{ Order.updated_at }}</address>    
-                    </span>                 
+                <div class="border border-gray-200 px-5 py-5 mr-2 shadow h-60">
+                    <p class="pb-6 flex font-semibold text-lg text-blue-400 uppercase">Placed by</p>  
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> Name : {{ Order.user.name }}</p>    
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> Email : <span class="lowercase pl-2">{{ Order.user.email }}</span></p>    
+                    <p class="flex font-semibold text-sm text-gray-400"> created_at : <br> {{ Order.created_at }}</p>    
+                    <p class="flex font-semibold text-sm text-gray-400"> updated_at : <br> {{ Order.updated_at }}</p>                   
                 </div>
             
             </div>
-             
-            <div class="w-full md:w-1/3 px-3 md:mb-0">
-                <span>
-                    <span>Ship To </span>
-                    <address>
-                        <strong>{{ Order.CardHolderName }}</strong>
-                        <br>{{ Order.Address }}<br>{{ Order.City }}, {{ Order.Country }} {{ Order.PostalCode }}<br>{{ Order.PhoneNumber }}<br>
-                    </address>    
-                </span>        
-            </div>
-        
-            <div class="w-full md:w-1/3 px-3 md:mb-0">
-                <span>
-                    <b>Order ID:</b> {{ Order.OrderNumber }}<br>
-                    <b>Order Status:</b>  
-                    <i   :class="StatusIcon" aria-hidden="true"> <span> {{Order.Status}}</span> </i> 
-                    <br>
-                    <b>Amount:</b> ${{ Order.GrandTotal  }}<br> 
-                    <b>Payment Method:</b> {{ Order.PaymentMethod }}<br>
-                    <b>Payment Status:</b> {{ Order.PaymentStatus == 1 ? 'Completed' : 'Not Completed' }}<br>
-                    <b>Payment Track:</b> {{ Order.PaymentToken }}<br>
-                </span>            
-            </div>
+               
+            <div class="w-full md:w-1/3 px-3 md:mb-0 mt-5 md:mt-0">
+                <div class="border border-gray-200 px-5 py-5 mr-2 shadow h-60">
+                    <p class="pb-6 flex font-semibold text-lg text-blue-400 uppercase">Ship To</p>    
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> {{Order.CardHolderName}}</p>    
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> {{Order.Address}} </p>    
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> {{Order.City}} , {{Order.Country}} ,{{Order.PostalCode}}</p>     
+                    <p class="flex font-semibold text-sm text-gray-400 uppercase"> {{ Order.PhoneNumber }}</p>     
+                </div>        
+            </div> 
+
+            <div class="w-full md:w-1/3 px-3 md:mb-0 mt-5 md:mt-0">
+                <div class="border border-gray-200 px-5 py-5 mr-2 shadow h-60 ">
+                    <p class="pb-6 flex font-semibold text-lg text-blue-400 uppercase">Details</p>    
+                    <p class="font-semibold text-sm text-gray-400 uppercase">Status : <span :class="StatusIcon">{{Order.Status}} </span> </p> 
+                    <p class="font-semibold text-sm text-gray-400 uppercase">Amount : <span class="text-red-500"> ${{ Order.GrandTotal }}</span> </p> 
+                    <p class="font-semibold text-sm text-gray-400 uppercase">Payment Method : <span class="text-red-400"> {{ Order.PaymentMethod }}</span></p>
+                    <p class="font-semibold text-sm text-gray-400 uppercase">Payment Status : 
+                        <span :class="{'text-green-500':Order.PaymentStatus == 1,'text-red-500':Order.PaymentStatus !== 1}">
+                            {{ Order.PaymentStatus == 1 ? 'Completed' : 'Not Completed' }}  
+                        </span> 
+                    </p>
+                    <p class="font-semibold text-sm text-gray-400 uppercase">Payment Track : {{ Order.PaymentToken }} </p>
+                </div>            
+            </div> 
+
         </div>
         
-        <div class="">
-            <div class="my-8 p-10 bg-white rounded shadow-xl">
-                <p class="text-xl pb-6 flex items-center">
-                    Order Listing
-                </p>    
-                <table class="border-collapse w-full table-auto">
-                    <thead>
-                        <tr>
-                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden  lg:table-cell">#</th> 
-                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">PRODUCT</th>
-                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th>
-                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">QTY</th>
-                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SUBTOTAL</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(Order, OrderIndex) in Order.items" :key="OrderIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
-                                <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
-                                <p class="py-5  lg:p-1 ">{{ (OrderIndex+1) }}</p>
-                            </td>
-                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static ">
-                                <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PRODUCT</p>
-                                <p class="py-5  lg:p-1 ">{{ Order.product.name }}</p>
-                            </td>
-                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SKU</span>
-                                <p class="py-5  lg:p-1 ">{{ Order.product.sku }}</p>
-                            </td>
-                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">QTY</span>
-                                <p class="py-5  lg:p-1 ">{{ Order.Quantity }}</p>
-                            </td>
-                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-                                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SUBTOTAL</span>
-                                <p class="py-5  lg:p-1 ">{{  Order.Price }}</p>
-                            </td>
-                      
-                        </tr>               
-                    </tbody>
-                </table>    
-            </div>         
-        </div>     
-        
-        <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+   
+        <div class="flex flex-wrap mx-3 mb-10 mt-10 ">
+            <p class="pb-6 flex font-semibold text-lg text-blue-400 uppercase">Items</p>    
+            <table class="border-collapse w-full table-auto shadow">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden  lg:table-cell">#</th> 
+                        <th class="p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell">PRODUCT</th>
+                        <th class="p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th>
+                        <th class="p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell">QTY</th>
+                        <th class="p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell">SUBTOTAL</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(Order, OrderIndex) in Order.items" :key="OrderIndex" class="bg-white lg:hover:bg-gray-50 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
+                            <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
+                            <p class="py-5  lg:p-1 ">{{ (OrderIndex+1) }}</p>
+                        </td>
+                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
+                            <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PRODUCT</p>
+                            <p class="py-5  lg:p-1 ">{{ Order.product.name }}</p>
+                        </td>
+                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+                            <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SKU</span>
+                            <p class="py-5  lg:p-1 ">{{ Order.product.sku }}</p>
+                        </td>
+                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+                            <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">QTY</span>
+                            <p class="py-5  lg:p-1 ">{{ Order.Quantity }}</p>
+                        </td>
+                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+                            <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SUBTOTAL</span>
+                            <p class="py-5  lg:p-1 ">{{  Order.Price }}</p>
+                        </td>
+                    
+                    </tr>               
+                </tbody>
+            </table>    
+        </div>         
+ 
+        <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5">
 
             <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
                 v-if="Order.Status !== 'pending'"

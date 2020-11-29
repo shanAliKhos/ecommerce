@@ -39,6 +39,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -267,8 +276,24 @@ var render = function() {
               _c(
                 "div",
                 { staticClass: "p-6 bg-gray-100 mb-10" },
-                [_vm._t("default")],
-                2
+                [
+                  _c(
+                    "transition",
+                    {
+                      attrs: {
+                        "enter-active-class": "ease-out duration-400",
+                        "enter-class": "opacity-0 transform translate-y-6",
+                        "enter-to-class": "opacity-100",
+                        "leave-active-class": "ease-in duration-500",
+                        "leave-class": "opacity-100",
+                        "leave-to-class": "opacity-0"
+                      }
+                    },
+                    [_vm._t("default")],
+                    2
+                  )
+                ],
+                1
               ),
               _vm._v(" "),
               _c("Footer"),

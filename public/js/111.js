@@ -184,9 +184,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
-      _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-        _vm._v("Category Listing")
-      ]),
+      _c(
+        "p",
+        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Category Listing")]
+      ),
       _vm._v(" "),
       _c("table", { staticClass: "border-collapse w-full table-auto " }, [
         _vm._m(1),

@@ -49,6 +49,8 @@ class Product extends Model
         return $this->hasMany(Variant::class,'product_id');
     }
  
+ 
+ 
     public function images()
     {
         return $this->hasMany(ProductImage::class);

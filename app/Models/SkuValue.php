@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SkuValue extends Model
 {
     use HasFactory;
+
+    public function Variants()
+    {
+        return $this->belongsTo(Variant::class);
+    }  
+    
 }

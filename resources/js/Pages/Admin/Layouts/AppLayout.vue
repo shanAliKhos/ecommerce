@@ -11,7 +11,16 @@
                 <Navbar />
     
                 <div class="p-6 bg-gray-100 mb-10">
-                    <slot class="py-5"></slot> 
+                    <transition enter-active-class="ease-out duration-400"
+                                enter-class="opacity-0 transform translate-y-6"
+                                enter-to-class="opacity-100"
+                                leave-active-class="ease-in duration-500"
+                                leave-class="opacity-100"
+                                leave-to-class="opacity-0">                
+
+                        <slot class="py-5"></slot> 
+                            
+                    </transition>
                 </div>
     
                 <Footer />

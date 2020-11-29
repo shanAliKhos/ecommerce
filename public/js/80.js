@@ -171,11 +171,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -314,7 +309,7 @@ var render = function() {
               _c(
                 "inertia-link",
                 {
-                  staticClass: "text-gray-700",
+                  staticClass: "text-gray-500",
                   attrs: { href: _vm.route("admin.dashboard") }
                 },
                 [_vm._v("Home")]
@@ -382,111 +377,264 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "my-8 p-10" }, [
-      _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-        _c("span", [_vm._v("Order # / " + _vm._s(_vm.Order.OrderNumber))])
-      ]),
+    _c("div", { staticClass: "my-8 p-10 bg-white" }, [
+      _c(
+        "p",
+        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Order# " + _vm._s(_vm.Order.OrderNumber))]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-3 mb-5 " }, [
         _c("div", { staticClass: "w-full md:w-1/3 px-3 md:mb-0" }, [
-          _c("div", [
-            _c("span", [
-              _c("span", [_vm._v("Placed By")]),
-              _vm._v(" "),
-              _c("address", [
-                _c("strong", [_vm._v("Name:  " + _vm._s(_vm.Order.user.name))]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("strong", [
-                  _vm._v("Email:  " + _vm._s(_vm.Order.user.email))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("address", [
-                _c("strong", [_vm._v("Created_at  - ")]),
-                _vm._v(_vm._s(_vm.Order.created_at))
-              ]),
-              _vm._v(" "),
-              _c("address", [
-                _c("strong", [_vm._v("Updated_at  - ")]),
-                _vm._v(_vm._s(_vm.Order.updated_at))
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "w-full md:w-1/3 px-3 md:mb-0" }, [
-          _c("span", [
-            _c("span", [_vm._v("Ship To ")]),
-            _vm._v(" "),
-            _c("address", [
-              _c("strong", [_vm._v(_vm._s(_vm.Order.CardHolderName))]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(_vm._s(_vm.Order.Address)),
-              _c("br"),
-              _vm._v(
-                _vm._s(_vm.Order.City) +
-                  ", " +
-                  _vm._s(_vm.Order.Country) +
-                  " " +
-                  _vm._s(_vm.Order.PostalCode)
+          _c(
+            "div",
+            {
+              staticClass: "border border-gray-200 px-5 py-5 mr-2 shadow h-60"
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "pb-6 flex font-semibold text-lg text-blue-400 uppercase"
+                },
+                [_vm._v("Placed by")]
               ),
-              _c("br"),
-              _vm._v(_vm._s(_vm.Order.PhoneNumber)),
-              _c("br")
-            ])
-          ])
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "flex font-semibold text-sm text-gray-400 uppercase"
+                },
+                [_vm._v(" Name : " + _vm._s(_vm.Order.user.name))]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "flex font-semibold text-sm text-gray-400 uppercase"
+                },
+                [
+                  _vm._v(" Email : "),
+                  _c("span", { staticClass: "lowercase pl-2" }, [
+                    _vm._v(_vm._s(_vm.Order.user.email))
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                { staticClass: "flex font-semibold text-sm text-gray-400" },
+                [
+                  _vm._v(" created_at : "),
+                  _c("br"),
+                  _vm._v(" " + _vm._s(_vm.Order.created_at))
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                { staticClass: "flex font-semibold text-sm text-gray-400" },
+                [
+                  _vm._v(" updated_at : "),
+                  _c("br"),
+                  _vm._v(" " + _vm._s(_vm.Order.updated_at))
+                ]
+              )
+            ]
+          )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-full md:w-1/3 px-3 md:mb-0" }, [
-          _c("span", [
-            _c("b", [_vm._v("Order ID:")]),
-            _vm._v(" " + _vm._s(_vm.Order.OrderNumber)),
-            _c("br"),
-            _vm._v(" "),
-            _c("b", [_vm._v("Order Status:")]),
-            _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "w-full md:w-1/3 px-3 md:mb-0 mt-5 md:mt-0" },
+          [
             _c(
-              "i",
-              { class: _vm.StatusIcon, attrs: { "aria-hidden": "true" } },
-              [_c("span", [_vm._v(" " + _vm._s(_vm.Order.Status))])]
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("b", [_vm._v("Amount:")]),
-            _vm._v(" $" + _vm._s(_vm.Order.GrandTotal)),
-            _c("br"),
-            _vm._v(" "),
-            _c("b", [_vm._v("Payment Method:")]),
-            _vm._v(" " + _vm._s(_vm.Order.PaymentMethod)),
-            _c("br"),
-            _vm._v(" "),
-            _c("b", [_vm._v("Payment Status:")]),
-            _vm._v(
-              " " +
-                _vm._s(
-                  _vm.Order.PaymentStatus == 1 ? "Completed" : "Not Completed"
+              "div",
+              {
+                staticClass: "border border-gray-200 px-5 py-5 mr-2 shadow h-60"
+              },
+              [
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "pb-6 flex font-semibold text-lg text-blue-400 uppercase"
+                  },
+                  [_vm._v("Ship To")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "flex font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [_vm._v(" " + _vm._s(_vm.Order.CardHolderName))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "flex font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [_vm._v(" " + _vm._s(_vm.Order.Address) + " ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "flex font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.Order.City) +
+                        " , " +
+                        _vm._s(_vm.Order.Country) +
+                        " ," +
+                        _vm._s(_vm.Order.PostalCode)
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "flex font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [_vm._v(" " + _vm._s(_vm.Order.PhoneNumber))]
                 )
-            ),
-            _c("br"),
-            _vm._v(" "),
-            _c("b", [_vm._v("Payment Track:")]),
-            _vm._v(" " + _vm._s(_vm.Order.PaymentToken)),
-            _c("br")
-          ])
-        ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "w-full md:w-1/3 px-3 md:mb-0 mt-5 md:mt-0" },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "border border-gray-200 px-5 py-5 mr-2 shadow h-60 "
+              },
+              [
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "pb-6 flex font-semibold text-lg text-blue-400 uppercase"
+                  },
+                  [_vm._v("Details")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v("Status : "),
+                    _c("span", { class: _vm.StatusIcon }, [
+                      _vm._v(_vm._s(_vm.Order.Status) + " ")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v("Amount : "),
+                    _c("span", { staticClass: "text-red-500" }, [
+                      _vm._v(" $" + _vm._s(_vm.Order.GrandTotal))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v("Payment Method : "),
+                    _c("span", { staticClass: "text-red-400" }, [
+                      _vm._v(" " + _vm._s(_vm.Order.PaymentMethod))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v("Payment Status : \n                        "),
+                    _c(
+                      "span",
+                      {
+                        class: {
+                          "text-green-500": _vm.Order.PaymentStatus == 1,
+                          "text-red-500": _vm.Order.PaymentStatus !== 1
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(
+                              _vm.Order.PaymentStatus == 1
+                                ? "Completed"
+                                : "Not Completed"
+                            ) +
+                            "  \n                        "
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-semibold text-sm text-gray-400 uppercase"
+                  },
+                  [
+                    _vm._v(
+                      "Payment Track : " + _vm._s(_vm.Order.PaymentToken) + " "
+                    )
+                  ]
+                )
+              ]
+            )
+          ]
+        )
       ]),
       _vm._v(" "),
-      _c("div", {}, [
-        _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
-          _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-            _vm._v("\n                    Order Listing\n                ")
-          ]),
-          _vm._v(" "),
-          _c("table", { staticClass: "border-collapse w-full table-auto" }, [
+      _c("div", { staticClass: "flex flex-wrap mx-3 mb-10 mt-10 " }, [
+        _c(
+          "p",
+          {
+            staticClass:
+              "pb-6 flex font-semibold text-lg text-blue-400 uppercase"
+          },
+          [_vm._v("Items")]
+        ),
+        _vm._v(" "),
+        _c(
+          "table",
+          { staticClass: "border-collapse w-full table-auto shadow" },
+          [
             _vm._m(1),
             _vm._v(" "),
             _c(
@@ -497,14 +645,14 @@ var render = function() {
                   {
                     key: OrderIndex,
                     staticClass:
-                      "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+                      "bg-white lg:hover:bg-gray-50 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
                   },
                   [
                     _c(
                       "td",
                       {
                         staticClass:
-                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static "
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
                       },
                       [
                         _c(
@@ -526,7 +674,7 @@ var render = function() {
                       "td",
                       {
                         staticClass:
-                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static "
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
                       },
                       [
                         _c(
@@ -548,7 +696,7 @@ var render = function() {
                       "td",
                       {
                         staticClass:
-                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
                       },
                       [
                         _c(
@@ -570,7 +718,7 @@ var render = function() {
                       "td",
                       {
                         staticClass:
-                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
                       },
                       [
                         _c(
@@ -592,7 +740,7 @@ var render = function() {
                       "td",
                       {
                         staticClass:
-                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static"
+                          "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
                       },
                       [
                         _c(
@@ -614,15 +762,15 @@ var render = function() {
               }),
               0
             )
-          ])
-        ])
+          ]
+        )
       ]),
       _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+            "flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5"
         },
         [
           _vm.Order.Status !== "pending"
@@ -741,8 +889,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
-        _vm._v("Order Listing")
+      _c("a", { staticClass: "text-gray-400", attrs: { href: "#" } }, [
+        _vm._v("Order Show")
       ])
     ])
   },
@@ -751,12 +899,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("thead", [
-      _c("tr", [
+      _c("tr", { staticClass: "bg-gray-100" }, [
         _c(
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden  lg:table-cell"
+              "p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden  lg:table-cell"
           },
           [_vm._v("#")]
         ),
@@ -765,7 +913,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+              "p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell"
           },
           [_vm._v("PRODUCT")]
         ),
@@ -774,7 +922,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+              "p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell"
           },
           [_vm._v("SKU")]
         ),
@@ -783,7 +931,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+              "p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell"
           },
           [_vm._v("QTY")]
         ),
@@ -792,7 +940,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"
+              "p-3 font-bold uppercase text-gray-600 border border-gray-300 hidden lg:table-cell"
           },
           [_vm._v("SUBTOTAL")]
         )

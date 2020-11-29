@@ -129,9 +129,16 @@ class ProductController extends Controller
     }
 
     public function edit(Product $Product,Brand $brand ,Category $category, Attribute $attribute)
-    {    
+    {     
         $Product->load('categories','brand','images'); 
         
+        $Skuds = $Product->Skuds->map(function($sku){
+
+                    return $sku->skud_options->load('Variants');
+
+                });
+
+        dd($Skuds);
         $product_attributes = $Product->variations->map(function($variation){
             return $variation->Attribute->load('attribute_values');
         })->toArray();
@@ -152,7 +159,7 @@ class ProductController extends Controller
         $Brands = $brand->all(['*'],'name','asc');
         $Categories = $category->all(['*'],'name','asc');  
         $__csrf_token = csrf_token();    
-        // dd('ok');
+        
 
         return Inertia::render('Admin/products/Edit',compact('Categories', 'Brands','Product','attributes','__csrf_token')); 
     }

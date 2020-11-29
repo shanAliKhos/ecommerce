@@ -104,8 +104,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
@@ -314,9 +312,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
-      _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
-        _vm._v("\n            Brand Listing\n        ")
-      ]),
+      _c(
+        "p",
+        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Brand Listing")]
+      ),
       _vm._v(" "),
       _c("table", { staticClass: "border-collapse w-full table-auto" }, [
         _vm._m(1),
