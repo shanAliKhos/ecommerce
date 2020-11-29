@@ -76,3 +76,15 @@
         
     }
 </script>
+<style scoped>
+#nprogress .bar {
+  background: #fb6d11; 
+}
+#nprogress .spinner-icon {
+  border-top-color:#fb6d11;
+  border-left-color: #fb6d11; 
+}
+#nprogress .peg { 
+  box-shadow: 0 0 10px #fb6d11, 0 0 5px #fb6d11; 
+}
+</style>
