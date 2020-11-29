@@ -41089,8 +41089,8 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_sweetalert2__WEBPACK_IMPORTE
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__["InertiaProgress"].init({
   delay: 250,
   color: '#ea4335',
-  includeCSS: true,
-  showSpinner: false
+  includeCSS: false,
+  showSpinner: true
 });
 var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({

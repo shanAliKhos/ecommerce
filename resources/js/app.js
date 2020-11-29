@@ -31,8 +31,8 @@ Vue.use(VueSweetalert2);
 InertiaProgress.init({ 
   delay: 250, 
   color: '#ea4335', 
-  includeCSS: true,
-  showSpinner: false,
+  includeCSS: false,
+  showSpinner: true,  
 })
 
 let app = document.getElementById('app')
