@@ -18,6 +18,8 @@ html {
 }
 
 #nprogress .bar {
+  background: #ea4335;
+
   position: fixed;
   z-index: 100;
   top: 0;
@@ -29,10 +31,12 @@ html {
 
 /* Fancy blur effect */
 #nprogress .peg {
+  display: block;
   position: absolute;
   right: 0px;
   width: 100px;
-  height: 100%; 
+  height: 100%;
+  box-shadow: 0 0 10px #ea4335, 0 0 5px #ea4335;
   opacity: 1.0;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -50,11 +54,15 @@ html {
 }
 
 #nprogress .spinner-icon {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   box-sizing: border-box;
-  border: solid 3px transparent;
+
+  border: solid 4px transparent;
+  border-top-color: #ea4335;
+  border-left-color: #ea4335;
   border-radius: 50%;
+
   -webkit-animation: nprogress-spinner 400ms linear infinite;
           animation: nprogress-spinner 400ms linear infinite;
 }
