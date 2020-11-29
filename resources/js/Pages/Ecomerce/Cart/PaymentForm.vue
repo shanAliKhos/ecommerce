@@ -12,10 +12,24 @@
         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Card Number</label>
         <stripe-card-element></stripe-card-element>
     </div>
-    <div class="flex items-center justify-between">
-        <button type="submit" class="btn btn-primary mb-3 sm:mb-0">PAY NOW</button>             
-    </div>     
+    <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">
 
+        <button  
+            type="submit"
+            class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
+            > 
+            <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+            </svg>                              
+            <svg v-else  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>                                   
+
+            PAY NOW
+        </button>                                  
+    
+    </div>    
+ 
 </form> 
 </template>
 
@@ -29,6 +43,8 @@ export default {
     data() {
         return {  
             name_on_card: "", 
+            sending:false,
+            
         };
     },
     methods: {
@@ -43,6 +59,7 @@ export default {
                 NameOnCard: this.name_on_card
             };
             createToken(options).then(result => {
+            
                 if (result.token) {
                     let hiddenInput = document.createElement("input");
                     hiddenInput.setAttribute("type", "hidden");
@@ -61,10 +78,13 @@ export default {
                      
 
                     this.$inertia.post(this.route('cart.checkout'), payment_Form,{
-                        preserveState: true,              
+                        preserveState: true,
+                        preserveScroll: true,  
+                        onStart: () => this.sending = true,
+                        onFinish: () => this.sending = false,                
                     });                    
 
-                }
+                } 
             });
         }
     },

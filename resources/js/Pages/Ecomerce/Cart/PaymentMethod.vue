@@ -73,7 +73,8 @@
     </div>
 </template>
 <script>
-import AppLayout from './../../AppLayout'  
+import AppLayout from './../shared/AppLayout'   
+
 import YourOrder from './YourOrder' 
 import PaymentForm from './PaymentForm';  
 

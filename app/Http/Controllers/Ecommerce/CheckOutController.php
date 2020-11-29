@@ -24,7 +24,7 @@ class CheckOutController extends Controller
         }         
 
         $CustomerInformation = session()->get('CustomerInformation'); 
-        return Inertia::render('Ecomerce/shared/Partials/Cart/CustomerInformation',compact('CustomerInformation'));         
+        return Inertia::render('Ecomerce/Cart/CustomerInformation',compact('CustomerInformation'));         
     }
 
     public function CustomerInformStore(Request $request)
@@ -58,7 +58,7 @@ class CheckOutController extends Controller
             return redirect()->route('shop')->with('info','Okay ! Add some items to cart');
         }        
         $CustomerInformation = session()->get('CustomerInformation'); 
-        return Inertia::render('Ecomerce/shared/Partials/Cart/ShippingMethod',compact('CustomerInformation'));         
+        return Inertia::render('Ecomerce/Cart/ShippingMethod',compact('CustomerInformation'));         
     }
 
     public function ShippingMethodStore(Request $request)
@@ -86,7 +86,7 @@ class CheckOutController extends Controller
         $stripekey = Setting::get('stripe_key');
         $CustomerInformation = session()->get('CustomerInformation'); 
         $ShipmentInformation = session()->get('ShipmentInformation');  
-        return Inertia::render('Ecomerce/shared/Partials/Cart/PaymentMethod',compact('CustomerInformation','ShipmentInformation','stripekey'));         
+        return Inertia::render('Ecomerce/Cart/PaymentMethod',compact('CustomerInformation','ShipmentInformation','stripekey'));         
  
     }
 
@@ -198,7 +198,7 @@ class CheckOutController extends Controller
             session()->forget('ShipmentInformation');        
             // session()->forget('CustomerInformation');        
             session()->forget('CartItems');
-            return Inertia::render('Ecomerce/shared/Partials/Cart/CheckOutSuccess');
+            return Inertia::render('Ecomerce/Cart/CheckOutSuccess');
         }
         return redirect()->route('shop.index')->with('success','Continue shoping.');
 

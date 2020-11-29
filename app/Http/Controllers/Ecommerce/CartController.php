@@ -17,7 +17,7 @@ class CartController extends Controller
      
     public function index(Request $request)
     {  
-        return Inertia::render('Ecomerce/shared/Partials/Cart/Cart'); 
+        return Inertia::render('Ecomerce/Cart/Index'); 
     } 
 
     public function FetchCartItems()

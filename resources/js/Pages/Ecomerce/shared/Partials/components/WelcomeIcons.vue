@@ -4,7 +4,7 @@
         <span class="bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-shipping"></span>
         <div class="ml-6 mt-3 lg:mt-0">
             <h3 class="font-hksemibold text-primary text-xl tracking-wide"> Free shipping</h3>
-            <p class="font-hkregular text-secondary-lighter text-base tracking-wide"> On all orders over $50</p>
+            <p class="font-hkregular text-secondary-lighter text-base tracking-wide"> On all orders over only $50 </p>
         </div>
     </div>
     <div

@@ -93,7 +93,7 @@
 <script>
 import ApplicationLogo from './ApplicationLogo'
 import CusNavLink from './NavLink'
-import NavCart from './../Cart/NavCart'
+import NavCart from './../../../Cart/NavCart'
 export default { 
     props:['mobileMenu','categories','subcategory'],
     components:{

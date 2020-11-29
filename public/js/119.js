@@ -54,7 +54,7 @@ var staticRenderFns = [
                   staticClass:
                     "font-hkregular text-secondary-lighter text-base tracking-wide"
                 },
-                [_vm._v(" On all orders over $50")]
+                [_vm._v(" On all orders over only $50 ")]
               )
             ])
           ]
