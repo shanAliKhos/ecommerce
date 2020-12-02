@@ -14,16 +14,23 @@ class UserSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        for ($i=0; $i < 5 ; $i++) { 
+    { 
             DB::table('users')->insert([
-                'name' => Str::random(10),
-                'email' => Str::random(10).'@gmail.com',
+                'name' => 'admin',
+                'email' => 'admin@shopping.com',
                 'email_verified_at' => now(),
-                'is_admin' => ($i==0)?1:0,
+                'is_admin' => 1,
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
-            ]);
-        }
+            ]); 
+
+            DB::table('users')->insert([
+                'name' => 'user',
+                'email' => 'user@shopping.com',
+                'email_verified_at' => now(),
+                'is_admin' => 0,
+                'password' => Hash::make('password'),
+                'remember_token' => Str::random(10),
+            ]); 
     }
 }
