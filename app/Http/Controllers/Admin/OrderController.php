@@ -13,14 +13,17 @@ use Carbon\Carbon;
 class OrderController extends Controller
 {
   
+    public function __construct()
+    {
+        $this->middleware('admin');  
+    }    
 
     public function index()
     {    
         $Order = new Order; 
-        $Orders = $Order->with('user')->orderBy('Status', 'asc')->latest()->paginate(20); 
+        $Orders = $Order->with('user')->orderBy('Status', 'asc')->latest()->paginate(8); 
            
-        return Inertia::render('Admin/orders/index',compact('Orders'));
-        // return view('admin.orders.index', compact('orders'));
+        return Inertia::render('Admin/orders/index',compact('Orders')); 
     }
 
     public function show(Order $Order)

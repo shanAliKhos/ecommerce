@@ -14,12 +14,16 @@ use Inertia\Inertia;
  
 class CategoryController extends Controller
 { 
- 
+    public function __construct()
+    {
+        $this->middleware('admin');  
+    }    
+
  
     public function index()
     {
         $Category = new Category;
-        $Categories = $Category->paginate(20); 
+        $Categories = $Category->paginate(8); 
  
         return Inertia::render('Admin/category/Index',compact('Categories'));
     }
@@ -27,7 +31,7 @@ class CategoryController extends Controller
     public function create()
     {
         $Category = new Category;
-        $Categories = $Category->all();  
+        $Categories = $Category->where(['is_active'=>true,'menu'=>true])->get();   
         return Inertia::render('Admin/category/Create',compact('Categories'));
     }
  
@@ -59,8 +63,7 @@ class CategoryController extends Controller
  
     public function edit(Category $Category)
     {     
-        $Categories = $Category->all();  
-        $Category->load('parent');
+        $Categories = $Category->where(['is_active'=>true,'menu'=>true])->where('id',!$Category->id)->with('parent')->get();      
         return Inertia::render('Admin/category/Edit',compact('Categories', 'Category'));
     }  
 

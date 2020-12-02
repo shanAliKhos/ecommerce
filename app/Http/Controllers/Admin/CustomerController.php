@@ -20,7 +20,7 @@ class CustomerController extends Controller implements DeletesUsers
     public function index()
     {
         $customer = new User;
-        $Customers = $customer->where('is_admin',false)->latest()->paginate(10);  
+        $Customers = $customer->where('is_admin',false)->latest()->paginate(8);  
         return Inertia::render('Admin/customers/index',compact('Customers'));
     }
  

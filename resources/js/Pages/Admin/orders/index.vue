@@ -1,5 +1,5 @@
 <template>
- <div> 
+ <div class="h-screen"> 
      <nav class="text-sm font-semibold mb-6" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
             <li class="flex items-center text-blue-500"> 
@@ -23,7 +23,7 @@
          
     </nav>    
 
-    <div class="my-8 p-10 bg-white rounded shadow-xl">
+    <div class="my-8 p-10 bg-white rounded shadow-xl ">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Order Listing</p>    
         <table class="border-collapse w-full table-auto">
             <thead>

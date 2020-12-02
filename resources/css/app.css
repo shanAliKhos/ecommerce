@@ -30,25 +30,24 @@ html {
 }
 
 /* Fancy blur effect */
-#nprogress .peg {
-  display: block;
+#nprogress .peg { 
   position: absolute;
   right: 0px;
   width: 100px;
   height: 100%;
   box-shadow: 0 0 10px #ea4335, 0 0 5px #ea4335;
   opacity: 1.0;
-
+  
   -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);
           transform: rotate(3deg) translate(0px, -4px);
 }
 
 /* Remove these to get rid of the spinner */
-#nprogress .spinner {
-  display: block;
+#nprogress .spinner { 
   position: fixed;
   z-index: 100;
+
   top: 50%;
   right: 50%;
 }
@@ -74,4 +73,29 @@ html {
 @keyframes nprogress-spinner {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
 }

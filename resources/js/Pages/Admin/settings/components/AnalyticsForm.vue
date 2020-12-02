@@ -72,15 +72,13 @@ export default {
         TextInput,
     },
     props:{
-        google_analytics:String, 
-        facebook_pixels:String, 
-
+        settings:Object,
     },    
     data() {
         return {
             form:{
-                google_analytics:this.google_analytics,
-                facebook_pixels:this.facebook_pixels, 
+                google_analytics:this.settings?this.settings.google_analytics?this.google_analytics:null:null,
+                facebook_pixels:this.settings?this.settings.facebook_pixels?this.facebook_pixels:null:null, 
             },
             sending:false,
         };

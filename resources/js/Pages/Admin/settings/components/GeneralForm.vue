@@ -10,9 +10,7 @@
         </template>
 
         <template #form>       
-            
-          
-
+             
             <div class="col-span-6 sm:col-span-3 mt-1 block w-full">
                 <file-input 
                     v-model="form.site_logo" 
@@ -146,13 +144,13 @@ export default {
     data() {
         return {
             form:{
-                site_name:this.settings.site_name,
-                site_title:this.settings.site_title,
-                default_email_address:this.settings.default_email_address,
-                currency_code:this.settings.currency_code,
-                currency_symbol:this.settings.currency_symbol,
-                site_logo:this.settings.site_logo?this.settings.site_logo:null,
-                site_favicon:this.settings.site_favicon?this.settings.site_favicon:null,                 
+                site_name:this.settings?this.settings.site_name:null,
+                site_title:this.settings?this.settings.site_title:null,
+                default_email_address:this.settings?this.settings.default_email_address:null,
+                currency_code:this.settings?this.settings.currency_code:null,
+                currency_symbol:this.settings?this.settings.currency_symbol:null,
+                site_logo:this.settings?this.settings.site_logo:null,
+                site_favicon:this.settings?this.settings.site_favicon:null,                 
             },
             sending:false,
         };

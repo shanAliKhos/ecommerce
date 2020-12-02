@@ -37,8 +37,8 @@
                 </tr>
             </thead>
             <tbody>
-                
-                <tr v-for="(Brand, index) in Brands" :key="index" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <list-item v-for="(Brand, BrandIndex) in Brands" :key="BrandIndex" :brandIndex="BrandIndex" :brand='Brand' class="font-bold" ></list-item>
+                <!-- <tr v-for="(Brand, index) in Brands" :key="index" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
                          <p class="py-5  lg:p-1 ">{{ (index+1) }}</p>
@@ -83,17 +83,22 @@
                         </div>             
                     
                     </td>
-                </tr>                        
+                </tr>        -->
                 
             </tbody>
         </table>    
     </div>
  
- 
+     <pagination :links="Links"></pagination>
+
+
 </div>
  </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'  
+import Pagination from './../../Shared/Pagination'  
+import ListItem from './components/ListItem'   
+
 export default {
     metaInfo: { title: 'Brand' },
     layout: AppLayout,
@@ -102,42 +107,17 @@ export default {
             sending:false,
         }
     },
-    methods: {
-        destroy(id){
-            const self = this; 
-            self.$swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    self.$inertia.delete(route('admin.brand.destroy',id),{
-                        preserveState: true,
-                        preserveScroll: true,
-                        onStart: () => self.sending = true,
-                        onFinish: () => self.sending = false,                           
-                    })    
-                }
-            })                
-         
-        },   
-        Image(item){
-            self = this ;
-            var  img = (item.logo)?'/'+item.logo.replace("public", "storage"):this.defaultPhotoUrl(item.name);
-            return img;      
-        },             
-        defaultPhotoUrl(text)
-        {
-            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
-        },        
+    components:{
+        Pagination,        
+        ListItem,
     },
+
     computed: {
         Brands(){
             return this.$page.Brands.data;
+        },
+        Links(){
+            return this.$page.Brands.links;
         },
            
     },

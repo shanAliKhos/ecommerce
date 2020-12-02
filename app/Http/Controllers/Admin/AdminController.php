@@ -14,6 +14,7 @@ use App\Models\OrderItem;
 
 class AdminController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('admin');  
@@ -48,4 +49,5 @@ class AdminController extends Controller
 
         return Inertia::render('Admin/dashboard/index',compact('ProductsSold','NewOrders','RegisteredCustomers','RecentTransations'));
     }
+    
 }

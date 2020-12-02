@@ -134,12 +134,12 @@ export default {
     data() {
         return {
             form:{
-                stripe_payment_method:this.settings.stripe_payment_method?this.settings.stripe_payment_method:0,
-                stripe_key: this.settings.stripe_key,
-                stripe_secret_key: this.settings.stripe_secret_key,
-                paypal_payment_method:this.settings.paypal_payment_method?this.settings.paypal_payment_method:0,
-                paypal_client_id: this.settings.paypal_client_id,
-                paypal_secret_id: this.settings.paypal_secret_id,               
+                stripe_payment_method:this.settings?this.settings.stripe_payment_method?this.settings.stripe_payment_method:0:0,
+                stripe_key: this.settings?this.settings.stripe_key:null,
+                stripe_secret_key: this.settings?this.settings.stripe_secret_key:null,
+                paypal_payment_method:this.settings?this.settings.paypal_payment_method?this.settings.paypal_payment_method:0:0,
+                paypal_client_id: this.settings?this.settings.paypal_client_id:null,
+                paypal_secret_id: this.settings?this.settings.paypal_secret_id:null,               
             }, 
             sending:false,
 

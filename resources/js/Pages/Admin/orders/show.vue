@@ -22,7 +22,7 @@
         </inertia-link>                
     </nav>    
 
-    <div class="my-8 p-10 bg-white">
+    <div class="my-8 p-10 bg-white h-screen">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Order# {{ Order.OrderNumber}}</p>    
 
         <div class="flex flex-wrap -mx-3 mb-5 ">

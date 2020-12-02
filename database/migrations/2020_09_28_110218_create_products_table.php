@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->id(); 
             $table->unsignedBigInteger('brand_id')->nullable(); 
             $table->string('name');
-            $table->string('slug');
-            $table->text('description')->nullable();
+            $table->string('slug')->unique();
+            $table->longText('description')->nullable();
             $table->text('image')->nullable();
             $table->boolean('is_featured')->default(0); 
             $table->boolean('is_active')->default(1);              

@@ -64,16 +64,25 @@
                                 >CONTINUE SHOPPING
                             </inertia-link>
 
-                   
-                           <button 
-                                @click="EmptyCart"
-                                v-if="CartItems?CartItems.length:false" 
-                                type="submit"
-                                class="btn btn-primary mt-5 sm:mt-0">
-                                <div v-if="sending" class="btn-spinner mr-2" />
-                                <i v-else class="fa fa-fw fa-lg fa-remove"></i>                                
-                                Empty cart
-                            </button>          
+                    
+                            <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6"> 
+                                <button 
+                                    v-if="CartItems?CartItems.length:false" 
+                                    @click="EmptyCart"
+                                    type="button"
+                                    class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
+                                    > 
+                                    <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                                    </svg>                              
+                                    <svg v-else  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>                                    
+                                                             
+
+                                    Empty cart
+                                </button>  
+                            </div>                            
                         </div>
                     </div>
                     <div class="sm:w-2/3 md:w-full lg:w-1/3 mx-auto lg:mx-0 mt-16 lg:mt-0">
@@ -119,8 +128,7 @@
                                     <span class="font-hkbold text-secondary">{{Currency}}{{CartTotalPrice}}</span>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-
+                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"> 
                                 <button 
                                     v-if="CartItems?CartItems.length:false" 
                                     @click="ProceedToCheckOut"
@@ -135,8 +143,7 @@
                                     </svg>                                   
 
                                     PROCEED TO CHECKOUT
-                                </button>                                  
-                            
+                                </button>  
                             </div>
                          
                         </div>
@@ -189,10 +196,9 @@ import AppLayout from './../shared/AppLayout'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         self.$inertia.post(self.route('cart.flush'), {
-                            preserveState: true,
-                            preserveScroll: true,  
-                            onStart: () => this.sending = true,
-                            onFinish: () => this.sending = false,                                    
+                            preserveState: true, 
+                            onStart: () => self.sending = true,
+                            onFinish: () => self.sending = false,                                    
 
                         })                    
                     }

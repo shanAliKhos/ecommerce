@@ -22,14 +22,14 @@ class SettingServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
+ 
 
-            $this->app->bind('settings', function ($app) {
-                return new Setting();
-            });
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Setting', Setting::class);
-        }
+        $this->app->bind('settings', function ($app) {
+            return new Setting();
+        });
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Setting', Setting::class);
+    
     }
 
     /**

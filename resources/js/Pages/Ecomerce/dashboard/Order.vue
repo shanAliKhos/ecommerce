@@ -61,6 +61,11 @@
                     </div>
                 </div>
             </div>
+            <div v-if="!OrderItems.length > 0" class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
+                <div class="w-full sm:w-1/3 md:w-2/5 flex flex-col md:flex-row md:items-center border-b sm:border-b-0 border-grey-dark pb-4 sm:pb-0 text-center sm:text-left">
+                    <span class="font-semibold  text-gray-400">No Item in List</span>
+                </div>                          
+            </div>            
 
             <!-- <div class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
                 <div

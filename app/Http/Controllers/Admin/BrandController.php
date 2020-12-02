@@ -12,11 +12,15 @@ use Illuminate\Support\Str;
 
 class BrandController extends Controller
 {
-      
+    public function __construct()
+    {
+        $this->middleware('admin');  
+    }    
+
     public function index()
     {
         $Brand = new Brand;
-        $Brands = $Brand->paginate(20); 
+        $Brands = $Brand->paginate(8); 
 
         return Inertia::render('Admin/brand/Index',compact('Brands'));
  

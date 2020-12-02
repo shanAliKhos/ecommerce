@@ -99,11 +99,12 @@
 
     </div>             
       
-    <div class="mt-2 relative"> 
+    <div class="mt-2 mb-10 relative"> 
         <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
-        <textarea v-model="form.description" class="focus:bg-white resize-none w-full px-5 py-2 text-gray-700 bg-gray-100 rounded  appearance-none shadow focus:outline-none focus:shadow-outline"
+        <vue-editor v-model="form.description"></vue-editor>       
+        <!-- <textarea v-model="form.description" class="focus:bg-white resize-none w-full px-5 py-2 text-gray-700 bg-gray-100 rounded  appearance-none shadow focus:outline-none focus:shadow-outline"
             placeholder="Product Description here ... "
-        ></textarea>                     
+        ></textarea>-->
         <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
     </div>     
 
@@ -272,6 +273,8 @@ import FileInput from './../../Shared/FileInput'
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
 import SectionBorder from './../../Shared/SectionBorder'   
+import { VueEditor } from "vue2-editor";
+
 
 export default {
 
@@ -284,6 +287,8 @@ export default {
         TextInput,
         SelectInput,        
         SectionBorder,        
+        VueEditor,        
+
     }, 
 
     remember: 'form',

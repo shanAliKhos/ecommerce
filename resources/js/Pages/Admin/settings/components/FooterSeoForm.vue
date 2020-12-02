@@ -86,9 +86,9 @@ export default {
     data() {
         return {
             form:{
-                footer_copyright_text:this.settings.footer_copyright_text,
-                seo_meta_title:this.settings.seo_meta_title,
-                seo_meta_description:this.settings.seo_meta_description, 
+                footer_copyright_text:this.settings?this.settings.footer_copyright_text:null,
+                seo_meta_title:this.settings?this.settings.seo_meta_title:null,
+                seo_meta_description:this.settings?this.settings.seo_meta_description:null, 
             },
             sending:false,
 

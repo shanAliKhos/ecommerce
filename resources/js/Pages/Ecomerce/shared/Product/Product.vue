@@ -1,14 +1,13 @@
 <template>
-<div class="product-gird">
-    <div class="relative rounded flex justify-center items-center">
-        <div class="w-full h-68 bg-center bg-no-repeat bg-cover"
+<div class="product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md">
+    <div class=" rounded flex justify-center items-center p-2">
+        <div class="w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg"
             :style="'background-image:url(\'' + ProductImage + '\')'">
         </div> 
         <div class="absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full" v-if="Label.Active">
             <p class="font-hkbold text-sm uppercase tracking-wide" :class="Label.Color"> {{Label.Title}}</p>
         </div>            
-        <div
-            class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded">
+        <!-- <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded">
         </div>
         <div class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group">
             <a href="javascript:;" @click="AddToCart(Product)" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -17,27 +16,27 @@
             <a href="javascript:;" class="bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ">
                 <span class="bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"></span> 
             </a>
-        </div>
+        </div> -->
     </div>
-    <inertia-link :href="route('shop.product',Product.slug)">
-        <div class="flex justify-between items-center pt-6">
-            <div>
-                <h3 class="font-hkregular text-base text-secondary" :title="ProductName">{{ProductName.substring(0,15)+"..."}}</h3>
-                <div class="flex items-center">
-                    <div class="flex items-center">
-                        <i class="bx bxs-star text-primary"></i>
-                        <i class="bx bxs-star text-primary"></i>
-                        <i class="bx bxs-star text-primary"></i>
-                        <i class="bx bxs-star text-primary"></i>
-                        <i class="bx bxs-star text-primary"></i>
-                    </div>
-                    <p class="font-hkregular text-sm text-secondary ml-2">
-                        (45)</p>
-                </div>
+    <inertia-link :href="route('shop.show',Product.slug)">
+        <div class="p-2 relative h-28 ">
+            <div class="flex items-center content-center py-2">
+                <h3 class="font-semibold text-xs text-gray-400 capitalize" :title="ProductName">{{ProductName.substring(0,65)+"..."}}</h3>
             </div>
-            <span class="font-hkbold text-primary text-md">
-                {{$page.SiteOptions.Currency.Symbol}} {{CurrentPrice}} 
-            </span>
+            <div class="flex  absolute bottom-7">
+                <p class="font-semibold text-red-400 text-sm">{{$page.SiteOptions.Currency.Symbol}}{{CurrentPrice}} </p>
+                <p v-if="SalePrice>0" class="font-semibold line-through text-gray-400 text-xs ml-3">{{$page.SiteOptions.Currency.Symbol}}{{RegularPrice}} </p>
+            </div>
+            <div class="flex absolute bottom-2">
+                <div class="flex items-center text-xs">
+                    <i class="bx bxs-star text-yellow-300"></i>
+                    <i class="bx bxs-star text-yellow-300"></i>
+                    <i class="bx bxs-star text-yellow-300"></i>
+                    <i class="bx bxs-star text-yellow-300"></i>
+                    <i class="bx bxs-star text-yellow-300"></i>
+                </div>
+                <p class="font-hkregular text-sm text-secondary  ml-2">(45)</p>
+            </div>            
         </div>
     </inertia-link>
 </div> 
@@ -96,7 +95,7 @@ export default {
     }, 
     computed: {
         ProductImage(){
-            var  img = this.Product.image?this.Product.image.replace("public", "storage"):'./img/shoes-4.png';
+            var  img = this.Product.image?this.Product.image.replace("public", "storage"):'./img/product/product (1).png';
             return img;
         },
         RegularPrice(){
@@ -106,7 +105,7 @@ export default {
             return this.Product.sale_price;
         }, 
         CurrentPrice(){
-            return this.Product.sale_price?this.Product.sale_price:this.Product.regular_price;
+            return this.Product.sale_price>0?this.Product.sale_price:this.Product.regular_price;
         }, 
         ProductName(){
             return this.Product.name;

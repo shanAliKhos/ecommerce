@@ -64,9 +64,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Attribute', 'AttributeIndex'],
@@ -176,28 +173,6 @@ var render = function() {
           _vm._v(" "),
           _c("p", { staticClass: "py-5 font-bold lg:p-1  " }, [
             _vm._v(_vm._s(_vm.AttributeIndex + 1))
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "td",
-        {
-          staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
-        },
-        [
-          _c(
-            "p",
-            {
-              staticClass:
-                "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
-            },
-            [_vm._v("CODE")]
-          ),
-          _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
-            _vm._v(_vm._s(_vm.Attribute.code))
           ])
         ]
       ),

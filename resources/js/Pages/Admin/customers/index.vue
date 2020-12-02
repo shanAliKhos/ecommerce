@@ -10,18 +10,17 @@
                 <a href="#" class="text-gray-600">Customer Listing</a>
             </li>
         </ol>
-        
-        <!-- <inertia-link 
-            :href="route('admin.customer.create')" 
-            class="transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
+        <inertia-link 
+            :href="route('admin.dashboard')" 
+            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
             >  
             <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
             </svg>            
-            <span>Add New</span>            
+            <span>Back</span>            
        
-        </inertia-link>
-         -->
+        </inertia-link>            
+ 
     </nav>    
 
     <div class="my-8 p-10 bg-white rounded shadow-xl">
@@ -42,17 +41,21 @@
             </tbody>
         </table>    
     </div>
+    <pagination :links="Links"></pagination>
    
 </div>
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'    
-import CustomerItem from './components/ListItem'    
+import CustomerItem from './components/ListItem'   
+import Pagination from './../../Shared/Pagination'  
+
 export default {
     layout: AppLayout, 
     metaInfo: { title: 'Customers listing' },
     components:{
         CustomerItem,
+        Pagination,
     },
     computed: {
         Customers(){

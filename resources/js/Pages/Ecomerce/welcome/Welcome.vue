@@ -7,10 +7,10 @@
 
         <welcome-icons></welcome-icons>
 
-        <welcome-trending-collection></welcome-trending-collection>
+        <welcome-trending-collection></welcome-trending-collection> 
 
-        <welcome-trending-slider></welcome-trending-slider>
- 
+        <welcome-trending-slider v-if="this.$page.FeatureProducts.length>0"></welcome-trending-slider>
+          
  
     </div>
 
@@ -18,12 +18,11 @@
  
     <div class="container">
   
-
         <welcome-brands></welcome-brands>
 
         <welcome-sale-banner></welcome-sale-banner>
 
-        <welcome-sale-slider></welcome-sale-slider>
+        <welcome-sale-slider v-if="this.$page.SaleProducts.length>0"></welcome-sale-slider>
 
     </div> 
 

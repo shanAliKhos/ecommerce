@@ -18,7 +18,7 @@
         <span class="ml-2">Continue to shopping </span>
       </inertia-link>
     </div>    
-
+<!-- 
     <div class="flex justify-center items-center mt-6">
       <inertia-link preserve-scroll  :href="route('contact')" target="_blank" class="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">
         <span>
@@ -29,7 +29,7 @@
         </span>
         <span class="ml-2">Contact us </span>
       </inertia-link>    
-    </div>
+    </div> -->
       
   </div>
 </div>

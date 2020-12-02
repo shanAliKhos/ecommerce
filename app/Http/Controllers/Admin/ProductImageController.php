@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductImageController extends Controller
 { 
+
+    public function __construct()
+    {
+        $this->middleware('admin');  
+    }    
+
      
     public function index(Product $Product)
     {
@@ -46,4 +52,5 @@ class ProductImageController extends Controller
         return back()->with('success', 'image removed successfully');
 
     }
+    
 }

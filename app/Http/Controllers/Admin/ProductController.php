@@ -25,7 +25,7 @@ class ProductController extends Controller
     public function index()
     {
         $Product = new Product;
-        $Products = $Product->with('categories','brand','images')->latest()->paginate(20); 
+        $Products = $Product->with('categories','brand','images')->latest()->paginate(8); 
         return Inertia::render('Admin/products/Index',compact('Products'));
     }
 
@@ -33,8 +33,7 @@ class ProductController extends Controller
     {
         $attributes = $attribute->with('attribute_values')->get();
         $brands = $brand->all(['*'],'name','asc');
-        $categories = $category->all(['*'],'name','asc'); 
-        
+        $categories = $category->all(['*'],'name','asc');  
         return Inertia::render('Admin/products/Create',compact('categories', 'brands','attributes'));
     }
 
@@ -63,7 +62,7 @@ class ProductController extends Controller
             $Product->image = $NewImage;
         }    
               
-        try {
+        // try {
 
             $Product = $Product->create([
                 'brand_id'=>$request->brand_id,
@@ -80,10 +79,10 @@ class ProductController extends Controller
                 'sale_price'=>$request->sale_price,
             ]);
 
-        } catch (\Throwable $th) {
+        // } catch (\Throwable $th) {
              
-            return back()->with('error','OPPS fail to store in database, Please contact support team ');
-        }       
+        //     return back()->with('error','OPPS fail to store in database, Please contact support team ');
+        // }       
 
         $ProductCategories = json_decode($request->categories,true);
     
@@ -137,8 +136,7 @@ class ProductController extends Controller
                     return $sku->skud_options->load('Variants');
 
                 });
-
-        dd($Skuds);
+ 
         $product_attributes = $Product->variations->map(function($variation){
             return $variation->Attribute->load('attribute_values');
         })->toArray();

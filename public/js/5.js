@@ -137,46 +137,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     ApplicationLogo: _components_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   computed: {
-    IsVisible: function IsVisible() {
+    IsVisibleFooter: function IsVisibleFooter() {
       switch (this.$page.currentRouteName) {
-        case 'login':
-          return false;
-          break;
-
-        case 'register':
-          return false;
-          break;
-
-        case 'password.request':
-          return false;
-          break;
-
-        case 'password.reset':
-          return false;
-          break;
-
-        case 'verification.notice':
-          return false;
-          break;
-
-        case 'cart.success':
-          return false;
-          break;
-
+        // case 'login':
+        //     return false;      
+        // break;
+        // case 'register':
+        //     return false;      
+        // break;
+        // case 'password.request':
+        //     return false;      
+        // break;
+        // case 'password.reset':
+        //     return false;      
+        // break;
+        // case 'verification.notice':
+        //     return false;      
+        // break;
+        // case 'cart.success':
+        //     return false;      
+        // break;
         default:
           return true;
           break;
-      } // if($page.currentRouteName !== 'login') ($page.currentRouteName !== '')){
-      //     return false;   
-      // }
-      // return true;
-
+      }
     }
   }
 });
@@ -198,10 +195,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.IsVisible
+  return _vm.IsVisibleFooter
     ? _c("footer", { staticClass: "xxstheme-footer" }, [
-        _vm._m(0),
-        _vm._v(" "),
         _c("div", {
           staticClass: "container text-center pt-20 md:pt-28 lg:pt-32"
         }),
@@ -210,6 +205,8 @@ var render = function() {
           "div",
           { staticClass: "bg-center bg-no-repeat bg-cover bg-footer-bg" },
           [
+            _vm._m(0),
+            _vm._v(" "),
             _c("div", { staticClass: "container py-16 sm:py-20 md:py-24" }, [
               _c(
                 "div",
@@ -415,9 +412,9 @@ var render = function() {
                             {
                               staticClass:
                                 "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("shop.index") }
+                              attrs: { href: _vm.route("welcome") }
                             },
-                            [_vm._v("Shop")]
+                            [_vm._v("HOME")]
                           )
                         ],
                         1
@@ -432,9 +429,26 @@ var render = function() {
                             {
                               staticClass:
                                 "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("contact") }
+                              attrs: { href: _vm.route("shop.index") }
                             },
-                            [_vm._v("Contact Us")]
+                            [_vm._v("SHOP")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "pb-2 block" },
+                        [
+                          _c(
+                            "inertia-link",
+                            {
+                              staticClass:
+                                "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
+                              attrs: { href: _vm.route("blog.index") }
+                            },
+                            [_vm._v("BLOG")]
                           )
                         ],
                         1
@@ -465,28 +479,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "bg-center bg-no-repeat bg-cover bg-cta-bg" }, [
-        _c("div", { staticClass: "py-16 md:py-20 text-center" }, [
+      _c("div", { staticClass: "bg-gray-50 lg:rounded-b-full rounded-b-xl" }, [
+        _c("div", { staticClass: "py-10 text-center" }, [
           _c(
             "h3",
             {
               staticClass:
-                "font-butlerregular text-white text-3xl sm:text-4xl tracking-wide"
+                "font-semibold text-primary text-3xl sm:text-4xl tracking-wide"
             },
-            [_vm._v("\r\n                    Let's keep in touch")]
+            [_vm._v(" Let's keep in touch")]
           ),
           _vm._v(" "),
           _c(
             "p",
             {
               staticClass:
-                "font-hkregular text-white text-lg sm:text-xl pt-3 px-6"
+                "font-hkregular text-gray-300 text-lg sm:text-xl pt-3 px-6"
             },
-            [
-              _vm._v(
-                "\r\n                    Join our list and save 15% off your first order."
-              )
-            ]
+            [_vm._v(" Join our list and save 15% off your first order.")]
           ),
           _vm._v(" "),
           _c("form", { staticClass: "pt-10 sm:pt-12" }, [
@@ -494,34 +504,33 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "w-5/6 sm:w-3/4 lg:w-3/5 xl:w-1/2 mx-auto flex flex-col sm:flex-row justify-center items-center"
+                  "w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"
               },
               [
-                _c(
-                  "label",
-                  {
-                    staticClass: "block relative h-0 w-0 overflow-hidden",
-                    attrs: { for: "cta_email" }
-                  },
-                  [_vm._v("Email")]
-                ),
-                _vm._v(" "),
                 _c("input", {
                   staticClass:
-                    "form-input bg-transparent text-sm text-white border-white uppercase",
+                    "w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",
                   attrs: {
                     type: "email",
                     name: "cta_email",
                     id: "cta_email",
                     placeholder: "ENTER YOUR EMAIL"
                   }
-                }),
-                _vm._v(" "),
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"
+              },
+              [
                 _c(
                   "button",
                   {
-                    staticClass:
-                      "btn btn-primary sm:ml-5 mt-4 sm:mt-0 w-full sm:w-auto",
+                    staticClass: "btn btn-primary mt-4  w-full shadow",
                     attrs: { type: "button", "aria-label": "Subscribe button" }
                   },
                   [_vm._v("SUBSCRIBE")]

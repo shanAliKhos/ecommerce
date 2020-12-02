@@ -10,7 +10,7 @@ class AttributeValue extends Model
     use HasFactory;
 
     protected $fillable = [
-        'attribute_id', 'value', 'price'
+        'attribute_id', 'name','code'
     ];
  
     protected $casts = [
@@ -18,7 +18,7 @@ class AttributeValue extends Model
     ];
  
   
-    public function Attribute()
+    public function attribute()
     {
         return $this->belongsTo(Attribute::class,'attribute_id');
     }

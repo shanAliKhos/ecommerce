@@ -29,8 +29,7 @@
         <table class="border-collapse w-full ">
             <thead>
                 <tr>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">CODE</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th> 
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">NAME</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">FORNTEND TYPE</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">REQUIRED</th>
@@ -39,15 +38,13 @@
                 </tr>
             </thead>
             <tbody>
-            
-                <attribute-item v-for="(Attribute, AttributeIndex) in Attributes" :key="AttributeIndex" :AttributeIndex="AttributeIndex" :Attribute='Attribute' ></attribute-item>
+                <attribute-item v-for="(Attribute, AttributeIndex) in Attributes" :key="AttributeIndex" :AttributeIndex="AttributeIndex" :Attribute='Attribute' class="font-bold" ></attribute-item>
             </tbody>
         </table>    
     </div> 
 
     <pagination :links="Links" v-if="Links.length" ></pagination>
-
-    
+ 
 </div>
 
 </template>
@@ -55,7 +52,6 @@
 import AppLayout from './../Layouts/AppLayout'   
 import AttributeItem from './components/AttributeItem'   
 import Pagination from './../../Shared/Pagination'  
-
 
 export default {
     metaInfo: { title: 'Attribute' },

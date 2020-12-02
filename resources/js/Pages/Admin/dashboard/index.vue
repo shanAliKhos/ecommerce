@@ -99,7 +99,7 @@
                   <div class="w-full bg-white border rounded-lg p-4">
 
                     <div v-for="(RecentTransation, index) in RecentTransations" :key="index"
-                    class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4">
+                        class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4">
                         <div>
                             <p class="font-semibold text-xl">{{RecentTransation.CustomerName}}</p>
                             <p class="text-xs">Order#</p>
@@ -108,6 +108,9 @@
 
                         </div>
                         <span class="text-green-500 font-semibold text-lg">{{Currency.Symbol}}{{RecentTransation.TotalPrice}}</span>
+                    </div>
+                    <div class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4" v-if="!RecentTransations.length > 0">
+                          <p class="flex font-semibold text-sm justify-center">No Record Found</p>
                     </div>
  
                   </div>

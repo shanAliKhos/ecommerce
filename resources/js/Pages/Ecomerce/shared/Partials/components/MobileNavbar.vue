@@ -18,19 +18,19 @@
                 >Shop</MobileNavLink>                     
 
                 <MobileNavLink 
-                    :href="route('blog')" 
-                    :active="$page.currentRouteName == 'blog'" 
+                    :href="route('blog.index')" 
+                    :active="$page.currentRouteName == 'blog.index'" 
                 >Blog</MobileNavLink>                    
 
-                <MobileNavLink 
+                <!-- <MobileNavLink 
                     :href="route('blog.details')" 
                     :active="$page.currentRouteName == 'blog.details'" 
-                >Blog Details</MobileNavLink>             
+                >Blog Details</MobileNavLink>              -->
 
-                <MobileNavLink 
-                    :href="route('contact')" 
-                    :active="$page.currentRouteName == 'contact'"
-                >Contact</MobileNavLink>              
+                <!-- <MobileNavLink 
+                    :href="route('contact.index')" 
+                    :active="$page.currentRouteName == 'contact.index'"
+                >Contact</MobileNavLink>               -->
 
                 <MobileNavLink 
                      v-if="$page.user" 

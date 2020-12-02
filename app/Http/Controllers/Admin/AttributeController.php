@@ -9,11 +9,15 @@ use Inertia\Inertia;
   
 class AttributeController extends Controller
 {
-  
+    public function __construct()
+    {
+        $this->middleware('admin');  
+    }    
+
     public function index()
     {
         $Attribute = new Attribute;
-        $Attributes = $Attribute->paginate(20); 
+        $Attributes = $Attribute->paginate(8); 
         return Inertia::render('Admin/attribute/Index',compact('Attributes'));
     }
  
@@ -26,8 +30,7 @@ class AttributeController extends Controller
     public function store(Request $request,Attribute $attribute)
     {
  
-        $this->validate($request, [
-            'code'          =>  'required|min:1|max:2|unique:attributes',
+        $this->validate($request, [ 
             'name'          =>  'required|min:2|unique:attributes',
             'frontend_type' =>  'required', 
         ]);
@@ -61,8 +64,7 @@ class AttributeController extends Controller
     { 
         
         $this->validate($request, [
-            'name'=> 'required|min:2|max:255|unique:attributes,name,' .$attribute->id,
-            'code'=> 'required|min:1|max:2|unique:attributes,code,' .$attribute->id,
+            'name'=> 'required|min:2|max:255|unique:attributes,name,' .$attribute->id, 
             'frontend_type' =>  'required',
         ]);
      

@@ -34,44 +34,35 @@
                     @form-is-updated="update">
                 </general-form>            
                  
-                 <SectionBorder/>
-                    
-                <!-- <logo-form :sending="sending"
-                    :site_logo="settings.site_logo" 
-                    :site_favicon="settings.site_favicon" 
-                    @form-is-updated="update">
-                </logo-form>      -->
-
-                 <SectionBorder/>
+                 <SectionBorder/>    
 
                 <footer-seo-form :sending="sending"
                     :settings="settings" 
                     @form-is-updated="update"> 
                 </footer-seo-form>                        
 
+                <SectionBorder/>
 
-                 <SectionBorder/>
                 <social-links-form :sending="sending"
                     :settings="settings" 
                     @form-is-updated="update">
                 </social-links-form> 
 
-                 <SectionBorder/>
+                <SectionBorder/>
 
                 <analytics-form :sending="sending"
-                    :google_analytics="settings.google_analytics" 
-                    :facebook_pixels="settings.facebook_pixels" 
+                    :settings="settings" 
                     @form-is-updated="update">
                 </analytics-form>  
 
-                 <SectionBorder/>
+                <SectionBorder/>
 
                 <payments-form :sending="sending"
                     :settings="settings" 
                     @form-is-updated="update">
                 </payments-form>  
 
-                 <SectionBorder/>
+                <SectionBorder/>
 
             </div>
         </div>    

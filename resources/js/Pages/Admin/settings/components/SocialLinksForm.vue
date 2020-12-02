@@ -100,10 +100,10 @@ export default {
     data() {
         return {
             form:{
-                social_facebook:this.settings.social_facebook,
-                social_twitter:this.settings.social_twitter,
-                social_instagram:this.settings.social_instagram,
-                social_linkedin:this.settings.social_linkedin, 
+                social_facebook:this.settings?this.settings.social_facebook:null,
+                social_twitter:this.settings?this.settings.social_twitter:null,
+                social_instagram:this.settings?this.settings.social_instagram:null,
+                social_linkedin:this.settings?this.settings.social_linkedin:null, 
             },
             sending:false,
 

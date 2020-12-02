@@ -39,9 +39,8 @@
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ACTIONS</th>
                 </tr>
             </thead>
-            <tbody>
-
-                <tr v-for="(Product, ProductIndex) in Products" :key="ProductIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+            <tbody> 
+                <tr v-if="Products" v-for="(Product, ProductIndex) in Products" :key="ProductIndex" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
                         <p class="py-5  lg:p-1">
@@ -64,23 +63,11 @@
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SKU</p>
                         <p class="py-5  lg:p-1">{{ Product.sku }}</p>
-                    </td>
-                    <!-- <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
-                        <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">BRAND</p>
-                        <p class="py-5  lg:p-1" v-if="Product.brand">{{ Product.brand.name }}</p>
-                        <p class="py-5  lg:p-1" v-else>N/A</p>
-                    </td> -->
-                    <!-- <td class="w-full lg:w-auto p-3 text-gray-800 border border-b border-gray-300 md:text-center block lg:table-cell relative lg:static">
-                        <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">CATEGORY</p>
-                        <div class="py-5 lg:py-0 lg:p-1 h-auto">
-                            <p v-for="(Category, CategoryIndex) in Product.categories" :key="CategoryIndex" v-if="Category" class=" lg:py-0 lg:px-0 py-1 px-2 bg-yellow-100 text-xs font-bold "> {{(CategoryIndex+1)}} {{ Category.name }}</p>      
-                        </div>
-                        
-                    </td> -->
+                    </td> 
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
                         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PRICE</p>
                         <p class="py-5  lg:p-1">
-                            ${{ (Product.sale_price)?Product.sale_price:Product.regular_price }}
+                            ${{ (Product.sale_price>0)?Product.sale_price:Product.regular_price }}
                         </p>
                     </td>
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
@@ -99,20 +86,17 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                     </svg>
                                 </inertia-link>
- 
+
                             </div>             
                         
                     </td>
-                </tr>               
-               
+                </tr>      
+
             </tbody>
         </table>    
-    </div>
-
-
+    </div> 
 
     <pagination :links="Links"></pagination>
-
  </div> 
 </template>
 <script>
@@ -128,7 +112,7 @@ export default {
     methods: { 
         Image(item){
             self = this ;
-            var  img = (item.image)?'/'+item.image.replace("public", "storage"):this.defaultPhotoUrl(item.name);
+            var  img = (item.image)?item.image.replace("public", "storage"):this.defaultPhotoUrl(item.name);
             return img;      
         },             
         defaultPhotoUrl(text)

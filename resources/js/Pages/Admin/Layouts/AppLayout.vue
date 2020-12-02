@@ -6,19 +6,20 @@
             <Sidebar />
             
     
-            <div class="w-full bg-gray-100 pl-0 lg:pl-64 min-h-screen " >
+            <div class="w-full bg-gray-100 pl-0 lg:pl-64 h-screen " >
     
                 <Navbar />
     
-                <div class="p-6 bg-gray-100 mb-10">
-                    <transition enter-active-class="ease-out duration-400"
-                                enter-class="opacity-0 transform translate-y-6"
-                                enter-to-class="opacity-100"
-                                leave-active-class="ease-in duration-500"
-                                leave-class="opacity-100"
-                                leave-to-class="opacity-0">                
+                <div class="p-5 bg-gray-100 min-h-screen">
 
-                        <slot class="py-5"></slot> 
+                <transition enter-active-class="transition duration-300 ease-out"
+                    enter-class="transform opacity-0"
+                    enter-to-class="transform delay-150 opacity-0"
+                    leave-active-class="transition duration-200 ease-in"
+                    leave-class="transform delay-75 opacity-0 "
+                    leave-to-class="transform opacity-0">  
+
+                        <slot></slot> 
                             
                     </transition>
                 </div>

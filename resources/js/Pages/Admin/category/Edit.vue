@@ -117,14 +117,15 @@
 
                     </div>  
 
-                    <div class="mt-2"> 
-                        <textarea v-model="form.description" class="resize-none border w-full py-5 px-5 text-gray-700 bg-gray-200  rounded focus:outline-none focus:shadow-outline"
-                            placeholder="Category Description here ... "
-                        ></textarea> 
+                    <div class="mt-2 relative"> 
+                        <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
+                        <vue-editor v-model="form.description"></vue-editor>    
                         <p class="text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
                     </div>
+
+                    <SectionBorder/>
  
-                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">
                         <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
                             <span>Update</span>
                             <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -148,6 +149,8 @@ import TextInput from './../../Shared/TextInput'
 import SelectInput from './../../Shared/SelectInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
 import Multiselect from 'vue-multiselect'
+import { VueEditor } from "vue2-editor";
+import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
     layout: AppLayout, 
@@ -157,6 +160,8 @@ export default {
         SelectInput,
         LoadingButton,
         Multiselect,
+        VueEditor,
+        SectionBorder,
     },    
     metaInfo: { title: 'Category-edit' },
     remember: 'form',
@@ -166,10 +171,10 @@ export default {
                 name:this.$page.Category.name?this.$page.Category.name:null,
                 description:this.$page.Category.description?this.$page.Category.description:null,
                 parent:this.$page.Category.parent?this.$page.Category.parent:null, 
-                is_featured:this.$page.Category.is_featured?this.$page.Category.is_featured:0,
-                menu:this.$page.Category.menu?this.$page.Category.menu:0,
+                is_featured:this.$page.Category.is_featured?1:0,
+                menu:this.$page.Category.menu?1:0,
                 image: this.$page.Category.image?this.$page.Category.image:null,
-                is_active:this.$page.Category.is_active?this.$page.Category.is_active:0,
+                is_active:this.$page.Category.is_active?1:0,
             }, 
             imagePreview:'',
             showPreview: false,            
@@ -190,8 +195,7 @@ export default {
             data.append('_method', 'put')
 
             self.$inertia.post(route('admin.category.update', this.$page.Category.id), data, {
-                preserveState: true,
-                preserveScroll: true,                
+                preserveState: true,        
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,                
             })

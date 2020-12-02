@@ -4,13 +4,14 @@
     <app-header></app-header>
     
     <main>
-        
-        <transition enter-active-class="ease-out duration-400"
-            enter-class="opacity-0 transform translate-y-6"
-            enter-to-class="opacity-100"
-            leave-active-class="ease-in duration-500"
-            leave-class="opacity-100"
-            leave-to-class="opacity-0">       
+
+        <transition enter-active-class="transition duration-300 ease-out"
+            enter-class="transform opacity-0"
+            enter-to-class="transform delay-150 opacity-0"
+            leave-active-class="transition duration-200 ease-in"
+            leave-class="transform delay-75 opacity-0 "
+            leave-to-class="transform opacity-0">  
+
 
                 <slot></slot>
 

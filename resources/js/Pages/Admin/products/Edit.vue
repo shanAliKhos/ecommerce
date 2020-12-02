@@ -22,7 +22,7 @@
         </inertia-link>                
     </nav>
     <p class="text-xl pb-6 flex items-center">Create Product</p>        
-    <div class="flex justify-center lg:px-20">
+    <div class="flex justify-center">
         <div class="w-full  pl-0 lg:pl-2">
             <div class="leading-loose">
 

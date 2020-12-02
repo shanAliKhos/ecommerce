@@ -38,14 +38,18 @@
                 </tr>
             </thead>
             <tbody>
-                 <category-item v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex" v-if="(CategoryIndex > 0)" :CategoryIndex="CategoryIndex" :Category="Category"></category-item>
+                 <category-item v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex"  :CategoryIndex="CategoryIndex" :Category="Category"></category-item>
             </tbody>
         </table>    
     </div>
+
+    <pagination :links="Links"></pagination>
    
 </div>
 </template>
 <script>
+import Pagination from './../../Shared/Pagination'  
+
 import AppLayout from './../Layouts/AppLayout'   
 import CategoryItem from './components/CategoryItem'   
 export default {
@@ -53,6 +57,7 @@ export default {
     metaInfo: { title: 'Category' },
     components:{
         CategoryItem,
+        Pagination,        
     },
     computed: {
         Categories(){

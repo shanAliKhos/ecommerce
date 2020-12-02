@@ -25,8 +25,7 @@
                 </div>
             </div>
 
-            <div v-for="(HistoryItem, index) in HistoryItems" :key="index"
-                class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
+            <div v-for="(HistoryItem, index) in HistoryItems" :key="index" class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
                 <div
                     class="w-full sm:w-1/3 md:w-2/5 flex flex-col md:flex-row md:items-center border-b sm:border-b-0 border-grey-dark pb-4 sm:pb-0 text-center sm:text-left">
                     <span class="font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden">Product Name</span>
@@ -44,14 +43,22 @@
                 </div>
                 <div
                     class="w-full sm:w-1/6 xl:w-1/5 text-center sm:text-right sm:pr-6 xl:pr-16 pb-4 sm:pb-0">
-                    <span
-                        class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Price</span>
+                    <span class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Price</span>
                     <span class="font-hkregular text-secondary">${{HistoryItem.Price}}</span>
                 </div>
                 <inertia-link :href="route('shop.product',HistoryItem.ProductSlug)" class="px-4 py-3 inline-block rounded font-hkregular bg-v-blue-light border border-v-blue text-v-blue hover:bg-blue-400 hover:text-white hover:border-white "">
                     <span>Buy Again</span>
                 </inertia-link>                                     
             </div>
+
+            <div v-if="!HistoryItems.length > 0" class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">
+                <div class="w-full sm:w-1/3 md:w-2/5 flex flex-col md:flex-row md:items-center border-b sm:border-b-0 border-grey-dark pb-4 sm:pb-0 text-center sm:text-left">
+                    <span class="font-semibold  text-gray-400">No Item in List</span>
+                </div>                          
+            </div>
+            
+
+
 <!-- 
             <div
                 class="bg-white shadow px-4 py-5 sm:py-4 rounded mb-3 flex flex-col sm:flex-row justify-between items-center">

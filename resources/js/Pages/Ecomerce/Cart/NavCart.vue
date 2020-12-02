@@ -18,8 +18,8 @@ export default {
         store(Item) {
             const self = this;
             self.$inertia.post(route('cart.store'), Item,{
-                preserveState: true,
-                preserveScroll: true,               
+                // preserveState: true,
+                // preserveScroll: true,               
             });
             
         },        

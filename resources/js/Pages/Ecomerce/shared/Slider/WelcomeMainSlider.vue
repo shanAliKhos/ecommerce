@@ -5,70 +5,70 @@
 
                 <div class="glide__slide">
                     <div class="bg-left sm:bg-center bg-no-repeat bg-cover"
-                        style="background-image:url(./img/hero-slide-01.jpg)">
+                        style="background-image:url(./img/main-slider/hero-slide-01.jpg)">
                         <div
                             class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                             <h3
                                 class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                                 Store New Men’s Outdoor Collection
                             </h3>
-                            <a href="/collection-grid" class="btn btn-primary btn-lg mt-8">Know more</a>
+                            <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="glide__slide">
                     <div class="bg-left sm:bg-center bg-no-repeat bg-cover"
-                        style="background-image:url(./img/hero-slide-02.jpg)">
+                        style="background-image:url(./img/main-slider/hero-slide-02.jpg)">
                         <div
                             class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                             <h3
                                 class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                                 Blake by Store <br /> 30% off
                             </h3>
-                            <a href="/collection-grid" class="btn btn-primary btn-lg mt-8">Know more</a>
+                            <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="glide__slide">
                     <div class="bg-left sm:bg-center bg-no-repeat bg-cover"
-                        style="background-image:url(./img/hero-slide-03.jpg)">
+                        style="background-image:url(./img/main-slider/hero-slide-03.jpg)">
                         <div
                             class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                             <h3
                                 class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                                 Hoodie your way! <br /> For Men
                             </h3>
-                            <a href="/collection-grid" class="btn btn-primary btn-lg mt-8">Know more</a>
+                            <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="glide__slide">
                     <div class="bg-left sm:bg-center bg-no-repeat bg-cover"
-                        style="background-image:url(./img/hero-slide-04.jpg)">
+                        style="background-image:url(./img/main-slider/hero-slide-04.jpg)">
                         <div
                             class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                             <h3
                                 class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                                 Match and play Women’s Dresses
                             </h3>
-                            <a href="/collection-grid" class="btn btn-primary btn-lg mt-8">Know more</a>
+                            <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="glide__slide">
                     <div class="bg-left sm:bg-center bg-no-repeat bg-cover"
-                        style="background-image:url(./img/hero-slide-05.jpg)">
+                        style="background-image:url(./img/main-slider/hero-slide-05.jpg)">
                         <div
                             class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                             <h3
                                 class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                                 Back to school, <br /> the stylish way
                             </h3>
-                            <a href="/collection-grid" class="btn btn-primary btn-lg mt-8">Know more</a>
+                            <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
                         </div>
                     </div>
                 </div>

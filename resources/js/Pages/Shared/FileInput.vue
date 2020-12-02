@@ -85,7 +85,7 @@ export default {
   },
   created() {
     if(this.preview_img){
-      this.imagePreview = '/'+this.preview_img.replace("public", "storage");
+      this.imagePreview = this.preview_img.replace("public", "storage");
       this.showPreview = true;
     }else{
       this.imagePreview = this.defaultPhotoUrl();

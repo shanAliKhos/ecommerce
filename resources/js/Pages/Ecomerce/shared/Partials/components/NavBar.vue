@@ -72,19 +72,19 @@
                 >Shop</cus-nav-link>                     
 
                 <cus-nav-link 
-                    :href="$route('blog')" 
-                    :active="$page.currentRouteName == 'blog'" 
+                    :href="$route('blog.index')" 
+                    :active="$page.currentRouteName == 'blog.index'" 
                 >Blog</cus-nav-link>                    
 
-                <cus-nav-link 
+                <!-- <cus-nav-link 
                     :href="$route('blog.details')" 
                     :active="$page.currentRouteName == 'blog.details'" 
-                >Blog Details</cus-nav-link>             
+                >Blog Details</cus-nav-link>              -->
 
-                <cus-nav-link 
-                    :href="$route('contact')" 
-                    :active="$page.currentRouteName == 'contact'"
-                >Contact</cus-nav-link>                
+                <!-- <cus-nav-link 
+                    :href="$route('contact.index')" 
+                    :active="$page.currentRouteName == 'contact.index'"
+                >Contact</cus-nav-link>                 -->
  
             </ul>
         </div>

@@ -69,8 +69,9 @@
                     </div>                       
 
 
+                    <SectionBorder/>
  
-                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">
                         <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
                             <span>Update</span>
                             <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -91,13 +92,15 @@ import AppLayout from './../Layouts/AppLayout'
 import FileInput from './../../Shared/FileInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
 import TextInput from './../../Shared/TextInput'   
+import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
     metaInfo: { title: 'Brand-edit' },
     components:{
         LoadingButton,
         FileInput,
-        TextInput
+        TextInput,
+        SectionBorder,
     },
     layout: AppLayout, 
     remember: 'form',

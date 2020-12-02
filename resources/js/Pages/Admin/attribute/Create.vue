@@ -42,27 +42,15 @@
                         :labelRequire='true'    
                             placeholder="Name" 
                     aria-label="Name"/>                     
-                    
+       
+ 
                     <div class="flex flex-wrap -mx-3 mb-2">
  
-                        <text-input 
-                            id="code" 
-                            type="text" 
-                            class="w-full md:w-1/2 px-3  md:mb-0"  
-                            :fixedClasses="'right-3 z-50'"
-
-                            v-model="form.code" 
-                            autocomplete="code" 
-                            :error="$page.errors.code"
-                            label='Code'    
-                            :labelRequire='true'    
-                            placeholder="eg: S, M, L | R, G, B" 
-                        aria-label="code"/> 
-
+ 
 
                         <select-input 
                             v-model="form.frontend_type" 
-                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            class="w-full md:w-1/3 px-3  md:mb-0 "  
                             :fixedClasses="'right-3 z-50'"
                             :error="$page.errors.frontend_type"
                             label='Frontend Type'    
@@ -70,13 +58,9 @@
                         <option v-for="(FrontEndType, index) in FrontEndTypes" :key="index" :value="index">{{ FrontEndType }}</option>                                                   
                         </select-input>                         
 
-                    </div>
- 
-                    <div class="flex flex-wrap -mx-3 mb-2">
- 
                         <select-input 
                             v-model="form.is_required" 
-                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            class="w-full md:w-1/3 px-3  md:mb-0 "  
                             :fixedClasses="'right-3 z-50'"
                             :error="$page.errors.is_required"
                             label='Required'    
@@ -87,7 +71,7 @@
 
                         <select-input 
                             v-model="form.is_filterable" 
-                            class="w-full md:w-1/2 px-3  md:mb-0 "  
+                            class="w-full md:w-1/3 px-3  md:mb-0 "  
                             :fixedClasses="'right-3 z-50'"
                             :error="$page.errors.is_filterable"
                             label='Filterable'    
@@ -98,7 +82,10 @@
  
                     </div>   
 
-                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <SectionBorder/>
+
+
+                    <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">
                         <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
                             <span>Save</span>
                             <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -119,6 +106,7 @@ import AppLayout from './../Layouts/AppLayout'
 import TextInput from './../../Shared/TextInput'   
 import SelectInput from './../../Shared/SelectInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
+import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
     metaInfo: { 
@@ -129,13 +117,14 @@ export default {
         TextInput,
         SelectInput,
         LoadingButton,
+        SectionBorder,
     },
     data() {
         return {
             form:{
-                code:'',
-                name:'',
-                frontend_type:'',
+                code:null,
+                name:null,
+                frontend_type:'select',
                 is_filterable:0,
                 is_required:0, 
             },
@@ -151,8 +140,7 @@ export default {
     methods: {
         store() {
             const self = this;
-            let formData = new FormData();
-            formData.append("code", self.form.code || '');
+            let formData = new FormData(); 
             formData.append("name", self.form.name || '');
             formData.append("frontend_type", self.form.frontend_type || '');
             formData.append("is_required", self.form.is_required || '');
@@ -166,7 +154,9 @@ export default {
                 onSuccess: () => {
                     if (Object.keys(this.$page.errors).length === 0) {
                         this.form.name = null
-                        this.form.logo = null
+                        this.form.frontend_type = null
+                        this.form.is_required = 0
+                        this.form.is_filterable = 0
                     }
                 },             
             });
