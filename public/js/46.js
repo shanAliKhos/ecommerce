@@ -745,7 +745,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-15"
+              "flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-4"
           },
           _vm._l(_vm.Products, function(Product, index) {
             return _c(
@@ -753,7 +753,7 @@ var render = function() {
               {
                 key: index,
                 staticClass:
-                  "w-1/2  lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"
+                  "w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"
               },
               [
                 _c(
