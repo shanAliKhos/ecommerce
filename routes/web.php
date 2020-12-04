@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
  
  
-
-// Route::Resource('/contact', 'Contact\ContactController');
+ 
 Route::Resource('/blog', 'Blog\BlogController');
   
 //////////////////////////////////////// SHOP ////////////////////////////////////
@@ -47,6 +46,13 @@ Route::Resource('/blog', 'Blog\BlogController');
             Route::post('/checkout/payment', 'Ecommerce\CheckOutController@CheckOut')->name('cart.checkout');
             Route::get('/checkout/success', 'Ecommerce\CheckOutController@CheckOutSuccess')->name('cart.success');
         });
+
+        //////////////////////////////////////// MESSENGER ////////////////////////////////////////
+        Route::get('/messenger', 'ContactsController@index');
+        Route::get('/contacts', 'ContactsController@get');
+        Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
+        Route::post('/conversation/send', 'ContactsController@send');
+        //////////////////////////////////////// MESSENGER ////////////////////////////////////////        
         
     });
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////
@@ -181,3 +187,4 @@ Route::Resource('/blog', 'Blog\BlogController');
 //////////////////////////////////////// AUTHENTICATION ////////////////////////////////////////
 
  
+

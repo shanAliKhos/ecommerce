@@ -55,12 +55,10 @@
                                 type="text" 
                                 class="w-full " 
                                 v-model="form.name" 
-                                autocomplete="name" 
                                 :error="$page.errors.name"
                                 label='Name'    
                                 :labelRequire='true'    
-                                 placeholder="Name" 
-                            aria-label="Name"/>
+                                 placeholder="Name"/>
  
                         </div>      
 
@@ -93,7 +91,7 @@ import LoadingButton from './../../Shared/LoadingButton'
 import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
-    metaInfo: { title: 'Brand-create' },
+    metaInfo: { title: 'Brand Create' },
 
     layout: AppLayout, 
     remember: 'form',

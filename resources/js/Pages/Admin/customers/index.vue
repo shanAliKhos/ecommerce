@@ -37,7 +37,17 @@
                 </tr>
             </thead>
             <tbody>
-                <customer-item v-for="(Customer, CustomerIndex) in Customers" :key="CustomerIndex" :CustomerIndex="CustomerIndex" :Customer="Customer"></customer-item> 
+                <list-item v-for="(Customer, CustomerIndex) in Customers" :key="CustomerIndex" :CustomerIndex="CustomerIndex" :Customer="Customer"></list-item> 
+                <tr v-if="(!Customers.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                    <td colspan="7" class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
+                        <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
+                            <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>                        
+                            <span>No Record Found !  </span>
+                        </p>
+                    </td> 
+                </tr>                     
             </tbody>
         </table>    
     </div>
@@ -47,14 +57,14 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'    
-import CustomerItem from './components/ListItem'   
+import ListItem from './components/ListItem'   
 import Pagination from './../../Shared/Pagination'  
 
 export default {
     layout: AppLayout, 
-    metaInfo: { title: 'Customers listing' },
+    metaInfo: { title: 'Customers' },
     components:{
-        CustomerItem,
+        ListItem,
         Pagination,
     },
     computed: {

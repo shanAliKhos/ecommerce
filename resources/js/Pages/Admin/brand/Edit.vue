@@ -57,12 +57,10 @@
                                 type="text" 
                                 class="w-full " 
                                 v-model="form.name" 
-                                autocomplete="name" 
                                 :error="$page.errors.name"
                                 label='Name'    
                                 :labelRequire='true'    
-                                 placeholder="Name" 
-                            aria-label="Name"/>
+                                 placeholder="Name"/>
  
                         </div>      
 
@@ -95,7 +93,7 @@ import TextInput from './../../Shared/TextInput'
 import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
-    metaInfo: { title: 'Brand-edit' },
+    metaInfo: { title: 'Brand Edit' },
     components:{
         LoadingButton,
         FileInput,

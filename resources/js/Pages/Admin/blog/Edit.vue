@@ -31,18 +31,30 @@
 
                     <p class="text-lg text-gray-800 font-medium pb-4">Blog Form</p>
 
+                    <div class="mt-2">
+    
+                        <file-input 
+                        v-model="form.image" 
+                        :preview_img="form.image" 
+                        :defualt_preview_img="form.title" 
+                        :error="$page.errors.image" 
+                        class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded " 
+                        type="file" 
+                        accept="image/*" 
+                        label="Hero Image" 
+                        :preview="true"/>
+                    </div>       
+
 
                     <text-input 
                         id="Title" 
                         type="text" 
                         class="col-span-8 mt-5 mb-5"  
-                        v-model="form.title" 
-                        autocomplete="title" 
+                        v-model="form.title"  
                         :error="$page.errors.title"
                         label='Title'    
                         :labelRequire='true'    
-                            placeholder="Title" 
-                    aria-label="title"/>                            
+                            placeholder="Title"  />                            
 
                     
                     <div class="mt-2 relative">
@@ -76,15 +88,19 @@
 import AppLayout from './../Layouts/AppLayout'   
 import LoadingButton from './../../Shared/LoadingButton'   
 import TextInput from './../../Shared/TextInput'   
+import FileInput from './../../Shared/FileInput' 
 
 import { VueEditor } from "vue2-editor";
 
 export default {
+    metaInfo: { title: 'Blog Edit' },
     layout:AppLayout,
     components: {
         VueEditor,
         LoadingButton,
-        TextInput
+        TextInput,
+        FileInput
+
     },
 
     data() {
@@ -92,6 +108,7 @@ export default {
             form:{
                 title:this.$page.blog.title,
                 body:this.$page.blog.body,
+                image:this.$page.blog.photo_url,
             },
             sending:false,
         };
@@ -103,18 +120,13 @@ export default {
             let formData = new FormData();
             formData.append("title", self.form.title || '');
             formData.append("body", self.form.body || '');
+            formData.append("image", self.form.image || '');
             formData.append('_method', 'put')
             
-            self.$inertia.post(route('admin.blog.update'), formData,{
+            self.$inertia.post(route('admin.blog.update',self.$page.blog.id), formData,{
                 preserveState: true,           
                 onStart: () => this.sending = true,
-                onFinish: () => this.sending = false,
-                onSuccess: () => {
-                    if (Object.keys(this.$page.errors).length === 0) {
-                        this.form.title = null
-                        this.form.body = null
-                    }
-                },             
+                onFinish: () => this.sending = false, 
             });
         }, 
     },           

@@ -43,7 +43,7 @@ import EditForm from './EditForm'
 import ProductAttributes from './ProductAttributes' 
  
 export default {
-    metaInfo: { title: 'Product edit' },
+    metaInfo: { title: 'Product Edit' },
     layout: AppLayout,       
     components: { 
         ProductImages,

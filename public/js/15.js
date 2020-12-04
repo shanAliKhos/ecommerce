@@ -73,8 +73,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Customer', 'CustomerIndex'],
@@ -193,7 +191,9 @@ var render = function() {
           _vm._v(" "),
           _c("p", { staticClass: "py-5  lg:p-1" }, [
             _vm._v(
-              "\n            " + _vm._s(_vm.CustomerIndex + 1) + "\n        "
+              "\r\n            " +
+                _vm._s(_vm.CustomerIndex + 1) +
+                "\r\n        "
             )
           ])
         ]

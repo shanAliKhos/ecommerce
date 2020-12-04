@@ -5,15 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
     use HasFactory;
-
-    protected function defaultPhotoUrl()
-    {
-        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
-    }
+ 
 
     protected $fillable = [
         'brand_id', 'sku', 'name', 'slug', 'description', 'quantity','image',
@@ -27,11 +24,22 @@ class Product extends Model
         'is_featured'  =>  'boolean'
     ];
  
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = $value;
-        $this->attributes['slug'] = Str::slug($value);
+    protected $appends = [
+        'mainphoto_url',
+    ];
+
+
+    public function getMainphotoUrlAttribute()
+    { 
+        return asset($this->image
+        ? Storage::disk('local')->url($this->image)
+        : $this->defaultPhotoUrl());
     }
+
+    protected function defaultPhotoUrl()
+    {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
+    }    
  
     public function categories()
     {

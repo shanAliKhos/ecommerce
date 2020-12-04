@@ -55,15 +55,12 @@
                                 id="name" 
                                 type="text" 
                                 class="w-full px-3  md:mb-0" 
-                                :fixedClasses="'right-3 z-50'"
-
-                                v-model="form.name" 
-                                autocomplete="name" 
+                                :fixedClasses="'right-3 z-50'" 
+                                v-model="form.name"  
                                 :error="$page.errors.name"
                                 label='Name'    
                                 :labelRequire='true'    
-                                 placeholder="Name" 
-                            aria-label="Name"/> 
+                                 placeholder="Name"  /> 
 
                             <select-input 
                                 v-model="form.is_featured" 
@@ -163,7 +160,7 @@ export default {
         VueEditor,
         SectionBorder,
     },    
-    metaInfo: { title: 'Category-edit' },
+    metaInfo: { title: 'Category Edit' },
     remember: 'form',
     data() {
         return {

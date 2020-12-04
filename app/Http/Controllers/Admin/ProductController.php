@@ -58,11 +58,12 @@ class ProductController extends Controller
             $this->validate($request,[  
                 "image" => 'required|mimes:jpg,jpeg,png|max:100',   
             ]);              
-            $NewImage = $request->file('image')->store('public/Products');  
-            $Product->image = $NewImage;
+            
+            $NewImage = $request->file('image')->store('Products','public');   
+
         }    
               
-        // try {
+        try {
 
             $Product = $Product->create([
                 'brand_id'=>$request->brand_id,
@@ -79,10 +80,10 @@ class ProductController extends Controller
                 'sale_price'=>$request->sale_price,
             ]);
 
-        // } catch (\Throwable $th) {
+        } catch (\Throwable $th) {
              
-        //     return back()->with('error','OPPS fail to store in database, Please contact support team ');
-        // }       
+            return back()->with('error','OPPS fail to store in database, Please contact support team ');
+        }       
 
         $ProductCategories = json_decode($request->categories,true);
     
@@ -177,7 +178,8 @@ class ProductController extends Controller
             "is_active" => 'required|boolean',
             "is_featured" => 'required|boolean',             
         ]);  
-             
+ 
+        
 
         if($request->hasFile('image')){
 
@@ -185,13 +187,19 @@ class ProductController extends Controller
                 "image" => 'required|mimes:jpg,jpeg,png|max:100',   
             ]);              
             
-            $NewFile = $request->file('image')->store('public/Products');  
+            $NewFile = $request->file('image')->store('Products','public');  
+            try {
+
+                if(Storage::exists($Product->image)){
+                    Storage::delete($Product->image);
+                }  
+
+            } catch (\Throwable $th) {
+                 
+
+            }       
+    
             
-            if(Storage::exists($Product->image)){
-
-                Storage::delete($Product->image);
-
-            }  
 
             $Product->update(['image' => $NewFile]);               
         } 

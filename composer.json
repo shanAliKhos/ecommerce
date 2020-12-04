@@ -19,6 +19,7 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
+        "pusher/pusher-php-server": "^4.1",
         "stripe/stripe-php": "^7.57",
         "tightenco/ziggy": "^0.9.4"
     },

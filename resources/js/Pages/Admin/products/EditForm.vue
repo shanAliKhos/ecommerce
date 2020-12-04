@@ -308,7 +308,7 @@ export default {
                 description: this.Product.description,
                 is_active: this.Product.is_active?1:0,
                 is_featured: this.Product.is_featured?1:0,
-                image: this.Product.image?this.Product.image:null,
+                image: this.Product.mainphoto_url,
                 is_variable:this.Product.variations.length?1:0,
                 attributes:this.Product.variations,                
             },    

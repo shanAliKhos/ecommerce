@@ -2,14 +2,14 @@
 <div id="main">
     
     <div class="container" >
-       
-        <welcome-slider></welcome-slider>
+        
+        <hero-slider></hero-slider>
 
         <welcome-icons></welcome-icons>
 
-        <welcome-trending-collection></welcome-trending-collection> 
+        <trending-collection></trending-collection> 
 
-        <welcome-trending-slider v-if="this.$page.FeatureProducts.length>0"></welcome-trending-slider>
+        <trending-slider v-if="this.$page.FeatureProducts.length>0"></trending-slider>
           
  
     </div>
@@ -31,13 +31,15 @@
 
 <script>
 import AppLayout from './../shared/AppLayout'  
-import WelcomeSlider from './../shared/Slider/WelcomeMainSlider'  
+
+import HeroSlider from './../shared/Slider/HeroSlider'  
+import TrendingCollection from './components/TrendingCollection'   
+import TrendingSlider from './../shared/Slider/TrendingSlider'  
+
 import WelcomeSaleSlider from './../shared/Slider/WelcomeSaleSlider'  
-import WelcomeTrendingSlider from './../shared/Slider/WelcomeTrendingSlider'  
 import WelcomeTrendingMultiSlider from './../shared/Slider/WelcomeTrendingMultiSlider'  
 import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'  
 
-import WelcomeTrendingCollection from './components/WelcomeTrendingCollection'   
 import WelcomeSaleBanner from './components/WelcomeSaleBanner'   
 import WelcomeBrands from './components/WelcomeBrands'   
  
@@ -46,10 +48,10 @@ export default {
     metaInfo: { title: 'Welcome' },
     layout: AppLayout, 
     components:{
-        WelcomeSlider,
+        HeroSlider,
         WelcomeIcons,
-        WelcomeTrendingCollection,
-        WelcomeTrendingSlider,
+        TrendingCollection,
+        TrendingSlider,
         WelcomeTrendingMultiSlider,
         WelcomeSaleSlider,
         WelcomeSaleBanner,

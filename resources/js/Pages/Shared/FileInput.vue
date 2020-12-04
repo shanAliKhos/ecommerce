@@ -6,8 +6,8 @@
     <label v-if="label" class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" :for="label">{{ label }}</label>
 
     
-    <div class="mt-2"> 
-        <img :src="imagePreview" width="100" height="100" alt="Current Photo"  class="rounded h-52 w-52 object-cover" v-if="showPreview"/> 
+    <div class="mt-3"> 
+        <img :src="imagePreview" alt="Current Photo" class="rounded h-auto w-auto object-cover" v-if="showPreview"/> 
     </div>         
 
     <div class="p-1"   > 

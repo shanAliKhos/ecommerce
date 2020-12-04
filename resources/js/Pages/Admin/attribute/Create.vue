@@ -35,13 +35,11 @@
                         id="name" 
                         type="text" 
                         class="col-span-8"  
-                        v-model="form.name" 
-                        autocomplete="name" 
+                        v-model="form.name"  
                         :error="$page.errors.name"
                         label='Name'    
                         :labelRequire='true'    
-                            placeholder="Name" 
-                    aria-label="Name"/>                     
+                        placeholder="Attribute Name"/>                     
        
  
                     <div class="flex flex-wrap -mx-3 mb-2">
@@ -110,7 +108,7 @@ import SectionBorder from './../../Shared/SectionBorder'
 
 export default {
     metaInfo: { 
-        title: 'Attribute-create' 
+        title: 'Attribute Create' 
     },
     layout: AppLayout,  
     components:{

@@ -7,8 +7,7 @@
   
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script src="{{ mix('js/app.js') }}" defer></script> 
-        <script src="https://js.stripe.com/v3/"></script>
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.3/dist/alpine.min.js" defer></script>
+        <script src="https://js.stripe.com/v3/"></script> 
         @routes
     </head>  
     

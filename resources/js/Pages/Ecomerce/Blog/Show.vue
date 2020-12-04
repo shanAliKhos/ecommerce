@@ -1,7 +1,6 @@
 <template>
     <div class="container">
-        <!-- <div class="bg-no-repeat bg-cover bg-center w-full h-64 sm:h-76 md:h-90 xl:h-96" style="background-image:url(./img/blog-hero.jpg)"> -->
-        <div class="bg-no-repeat bg-cover bg-center w-full h-64 sm:h-76 md:h-90 xl:h-96 bg-footer-bg">
+        <div class="bg-no-repeat bg-cover bg-center w-full h-64 sm:h-76 md:h-90 xl:h-96" :style="'background-image:url('+Blog.photo_url+')'"> 
         </div>
 
         <div class="flex flex-col sm:flex-row">

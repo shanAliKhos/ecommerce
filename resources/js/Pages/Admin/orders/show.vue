@@ -164,7 +164,7 @@ import LoadingButton from './../../Shared/LoadingButton'
  
 export default {
     layout: AppLayout, 
-    metaInfo: { title: 'Order-show' },
+    metaInfo: { title: 'Order Show' },
     components:{
         LoadingButton,
     },

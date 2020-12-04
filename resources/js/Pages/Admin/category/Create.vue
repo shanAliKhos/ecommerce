@@ -58,12 +58,10 @@
                                 :fixedClasses="'right-3 z-50'"
 
                                 v-model="form.name" 
-                                autocomplete="name" 
                                 :error="$page.errors.name"
                                 label='Name'    
                                 :labelRequire='true'    
-                                 placeholder="Name" 
-                            aria-label="Name"/> 
+                                 placeholder="Name" /> 
 
                             <select-input 
                                 v-model="form.is_featured" 
@@ -153,7 +151,7 @@ import { VueEditor } from "vue2-editor";
 import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
-    metaInfo: { title: 'Category-create' },
+    metaInfo: { title: 'Category Create' },
     layout: AppLayout, 
     components:{
         FileInput,

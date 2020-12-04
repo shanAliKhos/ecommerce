@@ -75,7 +75,7 @@ import AppLayout from './../Layouts/AppLayout'
 
 export default {
     layout: AppLayout, 
-    metaInfo: { title: 'Customers show' },     
+    metaInfo: { title: 'Customers Show' },     
     computed: {
         Customer(){
             return this.$page.customer;

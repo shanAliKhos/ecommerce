@@ -9,7 +9,7 @@
                             class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
                             <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
                                 @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url(./../../img/backpack-1.png)">
+                                style="background-image:url('./../../img/product/product (1).png')">
                             </div>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
                             class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
                             <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
                                 @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url(./../../img/backpack-2.png)">
+                                style="background-image:url('./../../img/product/product (2).png')">
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
                             <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
                                 @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url(./../../img/backpack-3.png)">
+                                style="background-image:url('./../../img/product/product (3).png')">
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
                             <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
                                 @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url(./../../img/backpack-4.png)"
+                                style="background-image:url('./../../img/product/product (4).png')"
                                 >
                             </div>
                         </div>

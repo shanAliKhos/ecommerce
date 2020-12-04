@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Storage;
+
 
 class BlogController extends Controller
 {
@@ -36,15 +38,21 @@ class BlogController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
+            "image" => 'required|mimes:jpg,jpeg,png|max:100',   
         ]);
-
+        
+ 
         $Blog = new Blog;
-
-        $Blog->create([
-            'title'=>$request->title,
-            'body'=> $request->body,
-            'user_id'=>Auth()->user()->id,
-        ]);
+        
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('Blogs','public');  
+            $Blog->image = $path ;
+        }             
+        
+        $Blog->title = $request->title;
+        $Blog->body = $request->body;
+        $Blog->user_id = Auth()->user()->id;
+        $Blog->save();
 
         return redirect()->route('admin.blog.index')->with('success','blog created');        
  
@@ -57,20 +65,54 @@ class BlogController extends Controller
 
  
     public function edit(Blog $blog)
-    {
-        $blog->load('user');
+    { 
         return Inertia::render('Admin/blog/Edit',compact('blog'));        
     }
 
    
     public function update(Request $request, Blog $blog)
     {
-        //
+        $this->validate($request, [
+            'title'      =>  'required', 
+            'body'=>'required', 
+        ]);         
+          
+        if($request->hasFile('image')){
+
+            $this->validate($request, [ 
+                "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            ]);                     
+            if(Storage::exists($blog->image)){
+                Storage::delete($blog->image);
+            }  
+            $blog->update([
+                'image' => $request->file('image')->store('Blogs','public'), 
+            ]);               
+        } 
+
+        if(empty($request->image) && $blog->image){
+
+            if(Storage::exists($blog->image)){
+                Storage::delete($blog->image);
+            }          
+            $blog->update(['image' => null]);
+
+        }
+
+        $blog->update([
+            'title' => $request->title, 
+            'body' =>$request->body,
+            'user_id' => Auth()->user()->id,
+        ]);        
+            
+        return back()->with('success','success ! brand updated');
     }
 
  
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+
+        return back()->with('success','blog deleted');
     }
 }

@@ -302,7 +302,7 @@ import { VueEditor } from "vue2-editor";
 
 export default { 
     layout: AppLayout,  
-    metaInfo: { title: 'Product create' }, 
+    metaInfo: { title: 'Product Create' }, 
     components: { 
         Multiselect,
         LoadingButton,

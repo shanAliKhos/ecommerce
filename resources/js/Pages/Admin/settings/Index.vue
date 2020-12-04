@@ -82,7 +82,7 @@ import GeneralForm from './components/GeneralForm'
 import PaymentsForm from './components/PaymentsForm'  
 import SocialLinksForm from './components/SocialLinksForm'  
 export default {
-    metaInfo: { title: 'Setting' },
+    metaInfo: { title: 'Settings' },
     layout: AppLayout, 
     components:{
         AnalyticsForm,

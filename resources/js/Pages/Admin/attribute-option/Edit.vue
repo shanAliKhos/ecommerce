@@ -52,26 +52,22 @@
                             type="text" 
                             class="w-full md:w-1/3 px-3  md:mb-0"  
                             :fixedClasses="'right-3 z-50'"
-                            v-model="form.name" 
-                            autocomplete="name" 
+                            v-model="form.name"  
                             :error="$page.errors.name"
                             label='Name'    
                             :labelRequire='true'    
-                            placeholder="Name" 
-                        aria-label="Name"/>     
+                            placeholder="Name"  />     
                     
                         <text-input 
                             id="code" 
                             type="text" 
                             class="w-full md:w-1/3 px-3  md:mb-0"  
                             :fixedClasses="'right-3 z-50'"
-                            v-model="form.code" 
-                            autocomplete="code" 
+                            v-model="form.code"  
                             :error="$page.errors.code"
                             label='Code'    
                             :labelRequire='true'    
-                            placeholder="eg: S, M, L | R, G, B" 
-                        aria-label="code"/> 
+                            placeholder="eg: S, M, L | R, G, B"  /> 
  
                     </div>
 
@@ -103,7 +99,7 @@ import Multiselect from 'vue-multiselect'
 
 export default {
     metaInfo: { 
-        title: 'attribute option-edit' 
+        title: 'AttributeOptions Edit' 
     },
     layout: AppLayout,  
     components:{
