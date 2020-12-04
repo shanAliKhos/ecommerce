@@ -29,7 +29,7 @@ class SettingController extends Controller
     {  
         if($request->hasFile('site_logo')){             
             $OldSiteLogo =  config('settings.site_logo');        
-            $NewPath = $request->file('site_logo')->store('public/setting');  
+            $NewPath = $request->file('site_logo')->store('setting','public');  
             if(Storage::exists($OldSiteLogo)){
                 Storage::delete($OldSiteLogo);
             }    
@@ -46,7 +46,7 @@ class SettingController extends Controller
         
         if($request->hasFile('site_favicon')){             
             $OldSiteFavicon =  config('settings.site_favicon');      
-            $NewPath = $request->file('site_favicon')->store('public/setting');  
+            $NewPath = $request->file('site_favicon')->store('setting','public');  
             if(Storage::exists($OldSiteFavicon)){
                 Storage::delete($OldSiteFavicon);
             }  

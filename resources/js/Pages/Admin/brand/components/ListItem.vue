@@ -9,7 +9,7 @@
 
         <div class="flex items-center py-5  lg:p-1">
             <div class="flex-shrink-0 h-full w-full">
-                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded" :src="Image" alt="">
+                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded" :src="brand.photo_url" alt="">
             </div> 
         </div>             
     </td>                     
@@ -80,19 +80,8 @@ export default {
                 }
             })                   
         },        
-        defaultPhotoUrl(text)
-        {
-            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
-        },               
-    }, 
-    computed: {
-        Image(){
-            self = this;
-            var  img = (this.brand.logo)?'/'+this.brand.logo.replace("public", "storage"):this.defaultPhotoUrl(this.brand.name);
-            return img;      
-        },                     
-        
-    },
+             
+    },  
 
 
 }

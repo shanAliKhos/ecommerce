@@ -11,7 +11,7 @@
 
         <div class="flex items-center py-5  lg:p-1">
             <div class="flex-shrink-0 h-full w-full">
-                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded"  :src="Image(Category)" alt="">
+                <img class="h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded"  :src="Category.photo_url" alt="">
             </div> 
         </div>             
     </td>              
@@ -93,15 +93,7 @@ export default {
                 }
             })                   
         },     
-        Image(item){
-            self = this ;
-            var  img = (item.image)?'/'+item.image.replace("public", "storage"):self.defaultPhotoUrl(this.Category.name);
-            return img;      
-        },             
-        defaultPhotoUrl(text)
-        {
-            return 'https://ui-avatars.com/api/?name='+text+'&color=7F9CF5&background=EBF4FF';
-        },              
+              
     },     
 }
 </script>

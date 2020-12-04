@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Brand;  
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
-use Illuminate\Support\Str;
-
-
+use Illuminate\Support\Str; 
 
 class BrandController extends Controller
 {
@@ -25,21 +23,13 @@ class BrandController extends Controller
         return Inertia::render('Admin/brand/Index',compact('Brands'));
  
     }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+ 
     public function create()
     { 
         return Inertia::render('Admin/brand/Create');
  
     }
-
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Validation\ValidationException
-     */
+ 
     public function store(Brand $brand,Request $request)
     {  
  
@@ -50,7 +40,7 @@ class BrandController extends Controller
         ]);        
         if ($request->hasFile('logo')) {
 
-            $path = $request->file('logo')->store('public/Brands');  
+            $path = $request->file('logo')->store('Brands','public');  
             $brand->logo = $path;
         }    
         $brand->name = $request->name; 
@@ -60,22 +50,13 @@ class BrandController extends Controller
         return redirect()->route('admin.brand.index')->with('success', 'Brand created');
  
     }
-
-    /**
-     * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+ 
     public function edit(Brand $brand)
     {  
         return Inertia::render('Admin/brand/Edit',compact('brand'));
  
-    }
-
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Validation\ValidationException
-     */
+    } 
+ 
     public function update(Brand $brand,Request $request)
     { 
         $this->validate($request, [
@@ -83,13 +64,18 @@ class BrandController extends Controller
             // 'logo'     =>  'mimes:jpg,jpeg,png|max:1000'
         ]);         
         
-        if($request->hasFile('logo')){
-            $OldPath = $brand->logo;
-            $NewPath = $request->file('logo')->store('public/Brands');  
-            if(Storage::exists($OldPath)){
-                Storage::delete($OldPath);
-            }  
-            $brand->update(['logo' => $NewPath]);               
+        if($request->hasFile('logo')){    
+            try {
+           
+                if(Storage::exists($brand->logo)){
+                    Storage::delete($brand->logo);
+                }                  
+
+            } catch (\Throwable $th) {
+                 
+
+            }      
+            $brand->update(['logo' => $request->file('logo')->store('Brands','public')]);               
         } 
 
         if(empty($request->logo) && $brand->logo){
@@ -107,12 +93,8 @@ class BrandController extends Controller
             
         return back()->with('success','success ! brand updated');
 
-    }
+    } 
 
-    /**
-     * @param $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function destroy(Brand $brand)
     { 
         $image = $brand->logo;

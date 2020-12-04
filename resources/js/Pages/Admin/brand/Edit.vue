@@ -107,7 +107,7 @@ export default {
             form: {
                 name: this.$page.brand.name,
                 slug: this.$page.brand.slug,
-                logo: this.$page.brand.logo,
+                logo: this.$page.brand.photo_url,
             },     
             imagePreview:'',
             showPreview: false,            

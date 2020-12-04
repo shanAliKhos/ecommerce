@@ -170,7 +170,7 @@ export default {
                 parent:this.$page.Category.parent?this.$page.Category.parent:null, 
                 is_featured:this.$page.Category.is_featured?1:0,
                 menu:this.$page.Category.menu?1:0,
-                image: this.$page.Category.image?this.$page.Category.image:null,
+                image: this.$page.Category.photo_url,
                 is_active:this.$page.Category.is_active?1:0,
             }, 
             imagePreview:'',

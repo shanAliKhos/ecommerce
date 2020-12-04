@@ -1,15 +1,297 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[78],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Ecomerce/shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -97,38 +379,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  layout: _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  metaInfo: {
-    title: 'password-reset'
-  },
-  data: function data() {
-    return {
-      sending: false,
-      form: {
-        email: this.$page.email,
-        password: null,
-        password_confirmation: null,
-        token: this.$page.ResetToken
-      }
-    };
-  },
-  methods: {
-    submit: function submit() {
-      var _this = this;
-
-      var data = this.form;
-      this.$inertia.post(route('password.update'), data, {
-        preserveState: true,
-        preserveScroll: true,
-        onStart: function onStart() {
-          return _this.sending = true;
-        },
-        onFinish: function onFinish() {
-          return _this.sending = false;
-        }
-      });
-    }
-  },
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   mounted: function mounted() {
     var self = this;
     self.$root.$emit('sidebar-close');
@@ -270,10 +521,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -285,389 +536,1108 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass:
-        "min-h-screen flex flex-col items-center justify-center bg-gray-100 py-5"
-    },
-    [
-      _c(
-        "div",
-        {
-          staticClass:
-            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "font-medium self-center text-xl sm:text-2xl uppercase text-primary"
-            },
-            [_vm._v("Password Reset")]
-          ),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-10" }, [
-            _c(
-              "form",
-              {
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.submit($event)
-                  }
-                }
-              },
-              [
-                _c("div", { staticClass: "flex flex-col mb-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass:
-                        "mb-1 text-xs sm:text-sm tracking-wide text-gray-600",
-                      attrs: { for: "email" }
-                    },
-                    [_vm._v("E-Mail Address:")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "relative" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "h-6 w-6",
-                            attrs: {
-                              fill: "none",
-                              "stroke-linecap": "round",
-                              "stroke-linejoin": "round",
-                              "stroke-width": "2",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                d:
-                                  "M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                              }
-                            })
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.email,
-                          expression: "form.email"
-                        }
-                      ],
-                      staticClass:
-                        "text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",
-                      attrs: {
-                        id: "email",
-                        type: "email",
-                        name: "email",
-                        placeholder: "E-Mail Address",
-                        autofocus: ""
-                      },
-                      domProps: { value: _vm.form.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form, "email", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm.$page.errors.email
-                      ? _c(
-                          "p",
-                          { staticClass: " text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.email))]
-                        )
-                      : _vm._e()
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "flex flex-col mb-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass:
-                        "mb-1 text-xs sm:text-sm tracking-wide text-gray-600",
-                      attrs: { for: "password" }
-                    },
-                    [_vm._v("Password:")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "relative" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
-                      },
-                      [
-                        _c("span", [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  d:
-                                    "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                }
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.password,
-                          expression: "form.password"
-                        }
-                      ],
-                      staticClass:
-                        "text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",
-                      attrs: {
-                        id: "password",
-                        type: "password",
-                        name: "password",
-                        placeholder: "Password"
-                      },
-                      domProps: { value: _vm.form.password },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form, "password", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm.$page.errors.password
-                      ? _c(
-                          "p",
-                          { staticClass: " text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.password))]
-                        )
-                      : _vm._e()
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "flex flex-col mb-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass:
-                        "mb-1 text-xs sm:text-sm tracking-wide text-gray-600",
-                      attrs: { for: "password" }
-                    },
-                    [_vm._v("Confirm Password:")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "relative" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
-                      },
-                      [
-                        _c("span", [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  d:
-                                    "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                }
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.password_confirmation,
-                          expression: "form.password_confirmation"
-                        }
-                      ],
-                      staticClass:
-                        "text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",
-                      attrs: {
-                        id: "password",
-                        type: "password",
-                        name: "password_confirmation",
-                        placeholder: "password_confirmation"
-                      },
-                      domProps: { value: _vm.form.password_confirmation },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.form,
-                            "password_confirmation",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm.$page.errors.password_confirmation
-                      ? _c(
-                          "p",
-                          { staticClass: " text-red-500 text-xs italic" },
-                          [
-                            _vm._v(
-                              _vm._s(_vm.$page.errors.password_confirmation)
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "flex w-full" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-700 rounded py-2 w-full transition duration-150 ease-in",
-                      attrs: { type: "submit" }
-                    },
-                    [
-                      _c("span", { staticClass: "mr-2 uppercase" }, [
-                        _vm._v("Reset Password")
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "relative" }, [
-                        _vm.sending
-                          ? _c(
-                              "svg",
-                              {
-                                staticClass:
-                                  "transition  ease-in-out  animate-spin h-5 w-5 ",
-                                attrs: {
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  viewBox: "0 0 20 20",
-                                  fill: "currentColor"
-                                }
-                              },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    "fill-rule": "evenodd",
-                                    d:
-                                      "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                                    "clip-rule": "evenodd"
-                                  }
-                                })
-                              ]
-                            )
-                          : _c(
-                              "svg",
-                              {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  fill: "none",
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  viewBox: "0 0 24 24",
-                                  stroke: "currentColor"
-                                }
-                              },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    d:
-                                      "M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                                  }
-                                })
-                              ]
-                            )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]
-      )
-    ]
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "relative mt-10 h-px bg-gray-300 mb-15" }, [
+    return _c("div", { staticClass: "container" }, [
       _c(
         "div",
         {
-          staticClass: "absolute left-0 top-0 flex justify-center w-full -mt-2"
+          staticClass:
+            "pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark"
         },
         [
           _c(
-            "span",
-            { staticClass: "bg-white px-4 text-xs text-gray-500 uppercase" },
-            [_vm._v("Password Reset Form")]
+            "h2",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"
+            },
+            [_vm._v(" Top Feature Blog")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5"
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "block rounded-lg shadow border border-grey group",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _c("div", {
+                        staticClass:
+                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
+                        staticStyle: {
+                          "background-image": "url(./img/post-05.jpg)"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        _c("div", {
+                          staticClass:
+                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          staticStyle: {
+                            "background-image": "url(./img/blog-author.jpg)"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                          },
+                          [
+                            _c("span", [
+                              _vm._v("By "),
+                              _c("span", { staticClass: "font-hkbold" }, [
+                                _vm._v("Katherine S.")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("02 May 2019")])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                          _c(
+                            "h4",
+                            {
+                              staticClass:
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            },
+                            [
+                              _vm._v(
+                                "\n                                How to make the most of the rest of the year\n                            "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
+                            },
+                            [
+                              _vm._v(
+                                "Read\n                                more"
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "block rounded-lg shadow border border-grey group",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _c("div", {
+                        staticClass:
+                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
+                        staticStyle: {
+                          "background-image": "url(./img/post-04.jpg)"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        _c("div", {
+                          staticClass:
+                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          staticStyle: {
+                            "background-image": "url(./img/blog-author.jpg)"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                          },
+                          [
+                            _c("span", [
+                              _vm._v("By "),
+                              _c("span", { staticClass: "font-hkbold" }, [
+                                _vm._v("Katherine S.")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("03 May 2019")])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                          _c(
+                            "h4",
+                            {
+                              staticClass:
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Looking forward: Planning for the winter’s outfits\n                            "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
+                            },
+                            [
+                              _vm._v(
+                                "Read\n                                more"
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 flex flex-col lg:flex-row justify-between"
+        },
+        [
+          _c("div", { staticClass: "lg:w-2/3" }, [
+            _c(
+              "h2",
+              {
+                staticClass:
+                  "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center lg:text-left"
+              },
+              [_vm._v("\n                Our Blog")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
+              },
+              [
+                _c("div", {
+                  staticClass:
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                    },
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("02 May 2019")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            How to make the most of the rest of the year"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
+              },
+              [
+                _c("div", {
+                  staticClass:
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                    },
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("03 May 2019")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            3 top OOTD to play with while traveling!"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                attrs: { href: "/post" }
+              },
+              [
+                _c("div", {
+                  staticClass:
+                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                  _c("div", {
+                    staticClass:
+                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                    staticStyle: {
+                      "background-image": "url(./img/blog-author.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                    },
+                    [
+                      _c("span", [
+                        _vm._v("By "),
+                        _c("span", { staticClass: "font-hkbold" }, [
+                          _vm._v("Katherine S.")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("04 May 2019")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Looking forward: Planning for the winter’s outfits"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                      },
+                      [_vm._v("Read\n                            more")]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "pt-12 flex justify-center mx-auto" }, [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer"
+                },
+                [_vm._v("Previous")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+                },
+                [_vm._v("1")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+                },
+                [_vm._v("2")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer"
+                },
+                [_vm._v("3")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
+                },
+                [_vm._v("Next")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0"
+            },
+            [
+              _c(
+                "form",
+                { staticClass: "flex items-center w-full mb-16 relative" },
+                [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "block relative h-0 w-0 overflow-hidden",
+                      attrs: { for: "search_form" }
+                    },
+                    [_vm._v("Search")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass:
+                      "form-input   transition-all pr-10 text-grey-darkest text-base",
+                    attrs: {
+                      type: "text",
+                      id: "search_form",
+                      placeholder: "Search the Blog"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "focus:outline-none absolute right-0 top-0 mt-4 mr-3",
+                      attrs: { "aria-label": "Search button" }
+                    },
+                    [_c("i", { staticClass: "bx bx-search text-2xl" })]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "mb-16 text-center sm:text-left" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+                  },
+                  [_vm._v("\n                    Recent Post")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        How to make the most of the rest of the year"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        02 May 2019")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        3 top OOTD to play with while traveling!"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        03 May 2019")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "block mt-8 border-b border-grey-dark pb-5 group",
+                    attrs: { href: "/post" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Looking forward: Planning for the winter’s outfits"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                      },
+                      [_vm._v("\n                        04 May 2019")]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mb-16" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
+                  },
+                  [_vm._v("\n                    Categories")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Stylish Fashion\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("5")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Makeup Tips\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("23")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Traveling Tips\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("45")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Empowerment\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("65")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Instagram\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("32")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Skin Care\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("21")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Hair Care\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("2")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Coming up\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                      },
+                      [_vm._v("11")]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center sm:text-left" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass:
+                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+                  },
+                  [_vm._v("\n                    Follow Us")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "flex justify-center sm:justify-start pt-8" },
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-facebook text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-twitter text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-instagram text-white" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                        attrs: { href: "https://www.google.com" }
+                      },
+                      [_c("i", { staticClass: "bx bxl-pinterest text-white" })]
+                    )
+                  ]
+                )
+              ])
+            ]
           )
         ]
       )
@@ -874,18 +1844,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/ResetPassword.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/Pages/Auth/ResetPassword.vue ***!
-  \***************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Blog/Index.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Blog/Index.vue ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ResetPassword.vue?vue&type=template&id=1da614ac& */ "./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac&");
-/* harmony import */ var _ResetPassword_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ResetPassword.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=35a14b50& */ "./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -894,9 +1864,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ResetPassword_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -906,38 +1876,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Auth/ResetPassword.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/Blog/Index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ResetPassword_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ResetPassword.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ResetPassword_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50& ***!
+  \***********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ResetPassword.vue?vue&type=template&id=1da614ac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Auth/ResetPassword.vue?vue&type=template&id=1da614ac&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=35a14b50& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Blog/Index.vue?vue&type=template&id=35a14b50&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ResetPassword_vue_vue_type_template_id_1da614ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_35a14b50___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
