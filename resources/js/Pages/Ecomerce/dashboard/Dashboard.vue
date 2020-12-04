@@ -46,7 +46,7 @@
                     <span class="font-hkbold text-secondary text-sm uppercase text-center pt-3 pb-2 block sm:hidden">Price</span>
                     <span class="font-hkregular text-secondary">${{HistoryItem.Price}}</span>
                 </div>
-                <inertia-link :href="route('shop.product',HistoryItem.ProductSlug)" class="px-4 py-3 inline-block rounded font-hkregular bg-v-blue-light border border-v-blue text-v-blue hover:bg-blue-400 hover:text-white hover:border-white "">
+                <inertia-link :href="route('shop.show',HistoryItem.ProductSlug)" class="px-4 py-3 inline-block rounded font-hkregular bg-v-blue-light border border-v-blue text-v-blue hover:bg-blue-400 hover:text-white hover:border-white "">
                     <span>Buy Again</span>
                 </inertia-link>                                     
             </div>

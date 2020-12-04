@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                    <inertia-link :href="route('shop.product',OrderItem.ProductSlug)">
+                    <inertia-link :href="route('shop.show',OrderItem.ProductSlug)">
                         <span class="transition duration-500 ease-in-out hover:text-blue-600  font-hkregular text-primary text-base mt-2 text-lg text-bold  ">{{OrderItem.ProductName}}</span>
                     </inertia-link>
                 </div>
