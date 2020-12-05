@@ -51,8 +51,52 @@
                         :error="$page.errors.title"
                         label='Title'    
                         :labelRequire='true'    
-                            placeholder="Title" />                            
+                    placeholder="Title" />                            
 
+
+                    <div class="flex flex-wrap -mx-3 mb-2">
+
+                        <select-input 
+                            v-model="form.is_active" 
+                            class="w-full md:w-1/3 px-3  md:mb-0 "  
+                            :fixedClasses="'right-3 z-20'"
+                            :error="$page.errors.is_active"
+                            label='Status'    
+                            :labelRequire='true'>
+                        <option :value="0">Disable</option>
+                        <option :value="1">Active</option>                        
+                        </select-input> 
+
+                        <select-input
+                            v-model="form.is_featured" 
+                            class="w-full md:w-1/3 px-3  md:mb-0 "  
+                            :fixedClasses="'right-3 z-20'"
+                            :error="$page.errors.is_featured"
+                            label='Featured'    
+                            :labelRequire='true'>
+                        <option :value="0">No</option>
+                        <option :value="1">YES</option>                        
+                        </select-input> 
+
+
+                        <div class="w-full md:w-1/3  px-3  md:mb-0  mt-2 relative"> 
+                            <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Category</label>
+                            <multiselect    
+                                :class="'py-2'"
+                                v-model="form.category" 
+                                deselect-label="Can't remove this value" 
+                                track-by="name"  
+                                label="name" 
+                                placeholder="Select Category" 
+                                :options="Categories" 
+                                :searchable="false" 
+                                :allow-empty="true">
+                            </multiselect>   
+                            <p class="text-red-500 text-xs italic" v-if="$page.errors.category">{{$page.errors.category}}</p>
+                        </div>                          
+
+ 
+                    </div>    
                     
                     <div class="mt-2 relative">
 
@@ -86,6 +130,8 @@ import AppLayout from './../Layouts/AppLayout'
 import LoadingButton from './../../Shared/LoadingButton'   
 import TextInput from './../../Shared/TextInput'   
 import FileInput from './../../Shared/FileInput' 
+import SelectInput from './../../Shared/SelectInput' 
+import Multiselect from 'vue-multiselect'
 
 import { VueEditor } from "vue2-editor";
 
@@ -96,7 +142,9 @@ export default {
         VueEditor,
         LoadingButton,
         TextInput,
-        FileInput
+        FileInput,
+        SelectInput,
+        Multiselect,
     },
 
     data() {
@@ -105,6 +153,9 @@ export default {
                 title:null,
                 body:null,
                 image:null,
+                is_active:1,
+                is_featured:0,            
+                category:null,            
             },
             sending:false,
         };
@@ -132,7 +183,11 @@ export default {
             });
         }, 
     },           
-
+    computed: {
+        Categories(){
+            return this.$page.Categories;
+        },        
+    },
 
 };
 </script>

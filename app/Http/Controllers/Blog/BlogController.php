@@ -16,7 +16,12 @@ class BlogController extends Controller
      */
     public function index()
     {  
-        return Inertia::render('Ecomerce/Blog/Index');  
+        $blog = new Blog;
+ 
+        $Blogs = $blog->latest()->paginate('5');
+        $FeaturedBlogs = $Blogs->random(2); 
+ 
+        return Inertia::render('Ecomerce/Blog/Index',compact('Blogs','FeaturedBlogs'));  
     }
 
     /**
@@ -26,7 +31,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return back();
     }
 
     /**
@@ -61,8 +66,9 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Blog $blog)
-    {
-        $blog->load('user');
+    { 
+        $blog->load('user'); 
+        $blog->body =  json_decode($blog->body,true);
         return Inertia::render('Ecomerce/Blog/Show',compact('blog'));
     }
 
@@ -74,6 +80,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     { 
+        return back();
     }
 
     /**
@@ -85,7 +92,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        return  back();
     }
 
     /**
@@ -96,6 +103,6 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        return back();
     }
 }

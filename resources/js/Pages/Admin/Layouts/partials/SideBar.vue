@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-screen  lg:hidden z-50" v-if="sideBarOpen" @click="sideBarOpen = false" ></div>
+  <div class="bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-full  lg:hidden z-50" v-if="sideBarOpen" @click="sideBarOpen = false" ></div>
 
       <div class="w-1/2 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-screen lg:block bg-gray-100 border-r  border-gray-300 z-50" :class="sideBarOpen ? '' : 'hidden'" id="main-nav">
       

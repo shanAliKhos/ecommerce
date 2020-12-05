@@ -4,7 +4,6 @@
 
     <div class="pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark">
         <h2 class="font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"> Top Feature Blog</h2>
-
         <div class="flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5">
 
             <div class="md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10">
@@ -374,5 +373,14 @@ export default {
         const self = this
         self.$root.$emit('sidebar-close');     
     },
+
+    computed:{
+        Blogs(){
+            return this.$page.Blogs;
+        },
+        FeaturedBrands(){
+            return this.$page.FeaturedBlogs;
+        },
+    }, 
 }
 </script>

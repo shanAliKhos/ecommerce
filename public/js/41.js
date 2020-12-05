@@ -1,1 +1,489 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[41,88,116,122,123,124,125,129],{0:function(t,e,s){"use strict";function a(t,e,s,a,i,n,r,l){var o,p="function"==typeof t?t.options:t;if(e&&(p.render=e,p.staticRenderFns=s,p._compiled=!0),a&&(p.functional=!0),n&&(p._scopeId="data-v-"+n),r?(o=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),i&&i.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(r)},p._ssrRegister=o):i&&(o=l?function(){i.call(this,(p.functional?this.parent:this).$root.$options.shadowRoot)}:i),o)if(p.functional){p._injectStyles=o;var c=p.render;p.render=function(t,e){return o.call(e),c(t,e)}}else{var u=p.beforeCreate;p.beforeCreate=u?[].concat(u,o):[o]}return{exports:t,options:p}}s.d(e,"a",(function(){return a}))},15:function(t,e,s){"use strict";s.r(e);var a={components:{JetSectionTitle:s(38).default},computed:{hasActions:function(){return!!this.$slots.actions}}},i=s(0),n=Object(i.a)(a,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"md:grid md:grid-cols-3 md:gap-6"},[s("jet-section-title",{scopedSlots:t._u([{key:"title",fn:function(){return[t._t("title")]},proxy:!0},{key:"description",fn:function(){return[t._t("description")]},proxy:!0}],null,!0)}),t._v(" "),s("div",{staticClass:"mt-5 md:mt-0 md:col-span-2"},[s("form",{on:{submit:function(e){return e.preventDefault(),t.$emit("submitted")}}},[s("div",{staticClass:"shadow overflow-hidden sm:rounded-md"},[s("div",{staticClass:"px-4 py-5 bg-white sm:p-6"},[s("div",{staticClass:"grid grid-cols-6 gap-6"},[t._t("form")],2)]),t._v(" "),t.hasActions?s("div",{staticClass:"flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"},[t._t("actions")],2):t._e()])])])],1)}),[],!1,null,null,null);e.default=n.exports},2:function(t,e,s){"use strict";s.r(e);var a={props:{loading:Boolean}},i=s(0),n=Object(i.a)(a,(function(){var t=this.$createElement,e=this._self._c||t;return e("button",this._b({staticClass:"flex items-center uppercase",attrs:{disabled:this.loading}},"button",this.$attrs,!1),[this.loading?e("svg",{staticClass:"transition  ease-in-out  animate-spin h-5 w-5 mr-1",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[e("path",{attrs:{"fill-rule":"evenodd",d:"M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z","clip-rule":"evenodd"}})]):this._e(),this._v(" "),this._t("default")],2)}),[],!1,null,null,null);e.default=n.exports},38:function(t,e,s){"use strict";s.r(e);var a=s(0),i=Object(a.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"md:col-span-1"},[e("div",{staticClass:"px-4 sm:px-0"},[e("h3",{staticClass:"text-lg font-medium text-gray-900 uppercase"},[this._t("title")],2),this._v(" "),e("p",{staticClass:"mt-1 text-sm text-gray-600"},[this._t("description")],2)])])}),[],!1,null,null,null);e.default=i.exports},5:function(t,e,s){"use strict";s.r(e);var a={inheritAttrs:!1,props:{id:{type:String,default:function(){return"text-input-".concat(this._uid)}},type:{type:String,default:"text"},value:null,label:String,error:String,labelRequire:{type:Boolean,default:!1},fixedClasses:{type:String,default:"right-0"}},methods:{focus:function(){this.$refs.input.focus()},select:function(){this.$refs.input.select()},setSelectionRange:function(t,e){this.$refs.input.setSelectionRange(t,e)}}},i=s(0),n=Object(i.a)(a,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"mt-2 relative"},[t.label?s("label",{staticClass:"absolute top-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",class:t.fixedClasses,attrs:{for:t.id}},[t._v(t._s(t.label)),t.labelRequire?s("span",{staticClass:"text-red-500"},[t._v(" *")]):t._e()]):t._e(),t._v(" "),s("input",t._b({ref:"input",staticClass:"w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",attrs:{id:t.id,type:t.type,"aria-label":t.label},domProps:{value:t.value},on:{input:function(e){return t.$emit("input",e.target.value)}}},"input",t.$attrs,!1)),t._v(" "),t.error?s("p",{staticClass:"absolute bottom-0 text-red-500 text-xs italic",class:t.fixedClasses},[t._v(t._s(t.error))]):t._e()])}),[],!1,null,null,null);e.default=n.exports},6:function(t,e,s){"use strict";s.r(e);var a=s(0),i=Object(a.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"hidden sm:block"},[e("div",{staticClass:"py-8"},[e("div",{staticClass:"border-t border-gray-200"})])])}],!1,null,null,null);e.default=i.exports},7:function(t,e,s){"use strict";s.r(e);var a={inheritAttrs:!1,props:{id:{type:String,default:function(){return"select-input-".concat(this._uid)}},value:[String,Number,Boolean],label:String,error:String,labelRequire:{type:Boolean,default:!1},fixedClasses:{type:String,default:"right-0"}},data:function(){return{selected:this.value}},watch:{selected:function(t){this.$emit("input",t)}},methods:{focus:function(){this.$refs.input.focus()},select:function(){this.$refs.input.select()}}},i=s(0),n=Object(i.a)(a,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"mt-2 relative"},[t.label?s("label",{staticClass:"absolute top-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",class:t.fixedClasses,attrs:{for:t.id}},[t._v(t._s(t.label)),t.labelRequire?s("span",{staticClass:"text-red-500"},[t._v(" *")]):t._e()]):t._e(),t._v(" "),s("div",{staticClass:"relative"},[s("select",t._b({directives:[{name:"model",rawName:"v-model",value:t.selected,expression:"selected"}],ref:"input",staticClass:"focus:bg-white block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-4 px-4 pr-8 rounded leading-tight shadow focus:outline-none focus:shadow-outline",attrs:{id:t.id},on:{change:function(e){var s=Array.prototype.filter.call(e.target.options,(function(t){return t.selected})).map((function(t){return"_value"in t?t._value:t.value}));t.selected=e.target.multiple?s:s[0]}}},"select",t.$attrs,!1),[t._t("default")],2),t._v(" "),s("div",{staticClass:"pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700",class:{"mt-5":t.label}},[s("svg",{staticClass:"fill-current h-4 w-4",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20"}},[s("path",{attrs:{d:"M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"}})])])]),t._v(" "),t.error?s("p",{staticClass:"absolute bottom-0 text-red-500 text-xs italic",class:t.fixedClasses},[t._v(t._s(t.error))]):t._e()])}),[],!1,null,null,null);e.default=n.exports},72:function(t,e,s){"use strict";s.r(e);var a=s(5),i=s(7),n=s(2),r=s(15),l=s(6),o={components:{TextInput:a.default,SelectInput:i.default,LoadingButton:n.default,FormSection:r.default,SectionBorder:l.default},props:{settings:Object},data:function(){return{form:{stripe_payment_method:this.settings&&this.settings.stripe_payment_method?this.settings.stripe_payment_method:0,stripe_key:this.settings?this.settings.stripe_key:null,stripe_secret_key:this.settings?this.settings.stripe_secret_key:null,paypal_payment_method:this.settings&&this.settings.paypal_payment_method?this.settings.paypal_payment_method:0,paypal_client_id:this.settings?this.settings.paypal_client_id:null,paypal_secret_id:this.settings?this.settings.paypal_secret_id:null},sending:!1}},methods:{update:function(){var t=new FormData;t.append("stripe_payment_method",this.form.stripe_payment_method||""),t.append("stripe_key",this.form.stripe_key||""),t.append("stripe_secret_key",this.form.stripe_secret_key||""),t.append("paypal_payment_method",this.form.paypal_payment_method||""),t.append("paypal_client_id",this.form.paypal_client_id||""),t.append("paypal_secret_id",this.form.paypal_secret_id||""),t.append("_method","put"),this.$emit("form-is-updated",t),this.sending=!0}},mounted:function(){var t=this;this.$root.$on("sending-finished",(function(){return t.sending=!1}))}},p=s(0),c=Object(p.a)(o,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("form-section",{on:{submitted:t.update},scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n        PAYMENTS\n    ")]},proxy:!0},{key:"description",fn:function(){return[t._v("\n        Update your Paymeny account's General information and Option.\n    ")]},proxy:!0},{key:"form",fn:function(){return[s("p",{staticClass:"text-lg text-gray-800 font-bold pb-4 col-span-6"},[t._v("Stripe")]),t._v(" "),s("select-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full",attrs:{fixedClasses:"right-0 z-20",error:t.$page.errors.stripe_payment_method,label:"stripe_payment_method",labelRequire:!0},model:{value:t.form.stripe_payment_method,callback:function(e){t.$set(t.form,"stripe_payment_method",e)},expression:"form.stripe_payment_method"}},[s("option",{domProps:{value:0}},[t._v("Disable")]),t._v(" "),s("option",{domProps:{value:1}},[t._v("Active")])]),t._v(" "),s("text-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full p-1",attrs:{id:"stripe_key",type:"text",error:t.$page.errors.stripe_key,label:"stripe_key",labelRequire:!0,placeholder:"stripe_key","aria-label":"stripe_key"},model:{value:t.form.stripe_key,callback:function(e){t.$set(t.form,"stripe_key",e)},expression:"form.stripe_key"}}),t._v(" "),s("text-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full p-1",attrs:{id:"stripe_secret_key",type:"text",error:t.$page.errors.stripe_secret_key,label:"stripe_secret_key",labelRequire:!0,placeholder:"stripe_secret_key","aria-label":"stripe_secret_key"},model:{value:t.form.stripe_secret_key,callback:function(e){t.$set(t.form,"stripe_secret_key",e)},expression:"form.stripe_secret_key"}}),t._v(" "),s("SectionBorder",{staticClass:"col-span-6"}),t._v(" "),s("p",{staticClass:"text-lg text-gray-800 font-bold pb-4 col-span-6"},[t._v("PayPal")]),t._v(" "),s("select-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full",attrs:{fixedClasses:"right-0 z-20",error:t.$page.errors.paypal_payment_method,label:"paypal_payment_method",labelRequire:!0},model:{value:t.form.paypal_payment_method,callback:function(e){t.$set(t.form,"paypal_payment_method",e)},expression:"form.paypal_payment_method"}},[s("option",{domProps:{value:0}},[t._v("Disable")]),t._v(" "),s("option",{domProps:{value:1}},[t._v("Active")])]),t._v(" "),s("text-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full",attrs:{id:"paypal_client_id",type:"text",error:t.$page.errors.paypal_client_id,label:"paypal_client_id",labelRequire:!0,placeholder:"paypal_client_id","aria-label":"paypal_client_id"},model:{value:t.form.paypal_client_id,callback:function(e){t.$set(t.form,"paypal_client_id",e)},expression:"form.paypal_client_id"}}),t._v(" "),s("text-input",{staticClass:"col-span-6 sm:col-span-6 mt-1 block w-full",attrs:{id:"paypal_secret_id",type:"text",error:t.$page.errors.paypal_secret_id,label:"paypal_secret_id",labelRequire:!0,placeholder:"paypal_secret_id","aria-label":"paypal_secret_id"},model:{value:t.form.paypal_secret_id,callback:function(e){t.$set(t.form,"paypal_secret_id",e)},expression:"form.paypal_secret_id"}})]},proxy:!0},{key:"actions",fn:function(){return[s("loading-button",{staticClass:"transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",attrs:{loading:t.sending,type:"submit",as:"button"}},[t._v("\n            Save\n                "),t.sending?t._e():s("svg",{staticClass:"transition duration-700 ease-in-out  h-5 w-5 ml-2",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[s("path",{attrs:{"fill-rule":"evenodd",d:"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z","clip-rule":"evenodd"}})])])]},proxy:!0}])})}),[],!1,null,null,null);e.default=c.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[41],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero-slider', {
+      autoplay: 3000,
+      type: 'carousel'
+    }).mount();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-slider relative shadow-lg" }, [
+      _c(
+        "div",
+        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+        [
+          _c("div", { staticClass: "glide__slides" }, [
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image":
+                      "url(./img/main-slider/hero-slide-01.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Store New Men’s Outdoor Collection\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "javascript:;" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image":
+                      "url(./img/main-slider/hero-slide-02.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Blake by Store "
+                          ),
+                          _c("br"),
+                          _vm._v(" 30% off\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "javascript:;" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image":
+                      "url(./img/main-slider/hero-slide-03.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Hoodie your way! "
+                          ),
+                          _c("br"),
+                          _vm._v(" For Men\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "javascript:;" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image":
+                      "url(./img/main-slider/hero-slide-04.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Match and play Women’s Dresses\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "javascript:;" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                  staticStyle: {
+                    "background-image":
+                      "url(./img/main-slider/hero-slide-05.jpg)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                    },
+                    [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Back to school, "
+                          ),
+                          _c("br"),
+                          _vm._v(" the stylish way\n                        ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-lg mt-8",
+                          attrs: { href: "javascript:;" }
+                        },
+                        [_vm._v("Know more")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "absolute bottom-0 inset-x-0 mb-6 z-30 text-center",
+          attrs: { "data-glide-el": "controls[nav]" }
+        },
+        [
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=0" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=1" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=2" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=3" }
+          }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass:
+              "inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full focus:outline-none cursor-pointer",
+            attrs: { "data-glide-dir": "=4" }
+          })
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeroSlider.vue?vue&type=template&id=d40f2dac& */ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac&");
+/* harmony import */ var _HeroSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeroSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _HeroSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./HeroSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./HeroSlider.vue?vue&type=template&id=d40f2dac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue?vue&type=template&id=d40f2dac&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroSlider_vue_vue_type_template_id_d40f2dac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

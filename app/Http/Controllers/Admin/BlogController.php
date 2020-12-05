@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
@@ -27,14 +28,17 @@ class BlogController extends Controller
  
     public function create()
     {
+        
+        $Category = new Category;
+        $Categories = $Category->all();
 
-        return Inertia::render('Admin/blog/Create');
-  
+        return Inertia::render('Admin/blog/Create',compact('Categories'));
     }
 
  
     public function store(Request $request)
     { 
+        dd($request->all());
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
@@ -50,7 +54,7 @@ class BlogController extends Controller
         }             
         
         $Blog->title = $request->title;
-        $Blog->body = $request->body;
+        $Blog->body = json_encode($request->body);
         $Blog->user_id = Auth()->user()->id;
         $Blog->save();
 
@@ -65,7 +69,8 @@ class BlogController extends Controller
 
  
     public function edit(Blog $blog)
-    { 
+    {  
+        $blog->body =  json_decode($blog->body,true);
         return Inertia::render('Admin/blog/Edit',compact('blog'));        
     }
 
@@ -101,7 +106,7 @@ class BlogController extends Controller
 
         $blog->update([
             'title' => $request->title, 
-            'body' =>$request->body,
+            'body' => json_encode($request->body,true),
             'user_id' => Auth()->user()->id,
         ]);        
             
