@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[68],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12,32 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
 /* harmony import */ var _YourOrder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YourOrder */ "./resources/js/Pages/Ecomerce/Cart/YourOrder.vue");
 /* harmony import */ var _PaymentForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentForm */ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -123,33 +97,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      form: {
-        shipment_type: 'Normal 3 days delivery'
-      },
       sending: false
     };
   },
   computed: {
     CustomerInformation: function CustomerInformation() {
       return this.$page.CustomerInformation;
-    }
-  },
-  methods: {
-    store: function store() {
-      var _this = this;
-
-      var self = this;
-      var formData = new FormData();
-      formData.append("shipment_type", self.form.shipment_type || '');
-      self.$inertia.post(this.route('cart.ShippingMethodStore'), formData, {
-        preserveState: true,
-        onStart: function onStart() {
-          return _this.sending = true;
-        },
-        onFinish: function onFinish() {
-          return _this.sending = false;
-        }
-      });
+    },
+    ShipmentInformation: function ShipmentInformation() {
+      return this.$page.ShipmentInformation;
     }
   }
 });
@@ -278,21 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Partials/AppHeader */ "./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue");
 /* harmony import */ var _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Partials/AppFooter */ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue");
 /* harmony import */ var _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Shared/FlashMessage */ "./resources/js/Pages/Shared/FlashMessage.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _Messenger_Support__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Messenger/Support */ "./resources/js/Pages/Messenger/Support.vue");
 //
 //
 //
@@ -329,26 +271,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
- // import DialogModal from './../../Shared/DialogModal'  
-// import SecondaryButton from './../../Shared/SecondaryButton'  
-// import LoginForm from './../../Auth/Login'  
-// import FlashMessage from './Partials/components/FlashMessage'  
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     AppHeader: _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"] // DialogModal,
-    // LoginForm,
-    // SecondaryButton,
-
-  } // data() {
-  //     return {
-  //         LoginModal:true,
-  //     }
-  // }, 
-
+    FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Support: _Messenger_Support__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }
 });
 
 /***/ }),
@@ -399,10 +331,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3& ***!
-  \**************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa& ***!
+  \*************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -429,78 +361,47 @@ var render = function() {
             "div",
             {
               staticClass:
-                "mt-10 md:mt-12 border border-grey-darker rounded px-4 sm:px-5"
+                "mt-10 md:mt-12 border border-grey-darker rounded px-4 sm:px-5 py-3"
             },
             [
               _c(
                 "div",
-                {
-                  staticClass:
-                    "flex justify-between py-2 border-b border-grey-dark"
-                },
+                { staticClass: "flex pb-2 border-b border-grey-dark" },
                 [
                   _vm._m(1),
                   _vm._v(" "),
                   _c("div", { staticClass: "w-3/5" }, [
                     _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                      _vm._v(
-                        _vm._s(
-                          _vm.CustomerInformation
-                            ? _vm.CustomerInformation.email
-                            : ""
-                        )
-                      )
+                      _vm._v(_vm._s(_vm.CustomerInformation.email))
                     ])
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "w-1/5 text-right" },
-                    [
-                      _c(
-                        "inertia-link",
-                        {
-                          staticClass: "font-hkregular text-primary underline",
-                          attrs: { href: _vm.route("cart.CustomerInfomation") }
-                        },
-                        [_vm._v("Change")]
-                      )
-                    ],
-                    1
-                  )
+                  _vm._m(2)
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "flex justify-between py-2" }, [
-                _vm._m(2),
+              _c(
+                "div",
+                { staticClass: "flex pt-2 pb-2 border-b border-grey-dark" },
+                [
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "w-3/5" }, [
+                    _c("p", { staticClass: "font-hkregular text-secondary" }, [
+                      _vm._v(_vm._s(_vm.CustomerInformation.address))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4)
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex pt-2" }, [
+                _vm._m(5),
                 _vm._v(" "),
-                _c("div", { staticClass: "w-3/5" }, [
-                  _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                    _vm._v(
-                      _vm._s(
-                        _vm.CustomerInformation
-                          ? _vm.CustomerInformation.address
-                          : ""
-                      )
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "w-1/5 text-right" },
-                  [
-                    _c(
-                      "inertia-link",
-                      {
-                        staticClass: "font-hkregular text-primary underline",
-                        attrs: { href: _vm.route("cart.CustomerInfomation") }
-                      },
-                      [_vm._v("Change")]
-                    )
-                  ],
-                  1
-                )
+                _c("p", { staticClass: "font-hkregular text-secondary" }, [
+                  _vm._v(_vm._s(_vm.ShipmentInformation.shipment_type))
+                ])
               ])
             ]
           ),
@@ -512,73 +413,21 @@ var render = function() {
                 staticClass:
                   "font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
               },
-              [_vm._v("Shipping Type ")]
+              [_vm._v("Payment method")]
             ),
+            _vm._v(" "),
+            _c("p", { staticClass: "font-hkregular text-secondary pt-2" }, [
+              _vm._v("All transactionsare secure and encrypted")
+            ]),
             _vm._v(" "),
             _c(
               "div",
               {
                 staticClass:
-                  "mt-5 md:mt-6 border border-grey-darker rounded px-4 sm:px-5"
+                  "mt-6 border border-grey-darker rounded px-4 sm:px-5 py-3"
               },
-              [
-                _c("div", { staticClass: "flex justify-between py-2" }, [
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block relative h-0 w-0 overflow-hidden",
-                        attrs: { for: "shipping_normal" }
-                      },
-                      [_vm._v("Normal 3 days delivery")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.shipment_type,
-                          expression: "form.shipment_type"
-                        }
-                      ],
-                      staticClass: "form-checkbox",
-                      attrs: {
-                        type: "radio",
-                        value: "Normal 3 days delivery",
-                        id: "shipping_normal"
-                      },
-                      domProps: {
-                        checked: _vm._q(
-                          _vm.form.shipment_type,
-                          "Normal 3 days delivery"
-                        )
-                      },
-                      on: {
-                        change: function($event) {
-                          return _vm.$set(
-                            _vm.form,
-                            "shipment_type",
-                            "Normal 3 days delivery"
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "ml-3 font-hkregular text-secondary" },
-                      [_vm._v(" Normal 3 days delivery")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    { staticClass: "font-hkregular uppercase text-secondary" },
-                    [_vm._v("FREE")]
-                  )
-                ])
-              ]
+              [_c("PaymentForm")],
+              1
             )
           ]),
           _vm._v(" "),
@@ -606,79 +455,6 @@ var render = function() {
                   }),
                   _vm._v(
                     "\n                    Return to Cart\n                "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-3"
-                },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
-                      attrs: { type: "button" },
-                      on: { click: _vm.store }
-                    },
-                    [
-                      _vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      !_vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "transition duration-700 ease-in-out  h-5 w-5 mr-2",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(
-                        "                                   \n                        Continue to payment method\n                    "
-                      )
-                    ]
                   )
                 ]
               )
@@ -760,7 +536,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/5" }, [
+    return _c("div", { staticClass: "w-1/5 " }, [
       _c("p", { staticClass: "font-hkregular text-secondary" }, [
         _vm._v("Contact")
       ])
@@ -770,9 +546,49 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/5" }, [
+    return _c("div", { staticClass: "w-1/5 text-right" }, [
+      _c(
+        "a",
+        {
+          staticClass: "font-hkregular text-primary underline",
+          attrs: { href: "/cart/customer-info" }
+        },
+        [_vm._v("Change")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/5 " }, [
       _c("p", { staticClass: "font-hkregular text-secondary" }, [
         _vm._v("Ship to")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/5 text-right" }, [
+      _c(
+        "a",
+        {
+          staticClass: "font-hkregular text-primary underline",
+          attrs: { href: "/cart/customer-info" }
+        },
+        [_vm._v("Change")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/5 " }, [
+      _c("p", { staticClass: "font-hkregular text-secondary" }, [
+        _vm._v("Method")
       ])
     ])
   }
@@ -985,6 +801,8 @@ var render = function() {
         1
       ),
       _vm._v(" "),
+      _c("div", [_c("Support")], 1),
+      _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),
       _c("portal-target", { attrs: { name: "modal", multiple: "" } }),
@@ -1025,17 +843,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue ***!
-  \*************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShippingMethod.vue?vue&type=template&id=55eef4e3& */ "./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3&");
-/* harmony import */ var _ShippingMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShippingMethod.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js&");
+/* harmony import */ var _PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PaymentMethod.vue?vue&type=template&id=219b16fa& */ "./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa&");
+/* harmony import */ var _PaymentMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentMethod.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1045,9 +863,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ShippingMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _PaymentMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1057,38 +875,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ShippingMethod.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentMethod.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentMethod_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3& ***!
-  \********************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa& ***!
+  \*******************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ShippingMethod.vue?vue&type=template&id=55eef4e3& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue?vue&type=template&id=55eef4e3&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentMethod.vue?vue&type=template&id=219b16fa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue?vue&type=template&id=219b16fa&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingMethod_vue_vue_type_template_id_55eef4e3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentMethod_vue_vue_type_template_id_219b16fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
