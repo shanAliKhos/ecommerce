@@ -102,6 +102,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -430,7 +437,25 @@ var render = function() {
               )
             }),
             _vm._v(" "),
-            _vm._m(0)
+            !_vm.Blogs.length > 0
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10 mt-10"
+                  },
+                  [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"
+                      },
+                      [_vm._v(" No Record Found")]
+                    )
+                  ]
+                )
+              : _vm._e()
           ],
           2
         ),
@@ -468,160 +493,132 @@ var render = function() {
             staticClass:
               "flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5"
           },
-          _vm._l(_vm.FeaturedBlogs, function(FeaturedBlog, FeaturedBlogindex) {
-            return _c(
-              "div",
-              {
-                key: FeaturedBlogindex,
-                staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10"
-              },
-              [
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass:
-                      "block rounded-lg shadow border border-grey group",
-                    attrs: { href: _vm.route("blog.show", FeaturedBlog.id) }
-                  },
-                  [
-                    _c("div", {
+          [
+            _vm._l(_vm.FeaturedBlogs, function(
+              FeaturedBlog,
+              FeaturedBlogindex
+            ) {
+              return _c(
+                "div",
+                {
+                  key: FeaturedBlogindex,
+                  staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10"
+                },
+                [
+                  _c(
+                    "inertia-link",
+                    {
                       staticClass:
-                        "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
-                      style:
-                        "background-image:url(" + FeaturedBlog.photo_url + ")"
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        "block rounded-lg shadow border border-grey group",
+                      attrs: { href: _vm.route("blog.show", FeaturedBlog.id) }
+                    },
+                    [
                       _c("div", {
                         staticClass:
-                          "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
                         style:
-                          "background-image:url(" +
-                          FeaturedBlog.user.profile_photo_url +
-                          ")"
+                          "background-image:url(" + FeaturedBlog.photo_url + ")"
                       }),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
+                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                        _c("div", {
                           staticClass:
-                            "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                        },
-                        [
-                          _c("span", [
-                            _vm._v("By "),
-                            _c("span", { staticClass: "font-hkbold" }, [
-                              _vm._v(_vm._s(FeaturedBlog.user.name))
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v(_vm._s(FeaturedBlog.created_at))])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                          style:
+                            "background-image:url(" +
+                            FeaturedBlog.user.profile_photo_url +
+                            ")"
+                        }),
+                        _vm._v(" "),
                         _c(
-                          "h4",
+                          "div",
                           {
                             staticClass:
-                              "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
-                          },
-                          [_vm._v(_vm._s(FeaturedBlog.title))]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "span",
-                          {
-                            staticClass:
-                              "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
                           },
                           [
-                            _c("i", {
-                              staticClass:
-                                "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
-                            })
+                            _c("span", [
+                              _vm._v("By "),
+                              _c("span", { staticClass: "font-hkbold" }, [
+                                _vm._v(_vm._s(FeaturedBlog.user.name))
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v(_vm._s(FeaturedBlog.created_at))
+                            ])
                           ]
                         ),
                         _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass:
-                              "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
-                          },
-                          [_vm._v("Read more")]
-                        )
+                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
+                          _c(
+                            "h4",
+                            {
+                              staticClass:
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            },
+                            [_vm._v(_vm._s(FeaturedBlog.title))]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
+                            },
+                            [_vm._v("Read more")]
+                          )
+                        ])
                       ])
-                    ])
+                    ]
+                  )
+                ],
+                1
+              )
+            }),
+            _vm._v(" "),
+            !_vm.FeaturedBlogs.length > 0
+              ? _c(
+                  "div",
+                  { staticClass: "w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10 " },
+                  [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"
+                      },
+                      [_vm._v(" No Record Found")]
+                    )
                   ]
                 )
-              ],
-              1
-            )
-          }),
-          0
+              : _vm._e()
+          ],
+          2
         )
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pt-12 flex justify-center mx-auto" }, [
-      _c(
-        "span",
-        {
-          staticClass:
-            "font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer"
-        },
-        [_vm._v("Previous")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
-        },
-        [_vm._v("1")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
-        },
-        [_vm._v("2")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer"
-        },
-        [_vm._v("3")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
-        },
-        [_vm._v("Next")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

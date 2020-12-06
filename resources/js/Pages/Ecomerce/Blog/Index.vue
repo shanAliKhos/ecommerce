@@ -36,9 +36,12 @@
                 </div>
             </inertia-link>
 
+            <div v-if="(!Blogs.length > 0)" class="w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10 mt-10"> 
+                <h4 class="font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"> No Record Found</h4> 
+            </div>
           
 
-            <div class="pt-12 flex justify-center mx-auto">
+            <!-- <div class="pt-12 flex justify-center mx-auto">
                 <span
                     class="font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer">Previous</span>
                 <span
@@ -48,7 +51,7 @@
                 <span
                     class=" font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer">Next</span>
 
-            </div>
+            </div> -->
         </div>
         <div class="w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0">
 
@@ -83,6 +86,10 @@
                     </div>
                 </inertia-link>
             </div>
+            <div v-if="(!FeaturedBlogs.length > 0)" class="w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10 "> 
+                <h4 class="font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"> No Record Found</h4> 
+            </div>
+
 
         </div>
     </div>    
