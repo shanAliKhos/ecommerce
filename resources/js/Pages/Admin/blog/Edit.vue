@@ -152,7 +152,7 @@ export default {
 
     },
 
-    remeber:form,
+    remeber:'form',
 
     data() {
         return {

@@ -168,7 +168,7 @@ __webpack_require__.r(__webpack_exports__);
     SelectInput: _Shared_SelectInput__WEBPACK_IMPORTED_MODULE_4__["default"],
     Multiselect: vue_multiselect__WEBPACK_IMPORTED_MODULE_5___default.a
   },
-  remeber: form,
+  remeber: 'form',
   data: function data() {
     return {
       form: {
