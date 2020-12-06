@@ -168,6 +168,9 @@ export default {
             formData.append("title", self.form.title || '');
             formData.append("body", self.form.body || '');
             formData.append("image", self.form.image || '');
+            formData.append("is_active", self.form.is_active || 0);
+            formData.append("is_featured", self.form.is_featured || 0);
+            formData.append("category_id", self.form.category?self.form.category.id:null || '');
  
             self.$inertia.post(route('admin.blog.store'), formData,{
                 preserveState: true,           

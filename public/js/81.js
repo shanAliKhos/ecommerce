@@ -113,188 +113,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -519,7 +337,7 @@ var render = function() {
             staticClass:
               "font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center"
           },
-          [_vm._v("\n            Related Post\n        ")]
+          [_vm._v(" Related Post ")]
         ),
         _vm._v(" "),
         _c(
@@ -530,7 +348,7 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n            For powerful features, great design and support from the developer.\n        "
+              " For powerful features, great design and support from the developer."
             )
           ]
         ),
@@ -639,7 +457,7 @@ var staticRenderFns = [
               staticClass:
                 "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
             },
-            [_vm._v("\n                        Recent Post")]
+            [_vm._v("Recent Post")]
           ),
           _vm._v(" "),
           _c(
@@ -655,11 +473,7 @@ var staticRenderFns = [
                   staticClass:
                     "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
                 },
-                [
-                  _vm._v(
-                    "\n                            How to make the most of the rest of the year"
-                  )
-                ]
+                [_vm._v(" How to make the most of the rest of the year")]
               ),
               _vm._v(" "),
               _c(
@@ -668,69 +482,7 @@ var staticRenderFns = [
                   staticClass:
                     "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
                 },
-                [_vm._v("\n                            02 May 2019")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
-              attrs: { href: "/post" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
-                },
-                [
-                  _vm._v(
-                    "\n                            3 top OOTD to play with while traveling!"
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
-                },
-                [_vm._v("\n                            03 May 2019")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
-              attrs: { href: "/post" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
-                },
-                [
-                  _vm._v(
-                    "\n                            Looking forward: Planning for the winter’s outfits"
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
-                },
-                [_vm._v("\n                            04 May 2019")]
+                [_vm._v(" 02 May 2019")]
               )
             ]
           )
@@ -743,7 +495,7 @@ var staticRenderFns = [
               staticClass:
                 "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
             },
-            [_vm._v("\n                        Categories")]
+            [_vm._v(" Categories")]
           ),
           _vm._v(" "),
           _c(
@@ -760,11 +512,7 @@ var staticRenderFns = [
                   staticClass:
                     "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
                 },
-                [
-                  _vm._v(
-                    "\n                            Stylish Fashion\n                        "
-                  )
-                ]
+                [_vm._v(" Stylish Fashion ")]
               ),
               _vm._v(" "),
               _c(
@@ -774,230 +522,6 @@ var staticRenderFns = [
                     "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
                 },
                 [_vm._v("5")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Makeup Tips\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("23")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Traveling Tips\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("45")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Empowerment\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("65")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Instagram\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("32")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Skin Care\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("21")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Hair Care\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("2")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                },
-                [
-                  _vm._v(
-                    "\n                            Coming up\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                },
-                [_vm._v("11")]
               )
             ]
           )

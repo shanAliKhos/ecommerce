@@ -13,7 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
 /* harmony import */ var _Shared_FileInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Shared/FileInput */ "./resources/js/Pages/Shared/FileInput.vue");
-/* harmony import */ var vue2_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue2-editor */ "./node_modules/vue2-editor/dist/vue2-editor.esm.js");
+/* harmony import */ var _Shared_SelectInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Shared/SelectInput */ "./resources/js/Pages/Shared/SelectInput.vue");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vue2_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue2-editor */ "./node_modules/vue2-editor/dist/vue2-editor.esm.js");
 //
 //
 //
@@ -100,6 +103,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -111,17 +161,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   layout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
-    VueEditor: vue2_editor__WEBPACK_IMPORTED_MODULE_4__["VueEditor"],
+    VueEditor: vue2_editor__WEBPACK_IMPORTED_MODULE_6__["VueEditor"],
     LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__["default"],
     TextInput: _Shared_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"],
-    FileInput: _Shared_FileInput__WEBPACK_IMPORTED_MODULE_3__["default"]
+    FileInput: _Shared_FileInput__WEBPACK_IMPORTED_MODULE_3__["default"],
+    SelectInput: _Shared_SelectInput__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Multiselect: vue_multiselect__WEBPACK_IMPORTED_MODULE_5___default.a
   },
+  remeber: form,
   data: function data() {
     return {
       form: {
         title: this.$page.blog.title,
         body: this.$page.blog.body,
-        image: this.$page.blog.photo_url
+        image: this.$page.blog.photo_url,
+        is_active: this.$page.blog.is_active,
+        is_featured: this.$page.blog.is_featured,
+        category: this.$page.blog.category
       },
       sending: false
     };
@@ -135,6 +191,9 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("title", self.form.title || '');
       formData.append("body", self.form.body || '');
       formData.append("image", self.form.image || '');
+      formData.append("is_active", self.form.is_active || '');
+      formData.append("is_featured", self.form.is_featured || '');
+      formData.append("category_id", self.form.category ? self.form.category.id :  false || '');
       formData.append('_method', 'put');
       self.$inertia.post(route('admin.blog.update', self.$page.blog.id), formData, {
         preserveState: true,
@@ -145,6 +204,11 @@ __webpack_require__.r(__webpack_exports__);
           return _this.sending = false;
         }
       });
+    }
+  },
+  computed: {
+    Categories: function Categories() {
+      return this.$page.Categories;
     }
   }
 });
@@ -321,6 +385,115 @@ var render = function() {
                   expression: "form.title"
                 }
               }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "flex flex-wrap -mx-3 mb-2" },
+                [
+                  _c(
+                    "select-input",
+                    {
+                      staticClass: "w-full md:w-1/3 px-3  md:mb-0 ",
+                      attrs: {
+                        fixedClasses: "right-3 z-20",
+                        error: _vm.$page.errors.is_active,
+                        label: "Status",
+                        labelRequire: true
+                      },
+                      model: {
+                        value: _vm.form.is_active,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "is_active", $$v)
+                        },
+                        expression: "form.is_active"
+                      }
+                    },
+                    [
+                      _c("option", { domProps: { value: 0 } }, [
+                        _vm._v("Disable")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { domProps: { value: 1 } }, [
+                        _vm._v("Active")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select-input",
+                    {
+                      staticClass: "w-full md:w-1/3 px-3  md:mb-0 ",
+                      attrs: {
+                        fixedClasses: "right-3 z-20",
+                        error: _vm.$page.errors.is_featured,
+                        label: "Featured",
+                        labelRequire: true
+                      },
+                      model: {
+                        value: _vm.form.is_featured,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "is_featured", $$v)
+                        },
+                        expression: "form.is_featured"
+                      }
+                    },
+                    [
+                      _c("option", { domProps: { value: 0 } }, [_vm._v("No")]),
+                      _vm._v(" "),
+                      _c("option", { domProps: { value: 1 } }, [_vm._v("YES")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "w-full md:w-1/3  px-3  md:mb-0  mt-2 relative"
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                          attrs: { for: "weight" }
+                        },
+                        [_vm._v("Category")]
+                      ),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        class: "py-2",
+                        attrs: {
+                          "deselect-label": "Can't remove this value",
+                          "track-by": "name",
+                          label: "name",
+                          placeholder: "Select Category",
+                          options: _vm.Categories,
+                          searchable: false,
+                          "allow-empty": true
+                        },
+                        model: {
+                          value: _vm.form.category,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "category", $$v)
+                          },
+                          expression: "form.category"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _vm.$page.errors.category
+                        ? _c(
+                            "p",
+                            { staticClass: "text-red-500 text-xs italic" },
+                            [_vm._v(_vm._s(_vm.$page.errors.category))]
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "div",

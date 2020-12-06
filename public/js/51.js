@@ -617,77 +617,86 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "inertia-link",
-        { attrs: { href: _vm.route("shop.show", _vm.Product.slug) } },
+        "div",
+        { staticClass: "p-2 relative h-28 " },
         [
-          _c("div", { staticClass: "p-2 relative h-28 " }, [
-            _c(
-              "div",
-              { staticClass: "flex items-center content-center py-2" },
-              [
-                _c(
-                  "h3",
-                  {
-                    staticClass:
-                      "font-semibold text-xs text-gray-400 capitalize",
-                    attrs: { title: _vm.ProductName }
-                  },
-                  [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex  absolute bottom-7" }, [
-              _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
-                _vm._v(
-                  _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                    _vm._s(_vm.CurrentPrice) +
-                    " "
-                )
-              ]),
-              _vm._v(" "),
-              _vm.SalePrice > 0
-                ? _c(
-                    "p",
+          _c(
+            "inertia-link",
+            {
+              staticClass: "z-30",
+              attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "flex items-center content-center py-2" },
+                [
+                  _c(
+                    "h3",
                     {
                       staticClass:
-                        "font-semibold line-through text-gray-400 text-xs ml-3"
+                        "font-semibold text-xs text-gray-400 capitalize",
+                      attrs: { title: _vm.ProductName }
                     },
-                    [
-                      _vm._v(
-                        _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                          _vm._s(_vm.RegularPrice) +
-                          " "
-                      )
-                    ]
+                    [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
                   )
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex absolute bottom-2" }, [
-              _c("div", { staticClass: "flex items-center text-xs" }, [
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex  absolute bottom-7" }, [
+                _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
+                  _vm._v(
+                    _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                      _vm._s(_vm.CurrentPrice) +
+                      " "
+                  )
+                ]),
                 _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" })
+                _vm.SalePrice > 0
+                  ? _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-semibold line-through text-gray-400 text-xs ml-3"
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                            _vm._s(_vm.RegularPrice) +
+                            " "
+                        )
+                      ]
+                    )
+                  : _vm._e()
               ]),
               _vm._v(" "),
-              _c(
-                "p",
-                { staticClass: "font-hkregular text-sm text-secondary  ml-2" },
-                [_vm._v("(45)")]
-              )
-            ])
-          ])
-        ]
+              _c("div", { staticClass: "flex absolute bottom-2" }, [
+                _c("div", { staticClass: "flex items-center text-xs" }, [
+                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "bx bxs-star text-yellow-300" })
+                ]),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "font-hkregular text-sm text-secondary  ml-2"
+                  },
+                  [_vm._v("(45)")]
+                )
+              ])
+            ]
+          )
+        ],
+        1
       )
-    ],
-    1
+    ]
   )
 }
 var staticRenderFns = []

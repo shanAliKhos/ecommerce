@@ -38,35 +38,31 @@
         <div class="container py-16 sm:py-20 md:py-24">
             <div class="w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-between">
                 <div class="text-center lg:text-left">
-                    <h4 class="font-hkbold text-white text-xl pb-8">Contact</h4>
+                    <h4 class="font-semibold text-gray-300 text-2xl pb-8">Contact</h4>
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
-                            <a href="mailto:test.email0123@elyssi.com" class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">{{$page.SiteOptions.Email}}</a>
+                            <a href="mailto:test.email0123@elyssi.com" class="font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide">{{$page.SiteOptions.Email}}</a>
                         </li>
 
                         <li class="pb-2 block">
-                            <a href="tel:0123234222" class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide">0123 234 222</a>
+                            <a href="tel:0123234222" class="font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide">0123 234 222</a>
                         </li>
 
                         <li class="pb-2 block">
                             
-                            <inertia-link  
-                                :href="route('welcome')" 
-                                class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide"> 
+                            <inertia-link :href="route('welcome')"  class="font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide"> 
                                 {{$page.SiteOptions.Title}}
                             </inertia-link>
-
                         </li>
 
                     </ul>
                 </div>
                 <div class="text-center py-16 lg:py-0">
-                    <inertia-link 
-                        :href="route('welcome')" class="font-butlerregular text-white text-4xl uppercase tracking-wider">
+                    <inertia-link  :href="route('welcome')" class="font-semibold text-gray-300 text-4xl uppercase tracking-wider">
                         {{$page.SiteOptions.Title}}
-                        
                     </inertia-link>
+
                     <div class="flex items-center justify-center pt-5">
 
                         <a :href="$page.SiteOptions.Social.Facebook" v-if="$page.SiteOptions.Social.Facebook" class="group" target="_blank" >
@@ -107,17 +103,17 @@
                     </div>
                 </div>
                 <div class="text-center lg:text-left">
-                    <h4 class="font-hkbold text-white text-xl pb-8">Link</h4>
+                    <h4 class="font-semibold text-gray-300 text-2xl pb-8">Link</h4>
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
-                            <inertia-link :href="route('welcome')" class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">HOME</inertia-link>
+                            <inertia-link :href="route('welcome')" class="font-semibold text-gray-300 hover:text-primary text-base tracking-wide">HOME</inertia-link>
                         </li> 
                         <li class="pb-2 block">
-                            <inertia-link :href="route('shop.index')" class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">SHOP</inertia-link>
+                            <inertia-link :href="route('shop.index')" class="font-semibold text-gray-300 hover:text-primary text-base tracking-wide">SHOP</inertia-link>
                         </li>
                         <li class="pb-2 block">
-                            <inertia-link :href="route('blog.index')" class="font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide">BLOG</inertia-link>                        </li>
+                            <inertia-link :href="route('blog.index')" class="font-semibold text-gray-300 hover:text-primary text-base tracking-wide">BLOG</inertia-link>                        </li>
 
                     </ul>
                 </div>

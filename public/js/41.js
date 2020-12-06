@@ -582,7 +582,7 @@ var render = function() {
       [
         _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
           _c("li", { staticClass: "flex items-center text-blue-500" }, [
-            _c("a", { staticClass: "text-gray-700", attrs: { href: "#" } }, [
+            _c("a", { staticClass: "text-gray-500", attrs: { href: "#" } }, [
               _vm._v("Home")
             ]),
             _vm._v(" "),
@@ -612,9 +612,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "lg:flex justify-between items-center mb-6" }, [
-      _c("p", { staticClass: "text-2xl font-semibold mb-2 lg:mb-0" }, [
-        _vm._v("Hello , " + _vm._s(_vm.AuthenicatedUserName) + "!")
-      ]),
+      _c(
+        "p",
+        { staticClass: "text-2xl font-semibold mb-2 lg:mb-0 text-gray-500" },
+        [_vm._v("Hello , " + _vm._s(_vm.AuthenicatedUserName) + "!")]
+      ),
       _vm._v(" "),
       _c(
         "button",
@@ -659,7 +661,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "text-gray-700" }, [
+            _c("div", { staticClass: "text-gray-500" }, [
               _c("p", { staticClass: "font-semibold text-3xl" }, [
                 _vm._v(_vm._s(_vm.NewOrders))
               ]),
@@ -694,7 +696,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "text-gray-700" }, [
+            _c("div", { staticClass: "text-gray-500" }, [
               _c("p", { staticClass: "font-semibold text-3xl" }, [
                 _vm._v(_vm._s(_vm.TotalSoldProducts))
               ]),
@@ -765,7 +767,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "text-gray-700" }, [
+            _c("div", { staticClass: "text-gray-500" }, [
               _c("p", { staticClass: "font-semibold text-3xl" }, [
                 _vm._v(_vm._s(_vm.RegisteredCustomers))
               ]),
@@ -783,7 +785,7 @@ var render = function() {
       _vm._m(3),
       _vm._v(" "),
       _c("div", { staticClass: "w-full xl:w-1/3 px-3" }, [
-        _c("p", { staticClass: "text-xl font-semibold mb-4" }, [
+        _c("p", { staticClass: "text-xl font-semibold mb-4 text-gray-500" }, [
           _vm._v("Recent Transactions")
         ]),
         _vm._v(" "),
@@ -875,7 +877,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
+      _c("a", { staticClass: "text-gray-500", attrs: { href: "#" } }, [
         _vm._v("Dashboard")
       ])
     ])
@@ -884,7 +886,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-gray-700" }, [
+    return _c("div", { staticClass: "text-gray-500" }, [
       _c("p", { staticClass: "font-semibold text-3xl" }, [_vm._v("31")]),
       _vm._v(" "),
       _c("p", [_vm._v("New Enquiries")])
@@ -895,7 +897,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "w-full xl:w-1/3 px-3" }, [
-      _c("p", { staticClass: "text-xl font-semibold mb-4" }, [
+      _c("p", { staticClass: "text-xl font-semibold mb-4 text-gray-500" }, [
         _vm._v("Recent Sales")
       ]),
       _vm._v(" "),
@@ -915,7 +917,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "w-full xl:w-1/3 px-3" }, [
-      _c("p", { staticClass: "text-xl font-semibold mb-4" }, [
+      _c("p", { staticClass: "text-xl font-semibold mb-4 text-gray-500" }, [
         _vm._v("Recent Reviews")
       ]),
       _vm._v(" "),

@@ -395,14 +395,14 @@ var render = function() {
     "div",
     {
       staticClass:
-        "min-h-screen flex flex-col items-center justify-center bg-gray-100"
+        "min-h-screen flex flex-col items-center justify-center bg-gray-100 "
     },
     [
       _c(
         "div",
         {
           staticClass:
-            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md"
+            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md z-20"
         },
         [
           _c(

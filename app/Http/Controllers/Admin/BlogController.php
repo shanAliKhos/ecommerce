@@ -28,24 +28,22 @@ class BlogController extends Controller
  
     public function create()
     {
-        
         $Category = new Category;
         $Categories = $Category->all();
-
         return Inertia::render('Admin/blog/Create',compact('Categories'));
     }
 
- 
     public function store(Request $request)
     { 
-        dd($request->all());
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
+            'category_id' => 'required',
             "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            "is_active" => 'required|boolean',
+            "is_featured" => 'required|boolean',                   
         ]);
-        
- 
+         
         $Blog = new Blog;
         
         if ($request->hasFile('image')) {
@@ -56,7 +54,12 @@ class BlogController extends Controller
         $Blog->title = $request->title;
         $Blog->body = json_encode($request->body);
         $Blog->user_id = Auth()->user()->id;
+        $Blog->is_featured = $request->is_featured;
+        $Blog->is_active = $request->is_active;
+        $Blog->category_id = $request->category_id;
         $Blog->save();
+   
+        
 
         return redirect()->route('admin.blog.index')->with('success','blog created');        
  
@@ -64,24 +67,27 @@ class BlogController extends Controller
  
     public function show(Blog $blog)
     { 
-
+        //
     }
-
  
     public function edit(Blog $blog)
     {  
+        $blog->load('category');
         $blog->body =  json_decode($blog->body,true);
         return Inertia::render('Admin/blog/Edit',compact('blog'));        
     }
-
    
     public function update(Request $request, Blog $blog)
-    {
-        $this->validate($request, [
-            'title'      =>  'required', 
-            'body'=>'required', 
+    {   
+    
+        $this->validate($request, [ 
+            'title' => 'required', 
+            'body'=>'required',  
+            "is_active" => 'required|boolean',
+            "is_featured" => 'required|boolean',                
         ]);         
-          
+
+         
         if($request->hasFile('image')){
 
             $this->validate($request, [ 
@@ -90,9 +96,7 @@ class BlogController extends Controller
             if(Storage::exists($blog->image)){
                 Storage::delete($blog->image);
             }  
-            $blog->update([
-                'image' => $request->file('image')->store('Blogs','public'), 
-            ]);               
+            $blog->image = $request->file('image')->store('Blogs','public');   
         } 
 
         if(empty($request->image) && $blog->image){
@@ -100,20 +104,21 @@ class BlogController extends Controller
             if(Storage::exists($blog->image)){
                 Storage::delete($blog->image);
             }          
-            $blog->update(['image' => null]);
 
+            $blog->image = null;   
         }
 
-        $blog->update([
-            'title' => $request->title, 
-            'body' => json_encode($request->body,true),
-            'user_id' => Auth()->user()->id,
-        ]);        
-            
+        $blog->title = $request->title;
+        $blog->body = json_encode($request->body);
+        $blog->user_id = Auth()->user()->id;
+        $blog->is_featured = $request->is_featured;
+        $blog->is_active = $request->is_active;
+        $blog->category_id = $request->category_id;
+        $blog->save();           
+
         return back()->with('success','success ! brand updated');
     }
 
- 
     public function destroy(Blog $blog)
     {
         $blog->delete();

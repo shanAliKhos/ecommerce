@@ -373,7 +373,7 @@ var staticRenderFns = [
       _c(
         "div",
         {
-          staticClass: "absolute bottom-0 inset-x-0 mb-6 z-30 text-center",
+          staticClass: "absolute bottom-0 inset-x-0 mb-6 z-10 text-center",
           attrs: { "data-glide-el": "controls[nav]" }
         },
         [

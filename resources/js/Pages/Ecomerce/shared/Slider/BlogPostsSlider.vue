@@ -96,12 +96,12 @@
         </div>
     </div>
     <div data-glide-el="controls">
-        <div class="transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-ml-5 lg:-ml-8 bg-grey-light hover:bg-primary z-30 cursor-pointer group"
+        <div class="transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-ml-5 lg:-ml-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group"
             data-glide-dir="<">
             <i
                 class="bx bx-chevron-left text-primary transition-colors group-hover:text-white md:text-2xl p-4"></i>
         </div>
-        <div class="transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-mr-5 lg:-mr-8 bg-grey-light hover:bg-primary z-30 cursor-pointer group"
+        <div class="transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-mr-5 lg:-mr-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group"
             data-glide-dir=">">
             <i
                 class="bx bx-chevron-right text-primary transition-colors group-hover:text-white md:text-2xl p-4"></i>

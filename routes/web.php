@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
  
  
- 
-Route::Resource('/blog', 'Blog\BlogController');
+//////////////////////////////////////// BLOG //////////////////////////////////// 
+Route::prefix('blog')->group(function () { 
+    Route::get('/','Blog\BlogController@index')->name('blog.index');  
+    Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
+}); 
+//////////////////////////////////////// BLOG    ////////////////////////////////////
   
 //////////////////////////////////////// SHOP ////////////////////////////////////
     Route::get('/','Ecommerce\ShopController@Home')->name('welcome');

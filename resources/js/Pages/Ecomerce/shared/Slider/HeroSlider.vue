@@ -75,7 +75,7 @@
 
             </div>
         </div>
-        <div class="absolute bottom-0 inset-x-0 mb-6 z-30 text-center" data-glide-el="controls[nav]">
+        <div class="absolute bottom-0 inset-x-0 mb-6 z-10 text-center" data-glide-el="controls[nav]">
             <span class="inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer" data-glide-dir="=0"></span>
             <span class="inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer" data-glide-dir="=1"></span>
             <span class="inline-block border border-primary transition-colors hover:bg-secondary-lighter p-1 rounded-full mr-1 focus:outline-none cursor-pointer" data-glide-dir="=2"></span>

@@ -140,10 +140,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -218,7 +214,9 @@ var render = function() {
                   _c("div", { staticClass: "text-center lg:text-left" }, [
                     _c(
                       "h4",
-                      { staticClass: "font-hkbold text-white text-xl pb-8" },
+                      {
+                        staticClass: "font-semibold text-gray-300 text-2xl pb-8"
+                      },
                       [_vm._v("Contact")]
                     ),
                     _vm._v(" "),
@@ -228,7 +226,7 @@ var render = function() {
                           "a",
                           {
                             staticClass:
-                              "font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide",
+                              "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
                             attrs: { href: "mailto:test.email0123@elyssi.com" }
                           },
                           [_vm._v(_vm._s(_vm.$page.SiteOptions.Email))]
@@ -245,7 +243,7 @@ var render = function() {
                             "inertia-link",
                             {
                               staticClass:
-                                "font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide",
+                                "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
                               attrs: { href: _vm.route("welcome") }
                             },
                             [
@@ -270,14 +268,14 @@ var render = function() {
                         "inertia-link",
                         {
                           staticClass:
-                            "font-butlerregular text-white text-4xl uppercase tracking-wider",
+                            "font-semibold text-gray-300 text-4xl uppercase tracking-wider",
                           attrs: { href: _vm.route("welcome") }
                         },
                         [
                           _vm._v(
                             "\r\n                        " +
                               _vm._s(_vm.$page.SiteOptions.Title) +
-                              "\r\n                        \r\n                    "
+                              "\r\n                    "
                           )
                         ]
                       ),
@@ -398,7 +396,9 @@ var render = function() {
                   _c("div", { staticClass: "text-center lg:text-left" }, [
                     _c(
                       "h4",
-                      { staticClass: "font-hkbold text-white text-xl pb-8" },
+                      {
+                        staticClass: "font-semibold text-gray-300 text-2xl pb-8"
+                      },
                       [_vm._v("Link")]
                     ),
                     _vm._v(" "),
@@ -411,7 +411,7 @@ var render = function() {
                             "inertia-link",
                             {
                               staticClass:
-                                "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
+                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
                               attrs: { href: _vm.route("welcome") }
                             },
                             [_vm._v("HOME")]
@@ -428,7 +428,7 @@ var render = function() {
                             "inertia-link",
                             {
                               staticClass:
-                                "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
+                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
                               attrs: { href: _vm.route("shop.index") }
                             },
                             [_vm._v("SHOP")]
@@ -445,7 +445,7 @@ var render = function() {
                             "inertia-link",
                             {
                               staticClass:
-                                "font-hkregular transition-colors text-white hover:text-primary text-base tracking-wide",
+                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
                               attrs: { href: _vm.route("blog.index") }
                             },
                             [_vm._v("BLOG")]
@@ -551,7 +551,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide",
+            "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
           attrs: { href: "tel:0123234222" }
         },
         [_vm._v("0123 234 222")]

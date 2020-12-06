@@ -163,21 +163,21 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "fixed bottom-0 right-0 flex flex-col items-end ml-6 w-full"
+      staticClass: "fixed bottom-0 right-0 flex flex-col items-end z-30 w-auto"
     },
     [
       _c(
         "div",
         {
           staticClass:
-            "chat-modal mr-5 flex flex-col mb-5 shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4"
+            "chat-modal mr-5 flex flex-col mb-5 shadow-lg  w-full  z-0"
         },
         [
           _c(
             "div",
             {
               staticClass:
-                "close-chat bg-red-500 hover:bg-red-600 text-white mb-1 w-10 flex justify-center items-center px-2 py-1 rounded self-end cursor-pointer"
+                " z-30  close-chat bg-red-500 hover:bg-red-600 text-white mb-1 w-10 flex justify-center items-center px-2 py-1 rounded self-end cursor-pointer"
             },
             [
               _c(
@@ -217,7 +217,7 @@ var render = function() {
           _vm._v(" "),
           _vm._m(1),
           _vm._v(" "),
-          _c("div", { staticClass: "relative bg-white" }, [
+          _c("div", { staticClass: " z-30 relative bg-white" }, [
             _c("input", {
               directives: [
                 {
@@ -271,7 +271,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "show-chat mx-10 mb-6 mt-4 text-green-500 hover:text-green-600 flex justify-center items-center cursor-pointer "
+            " z-30 show-chat mx-10 mb-6 mt-4 text-green-500 hover:text-green-600 flex justify-center items-center cursor-pointer "
         },
         [
           _c(
@@ -279,8 +279,8 @@ var render = function() {
             {
               staticClass: "bi bi-chat-text-fill",
               attrs: {
-                width: "4em",
-                height: "4em",
+                width: "3em",
+                height: "3em",
                 viewBox: "0 0 16 16",
                 fill: "currentColor",
                 xmlns: "http://www.w3.org/2000/svg"
@@ -310,7 +310,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "flex justify-between items-center text-white p-2 bg-green-500 border shadow-lg mr-5 w-full"
+          " z-30 flex justify-between items-center text-white p-2 bg-green-500 border shadow-lg mr-5 w-full"
       },
       [
         _c("div", { staticClass: "flex items-center" }, [
@@ -344,7 +344,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "flex flex-col bg-gray-200 px-2 chat-services overflow-auto"
+          " z-30 flex flex-col bg-gray-200 px-2 chat-services overflow-auto"
       },
       [
         _c(

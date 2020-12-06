@@ -84,6 +84,30 @@ __webpack_require__.r(__webpack_exports__);
     //         }
     //     })                   
     // },                
+  },
+  computed: {
+    StatusColor: function StatusColor() {
+      switch (this.Order.Status) {
+        case 'pending':
+          return 'badge-warning';
+          break;
+
+        case 'processing':
+          return 'badge-info';
+          break;
+
+        case 'completed':
+          return 'badge-success';
+          break;
+
+        case 'decline':
+          return 'badge-danger';
+          break;
+      }
+    },
+    Currency: function Currency() {
+      return this.$page.SiteOptions.Currency;
+    }
   }
 });
 
@@ -291,7 +315,7 @@ var render = function() {
               "span",
               {
                 staticClass: "rounded bg-green-400 py-1 px-3 text-xs font-bold",
-                class: _vm.StatusColor(_vm.Order.Status)
+                class: _vm.StatusColor
               },
               [_vm._v(_vm._s(_vm.Order.Status))]
             )

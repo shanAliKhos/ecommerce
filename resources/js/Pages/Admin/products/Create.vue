@@ -394,9 +394,9 @@ export default {
     computed: {
         CategoriesOption(){ 
             return this.$page.categories.filter((category,key) => {
-                if(key > 0){
+                // if(key > 0){
                     return category;
-                }
+                // }
             });             
         }, 
         Brands(){

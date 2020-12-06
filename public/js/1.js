@@ -177,7 +177,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Sidebar',
@@ -221,7 +220,7 @@ var render = function() {
     _vm.sideBarOpen
       ? _c("div", {
           staticClass:
-            "bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-full  lg:hidden z-50",
+            "bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-full lg:hidden z-50",
           on: {
             click: function($event) {
               _vm.sideBarOpen = false
@@ -234,7 +233,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-1/2 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-screen lg:block bg-gray-100 border-r  border-gray-300 z-50",
+          "w-4/5 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-screen lg:block bg-gray-100 border-r  border-gray-300 z-50",
         class: _vm.sideBarOpen ? "" : "hidden",
         attrs: { id: "main-nav" }
       },

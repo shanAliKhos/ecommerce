@@ -61,35 +61,16 @@ import ListItem from './components/ListItem'
 import Pagination from './../../Shared/Pagination'  
 export default {
     metaInfo: { title: 'Orders' }, 
-    layout: AppLayout, 
-    methods: {
-        StatusColor(Status){
-            switch (Status) {
-                case 'pending':
-                    return 'badge-warning'
-                    break;
-                
-                case 'processing':
-                    return 'badge-info'
-                    break;
-                
-                case 'completed':
-                    return 'badge-success'
-                    break;
-                
-                case 'decline':
-                    return 'badge-danger'
-                    break; 
-            } 
-        }    
-    },    
+    layout: AppLayout,
+    components:{
+        ListItem,
+    },
+   
     computed: {
         Orders(){
             return this.$page.Orders.data;
         },
-        Currency(){
-            return this.$page.SiteOptions.Currency;
-        },        
+   
     },
  
     mounted() { 

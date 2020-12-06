@@ -18,8 +18,8 @@
             </a>
         </div> -->
     </div>
-    <inertia-link :href="route('shop.show',Product.slug)">
-        <div class="p-2 relative h-28 ">
+    <div class="p-2 relative h-28 ">
+    <inertia-link :href="route('shop.show',Product.slug)" class="z-30">
             <div class="flex items-center content-center py-2">
                 <h3 class="font-semibold text-xs text-gray-400 capitalize" :title="ProductName">{{ProductName.substring(0,65)+"..."}}</h3>
             </div>
@@ -37,8 +37,8 @@
                 </div>
                 <p class="font-hkregular text-sm text-secondary  ml-2">(45)</p>
             </div>            
-        </div>
     </inertia-link>
+    </div>
 </div> 
 </template> 
 <script>

@@ -349,11 +349,12 @@ export default {
     computed: {
         CategoriesOption(){
             self = this;
-            return self.Categories.filter((category,key) => {
-                if(key > 0){
-                    return category;
-                }
-            });             
+            return self.Categories;
+            // return self.Categories.filter((category,key) => {
+            //     if(key > 0){
+            //         return category;
+            //     }
+            // });             
         },
         Attributes(){ 
             return this.$page.attributes;

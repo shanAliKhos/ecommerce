@@ -27,7 +27,7 @@
                 <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" v-if="Order.PaymentStatus">Paid</span>
                 <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold" v-else>Not-Paid</span>                                 
                 <br>
-                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" :class="StatusColor(Order.Status)">{{Order.Status}}</span>
+                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" :class="StatusColor">{{Order.Status}}</span>
             </p>
     </td>
     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
@@ -76,7 +76,32 @@ export default {
         //     })                   
         // },                
                
-    },     
+    },   
+
+    computed: {
+        StatusColor(){
+            switch (this.Order.Status) {
+                case 'pending':
+                    return 'badge-warning'
+                    break;
+                
+                case 'processing':
+                    return 'badge-info'
+                    break;
+                
+                case 'completed':
+                    return 'badge-success'
+                    break;
+                
+                case 'decline':
+                    return 'badge-danger'
+                    break; 
+            } 
+        },
+        Currency(){
+            return this.$page.SiteOptions.Currency;
+        },             
+    },
  
 }
 </script>

@@ -151,231 +151,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -387,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
     Blogs: function Blogs() {
       return this.$page.Blogs;
     },
-    FeaturedBrands: function FeaturedBrands() {
+    FeaturedBlogs: function FeaturedBlogs() {
       return this.$page.FeaturedBlogs;
     }
   }
@@ -519,1112 +294,471 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark"
-        },
-        [
-          _c(
-            "h2",
-            {
-              staticClass:
-                "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"
-            },
-            [_vm._v(" Top Feature Blog")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5"
-            },
-            [
-              _c(
-                "div",
-                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
-                [
-                  _c(
-                    "a",
-                    {
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 xl:pb-16 border-b border-grey-dark"
+      },
+      [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"
+          },
+          [_vm._v(" Top Feature Blog")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex flex-col md:flex-row justify-between pt-12 lg:pt-16 -mx-2 xl:-mx-5"
+          },
+          _vm._l(_vm.FeaturedBlogs, function(FeaturedBlog, FeaturedBlogindex) {
+            return _c(
+              "div",
+              {
+                key: FeaturedBlogindex,
+                staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10"
+              },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "block rounded-lg shadow border border-grey group",
+                    attrs: { href: _vm.route("blog.show", FeaturedBlog.id) }
+                  },
+                  [
+                    _c("div", {
                       staticClass:
-                        "block rounded-lg shadow border border-grey group",
-                      attrs: { href: "/post" }
-                    },
-                    [
+                        "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
+                      style:
+                        "background-image:url(" + FeaturedBlog.photo_url + ")"
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
                       _c("div", {
                         staticClass:
-                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
-                        staticStyle: {
-                          "background-image": "url(./img/post-05.jpg)"
-                        }
+                          "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                        style:
+                          "background-image:url(" +
+                          FeaturedBlog.user.profile_photo_url +
+                          ")"
                       }),
                       _vm._v(" "),
-                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                        _c("div", {
+                      _c(
+                        "div",
+                        {
                           staticClass:
-                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
-                          staticStyle: {
-                            "background-image": "url(./img/blog-author.jpg)"
-                          }
-                        }),
-                        _vm._v(" "),
+                            "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                        },
+                        [
+                          _c("span", [
+                            _vm._v("By "),
+                            _c("span", { staticClass: "font-hkbold" }, [
+                              _vm._v(_vm._s(FeaturedBlog.user.name))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(FeaturedBlog.created_at))])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
                         _c(
-                          "div",
+                          "h4",
                           {
                             staticClass:
-                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                              "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                          },
+                          [_vm._v(_vm._s(FeaturedBlog.title))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
                           },
                           [
-                            _c("span", [
-                              _vm._v("By "),
-                              _c("span", { staticClass: "font-hkbold" }, [
-                                _vm._v("Katherine S.")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("02 May 2019")])
+                            _c("i", {
+                              staticClass:
+                                "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
+                            })
                           ]
                         ),
                         _vm._v(" "),
-                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
-                          _c(
-                            "h4",
-                            {
-                              staticClass:
-                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
-                            },
-                            [
-                              _vm._v(
-                                "\n                                How to make the most of the rest of the year\n                            "
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
-                            },
-                            [
-                              _vm._v(
-                                "Read\n                                more"
-                              )
-                            ]
-                          )
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "md:w-1/2 mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
-                [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "block rounded-lg shadow border border-grey group",
-                      attrs: { href: "/post" }
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "bg-no-repeat bg-cover bg-center w-full h-52 sm:h-64 lg:h-68",
-                        staticStyle: {
-                          "background-image": "url(./img/post-04.jpg)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                        _c("div", {
-                          staticClass:
-                            "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
-                          staticStyle: {
-                            "background-image": "url(./img/blog-author.jpg)"
-                          }
-                        }),
-                        _vm._v(" "),
                         _c(
-                          "div",
+                          "span",
                           {
                             staticClass:
-                              "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                              "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
                           },
-                          [
-                            _c("span", [
-                              _vm._v("By "),
-                              _c("span", { staticClass: "font-hkbold" }, [
-                                _vm._v("Katherine S.")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("03 May 2019")])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sm:w-5/6 lg:w-full" }, [
-                          _c(
-                            "h4",
-                            {
-                              staticClass:
-                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Looking forward: Planning for the winter’s outfits\n                            "
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sm:w-5/6 md:w-full" }, [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n                                tempor incididunt ut labore et dolore magna aliqua."
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "bx bx-chevron-right text-grey-darkest transition-colors group-hover:text-white text-xl"
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "font-hksemibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5 -mt-1"
-                            },
-                            [
-                              _vm._v(
-                                "Read\n                                more"
-                              )
-                            ]
-                          )
-                        ])
+                          [_vm._v("Read more")]
+                        )
                       ])
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 flex flex-col lg:flex-row justify-between"
-        },
-        [
-          _c("div", { staticClass: "lg:w-2/3" }, [
+                    ])
+                  ]
+                )
+              ],
+              1
+            )
+          }),
+          0
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 flex flex-col lg:flex-row justify-between"
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "lg:w-2/3" },
+          [
             _c(
               "h2",
               {
                 staticClass:
                   "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center lg:text-left"
               },
-              [_vm._v("\n                Our Blog")]
+              [_vm._v(" Our Blog")]
             ),
             _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
-                attrs: { href: "/post" }
-              },
-              [
-                _c("div", {
+            _vm._l(_vm.Blogs, function(Blog, Blogindex) {
+              return _c(
+                "inertia-link",
+                {
+                  key: Blogindex,
                   staticClass:
-                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
-                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                    "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
+                  attrs: { href: _vm.route("blog.show", Blog.id) }
+                },
+                [
                   _c("div", {
                     staticClass:
-                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
-                    staticStyle: {
-                      "background-image": "url(./img/blog-author.jpg)"
-                    }
+                      "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
+                    style: "background-image:url(" + Blog.photo_url + ")"
                   }),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    {
+                  _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                    _c("div", {
                       staticClass:
-                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                    },
-                    [
-                      _c("span", [
-                        _vm._v("By "),
-                        _c("span", { staticClass: "font-hkbold" }, [
-                          _vm._v("Katherine S.")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("02 May 2019")])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                        "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
+                      style:
+                        "background-image:url(" +
+                        Blog.user.profile_photo_url +
+                        ")"
+                    }),
+                    _vm._v(" "),
                     _c(
-                      "h4",
+                      "div",
                       {
                         staticClass:
-                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                          "flex items-center font-hkregular text-sm md:text-base text-secondary"
                       },
                       [
-                        _vm._v(
-                          "\n                            How to make the most of the rest of the year"
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
-                        })
+                        _c("span", [
+                          _vm._v("By "),
+                          _c("span", { staticClass: "font-hkbold" }, [
+                            _vm._v(_vm._s(Blog.user.name))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                        _vm._v(" "),
+                        _c("span", [_vm._v(_vm._s(Blog.created_at))])
                       ]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                      },
-                      [_vm._v("Read\n                            more")]
-                    )
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
-                attrs: { href: "/post" }
-              },
-              [
-                _c("div", {
-                  staticClass:
-                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
-                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                  _c("div", {
-                    staticClass:
-                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
-                    staticStyle: {
-                      "background-image": "url(./img/blog-author.jpg)"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                    },
-                    [
-                      _c("span", [
-                        _vm._v("By "),
-                        _c("span", { staticClass: "font-hkbold" }, [
-                          _vm._v("Katherine S.")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("03 May 2019")])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
-                    _c(
-                      "h4",
-                      {
-                        staticClass:
-                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
-                      },
-                      [
-                        _vm._v(
-                          "\n                            3 top OOTD to play with while traveling!"
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
-                      },
-                      [
-                        _c("i", {
+                    _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
+                      _c(
+                        "h4",
+                        {
                           staticClass:
-                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
-                        })
-                      ]
-                    ),
+                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                        },
+                        [_vm._v(" " + _vm._s(Blog.title))]
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                      },
-                      [_vm._v("Read\n                            more")]
-                    )
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "block rounded-lg shadow border border-grey group mt-10 lg:mt-12",
-                attrs: { href: "/post" }
-              },
-              [
-                _c("div", {
-                  staticClass:
-                    "bg-no-repeat bg-cover bg-top w-full h-52 sm:h-64 lg:h-68",
-                  staticStyle: { "background-image": "url(./img/post-08.jpg)" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                  _c("div", {
-                    staticClass:
-                      "bg-no-repeat bg-cover bg-center rounded-full w-20 h-20 border-6 border-white -mt-16 mb-5",
-                    staticStyle: {
-                      "background-image": "url(./img/blog-author.jpg)"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                    },
-                    [
-                      _c("span", [
-                        _vm._v("By "),
-                        _c("span", { staticClass: "font-hkbold" }, [
-                          _vm._v("Katherine S.")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("04 May 2019")])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-5/6 lg:w-11/12 xl:w-3/4" }, [
-                    _c(
-                      "h4",
-                      {
-                        staticClass:
-                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Looking forward: Planning for the winter’s outfits"
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:w-3/4 lg:w-5/6 xl:w-3/5" }, [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary-lighter text-sm md:text-base pb-6 sm:pb-8 "
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n                            incididunt ut labore et dolore magna aliqua.\n                        "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
-                      },
-                      [
-                        _c("i", {
+                    _c("div", { staticClass: "flex items-center" }, [
+                      _c(
+                        "span",
+                        {
                           staticClass:
-                            "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                      },
-                      [_vm._v("Read\n                            more")]
-                    )
+                            "bg-white transition-colors group-hover:bg-primary border border-grey-darkest group-hover:border-primary rounded-full p-1 flex items-center"
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "bx bx-chevron-right transition-colors text-grey-darkest group-hover:text-white text-xl"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                        },
+                        [_vm._v("Read\n                            more")]
+                      )
+                    ])
                   ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "pt-12 flex justify-center mx-auto" }, [
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer"
-                },
-                [_vm._v("Previous")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
-                },
-                [_vm._v("1")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
-                },
-                [_vm._v("2")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer"
-                },
-                [_vm._v("3")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
-                },
-                [_vm._v("Next")]
+                ]
               )
-            ])
-          ]),
+            }),
+            _vm._v(" "),
+            _vm._m(0)
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pt-12 flex justify-center mx-auto" }, [
+      _c(
+        "span",
+        {
+          staticClass:
+            "font-hksemibold text-grey-darkest transition-colors hover:text-black pr-5 cursor-pointer"
+        },
+        [_vm._v("Previous")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+        },
+        [_vm._v("1")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center mr-3 cursor-pointer"
+        },
+        [_vm._v("2")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            "font-hksemibold text-black transition-colors hover:text-white text-sm hover:bg-primary h-6 w-6 rounded-full flex items-center justify-center cursor-pointer"
+        },
+        [_vm._v("3")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
+        },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0" },
+      [
+        _c("form", { staticClass: "flex items-center w-full mb-16 relative" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block relative h-0 w-0 overflow-hidden",
+              attrs: { for: "search_form" }
+            },
+            [_vm._v("Search")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass:
+              "form-input   transition-all pr-10 text-grey-darkest text-base",
+            attrs: {
+              type: "text",
+              id: "search_form",
+              placeholder: "Search the Blog"
+            }
+          }),
           _vm._v(" "),
           _c(
-            "div",
+            "button",
             {
               staticClass:
-                "w-3/4 sm:w-1/2 lg:w-1/4 mx-auto lg:mx-0 mt-16 lg:mt-0"
+                "focus:outline-none absolute right-0 top-0 mt-4 mr-3",
+              attrs: { "aria-label": "Search button" }
+            },
+            [_c("i", { staticClass: "bx bx-search text-2xl" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-16 text-center sm:text-left" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+            },
+            [_vm._v("Recent Post")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "block mt-8 border-b border-grey-dark pb-5 group",
+              attrs: { href: "/post" }
             },
             [
               _c(
-                "form",
-                { staticClass: "flex items-center w-full mb-16 relative" },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "block relative h-0 w-0 overflow-hidden",
-                      attrs: { for: "search_form" }
-                    },
-                    [_vm._v("Search")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass:
-                      "form-input   transition-all pr-10 text-grey-darkest text-base",
-                    attrs: {
-                      type: "text",
-                      id: "search_form",
-                      placeholder: "Search the Blog"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "focus:outline-none absolute right-0 top-0 mt-4 mr-3",
-                      attrs: { "aria-label": "Search button" }
-                    },
-                    [_c("i", { staticClass: "bx bx-search text-2xl" })]
-                  )
-                ]
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
+                },
+                [_vm._v(" How to make the most of the rest of the year")]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-16 text-center sm:text-left" }, [
-                _c(
-                  "h4",
-                  {
-                    staticClass:
-                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
-                  },
-                  [_vm._v("\n                    Recent Post")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "block mt-8 border-b border-grey-dark pb-5 group",
-                    attrs: { href: "/post" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        How to make the most of the rest of the year"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
-                      },
-                      [_vm._v("\n                        02 May 2019")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "block mt-8 border-b border-grey-dark pb-5 group",
-                    attrs: { href: "/post" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        3 top OOTD to play with while traveling!"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
-                      },
-                      [_vm._v("\n                        03 May 2019")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "block mt-8 border-b border-grey-dark pb-5 group",
-                    attrs: { href: "/post" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular text-secondary text-base transition-colors group-hover:text-primary"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Looking forward: Planning for the winter’s outfits"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
-                      },
-                      [_vm._v("\n                        04 May 2019")]
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "mb-16" }, [
-                _c(
-                  "h4",
-                  {
-                    staticClass:
-                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
-                  },
-                  [_vm._v("\n                    Categories")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Stylish Fashion\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("5")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Makeup Tips\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("23")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Traveling Tips\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("45")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Empowerment\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("65")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Instagram\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("32")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Skin Care\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("21")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Hair Care\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("2")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "flex justify-between group pb-4 border-b border-grey-dark mt-8",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        Coming up\n                    "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
-                      },
-                      [_vm._v("11")]
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "text-center sm:text-left" }, [
-                _c(
-                  "h4",
-                  {
-                    staticClass:
-                      "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
-                  },
-                  [_vm._v("\n                    Follow Us")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "flex justify-center sm:justify-start pt-8" },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
-                        attrs: { href: "https://www.google.com" }
-                      },
-                      [_c("i", { staticClass: "bx bxl-facebook text-white" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
-                        attrs: { href: "https://www.google.com" }
-                      },
-                      [_c("i", { staticClass: "bx bxl-twitter text-white" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
-                        attrs: { href: "https://www.google.com" }
-                      },
-                      [_c("i", { staticClass: "bx bxl-instagram text-white" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
-                        attrs: { href: "https://www.google.com" }
-                      },
-                      [_c("i", { staticClass: "bx bxl-pinterest text-white" })]
-                    )
-                  ]
-                )
-              ])
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular group-hover:font-hkbold text-grey-darkest transition-all group-hover:text-primary text-base pt-4"
+                },
+                [_vm._v(" 02 May 2019")]
+              )
             ]
           )
-        ]
-      )
-    ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-16" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
+            },
+            [_vm._v(" Categories")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "flex justify-between group pb-4 border-b border-grey-dark mt-8",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base capitalize"
+                },
+                [_vm._v(" Stylish Fashion ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "font-hkregular transition-colors group-hover:font-hkbold text-secondary group-hover:text-primary text-base"
+                },
+                [_vm._v("5")]
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center sm:text-left" }, [
+          _c(
+            "h4",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
+            },
+            [_vm._v("\n                    Follow Us")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex justify-center sm:justify-start pt-8" },
+            [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-facebook text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-twitter text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-instagram text-white" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-secondary-lighter transition-colors hover:bg-primary px-3 py-3 rounded-full mr-2 flex items-center justify-center",
+                  attrs: { href: "https://www.google.com" }
+                },
+                [_c("i", { staticClass: "bx bxl-pinterest text-white" })]
+              )
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
