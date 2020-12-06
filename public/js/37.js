@@ -869,7 +869,7 @@ var staticRenderFns = [
             staticClass:
               "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
           },
-          [_vm._v("\n              Related Product")]
+          [_vm._v("\n            Related Product")]
         ),
         _vm._v(" "),
         _c(
@@ -878,7 +878,7 @@ var staticRenderFns = [
             staticClass:
               "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2 pb-6 sm:pb-8 lg:pb-0"
           },
-          [_vm._v("\n              Get the latest news & updates from Ciloe")]
+          [_vm._v("\n            Get the latest news & updates from Ciloe")]
         )
       ]),
       _vm._v(" "),
@@ -920,7 +920,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      New\n                                  "
+                                "\n                                    New\n                                "
                               )
                             ]
                           )
@@ -1016,7 +1016,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Woodie Blake"
+                              "\n                                    Woodie Blake"
                             )
                           ]
                         ),
@@ -1051,7 +1051,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -1103,7 +1103,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      trend\n                                  "
+                                "\n                                    trend\n                                "
                               )
                             ]
                           )
@@ -1199,7 +1199,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Beautiful Brown"
+                              "\n                                    Beautiful Brown"
                             )
                           ]
                         ),
@@ -1234,7 +1234,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -1286,7 +1286,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      20%\n                                  "
+                                "\n                                    20%\n                                "
                               )
                             ]
                           )
@@ -1382,7 +1382,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Coffee Cream"
+                              "\n                                    Coffee Cream"
                             )
                           ]
                         ),
@@ -1417,7 +1417,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -1469,7 +1469,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      Hot\n                                  "
+                                "\n                                    Hot\n                                "
                               )
                             ]
                           )
@@ -1565,7 +1565,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Submarine Watch"
+                              "\n                                    Submarine Watch"
                             )
                           ]
                         ),
@@ -1600,7 +1600,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -1652,7 +1652,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      New\n                                  "
+                                "\n                                    New\n                                "
                               )
                             ]
                           )
@@ -1748,7 +1748,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Woodie Blake"
+                              "\n                                    Woodie Blake"
                             )
                           ]
                         ),
@@ -1783,7 +1783,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -1835,7 +1835,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      trend\n                                  "
+                                "\n                                    trend\n                                "
                               )
                             ]
                           )
@@ -1931,7 +1931,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Cocktail Vans"
+                              "\n                                    Cocktail Vans"
                             )
                           ]
                         ),
@@ -1966,7 +1966,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -2018,7 +2018,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      20%\n                                  "
+                                "\n                                    20%\n                                "
                               )
                             ]
                           )
@@ -2114,7 +2114,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Siberian Boots"
+                              "\n                                    Siberian Boots"
                             )
                           ]
                         ),
@@ -2149,7 +2149,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )
@@ -2201,7 +2201,7 @@ var staticRenderFns = [
                             },
                             [
                               _vm._v(
-                                "\n                                      Hot\n                                  "
+                                "\n                                    Hot\n                                "
                               )
                             ]
                           )
@@ -2297,7 +2297,7 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                      Silver One"
+                              "\n                                    Silver One"
                             )
                           ]
                         ),
@@ -2332,7 +2332,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                              45\n                                          "
+                                  "\n                                            45\n                                        "
                                 )
                               ]
                             )

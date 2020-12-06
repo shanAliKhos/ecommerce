@@ -64,7 +64,6 @@
                 placeholder="site_title" 
             aria-label="site_title"/>                        
 
-
             <text-input 
                 id="currency_code" 
                 type="text" 
@@ -89,11 +88,10 @@
                 placeholder="currency_symbolme" 
             aria-label="currency_symbol"/>            
 
-
             <text-input 
                 id="default_email_address" 
                 type="email" 
-                class="col-span-6 sm:col-span-6 mt-1 block w-full" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full py-3" 
                 v-model="form.default_email_address" 
                 autocomplete="default_email_address" 
                 :error="$page.errors.default_email_address"
@@ -102,8 +100,17 @@
                 placeholder="default_email_address" 
             aria-label="default_email_address"/>            
 
-          
- 
+            <text-input 
+                id="phone" 
+                type="number" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full py-3" 
+                v-model="form.phone"  
+                :error="$page.errors.phone"
+                label='Phone'    
+                :labelRequire='true'    
+            placeholder="Phone no"/>            
+
+     
         </template>
 
 
@@ -151,6 +158,7 @@ export default {
                 currency_symbol:this.settings?this.settings.currency_symbol:null,
                 site_logo:this.settings?this.settings.site_logo:null,
                 site_favicon:this.settings?this.settings.site_favicon:null,                 
+                phone:this.settings?this.settings.phone:null,                 
             },
             sending:false,
         };
@@ -166,6 +174,7 @@ export default {
             formData.append("currency_symbol", self.form.currency_symbol || '')
             formData.append('site_logo', self.form.site_logo || '')
             formData.append('site_favicon', self.form.site_favicon || '')            
+            formData.append('phone', self.form.phone || '')            
             formData.append('_method', 'put')
             self.$emit('form-is-updated',formData)
             this.sending=true;

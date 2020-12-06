@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Password;
 Route::prefix('blog')->group(function () { 
     Route::get('/','Blog\BlogController@index')->name('blog.index');  
     Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
+    Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
+    Route::get('/category/{slug}','Blog\BlogController@showByCategory')->name('blog.by-category');
+
 }); 
 //////////////////////////////////////// BLOG    ////////////////////////////////////
   

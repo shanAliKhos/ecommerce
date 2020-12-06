@@ -140,6 +140,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -163,7 +170,8 @@ __webpack_require__.r(__webpack_exports__);
         currency_code: this.settings ? this.settings.currency_code : null,
         currency_symbol: this.settings ? this.settings.currency_symbol : null,
         site_logo: this.settings ? this.settings.site_logo : null,
-        site_favicon: this.settings ? this.settings.site_favicon : null
+        site_favicon: this.settings ? this.settings.site_favicon : null,
+        phone: this.settings ? this.settings.phone : null
       },
       sending: false
     };
@@ -179,6 +187,7 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("currency_symbol", self.form.currency_symbol || '');
       formData.append('site_logo', self.form.site_logo || '');
       formData.append('site_favicon', self.form.site_favicon || '');
+      formData.append('phone', self.form.phone || '');
       formData.append('_method', 'put');
       self.$emit('form-is-updated', formData);
       this.sending = true;
@@ -481,7 +490,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("text-input", {
-              staticClass: "col-span-6 sm:col-span-6 mt-1 block w-full",
+              staticClass: "col-span-6 sm:col-span-3 mt-1 block w-full py-3",
               attrs: {
                 id: "default_email_address",
                 type: "email",
@@ -498,6 +507,25 @@ var render = function() {
                   _vm.$set(_vm.form, "default_email_address", $$v)
                 },
                 expression: "form.default_email_address"
+              }
+            }),
+            _vm._v(" "),
+            _c("text-input", {
+              staticClass: "col-span-6 sm:col-span-3 mt-1 block w-full py-3",
+              attrs: {
+                id: "phone",
+                type: "number",
+                error: _vm.$page.errors.phone,
+                label: "Phone",
+                labelRequire: true,
+                placeholder: "Phone no"
+              },
+              model: {
+                value: _vm.form.phone,
+                callback: function($$v) {
+                  _vm.$set(_vm.form, "phone", $$v)
+                },
+                expression: "form.phone"
               }
             })
           ]

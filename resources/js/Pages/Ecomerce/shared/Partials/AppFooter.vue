@@ -46,7 +46,7 @@
                         </li>
 
                         <li class="pb-2 block">
-                            <a href="tel:0123234222" class="font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide">0123 234 222</a>
+                            <a href="tel:0123234222" class="font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide">{{$page.SiteOptions.Phone}}</a>
                         </li>
 
                         <li class="pb-2 block">

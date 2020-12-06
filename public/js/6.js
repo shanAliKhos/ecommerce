@@ -233,7 +233,17 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(1),
+                      _c("li", { staticClass: "pb-2 block" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
+                            attrs: { href: "tel:0123234222" }
+                          },
+                          [_vm._v(_vm._s(_vm.$page.SiteOptions.Phone))]
+                        )
+                      ]),
                       _vm._v(" "),
                       _c(
                         "li",
@@ -301,7 +311,7 @@ var render = function() {
                                     _vm._v("Social link")
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(2)
+                                  _vm._m(1)
                                 ]
                               )
                             : _vm._e(),
@@ -321,7 +331,7 @@ var render = function() {
                                     _vm._v("Social link")
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(3)
+                                  _vm._m(2)
                                 ]
                               )
                             : _vm._e(),
@@ -342,7 +352,7 @@ var render = function() {
                                     _vm._v("Social link")
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(4)
+                                  _vm._m(3)
                                 ]
                               )
                             : _vm._e(),
@@ -363,7 +373,7 @@ var render = function() {
                                     _vm._v("Social link")
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(5)
+                                  _vm._m(4)
                                 ]
                               )
                             : _vm._e(),
@@ -383,7 +393,7 @@ var render = function() {
                                     _vm._v("Social link")
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(6)
+                                  _vm._m(5)
                                 ]
                               )
                             : _vm._e()
@@ -540,22 +550,6 @@ var staticRenderFns = [
           ])
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "pb-2 block" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
-          attrs: { href: "tel:0123234222" }
-        },
-        [_vm._v("0123 234 222")]
-      )
     ])
   },
   function() {

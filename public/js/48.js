@@ -211,7 +211,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                    Anabelle Purses by Elyssi\n                "
+                        "\n                    Anabelle Purses  \n                "
                       )
                     ]
                   ),
@@ -276,11 +276,7 @@ var staticRenderFns = [
                     staticClass:
                       "font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"
                   },
-                  [
-                    _vm._v("\n                W.W. Shoes "),
-                    _c("br"),
-                    _vm._v(" by Elyssi\n            ")
-                  ]
+                  [_vm._v("\n                W.W. Shoes "), _c("br")]
                 ),
                 _vm._v(" "),
                 _c(

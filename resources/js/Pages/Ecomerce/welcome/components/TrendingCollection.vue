@@ -44,7 +44,7 @@
                 style="background-image:url(./img/collection/collection-03.jpg)">
                 <div class="w-2/3 absolute inset-0 px-6 md:px-10 py-14">
                     <h3 class="font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl">
-                        Anabelle Purses by Elyssi
+                        Anabelle Purses  
                     </h3>
                     <a href="/collection-list" class="flex items-center pt-5 group">
                         <div class="bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center">
@@ -59,7 +59,7 @@
             style="background-image:url(./img/collection/collection-shoes.jpg)">
             <div class="w-2/3 absolute inset-0 px-6 md:px-10 py-14 sm:py-16">
                 <h3 class="font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl">
-                    W.W. Shoes <br /> by Elyssi
+                    W.W. Shoes <br /> 
                 </h3>
                 <a href="/collection-list" class="flex items-center pt-5 group">
                     <div class="bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center">

@@ -1,5 +1,5 @@
 <template>
-<div class="posts-slider flex flex-col sm:flex-row items-center justify-between mt-6 md:mt-12 relative">
+<div class="posts-slider relative">
     <div class="glide__track" data-glide-el="track">
         <div class="glide__slides">
 

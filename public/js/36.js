@@ -459,324 +459,314 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "posts-slider flex flex-col sm:flex-row items-center justify-between mt-6 md:mt-12 relative"
-      },
-      [
+    return _c("div", { staticClass: "posts-slider relative" }, [
+      _c(
+        "div",
+        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+        [
+          _c("div", { staticClass: "glide__slides" }, [
+            _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
+                },
+                [
+                  _c("div", {
+                    staticClass: "bg-no-repeat bg-cover bg-center w-full h-52",
+                    staticStyle: {
+                      "background-image": "url(./img/post-01.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                      },
+                      [
+                        _c("span", [
+                          _vm._v("By "),
+                          _c("span", { staticClass: "font-hkbold" }, [
+                            _vm._v("Abdullah")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("02 May 2019")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center group",
+                        attrs: { href: "/post" }
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
+                          },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                          },
+                          [
+                            _vm._v(
+                              "\r\n                                Read more\r\n                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
+                },
+                [
+                  _c("div", {
+                    staticClass: "bg-no-repeat bg-cover bg-center w-full h-52",
+                    staticStyle: {
+                      "background-image": "url(./img/post-02.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                      },
+                      [
+                        _c("span", [
+                          _vm._v("By "),
+                          _c("span", { staticClass: "font-hkbold" }, [
+                            _vm._v("Abdullah")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("03 May 2019")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center group",
+                        attrs: { href: "/post" }
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
+                          },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                          },
+                          [
+                            _vm._v(
+                              "\r\n                                Read more\r\n                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
+                },
+                [
+                  _c("div", {
+                    staticClass: "bg-no-repeat bg-cover bg-center w-full h-52",
+                    staticStyle: {
+                      "background-image": "url(./img/post-03.jpg)"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "flex items-center font-hkregular text-sm md:text-base text-secondary"
+                      },
+                      [
+                        _c("span", [
+                          _vm._v("By "),
+                          _c("span", { staticClass: "font-hkbold" }, [
+                            _vm._v("Abdullah")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("04 May 2019")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
+                      },
+                      [
+                        _vm._v(
+                          "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center group",
+                        attrs: { href: "/post" }
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
+                          },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                          },
+                          [
+                            _vm._v(
+                              "\r\n                                Read more\r\n                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { attrs: { "data-glide-el": "controls" } }, [
         _c(
           "div",
-          { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+          {
+            staticClass:
+              "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-ml-5 lg:-ml-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group",
+            attrs: { "data-glide-dir": "<" }
+          },
           [
-            _c("div", { staticClass: "glide__slides" }, [
-              _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
-                  },
-                  [
-                    _c("div", {
-                      staticClass:
-                        "bg-no-repeat bg-cover bg-center w-full h-52",
-                      staticStyle: {
-                        "background-image": "url(./img/post-01.jpg)"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                        },
-                        [
-                          _c("span", [
-                            _vm._v("By "),
-                            _c("span", { staticClass: "font-hkbold" }, [
-                              _vm._v("Abdullah")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("02 May 2019")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "h4",
-                        {
-                          staticClass:
-                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
-                        },
-                        [
-                          _vm._v(
-                            "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "flex items-center group",
-                          attrs: { href: "/post" }
-                        },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                            },
-                            [
-                              _vm._v(
-                                "\r\n                                Read more\r\n                            "
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
-                  },
-                  [
-                    _c("div", {
-                      staticClass:
-                        "bg-no-repeat bg-cover bg-center w-full h-52",
-                      staticStyle: {
-                        "background-image": "url(./img/post-02.jpg)"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                        },
-                        [
-                          _c("span", [
-                            _vm._v("By "),
-                            _c("span", { staticClass: "font-hkbold" }, [
-                              _vm._v("Abdullah")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("03 May 2019")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "h4",
-                        {
-                          staticClass:
-                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
-                        },
-                        [
-                          _vm._v(
-                            "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "flex items-center group",
-                          attrs: { href: "/post" }
-                        },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                            },
-                            [
-                              _vm._v(
-                                "\r\n                                Read more\r\n                            "
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "px-2 xl:px-4 glide__slide" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "rounded-lg shadow border border-grey mt-12 sm:mt-3 md:mt-0"
-                  },
-                  [
-                    _c("div", {
-                      staticClass:
-                        "bg-no-repeat bg-cover bg-center w-full h-52",
-                      staticStyle: {
-                        "background-image": "url(./img/post-03.jpg)"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "pt-6 pb-5 md:pb-8 px-8" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "flex items-center font-hkregular text-sm md:text-base text-secondary"
-                        },
-                        [
-                          _c("span", [
-                            _vm._v("By "),
-                            _c("span", { staticClass: "font-hkbold" }, [
-                              _vm._v("Abdullah")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "px-3" }, [_vm._v("|")]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("04 May 2019")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "h4",
-                        {
-                          staticClass:
-                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8"
-                        },
-                        [
-                          _vm._v(
-                            "\r\n                            Increasing Prosperity With Positive Thinking\r\n                        "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "flex items-center group",
-                          attrs: { href: "/post" }
-                        },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center"
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
-                            },
-                            [
-                              _vm._v(
-                                "\r\n                                Read more\r\n                            "
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ])
-            ])
+            _c("i", {
+              staticClass:
+                "bx bx-chevron-left text-primary transition-colors group-hover:text-white md:text-2xl p-4"
+            })
           ]
         ),
         _vm._v(" "),
-        _c("div", { attrs: { "data-glide-el": "controls" } }, [
-          _c(
-            "div",
-            {
+        _c(
+          "div",
+          {
+            staticClass:
+              "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-mr-5 lg:-mr-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group",
+            attrs: { "data-glide-dir": ">" }
+          },
+          [
+            _c("i", {
               staticClass:
-                "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-ml-5 lg:-ml-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group",
-              attrs: { "data-glide-dir": "<" }
-            },
-            [
-              _c("i", {
-                staticClass:
-                  "bx bx-chevron-left text-primary transition-colors group-hover:text-white md:text-2xl p-4"
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform sm:-translate-y-1/2 md:-mr-5 lg:-mr-8 bg-grey-light hover:bg-primary z-10 cursor-pointer group",
-              attrs: { "data-glide-dir": ">" }
-            },
-            [
-              _c("i", {
-                staticClass:
-                  "bx bx-chevron-right text-primary transition-colors group-hover:text-white md:text-2xl p-4"
-              })
-            ]
-          )
-        ])
-      ]
-    )
+                "bx bx-chevron-right text-primary transition-colors group-hover:text-white md:text-2xl p-4"
+            })
+          ]
+        )
+      ])
+    ])
   }
 ]
 render._withStripped = true

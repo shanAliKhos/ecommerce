@@ -58,6 +58,7 @@ class AppServiceProvider extends ServiceProvider
                 "Logo" => $dbSetting?Setting::get('site_logo'):'',
                 "Favicon" => $dbSetting?Setting::get('site_favicon'):'',
                 "Email" => $dbSetting?Setting::get('default_email_address'):'',
+                "Phone" => $dbSetting?Setting::get('phone'):'',
                 "Currency" => [  
                     "Code" => $dbSetting?Setting::get('currency_code'):'',
                     "Symbol" => $dbSetting?Setting::get('currency_symbol'):'',
