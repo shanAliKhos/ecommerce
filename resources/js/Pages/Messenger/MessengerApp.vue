@@ -72,7 +72,7 @@ export default {
         //     this.hanleIncoming(e.message);
         // });
 
-        axios.get('/contacts')
+        axios.get('/contacts') 
             .then((response) => {
             this.contacts = response.data;
         });
