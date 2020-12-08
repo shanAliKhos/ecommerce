@@ -23,15 +23,15 @@ class ContactsController extends Controller
 
     public function get()
     {   
-        $contacts = User::where('id', '!=', Auth()->id())->get(); 
+        $contacts = User::where('id', '!=', Auth()->user()->id())->get(); 
         // get a collection of items where sender_id is the user who sent us a message
         // and messages_count is the number of unread messages we have from him
         $unreadIds = Message::select(\DB::raw('`from` as sender_id, count(`from`) as messages_count'))
-            ->where('to', Auth()->id())
+            ->where('to', Auth()->user()->id())
             ->where('read', false)
             ->groupBy('from')
             ->get();
-            
+             
         dd( $unreadIds);
 
         // add an unread key to each contact with the count of unread messages
