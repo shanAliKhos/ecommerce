@@ -89,6 +89,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex pb-2">
+                    <p class="font-hkregular text-secondary">SKU:</p>
+                    <p class="font-hkbold text-secondary pl-3">
+                        KH12345</p>
+                </div>
+                <div class="font-hkregular text-secondary mt-2 mb-2">
+                    <span class="pr-2">Categories:</span>Bag, Hand bag, Travel bag, Black
+                </div>                
 
                 <div class="product-availablity">                
                     <div class="flex pb-5">
@@ -148,71 +156,39 @@
                     </div>
                 </div>
 
-
-       <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5">
-
-            <button  @click="AddToCart" class="flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
-                <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-
-                    <!-- <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" /> -->
-                </svg>                                   
-                <span class=" ml-2 ">Add to cart</span>
-
-            </button>
-             
-
-            <!-- <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
-                <span>Save</span>
-                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>                
-            </loading-button>                  
-  -->
-
-        </div>   
-                
-                <div class="flex pb-8 group justify-around">
-<!-- 
-                    <button   
-                        :disabled="sending"
-                        @click="AddToCart"
-                        type="button"
-                        class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center  "
-                        > 
-                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
-                        </svg>                              
-                        <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden md:block">
+                    <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
+                        <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>                                   
-                        Add to cart
-                    </button>                      -->
+                        <span class=" ml-2 ">Add to cart</span>
+                    </button>
+                </div>    
+ 
+                <div class="z-50 bg-white flex items-center justify-end px-1 py-1 block md:hidden fixed bottom-0 right-0 left-0 shadow-lg w-full border-t-2 border-gray-100 text-semibold">
+        
+  
+                    <inertia-link :href="route('cart.index')" class="flex uppercase items-center transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-500 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex" type="button">
+                        <svg  class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg> 
+                        <span class="tracking-tighter">Cart</span>
+                    </inertia-link>
+                    <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex uppercase items-center transition duration-500 ease-in-out bg-red-500 hover:bg-red-600 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex items-center ml-1" type="button">
+                        <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
+                        </svg>
+                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
+                        </svg>                                   
+                        <span class="tracking-tighter">Add To Cart</span>
+                    </button>
+  
+                </div>    
 
-                    <!-- <button type="button" @click="AddToCart" class="btn btn-outline mr-4 md:mr-6">
-                        Add to cart
-                    </button> -->
-                    <!-- <a href="/cart" class="btn btn-primary">
-                        BUY NOW
-                    </a> -->
-                </div>
-                
-                <div class="product-short-description">                
-                    <p class="font-hkregular text-secondary pb-5">
-                        <!-- {{ProductDescription.substring(0,70)+"..."}} -->
-                    </p>
-                </div>                 
-                <div class="flex pb-2">
-                    <p class="font-hkregular text-secondary">SKU:</p>
-                    <p class="font-hkbold text-secondary pl-3">
-                        KH12345</p>
-                </div>
-                <p class="font-hkregular text-secondary">
-                    <span class="pr-2">Categories:</span>Bag, Hand bag, Travel bag, Black
-                </p>
             </div>
         </div>
 
@@ -343,16 +319,12 @@
                             </div>
                         </div>
                         <div class="sm:w-12/25 pt-10">
-                            <label for="message" class="font-hkregular text-secondary text-sm block mb-2">Review
-                                Message</label>
-                            <textarea placeholder="Give your review tittle" class="form-textarea"
-                                id="message"></textarea>
+                            <label for="message" class="font-hkregular text-secondary text-sm block mb-2">ReviewMessage</label>
+                            <textarea placeholder="Give your review tittle" class="form-textarea"id="message"></textarea>
                         </div>
                     </form>
                     <div class="w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left">
-                        <a href="/" class="btn btn-primary">
-                            Submit Review
-                        </a>
+                        <a href="/" class="btn btn-primary">Submit Review</a>
                     </div>
                 </div>
             </div>
@@ -390,13 +362,7 @@ export default {
             selectedImage:null,                        
         }
     },
-    watch: { 
-        CartItemQty: function (newQty, oldQty) {  
-            if(newQty > this.ProductQuantity || newQty < 1 ){
-                this.CartItem.Qty =  oldQty
-            }
-        }
-    },        
+ 
     methods: {
         AddToCart(){  
             this.sending = true;
@@ -431,16 +397,22 @@ export default {
         },            
     },
     computed: {
-        ProductImages(){
-            self=this; 
-            var  img = './../../'+self.Product.image.replace("public", "storage");
+
+        ProductImage(){
+            var  img = this.Product.mainphoto_url;
             return img;
-        },            
-        CurrentPrice(){
-            return this.$page.Product.sale_price?this.$page.Product.sale_price:this.$page.Product.regular_price; 
         },
         RegularPrice(){
-            return this.$page.Product.regular_price;
+            return this.Product.regular_price;
+        }, 
+        SalePrice(){
+            return this.Product.sale_price;
+        }, 
+        CurrentPrice(){
+            return this.Product.sale_price>0?this.Product.sale_price:this.Product.regular_price;
+        }, 
+        ProductName(){
+            return this.Product.name;
         },
         ProductQuantity(){
             return this.Product.quantity;
@@ -451,10 +423,7 @@ export default {
         IsOnSale(){
             return this.$page.Product.sale_price > 0;
         }, 
-        CartItemQty(){
-            self = this;
-            return self.CartItem.Qty;
-        },                       
+                   
     },    
     mounted () {
         this.$root.$on('item-is-added-to-cart',()=>{

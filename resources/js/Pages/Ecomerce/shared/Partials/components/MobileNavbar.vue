@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="fixed inset-0 flex z-50 justify-end opacity-0 pointer-events-none   transition-all"
         :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
         <div class="bg-black opacity-50 absolute inset-0 z-10" @click="$emit('mobile-menu-is-disabled')"></div>
@@ -6,230 +7,69 @@
             <span class=" ml-auto p-2" @click="$emit('mobile-menu-is-disabled')"><i
                     class="bx bx-x text-secondary text-3xl"></i></span>
             <ul> 
-            
-                <MobileNavLink 
-                    :href="route('welcome')" 
-                    :active="$page.currentRouteName == 'welcome'" 
-                >Home</MobileNavLink>
-
-                <MobileNavLink  
-                    :href="route('shop.index')" 
-                    :active="$page.currentRouteName == 'shop.index'" 
-                >Shop</MobileNavLink>                     
-
-                <MobileNavLink 
-                    :href="route('blog.index')" 
-                    :active="$page.currentRouteName == 'blog.index'" 
-                >Blog</MobileNavLink>                    
-
-                <!-- <MobileNavLink 
-                    :href="route('blog.details')" 
-                    :active="$page.currentRouteName == 'blog.details'" 
-                >Blog Details</MobileNavLink>              -->
-
-                <!-- <MobileNavLink 
-                    :href="route('contact.index')" 
-                    :active="$page.currentRouteName == 'contact.index'"
-                >Contact</MobileNavLink>               -->
-
-                <MobileNavLink 
-                     v-if="$page.user" 
-                    :href="route('cart.index')" 
-                    :active="$page.currentRouteName == 'cart.index'"
-                >Cart</MobileNavLink>     
-
-                <MobileNavLink 
-                     v-if="$page.user?$page.user.is_admin:false" 
-                    :href="route('admin.dashboard')" 
-                    :active="$page.currentRouteName == 'admin.dashboard'"
-                >Dashboard</MobileNavLink>           
-
-                <MobileNavLink 
-                    v-if="$page.user?!$page.user.is_admin:false" 
-                    :href="route('dashboard.index')" 
-                    :active="$page.currentRouteName == 'dashboard.index'"
-                >Account</MobileNavLink>           
-                
-                <MobileNavLink 
-                    v-if="!$page.user"
-                    :href="route('login')" 
-                    :active="$page.currentRouteName == 'login'"
-                >Login</MobileNavLink>           
-
-     
+                <li>
+                    <inertia-link 
+                        class="p-3 uppercase text-primary border-t border-grey-darker block"
+                        :href="route('blog.index')" 
+                        :active="$page.currentRouteName == 'blog.index'" 
+                    >Blog</inertia-link>                    
+                </li>                
+                 
  
-                
-                <!-- <nav-cart></nav-cart>                 -->
-
-                <!--  
-                <li class="flex justify-between flex-col" x-data="{ categories: false }"
-                    @blur="categories=false ">
-                    <div class="flex justify-between border-t border-grey-darker">
-                        <span class="p-3 uppercase text-secondary  block">Categories</span>
-                        <span class="p-3 border-l border-grey-darker" @click="categories = !categories">
-                            <i class="mt-1 bx bxs-down-arrow text-secondary text-sm pointer-events-none"
-                                :class="{ 'bxs-up-arrow': categories }"></i></span>
-                    </div>
-                    <div class="bg-primary-lighter overflow-hidden   transition-all item-height"
-                        :class="{ 'active': categories }">
-
-                        <div x-data="{ subcategory: false }" @blur="subcategory=false">
-                            <div class="flex justify-between border-t border-grey-darker">
-                                <span class="p-3 uppercase text-secondary  block">Man</span>
-                                <span class="p-3 border-l border-grey-darker" @click="subcategory = !subcategory"><i
-                                        class="mt-1 bx bxs-down-arrow text-secondary text-sm pointer-events-none"></i></span>
-                            </div>
-                            <div class="mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height"
-                                :class="{ 'active': subcategory }">
-                                <ul>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Boots</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Blutcher
-                                            Boot</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Chelsea
-                                            Boot</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Chukka
-                                            Boot</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Dress
-                                            Boot</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Work
-                                            Boot</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div x-data="{ subcategory: false }" @blur="subcategory=false">
-                            <div class="flex justify-between border-t border-grey-darker">
-                                <span class="p-3 uppercase text-secondary  block">Woman</span>
-                                <span class="p-3 border-l border-grey-darker" @click="subcategory = !subcategory"><i
-                                        class="mt-1 bx bxs-down-arrow text-secondary text-sm pointer-events-none"></i></span>
-                            </div>
-                            <div class="mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height"
-                                :class="{ 'active': subcategory }">
-                                <ul>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Accessories</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Belts</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Caps</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Laces</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Socks</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div x-data="{ subcategory: false }" @blur="subcategory=false">
-                            <div class="flex justify-between border-t border-grey-darker">
-                                <span class="p-3 uppercase text-secondary  block">Kids</span>
-                                <span class="p-3 border-l border-grey-darker" @click="subcategory = !subcategory"><i
-                                        class="mt-1 bx bxs-down-arrow text-secondary text-sm pointer-events-none"></i></span>
-                            </div>
-                            <div class="mobile-menu-categories bg-v-v-pink max-h-0 overflow-hidden   transition-all item-height"
-                                :class="{ 'active': subcategory }">
-                                <ul>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Shoes</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Derby
-                                            Shoes</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Belts</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Caps</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Laces</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/collection-grid"
-                                            class="p-3 uppercase text-secondary border-t border-grey-darker block">Socks</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </li> 
-                <li>
-                    <a href="/blog" class="p-3 uppercase text-secondary border-t border-grey-darker block">Blog</a>
-                </li> 
-                <li>
-                    <a href="/contact#faq"
-                        class="p-3 uppercase text-secondary border-t border-grey-darker block">FAQ</a>
-                </li> 
-                <li>
-                    <a href="/contact"
-                        class="p-3 uppercase text-secondary border-t border-grey-darker block">Contact</a>
-                </li> 
-                <li>
-                    <a href="/account/dashboard"
-                        class="p-3 uppercase text-secondary border-t border-grey-darker block">Account</a>
-                </li>
-                <li>
-                    <a href="/cart"
-                        class="p-3 uppercase text-secondary border-t border-b border-grey-darker block">Cart</a>
-                </li> -->
             </ul>
         </div>
     </div>   
+    <div v-if="IsMenuVisible" class="z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0 shadow-lg  border-t-2 border-gray-200 text-gray-500">
+        <div class="grid grid-cols-4 gap-2 flex justify-around mt-1"> 
+ 
+                <MobileNavLink :active="$page.currentRouteName == 'welcome'" :href="route('welcome')" type="button" class="font-semibold">    
+                    <svg class="ml-1 transition duration-700 ease-in-out h-9 w-auto fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>                    
+                    <span >Home</span>
+                </MobileNavLink>         
+        
+                <MobileNavLink :active="$page.currentRouteName == 'shop.index'" :href="route('shop.index')" type="button" class="font-semibold ">
+                    <svg class="ml-1 transition duration-700 ease-in-out h-9 w-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>                    
+                    <span >Shop</span>
+                </MobileNavLink>         
+        
+                <MobileNavLink :active="$page.currentRouteName == 'cart.index'" :href="route('cart.index')">
+                    <svg  class="transition duration-700 ease-in-out h-9 w-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg> 
+                    <span >Cart</span>
+                </MobileNavLink>    
+                     
+                <!-- auth -->
+                <MobileNavLink :active="$page.currentRouteName == 'login'" v-if="!$page.user" :href="route('login')" > 
+                    <svg class="ml-3 transition duration-700 ease-in-out h-9 w-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                                                      
+                    <span >Account</span>
+                </MobileNavLink>         
+
+         
+                <MobileNavLink :active="$page.currentRouteName == 'admin.dashboard'" v-if="$page.user.is_admin" :href="route('admin.dashboard')"  >
+                    <svg class="ml-3 transition duration-700 ease-in-out h-9 w-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>              
+                                                            
+                    <span >Account</span>
+                </MobileNavLink>                   
+     
+                <MobileNavLink :active="$page.currentRouteName == 'dashboard.index'" v-else :href="route('dashboard.index')" >
+                    <svg class="ml-3 transition duration-700 ease-in-out 9 w-auto " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                                  
+                    <span>Account</span>
+                </MobileNavLink>       
+
+        </div> 
+    </div>        
+</div>        
 </template>
 <script>
 import MobileNavLink from './MobileNavLink'
@@ -238,6 +78,19 @@ export default {
     components:{
         MobileNavLink
     }, 
+    computed:{
+        IsMenuVisible(){
+            switch (this.$page.currentRouteName) {
+                case 'shop.show':
+                    return false;      
+                break;
+            
+                default:
+                    return true;      
+                break;
+            }            
+        },
+    },
 }
 </script>
  

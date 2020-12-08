@@ -1,11 +1,7 @@
-<template>
-    <li>
+<template> 
         <inertia-link :href="href" :class="IsActiveLink"  preserve-scroll >
             <slot></slot>
-        </inertia-link>    
-
-    </li>
-   
+        </inertia-link>     
 </template>
 
 <script>
@@ -16,8 +12,8 @@
        
             IsActiveLink() {
                 return this.active
-                            ? 'p-3 uppercase text-primary border-t border-grey-darker block'
-                            : 'p-3 uppercase text-secondary border-t border-grey-darker block' 
+                            ? 'font-semibold text-red-500'
+                            : 'font-semibold' 
             },
         }
     }

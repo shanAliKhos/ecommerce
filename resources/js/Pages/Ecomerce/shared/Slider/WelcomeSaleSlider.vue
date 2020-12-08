@@ -13,7 +13,7 @@
             <div class="glide__track" data-glide-el="track">
                 <div class="pt-12 relative glide__slides">
 
-                    <div class="relative group glide__slide" v-for="(Product, ProductIndex) in ProductsOnSale" :key="ProductIndex">
+                    <div class="relative group glide__slide shadow transform rotate-45 " v-for="(Product, ProductIndex) in ProductsOnSale" :key="ProductIndex">
                         <div class="sm:px-5 lg:px-4">
                             <shop-product :Product="Product"></shop-product>
                         </div>
@@ -57,7 +57,10 @@ export default {
 
         new Glide('.product-slider',{
             type: "carousel",
-            startAt: 1,
+            animationDuration:1000,            
+            hoverpause:true,            
+            autoplay:3000,
+            startAt: 0,
             perView: 4,
             gap: 0,
             peek: {

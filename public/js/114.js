@@ -15,15 +15,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'p-3 uppercase text-primary border-t border-grey-darker block' : 'p-3 uppercase text-secondary border-t border-grey-darker block';
+      return this.active ? 'font-semibold text-red-500' : 'font-semibold';
     }
   }
 });
@@ -46,19 +42,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "li",
-    [
-      _c(
-        "inertia-link",
-        {
-          class: _vm.IsActiveLink,
-          attrs: { href: _vm.href, "preserve-scroll": "" }
-        },
-        [_vm._t("default")],
-        2
-      )
-    ],
-    1
+    "inertia-link",
+    {
+      class: _vm.IsActiveLink,
+      attrs: { href: _vm.href, "preserve-scroll": "" }
+    },
+    [_vm._t("default")],
+    2
   )
 }
 var staticRenderFns = []

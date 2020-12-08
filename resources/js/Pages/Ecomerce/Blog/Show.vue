@@ -45,8 +45,8 @@
         </div>
 
         <div class="pt-16 pb-16 sm:pb-20">
-            <h2 class="font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center"> Related Post </h2>
-            <p class="font-hkregular text-secondary-lighter text-base md:text-lg text-center pb-5 sm:pb-12 md:pb-0"> For powerful features, great design and support from the developer.</p>
+            <h2 class="font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center"> Related Blogs </h2>
+            <p class="font-hkregular text-secondary-lighter text-base md:text-lg text-center pb-5 sm:pb-12 md:pb-2 mb-5"> For powerful features, great design and support from the developer.</p>
   
             <blog-posts-slider></blog-posts-slider>
  
@@ -75,6 +75,7 @@ export default {
       Blog(){
           return this.$page.blog;
       },
+
     },
    
 }

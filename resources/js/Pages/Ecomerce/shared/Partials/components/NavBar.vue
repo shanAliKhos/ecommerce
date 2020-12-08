@@ -1,5 +1,5 @@
 <template>
-    <div class="container py-10 relative">
+    <div class="container md:py-10 relative">
         
         <div class="flex justify-between items-center">
             <div class="hidden lg:block">

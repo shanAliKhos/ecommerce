@@ -43,6 +43,9 @@ module.exports = {
         extend: {
            transform: ['hover', 'focus'],
            scale: ['focus-within'],
+           animation: ['hover', 'focus'],
+           transform: ['hover', 'focus'],
+
         }        
     },
 

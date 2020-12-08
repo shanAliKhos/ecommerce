@@ -26,6 +26,7 @@ export default {
         Product(){
             return this.$page.Product;
         }, 
+        
     },
     mounted() {
         const self = this
