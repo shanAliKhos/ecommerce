@@ -67,7 +67,10 @@ export default {
 
         new Glide('.tranding-slider',{
             type: "carousel",
-            startAt: 1,
+            animationDuration:1000,            
+            hoverpause:true,            
+            autoplay:3000,
+            startAt: 0,
             perView: 4,
             gap: 0,
             peek: {

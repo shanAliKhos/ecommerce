@@ -1,4 +1,5 @@
 <template>
+<inertia-link :href="route('shop.show',Product.slug)" class="z-30">
 <div class="product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md">
     <div class=" rounded flex justify-center items-center p-2">
         <div class="w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg"
@@ -19,7 +20,6 @@
         </div> -->
     </div>
     <div class="p-2 relative h-28 ">
-    <inertia-link :href="route('shop.show',Product.slug)" class="z-30">
             <div class="flex items-center content-center py-2">
                 <h3 class="font-semibold text-xs text-gray-400 capitalize" :title="ProductName">{{ProductName.substring(0,65)+"..."}}</h3>
             </div>
@@ -37,9 +37,9 @@
                 </div>
                 <p class="font-hkregular text-sm text-secondary  ml-2">(45)</p>
             </div>            
-    </inertia-link>
     </div>
 </div> 
+</inertia-link>
 </template> 
 <script>
 export default {
@@ -95,7 +95,7 @@ export default {
     }, 
     computed: {
         ProductImage(){
-            var  img = this.Product.image?this.Product.image.replace("public", "storage"):'./img/product/product (1).png';
+            var  img = this.Product.mainphoto_url;
             return img;
         },
         RegularPrice(){

@@ -32,7 +32,8 @@ class ShopController extends Controller
     public function show(Product $Product,$slug)
     {  
         $Product = $Product->where('slug',$slug)->with('images')->firstOrFail();         
-        return Inertia::render('Ecomerce/shop/Show', compact('Product'));
+        $RelatedProducts = $Product->get()->random(10);
+        return Inertia::render('Ecomerce/shop/Show', compact('Product','RelatedProducts'));
     }
  
     public function GetFeaturedProducts(Product $product)

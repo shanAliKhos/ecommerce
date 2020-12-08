@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     ProductImage: function ProductImage() {
-      var img = this.Product.image ? this.Product.image.replace("public", "storage") : './img/product/product (1).png';
+      var img = this.Product.mainphoto_url;
       return img;
     },
     RegularPrice: function RegularPrice() {
@@ -308,124 +308,117 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "inertia-link",
     {
-      staticClass:
-        "product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
+      staticClass: "z-30",
+      attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
     },
     [
       _c(
         "div",
-        { staticClass: " rounded flex justify-center items-center p-2" },
+        {
+          staticClass:
+            "product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
+        },
         [
-          _c("div", {
-            staticClass:
-              "w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg",
-            style: "background-image:url('" + _vm.ProductImage + "')"
-          }),
+          _c(
+            "div",
+            { staticClass: " rounded flex justify-center items-center p-2" },
+            [
+              _c("div", {
+                staticClass:
+                  "w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg",
+                style: "background-image:url('" + _vm.ProductImage + "')"
+              }),
+              _vm._v(" "),
+              _vm.Label.Active
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                    },
+                    [
+                      _c(
+                        "p",
+                        {
+                          staticClass:
+                            "font-hkbold text-sm uppercase tracking-wide",
+                          class: _vm.Label.Color
+                        },
+                        [_vm._v(" " + _vm._s(_vm.Label.Title))]
+                      )
+                    ]
+                  )
+                : _vm._e()
+            ]
+          ),
           _vm._v(" "),
-          _vm.Label.Active
-            ? _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                },
-                [
-                  _c(
+          _c("div", { staticClass: "p-2 relative h-28 " }, [
+            _c(
+              "div",
+              { staticClass: "flex items-center content-center py-2" },
+              [
+                _c(
+                  "h3",
+                  {
+                    staticClass:
+                      "font-semibold text-xs text-gray-400 capitalize",
+                    attrs: { title: _vm.ProductName }
+                  },
+                  [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex  absolute bottom-7" }, [
+              _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
+                _vm._v(
+                  _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                    _vm._s(_vm.CurrentPrice) +
+                    " "
+                )
+              ]),
+              _vm._v(" "),
+              _vm.SalePrice > 0
+                ? _c(
                     "p",
                     {
                       staticClass:
-                        "font-hkbold text-sm uppercase tracking-wide",
-                      class: _vm.Label.Color
+                        "font-semibold line-through text-gray-400 text-xs ml-3"
                     },
-                    [_vm._v(" " + _vm._s(_vm.Label.Title))]
+                    [
+                      _vm._v(
+                        _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                          _vm._s(_vm.RegularPrice) +
+                          " "
+                      )
+                    ]
                   )
-                ]
-              )
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "p-2 relative h-28 " },
-        [
-          _c(
-            "inertia-link",
-            {
-              staticClass: "z-30",
-              attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
-            },
-            [
-              _c(
-                "div",
-                { staticClass: "flex items-center content-center py-2" },
-                [
-                  _c(
-                    "h3",
-                    {
-                      staticClass:
-                        "font-semibold text-xs text-gray-400 capitalize",
-                      attrs: { title: _vm.ProductName }
-                    },
-                    [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex  absolute bottom-7" }, [
-                _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
-                  _vm._v(
-                    _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                      _vm._s(_vm.CurrentPrice) +
-                      " "
-                  )
-                ]),
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex absolute bottom-2" }, [
+              _c("div", { staticClass: "flex items-center text-xs" }, [
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
                 _vm._v(" "),
-                _vm.SalePrice > 0
-                  ? _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-semibold line-through text-gray-400 text-xs ml-3"
-                      },
-                      [
-                        _vm._v(
-                          _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                            _vm._s(_vm.RegularPrice) +
-                            " "
-                        )
-                      ]
-                    )
-                  : _vm._e()
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "flex absolute bottom-2" }, [
-                _c("div", { staticClass: "flex items-center text-xs" }, [
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" })
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass: "font-hkregular text-sm text-secondary  ml-2"
-                  },
-                  [_vm._v("(45)")]
-                )
-              ])
-            ]
-          )
-        ],
-        1
+              _c(
+                "p",
+                { staticClass: "font-hkregular text-sm text-secondary  ml-2" },
+                [_vm._v("(45)")]
+              )
+            ])
+          ])
+        ]
       )
     ]
   )

@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     ProductImage: function ProductImage() {
-      var img = this.Product.image ? this.Product.image.replace("public", "storage") : './img/product/product (1).png';
+      var img = this.Product.mainphoto_url;
       return img;
     },
     RegularPrice: function RegularPrice() {
@@ -171,494 +171,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     ShopProduct: _Product_Product__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
+  computed: {
+    Products: function Products() {
+      return this.$page.RelatedProducts;
+    }
+  },
   mounted: function mounted() {
     new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"]('.related-product-slider', {
       type: "carousel",
-      startAt: 1,
+      animationDuration: 1000,
+      hoverpause: true,
+      autoplay: 3000,
+      startAt: 0,
       perView: 4,
       gap: 0,
       peek: {
@@ -710,124 +240,117 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "inertia-link",
     {
-      staticClass:
-        "product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
+      staticClass: "z-30",
+      attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
     },
     [
       _c(
         "div",
-        { staticClass: " rounded flex justify-center items-center p-2" },
+        {
+          staticClass:
+            "product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
+        },
         [
-          _c("div", {
-            staticClass:
-              "w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg",
-            style: "background-image:url('" + _vm.ProductImage + "')"
-          }),
+          _c(
+            "div",
+            { staticClass: " rounded flex justify-center items-center p-2" },
+            [
+              _c("div", {
+                staticClass:
+                  "w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg",
+                style: "background-image:url('" + _vm.ProductImage + "')"
+              }),
+              _vm._v(" "),
+              _vm.Label.Active
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                    },
+                    [
+                      _c(
+                        "p",
+                        {
+                          staticClass:
+                            "font-hkbold text-sm uppercase tracking-wide",
+                          class: _vm.Label.Color
+                        },
+                        [_vm._v(" " + _vm._s(_vm.Label.Title))]
+                      )
+                    ]
+                  )
+                : _vm._e()
+            ]
+          ),
           _vm._v(" "),
-          _vm.Label.Active
-            ? _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                },
-                [
-                  _c(
+          _c("div", { staticClass: "p-2 relative h-28 " }, [
+            _c(
+              "div",
+              { staticClass: "flex items-center content-center py-2" },
+              [
+                _c(
+                  "h3",
+                  {
+                    staticClass:
+                      "font-semibold text-xs text-gray-400 capitalize",
+                    attrs: { title: _vm.ProductName }
+                  },
+                  [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex  absolute bottom-7" }, [
+              _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
+                _vm._v(
+                  _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                    _vm._s(_vm.CurrentPrice) +
+                    " "
+                )
+              ]),
+              _vm._v(" "),
+              _vm.SalePrice > 0
+                ? _c(
                     "p",
                     {
                       staticClass:
-                        "font-hkbold text-sm uppercase tracking-wide",
-                      class: _vm.Label.Color
+                        "font-semibold line-through text-gray-400 text-xs ml-3"
                     },
-                    [_vm._v(" " + _vm._s(_vm.Label.Title))]
+                    [
+                      _vm._v(
+                        _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                          _vm._s(_vm.RegularPrice) +
+                          " "
+                      )
+                    ]
                   )
-                ]
-              )
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "p-2 relative h-28 " },
-        [
-          _c(
-            "inertia-link",
-            {
-              staticClass: "z-30",
-              attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
-            },
-            [
-              _c(
-                "div",
-                { staticClass: "flex items-center content-center py-2" },
-                [
-                  _c(
-                    "h3",
-                    {
-                      staticClass:
-                        "font-semibold text-xs text-gray-400 capitalize",
-                      attrs: { title: _vm.ProductName }
-                    },
-                    [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex  absolute bottom-7" }, [
-                _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
-                  _vm._v(
-                    _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                      _vm._s(_vm.CurrentPrice) +
-                      " "
-                  )
-                ]),
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex absolute bottom-2" }, [
+              _c("div", { staticClass: "flex items-center text-xs" }, [
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
                 _vm._v(" "),
-                _vm.SalePrice > 0
-                  ? _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-semibold line-through text-gray-400 text-xs ml-3"
-                      },
-                      [
-                        _vm._v(
-                          _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                            _vm._s(_vm.RegularPrice) +
-                            " "
-                        )
-                      ]
-                    )
-                  : _vm._e()
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
+                _vm._v(" "),
+                _c("i", { staticClass: "bx bxs-star text-yellow-300" })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "flex absolute bottom-2" }, [
-                _c("div", { staticClass: "flex items-center text-xs" }, [
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "bx bxs-star text-yellow-300" })
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass: "font-hkregular text-sm text-secondary  ml-2"
-                  },
-                  [_vm._v("(45)")]
-                )
-              ])
-            ]
-          )
-        ],
-        1
+              _c(
+                "p",
+                { staticClass: "font-hkregular text-sm text-secondary  ml-2" },
+                [_vm._v("(45)")]
+              )
+            ])
+          ])
+        ]
       )
     ]
   )
@@ -854,1539 +377,102 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "pb-20 md:pb-32" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "related-product-slider relative" }, [
+      _c(
+        "div",
+        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+        [
+          _c(
+            "div",
+            { staticClass: "pt-12 relative glide__slides" },
+            _vm._l(_vm.Products, function(Product, ProductIndex) {
+              return _c(
+                "div",
+                {
+                  key: ProductIndex,
+                  staticClass: "relative group glide__slide"
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "sm:px-5 lg:px-4" },
+                    [_c("shop-product", { attrs: { Product: Product } })],
+                    1
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pb-20 md:pb-32" }, [
-      _c("div", { staticClass: "text-center" }, [
-        _c(
-          "h2",
-          {
-            staticClass:
-              "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
-          },
-          [_vm._v("\n            Related Product")]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass:
-              "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2 pb-6 sm:pb-8 lg:pb-0"
-          },
-          [_vm._v("\n            Get the latest news & updates from Ciloe")]
-        )
-      ]),
+    return _c("div", { staticClass: "text-center" }, [
+      _c(
+        "h2",
+        {
+          staticClass:
+            "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+        },
+        [_vm._v("Related Product")]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "related-product-slider relative" }, [
-        _c(
-          "div",
-          { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
-          [
-            _c("div", { staticClass: "pt-12 relative glide__slides" }, [
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/backpack-2.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    New\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Woodie Blake"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$115.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/purse-1.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    trend\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Beautiful Brown"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$55.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/sunglass-3.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-primary-light font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    20%\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Coffee Cream"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$65.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/watch-1.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    Hot\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Submarine Watch"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$120.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/backpack-2.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    New\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Woodie Blake"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$115.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/shoes-1.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    trend\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Cocktail Vans"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$33.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/shoes-4.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-primary-light font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    20%\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Siberian Boots"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$67.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "relative group glide__slide" }, [
-                _c("div", { staticClass: "sm:px-5 lg:px-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative rounded flex justify-center items-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-68 h-68 bg-center bg-no-repeat bg-cover",
-                        staticStyle: {
-                          "background-image": "url(./../../img/watch-3.png)"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    Hot\n                                "
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass:
-                          "absolute top-0 bottom-0 inset-x-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/cart" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg ",
-                                  alt: "icon cart"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all   mr-3",
-                              attrs: { href: "/product" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/56f050a65973a419ab0f192614c9a3c7232604d1/4b447/assets/img/icons/icon-search.svg",
-                                  alt: "icon search"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all  ",
-                              attrs: { href: "/account/wishlist/" }
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  src:
-                                    "https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg",
-                                  alt: "icon heart"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex justify-between items-center pt-6",
-                      attrs: { href: "/product" }
-                    },
-                    [
-                      _c("div", [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "font-hkregular text-base text-secondary"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                    Silver One"
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "flex items-center" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bx bxs-star text-primary"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "bx bxs-star text-primary" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "font-hkregular text-sm text-secondary ml-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            45\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c(
-                          "span",
-                          { staticClass: "font-hkbold text-primary text-xl" },
-                          [_vm._v("$137.0")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { attrs: { "data-glide-el": "controls" } }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
-              attrs: { "data-glide-dir": "<" }
-            },
-            [
-              _c("i", {
-                staticClass:
-                  "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
-              attrs: { "data-glide-dir": ">" }
-            },
-            [
-              _c("i", {
-                staticClass:
-                  "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
-              })
-            ]
-          )
-        ])
-      ])
+      _c(
+        "p",
+        {
+          staticClass:
+            "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2 pb-6 sm:pb-8 lg:pb-0"
+        },
+        [_vm._v(" Get the latest news & updates from store")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { "data-glide-el": "controls" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+          attrs: { "data-glide-dir": "<" }
+        },
+        [
+          _c("i", {
+            staticClass:
+              "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+          attrs: { "data-glide-dir": ">" }
+        },
+        [
+          _c("i", {
+            staticClass:
+              "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+          })
+        ]
+      )
     ])
   }
 ]
