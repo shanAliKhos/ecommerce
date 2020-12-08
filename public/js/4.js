@@ -454,7 +454,12 @@ var render = function() {
                         _c("span", [_vm._v("Account")])
                       ]
                     )
-                  : _c(
+                  : _vm._e(),
+                _vm._v(" "),
+                (_vm.$page.user
+                ? !_vm.$page.user.is_admin
+                : false)
+                  ? _c(
                       "MobileNavLink",
                       {
                         attrs: {
@@ -492,6 +497,7 @@ var render = function() {
                         _c("span", [_vm._v("Account")])
                       ]
                     )
+                  : _vm._e()
               ],
               1
             )
