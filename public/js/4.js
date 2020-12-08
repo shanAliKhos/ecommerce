@@ -271,7 +271,7 @@ var render = function() {
                       "svg",
                       {
                         staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-9 w-auto fill-current",
+                          "ml-1 transition duration-700 ease-in-out h-7 w-auto fill-current",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
@@ -311,7 +311,7 @@ var render = function() {
                       "svg",
                       {
                         staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-9 w-auto",
+                          "ml-2 transition duration-700 ease-in-out h-7 w-auto",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
@@ -348,7 +348,7 @@ var render = function() {
                       "svg",
                       {
                         staticClass:
-                          "transition duration-700 ease-in-out h-9 w-auto",
+                          "ml-1 transition duration-700 ease-in-out h-7 w-auto",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
@@ -387,7 +387,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out h-9 w-auto",
+                              "ml-3 transition duration-700 ease-in-out h-7 w-auto",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -430,7 +430,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out h-9 w-auto",
+                              "ml-3 transition duration-700 ease-in-out h-7 w-auto",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -473,7 +473,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out 9 w-auto ",
+                              "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
