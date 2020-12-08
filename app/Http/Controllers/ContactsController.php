@@ -31,6 +31,8 @@ class ContactsController extends Controller
             ->where('read', false)
             ->groupBy('from')
             ->get();
+            
+        dd( $unreadIds);
 
         // add an unread key to each contact with the count of unread messages
         $contacts = $contacts->map(function($contact) use ($unreadIds) {
