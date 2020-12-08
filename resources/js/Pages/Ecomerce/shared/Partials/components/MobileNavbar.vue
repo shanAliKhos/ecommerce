@@ -82,7 +82,7 @@ export default {
         IsMenuVisible(){
             switch (this.$page.currentRouteName) {
                 case 'shop.show':
-                    return false;      
+                    return false;       
                 break;
             
                 default:
