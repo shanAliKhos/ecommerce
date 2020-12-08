@@ -22,7 +22,7 @@ class ContactsController extends Controller
     }
 
     public function get()
-    {  
+    {   
         $contacts = User::where('id', '!=', auth()->id())->get();
 
         // get a collection of items where sender_id is the user who sent us a message
