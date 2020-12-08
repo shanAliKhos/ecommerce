@@ -148,23 +148,50 @@
                     </div>
                 </div>
 
-                
-                <div class="flex pb-8 group">
 
-                        <button   
-                            :disabled="sending"
-                            @click="AddToCart"
-                            type="button"
-                            class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
-                            > 
-                            <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
-                            </svg>                              
-                            <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>                                   
-                            Add to cart
-                        </button>                     
+       <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5">
+
+            <button  @click="AddToCart" class="flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
+                <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+
+                    <!-- <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" /> -->
+                </svg>                                   
+                <span class=" ml-2 ">Add to cart</span>
+
+            </button>
+             
+
+            <!-- <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
+                <span>Save</span>
+                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>                
+            </loading-button>                  
+  -->
+
+        </div>   
+                
+                <div class="flex pb-8 group justify-around">
+<!-- 
+                    <button   
+                        :disabled="sending"
+                        @click="AddToCart"
+                        type="button"
+                        class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center  "
+                        > 
+                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                        </svg>                              
+                        <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>                                   
+                        Add to cart
+                    </button>                      -->
+
                     <!-- <button type="button" @click="AddToCart" class="btn btn-outline mr-4 md:mr-6">
                         Add to cart
                     </button> -->
@@ -332,108 +359,109 @@
         </div>
     </div>
 </template>
-<script>
-    export default {
-        props:{
-            Product:{
-                type:Object,
-                required:true,
-            },
-        },
-        data() {
-            return {
-                CartItem:{
-                    id:(this.Product.id)?this.Product.id:null,
-                    name:(this.Product.name)?this.Product.name:'',
-                    slug:(this.Product.slug)?this.Product.slug:'',
-                    Instock:(this.Product.quantity)?this.Product.quantity:'',
-                    Qty:1,
-                    price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
-                    image:(this.Product.image)?this.Product.image:'./img/shoes-4.png', 
-                },                 
-                Label:{
-                    Color:null,
-                    Title:null,
-                    Active:false,
-                },        
-                sending:false,
-                activeTab:'description',
-                selectedImage:null,                        
-            }
-        },
-        watch: { 
-            CartItemQty: function (newQty, oldQty) {  
-                if(newQty > this.ProductQuantity || newQty < 1 ){
-                    this.CartItem.Qty =  oldQty
-                }
-            }
-        },        
-        methods: {
-            AddToCart(){  
-                this.sending = true;
-                this.$root.$emit('Add-To-Cart',this.CartItem);      
-            },            
-            SetLable(){ 
-                if(this.Product.sale_price > 0){
-                    var RegualPrice = this.Product.regular_price;
-                    var SalePrice = this.Product.sale_price;
-                    var Discount = Math.round( ((RegualPrice - SalePrice)/ RegualPrice) * 100)+'%OFF';
-                    this.Label={
-                        Color:'bg-primary',
-                        Title:Discount,
-                        Active:true,                
-                    };
-                }else if(this.Product.is_featured){    
+<script> 
 
-                    this.Label={
-                        Color:'bg-v-blue',
-                        Title:'Trend',
-                        Active:true,                
-                    };       
-                    
-                }else{
-                    this.Label={
-                        Color:'bg-v-green',
-                        Title:'new',
-                        Active:true,                
-                    };   
-
-                }  
-            },            
+export default {
+    props:{
+        Product:{
+            type:Object,
+            required:true,
         },
-        computed: {
-            ProductImages(){
-                self=this; 
-                var  img = './../../'+self.Product.image.replace("public", "storage");
-                return img;
-            },            
-            CurrentPrice(){
-                return this.$page.Product.sale_price?this.$page.Product.sale_price:this.$page.Product.regular_price; 
-            },
-            RegularPrice(){
-                return this.$page.Product.regular_price;
-            },
-            ProductQuantity(){
-                return this.Product.quantity;
-            },
-            ProductDescription(){
-                return this.Product.description;
-            },
-            IsOnSale(){
-                return this.$page.Product.sale_price > 0;
-            }, 
-            CartItemQty(){
-                self = this;
-                return self.CartItem.Qty;
-            },                       
-        },    
-        mounted () {
-            this.$root.$on('item-is-added-to-cart',()=>{
-                this.sending = false;
-            });
-            this.SetLable(); 
-        }, 
-      
+    },
  
-    }
+    data() {
+        return {
+            CartItem:{
+                id:(this.Product.id)?this.Product.id:null,
+                name:(this.Product.name)?this.Product.name:'',
+                slug:(this.Product.slug)?this.Product.slug:'',
+                Instock:(this.Product.quantity)?this.Product.quantity:'',
+                Qty:1,
+                price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
+                image:(this.Product.image)?this.Product.image:'./img/shoes-4.png', 
+            },                 
+            Label:{
+                Color:null,
+                Title:null,
+                Active:false,
+            },        
+            sending:false,
+            activeTab:'description',
+            selectedImage:null,                        
+        }
+    },
+    watch: { 
+        CartItemQty: function (newQty, oldQty) {  
+            if(newQty > this.ProductQuantity || newQty < 1 ){
+                this.CartItem.Qty =  oldQty
+            }
+        }
+    },        
+    methods: {
+        AddToCart(){  
+            this.sending = true;
+            this.$root.$emit('Add-To-Cart',this.CartItem);      
+        },            
+        SetLable(){ 
+            if(this.Product.sale_price > 0){
+                var RegualPrice = this.Product.regular_price;
+                var SalePrice = this.Product.sale_price;
+                var Discount = Math.round( ((RegualPrice - SalePrice)/ RegualPrice) * 100)+'%OFF';
+                this.Label={
+                    Color:'bg-primary',
+                    Title:Discount,
+                    Active:true,                
+                };
+            }else if(this.Product.is_featured){    
+
+                this.Label={
+                    Color:'bg-v-blue',
+                    Title:'Trend',
+                    Active:true,                
+                };       
+                
+            }else{
+                this.Label={
+                    Color:'bg-v-green',
+                    Title:'new',
+                    Active:true,                
+                };   
+
+            }  
+        },            
+    },
+    computed: {
+        ProductImages(){
+            self=this; 
+            var  img = './../../'+self.Product.image.replace("public", "storage");
+            return img;
+        },            
+        CurrentPrice(){
+            return this.$page.Product.sale_price?this.$page.Product.sale_price:this.$page.Product.regular_price; 
+        },
+        RegularPrice(){
+            return this.$page.Product.regular_price;
+        },
+        ProductQuantity(){
+            return this.Product.quantity;
+        },
+        ProductDescription(){
+            return this.Product.description;
+        },
+        IsOnSale(){
+            return this.$page.Product.sale_price > 0;
+        }, 
+        CartItemQty(){
+            self = this;
+            return self.CartItem.Qty;
+        },                       
+    },    
+    mounted () {
+        this.$root.$on('item-is-added-to-cart',()=>{
+            this.sending = false;
+        });
+        this.SetLable(); 
+    }, 
+
+}
 </script>

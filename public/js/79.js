@@ -707,8 +707,6 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm.Authenticated ? _c("div", [_c("Support")], 1) : _vm._e(),
-      _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),
       _c("portal-target", { attrs: { name: "modal", multiple: "" } }),

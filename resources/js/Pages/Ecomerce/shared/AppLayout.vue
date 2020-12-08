@@ -18,9 +18,9 @@
         </transition>    
         
     </main>         
-    <div v-if="Authenticated">
+    <!-- <div v-if="Authenticated">
         <Support></Support>
-    </div>
+    </div> -->
 
     <app-footer></app-footer>
 

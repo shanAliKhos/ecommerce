@@ -284,7 +284,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     loading: Boolean
@@ -815,8 +814,6 @@ var render = function() {
         ],
         1
       ),
-      _vm._v(" "),
-      _vm.Authenticated ? _c("div", [_c("Support")], 1) : _vm._e(),
       _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),

@@ -42,7 +42,8 @@ module.exports = {
         backgroundImage: ['hover', 'focus'],    
         extend: {
            transform: ['hover', 'focus'],
-          }        
+           scale: ['focus-within'],
+        }        
     },
 
     plugins: [require('@tailwindcss/ui')],

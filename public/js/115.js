@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'block text-lg font-semibold text-orange-500 border-b-4  border-orange-500 px-2' : 'hover:-translate-y-2 block text-lg font-semibold  text-gray-300 hover:text-orange-300  border-b-3 border-white hover:border-orange-300 px-2';
+      return this.active ? 'block text-lg font-semibold text-orange-500 border-b-4  border-orange-500 px-2' : 'hover:-translate-x-1 block text-lg font-semibold  text-gray-300 hover:text-orange-300  border-b-3 border-white hover:border-orange-300 px-2';
     }
   }
 });

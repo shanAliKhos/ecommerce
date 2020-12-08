@@ -343,6 +343,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -666,9 +693,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            " +
+                          "\n                                " +
                             _vm._s(_vm.Label.Title) +
-                            "\n                        "
+                            "\n                            "
                         )
                       ]
                     )
@@ -681,11 +708,11 @@ var render = function() {
                   { staticClass: "font-hkregular text-secondary text-2xl" },
                   [
                     _vm._v(
-                      "\n                            " +
+                      "\n                                " +
                         _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
                         " " +
                         _vm._s(_vm.CurrentPrice) +
-                        " \n                        "
+                        " \n                            "
                     )
                   ]
                 ),
@@ -699,11 +726,11 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            " +
+                          "\n                                " +
                             _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
                             " " +
                             _vm._s(_vm.RegularPrice) +
-                            " \n                        "
+                            " \n                            "
                         )
                       ]
                     )
@@ -748,7 +775,7 @@ var render = function() {
                     staticClass: "block relative h-0 w-0 overflow-hidden",
                     attrs: { for: "quantity-form" }
                   },
-                  [_vm._v("Quantity\n                        form")]
+                  [_vm._v("Quantity\n                            form")]
                 ),
                 _vm._v(" "),
                 _c("input", {
@@ -821,71 +848,82 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "flex pb-8 group" }, [
-            _c(
-              "button",
-              {
-                staticClass:
-                  "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
-                attrs: { disabled: _vm.sending, type: "button" },
-                on: { click: _vm.AddToCart }
-              },
-              [
-                _vm.sending
-                  ? _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 20 20",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("path", {
+          _c(
+            "div",
+            {
+              staticClass:
+                "flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5"
+            },
+            [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                  attrs: { type: "button" },
+                  on: { click: _vm.AddToCart }
+                },
+                [
+                  !_vm.sending
+                    ? _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "transition duration-700 ease-in-out  h-5 w-5 ",
                           attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                            "clip-rule": "evenodd"
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
                           }
-                        })
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                !_vm.sending
-                  ? _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "transition duration-700 ease-in-out  h-5 w-5 mr-2",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 20 20",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("path", {
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.sending
+                    ? _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "transition  ease-in-out  animate-spin h-5 w-5",
                           attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                            "clip-rule": "evenodd"
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 20 20",
+                            fill: "currentColor"
                           }
-                        })
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(
-                  "                                   \n                        Add to cart\n                    "
-                )
-              ]
-            )
-          ]),
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c("span", { staticClass: " ml-2 " }, [_vm._v("Add to cart")])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex pb-8 group justify-around" }),
           _vm._v(" "),
           _vm._m(3),
           _vm._v(" "),
@@ -922,7 +960,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n                Description\n            ")]
+              [_vm._v("\n                    Description\n                ")]
             ),
             _vm._v(" "),
             _c(
@@ -937,7 +975,11 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n                Additional Information\n            ")]
+              [
+                _vm._v(
+                  "\n                    Additional Information\n                "
+                )
+              ]
             ),
             _vm._v(" "),
             _c(
@@ -952,7 +994,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n                Reviews\n            ")]
+              [_vm._v("\n                    Reviews\n                ")]
             )
           ]
         ),
@@ -1111,7 +1153,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "font-hkbold text-secondary pl-3" }, [
-        _vm._v("\n                    KH12345")
+        _vm._v("\n                        KH12345")
       ])
     ])
   },
@@ -1121,7 +1163,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", { staticClass: "font-hkregular text-secondary" }, [
       _c("span", { staticClass: "pr-2" }, [_vm._v("Categories:")]),
-      _vm._v("Bag, Hand bag, Travel bag, Black\n            ")
+      _vm._v("Bag, Hand bag, Travel bag, Black\n                ")
     ])
   },
   function() {
@@ -1131,15 +1173,15 @@ var staticRenderFns = [
     return _c("div", { staticClass: "w-5/6 mx-auto" }, [
       _c("div", { staticClass: "font-hkregular text-secondary text-base" }, [
         _vm._v(
-          "\n                        On the main compartment has multiple pockets available for your tools, chargers,\n                        make up, keys, etc. "
+          "\n                            On the main compartment has multiple pockets available for your tools, chargers,\n                            make up, keys, etc. "
         ),
         _c("br"),
         _c("br"),
         _vm._v(" Size::13.4”Lx 6.5”W x 15.4”H. "),
         _c("br"),
-        _vm._v(" Weight:\n                        1.57pounds. "),
+        _vm._v(" Weight:\n                            1.57pounds. "),
         _c("br"),
-        _vm._v(" Color: light brown.\n\n                    ")
+        _vm._v(" Color: light brown.\n\n                        ")
       ])
     ])
   },
@@ -1174,7 +1216,7 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
-          _vm._v("\n                        Perfect for everyday use")
+          _vm._v("\n                            Perfect for everyday use")
         ]),
         _vm._v(" "),
         _c(
@@ -1184,7 +1226,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                        I loooveeeee this product!!! It feels so soft and smells like real leather!!! I\n                        ordered this fancy backpack looking for something that can be used at work and, at\n                        the same time, after work; and I found it. Honestly.. Amazing!!"
+              "\n                            I loooveeeee this product!!! It feels so soft and smells like real leather!!! I\n                            ordered this fancy backpack looking for something that can be used at work and, at\n                            the same time, after work; and I found it. Honestly.. Amazing!!"
             )
           ]
         ),
@@ -1214,7 +1256,7 @@ var staticRenderFns = [
             _c(
               "p",
               { staticClass: "font-hkregular text-grey-darkest text-sm" },
-              [_vm._v("\n                            6 days ago")]
+              [_vm._v("\n                                6 days ago")]
             )
           ]
         )
@@ -1252,7 +1294,7 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
-          _vm._v("\n                        Gift for my girlfriend")
+          _vm._v("\n                            Gift for my girlfriend")
         ]),
         _vm._v(" "),
         _c(
@@ -1262,7 +1304,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                        I paid this thing thinking about my girlfriend’s birthday present, however I had my\n                        doubts cuz’ she is kind of picky. But Seriously, from now on, Elyssi is my best\n                        friend! She loved it!! She’s crazy about it! DISCLAIMER: It is smaller than it\n                        appears. "
+              "\n                            I paid this thing thinking about my girlfriend’s birthday present, however I had my\n                            doubts cuz’ she is kind of picky. But Seriously, from now on, Elyssi is my best\n                            friend! She loved it!! She’s crazy about it! DISCLAIMER: It is smaller than it\n                            appears. "
             )
           ]
         ),
@@ -1292,7 +1334,7 @@ var staticRenderFns = [
             _c(
               "p",
               { staticClass: "font-hkregular text-grey-darkest text-sm" },
-              [_vm._v("\n                            4 days ago")]
+              [_vm._v("\n                                4 days ago")]
             )
           ]
         )
@@ -1337,7 +1379,7 @@ var staticRenderFns = [
                 staticClass: "font-hkregular text-secondary text-sm block mb-2",
                 attrs: { for: "email" }
               },
-              [_vm._v("Email\n                                address")]
+              [_vm._v("Email\n                                    address")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -1365,7 +1407,7 @@ var staticRenderFns = [
                 staticClass: "font-hkregular text-secondary text-sm block mb-2",
                 attrs: { for: "review_title" }
               },
-              [_vm._v("Review\n                                Title")]
+              [_vm._v("Review\n                                    Title")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -1417,7 +1459,7 @@ var staticRenderFns = [
             staticClass: "font-hkregular text-secondary text-sm block mb-2",
             attrs: { for: "message" }
           },
-          [_vm._v("Review\n                            Message")]
+          [_vm._v("Review\n                                Message")]
         ),
         _vm._v(" "),
         _c("textarea", {
@@ -1439,7 +1481,7 @@ var staticRenderFns = [
       [
         _c("a", { staticClass: "btn btn-primary", attrs: { href: "/" } }, [
           _vm._v(
-            "\n                        Submit Review\n                    "
+            "\n                            Submit Review\n                        "
           )
         ])
       ]
