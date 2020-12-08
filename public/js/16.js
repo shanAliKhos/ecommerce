@@ -92,7 +92,6 @@ __webpack_require__.r(__webpack_exports__);
 
           _this.$inertia.post(_this.route('cart.checkout'), payment_Form, {
             preserveState: true,
-            preserveScroll: true,
             onStart: function onStart() {
               return _this.sending = true;
             },

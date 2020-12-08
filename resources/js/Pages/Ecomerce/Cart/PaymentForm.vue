@@ -78,8 +78,7 @@ export default {
                      
 
                     this.$inertia.post(this.route('cart.checkout'), payment_Form,{
-                        preserveState: true,
-                        preserveScroll: true,  
+                        preserveState: true, 
                         onStart: () => this.sending = true,
                         onFinish: () => this.sending = false,                
                     });                    
