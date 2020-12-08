@@ -12,8 +12,8 @@
        
             IsActiveLink() {
                 return this.active
-                            ? 'font-semibold text-red-500'
-                            : '' 
+                            ? 'antialiased outline-none text-center text-red-500 focus:outline-none appearance-none'
+                            : 'antialiased outline-none text-center focus:outline-none appearance-none' 
             },
         }
     }

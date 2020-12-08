@@ -831,9 +831,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "div",
-          {
-            staticClass: "flex flex-wrap items-center justify-center pt-8 -mx-5"
-          },
+          { staticClass: "flex flex-wrap items-center justify-center pt-8 " },
           [
             _c("div", {
               staticClass:

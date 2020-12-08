@@ -163,7 +163,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
  // import BreadCrumb from './../components/BreadCrumb' 
 
 
@@ -571,7 +570,7 @@ var render = function() {
                                   ]
                                 ),
                             _vm._v(
-                              "                                    \n                                                 \n\n                        Empty cart\n                    "
+                              "                                    \n                                                    \n\n                        Empty cart\n                    "
                             )
                           ]
                         )

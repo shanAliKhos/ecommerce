@@ -45,7 +45,8 @@ module.exports = {
            scale: ['focus-within'],
            animation: ['hover', 'focus'],
            transform: ['hover', 'focus'],
-
+           appearance: ['hover', 'focus'],
+           outline: ['hover', 'active'],           
         }        
     },
 

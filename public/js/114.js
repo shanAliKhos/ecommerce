@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'font-semibold text-red-500' : '';
+      return this.active ? 'antialiased outline-none text-center text-red-500 focus:outline-none appearance-none' : 'antialiased outline-none text-center focus:outline-none appearance-none';
     }
   }
 });
