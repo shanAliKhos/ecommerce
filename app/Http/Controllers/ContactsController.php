@@ -41,6 +41,7 @@ class ContactsController extends Controller
             return $contact;
         });
 
+        dd('ok');
 
         return response()->json($contacts);
     }
