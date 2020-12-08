@@ -190,6 +190,7 @@ __webpack_require__.r(__webpack_exports__);
     hanleIncoming: function hanleIncoming(message) {
       if (this.selectedContact && message.from == this.selectedContact.id) {
         this.saveNewMessage(message);
+        alert('ok');
         return;
       }
 

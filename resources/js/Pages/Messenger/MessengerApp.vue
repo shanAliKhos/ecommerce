@@ -45,6 +45,7 @@ export default {
         hanleIncoming(message) {
             if (this.selectedContact && message.from == this.selectedContact.id) {
                 this.saveNewMessage(message);
+                alert('ok');
                 return;
             }
 

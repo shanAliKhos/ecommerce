@@ -342,6 +342,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -826,7 +827,7 @@ var render = function() {
               {
                 staticClass:
                   "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
-                attrs: { type: "button" },
+                attrs: { disabled: _vm.sending, type: "button" },
                 on: { click: _vm.AddToCart }
               },
               [

@@ -152,6 +152,7 @@
                 <div class="flex pb-8 group">
 
                         <button   
+                            :disabled="sending"
                             @click="AddToCart"
                             type="button"
                             class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
