@@ -413,7 +413,9 @@ var render = function() {
                     )
                   : _vm._e(),
                 _vm._v(" "),
-                _vm.$page.user.is_admin
+                (_vm.$page.user
+                ? _vm.$page.user.is_admin
+                : false)
                   ? _c(
                       "MobileNavLink",
                       {
