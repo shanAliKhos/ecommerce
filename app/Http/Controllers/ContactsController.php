@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\Message;
 use App\Events\NewMessage;
 use Inertia\Inertia;
-use Illuminate\Support\Facades\DB;
+use DB;
 
 class ContactsController extends Controller
 {
@@ -31,8 +31,7 @@ class ContactsController extends Controller
             ->where('to', auth()->id())
             ->where('read', false)
             ->groupBy('from')
-            ->get();
-
+            ->get(); 
         // add an unread key to each contact with the count of unread messages
         $contacts = $contacts->map(function($contact) use ($unreadIds) {
             $contactUnread = $unreadIds->where('sender_id', $contact->id)->first();

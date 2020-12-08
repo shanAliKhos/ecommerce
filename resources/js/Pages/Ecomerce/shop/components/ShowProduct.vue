@@ -98,7 +98,7 @@
                     </div>
                 </div>
                  
-                <!-- <div class="product-attrbute-variation">
+                <div class="product-attrbute-variation">
                     <div class="flex justify-between pb-4">
                         <div class="w-1/3 sm:w-1/5">
                             <p class="font-hkregular text-secondary">Color</p>
@@ -123,7 +123,7 @@
                             </select>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="flex items-center justify-between pb-8">
                     <div class="w-1/3 sm:w-1/5">
@@ -150,12 +150,26 @@
 
                 
                 <div class="flex pb-8 group">
-                    <button type="button" @click="AddToCart()" class="btn btn-outline mr-4 md:mr-6">
+
+                        <button   
+                            @click="AddToCart"
+                            type="button"
+                            class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
+                            > 
+                            <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                            </svg>                              
+                            <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>                                   
+                            Add to cart
+                        </button>                     
+                    <!-- <button type="button" @click="AddToCart" class="btn btn-outline mr-4 md:mr-6">
                         Add to cart
-                    </button>
-                    <a href="/cart" class="btn btn-primary">
+                    </button> -->
+                    <!-- <a href="/cart" class="btn btn-primary">
                         BUY NOW
-                    </a>
+                    </a> -->
                 </div>
                 
                 <div class="product-short-description">                
@@ -341,7 +355,7 @@
                     Title:null,
                     Active:false,
                 },        
-       
+                sending:false,
                 activeTab:'description',
                 selectedImage:null,                        
             }
@@ -355,6 +369,7 @@
         },        
         methods: {
             AddToCart(){  
+                this.sending = true;
                 this.$root.$emit('Add-To-Cart',this.CartItem);      
             },            
             SetLable(){ 
@@ -412,60 +427,12 @@
             },                       
         },    
         mounted () {
-            this.SetLable();
-         
+            this.$root.$on('item-is-added-to-cart',()=>{
+                this.sending = false;
+            });
+            this.SetLable(); 
         }, 
-        // data() {
-        //     return {
-        //         ProductImages:[],
-        //         CartProduct:{
-        //             id:(this.Product.id)?this.Product.id:null,
-        //             name:(this.Product.name)?this.Product.name:'',
-        //             slug:(this.Product.slug)?this.Product.slug:'',
-        //             Instock:(this.Product.quantity)?this.Product.quantity:'',
-        //             Qty:1,
-        //             price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
-        //             image:(this.Product.image)?this.Product.image:'',
-        //         }, 
-        //     }
-        // },
-        // methods: {
-        //     AddToCart(Item){ 
-        //         this.$root.$emit('Add-To-Cart',Item);      
-        //     },
-        // },
-        // watch: { 
-        //     CartQty: function (newQty, oldQty) {  
-
-        //         if(newQty > this.ProductQuantity || newQty < 1 ){
-        //             this.CartProduct.Qty =  oldQty
-        //         }
-        //     }
-        // },
-        // computed: {
-
-
-            // ProductMainImage(){
-            //     self = this ;
-            //     var  img = (this.Product.image)?'/'+this.Product.image.replace("public", "storage"):'/'+self.Product.image;
-            //     return img;
-                      
-            // },
-            // ProductAttributes(){
-            //     self = this ;  
-            //     return self.Product.Attributes;
-            // },
-            // ProductPrice(){
-            //     self = this ;
-            //     return (self.Product.sale_price)?self.Product.sale_price:self.Product.regular_price;
-            // },
-            // CartQty(){
-            //     self = this;
-            //     return self.CartProduct.Qty;
-            // },
-           
-        // },
-
+      
  
     }
 </script>

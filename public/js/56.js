@@ -174,46 +174,46 @@ __webpack_require__.r(__webpack_exports__);
       contacts: []
     };
   },
-  methods: {// startConversationWith(contact) {
-    //     this.updateUnreadCount(contact, true);
-    //     axios.get(`/conversation/${contact.id}`)
-    //         .then((response) => {
-    //             this.messages = response.data;
-    //             this.selectedContact = contact;
-    //         })
-    // },
-    // saveNewMessage(message) {
-    //     this.messages.push(message);
-    // },
-    // hanleIncoming(message) {
-    //     if (this.selectedContact && message.from == this.selectedContact.id) {
-    //         this.saveNewMessage(message);
-    //         return;
-    //     }
-    //     this.updateUnreadCount(message.from_contact, false);
-    // },
-    // updateUnreadCount(contact, reset) {
-    //     this.contacts = this.contacts.map((single) => {
-    //         if (single.id !== contact.id) {
-    //             return single;
-    //         }
-    //         if (reset)
-    //             single.unread = 0;
-    //         else
-    //             single.unread += 1;
-    //         return single;
-    //     })
-    // }
+  methods: {
+    startConversationWith: function startConversationWith(contact) {
+      var _this = this;
+
+      this.updateUnreadCount(contact, true);
+      axios.get("/conversation/".concat(contact.id)).then(function (response) {
+        _this.messages = response.data;
+        _this.selectedContact = contact;
+      });
+    },
+    saveNewMessage: function saveNewMessage(message) {
+      this.messages.push(message);
+    },
+    hanleIncoming: function hanleIncoming(message) {
+      if (this.selectedContact && message.from == this.selectedContact.id) {
+        this.saveNewMessage(message);
+        return;
+      }
+
+      this.updateUnreadCount(message.from_contact, false);
+    },
+    updateUnreadCount: function updateUnreadCount(contact, reset) {
+      this.contacts = this.contacts.map(function (single) {
+        if (single.id !== contact.id) {
+          return single;
+        }
+
+        if (reset) single.unread = 0;else single.unread += 1;
+        return single;
+      });
+    }
   },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
-    // Echo.private(`messages.${this.user.id}`)
-    //     .listen('NewMessage', (e) => {
-    //     this.hanleIncoming(e.message);
-    // });
+    Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
+      _this2.hanleIncoming(e.message);
+    });
     axios.get('/contacts').then(function (response) {
-      _this.contacts = response.data;
+      _this2.contacts = response.data;
     });
   }
 });
@@ -501,7 +501,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "chat-app" })
+  return _c(
+    "div",
+    { staticClass: "chat-app" },
+    [
+      _c("ContactsList", {
+        attrs: { contacts: _vm.contacts },
+        on: { selected: _vm.startConversationWith }
+      }),
+      _vm._v(" "),
+      _c("Conversation", {
+        attrs: { contact: _vm.selectedContact, messages: _vm.messages },
+        on: { new: _vm.saveNewMessage }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

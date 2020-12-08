@@ -25,9 +25,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     store: function store(Item) {
+      var _this = this;
+
       var self = this;
-      self.$inertia.post(route('cart.store'), Item, {// preserveState: true,
-        // preserveScroll: true,               
+      self.$inertia.post(route('cart.store'), Item, {
+        // preserveState: true,
+        preserveScroll: true,
+        onSuccess: function onSuccess() {
+          if (Object.keys(_this.$page.errors).length === 0) {
+            _this.$root.$emit('item-is-added-to-cart');
+          }
+        }
       });
     },
     update: function update(Items) {
@@ -58,17 +66,17 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     self = this;
     this.$root.$on('Add-To-Cart', function (Item) {
-      _this.store(Item);
+      _this2.store(Item);
     });
     this.$root.$on('destory-this-item', function (Item) {
-      _this.destory(Item);
+      _this2.destory(Item);
     });
     this.$root.$on('update-cart', function (Items) {
-      _this.update(Items);
+      _this2.update(Items);
     });
   },
   computed: {

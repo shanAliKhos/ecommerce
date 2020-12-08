@@ -19,7 +19,12 @@ export default {
             const self = this;
             self.$inertia.post(route('cart.store'), Item,{
                 // preserveState: true,
-                // preserveScroll: true,               
+                preserveScroll: true, 
+                onSuccess: () => {
+                    if (Object.keys(this.$page.errors).length === 0) {
+                        this.$root.$emit('item-is-added-to-cart');
+                    }
+                },                           
             });
             
         },        
