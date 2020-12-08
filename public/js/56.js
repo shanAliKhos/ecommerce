@@ -209,9 +209,10 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this2 = this;
 
-    Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
-      _this2.hanleIncoming(e.message);
-    });
+    // Echo.private(`messages.${this.user.id}`)
+    //     .listen('NewMessage', (e) => {
+    //     this.hanleIncoming(e.message);
+    // });
     axios.get('/contacts').then(function (response) {
       _this2.contacts = response.data;
     });

@@ -66,10 +66,11 @@ export default {
         }
     },
     mounted() {
-        Echo.private(`messages.${this.user.id}`)
-            .listen('NewMessage', (e) => {
-            this.hanleIncoming(e.message);
-        });
+  
+        // Echo.private(`messages.${this.user.id}`)
+        //     .listen('NewMessage', (e) => {
+        //     this.hanleIncoming(e.message);
+        // });
 
         axios.get('/contacts')
             .then((response) => {
