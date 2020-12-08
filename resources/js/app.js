@@ -26,8 +26,6 @@ Vue.use(Toasted, {
 Vue.use(VueMeta) 
 Vue.use(VueSweetalert2);
  
- 
-
 InertiaProgress.init({ 
   delay: 150,  
   includeCSS: false,

@@ -442,6 +442,15 @@ __webpack_require__.r(__webpack_exports__);
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
     FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"],
     Support: _Messenger_Support__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  computed: {
+    Authenticated: function Authenticated() {
+      if (this.$page.user) {
+        return true;
+      }
+
+      return false;
+    }
   }
 });
 
@@ -883,7 +892,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", [_c("Support")], 1),
+      _vm.Authenticated ? _c("div", [_c("Support")], 1) : _vm._e(),
       _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),

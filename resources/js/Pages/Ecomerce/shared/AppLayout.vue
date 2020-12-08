@@ -18,7 +18,7 @@
         </transition>    
         
     </main>         
-    <div>
+    <div v-if="Authenticated">
         <Support></Support>
     </div>
 
@@ -49,8 +49,16 @@
             Support,
  
         },  
- 
- 
+
+        computed: {
+            Authenticated(){
+                if(this.$page.user){
+                    return true
+                }
+                return false
+                
+            },
+        },
 
         
     }

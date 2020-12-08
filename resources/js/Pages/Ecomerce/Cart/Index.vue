@@ -222,7 +222,6 @@ import AppLayout from './../shared/AppLayout'
                 return this.$page.SiteOptions.Currency.Symbol;
             }            
 
-            
         },              
 
     

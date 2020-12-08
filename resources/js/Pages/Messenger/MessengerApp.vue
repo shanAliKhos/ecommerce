@@ -12,6 +12,10 @@ import ContactsList from './ContactsList';
 
 export default {
     layout: AppLayout,     
+    components: {
+        Conversation, 
+        ContactsList,
+    },
     props: {
         user: {
             type: Object,
@@ -24,18 +28,7 @@ export default {
             messages: [],
             contacts: []
         };
-    },
-    mounted() {
-        Echo.private(`messages.${this.user.id}`)
-            .listen('NewMessage', (e) => {
-                this.hanleIncoming(e.message);
-            });
-
-        axios.get('/contacts')
-            .then((response) => {
-                this.contacts = response.data;
-            });
-    },
+    }, 
     methods: {
         startConversationWith(contact) {
             this.updateUnreadCount(contact, true);
@@ -72,11 +65,19 @@ export default {
             })
         }
     },
-    components: {Conversation, ContactsList}
+    mounted() {
+        Echo.private(`messages.${this.user.id}`)
+            .listen('NewMessage', (e) => {
+            this.hanleIncoming(e.message);
+        });
+
+        axios.get('/contacts')
+            .then((response) => {
+            this.contacts = response.data;
+        });
+    },    
 }
-</script>
-
-
+</script> 
 <style   scoped>
 .chat-app {
     display: flex;

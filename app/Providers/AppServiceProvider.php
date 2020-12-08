@@ -8,6 +8,8 @@ use Inertia\Inertia;
 use Auth;
 use Config;
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
 
@@ -76,6 +78,21 @@ class AppServiceProvider extends ServiceProvider
                 return [
                     'Items' => Session::get('CartItems'),
                 ];
+            },
+            'Support' => function () {
+                 
+                $User = new User;
+                $Admin = $User->where('is_admin',true)->first();
+                $id = $Admin->id;
+
+                return Message::where(function($q) use ($id) {
+                    $q->where('from', auth()->id());
+                    $q->where('to', $id);
+                })->orWhere(function($q) use ($id) {
+                    $q->where('from', $id);
+                    $q->where('to', auth()->id());
+                })
+                ->get();
             },
             'flash' => function () {
                 return [

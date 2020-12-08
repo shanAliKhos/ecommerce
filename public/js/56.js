@@ -58,6 +58,15 @@ __webpack_require__.r(__webpack_exports__);
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
     FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"],
     Support: _Messenger_Support__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  computed: {
+    Authenticated: function Authenticated() {
+      if (this.$page.user) {
+        return true;
+      }
+
+      return false;
+    }
   }
 });
 
@@ -148,6 +157,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
+  components: {
+    Conversation: _Conversation__WEBPACK_IMPORTED_MODULE_1__["default"],
+    ContactsList: _ContactsList__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
   props: {
     user: {
       type: Object,
@@ -161,24 +174,14 @@ __webpack_require__.r(__webpack_exports__);
       contacts: []
     };
   },
-  mounted: function mounted() {
-    var _this = this;
-
-    Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
-      _this.hanleIncoming(e.message);
-    });
-    axios.get('/contacts').then(function (response) {
-      _this.contacts = response.data;
-    });
-  },
   methods: {
     startConversationWith: function startConversationWith(contact) {
-      var _this2 = this;
+      var _this = this;
 
       this.updateUnreadCount(contact, true);
       axios.get("/conversation/".concat(contact.id)).then(function (response) {
-        _this2.messages = response.data;
-        _this2.selectedContact = contact;
+        _this.messages = response.data;
+        _this.selectedContact = contact;
       });
     },
     saveNewMessage: function saveNewMessage(message) {
@@ -203,9 +206,15 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   },
-  components: {
-    Conversation: _Conversation__WEBPACK_IMPORTED_MODULE_1__["default"],
-    ContactsList: _ContactsList__WEBPACK_IMPORTED_MODULE_2__["default"]
+  mounted: function mounted() {
+    var _this2 = this;
+
+    Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
+      _this2.hanleIncoming(e.message);
+    });
+    axios.get('/contacts').then(function (response) {
+      _this2.contacts = response.data;
+    });
   }
 });
 
@@ -397,7 +406,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", [_c("Support")], 1),
+      _vm.Authenticated ? _c("div", [_c("Support")], 1) : _vm._e(),
       _vm._v(" "),
       _c("app-footer"),
       _vm._v(" "),

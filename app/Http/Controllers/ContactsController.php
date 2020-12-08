@@ -66,15 +66,58 @@ class ContactsController extends Controller
 
     public function send(Request $request)
     {  
- 
         $message = Message::create([
             'from' => Auth()->id(),
             'to' => $request->contact_id,
             'text' => $request->text
         ]);
-
         broadcast(new NewMessage($message));
-
         return response()->json($message);
     }
+
+
+    public function SupportMessegesend(Request $request)
+    {  
+
+        $User = new User;
+        $Admin = $User->where('is_admin',true)->first();
+ 
+        $to = $Admin->id;
+
+        $message = Message::create([
+            'from' => Auth()->id(),
+            'to' => $to,
+            'text' => $request->text
+        ]);
+        broadcast(new NewMessage($message));
+        
+        return response()->json($message);
+    }
+
+
+    public function SupportMesseges()
+    { 
+     
+        $User = new User;
+        $Admin = $User->where('is_admin',true)->first();
+        $id = $Admin->id;
+        // mark all messages with the selected contact as read
+        Message::where('from', $id)->where('to', $id)->update(['read' => true]);
+
+        // // get all messages between the authenticated user and the selected user
+        // $messages = Message::where(function($q) use ($id) {
+        //     $q->where('from', auth()->id());
+        //     $q->where('to', $id);
+        // })->orWhere(function($q) use ($id) {
+        //     $q->where('from', $id);
+        //     $q->where('to', auth()->id());
+        // })
+        // ->get();
+ 
+        // return response()->json($messages);
+        return back();
+    }
+
+
+    
 }

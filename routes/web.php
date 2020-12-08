@@ -12,7 +12,6 @@ Route::prefix('blog')->group(function () {
     Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
     Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
     Route::get('/category/{slug}','Blog\BlogController@showByCategory')->name('blog.by-category');
-
 }); 
 //////////////////////////////////////// BLOG    ////////////////////////////////////
   
@@ -55,6 +54,10 @@ Route::prefix('blog')->group(function () {
         });
 
         //////////////////////////////////////// MESSENGER ////////////////////////////////////////
+        Route::get('/support', 'ContactsController@SupportMesseges')->name('support.index');
+        Route::post('/support', 'ContactsController@SupportMessegesend')->name('support.store');
+        
+        
         Route::get('/messenger', 'ContactsController@index');
         Route::get('/contacts', 'ContactsController@get');
         Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
