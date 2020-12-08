@@ -13,7 +13,7 @@
             IsActiveLink() {
                 return this.active
                             ? 'font-semibold text-red-500'
-                            : 'font-semibold' 
+                            : '' 
             },
         }
     }

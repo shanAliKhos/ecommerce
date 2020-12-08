@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'font-semibold text-red-500' : 'font-semibold';
+      return this.active ? 'font-semibold text-red-500' : '';
     }
   }
 });
@@ -259,7 +259,6 @@ var render = function() {
                 _c(
                   "MobileNavLink",
                   {
-                    staticClass: "font-semibold",
                     attrs: {
                       active: _vm.$page.currentRouteName == "welcome",
                       href: _vm.route("welcome"),
@@ -299,7 +298,6 @@ var render = function() {
                 _c(
                   "MobileNavLink",
                   {
-                    staticClass: "font-semibold ",
                     attrs: {
                       active: _vm.$page.currentRouteName == "shop.index",
                       href: _vm.route("shop.index"),
@@ -311,7 +309,7 @@ var render = function() {
                       "svg",
                       {
                         staticClass:
-                          "ml-2 transition duration-700 ease-in-out h-7 w-auto",
+                          "ml-1 transition duration-700 ease-in-out h-7 w-auto",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
