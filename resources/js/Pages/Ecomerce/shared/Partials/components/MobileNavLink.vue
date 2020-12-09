@@ -1,5 +1,5 @@
 <template> 
-        <inertia-link :href="href" :class="IsActiveLink"  preserve-scroll >
+        <inertia-link :href="href" :class="IsActiveLink">
             <slot></slot>
         </inertia-link>     
 </template>
@@ -12,8 +12,8 @@
        
             IsActiveLink() {
                 return this.active
-                            ? 'antialiased outline-none text-center text-red-500 focus:outline-none appearance-none'
-                            : 'antialiased outline-none text-center focus:outline-none appearance-none' 
+                            ? 'antialiased outline-none text-center text-red-500 outline-none appearance-none text-sm'
+                            : 'antialiased outline-none text-center outline-none appearance-none text-sm' 
             },
         }
     }

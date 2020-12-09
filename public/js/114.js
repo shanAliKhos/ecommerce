@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'antialiased outline-none text-center text-red-500 focus:outline-none appearance-none' : 'antialiased outline-none text-center focus:outline-none appearance-none';
+      return this.active ? 'antialiased outline-none text-center text-red-500 outline-none appearance-none text-sm' : 'antialiased outline-none text-center outline-none appearance-none text-sm';
     }
   }
 });
@@ -43,10 +43,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "inertia-link",
-    {
-      class: _vm.IsActiveLink,
-      attrs: { href: _vm.href, "preserve-scroll": "" }
-    },
+    { class: _vm.IsActiveLink, attrs: { href: _vm.href } },
     [_vm._t("default")],
     2
   )
