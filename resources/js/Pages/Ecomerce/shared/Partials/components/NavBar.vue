@@ -1,5 +1,5 @@
 <template>
-    <div class="container md:py-10 relative">
+    <div class="container relative">
         
         <div class="flex justify-between items-center">
             <div class="hidden lg:block">
@@ -58,7 +58,7 @@
                 <i class="bx bx-menu text-primary text-3xl" @click="$emit('mobile-menu-is-enabled')"></i>
             </div>
         </div>
-        <div class="flex justify-center lg:pt-8">
+        <div class="flex justify-center">
             <ul class="list-reset flex items-center">
             
                 <cus-nav-link 

@@ -259,6 +259,7 @@ var render = function() {
                 _c(
                   "MobileNavLink",
                   {
+                    staticClass: "appearance-none focus:outline-none",
                     attrs: {
                       active: _vm.$page.currentRouteName == "welcome",
                       href: _vm.route("welcome")
@@ -269,7 +270,7 @@ var render = function() {
                       "svg",
                       {
                         staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-7 w-auto fill-current",
+                          "ml-1 transition duration-700 ease-in-out h-7 w-auto fill-current appearance-none focus:outline-none",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
@@ -290,7 +291,11 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _c("span", [_vm._v("Home")])
+                    _c(
+                      "span",
+                      { staticClass: "appearance-none focus:outline-none" },
+                      [_vm._v("Home")]
+                    )
                   ]
                 ),
                 _vm._v(" "),

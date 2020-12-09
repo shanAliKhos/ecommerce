@@ -1335,6 +1335,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "main",
+        { staticClass: "lg:mt-40" },
         [
           _c(
             "transition",
@@ -1388,7 +1389,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "header",
-    { staticClass: "xxstheme-header" },
+    {
+      staticClass:
+        "xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated scroll:shadow"
+    },
     [
       _c("nav-bar", {
         attrs: {

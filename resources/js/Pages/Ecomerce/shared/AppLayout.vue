@@ -3,7 +3,7 @@
     
     <app-header></app-header>
     
-    <main>
+    <main class="lg:mt-40">
 
         <transition enter-active-class="transition duration-300 ease-out"
             enter-class="transform opacity-0"

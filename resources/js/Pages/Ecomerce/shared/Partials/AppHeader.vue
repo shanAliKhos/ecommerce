@@ -1,5 +1,5 @@
 <template>
-<header class="xxstheme-header">
+<header class="xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated scroll:shadow"">
     
     <nav-bar
         :mobileMenu="mobileMenu"
