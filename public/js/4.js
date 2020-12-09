@@ -99,16 +99,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['mobileMenu', 'categories', 'subcategory'],
@@ -118,14 +108,16 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     IsMenuVisible: function IsMenuVisible() {
       switch (this.$page.currentRouteName) {
-        case 'shop.show':
-          return false;
-          break;
-
         default:
           return true;
           break;
       }
+    },
+    CountCartItems: function CountCartItems() {
+      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
+        return TotalItems + Item.Qty;
+      }, 0) : 0;
+      return Qty;
     }
   }
 });
@@ -176,333 +168,325 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        staticClass:
-          "fixed inset-0 flex z-50 justify-end opacity-0 pointer-events-none   transition-all",
-        class: { "opacity-100 pointer-events-auto": _vm.mobileMenu }
-      },
-      [
-        _c("div", {
-          staticClass: "bg-black opacity-50 absolute inset-0 z-10",
-          on: {
-            click: function($event) {
-              return _vm.$emit("mobile-menu-is-disabled")
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "w-2/3 md:w-1/2 z-20 h-full absolute shadow bg-primary-lightest overflow-auto flex flex-col"
-          },
-          [
-            _c(
-              "span",
-              {
-                staticClass: " ml-auto p-2",
-                on: {
-                  click: function($event) {
-                    return _vm.$emit("mobile-menu-is-disabled")
-                  }
-                }
-              },
-              [_c("i", { staticClass: "bx bx-x text-secondary text-3xl" })]
-            ),
-            _vm._v(" "),
-            _c("ul", [
+  return _vm.IsMenuVisible
+    ? _c(
+        "div",
+        {
+          staticClass:
+            "z-50 bg-white  block lg:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "grid grid-cols-4 gap-2 flex justify-around mt-1" },
+            [
               _c(
-                "li",
+                "MobileNavLink",
+                {
+                  staticClass: "appearance-none focus:outline-none",
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "welcome",
+                    href: _vm.route("welcome")
+                  }
+                },
                 [
                   _c(
-                    "inertia-link",
+                    "svg",
                     {
                       staticClass:
-                        "p-3 uppercase text-primary border-t border-grey-darker block",
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none",
                       attrs: {
-                        href: _vm.route("blog.index"),
-                        active: _vm.$page.currentRouteName == "blog.index"
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
                       }
                     },
-                    [_vm._v("Blog")]
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "appearance-none focus:outline-none" },
+                    [_vm._v("Home")]
                   )
-                ],
-                1
-              )
-            ])
-          ]
-        )
-      ]
-    ),
-    _vm._v(" "),
-    _vm.IsMenuVisible
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass: "grid grid-cols-4 gap-2 flex justify-around mt-1"
-              },
-              [
-                _c(
-                  "MobileNavLink",
-                  {
-                    staticClass: "appearance-none focus:outline-none",
-                    attrs: {
-                      active: _vm.$page.currentRouteName == "welcome",
-                      href: _vm.route("welcome")
-                    }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none",
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "MobileNavLink",
+                {
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "shop.index",
+                    href: _vm.route("shop.index")
+                  }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
                         attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "none",
-                          viewBox: "0 0 24 24",
-                          stroke: "currentColor"
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                         }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                            "stroke-width": "2",
-                            d:
-                              "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      { staticClass: "appearance-none focus:outline-none" },
-                      [_vm._v("Home")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "MobileNavLink",
-                  {
-                    attrs: {
-                      active: _vm.$page.currentRouteName == "shop.index",
-                      href: _vm.route("shop.index")
-                    }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Shop")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "MobileNavLink",
+                {
+                  staticClass: "group relative",
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "cart.index",
+                    href: _vm.route("cart.index")
+                  }
+                },
+                [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
+                      class: {
+                        "bg-v-green": _vm.CountCartItems > 0,
+                        "bg-red-500": _vm.CountCartItems === 0
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.CountCartItems))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
                         attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "none",
-                          viewBox: "0 0 24 24",
-                          stroke: "currentColor"
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                         }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                            "stroke-width": "2",
-                            d: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("span", [_vm._v("Shop")])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "MobileNavLink",
-                  {
-                    attrs: {
-                      active: _vm.$page.currentRouteName == "cart.index",
-                      href: _vm.route("cart.index")
-                    }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "ml-1 transition duration-700 ease-in-out h-6 w-auto",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "none",
-                          viewBox: "0 0 24 24",
-                          stroke: "currentColor"
-                        }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                            "stroke-width": "2",
-                            d:
-                              "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("span", [_vm._v("Cart")])
-                  ]
-                ),
-                _vm._v(" "),
-                !_vm.$page.user
-                  ? _c(
-                      "MobileNavLink",
-                      {
-                        attrs: {
-                          active: _vm.$page.currentRouteName == "login",
-                          href: _vm.route("login")
-                        }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Cart")])
+                ]
+              ),
+              _vm._v(" "),
+              !_vm.$page.user
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "login",
+                        href: _vm.route("login")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                              "relative inline-flex rounded-full h-3 w-3 bg-red-500"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
                             attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor"
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                             }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d:
-                                  "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Account")])
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                (_vm.$page.user
-                ? _vm.$page.user.is_admin
-                : false)
-                  ? _c(
-                      "MobileNavLink",
-                      {
-                        attrs: {
-                          active:
-                            _vm.$page.currentRouteName == "admin.dashboard",
-                          href: _vm.route("admin.dashboard")
-                        }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              (_vm.$page.user
+              ? _vm.$page.user.is_admin
+              : false)
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "admin.dashboard",
+                        href: _vm.route("admin.dashboard")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out h-6 w-auto",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d:
-                                  "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Account")])
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                (_vm.$page.user
-                ? !_vm.$page.user.is_admin
-                : false)
-                  ? _c(
-                      "MobileNavLink",
-                      {
-                        attrs: {
-                          active:
-                            _vm.$page.currentRouteName == "dashboard.index",
-                          href: _vm.route("dashboard.index")
-                        }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                          }),
+                          _vm._v(" "),
+                          _c("span", {
                             staticClass:
-                              "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
+                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
                             attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor"
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                             }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d:
-                                  "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Account")])
-                      ]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ]
-        )
-      : _vm._e()
-  ])
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              (_vm.$page.user
+              ? !_vm.$page.user.is_admin
+              : false)
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "dashboard.index",
+                        href: _vm.route("dashboard.index")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
+                            staticClass:
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                          }),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass:
+                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e()
+            ],
+            1
+          )
+        ]
+      )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true

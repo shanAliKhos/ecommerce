@@ -133,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between pb-8">
+                <div class="flex items-center justify-between pb-8 hidden lg:block">
                     <div class="w-1/3 sm:w-1/5">
                         <p class="font-hkregular text-secondary">Quantity</p>
                     </div>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden md:block">
+                <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden lg:block">
                     <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
                         <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -168,15 +168,20 @@
                     </button>
                 </div>    
  
-                <div class="z-50 bg-white flex items-center justify-end px-1 py-1 block md:hidden fixed bottom-0 right-0 left-0 shadow-lg w-full border-t-2 border-gray-100 text-semibold">
-        
-  
-                    <inertia-link :href="route('cart.index')" class="flex uppercase items-center transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-500 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex" type="button">
-                        <svg  class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg> 
-                        <span class="tracking-tighter">Cart</span>
-                    </inertia-link>
+                <div class="z-50 bg-white flex items-center justify-around px-2 py-1 block lg:hidden fixed bottom-14 right-0 left-0 w-full border-gray-100 text-semibold">
+                    
+                    <div class="w-1/2">
+                        <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
+                            <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
+                        </span>                    
+                        <input type="number" id="quantity-form"
+                            class="form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center"
+                        v-model.number="CartItem.Qty" min="1" /> 
+                        <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
+                            <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
+                        </span>
+                    </div>
+
                     <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex uppercase items-center transition duration-500 ease-in-out bg-red-500 hover:bg-red-600 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex items-center ml-1" type="button">
                         <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
@@ -185,8 +190,7 @@
                             <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
                         </svg>                                   
                         <span class="tracking-tighter">Add To Cart</span>
-                    </button>
-  
+                    </button> 
                 </div>    
 
             </div>

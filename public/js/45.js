@@ -342,6 +342,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -729,100 +733,111 @@ var render = function() {
           _vm._v(" "),
           _vm._m(3),
           _vm._v(" "),
-          _c("div", { staticClass: "flex items-center justify-between pb-8" }, [
-            _vm._m(4),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "w-2/3 sm:w-5/6 flex",
-                attrs: { "x-data": "{ productQuantity: 1 }" }
-              },
-              [
-                _c(
-                  "label",
-                  {
-                    staticClass: "block relative h-0 w-0 overflow-hidden",
-                    attrs: { for: "quantity-form" }
-                  },
-                  [_vm._v("Quantity\n                        form")]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model.number",
-                      value: _vm.CartItem.Qty,
-                      expression: "CartItem.Qty",
-                      modifiers: { number: true }
-                    }
-                  ],
-                  staticClass:
-                    "form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center",
-                  attrs: { type: "number", id: "quantity-form", min: "1" },
-                  domProps: { value: _vm.CartItem.Qty },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.CartItem, "Qty", _vm._n($event.target.value))
-                    },
-                    blur: function($event) {
-                      return _vm.$forceUpdate()
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "flex flex-col" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "flex items-center justify-between pb-8 hidden lg:block"
+            },
+            [
+              _vm._m(4),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "w-2/3 sm:w-5/6 flex",
+                  attrs: { "x-data": "{ productQuantity: 1 }" }
+                },
+                [
                   _c(
-                    "span",
+                    "label",
                     {
-                      staticClass:
-                        "px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer",
-                      on: {
-                        click: function($event) {
-                          _vm.CartItem.Qty++
-                        }
-                      }
+                      staticClass: "block relative h-0 w-0 overflow-hidden",
+                      attrs: { for: "quantity-form" }
                     },
-                    [
-                      _c("i", {
-                        staticClass:
-                          "bx bxs-up-arrow text-xs text-primary pointer-events-none"
-                      })
-                    ]
+                    [_vm._v("Quantity\n                        form")]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer",
-                      on: {
-                        click: function($event) {
-                          _vm.CartItem.Qty--
-                        }
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model.number",
+                        value: _vm.CartItem.Qty,
+                        expression: "CartItem.Qty",
+                        modifiers: { number: true }
                       }
-                    },
-                    [
-                      _c("i", {
+                    ],
+                    staticClass:
+                      "form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center",
+                    attrs: { type: "number", id: "quantity-form", min: "1" },
+                    domProps: { value: _vm.CartItem.Qty },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.CartItem,
+                          "Qty",
+                          _vm._n($event.target.value)
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex flex-col" }, [
+                    _c(
+                      "span",
+                      {
                         staticClass:
-                          "bx bxs-down-arrow text-xs text-primary pointer-events-none"
-                      })
-                    ]
-                  )
-                ])
-              ]
-            )
-          ]),
+                          "px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer",
+                        on: {
+                          click: function($event) {
+                            _vm.CartItem.Qty++
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bxs-up-arrow text-xs text-primary pointer-events-none"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer",
+                        on: {
+                          click: function($event) {
+                            _vm.CartItem.Qty--
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bxs-down-arrow text-xs text-primary pointer-events-none"
+                        })
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
             {
               staticClass:
-                "flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden md:block"
+                "flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden lg:block"
             },
             [
               _c(
@@ -898,47 +913,75 @@ var render = function() {
             "div",
             {
               staticClass:
-                "z-50 bg-white flex items-center justify-end px-1 py-1 block md:hidden fixed bottom-0 right-0 left-0 shadow-lg w-full border-t-2 border-gray-100 text-semibold"
+                "z-50 bg-white flex items-center justify-around px-2 py-1 block lg:hidden fixed bottom-14 right-0 left-0 w-full border-gray-100 text-semibold"
             },
             [
-              _c(
-                "inertia-link",
-                {
-                  staticClass:
-                    "flex uppercase items-center transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-500 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex",
-                  attrs: { href: _vm.route("cart.index"), type: "button" }
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
+              _c("div", { staticClass: "w-1/2" }, [
+                _c(
+                  "span",
+                  {
+                    staticClass:
+                      "px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer",
+                    on: {
+                      click: function($event) {
+                        _vm.CartItem.Qty--
                       }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass:
+                        "bx bxs-down-arrow text-xs text-primary pointer-events-none"
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.number",
+                      value: _vm.CartItem.Qty,
+                      expression: "CartItem.Qty",
+                      modifiers: { number: true }
+                    }
+                  ],
+                  staticClass:
+                    "form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center",
+                  attrs: { type: "number", id: "quantity-form", min: "1" },
+                  domProps: { value: _vm.CartItem.Qty },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.CartItem, "Qty", _vm._n($event.target.value))
                     },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "tracking-tighter" }, [
-                    _vm._v("Cart")
-                  ])
-                ]
-              ),
+                    blur: function($event) {
+                      return _vm.$forceUpdate()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass:
+                      "px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer",
+                    on: {
+                      click: function($event) {
+                        _vm.CartItem.Qty++
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass:
+                        "bx bxs-up-arrow text-xs text-primary pointer-events-none"
+                    })
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "button",
@@ -1020,8 +1063,7 @@ var render = function() {
                   ])
                 ]
               )
-            ],
-            1
+            ]
           )
         ])
       ]
