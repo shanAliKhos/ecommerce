@@ -18,6 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['IsAtTop'],
   data: function data() {
     return {
       CartTotalPricess: 0
@@ -122,7 +123,8 @@ var render = function() {
     [
       _c("span", {
         staticClass:
-          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  w-8 h-8 block hover:bg-icon-cart-hover"
+          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover",
+        class: _vm.IsAtTop
       }),
       _vm._v(" "),
       _c(

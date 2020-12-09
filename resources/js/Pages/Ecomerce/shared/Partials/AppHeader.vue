@@ -1,7 +1,9 @@
 <template>
-<header class="xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated scroll:shadow"">
+<header class="xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated" 
+    :class="{ 'scrolled': !view.atTopOfPage }" >
     
     <nav-bar
+        :atTopOfPage="view.atTopOfPage"
         :mobileMenu="mobileMenu"
         :categories="categories"
         :subcategory="subcategory"
@@ -30,7 +32,26 @@ export default {
         return {
             mobileMenu:false,
             categories:false,
-            subcategory:false,                  
+            subcategory:false,     
+            view: {
+                atTopOfPage: true
+            }                         
+        }
+    },
+    beforeMount () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+     
+        handleScroll(){
+     
+            if(window.pageYOffset>0){
+                
+                if(this.view.atTopOfPage) this.view.atTopOfPage = false
+            }else{
+                
+                if(!this.view.atTopOfPage) this.view.atTopOfPage = true
+            }
         }
     },
     mounted() {
@@ -44,3 +65,9 @@ export default {
 
 }
 </script>
+<style scoped>
+.xxstheme-header.scrolled {
+    @apply shadow-2xl;
+    border-bottom: 0px;
+}
+</style>

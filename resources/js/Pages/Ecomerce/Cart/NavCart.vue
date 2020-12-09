@@ -1,13 +1,14 @@
 <template>
     <inertia-link preserve-scroll :href="route('cart.index')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group">
 
-        <span class="transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  w-8 h-8 block hover:bg-icon-cart-hover"></span>
+        <span class="transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover" :class="IsAtTop"></span>
         <span class="text-white border-2 border-white shadow  absolute py-auto  px-2 my-0 mx-1 rounded-full" :class="{'bg-v-green':CountCartItems>0,'bg-red-400':CountCartItems === 0 }" >{{CountCartItems}}</span>
 
     </inertia-link>
 </template>
 <script>
 export default {
+    props:['IsAtTop'],
     data() {
         return {
             CartTotalPricess:0,    
@@ -17,7 +18,7 @@ export default {
     methods: { 
         store(Item) {
             const self = this;
-            self.$inertia.post(route('cart.store'), Item,{
+            self.$inertia.post(route('cart.store'), Item,{ 
                 // preserveState: true,
                 preserveScroll: true, 
                 onSuccess: () => {
@@ -31,7 +32,7 @@ export default {
         update(Items) {
             self = this;
             this.$inertia.put(route('cart.update', 'update'), Items, {
-                preserveState: true,
+                preserveState: true, 
                 preserveScroll: true,                
             });
         },

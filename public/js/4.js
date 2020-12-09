@@ -244,7 +244,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0 shadow-lg  border-t-2 border-gray-200 text-gray-500"
+              "z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
           },
           [
             _c(

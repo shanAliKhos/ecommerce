@@ -19,7 +19,7 @@
             </ul>
         </div>
     </div>   
-    <div v-if="IsMenuVisible" class="z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0 shadow-lg  border-t-2 border-gray-200 text-gray-500">
+    <div v-if="IsMenuVisible" class="z-50 bg-white  block md:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
         <div class="grid grid-cols-4 gap-2 flex justify-around mt-1"> 
  
                 <MobileNavLink :active="$page.currentRouteName == 'welcome'" :href="route('welcome')" class="appearance-none focus:outline-none">    
