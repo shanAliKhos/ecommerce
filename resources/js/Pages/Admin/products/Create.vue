@@ -128,12 +128,7 @@
 
                         </div>          
     
-                        <div class="mt-2 mb-10 relative"> 
-                            <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
-                            <vue-editor v-model="form.description"></vue-editor>       
- 
-                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
-                        </div>      
+     
 
                         <div class="flex flex-wrap -mx-3 mb-2">
 
@@ -267,7 +262,13 @@
 
                     
                         </div>         
-                        
+
+                        <div class="mt-2 mb-10 relative"> 
+                            <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
+                            <vue-editor v-model="form.description"></vue-editor>       
+ 
+                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
+                        </div>                         
                         <SectionBorder/>
                         
                     </div>

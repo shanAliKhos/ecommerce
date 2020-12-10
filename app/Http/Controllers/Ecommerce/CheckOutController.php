@@ -11,6 +11,8 @@ use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Order;
 use Illuminate\Support\Str;
+use App\Notifications\InvoicePaid;
+
 
 
 class CheckOutController extends Controller
@@ -119,7 +121,7 @@ class CheckOutController extends Controller
             if($OrderdProduct->quantity >= $CartItem['Qty']){
 
                 $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['Qty']; 
-                $NewOrderItems[$key]['Price'] = $OrderdProduct->sale_price?$OrderdProduct->sale_price:$OrderdProduct->regular_price;
+                $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
 
                 $NewOrder['GrandTotal'] += $NewOrderItems[$key]['Price'] * $NewOrderItems[$key]['Quantity'];
                 $NewOrder['ItemCount'] += $NewOrderItems[$key]['Quantity'];
@@ -134,7 +136,7 @@ class CheckOutController extends Controller
 
         }
         $NewOrder['OrderNumber'] = Str::random(4).Auth()->user()->id.(Order::all()->Count()+1).'-'.uniqid(Auth()->user()->id.(Order::all()->Count()+1));
-
+        
   
         try {
             $charge = Stripe::charges()->create([
@@ -155,12 +157,12 @@ class CheckOutController extends Controller
             $CreatedOrder = $Order->create([
                 'user_id'=>Auth()->user()->id,
                 'OrderNumber'=>$NewOrder['OrderNumber'],
-                'CardHolderName'=>$request->NameOnCard,
                 'Address' => $request->CustomerInformation['address'],
                 'PaymentToken' => $charge['payment_method'],
                 'City' => $request->CustomerInformation['city'],
                 'Country' => $request->CustomerInformation['country'],
                 'PostalCode' => $request->CustomerInformation['postal_code'],
+                'CardHolderName'=>$request->NameOnCard,
                 'PhoneNumber' => $request->CustomerInformation['mobile'],
                 'Notes' => null,
                 'PaymentMethod' => "stripe",
@@ -179,6 +181,16 @@ class CheckOutController extends Controller
 
             }       
 
+            $notification = [
+                'OrderNumber'=>$CreatedOrder->OrderNumber,
+                'CustomerName'=>$CreatedOrder->CardHolderName,
+                'CustomerEmail' => $request->CustomerInformation['email'],
+                'Address' => $request->CustomerInformation['address'],
+                'GrandTotal'=>$CreatedOrder->GrandTotal,
+                'OderItems'=> $CreatedOrder->items,
+            ];
+ 
+            $request->user()->notify(new InvoicePaid($notification));
 
             return redirect()->route('cart.success')->with('success','Thank you! Your payment has been accepted.');
   

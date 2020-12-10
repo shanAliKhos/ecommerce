@@ -56,28 +56,19 @@
                     </div>
                 </div>
             </div> 
-            <div class="lg:w-1/2 pt-12 sm:pt-16 lg:pt-0 px-5">
+            <div class="lg:w-1/2 pt-5 lg:pt-0 px-5">
                 
                 <div class="product-title">                
                     <div class="border-b border-grey-dark mb-8">
                         <div class="flex items-center">
-                            <h2 class="font-butlerregular text-3xl md:text-4xl lg:text-7xl">{{Product.name}}</h2>
-                            <small class="rounded-full font-hkbold text-white uppercase text-sm text-center px-4 py-2 m-2" 
+                            <p class="font-mono text-3xl capitalize text-gray-900 overflow-ellipsis overflow-hidden" >{{Product.name}}</p>
+                            <small class="rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2" 
                                 :class="Label.Color"
                                 v-if="Label.Active">
                                 {{Label.Title}}
                             </small>
                         </div>
-                        <div class="flex items-center pt-3">
-                            <span class="font-hkregular text-secondary text-2xl">
-                                {{$page.SiteOptions.Currency.Symbol}} {{CurrentPrice}} 
-                            </span>
-                            <span class="font-hkregular text-grey-darker text-xl line-through pl-5"
-                                v-if="IsOnSale">
-                                {{$page.SiteOptions.Currency.Symbol}} {{RegularPrice}} 
-                            </span>
-                        </div>
-                        <div class="flex items-center pt-3 pb-8">
+                        <div class="flex items-center pt-2">
                             <div class="flex items-center">
                                 <i class="bx bxs-star text-primary"></i>
                                 <i class="bx bxs-star text-primary"></i>
@@ -85,31 +76,54 @@
                                 <i class="bx bxs-star text-primary"></i>
                                 <i class="bx bxs-star text-primary"></i>
                             </div>
-                            <span class="font-hkregular text-sm text-secondary ml-2">(45)</span>
+                            <span class="font-semibold text-sm text-gray-400 ml-2">(45)</span>
+                        </div>                        
+                        <div class="flex items-center pt-2">
+                            <span class="font-semibold text-red-600 text-2xl text-red-600">
+                                {{$page.SiteOptions.Currency.Symbol}} {{CurrentPrice}} 
+                            </span>
+                            <span class="font-semibold text-grey-darker text-xl line-through pl-5"
+                                v-if="IsOnSale">
+                                {{$page.SiteOptions.Currency.Symbol}} {{RegularPrice}} 
+                            </span>
+                        </div>
+                        <div class="flex items-center " v-if="ProductCategories.length > 0">
+                            <div class=" text-gray-400 mt-2 mb-1 text-xs">
+                                <span class="pr-2">Categories:</span>
+                                <span v-for="(ProductCategory, index) in ProductCategories" :key="index" class="capitalize ">{{ProductCategory.name}} <span  v-if="ProductCategories.length > (index+1)">,  </span></span> 
+                            </div>                                        
+                        </div>
+                        <div class="flex items-center">
+                            <div class=" text-gray-400 mt-1 mb-1 text-xs">
+                                <span class="pr-2">Brands:</span>
+                                <span v-for="(ProductCategory, index) in ProductCategories" :key="index" class="capitalize ">{{ProductCategory.name}} <span  v-if="ProductCategories.length > (index+1)">,  </span></span> 
+                            </div>                                        
                         </div>
                     </div>
                 </div>
-                <div class="flex pb-2">
-                    <p class="font-hkregular text-secondary">SKU:</p>
-                    <p class="font-hkbold text-secondary pl-3">
-                        KH12345</p>
-                </div>
-                <div class="font-hkregular text-secondary mt-2 mb-2">
-                    <span class="pr-2">Categories:</span>Bag, Hand bag, Travel bag, Black
-                </div>                
-
-                <div class="product-availablity">                
-                    <div class="flex pb-5">
-                        <p class="font-hkregular text-secondary">Availability:</p>
-                        <p class="font-hkbold text-v-green pl-3" v-if="ProductQuantity > 0">In Stock {{ ProductQuantity }}</p>
-                        <p class="font-hkbold text-v-red pl-3" v-else>Out of Stock {{ ProductQuantity }}</p>
-                    </div>
-                </div>
-                 
-                <div class="product-attrbute-variation">
-                    <div class="flex justify-between pb-4">
+         
+                <div class="product-attrbute-variation text-gray-500">
+                    <div class="flex items-center justify-between pb-4">
                         <div class="w-1/3 sm:w-1/5">
-                            <p class="font-hkregular text-secondary">Color</p>
+                            <p >SKU </p>
+                        </div>
+                        <div class="w-2/3 sm:w-5/6 flex items-center">
+                            <p>{{ SkuCode }}</p>
+                                    
+                        </div>
+                    </div>                
+                    <div class="flex items-center justify-between pb-4">
+                        <div class="w-1/3 sm:w-1/5">
+                            <p >Availability </p>
+                        </div>
+                        <div class="w-2/3 sm:w-5/6 flex items-center">
+                            <p class="font-semibold text-v-green" v-if="ProductQuantity > 0">In Stock {{ ProductQuantity }}</p>
+                            <p class="font-semibold text-v-red " v-else>Out of Stock {{ ProductQuantity }}</p>
+                        </div>
+                    </div>                
+                    <div class="flex items-center justify-between pb-4">
+                        <div class="w-1/3 sm:w-1/5">
+                            <p >Color</p>
                         </div>
                         <div class="w-2/3 sm:w-5/6 flex items-center">
                             <div class="bg-primary px-2 py-2 rounded-full mr-2"></div>
@@ -121,7 +135,7 @@
                     </div>                
                     <div class="flex items-center justify-between pb-4">
                         <div class="w-1/3 sm:w-1/5">
-                            <p class="font-hkregular text-secondary">Size</p>
+                            <p>Size</p>
                         </div>
                         <div class="w-2/3 sm:w-5/6">
                             <select class="w-2/3 form-select">
@@ -131,60 +145,63 @@
                             </select>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex items-center justify-between pb-8 hidden lg:block">
-                    <div class="w-1/3 sm:w-1/5">
-                        <p class="font-hkregular text-secondary">Quantity</p>
-                    </div>
-                    <div class="w-2/3 sm:w-5/6 flex" x-data="{ productQuantity: 1 }">
-                        <label for="quantity-form" class="block relative h-0 w-0 overflow-hidden">Quantity
-                            form</label>
-                        <input type="number" id="quantity-form"
-                            class="form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center"
-                            v-model.number="CartItem.Qty" min="1" />
-                        <div class="flex flex-col">
-                            <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer"
-                                @click="CartItem.Qty++">
-                                    <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
-                            </span>
-                            <span class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer"
-                                @click="CartItem.Qty--">
-                                <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
-                            </span>
+                    <div class="flex items-center justify-between pb-5 hidden lg:block">
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="flex inline-flex flex-1">Quantity</p> 
+                                <input type="number" class="form-input rounded-r-none  py-0 px-2 text-center flex inline-flex flex-1" v-model.number="CartItem.Qty" min="1" />
+                                <div class="flex flex-col   inline-flex ">
+                                    <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer "
+                                        @click="CartItem.Qty++"> 
+                                        <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                        </svg>                                                                                                          
+                                    </span>
+                                    <span class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer"
+                                        @click="CartItem.Qty--"> 
+                                        <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                                        </svg>                                                                  
+                                    </span>
+                                </div>                                                 
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5 hidden lg:block">
-                    <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex flex-inline uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
-                        <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>                                   
-                        <span class=" ml-2 ">Add to cart</span>
-                    </button>
-                </div>    
+                    <div class="flex items-center justify-between hidden lg:block">
+                        <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex flex-inline  w-full justify-center   uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
+                            <svg v-if="!sending" class=" transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>                                   
+                            <span class=" ml-2 pointer-events-none">Add to cart</span>
+                        </button> 
+                     </div>
+                </div>        
+  
  
-                <div class="z-50 bg-white flex items-center justify-around px-2 py-1 block lg:hidden fixed bottom-14 right-0 left-0 w-full border-gray-100 text-semibold">
+                <div class="mobile-addtocart-menu z-50 bg-white flex items-center justify-around px-2 py-1 block lg:hidden fixed bottom-11 right-0 left-0 w-full border-gray-100 text-semibold">
                     
-                    <div class="w-1/2">
+                    <div class="w-1/2 relative">
                         <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
                             <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
-                        </span>                    
+                        </span>                 
+
                         <input type="number" id="quantity-form"
                             class="form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center"
                         v-model.number="CartItem.Qty" min="1" /> 
+                        
+                        <span class="text-xs absolute text-semibold bottom-0 right-9 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  stock {{ProductQuantity}} </span>
+                        
                         <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
                             <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
                         </span>
                     </div>
 
-                    <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex uppercase items-center transition duration-500 ease-in-out bg-red-500 hover:bg-red-600 focus:outline-none rounded px-2 py-2 text-white font-semibold shadow inline-flex items-center ml-1" type="button">
+                    <button :disabled="sending" :class="{'opacity-50 pointer-events-none':sending}"  @click="AddToCart" class="flex inline-flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow ml-1" type="button">
                         <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
+                            <svg viewBox="0 0 20 20" class="h-4 w-4 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
                         </svg>
                         <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
@@ -333,6 +350,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 <script> 
@@ -353,8 +371,8 @@ export default {
                 slug:(this.Product.slug)?this.Product.slug:'',
                 Instock:(this.Product.quantity)?this.Product.quantity:'',
                 Qty:1,
-                price:(this.Product.sale_price)?this.Product.sale_price:this.Product.regular_price,
-                image:(this.Product.image)?this.Product.image:'./img/shoes-4.png', 
+                price:this.Product?this.Product.current_price:0,
+                image:this.Product?this.Product.mainphoto_url:'', 
             },                 
             Label:{
                 Color:null,
@@ -366,20 +384,23 @@ export default {
             selectedImage:null,                        
         }
     },
- 
+    watch: { 
+        CartQty: function (newQty, oldQty) {  
+            if(newQty > this.CartItem.Instock || newQty < 1 ){
+                this.CartItem.Qty =  oldQty
+            }
+        }
+    },   
     methods: {
         AddToCart(){  
             this.sending = true;
             this.$root.$emit('Add-To-Cart',this.CartItem);      
         },            
         SetLable(){ 
-            if(this.Product.sale_price > 0){
-                var RegualPrice = this.Product.regular_price;
-                var SalePrice = this.Product.sale_price;
-                var Discount = Math.round( ((RegualPrice - SalePrice)/ RegualPrice) * 100)+'%OFF';
+            if(this.Product.sale_price > 0){ 
                 this.Label={
                     Color:'bg-primary',
-                    Title:Discount,
+                    Title:'-' +Math.round( ((this.Product.regular_price - this.Product.sale_price)/ this.Product.regular_price) * 100)+'%OFF',
                     Active:true,                
                 };
             }else if(this.Product.is_featured){    
@@ -400,11 +421,9 @@ export default {
             }  
         },            
     },
-    computed: {
-
-        ProductImage(){
-            var  img = this.Product.mainphoto_url;
-            return img;
+    computed: { 
+        ProductImage(){ 
+            return this.Product.mainphoto_url;
         },
         RegularPrice(){
             return this.Product.regular_price;
@@ -413,13 +432,13 @@ export default {
             return this.Product.sale_price;
         }, 
         CurrentPrice(){
-            return this.Product.sale_price>0?this.Product.sale_price:this.Product.regular_price;
+            return this.Product.current_price;
         }, 
         ProductName(){
             return this.Product.name;
         },
         ProductQuantity(){
-            return this.Product.quantity;
+            return this.Product.quantity -this.CartItem.Qty;
         },
         ProductDescription(){
             return this.Product.description;
@@ -427,6 +446,16 @@ export default {
         IsOnSale(){
             return this.$page.Product.sale_price > 0;
         }, 
+        SkuCode(){
+            return this.$page.Product.sku?this.$page.Product.sku:'N/A';
+        }, 
+        ProductCategories(){
+            return this.$page.Product.categories;
+        }, 
+        CartQty(){
+            self = this;
+            return self.CartItem.Qty;
+        },             
                    
     },    
     mounted () {

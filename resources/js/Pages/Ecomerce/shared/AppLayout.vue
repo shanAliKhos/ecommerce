@@ -1,9 +1,9 @@
 <template>
-<div> 
+<div class="font-serif"> 
     
     <app-header></app-header>
     
-    <main class="lg:mt-40 mt-20">
+    <main class="lg:mt-40 mt-20 ">
 
         <transition enter-active-class="transition duration-300 ease-out"
             enter-class="transform opacity-0"

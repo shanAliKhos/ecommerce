@@ -310,6 +310,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -735,44 +736,6 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "mt-2 mb-10 relative" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
-                          attrs: { for: "weight" }
-                        },
-                        [_vm._v("Description")]
-                      ),
-                      _vm._v(" "),
-                      _c("vue-editor", {
-                        model: {
-                          value: _vm.form.description,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "description", $$v)
-                          },
-                          expression: "form.description"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _vm.$page.errors.description
-                        ? _c(
-                            "p",
-                            {
-                              staticClass:
-                                "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
-                            },
-                            [_vm._v(_vm._s(_vm.$page.errors.description))]
-                          )
-                        : _vm._e()
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
                   _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
                     _c(
                       "div",
@@ -1148,6 +1111,44 @@ var render = function() {
                         1
                       )
                     : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-2 mb-10 relative" },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                          attrs: { for: "weight" }
+                        },
+                        [_vm._v("Description")]
+                      ),
+                      _vm._v(" "),
+                      _c("vue-editor", {
+                        model: {
+                          value: _vm.form.description,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "description", $$v)
+                          },
+                          expression: "form.description"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _vm.$page.errors.description
+                        ? _c(
+                            "p",
+                            {
+                              staticClass:
+                                "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
+                            },
+                            [_vm._v(_vm._s(_vm.$page.errors.description))]
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("SectionBorder")
                 ],

@@ -26,6 +26,7 @@ class ProductController extends Controller
     {
         $Product = new Product;
         $Products = $Product->with('categories','brand','images')->latest()->paginate(8); 
+    
         return Inertia::render('Admin/products/Index',compact('Products'));
     }
 

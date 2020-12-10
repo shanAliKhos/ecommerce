@@ -256,12 +256,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "font-serif" },
     [
       _c("app-header"),
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: "lg:mt-40 mt-20" },
+        { staticClass: "lg:mt-40 mt-20 " },
         [
           _c(
             "transition",

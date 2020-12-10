@@ -738,6 +738,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
+                            staticClass: "text-gray-500",
                             class: _vm.IsAtTop,
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",

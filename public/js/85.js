@@ -312,11 +312,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {
-    CartItemImage: function CartItemImage(img) {
-      return img.replace("public", "storage");
-    }
-  },
   computed: {
     CountCartItems: function CountCartItems() {
       var Qty = 0;
@@ -1204,10 +1199,7 @@ var render = function() {
                       _c("div", {
                         staticClass:
                           "w-12 h-16 bg-center bg-no-repeat bg-cover",
-                        style:
-                          "background-image:url(" +
-                          _vm.CartItemImage(CartItem.image) +
-                          ")"
+                        style: "background-image:url('" + CartItem.image + "')"
                       }),
                       _vm._v(" "),
                       _c(

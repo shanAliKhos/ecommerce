@@ -6,7 +6,7 @@
             <div class="w-1/2 lg:w-3/5 xl:w-1/2 flex flex-row items-center border-b-0 border-grey-dark pt-0 pb-0 text-left">
                 <div class="w-20 mx-0 relative pr-0">
                     <div class="h-20 rounded flex items-center justify-center">
-                        <div class="w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url('+ProductMainImage+')'"> </div>
+                        <div class="w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url(\'' + ProductImage + '\')'"> </div>
                     </div>
                 </div>
                 <span class="font-semibold text-lg text-gray-400 capitalize">{{CartItem.name}}</span>
@@ -16,14 +16,12 @@
                     <div class="flex justify-center relative">
                         <input v-model.number="CartItem.Qty" @change="update()" type="number" id="quantity-form-desktop" class="form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center" min="1" />
                         <div class="flex flex-col">
-                            <span
-                                class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer"
-                                @click="plus"><i
-                                    class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i></span>
-                            <span
-                                class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer"
-                                @click="minus"><i
-                                    class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i></span>
+                            <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer" @click="plus">
+                                <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
+                            </span>
+                            <span class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer" @click="minus">
+                                <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
+                            </span>
                         </div>
                         <span class="font-semibold text-xs text-gray-400 absolute top-13 left-10">Stock/{{InStock}}</span>
                     </div>
@@ -38,7 +36,7 @@
     <div class="mobile-display-item">
         <div class="flex md:hidden mb-5 pb-5 border-b border-grey-dark items-center justify-center">
             <div class="relative">
-                <div class="w-24 h-24 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url('+ProductMainImage+')'">
+                <div class="w-24 h-24 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url(\'' + ProductImage + '\')'">
                 </div>
                 <i class="bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow"></i>
             </div>
@@ -93,11 +91,9 @@ export default {
             self = this;
             return self.CartItem.Qty;
         },        
-        ProductMainImage(){
-            self = this ;
-            var  img = '/'+self.CartItem.image.replace("public", "storage");
-            return img; 
-        },     
+        ProductImage(){
+            return this.CartItem.image;
+        },
         InStock(){
             return this.CartItem.Instock;
         },  

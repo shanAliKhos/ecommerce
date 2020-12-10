@@ -12,8 +12,8 @@ use App\Models\User;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
-
-
+  
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -51,10 +51,9 @@ class AppServiceProvider extends ServiceProvider
         if (!\App::runningInConsole() && count(Schema::getColumnListing('categories'))) {
             $dbCategory = true;
         }
-        
-
-    
+       
         Inertia::share([  
+            // "Notofication"=> Auth()->user,
             "SiteOptions" => [
                 "Title" => $dbSetting?Setting::get('site_title'):'',
                 "Logo" => $dbSetting?Setting::get('site_logo'):'',

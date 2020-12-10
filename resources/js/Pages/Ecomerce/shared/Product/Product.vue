@@ -54,27 +54,26 @@ export default {
         }
     },
     methods: {
-        AddToCart(Item){   
-            this.$root.$emit('Add-To-Cart',{
-                "id":(Item.id)?Item.id:'',
-                "name":(Item.name)?Item.name:'',
-                "slug":(Item.slug)?Item.slug:'',
-                "Instock":(Item.quantity)?Item.quantity:'',
-                "Qty":1,
-                "price":(Item.sale_price)?Item.sale_price:Item.regular_price,
-                "image":this.Product.image?Item.image:'./img/shoes-4.png',
-            });      
-        },        
+        // AddToCart(Item){   
+        //     this.$root.$emit('Add-To-Cart',{
+        //         "id":(Item.id)?Item.id:'',
+        //         "name":(Item.name)?Item.name:'',
+        //         "slug":(Item.slug)?Item.slug:'',
+        //         "Instock":(Item.quantity)?Item.quantity:'',
+        //         "Qty":1,
+        //         "price":Item.current_price,
+        //         "image":this.Product.image?Item.image:'./img/shoes-4.png',
+        //     });      
+        // },        
         SetLable(){ 
             if(this.Product.sale_price > 0){
-                var RegualPrice = this.Product.regular_price;
-                var SalePrice = this.Product.sale_price;
-                var Discount = Math.round( ((RegualPrice - SalePrice)/ RegualPrice) * 100) + '%';
+    
                 this.Label={
                     Color:'text-primary-light',
-                    Title:Discount,
+                    Title:'-' +Math.round( ((this.Product.regular_price - this.Product.sale_price)/ this.Product.regular_price) * 100) + '%',
                     Active:true,                
                 };
+                
             }else if(this.Product.is_featured){                    
                 this.Label={
                     Color:'text-v-blue',
@@ -105,7 +104,7 @@ export default {
             return this.Product.sale_price;
         }, 
         CurrentPrice(){
-            return this.Product.sale_price>0?this.Product.sale_price:this.Product.regular_price;
+            return this.Product.current_price;
         }, 
         ProductName(){
             return this.Product.name;

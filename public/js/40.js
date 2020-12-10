@@ -71,8 +71,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['CartItem', 'cartindex'],
   methods: {
@@ -103,10 +101,8 @@ __webpack_require__.r(__webpack_exports__);
       self = this;
       return self.CartItem.Qty;
     },
-    ProductMainImage: function ProductMainImage() {
-      self = this;
-      var img = '/' + self.CartItem.image.replace("public", "storage");
-      return img;
+    ProductImage: function ProductImage() {
+      return this.CartItem.image;
     },
     InStock: function InStock() {
       return this.CartItem.Instock;
@@ -212,8 +208,7 @@ var render = function() {
                     _c("div", {
                       staticClass:
                         "w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover",
-                      style:
-                        "background-image:url(" + _vm.ProductMainImage + ")"
+                      style: "background-image:url('" + _vm.ProductImage + "')"
                     })
                   ]
                 )
@@ -353,7 +348,7 @@ var render = function() {
           _c("div", { staticClass: "relative" }, [
             _c("div", {
               staticClass: "w-24 h-24 mx-auto bg-center bg-no-repeat bg-cover",
-              style: "background-image:url(" + _vm.ProductMainImage + ")"
+              style: "background-image:url('" + _vm.ProductImage + "')"
             }),
             _vm._v(" "),
             _c("i", {

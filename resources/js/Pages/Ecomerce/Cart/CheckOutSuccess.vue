@@ -3,9 +3,7 @@
   <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
     <div class="font-medium self-center text-xl sm:text-2xl uppercase text-primary">Thank You For Shopping !</div> 
     <div class="mt-10">
-       
         <p class="lead p-10"><strong>Please check your email</strong> for further.</p> 
-
     </div>
 
     <div class="flex justify-center items-center mt-6">

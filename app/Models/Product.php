@@ -26,6 +26,7 @@ class Product extends Model
  
     protected $appends = [
         'mainphoto_url',
+        'current_price',
     ];
 
 
@@ -34,6 +35,13 @@ class Product extends Model
         return asset($this->image
         ? Storage::disk('local')->url($this->image)
         : $this->defaultPhotoUrl());
+    }
+
+    public function getCurrentPriceAttribute()
+    { 
+        return ($this->sale_price > 0)
+        ? $this->sale_price 
+        : $this->regular_price ;
     }
 
     protected function defaultPhotoUrl()

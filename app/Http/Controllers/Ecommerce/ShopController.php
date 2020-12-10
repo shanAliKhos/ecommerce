@@ -20,7 +20,7 @@ class ShopController extends Controller
     }    
      
     public function index(Request $request, Product $Product)
-    {       
+    {        
         $Products = $Product->where('quantity','>',0)
                     ->where('regular_price','>',0.00)
                     ->orwhere('sale_price','>',0.00)
@@ -31,7 +31,7 @@ class ShopController extends Controller
 
     public function show(Product $Product,$slug)
     {  
-        $Product = $Product->where('slug',$slug)->with('images')->firstOrFail();         
+        $Product = $Product->where('slug',$slug)->with('images','categories')->firstOrFail();         
         $RelatedProducts = $Product->get()->random(10);
         return Inertia::render('Ecomerce/shop/Show', compact('Product','RelatedProducts'));
     }

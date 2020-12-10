@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'antialiased outline-none text-center text-red-500 outline-none appearance-none text-sm' : 'antialiased outline-none text-center outline-none appearance-none text-sm';
+      return this.active ? 'antialiased outline-none text-center text-orange-500 outline-none appearance-none text-xs cursor-pointer' : 'antialiased outline-none text-center outline-none appearance-none text-xs cursor-pointer';
     }
   }
 });
@@ -276,7 +276,7 @@ var render = function() {
                       staticClass:
                         "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
                       class: {
-                        "bg-v-green": _vm.CountCartItems > 0,
+                        "bg-green-400": _vm.CountCartItems > 0,
                         "bg-red-500": _vm.CountCartItems === 0
                       }
                     },
