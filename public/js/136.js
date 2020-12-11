@@ -152,17 +152,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
  // import BreadCrumb from './../components/BreadCrumb' 
 
 
@@ -278,16 +267,203 @@ var render = function() {
         "div",
         {
           staticClass:
-            "flex flex-col-reverse lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24"
+            "flex flex-col lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24"
         },
         [
           _c("div", { staticClass: "lg:w-3/5" }, [
+            _c("div", { staticClass: "hidden lg:block" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 sm:pt-12"
+                },
+                [
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "flex items-center mt-2 justify-center uppercase transition duration-700 ease-in-out border  bg-primary-lightest border-primary-light text-primary   focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow  w-full lg:w-1/3 lg:mr-2",
+                      attrs: { href: _vm.route("shop.index") }
+                    },
+                    [_vm._v("CONTINUE SHOPPING")]
+                  ),
+                  _vm._v(" "),
+                  (_vm.CartItems
+                  ? _vm.CartItems.length
+                  : false)
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "flex items-center mt-2 justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow items-center  w-full lg:w-1/3 lg:ml-2",
+                          attrs: { type: "button" },
+                          on: { click: _vm.EmptyCart }
+                        },
+                        [
+                          _vm.sending
+                            ? _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 20 20",
+                                    fill: "currentColor"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      "fill-rule": "evenodd",
+                                      d:
+                                        "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                                      "clip-rule": "evenodd"
+                                    }
+                                  })
+                                ]
+                              )
+                            : _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "transition duration-700 ease-in-out  h-5 w-5 mr-2",
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    fill: "none",
+                                    viewBox: "0 0 24 24",
+                                    stroke: "currentColor"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round",
+                                      "stroke-width": "2",
+                                      d:
+                                        "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                    }
+                                  })
+                                ]
+                              ),
+                          _vm._v("        \n                    Empty cart")
+                        ]
+                      )
+                    : _vm._e()
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "grid grid-cols-4 gap-2 flex justify-around" },
+                  [
+                    _c("div", {
+                      staticClass: "w-1/2 relative px-2 py-2 flex item-center"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-1/2 relative px-2 py-2 flex item-center justify-end"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                            class: {
+                              "opacity-50 pointer-events-none": _vm.sending
+                            },
+                            attrs: { disabled: _vm.sending, type: "button" },
+                            on: { click: _vm.ProceedToCheckOut }
+                          },
+                          [
+                            !_vm.sending
+                              ? _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 20 20",
+                                      fill: "currentColor"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass:
+                                          "h-6 w-6 fill-current mr-2",
+                                        attrs: { viewBox: "0 0 20 20" }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "tracking-tighter" }, [
+                              _vm._v("Proceed")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
             _c("div", { staticClass: "pt-10" }, [
               _c(
                 "h1",
                 {
                   staticClass:
-                    "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
+                    "font-semibold text-gray-400 text-2xl pb-3 text-center sm:text-left"
                 },
                 [_vm._v("Cart Items")]
               ),
@@ -312,101 +488,7 @@ var render = function() {
                 ],
                 2
               )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 sm:pt-12"
-              },
-              [
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-outline",
-                    attrs: { href: _vm.route("shop.index") }
-                  },
-                  [_vm._v("CONTINUE SHOPPING\n                ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "flex items-center justify-end px-4 py-3 text-right sm:px-6"
-                  },
-                  [
-                    (_vm.CartItems
-                    ? _vm.CartItems.length
-                    : false)
-                      ? _c(
-                          "button",
-                          {
-                            staticClass:
-                              "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
-                            attrs: { type: "button" },
-                            on: { click: _vm.EmptyCart }
-                          },
-                          [
-                            _vm.sending
-                              ? _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
-                                    attrs: {
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      viewBox: "0 0 20 20",
-                                      fill: "currentColor"
-                                    }
-                                  },
-                                  [
-                                    _c("path", {
-                                      attrs: {
-                                        "fill-rule": "evenodd",
-                                        d:
-                                          "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                                        "clip-rule": "evenodd"
-                                      }
-                                    })
-                                  ]
-                                )
-                              : _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "transition duration-700 ease-in-out  h-5 w-5 mr-2",
-                                    attrs: {
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      fill: "none",
-                                      viewBox: "0 0 24 24",
-                                      stroke: "currentColor"
-                                    }
-                                  },
-                                  [
-                                    _c("path", {
-                                      attrs: {
-                                        "stroke-linecap": "round",
-                                        "stroke-linejoin": "round",
-                                        "stroke-width": "2",
-                                        d:
-                                          "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                                      }
-                                    })
-                                  ]
-                                ),
-                            _vm._v(
-                              "                                    \n                                                    \n\n                        Empty cart\n                    "
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  ]
-                )
-              ],
-              1
-            )
+            ])
           ]),
           _vm._v(" "),
           _c(
@@ -421,9 +503,9 @@ var render = function() {
                   "h4",
                   {
                     staticClass:
-                      "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
+                      "font-semibold text-gray-400 text-2xl pb-3 text-center sm:text-left"
                   },
-                  [_vm._v("\n                    Cart Totals")]
+                  [_vm._v("Cart Totals")]
                 ),
                 _vm._v(" "),
                 _vm._m(2),
@@ -434,7 +516,7 @@ var render = function() {
                   _c(
                     "p",
                     { staticClass: "font-hkbold text-secondary pt-1 pb-2" },
-                    [_vm._v("Cart Total\n                    ")]
+                    [_vm._v("Cart Total")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -479,7 +561,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 hidden lg:block"
                   },
                   [
                     (_vm.CartItems
@@ -489,7 +571,7 @@ var render = function() {
                           "button",
                           {
                             staticClass:
-                              "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
+                              "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full ",
                             attrs: { type: "button" },
                             on: { click: _vm.ProceedToCheckOut }
                           },
@@ -498,8 +580,6 @@ var render = function() {
                               ? _c(
                                   "svg",
                                   {
-                                    staticClass:
-                                      "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
                                       viewBox: "0 0 20 20",
@@ -521,26 +601,27 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "transition duration-700 ease-in-out  h-5 w-5 mr-2",
+                                      "transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
-                                      viewBox: "0 0 20 20",
-                                      fill: "currentColor"
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
                                     }
                                   },
                                   [
                                     _c("path", {
                                       attrs: {
-                                        "fill-rule": "evenodd",
-                                        d:
-                                          "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                                        "clip-rule": "evenodd"
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                       }
                                     })
                                   ]
                                 ),
                             _vm._v(
-                              "                                   \n\n                        PROCEED TO CHECKOUT\n                    "
+                              "           \n\n                        PROCEED \n                    "
                             )
                           ]
                         )
@@ -573,48 +654,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("i", {
         staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
-          attrs: { href: "/cart/customer-info" }
-        },
-        [_vm._v("Customer information")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
-          attrs: { href: "/cart/shipping-method" }
-        },
-        [_vm._v("Shipping method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
-          attrs: { href: "/cart/payment-method" }
-        },
-        [_vm._v("Payment method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-transparent px-2"
       })
     ])
   },
@@ -634,7 +673,7 @@ var staticRenderFns = [
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Product Name")]
+                [_vm._v(" Product Name")]
               )
             ]
           ),
@@ -649,7 +688,7 @@ var staticRenderFns = [
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Quantity")]
+                [_vm._v("Quantity")]
               )
             ]
           ),
@@ -661,7 +700,7 @@ var staticRenderFns = [
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\n                                    Price")]
+                [_vm._v("Price")]
               )
             ]
           )
@@ -674,12 +713,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-2" }, [
-        _vm._v("Cart Note\n                    ")
+      _c("p", { staticClass: "font-semibold text-gray-400 pt-1 pb-2" }, [
+        _vm._v("Cart Note")
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "font-hkregular text-secondary text-sm pb-4" }, [
-        _vm._v("\n                        Special instructions for us")
+      _c("p", { staticClass: "font-semibold text-gray-400 text-sm pb-4" }, [
+        _vm._v("Special instructions for us")
       ]),
       _vm._v(" "),
       _c(
@@ -688,7 +727,7 @@ var staticRenderFns = [
           staticClass: "block relative h-0 w-0 overflow-hidden",
           attrs: { for: "cart_note" }
         },
-        [_vm._v("Cart\n                        Note")]
+        [_vm._v("Cart Note")]
       ),
       _vm._v(" "),
       _c("textarea", {
@@ -703,7 +742,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pt-4" }, [
       _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-4" }, [
-        _vm._v("Add Coupon\n                    ")
+        _vm._v("Add Coupon")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-between" }, [
@@ -713,7 +752,7 @@ var staticRenderFns = [
             staticClass: "block relative h-0 w-0 overflow-hidden",
             attrs: { for: "discount_code" }
           },
-          [_vm._v("Discount\n                            Code")]
+          [_vm._v("Discount Code")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -749,7 +788,7 @@ var staticRenderFns = [
       },
       [
         _c("span", { staticClass: "font-hkregular text-secondary" }, [
-          _vm._v("Coupon\n                            applied")
+          _vm._v("Coupon applied")
         ]),
         _vm._v(" "),
         _c("span", { staticClass: "font-hkregular text-secondary" }, [

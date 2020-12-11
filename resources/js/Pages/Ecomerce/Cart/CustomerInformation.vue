@@ -94,30 +94,7 @@
                                     <p class="text-red-500 text-xs italic" v-if="$page.errors.postal_code">{{$page.errors.postal_code}}</p>
                                 </div>
                             </div>
-
-
-                            <!-- <div class="flex justify-between">
-                             
-                 
-
-                            
-
-                            <div class="flex justify-between">
-
-                                <label for="country" class="block relative h-0 w-0 overflow-hidden">Country</label>
-                                <input type="text" v-model="form.country" placeholder="Country/Region" class="form-input mb-4 sm:mb-5 mr-2" id="country" />
-                                <p class="text-red-500 text-xs italic">Please choose a password.</p>
-
-                                <label for="post_code" class="block relative h-0 w-0 overflow-hidden">Post code</label>
-                                <input type="number" v-model="form.postal_code" placeholder="Post code" class="form-input mb-4 sm:mb-5 ml-1" id="post_code" />
-                                <p class="text-red-500 text-xs italic">Please choose a password.</p>
-                            </div>
-                            <div class="flex items-center pt-2">
-                                <label for="save_info" class="block relative h-0 w-0 overflow-hidden">Save Info</label>
-                                <input type="checkbox" v-model="form.saveinformation" class="form-checkbox" id="save_info" />
-                                <p class="font-hkregular text-sm pl-3 text-secondary"> Save this information for next time </p>
-                            </div> -->
-
+ 
                             <div class="flex items-center pt-4">
                                 <label for="offers" class="block relative h-0 w-0 overflow-hidden">Sign up to exclusive offers</label>
                                 <input type="checkbox" v-model="form.get_updates"  class="form-checkbox" id="offers" />
@@ -135,8 +112,7 @@
                                 class="flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all">
                                 <i class="bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"></i>
                                 Return to Cart
-                            </inertia-link>
-                            <!-- <button type="submit" class="btn btn-primary">Continue to shipping method</button> -->
+                            </inertia-link> 
 
                             <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-3">
                                 <button   

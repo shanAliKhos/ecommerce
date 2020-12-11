@@ -181,34 +181,46 @@
                 </div>        
   
  
-                <div class="mobile-addtocart-menu z-50 bg-white flex items-center justify-around px-2 block lg:hidden fixed bottom-13 right-0 left-0 w-full border-gray-100 text-semibold">
+                 <div class="mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
+                    <div class="grid grid-cols-4 gap-2 flex justify-around">  
                     
-                    <div class="w-1/2 relative">
-                        <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
-                            <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
-                        </span>                 
+                        <div class="w-1/2 relative px-2 py-2">
+                             
+                            
+                                <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
+                                    <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
+                                </span>                 
 
-                        <input type="number" id="quantity-form"
-                            class="form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center"
-                        v-model.number="CartItem.Qty" min="1" /> 
-                        
-                        <span class="text-xs absolute text-semibold bottom-0 right-9 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  stock {{ProductQuantity}} </span>
-                        
-                        <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
-                            <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
-                        </span>
-                    </div>
+                                <input type="number" id="quantity-form"
+                                    class="form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center"
+                                v-model.number="CartItem.Qty" min="1" /> 
+                                
+                                <span class="text-xs absolute text-semibold bottom-0 right-9 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  stock {{ProductQuantity}} </span>
+                                
+                                <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
+                                    <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
+                                </span>
+ 
+                        </div>
+                        <div class="flex justify-end w-1/2 relative px-2 py-2 ">
+                            <button :disabled="sending" @click="AddToCart" type="button"
+                                :class="{'opacity-50 pointer-events-none':sending}"  
+                                class="flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow" >
 
-                    <button :disabled="sending" :class="{'opacity-50 pointer-events-none':sending}"  @click="AddToCart" class="flex inline-flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow ml-1" type="button">
-                        <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <svg viewBox="0 0 20 20" class="h-4 w-4 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
-                        </svg>
-                        <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
-                        </svg>                                   
-                        <span class="tracking-tighter">Add To Cart</span>
-                    </button> 
-                    
+                                <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg viewBox="0 0 20 20" class="h-4 w-4 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
+                                </svg>
+
+                                <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
+                                </svg>                                   
+
+                                <span class="tracking-tighter">Add To Cart</span>
+                                
+                            </button> 
+                        </div>
+ 
+                    </div>    
                 </div>    
 
             </div>

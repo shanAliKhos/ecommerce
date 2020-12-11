@@ -353,7 +353,8 @@ var render = function() {
             _vm._v(" "),
             _c("i", {
               staticClass:
-                "bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow"
+                "bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow",
+              on: { click: _vm.RemoveCartItem }
             })
           ]),
           _vm._v(" "),
@@ -364,7 +365,7 @@ var render = function() {
                 staticClass:
                   "font-hkregular text-secondary text-base mt-2 font-bold"
               },
-              [_vm._v("Classic Beige")]
+              [_vm._v(_vm._s(_vm.CartItem.name))]
             ),
             _vm._v(" "),
             _c("span", { staticClass: "font-hkregular text-secondary block" }, [
@@ -392,9 +393,7 @@ var render = function() {
                 attrs: { type: "number", id: "quantity-form-mobile", min: "1" },
                 domProps: { value: _vm.CartItem.Qty },
                 on: {
-                  change: function($event) {
-                    return _vm.update()
-                  },
+                  change: _vm.update,
                   input: function($event) {
                     if ($event.target.composing) {
                       return

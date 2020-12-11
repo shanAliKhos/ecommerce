@@ -38,13 +38,13 @@
             <div class="relative">
                 <div class="w-24 h-24 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url(\'' + ProductImage + '\')'">
                 </div>
-                <i class="bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow"></i>
+                <i class="bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow" @click="RemoveCartItem"></i>
             </div>
             <div class="pl-4">
-                <span class="font-hkregular text-secondary text-base mt-2 font-bold">Classic Beige</span>
+                <span class="font-hkregular text-secondary text-base mt-2 font-bold">{{CartItem.name}}</span>
                 <span class="font-hkregular text-secondary block">{{$page.SiteOptions.Currency.Symbol}} {{ CartItem.price * CartItem.Qty}} </span>
                 <div class="w-2/3 sm:w-5/6 flex mt-2"  >
-                    <input v-model.number="CartItem.Qty" @change="update()"  type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
+                    <input v-model.number="CartItem.Qty" @change="update"  type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
                     <div class="flex flex-row">
                         <span class="px-2 bg-white flex-1 border  border-l-0 border-grey-darker cursor-pointer flex items-center justify-center" @click="minus">
                             <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
