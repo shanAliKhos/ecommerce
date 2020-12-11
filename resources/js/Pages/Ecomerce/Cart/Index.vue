@@ -1,10 +1,10 @@
 <template> 
     <div class="container border-t border-grey-dark pt-10 sm:pt-12">
-        <div class="flex flex-wrap items-center"> 
+        <!-- <div class="flex flex-wrap items-center"> 
             <a href="/cart/" class="  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ">Cart</a>
             <i class="bx bx-chevron-right text-sm text-secondary px-2"></i> 
 
-        </div>
+        </div> -->
  
         <div class="flex flex-col lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24">
             <div class="lg:w-3/5">
@@ -37,7 +37,9 @@
                     <div class="grid grid-cols-4 gap-2 flex justify-around"> 
 
                         <div class="w-1/2 relative px-2 py-2 flex item-center">
-                           
+                            <div class="pt-3 flex justify-between"> 
+                                <span class="font-semibold text-red-500"> =// {{Currency}} {{CartTotalPrice}}</span>
+                            </div>
                         </div>
                         <div class="w-1/2 relative px-2 py-2 flex item-center justify-end">
                             <button :disabled="sending" @click="ProceedToCheckOut" type="button"
@@ -99,7 +101,7 @@
                         <textarea rows="5" placeholder="Enter your text" class="form-textarea" id="cart_note"></textarea>
                     </div>
                     <div class="pt-4">
-                        <p class="font-hkbold text-secondary pt-1 pb-4">Add Coupon</p>
+                        <p class="font-semibold text-gray-400 pt-1 pb-4">Add Coupon</p>
                         <div class="flex justify-between">
                             <label for="discount_code" class="block relative h-0 w-0 overflow-hidden">Discount Code</label>
                             <input type="text" placeholder="Discount code" class="w-3/5 xl:w-2/3 form-input" id="discount_code" />
@@ -107,18 +109,18 @@
                         </div>
                     </div>
                     <div class="mb-12 pt-4">
-                        <p class="font-hkbold text-secondary pt-1 pb-2">Cart Total</p>
+                        <p class="font-semibold text-gray-400 pt-1 pb-2">Cart Total</p>
                         <div class="border-b border-grey-darker pb-1 flex justify-between">
-                            <span class="font-hkregular text-secondary">Subtotal</span>
-                            <span class="font-hkregular text-secondary">{{Currency}}{{CartTotalPrice}}</span>
+                            <span class="font-semibold text-gray-400">Subtotal</span>
+                            <span class="font-semibold text-gray-400">{{Currency}}{{CartTotalPrice}}</span>
                         </div>
                         <div class="border-b border-grey-darker pt-2 pb-1 flex justify-between">
-                            <span class="font-hkregular text-secondary">Coupon applied</span>
-                            <span class="font-hkregular text-secondary">-$0</span>
+                            <span class="font-semibold text-gray-400">Coupon applied</span>
+                            <span class="font-semibold text-gray-400">-$0</span>
                         </div>
                         <div class="pt-3 flex justify-between">
-                            <span class="font-hkbold text-secondary">Total</span>
-                            <span class="font-hkbold text-secondary">{{Currency}}{{CartTotalPrice}}</span>
+                            <span class="font-semibold text-gray-400">Total</span>
+                            <span class="font-semibold text-gray-400">{{Currency}}{{CartTotalPrice}}</span>
                         </div>
                     </div>
                     <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 hidden lg:block"> 
@@ -140,82 +142,80 @@
     </div>
 </template>
 <script>
-import AppLayout from './../shared/AppLayout'   
+import AppLayout from './../shared/AppLayout'    
+import CartItem from './CartItem'
 
-    // import BreadCrumb from './../components/BreadCrumb' 
-    import CartItem from './CartItem'
-
-    export default {
-        layout: AppLayout,     
-        metaInfo: { title: 'Shopping-cart' },    
-        components: { 
-            CartItem,
-        }, 
-        data() {
-            return {
-                TotalPrice:0,
-                SubTotalPrice:0,
-                sending:false,
-            }
+export default {
+    layout: AppLayout,     
+    metaInfo: { title: 'Shopping-cart' },    
+    components: { 
+        CartItem,
+    }, 
+    data() {
+        return {
+            TotalPrice:0,
+            SubTotalPrice:0,
+            sending:false,
+        }
+    },
+    methods: { 
+        update() {
+            self = this;
+            this.$root.$emit('update-cart',self.CartItems);
         },
-        methods: { 
-            update() {
-                self = this;
-                this.$root.$emit('update-cart',self.CartItems);
-            },
-            ProceedToCheckOut() { 
-                this.$inertia.get(this.route('cart.CustomerInfomation'), {
-                    preserveState: true,
-                    preserveScroll: true,    
-                    onStart: () => this.sending = true,
-                    onFinish: () => this.sending = false,          
-                })                  
-            },
-            EmptyCart(){
-                const self= this;
-                self.$swal.fire({
-                    title: 'Are you sure?',
-                    text: "You will be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, clear it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        self.$inertia.post(self.route('cart.flush'), {
-                            preserveState: true, 
-                            onStart: () => self.sending = true,
-                            onFinish: () => self.sending = false,                                    
+        ProceedToCheckOut() { 
+            this.$inertia.get(this.route('cart.CustomerInfomation'), {
+                preserveState: true,
+                preserveScroll: true,    
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,          
+            })                  
+        },
+        EmptyCart(){
+            const self= this;
+            self.$swal.fire({
+                title: 'Are you sure?',
+                text: "You will be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, clear it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    self.$inertia.post(self.route('cart.flush'), {
+                        preserveState: true, 
+                        onStart: () => self.sending = true,
+                        onFinish: () => self.sending = false,                                    
 
-                        })                    
-                    }
-                })                   
-            },        
-        }, 
-    
-        computed: {
-            CartItems(){
-                return this.$page.Cart.Items;
-            },
-            CountCartItems(){
-                let Qty = this.$page.Cart.Items?this.$page.Cart.Items.reduce((TotalItems, Item) => TotalItems + Item.Qty , 0):0;
-                return Qty;
-            },    
-            CartTotalPrice(){
-                let sum = this.$page.Cart.Items?this.$page.Cart.Items.reduce((TotalPrice, Item) => TotalPrice + (Item.Qty * Item.price) , 0):0; 
-                return sum; 
-            },
-            Currency(){
-                return this.$page.SiteOptions.Currency.Symbol;
-            }            
+                    })                    
+                }
+            })                   
+        },        
+    }, 
 
-        },              
+    computed: {
+        CartItems(){
+            return this.$page.Cart.Items;
+        },
+        CountCartItems(){
+            let Qty = this.$page.Cart.Items?this.$page.Cart.Items.reduce((TotalItems, Item) => TotalItems + Item.Qty , 0):0;
+            return Qty;
+        },    
+        CartTotalPrice(){
+            let sum = this.$page.Cart.Items?this.$page.Cart.Items.reduce((TotalPrice, Item) => TotalPrice + (Item.Qty * Item.price) , 0):0; 
+            return sum; 
+        },
+        Currency(){
+            return this.$page.SiteOptions.Currency.Symbol;
+        }            
 
-    
-        mounted() {
-            const self = this
-            self.$root.$emit('sidebar-close');     
-        },            
-    }
+    },              
+
+
+    mounted() {
+        const self = this
+        self.$root.$emit('sidebar-close');     
+    },            
+}
 </script>

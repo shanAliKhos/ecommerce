@@ -152,7 +152,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
- // import BreadCrumb from './../components/BreadCrumb' 
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -261,8 +262,6 @@ var render = function() {
     "div",
     { staticClass: "container border-t border-grey-dark pt-10 sm:pt-12" },
     [
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "div",
         {
@@ -368,9 +367,32 @@ var render = function() {
                   "div",
                   { staticClass: "grid grid-cols-4 gap-2 flex justify-around" },
                   [
-                    _c("div", {
-                      staticClass: "w-1/2 relative px-2 py-2 flex item-center"
-                    }),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "w-1/2 relative px-2 py-2 flex item-center"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "pt-3 flex justify-between" },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "font-semibold text-red-500" },
+                              [
+                                _vm._v(
+                                  " =// " +
+                                    _vm._s(_vm.Currency) +
+                                    " " +
+                                    _vm._s(_vm.CartTotalPrice)
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -472,7 +494,7 @@ var render = function() {
                 "div",
                 { staticClass: "pt-8" },
                 [
-                  _vm._m(1),
+                  _vm._m(0),
                   _vm._v(" "),
                   _vm._l(_vm.CartItems, function(item, index) {
                     return _c("cart-item", {
@@ -508,14 +530,14 @@ var render = function() {
                   [_vm._v("Cart Totals")]
                 ),
                 _vm._v(" "),
-                _vm._m(2),
+                _vm._m(1),
                 _vm._v(" "),
-                _vm._m(3),
+                _vm._m(2),
                 _vm._v(" "),
                 _c("div", { staticClass: "mb-12 pt-4" }, [
                   _c(
                     "p",
-                    { staticClass: "font-hkbold text-secondary pt-1 pb-2" },
+                    { staticClass: "font-semibold text-gray-400 pt-1 pb-2" },
                     [_vm._v("Cart Total")]
                   ),
                   _vm._v(" "),
@@ -528,13 +550,13 @@ var render = function() {
                     [
                       _c(
                         "span",
-                        { staticClass: "font-hkregular text-secondary" },
+                        { staticClass: "font-semibold text-gray-400" },
                         [_vm._v("Subtotal")]
                       ),
                       _vm._v(" "),
                       _c(
                         "span",
-                        { staticClass: "font-hkregular text-secondary" },
+                        { staticClass: "font-semibold text-gray-400" },
                         [
                           _vm._v(
                             _vm._s(_vm.Currency) + _vm._s(_vm.CartTotalPrice)
@@ -544,14 +566,14 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c("div", { staticClass: "pt-3 flex justify-between" }, [
-                    _c("span", { staticClass: "font-hkbold text-secondary" }, [
+                    _c("span", { staticClass: "font-semibold text-gray-400" }, [
                       _vm._v("Total")
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "font-hkbold text-secondary" }, [
+                    _c("span", { staticClass: "font-semibold text-gray-400" }, [
                       _vm._v(_vm._s(_vm.Currency) + _vm._s(_vm.CartTotalPrice))
                     ])
                   ])
@@ -641,26 +663,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
-          attrs: { href: "/cart/" }
-        },
-        [_vm._v("Cart")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "hidden sm:block" }, [
       _c(
         "div",
@@ -741,7 +743,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pt-4" }, [
-      _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-4" }, [
+      _c("p", { staticClass: "font-semibold text-gray-400 pt-1 pb-4" }, [
         _vm._v("Add Coupon")
       ]),
       _vm._v(" "),
@@ -787,11 +789,11 @@ var staticRenderFns = [
           "border-b border-grey-darker pt-2 pb-1 flex justify-between"
       },
       [
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
+        _c("span", { staticClass: "font-semibold text-gray-400" }, [
           _vm._v("Coupon applied")
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
+        _c("span", { staticClass: "font-semibold text-gray-400" }, [
           _vm._v("-$0")
         ])
       ]
