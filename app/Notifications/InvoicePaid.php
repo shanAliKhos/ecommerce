@@ -41,9 +41,11 @@ class InvoicePaid extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+        ->subject('Invoice Paid')
+        ->markdown('email.InvoicePaid', ['Order' => $this->order]);        
+                    // ->line('The introduction to the notification.')
+                    // ->action('Notification Action', url('/'))
+                    // ->line('Thank you for using our application!');
     }
 
     /**
