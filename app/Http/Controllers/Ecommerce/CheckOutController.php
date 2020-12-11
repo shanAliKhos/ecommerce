@@ -180,8 +180,9 @@ class CheckOutController extends Controller
                 ]);
 
             }       
+            
 
-            $notification = [
+            $notification = [ 
                 'OrderNumber'=>$CreatedOrder->OrderNumber,
                 'CustomerName'=>$CreatedOrder->CardHolderName,
                 'CustomerEmail' => $request->CustomerInformation['email'],
