@@ -181,7 +181,7 @@
                 </div>        
   
  
-                <div class="mobile-addtocart-menu z-50 bg-white flex items-center justify-around px-2 py-1 block lg:hidden fixed bottom-11 right-0 left-0 w-full border-gray-100 text-semibold">
+                <div class="mobile-addtocart-menu z-50 bg-white flex items-center justify-around px-2 block lg:hidden fixed bottom-13 right-0 left-0 w-full border-gray-100 text-semibold">
                     
                     <div class="w-1/2 relative">
                         <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
@@ -208,6 +208,7 @@
                         </svg>                                   
                         <span class="tracking-tighter">Add To Cart</span>
                     </button> 
+                    
                 </div>    
 
             </div>

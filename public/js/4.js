@@ -270,18 +270,17 @@ var render = function() {
                   }
                 },
                 [
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
-                      class: {
-                        "bg-green-400": _vm.CountCartItems > 0,
-                        "bg-red-500": _vm.CountCartItems === 0
-                      }
-                    },
-                    [_vm._v(_vm._s(_vm.CountCartItems))]
-                  ),
+                  _vm.CountCartItems > 0
+                    ? _c(
+                        "span",
+                        {
+                          staticClass:
+                            "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
+                          class: { "bg-green-400": _vm.CountCartItems > 0 }
+                        },
+                        [_vm._v(_vm._s(_vm.CountCartItems))]
+                      )
+                    : _vm._e(),
                   _vm._v(" "),
                   _c(
                     "svg",
