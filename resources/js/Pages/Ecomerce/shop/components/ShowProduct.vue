@@ -145,30 +145,33 @@
                             </select>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between pb-5 hidden lg:block">
-                        <div class="w-full">
-                            <div class="flex">
-                                <p class="flex inline-flex flex-1">Quantity</p> 
-                                <input type="number" class="form-input rounded-r-none  py-0 px-2 text-center flex inline-flex flex-1" v-model.number="CartItem.Qty" min="1" />
-                                <div class="flex flex-col   inline-flex ">
-                                    <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer "
-                                        @click="CartItem.Qty++"> 
-                                        <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                        </svg>                                                                                                          
-                                    </span>
-                                    <span class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer"
-                                        @click="CartItem.Qty--"> 
-                                        <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
-                                        </svg>                                                                  
-                                    </span>
-                                </div>                                                 
-                            </div>
+                    <div class="hidden lg:block">
+                    <div class="flex items-center justify-between pb-5 "> 
+                        <div class="w-1/3 sm:w-1/5">
+                            <p>Quantity</p>
                         </div>
+                        <div class="w-2/3 sm:w-5/6 flex"> 
+                            <input type="number" class="form-input rounded-r-none  w-2/3 py-0 px-2 text-center " v-model.number="CartItem.Qty" min="1" />
+                            <div class="flex flex-col   inline-flex ">
+                                <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer "
+                                    @click="CartItem.Qty++"> 
+                                    <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>                                                                                                          
+                                </span>
+                                <span class="px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer"
+                                    @click="CartItem.Qty--"> 
+                                    <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                                    </svg>                                                                  
+                                </span>
+                            </div>   
+                        </div>         
+                    </div>
                     </div>
                     <div class="flex items-center justify-between hidden lg:block">
-                        <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" class="flex flex-inline  w-full justify-center   uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="button">
+                        <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" 
+                        class="flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow  mr-2 uppercase w-full" type="button">
                             <svg v-if="!sending" class=" transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
@@ -177,7 +180,7 @@
                             </svg>                                   
                             <span class=" ml-2 pointer-events-none">Add to cart</span>
                         </button> 
-                     </div>
+                    </div>
                 </div>        
   
  
@@ -191,11 +194,10 @@
                                     <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
                                 </span>                 
 
-                                <input type="number" id="quantity-form"
-                                    class="form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center"
+                                <input type="number" class="rounded-r-none w-2/3 py-1 px-1 text-center"
                                 v-model.number="CartItem.Qty" min="1" /> 
                                 
-                                <span class="text-xs absolute text-semibold bottom-0 right-9 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  stock {{ProductQuantity}} </span>
+                                <span class="text-xs absolute text-semibold bottom-5 px-0 right-12 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  /stock {{ProductQuantity}} </span>
                                 
                                 <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
                                     <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>

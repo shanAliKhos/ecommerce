@@ -9,8 +9,6 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -21,13 +19,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'active', 'atTopOfPage'],
-  computed: _defineProperty({
+  computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'block font-semibold text-orange-500 border-b-4  border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-3 border-white hover:border-orange-300 px-2';
+      return this.active ? 'block font-semibold text-orange-500 border-b-4  border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4   hover:border-orange-300 px-2';
+    },
+    IsTop: function IsTop() {
+      return this.atTopOfPage ? 'text-lg' : 'text-sm';
     }
-  }, "IsActiveLink", function IsActiveLink() {
-    return this.atTopOfPage ? 'text-lg' : 'text-sm';
-  })
+  }
 });
 
 /***/ }),
@@ -54,9 +53,9 @@ var render = function() {
       _c(
         "inertia-link",
         {
-          staticClass:
-            "transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none",
+          staticClass: "transition duration-1000 ease-in transform ",
           class: _vm.IsActiveLink,
+          IsTop: _vm.IsTop,
           attrs: { href: _vm.href, "preserve-scroll": "" }
         },
         [_vm._t("default")],

@@ -167,19 +167,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -193,9 +180,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        email: this.$page.CustomerInformation ? this.$page.CustomerInformation.email : null,
-        first_name: this.$page.CustomerInformation ? this.$page.CustomerInformation.first_name : null,
-        last_name: this.$page.CustomerInformation ? this.$page.CustomerInformation.last_name : null,
+        email: this.$page.user ? this.$page.user.email : null,
+        full_name: this.$page.user ? this.$page.user.name : null,
         get_updates: this.$page.CustomerInformation ? this.$page.CustomerInformation.get_updates : null,
         address: this.$page.CustomerInformation ? this.$page.CustomerInformation.address : null,
         city: this.$page.CustomerInformation ? this.$page.CustomerInformation.city : null,
@@ -214,8 +200,7 @@ __webpack_require__.r(__webpack_exports__);
       var self = this;
       var formData = new FormData();
       formData.append("email", self.form.email || '');
-      formData.append("first_name", self.form.first_name || '');
-      formData.append("last_name", self.form.last_name || '');
+      formData.append("full_name", self.form.full_name || '');
       formData.append("get_updates", self.form.get_updates || '');
       formData.append("address", self.form.address || '');
       formData.append("city", self.form.city || '');
@@ -399,40 +384,14 @@ var render = function() {
                           [_vm._v("Email")]
                         ),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model.number",
-                              value: _vm.form.email,
-                              expression: "form.email",
-                              modifiers: { number: true }
-                            }
-                          ],
-                          staticClass:
-                            " form-input appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
-                          attrs: {
-                            placeholder: "Email",
-                            id: "grid-first-name",
-                            type: "email"
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed"
                           },
-                          domProps: { value: _vm.form.email },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.form,
-                                "email",
-                                _vm._n($event.target.value)
-                              )
-                            },
-                            blur: function($event) {
-                              return _vm.$forceUpdate()
-                            }
-                          }
-                        }),
+                          [_vm._v(_vm._s(_vm.form.email))]
+                        ),
                         _vm._v(" "),
                         _vm.$page.errors.email
                           ? _c(
@@ -513,102 +472,31 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "pt-4 md:pt-5" }, [
                   _c("div", { staticClass: "flex flex-wrap -mx-3 mb-6" }, [
-                    _c(
-                      "div",
-                      { staticClass: "w-full md:w-1/2 px-3 mb-6 md:mb-0" },
-                      [
-                        _c(
-                          "label",
-                          {
-                            staticClass:
-                              "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2",
-                            attrs: { for: "grid-first-name" }
-                          },
-                          [_vm._v("First Name")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.first_name,
-                              expression: "form.first_name"
-                            }
-                          ],
-                          staticClass: "form-input ",
-                          attrs: {
-                            placeholder: "First Name",
-                            id: "grid-first-fname",
-                            type: "text"
-                          },
-                          domProps: { value: _vm.form.first_name },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.form,
-                                "first_name",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _vm.$page.errors.first_name
-                          ? _c(
-                              "p",
-                              { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.first_name))]
-                            )
-                          : _vm._e()
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "w-full md:w-1/2 px-3" }, [
+                    _c("div", { staticClass: "w-full px-3" }, [
                       _c(
                         "label",
                         {
                           staticClass:
                             "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2",
-                          attrs: { for: "grid-last-name" }
+                          attrs: { for: "grid-full_name" }
                         },
-                        [_vm._v(" Last Name ")]
+                        [_vm._v("Full Name")]
                       ),
                       _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.last_name,
-                            expression: "form.last_name"
-                          }
-                        ],
-                        staticClass: "form-input ",
-                        attrs: {
-                          placeholder: "Last Name",
-                          id: "grid-last-lname",
-                          type: "text"
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed"
                         },
-                        domProps: { value: _vm.form.last_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "last_name", $event.target.value)
-                          }
-                        }
-                      }),
+                        [_vm._v(_vm._s(_vm.form.full_name))]
+                      ),
                       _vm._v(" "),
-                      _vm.$page.errors.last_name
+                      _vm.$page.errors.full_name
                         ? _c(
                             "p",
                             { staticClass: "text-red-500 text-xs italic" },
-                            [_vm._v(_vm._s(_vm.$page.errors.last_name))]
+                            [_vm._v(_vm._s(_vm.$page.errors.full_name))]
                           )
                         : _vm._e()
                     ])
@@ -988,20 +876,21 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                                      "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
-                                      viewBox: "0 0 20 20",
-                                      fill: "currentColor"
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
                                     }
                                   },
                                   [
                                     _c("path", {
                                       attrs: {
-                                        "fill-rule": "evenodd",
-                                        d:
-                                          "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                                        "clip-rule": "evenodd"
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                       }
                                     })
                                   ]
@@ -1010,34 +899,27 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                      "transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
-                                      viewBox: "0 0 20 20",
-                                      fill: "currentColor"
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
                                     }
                                   },
                                   [
-                                    _c(
-                                      "svg",
-                                      {
-                                        staticClass:
-                                          "h-6 w-6 fill-current mr-2",
-                                        attrs: { viewBox: "0 0 20 20" }
-                                      },
-                                      [
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                          }
-                                        })
-                                      ]
-                                    )
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                      }
+                                    })
                                   ]
                                 ),
                             _vm._v(
-                              "                                  \n                                Continue to shipping method\n                            "
+                              "                        \n                                Proceed\n                            "
                             )
                           ]
                         )
@@ -1084,12 +966,12 @@ var render = function() {
                                 attrs: { disabled: _vm.sending, type: "submit" }
                               },
                               [
-                                !_vm.sending
+                                _vm.sending
                                   ? _c(
                                       "svg",
                                       {
                                         staticClass:
-                                          "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                          "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                         attrs: {
                                           xmlns: "http://www.w3.org/2000/svg",
                                           fill: "none",
@@ -1112,30 +994,23 @@ var render = function() {
                                       "svg",
                                       {
                                         staticClass:
-                                          "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                          "transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                         attrs: {
                                           xmlns: "http://www.w3.org/2000/svg",
-                                          viewBox: "0 0 20 20",
-                                          fill: "currentColor"
+                                          fill: "none",
+                                          viewBox: "0 0 24 24",
+                                          stroke: "currentColor"
                                         }
                                       },
                                       [
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "h-6 w-6 fill-current mr-2",
-                                            attrs: { viewBox: "0 0 20 20" }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                              }
-                                            })
-                                          ]
-                                        )
+                                        _c("path", {
+                                          attrs: {
+                                            "stroke-linecap": "round",
+                                            "stroke-linejoin": "round",
+                                            "stroke-width": "2",
+                                            d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                          }
+                                        })
                                       ]
                                     ),
                                 _vm._v(" "),

@@ -91,7 +91,7 @@
                 <!-- <i class="bx bx-menu text-primary text-3xl" @click="$emit('mobile-menu-is-enabled')"></i> -->
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center text-gray-400 font-semibold" >
             <ul class="list-reset flex items-center lg:ml-8">
             
                 <cus-nav-link 

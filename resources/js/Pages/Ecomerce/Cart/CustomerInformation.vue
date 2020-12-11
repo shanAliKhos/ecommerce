@@ -25,7 +25,7 @@
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-emai">Email</label>
-                                    <input v-model.number="form.email" placeholder="Email" class=" form-input appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email">
+                                    <span class="appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed">{{form.email}}</span>
                                     <p class="text-red-500 text-xs italic" v-if="$page.errors.email">{{$page.errors.email}}</p>
                                 </div>
                                 <div class="w-full md:w-1/2 px-3">
@@ -43,35 +43,25 @@
                         <div class="pt-4 md:pt-5">
 
                             <div class="flex flex-wrap -mx-3 mb-6">
-                                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">First Name</label>
-                                    <input v-model="form.first_name" placeholder="First Name" class="form-input " id="grid-first-fname" type="text">
-                                    <p class="text-red-500 text-xs italic" v-if="$page.errors.first_name">{{$page.errors.first_name}}</p>
-
-                                </div>
-                                <div class="w-full md:w-1/2 px-3">
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name"> Last Name </label>
-                                    <input v-model="form.last_name" placeholder="Last Name"  class="form-input " id="grid-last-lname" type="text">
-                                    <p class="text-red-500 text-xs italic" v-if="$page.errors.last_name">{{$page.errors.last_name}}</p>
-
-                                </div>
+                                <div class="w-full px-3">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-full_name">Full Name</label>
+                                    <span class="appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed">{{form.full_name}}</span>
+                                    <p class="text-red-500 text-xs italic" v-if="$page.errors.full_name">{{$page.errors.full_name}}</p>
+                                </div> 
                             </div>
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <div class="w-full px-3">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">Address</label>
                                     <input  v-model="form.address" placeholder="You address" class="form-input " id="grid-address" type="text" >
                                     <p class="text-red-500 text-xs italic" v-if="$page.errors.address">{{$page.errors.address}}</p>
-
                                 </div>
                             </div>
                             <div class="flex flex-wrap -mx-3 mb-2">
-                                
                                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">City</label>
                                     <input v-model="form.city" class="form-input" id="grid-city" type="text" placeholder="City">
                                     <p class="text-red-500 text-xs italic" v-if="$page.errors.city">{{$page.errors.city}}</p>
-                                </div
-                                >
+                                </div>
                                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">Country</label>
                                     <div class="relative">
@@ -115,17 +105,14 @@
                             </inertia-link> 
 
                             <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-3 hidden lg:block">
-                                <button   
-                                    type="submit"
-                                    class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "
-                                    > 
-                                    <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
-                                    </svg>                              
-                                    <svg v-else class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
-                                    </svg>                                  
-                                    Continue to shipping method
+                                <button  type="submit" class="flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  "> 
+                                    <svg v-if="sending" class="animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>                        
+                                    <svg v-else class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>                        
+                                    Proceed
                                 </button>                                  
                             </div>                                   
 
@@ -143,12 +130,12 @@
                                     <button :disabled="sending"  type="submit"
                                         :class="{'opacity-50 pointer-events-none':sending}"  
                                         class="flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow" >
-                                        <svg v-if="!sending" class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg v-if="sending" class="animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg> 
-                                        <svg v-else  class="transition  ease-in-out  animate-spin h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <svg viewBox="0 0 20 20" class="h-6 w-6 fill-current mr-2"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg>
-                                        </svg>                                   
+                                        </svg>                        
+                                        <svg v-else class="transition duration-700 ease-in-out  h-5 w-auto mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>                                  
                                         <span class="tracking-tighter">Proceed</span>
                                     </button> 
                                 </div>
@@ -183,9 +170,8 @@ export default {
     data() {
         return {
             form:{
-                email:this.$page.CustomerInformation?this.$page.CustomerInformation.email:null,
-                first_name:this.$page.CustomerInformation?this.$page.CustomerInformation.first_name:null,
-                last_name:this.$page.CustomerInformation?this.$page.CustomerInformation.last_name:null,
+                email:this.$page.user?this.$page.user.email:null,
+                full_name:this.$page.user?this.$page.user.name:null, 
                 get_updates:this.$page.CustomerInformation?this.$page.CustomerInformation.get_updates:null,
                 address:this.$page.CustomerInformation?this.$page.CustomerInformation.address:null,
                 city:this.$page.CustomerInformation?this.$page.CustomerInformation.city:null,
@@ -202,8 +188,7 @@ export default {
             const self = this;
             let formData = new FormData();
             formData.append("email", self.form.email || '');
-            formData.append("first_name", self.form.first_name || '');
-            formData.append("last_name", self.form.last_name || '');
+            formData.append("full_name", self.form.full_name || ''); 
             formData.append("get_updates", self.form.get_updates || '');
             formData.append("address", self.form.address || '');
             formData.append("city", self.form.city || '');

@@ -377,6 +377,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -868,19 +870,14 @@ var render = function() {
               _vm._v(" "),
               _vm._m(4),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex items-center justify-between pb-5 hidden lg:block"
-                },
-                [
-                  _c("div", { staticClass: "w-full" }, [
-                    _c("div", { staticClass: "flex" }, [
-                      _c("p", { staticClass: "flex inline-flex flex-1" }, [
-                        _vm._v("Quantity")
-                      ]),
-                      _vm._v(" "),
+              _c("div", { staticClass: "hidden lg:block" }, [
+                _c(
+                  "div",
+                  { staticClass: "flex items-center justify-between pb-5 " },
+                  [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3 sm:w-5/6 flex" }, [
                       _c("input", {
                         directives: [
                           {
@@ -892,7 +889,7 @@ var render = function() {
                           }
                         ],
                         staticClass:
-                          "form-input rounded-r-none  py-0 px-2 text-center flex inline-flex flex-1",
+                          "form-input rounded-r-none  w-2/3 py-0 px-2 text-center ",
                         attrs: { type: "number", min: "1" },
                         domProps: { value: _vm.CartItem.Qty },
                         on: {
@@ -994,9 +991,9 @@ var render = function() {
                         ]
                       )
                     ])
-                  ])
-                ]
-              ),
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -1009,7 +1006,7 @@ var render = function() {
                     "button",
                     {
                       staticClass:
-                        "flex flex-inline  w-full justify-center   uppercase items-center uppercase transition duration-1000 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                        "flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow  mr-2 uppercase w-full",
                       class: { "opacity-50": _vm.sending },
                       attrs: { disabled: _vm.sending, type: "button" },
                       on: { click: _vm.AddToCart }
@@ -1119,9 +1116,8 @@ var render = function() {
                           modifiers: { number: true }
                         }
                       ],
-                      staticClass:
-                        "form-input form-quantity rounded-r-none w-2/3 py-2 px-2 text-center",
-                      attrs: { type: "number", id: "quantity-form", min: "1" },
+                      staticClass: "rounded-r-none w-2/3 py-1 px-1 text-center",
+                      attrs: { type: "number", min: "1" },
                       domProps: { value: _vm.CartItem.Qty },
                       on: {
                         input: function($event) {
@@ -1144,13 +1140,13 @@ var render = function() {
                       "span",
                       {
                         staticClass:
-                          "text-xs absolute text-semibold bottom-0 right-9 transition duration-500 ease-in-out ",
+                          "text-xs absolute text-semibold bottom-5 px-0 right-12 transition duration-500 ease-in-out ",
                         class: {
                           "text-green-400": _vm.ProductQuantity > 0,
                           "text-red-700": _vm.ProductQuantity < 1
                         }
                       },
-                      [_vm._v("  stock " + _vm._s(_vm.ProductQuantity) + " ")]
+                      [_vm._v("  /stock " + _vm._s(_vm.ProductQuantity) + " ")]
                     ),
                     _vm._v(" "),
                     _c(
@@ -1363,7 +1359,7 @@ var render = function() {
               class: { active: _vm.activeTab === "additional-information" },
               attrs: { role: "tabpanel" }
             },
-            [_vm._m(5)]
+            [_vm._m(6)]
           ),
           _vm._v(" "),
           _c(
@@ -1375,13 +1371,13 @@ var render = function() {
               attrs: { role: "tabpanel" }
             },
             [
-              _vm._m(6),
-              _vm._v(" "),
               _vm._m(7),
               _vm._v(" "),
               _vm._m(8),
               _vm._v(" "),
-              _vm._m(9)
+              _vm._m(9),
+              _vm._v(" "),
+              _vm._m(10)
             ]
           )
         ])
@@ -1477,6 +1473,14 @@ var staticRenderFns = [
         ])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+      _c("p", [_vm._v("Quantity")])
+    ])
   },
   function() {
     var _vm = this

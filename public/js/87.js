@@ -514,20 +514,21 @@ var render = function() {
                             "svg",
                             {
                               staticClass:
-                                "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                                "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
                               attrs: {
                                 xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
                               }
                             },
                             [
                               _c("path", {
                                 attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                                  "clip-rule": "evenodd"
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                 }
                               })
                             ]
@@ -536,33 +537,27 @@ var render = function() {
                             "svg",
                             {
                               staticClass:
-                                "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                "transition duration-700 ease-in-out  h-5 w-auto mr-1",
                               attrs: {
                                 xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
                               }
                             },
                             [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass: "h-6 w-6 fill-current mr-2",
-                                  attrs: { viewBox: "0 0 20 20" }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      d:
-                                        "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                    }
-                                  })
-                                ]
-                              )
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                }
+                              })
                             ]
                           ),
                       _vm._v(
-                        "                                  \n                        Proceed\n                    "
+                        "                                       \n                        Proceed\n                    "
                       )
                     ]
                   )
@@ -605,12 +600,12 @@ var render = function() {
                               on: { click: _vm.store }
                             },
                             [
-                              !_vm.sending
+                              _vm.sending
                                 ? _c(
                                     "svg",
                                     {
                                       staticClass:
-                                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                        "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         fill: "none",
@@ -633,30 +628,23 @@ var render = function() {
                                     "svg",
                                     {
                                       staticClass:
-                                        "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor"
+                                        fill: "none",
+                                        viewBox: "0 0 24 24",
+                                        stroke: "currentColor"
                                       }
                                     },
                                     [
-                                      _c(
-                                        "svg",
-                                        {
-                                          staticClass:
-                                            "h-6 w-6 fill-current mr-2",
-                                          attrs: { viewBox: "0 0 20 20" }
-                                        },
-                                        [
-                                          _c("path", {
-                                            attrs: {
-                                              d:
-                                                "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                            }
-                                          })
-                                        ]
-                                      )
+                                      _c("path", {
+                                        attrs: {
+                                          "stroke-linecap": "round",
+                                          "stroke-linejoin": "round",
+                                          "stroke-width": "2",
+                                          d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                        }
+                                      })
                                     ]
                                   ),
                               _vm._v(" "),

@@ -39,8 +39,7 @@ class CheckOutController extends Controller
         }        
         $this->validate($request,[ 
             "email" => "required|email:rfc,dns",
-            "first_name" => "required",
-            "last_name" => "required",
+            "full_name" => "required", 
             "address" => "required",
             "city" => "required",
             "country" => "required",
@@ -55,7 +54,6 @@ class CheckOutController extends Controller
     public function ShippingMethod()
     { 
         $CartItems = session()->get('CartItems'); 
-
         if(!$CartItems){
             return redirect()->route('shop')->with('info','Okay ! Add some items to cart');
         }        
