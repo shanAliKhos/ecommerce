@@ -93,7 +93,9 @@ Route::prefix('blog')->group(function () {
                 Route::resource('/product-attribute', 'Admin\ProductAttributeController');
 
                 Route::resource('/hero-slider', 'Admin\Silders\HeroSliderController');
+
                 Route::resource('/sale-slider', 'Admin\Silders\SaleSliderController');
+                
                 Route::resource('/trending-slider', 'Admin\Silders\TrendingSliderController');
                  
                 Route::get('/setting', 'Admin\SettingController@index')->name('setting.index');

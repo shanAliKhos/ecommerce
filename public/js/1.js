@@ -778,10 +778,9 @@ var render = function() {
                       "side-link",
                       {
                         attrs: {
-                          href: _vm.$route("admin.trending-slider.index"),
+                          href: _vm.$route("admin.customer.index"),
                           active:
-                            _vm.$page.currentRouteName ==
-                            "admin.trending-slider.index"
+                            _vm.$page.currentRouteName == "admin.customer.index"
                         }
                       },
                       [
