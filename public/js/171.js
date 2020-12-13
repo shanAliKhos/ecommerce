@@ -1,21 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[171],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
-/* harmony import */ var _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/ActionSection */ "./resources/js/Jetstream/ActionSection.vue");
-/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
-/* harmony import */ var _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/DialogModal */ "./resources/js/Jetstream/DialogModal.vue");
-/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
-/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
-/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
+/* harmony import */ var _Product_Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue");
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 //
 //
 //
@@ -68,6 +63,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ShopProduct: _Product_Product__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    FeaturedProducts: function FeaturedProducts() {
+      return this.$page.FeatureProducts;
+    }
+  },
+  mounted: function mounted() {
+    new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"]('.tranding-slider', {
+      type: "carousel",
+      animationDuration: 1000,
+      hoverpause: true,
+      autoplay: 3000,
+      startAt: 0,
+      perView: 4,
+      gap: 0,
+      peek: {
+        before: 50,
+        after: 50
+      },
+      breakpoints: {
+        1024: {
+          perView: 3,
+          peek: {
+            before: 20,
+            after: 20
+          }
+        },
+        768: {
+          perView: 2,
+          peek: {
+            before: 10,
+            after: 10
+          }
+        },
+        600: {
+          perView: 1,
+          peek: {
+            before: 0,
+            after: 0
+          }
+        }
+      }
+    }).mount();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/AppLayout */ "./resources/js/Pages/Ecomerce/shared/AppLayout.vue");
+/* harmony import */ var _shared_Slider_HeroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../shared/Slider/HeroSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue");
+/* harmony import */ var _components_TrendingCollection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/TrendingCollection */ "./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue");
+/* harmony import */ var _shared_Slider_TrendingSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../shared/Slider/TrendingSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue");
+/* harmony import */ var _shared_Slider_WelcomeTrendingMultiSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../shared/Slider/WelcomeTrendingMultiSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/WelcomeTrendingMultiSlider.vue");
+/* harmony import */ var _shared_Partials_components_WelcomeIcons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../shared/Partials/components/WelcomeIcons */ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue");
+/* harmony import */ var _components_WelcomeSaleBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/WelcomeSaleBanner */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue");
+/* harmony import */ var _components_WelcomeBrands__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/WelcomeBrands */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue");
+/* harmony import */ var _shared_Slider_SaleSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../shared/Slider/SaleSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue");
 //
 //
 //
@@ -99,11 +165,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
+
+
 
 
 
@@ -112,57 +175,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['sessions'],
+  metaInfo: {
+    title: 'Welcome'
+  },
+  layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
-    JetActionMessage: _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_0__["default"],
-    JetActionSection: _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_1__["default"],
-    JetButton: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__["default"],
-    JetDialogModal: _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_3__["default"],
-    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__["default"],
-    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__["default"],
-    JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__["default"]
+    HeroSlider: _shared_Slider_HeroSlider__WEBPACK_IMPORTED_MODULE_1__["default"],
+    WelcomeIcons: _shared_Partials_components_WelcomeIcons__WEBPACK_IMPORTED_MODULE_5__["default"],
+    TrendingCollection: _components_TrendingCollection__WEBPACK_IMPORTED_MODULE_2__["default"],
+    TrendingSlider: _shared_Slider_TrendingSlider__WEBPACK_IMPORTED_MODULE_3__["default"],
+    WelcomeTrendingMultiSlider: _shared_Slider_WelcomeTrendingMultiSlider__WEBPACK_IMPORTED_MODULE_4__["default"],
+    WelcomeSaleBanner: _components_WelcomeSaleBanner__WEBPACK_IMPORTED_MODULE_6__["default"],
+    WelcomeBrands: _components_WelcomeBrands__WEBPACK_IMPORTED_MODULE_7__["default"],
+    SaleSlider: _shared_Slider_SaleSlider__WEBPACK_IMPORTED_MODULE_8__["default"]
   },
-  data: function data() {
-    return {
-      confirmingLogout: false,
-      form: this.$inertia.form({
-        '_method': 'DELETE',
-        password: ''
-      }, {
-        bag: 'logoutOtherBrowserSessions'
-      })
-    };
+  mounted: function mounted() {
+    var self = this;
+    self.$root.$emit('sidebar-close');
   },
-  methods: {
-    confirmLogout: function confirmLogout() {
-      var _this = this;
-
-      this.form.password = '';
-      this.confirmingLogout = true;
-      setTimeout(function () {
-        _this.$refs.password.focus();
-      }, 250);
-    },
-    logoutOtherBrowserSessions: function logoutOtherBrowserSessions() {
-      var _this2 = this;
-
-      this.form.post(route('other-browser-sessions.destroy'), {
-        preserveScroll: true
-      }).then(function (response) {
-        if (!_this2.form.hasErrors()) {
-          _this2.confirmingLogout = false;
-        }
-      });
+  computed: {
+    ProductsOnSale: function ProductsOnSale() {
+      return this.$page.SaleProducts;
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&":
-/*!************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& ***!
-  \************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -174,309 +217,332 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("jet-action-section", {
-    scopedSlots: _vm._u([
-      {
-        key: "title",
-        fn: function() {
-          return [_vm._v("\n        Browser Sessions\n    ")]
-        },
-        proxy: true
-      },
-      {
-        key: "description",
-        fn: function() {
-          return [
-            _vm._v(
-              "\n        Manage and logout your active sessions on other browsers and devices.\n    "
-            )
-          ]
-        },
-        proxy: true
-      },
-      {
-        key: "content",
-        fn: function() {
-          return [
-            _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
-              _vm._v(
-                "\n            If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.\n        "
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex flex-col md:flex-row py-20 md:py-24" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-shipping"
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "h3",
+                {
+                  staticClass:
+                    "font-hksemibold text-primary text-xl tracking-wide"
+                },
+                [_vm._v(" Free shipping")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary-lighter text-base tracking-wide"
+                },
+                [_vm._v(" On all orders over only $50 ")]
               )
-            ]),
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-support"
+            }),
             _vm._v(" "),
-            _vm.sessions.length > 0
-              ? _c(
-                  "div",
-                  { staticClass: "mt-5 space-y-6" },
-                  _vm._l(_vm.sessions, function(session, i) {
-                    return _c(
-                      "div",
-                      { key: i, staticClass: "flex items-center" },
-                      [
-                        _c("div", [
-                          session.agent.is_desktop
-                            ? _c(
-                                "svg",
-                                {
-                                  staticClass: "w-8 h-8 text-gray-500",
-                                  attrs: {
-                                    fill: "none",
-                                    "stroke-linecap": "round",
-                                    "stroke-linejoin": "round",
-                                    "stroke-width": "2",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      d:
-                                        "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                    }
-                                  })
-                                ]
-                              )
-                            : _c(
-                                "svg",
-                                {
-                                  staticClass: "w-8 h-8 text-gray-500",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    viewBox: "0 0 24 24",
-                                    "stroke-width": "2",
-                                    stroke: "currentColor",
-                                    fill: "none",
-                                    "stroke-linecap": "round",
-                                    "stroke-linejoin": "round"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      d: "M0 0h24v24H0z",
-                                      stroke: "none"
-                                    }
-                                  }),
-                                  _c("rect", {
-                                    attrs: {
-                                      x: "7",
-                                      y: "4",
-                                      width: "10",
-                                      height: "16",
-                                      rx: "1"
-                                    }
-                                  }),
-                                  _c("path", {
-                                    attrs: { d: "M11 5h2M12 17v.01" }
-                                  })
-                                ]
-                              )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "ml-3" }, [
-                          _c("div", { staticClass: "text-sm text-gray-600" }, [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(session.agent.platform) +
-                                " - " +
-                                _vm._s(session.agent.browser) +
-                                "\n                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c(
-                              "div",
-                              { staticClass: "text-xs text-gray-500" },
-                              [
-                                _vm._v(
-                                  "\n                            " +
-                                    _vm._s(session.ip_address) +
-                                    ",\n\n                            "
-                                ),
-                                session.is_current_device
-                                  ? _c(
-                                      "span",
-                                      {
-                                        staticClass:
-                                          "text-green-500 font-semibold"
-                                      },
-                                      [_vm._v("This device")]
-                                    )
-                                  : _c("span", [
-                                      _vm._v(
-                                        "Last active " +
-                                          _vm._s(session.last_active)
-                                      )
-                                    ])
-                              ]
-                            )
-                          ])
-                        ])
-                      ]
-                    )
-                  }),
-                  0
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "flex items-center mt-5" },
-              [
-                _c(
-                  "jet-button",
-                  {
-                    nativeOn: {
-                      click: function($event) {
-                        return _vm.confirmLogout($event)
-                      }
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Logout Other Browser Sessions\n            "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "jet-action-message",
-                  {
-                    staticClass: "ml-3",
-                    attrs: { on: _vm.form.recentlySuccessful }
-                  },
-                  [_vm._v("\n                Done.\n            ")]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("jet-dialog-modal", {
-              attrs: { show: _vm.confirmingLogout },
-              on: {
-                close: function($event) {
-                  _vm.confirmingLogout = false
-                }
-              },
-              scopedSlots: _vm._u([
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "h3",
                 {
-                  key: "title",
-                  fn: function() {
-                    return [
-                      _vm._v(
-                        "\n                Logout Other Browser Sessions\n            "
-                      )
-                    ]
-                  },
-                  proxy: true
+                  staticClass:
+                    "font-hksemibold text-primary text-xl tracking-wide"
                 },
+                [_vm._v(" Always available")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
                 {
-                  key: "content",
-                  fn: function() {
-                    return [
-                      _vm._v(
-                        "\n                Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices.\n\n                "
-                      ),
-                      _c(
-                        "div",
-                        { staticClass: "mt-4" },
-                        [
-                          _c("jet-input", {
-                            ref: "password",
-                            staticClass: "mt-1 block w-3/4",
-                            attrs: {
-                              type: "password",
-                              placeholder: "Password"
-                            },
-                            nativeOn: {
-                              keyup: function($event) {
-                                if (
-                                  !$event.type.indexOf("key") &&
-                                  _vm._k(
-                                    $event.keyCode,
-                                    "enter",
-                                    13,
-                                    $event.key,
-                                    "Enter"
-                                  )
-                                ) {
-                                  return null
-                                }
-                                return _vm.logoutOtherBrowserSessions($event)
-                              }
-                            },
-                            model: {
-                              value: _vm.form.password,
-                              callback: function($$v) {
-                                _vm.$set(_vm.form, "password", $$v)
-                              },
-                              expression: "form.password"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("jet-input-error", {
-                            staticClass: "mt-2",
-                            attrs: { message: _vm.form.error("password") }
-                          })
-                        ],
-                        1
-                      )
-                    ]
-                  },
-                  proxy: true
+                  staticClass:
+                    "font-hkregular text-secondary-lighter text-base tracking-wide"
                 },
+                [_vm._v(" 24/7 call center availabl e")]
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-return"
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "h3",
                 {
-                  key: "footer",
-                  fn: function() {
-                    return [
-                      _c(
-                        "jet-secondary-button",
-                        {
-                          nativeOn: {
-                            click: function($event) {
-                              _vm.confirmingLogout = false
-                            }
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                    Nevermind\n                "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "jet-button",
-                        {
-                          staticClass: "ml-2",
-                          class: { "opacity-25": _vm.form.processing },
-                          attrs: { disabled: _vm.form.processing },
-                          nativeOn: {
-                            click: function($event) {
-                              return _vm.logoutOtherBrowserSessions($event)
-                            }
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                    Logout Other Browser Sessions\n                "
-                          )
-                        ]
-                      )
-                    ]
-                  },
-                  proxy: true
-                }
-              ])
+                  staticClass:
+                    "font-hksemibold text-primary text-xl tracking-wide"
+                },
+                [_vm._v(" Free returns")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-hkregular text-secondary-lighter text-base tracking-wide"
+                },
+                [_vm._v(" 7 days free return policy")]
+              )
+            ])
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "pb-20 md:pb-24 lg:pb-32" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "tranding-slider relative" }, [
+      _c(
+        "div",
+        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
+        [
+          _c(
+            "div",
+            { staticClass: "pt-12 relative glide__slides" },
+            _vm._l(_vm.FeaturedProducts, function(Product, ProductIndex) {
+              return _c(
+                "div",
+                {
+                  key: ProductIndex,
+                  staticClass: "relative group glide__slide"
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "sm:px-5 lg:px-4" },
+                    [_c("shop-product", { attrs: { Product: Product } })],
+                    1
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0"
+      },
+      [
+        _c("div", { staticClass: "text-center sm:text-left" }, [
+          _c(
+            "h2",
+            {
+              staticClass:
+                "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+            },
+            [_vm._v("\n                 Elyssi’s trends\n             ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass:
+                "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2"
+            },
+            [
+              _vm._v(
+                "\n                 Be styling, no matter the season!\n             "
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-hkregular text-xl text-primary",
+            attrs: { href: "/collection-grid" }
+          },
+          [
+            _vm._v("\n             Show more\n             "),
+            _c("i", {
+              staticClass:
+                "bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"
             })
           ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { "data-glide-el": "controls" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+          attrs: { "data-glide-dir": "<" }
         },
-        proxy: true
-      }
+        [
+          _c("i", {
+            staticClass:
+              "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+          attrs: { "data-glide-dir": ">" }
+        },
+        [
+          _c("i", {
+            staticClass:
+              "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+          })
+        ]
+      )
     ])
-  })
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { attrs: { id: "main" } },
+    [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("hero-slider"),
+          _vm._v(" "),
+          _c("welcome-icons"),
+          _vm._v(" "),
+          _c("trending-collection"),
+          _vm._v(" "),
+          this.$page.FeatureProducts.length > 0
+            ? _c("trending-slider")
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("welcome-trending-multi-slider"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("welcome-brands"),
+          _vm._v(" "),
+          _c("welcome-sale-banner"),
+          _vm._v(" "),
+          _vm.ProductsOnSale.length > 0
+            ? _c("SaleSlider", { attrs: { products: _vm.ProductsOnSale } })
+            : _vm._e()
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -485,29 +551,218 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue":
-/*!***********************************************************************!*\
-  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue ***!
-  \***********************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "pt-16 sm:pt-20 pb-5 sm:pb-12 border-b border-grey-dark" },
+      [
+        _c(
+          "h4",
+          {
+            staticClass:
+              "font-semibold text-xl text-gray-400 uppercase text-center"
+          },
+          [_vm._v("Our Brands")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "flex flex-wrap items-center justify-center pt-8 " },
+          [
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-01.png')"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-02.png')"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-03.png')"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-04.png')"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-05.png')"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass:
+                "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
+              staticStyle: {
+                "background-image": "url('./img/brands/brand-06.png')"
+              }
+            })
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "py-5 sm:py-16 mt-10 md:mt-16 mb-12 sm:mb-6 md:mb-12 lg:mb-28 relative w-full"
+      },
+      [
+        _c("div", {
+          staticClass:
+            "bg-left bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 h-76 sm:h-82 md:h-86 lg:h-90 z-20 relative",
+          staticStyle: { "background-image": "url(./img/coupon-image.jpg)" }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "lg:absolute right-0 bottom-0 bg-right bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 ml-auto h-76 sm:h-82 md:h-86 lg:h-90 bg-coupon-bg"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5  mx-auto text-center lg:text-left"
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass:
+                      "font-hkmedium text-white text-lg md:text-xl uppercase"
+                  },
+                  [_vm._v("New Arrivals")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-butlermedium text-white text-3xl sm:text-4xl md:text-7xl xl:text-5xl pt-5 leading-tight"
+                  },
+                  [
+                    _vm._v(
+                      "\n                Blouses & Jeans Up to 70% Off\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-primary btn-lg mt-8 md:mt-10",
+                    attrs: { href: "/" }
+                  },
+                  [_vm._v("Get it now")]
+                )
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& */ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&");
-/* harmony import */ var _LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeIcons.vue?vue&type=template&id=03024d7a& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
+var script = {}
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -517,38 +772,268 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&":
-/*!******************************************************************************************************!*\
-  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& ***!
-  \******************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a& ***!
+  \****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeIcons.vue?vue&type=template&id=03024d7a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=template&id=9430ddd6& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&");
+/* harmony import */ var _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=template&id=9430ddd6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/Welcome.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/Welcome.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=6974727a& */ "./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a&");
+/* harmony import */ var _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Welcome.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/welcome/Welcome.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=6974727a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/Welcome.vue?vue&type=template&id=6974727a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_6974727a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeBrands.vue?vue&type=template&id=fac9ca26& */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26& ***!
+  \*********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeBrands.vue?vue&type=template&id=fac9ca26& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue?vue&type=template&id=fac9ca26&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeBrands_vue_vue_type_template_id_fac9ca26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118& */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue?vue&type=template&id=5b9cf118&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeSaleBanner_vue_vue_type_template_id_5b9cf118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

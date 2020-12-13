@@ -68,9 +68,7 @@ Route::prefix('blog')->group(function () {
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////
 
 //////////////////////////////////////// ADMINSTRATION /////////////////////////////////////////
-
     Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function () {
-
         
             Route::name('admin.')->group(function() {
                 
@@ -91,31 +89,35 @@ Route::prefix('blog')->group(function () {
                 Route::resource('/customer', 'Admin\CustomerController'); 
 
                 Route::resource('/blog', 'Admin\BlogController'); 
-
+ 
                 Route::resource('/product-attribute', 'Admin\ProductAttributeController');
 
-
+                Route::resource('/hero-slider', 'Admin\Silders\HeroSliderController');
+                Route::resource('/sale-slider', 'Admin\Silders\SaleSliderController');
+                Route::resource('/trending-slider', 'Admin\Silders\TrendingSliderController');
+                 
+                Route::get('/setting', 'Admin\SettingController@index')->name('setting.index');
+                Route::put('/setting', 'Admin\SettingController@update')->name('setting.update');
+                
                 // Route::get('/product/{product}/image', 'Admin\ProductImageController@index')->name('product.images.index');
                 
                 // Route::delete('/image/{ProductImage}', 'Admin\ProductImageController@destroy')->name('product.images.destroy');            
                 
                 // Route::post('/product/{product}/image/upload', 'Admin\ProductImageController@UploadProductImage')->name('product.images.upload');
-                
-                Route::get('/setting', 'Admin\SettingController@index')->name('setting');
-                Route::put('/setting', 'Admin\SettingController@update')->name('setting.update');
-                
+
                 // Route::get('product/{product}/attributes', 'Admin\ProductAttributeController@ProductAttributes')->name('product.attribute.index');                        
+                
             });
         
-            Route::group(['prefix'  =>   '/attributes'], function() {
+            // Route::group(['prefix'  =>   '/attributes'], function() {
 
-                Route::get('/', 'Admin\AttributeController@index')->name('admin.attributes.index');
+                // Route::get('/', 'Admin\AttributeController@index')->name('admin.attributes.index');
     
                 //    Route::post('/get-values', 'Admin\AttributeValueController@getValues');
                 //    Route::post('/add-values', 'Admin\AttributeValueController@addValues');
                 //    Route::post('/update-values', 'Admin\AttributeValueController@updateValues');
                 //    Route::post('/delete-values', 'Admin\AttributeValueController@deleteValues');
-            }); 
+            // }); 
 
             // Route::group(['prefix' => 'products'], function () {
 
@@ -138,7 +140,6 @@ Route::prefix('blog')->group(function () {
 
         
     });
-
 //////////////////////////////////////// ADMINSTRATION /////////////////////////////////////////
    
 //////////////////////////////////////// AUTHENTICATION ////////////////////////////////////////

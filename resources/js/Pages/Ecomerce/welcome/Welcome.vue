@@ -22,7 +22,7 @@
 
         <welcome-sale-banner></welcome-sale-banner>
 
-        <welcome-sale-slider v-if="this.$page.SaleProducts.length>0"></welcome-sale-slider>
+        <SaleSlider v-if="ProductsOnSale.length>0" :products="ProductsOnSale" />
 
     </div> 
 
@@ -36,13 +36,13 @@ import HeroSlider from './../shared/Slider/HeroSlider'
 import TrendingCollection from './components/TrendingCollection'   
 import TrendingSlider from './../shared/Slider/TrendingSlider'  
 
-import WelcomeSaleSlider from './../shared/Slider/WelcomeSaleSlider'  
 import WelcomeTrendingMultiSlider from './../shared/Slider/WelcomeTrendingMultiSlider'  
 import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'  
 
 import WelcomeSaleBanner from './components/WelcomeSaleBanner'   
 import WelcomeBrands from './components/WelcomeBrands'   
  
+import SaleSlider from './../shared/Slider/SaleSlider'  
  
 export default { 
     metaInfo: { title: 'Welcome' },
@@ -53,15 +53,20 @@ export default {
         TrendingCollection,
         TrendingSlider,
         WelcomeTrendingMultiSlider,
-        WelcomeSaleSlider,
         WelcomeSaleBanner,
         WelcomeBrands,
+        SaleSlider,
     },
 
     mounted() {
         const self = this
         self.$root.$emit('sidebar-close');     
     },
+    computed: {
+        ProductsOnSale(){
+            return this.$page.SaleProducts;
+        }        
+    },    
 
 }
 </script>
