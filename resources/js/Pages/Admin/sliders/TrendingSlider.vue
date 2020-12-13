@@ -27,7 +27,7 @@
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
 
-                <form class="p-10 bg-white rounded shadow-xl" @submit.prevent="store">
+                <form class="p-10 bg-white rounded shadow-2xl" @submit.prevent="store">
 
                     <p class="text-lg text-gray-800 font-medium pb-4">Trending Slider Adjustment</p>
  

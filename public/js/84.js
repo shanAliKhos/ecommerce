@@ -171,6 +171,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -376,7 +378,11 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "my-8 p-10 bg-white h-screen" }, [
+    _c("p", { staticClass: "text-xl pb-6 flex items-center" }, [
+      _vm._v("Create Category")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
       _c(
         "p",
         { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
@@ -769,7 +775,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5"
+            "lg:flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-5 mb-5"
         },
         [
           _vm.Order.Status !== "pending"
@@ -777,7 +783,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                    "mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2",
                   attrs: {
                     as: "button",
                     type: "button",
@@ -799,7 +805,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                    "mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2",
                   attrs: {
                     as: "button",
                     type: "button",
@@ -821,7 +827,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                    "mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2",
                   attrs: {
                     as: "button",
                     type: "button",
@@ -843,8 +849,12 @@ var render = function() {
                 "button",
                 {
                   staticClass:
-                    "flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
-                  attrs: { type: "button", disabled: _vm.sending },
+                    "mt-2 w-full lg:w-auto  flex items-center uppercase justify-center transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2",
+                  attrs: {
+                    as: "button",
+                    type: "button",
+                    disabled: _vm.sending
+                  },
                   on: { click: _vm.cancel }
                 },
                 [

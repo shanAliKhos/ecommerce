@@ -19,14 +19,14 @@ var render = function() {
     _c("div", { staticClass: "px-4 sm:px-0" }, [
       _c(
         "h3",
-        { staticClass: "text-lg font-medium text-gray-900 uppercase" },
+        { staticClass: "text-lg font-semibold text-gray-400 uppercase" },
         [_vm._t("title")],
         2
       ),
       _vm._v(" "),
       _c(
         "p",
-        { staticClass: "mt-1 text-sm text-gray-600" },
+        { staticClass: "mt-1 text-semibold text-sm text-gray-400" },
         [_vm._t("description")],
         2
       )

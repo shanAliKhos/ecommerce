@@ -68,7 +68,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -134,32 +133,29 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "h-screen" }, [
+  return _c("div", [
     _c(
       "nav",
       {
-        staticClass: "text-sm font-semibold mb-6",
+        staticClass: "text-sm text-blue-500 font-semibold mb-6",
         attrs: { "aria-label": "Breadcrumb" }
       },
       [
         _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
           _c(
             "li",
-            { staticClass: "flex items-center text-blue-500" },
+            { staticClass: "flex items-center" },
             [
               _c(
                 "inertia-link",
-                {
-                  staticClass: "text-gray-500",
-                  attrs: { href: _vm.route("admin.dashboard") }
-                },
-                [_vm._v("Home")]
+                { attrs: { href: _vm.route("admin.dashboard") } },
+                [_vm._v("Dashboard")]
               ),
               _vm._v(" "),
               _c(
                 "svg",
                 {
-                  staticClass: "w-3 h-3 mx-3",
+                  staticClass: "fill-current w-3 h-3 mx-3",
                   attrs: {
                     stroke: "currentColor",
                     xmlns: "http://www.w3.org/2000/svg",
@@ -219,7 +215,7 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl " }, [
+    _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-2xl " }, [
       _c(
         "p",
         { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
@@ -307,9 +303,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-400", attrs: { href: "#" } }, [
-        _vm._v("Order Listing")
-      ])
+      _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("Order Listing")])
     ])
   },
   function() {

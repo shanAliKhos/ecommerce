@@ -1,38 +1,38 @@
 <template>
-<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
+<tr class=" text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
-        <p class="py-5  lg:p-1 ">{{ (OrderIndex+1) }}</p>
+        <p class="py-5 lg:p-1 font-semibold  ">{{ (OrderIndex+1) }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ORDER NUMBER</p>
-        <p class="py-5 lg:p-1 text-sm">{{ Order.OrderNumber }}</p>
+        <p class="py-5 lg:p-1 text-sm font-semibold">{{ Order.OrderNumber }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">PLACED BY</span>
-            <p class="py-5  lg:p-1 ">{{ Order.user.name }}</p>
+            <p class="py-5  lg:p-1 font-semibold">{{ Order.user.name }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">TOTAL PRICE</span>
-            <p class="py-5  lg:p-1 "> {{Currency.Symbol}}{{ Order.GrandTotal }}</p>
+            <p class="py-5  lg:p-1 font-semibold"> {{Currency.Symbol}}{{ Order.GrandTotal }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ITEAMS QTY</span>
-            <p class="py-5  lg:p-1 ">{{ Order.ItemCount }}</p>
+            <p class="py-5  lg:p-1 font-semibold">{{ Order.ItemCount }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
             <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ORDER STATUS</span>
-            <p class="py-5 lg:p-1 ">
+            <p class="py-5 lg:p-1 font-semibold">
                 
-                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" v-if="Order.PaymentStatus">Paid</span>
-                <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold" v-else>Not-Paid</span>                                 
+                <span class="rounded bg-green-400 text-white   py-1 px-3 text-xs" v-if="Order.PaymentStatus">Paid</span>
+                <span class="rounded bg-red-400 text-white py-1 px-3 text-xs " v-else>Not-Paid</span>                                 
                 <br>
-                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold" :class="StatusColor">{{Order.Status}}</span>
+                <span class="rounded bg-green-400 text-white py-1 px-3 text-xs" :class="StatusColor">{{Order.Status}}</span>
             </p>
     </td>
-    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ACTIONS</span>
-        <div class="inline-flex py-5  lg:p-1 ">
+        <div class="inline-flex py-5  lg:p-1">
 
             <inertia-link :href="route('admin.order.show', Order.id )" class="transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3">                                        
                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

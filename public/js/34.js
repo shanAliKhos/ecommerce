@@ -150,14 +150,14 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+        " text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
     },
     [
       _c(
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -169,7 +169,7 @@ var render = function() {
             [_vm._v("#")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1" }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(
               "\r\n            " + _vm._s(_vm.ProductIndex + 1) + "\r\n        "
             )
@@ -181,7 +181,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -209,7 +209,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -221,7 +221,7 @@ var render = function() {
             [_vm._v("NAME")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1" }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(_vm._s(_vm.Product.name))
           ])
         ]
@@ -231,7 +231,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -243,7 +243,7 @@ var render = function() {
             [_vm._v("SKU")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1" }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(_vm._s(_vm.Product.sku))
           ])
         ]
@@ -253,7 +253,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -265,7 +265,7 @@ var render = function() {
             [_vm._v("PRICE")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1" }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(
               "\r\n            $" +
                 _vm._s(
@@ -283,7 +283,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -295,13 +295,13 @@ var render = function() {
             [_vm._v("STATUS")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1" }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm.Product.is_active
               ? _c(
                   "span",
                   {
                     staticClass:
-                      "rounded bg-green-400 py-1 px-3 text-xs font-bold"
+                      "rounded bg-green-400 text-white py-1 px-3 text-xs font-bold"
                   },
                   [_vm._v("ACTIVE")]
                 )
@@ -309,7 +309,7 @@ var render = function() {
                   "span",
                   {
                     staticClass:
-                      "rounded bg-red-400 py-1 px-3 text-xs font-bold"
+                      "rounded bg-red-400 text-white py-1 px-3 text-xs font-bold"
                   },
                   [_vm._v("IN ACTIVE")]
                 )
@@ -321,7 +321,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(

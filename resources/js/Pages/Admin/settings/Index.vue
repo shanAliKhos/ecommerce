@@ -22,8 +22,7 @@
         </inertia-link>            
     </nav>
     <SectionBorder/>
-
-    <p class="pb-6 flex font-semibold text-xl text-gray-400">Setting</p>        
+   
     <div class="flex justify-center">
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
@@ -33,13 +32,14 @@
                     :settings="settings" 
                     @form-is-updated="update">
                 </general-form>            
-                 
-                 <SectionBorder/>    
 
-                <footer-seo-form :sending="sending"
+                <SectionBorder/>
+
+                <payments-form :sending="sending"
                     :settings="settings" 
-                    @form-is-updated="update"> 
-                </footer-seo-form>                        
+                    @form-is-updated="update">
+                </payments-form>  
+
 
                 <SectionBorder/>
 
@@ -55,14 +55,14 @@
                     @form-is-updated="update">
                 </analytics-form>  
 
-                <SectionBorder/>
 
-                <payments-form :sending="sending"
+                <SectionBorder/>    
+
+                <footer-seo-form :sending="sending"
                     :settings="settings" 
-                    @form-is-updated="update">
-                </payments-form>  
+                    @form-is-updated="update"> 
+                </footer-seo-form>                        
 
-                <SectionBorder/>
 
             </div>
         </div>    

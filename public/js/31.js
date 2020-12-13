@@ -148,24 +148,21 @@ var render = function() {
           attrs: { "aria-label": "Breadcrumb" }
         },
         [
-          _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
+          _c("ol", { staticClass: "list-none p-0 inline-flex text-blue-400" }, [
             _c(
               "li",
-              { staticClass: "flex items-center text-blue-500" },
+              { staticClass: "flex items-center" },
               [
                 _c(
                   "inertia-link",
-                  {
-                    staticClass: "text-gray-700",
-                    attrs: { href: _vm.route("admin.dashboard") }
-                  },
+                  { attrs: { href: _vm.route("admin.dashboard") } },
                   [_vm._v("Home")]
                 ),
                 _vm._v(" "),
                 _c(
                   "svg",
                   {
-                    staticClass: "  w-3 h-3 mx-3",
+                    staticClass: "w-3 h-3 mx-3 fill-current",
                     attrs: {
                       xmlns: "http://www.w3.org/2000/svg",
                       viewBox: "0 0 320 512"
@@ -224,7 +221,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
+      _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-2xl" }, [
         _c(
           "p",
           { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
@@ -316,9 +313,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
-        _vm._v("Customer Listing")
-      ])
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Customer Listing")])
     ])
   },
   function() {

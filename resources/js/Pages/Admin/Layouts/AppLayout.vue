@@ -1,5 +1,5 @@
 <template>
-    <div class="leading-normal tracking-normal" id="main-body">
+    <div class="transform-gpu leading-normal tracking-normal" id="main-body">
     
         <div class="flex flex-wrap">
     
@@ -12,13 +12,8 @@
     
                 <div class="p-5 bg-gray-100 min-h-screen">
 
-                <transition enter-active-class="transition duration-300 ease-out"
-                    enter-class="transform opacity-0"
-                    enter-to-class="transform delay-150 opacity-0"
-                    leave-active-class="transition duration-200 ease-in"
-                    leave-class="transform delay-75 opacity-0 "
-                    leave-to-class="transform opacity-0">  
-
+                    <transition name="slide-fade">
+ 
                         <slot></slot> 
                             
                     </transition>
@@ -54,4 +49,18 @@
   
     }
 </script>
+<style scoped>
+.slide-fade-enter-active {  
+  transition: .8s cubic-bezier(.8, .1, 1, .04); 
+
+}
+.slide-fade-leave-active {  
+  transition: .3s cubic-bezier(.8, .1, 1, .04); 
+}
  
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateX(500px);
+  opacity: 0;
+} 
+ 
+</style>

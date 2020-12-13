@@ -514,12 +514,6 @@ var render = function() {
       _vm._v(" "),
       _c("SectionBorder"),
       _vm._v(" "),
-      _c(
-        "p",
-        { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
-        [_vm._v("Setting")]
-      ),
-      _vm._v(" "),
       _c("div", { staticClass: "flex justify-center" }, [
         _c("div", { staticClass: "w-full pl-0 lg:pl-2" }, [
           _c(
@@ -533,7 +527,7 @@ var render = function() {
               _vm._v(" "),
               _c("SectionBorder"),
               _vm._v(" "),
-              _c("footer-seo-form", {
+              _c("payments-form", {
                 attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
               }),
@@ -554,12 +548,10 @@ var render = function() {
               _vm._v(" "),
               _c("SectionBorder"),
               _vm._v(" "),
-              _c("payments-form", {
+              _c("footer-seo-form", {
                 attrs: { sending: _vm.sending, settings: _vm.settings },
                 on: { "form-is-updated": _vm.update }
-              }),
-              _vm._v(" "),
-              _c("SectionBorder")
+              })
             ],
             1
           )

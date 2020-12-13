@@ -26,7 +26,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'font-semibold text-red-400 border-red-500 shadow-2xl' : 'font-semibold text-gray-400 border-gray-300 hover:text-blue-400 hover:border-blue-300';
+      return this.active ? 'rotate-45 font-semibold text-red-400 border-red-500 shadow-2xl' : 'font-semibold text-gray-400 border-gray-300 hover:text-blue-400 hover:border-blue-300';
     }
   }
 });
@@ -44,8 +44,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/Logo */ "./resources/js/Pages/Shared/Logo.vue");
 /* harmony import */ var _SideLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideLink */ "./resources/js/Pages/Admin/Layouts/partials/SideLink.vue");
-//
-//
 //
 //
 //
@@ -259,7 +257,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "transition duration-500 ease-in-out transform py-2 px-2 w-full flex items-center hover:shadow rounded-lg cursor-pointer mb-2 px-2 block border-b-4",
+        "transition  duration-500 ease-in-out transform-gpu py-2 px-2 w-full flex items-center hover:shadow rounded-lg cursor-pointer mb-2 px-2 block border-b-4",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href, "preserve-scroll": "" }
     },
@@ -293,7 +291,7 @@ var render = function() {
     _vm.sideBarOpen
       ? _c("div", {
           staticClass:
-            "bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-full lg:hidden z-50",
+            "bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-screen lg:hidden z-50",
           on: {
             click: function($event) {
               _vm.sideBarOpen = false
@@ -306,7 +304,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-4/5 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-screen lg:block bg-gray-100 border-r  border-gray-300 z-50",
+          "w-4/5 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-full lg:block bg-gray-100 border-r border-gray-300 z-50",
         class: _vm.sideBarOpen ? "" : "hidden",
         attrs: { id: "main-nav" }
       },
@@ -315,12 +313,12 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "mx-3" },
+          { staticClass: "mx-3 py-4" },
           [
             _c(
               "side-link",
               {
-                staticClass: "mb-2",
+                staticClass: "mb-1",
                 attrs: {
                   href: _vm.$route("admin.dashboard"),
                   active: _vm.$page.currentRouteName == "admin.dashboard"
@@ -348,38 +346,8 @@ var render = function() {
             ),
             _vm._v(" "),
             _c(
-              "side-link",
-              {
-                staticClass: "mb-3",
-                attrs: {
-                  href: _vm.$route("welcome"),
-                  active: _vm.$page.currentRouteName == "welcome"
-                }
-              },
-              [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "h-6 w-6 fill-current mr-2",
-                    attrs: { viewBox: "0 0 20 20" }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", [_vm._v("Website")])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
               "div",
-              { staticClass: "overflow-y-auto overflow-x-hidden h-90" },
+              { staticClass: "overflow-y-auto overflow-x-hidden h-96" },
               [
                 _c(
                   "div",
@@ -656,7 +624,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "h-6 w-6  mr-2",
+                            staticClass: "h-6 w-6 mr-2",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -843,6 +811,35 @@ var render = function() {
                   ],
                   1
                 )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "side-link",
+              {
+                attrs: {
+                  href: _vm.$route("welcome"),
+                  active: _vm.$page.currentRouteName == "welcome"
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "h-6 w-6 fill-current mr-2",
+                    attrs: { viewBox: "0 0 20 20" }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", [_vm._v("Website")])
               ]
             )
           ],

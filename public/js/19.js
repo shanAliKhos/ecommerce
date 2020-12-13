@@ -158,14 +158,14 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+        " text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
     },
     [
       _c(
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
         },
         [
           _c(
@@ -177,7 +177,7 @@ var render = function() {
             [_vm._v("#")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5 lg:p-1 font-semibold  " }, [
             _vm._v(_vm._s(_vm.OrderIndex + 1))
           ])
         ]
@@ -187,7 +187,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static "
         },
         [
           _c(
@@ -199,7 +199,7 @@ var render = function() {
             [_vm._v("ORDER NUMBER")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5 lg:p-1 text-sm" }, [
+          _c("p", { staticClass: "py-5 lg:p-1 text-sm font-semibold" }, [
             _vm._v(_vm._s(_vm.Order.OrderNumber))
           ])
         ]
@@ -209,7 +209,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -221,7 +221,7 @@ var render = function() {
             [_vm._v("PLACED BY")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold" }, [
             _vm._v(_vm._s(_vm.Order.user.name))
           ])
         ]
@@ -231,7 +231,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -243,7 +243,7 @@ var render = function() {
             [_vm._v("TOTAL PRICE")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold" }, [
             _vm._v(
               " " + _vm._s(_vm.Currency.Symbol) + _vm._s(_vm.Order.GrandTotal)
             )
@@ -255,7 +255,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -267,7 +267,7 @@ var render = function() {
             [_vm._v("ITEAMS QTY")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold" }, [
             _vm._v(_vm._s(_vm.Order.ItemCount))
           ])
         ]
@@ -277,7 +277,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -289,13 +289,13 @@ var render = function() {
             [_vm._v("ORDER STATUS")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5 lg:p-1 " }, [
+          _c("p", { staticClass: "py-5 lg:p-1 font-semibold" }, [
             _vm.Order.PaymentStatus
               ? _c(
                   "span",
                   {
                     staticClass:
-                      "rounded bg-green-400 py-1 px-3 text-xs font-bold"
+                      "rounded bg-green-400 text-white   py-1 px-3 text-xs"
                   },
                   [_vm._v("Paid")]
                 )
@@ -303,7 +303,7 @@ var render = function() {
                   "span",
                   {
                     staticClass:
-                      "rounded bg-red-400 py-1 px-3 text-xs font-bold"
+                      "rounded bg-red-400 text-white py-1 px-3 text-xs "
                   },
                   [_vm._v("Not-Paid")]
                 ),
@@ -313,7 +313,8 @@ var render = function() {
             _c(
               "span",
               {
-                staticClass: "rounded bg-green-400 py-1 px-3 text-xs font-bold",
+                staticClass:
+                  "rounded bg-green-400 text-white py-1 px-3 text-xs",
                 class: _vm.StatusColor
               },
               [_vm._v(_vm._s(_vm.Order.Status))]
@@ -326,7 +327,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -340,7 +341,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "inline-flex py-5  lg:p-1 " },
+            { staticClass: "inline-flex py-5  lg:p-1" },
             [
               _c(
                 "inertia-link",

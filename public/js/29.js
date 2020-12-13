@@ -145,14 +145,14 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+        "text-gray-500 font-semibold bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
     },
     [
       _c(
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -174,7 +174,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -202,7 +202,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -214,7 +214,7 @@ var render = function() {
             [_vm._v("NAME")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5 lg:p-1 " }, [
             _vm._v(_vm._s(_vm.brand.name))
           ])
         ]
@@ -224,7 +224,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -246,7 +246,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(

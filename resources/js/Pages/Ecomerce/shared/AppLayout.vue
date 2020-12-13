@@ -5,13 +5,7 @@
     
     <main class="lg:mt-40 mt-20 ">
 
-        <transition enter-active-class="transition duration-300 ease-out"
-            enter-class="transform opacity-0"
-            enter-to-class="transform delay-150 opacity-0"
-            leave-active-class="transition duration-200 ease-in"
-            leave-class="transform delay-75 opacity-0 "
-            leave-to-class="transform opacity-0">  
-
+        <transition name="slide-fade">
 
                 <slot></slot>
 
@@ -63,4 +57,18 @@
         
     }
 </script>
+<style scoped>
+.slide-fade-enter-active {  
+  transition: .8s cubic-bezier(.8, .1, 1, .04); 
+
+}
+.slide-fade-leave-active {  
+  transition: .3s cubic-bezier(.8, .1, 1, .04); 
+}
  
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(500px);
+  opacity: 0;
+} 
+ 
+</style>

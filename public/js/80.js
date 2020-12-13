@@ -225,7 +225,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-xl" }, [
+      _c("div", { staticClass: "my-8 p-10 bg-white rounded shadow-2xl" }, [
         _c(
           "p",
           { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },

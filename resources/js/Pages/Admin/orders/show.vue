@@ -22,8 +22,12 @@
         </inertia-link>                
     </nav>    
 
-    <div class="my-8 p-10 bg-white h-screen">
+    <p class="text-xl pb-6 flex items-center">Create Category</p>        
+     
+    <div class="my-8 p-10 bg-white rounded shadow-xl">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Order# {{ Order.OrderNumber}}</p>    
+    <!-- <div class="my-8 p-10 bg-white h-screen">
+        <p class="pb-6 flex font-semibold text-xl text-gray-400">Order# {{ Order.OrderNumber}}</p>     -->
 
         <div class="flex flex-wrap -mx-3 mb-5 ">
             
@@ -106,9 +110,9 @@
             </table>    
         </div>         
  
-        <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6 mt-5 mb-5">
+        <div class="lg:flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-5 mb-5">
 
-            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+            <inertia-link class="mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2"
                 v-if="Order.Status !== 'pending'"
                 as="button" type="button" 
                 :data="{ Status: 'pending' }"  
@@ -118,7 +122,7 @@
                 <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Pending</span>
             </inertia-link>
             
-            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+            <inertia-link class="mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2"
                 v-if="Order.Status !== 'processing'"
                 as="button" type="button" 
                 :data="{ Status: 'processing' }"  
@@ -128,7 +132,7 @@
                 <i class="fa fa-fw fa-lg fa-circle-o-notch" ></i><span>Process</span>
             </inertia-link>
             
-            <inertia-link  class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2"
+            <inertia-link class="mt-2 flex items-center uppercase justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2"
                 v-if="Order.Status !== 'completed'"
                 as="button" type="button" 
                 method="put" preserve-scroll 
@@ -138,11 +142,11 @@
                 <i class="fa fa-fw fa-lg fa-check-circle"></i><span>Completed</span>
             </inertia-link>
 
-            <button type="button" 
+            <button class="mt-2 w-full lg:w-auto  flex items-center uppercase justify-center transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex lg:mr-2"
                 v-if="Order.Status !== 'decline'"
+                as="button" type="button" 
                 :disabled="sending" 
-                class="flex flex-inline items-center uppercase flex items-center uppercase transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" 
-                @click="cancel"
+                @click="cancel" 
                 >
                 <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
@@ -152,9 +156,7 @@
             </button>        
 
         </div>        
-
-  
-
+ 
     </div> 
 </div>     
 </template>

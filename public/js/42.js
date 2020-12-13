@@ -136,9 +136,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = (_metaInfo$layout$comp = {
@@ -576,15 +573,13 @@ var render = function() {
     _c(
       "nav",
       {
-        staticClass: "text-sm font-semibold mb-6",
+        staticClass: "text-sm text-blue-500 font-semibold mb-6",
         attrs: { "aria-label": "Breadcrumb" }
       },
       [
         _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
-          _c("li", { staticClass: "flex items-center text-blue-500" }, [
-            _c("a", { staticClass: "text-gray-500", attrs: { href: "#" } }, [
-              _vm._v("Home")
-            ]),
+          _c("li", { staticClass: "flex items-center" }, [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Dashboard")]),
             _vm._v(" "),
             _c(
               "svg",
@@ -604,9 +599,7 @@ var render = function() {
                 })
               ]
             )
-          ]),
-          _vm._v(" "),
-          _vm._m(0)
+          ])
         ])
       ]
     ),
@@ -731,7 +724,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(1)
+            _vm._m(0)
           ]
         )
       ]),
@@ -780,9 +773,9 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "flex flex-wrap -mx-3" }, [
-      _vm._m(2),
+      _vm._m(1),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(2),
       _vm._v(" "),
       _c("div", { staticClass: "w-full xl:w-1/3 px-3" }, [
         _c("p", { staticClass: "text-xl font-semibold mb-4 text-gray-500" }, [
@@ -872,16 +865,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-500", attrs: { href: "#" } }, [
-        _vm._v("Dashboard")
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

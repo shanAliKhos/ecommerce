@@ -151,14 +151,14 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+        "text-gray-500 capitalize font-semibold bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
     },
     [
       _c(
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -180,7 +180,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -202,7 +202,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -214,7 +214,7 @@ var render = function() {
             [_vm._v("FORNTEND TYPE")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1" }, [
             _vm._v(_vm._s(_vm.Attribute.frontend_type))
           ])
         ]
@@ -224,7 +224,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -236,22 +236,16 @@ var render = function() {
             [_vm._v("REQUIRED")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 text-white" }, [
             _vm.Attribute.is_required
               ? _c(
                   "span",
-                  {
-                    staticClass:
-                      "rounded bg-green-400 py-1 px-3 text-xs font-bold"
-                  },
+                  { staticClass: "rounded bg-green-400 py-1 px-3 text-xs" },
                   [_vm._v("YES")]
                 )
               : _c(
                   "span",
-                  {
-                    staticClass:
-                      "rounded bg-red-400 py-1 px-3 text-xs font-bold"
-                  },
+                  { staticClass: "rounded bg-red-400 py-1 px-3 text-xs" },
                   [_vm._v("NO")]
                 )
           ])
@@ -262,7 +256,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -274,22 +268,16 @@ var render = function() {
             [_vm._v("FILTERABLE")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 text-white" }, [
             _vm.Attribute.is_filterable
               ? _c(
                   "span",
-                  {
-                    staticClass:
-                      "rounded bg-green-400 py-1 px-3 text-xs font-bold"
-                  },
+                  { staticClass: "rounded bg-green-400 py-1 px-3 text-xs  " },
                   [_vm._v("YES")]
                 )
               : _c(
                   "span",
-                  {
-                    staticClass:
-                      "rounded bg-red-400 py-1 px-3 text-xs font-bold"
-                  },
+                  { staticClass: "rounded bg-red-400 py-1 px-3 text-xs  " },
                   [_vm._v("NO")]
                 )
           ])
@@ -300,7 +288,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
         },
         [
           _c(

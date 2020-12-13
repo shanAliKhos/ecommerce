@@ -238,7 +238,7 @@ var render = function() {
           _c(
             "form",
             {
-              staticClass: "p-10 bg-white rounded shadow-xl",
+              staticClass: "p-10 bg-white rounded shadow-2xl",
               on: {
                 submit: function($event) {
                   $event.preventDefault()
