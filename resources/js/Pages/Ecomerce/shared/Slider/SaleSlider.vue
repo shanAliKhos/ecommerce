@@ -1,6 +1,6 @@
 <template>
 <div class="pb-20 md:pb-32" >
-    <div v-if="SaleProducts.length>0">
+    <div v-if="SaleSliderProducts.length>0">
         <div class="text-center pb-12 md:pb-0">
             <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">
                 On sale, only today
@@ -42,7 +42,7 @@
             }"
             :autoplay="2000"> 
             
-            <vue-glide-slide v-for="(Product, ProductIndex) in SaleProducts" :key="ProductIndex">
+            <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex">
                 <div class="sm:px-5 lg:px-4">
                     <shop-product :Product="Product"></shop-product>
                 </div>
@@ -70,20 +70,25 @@ export default {
         [GlideSlide.name]: GlideSlide,
         ShopProduct,
     },
-    data() {
-        return {
-            SaleProducts:[],
-        }
-    },
-    methods: {
-        async GetProductsOnSale(){
-            this.SaleProducts = await axios.get(route('slider.sale')).then(response => response.data);
-            return ;                
-        },
-    },      
-    mounted() {
-        this.GetProductsOnSale();
-    },
+    // data() {
+    //     return {
+    //         SaleProducts:[],
+    //     }
+    // },
+    // methods: {
+    //     async GetProductsOnSale(){
+    //         this.SaleProducts = await axios.get(route('slider.sale')).then(response => response.data);
+    //         return ;                
+    //     },
+    // },
+    computed: {
+      SaleSliderProducts(){
+          return this.$page.SaleSliderProducts;
+      },
+    },    
+    // mounted() {
+    //     this.GetProductsOnSale();
+    // },
     
 } 
 </script>

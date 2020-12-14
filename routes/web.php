@@ -31,8 +31,8 @@ use Illuminate\Support\Facades\Password;
     Route::get('/featured/products','Ecommerce\ShopController@GetFeaturedProducts')->name('shop.FeaturedProducts'); 
     Route::get('/category/{slug}/products','Ecommerce\ShopController@GetCategoryProducts')->name('shop.category-products');
 
-    Route::get('sale-slider', 'Ecommerce\ShopController@SaleSlider')->name('slider.sale');
-    Route::get('trending-slider', 'Ecommerce\ShopController@TrendingSlider')->name('slider.trending');
+    // Route::get('sale-slider', 'Ecommerce\ShopController@SaleSlider')->name('slider.sale');
+    // Route::get('trending-slider', 'Ecommerce\ShopController@TrendingSlider')->name('slider.trending');
 
 
 //////////////////////////////////////// SHOP ////////////////////////////////////

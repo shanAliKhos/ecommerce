@@ -1,6 +1,6 @@
 <template>
 <div class="pb-20 md:pb-24 lg:pb-32">
-    <div v-if="TrendingProducts.length>0">
+    <div v-if="TrendingSliderProducts.length>0">
     
         <div class="flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0">
             <div class="text-center sm:text-left">
@@ -45,7 +45,7 @@
             }"
             :autoplay="2000"> 
             
-            <vue-glide-slide v-for="(Product, ProductIndex) in TrendingProducts" :key="ProductIndex">
+            <vue-glide-slide v-for="(Product, ProductIndex) in TrendingSliderProducts" :key="ProductIndex">
                 <div class="sm:px-5 lg:px-4">
                     <shop-product :Product="Product"></shop-product>
                 </div>
@@ -78,19 +78,24 @@ export default {
         ShopProduct,
     },
  
-    data() {
-        return {
-            TrendingProducts:[],
-        }
+    // data() {
+    //     return {
+    //         TrendingProducts:[],
+    //     }
+    // },
+    // methods: {
+    //     async GetTrendingProducts(){
+    //         this.TrendingProducts = await axios.get(route('slider.trending')).then(response => response.data);
+    //         return ;                
+    //     },
+    // },      
+    computed: {
+      TrendingSliderProducts(){
+          return this.$page.FeaturedSliderProducts;
+      },
     },
-    methods: {
-        async GetTrendingProducts(){
-            this.TrendingProducts = await axios.get(route('slider.trending')).then(response => response.data);
-            return ;                
-        },
-    },      
-    mounted() {
-        this.GetTrendingProducts();
-    },     
+    // mounted() {
+    //     this.GetTrendingProducts();
+    // },     
 }
 </script>
