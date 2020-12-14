@@ -13,11 +13,8 @@ class ShopController extends Controller
     public function Home()
     {
         $Product = new Product;
-        $SaleProducts = $Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get();
         
-        $FeatureProducts = $Product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->take(12)->latest()->get();
- 
-        return Inertia::render('Ecomerce/welcome/Welcome',compact('SaleProducts','FeatureProducts'));        
+        return Inertia::render('Ecomerce/welcome/Welcome');        
     }    
      
     public function index(Request $request, Product $Product)
@@ -57,4 +54,17 @@ class ShopController extends Controller
 
     }    
  
+
+    public function SaleSlider()
+    {
+        $Product = new Product;
+        return $Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get();
+    }
+
+    public function TrendingSlider()
+    {
+        $Product = new Product;
+        return $Product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->take(12)->latest()->get();
+    }
+
 }

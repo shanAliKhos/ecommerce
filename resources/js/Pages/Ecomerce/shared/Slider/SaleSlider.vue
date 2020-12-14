@@ -1,5 +1,6 @@
 <template>
-    <div class="pb-20 md:pb-32">
+<div class="pb-20 md:pb-32" >
+    <div v-if="SaleProducts.length>0">
         <div class="text-center pb-12 md:pb-0">
             <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">
                 On sale, only today
@@ -8,7 +9,7 @@
                 Get it while they last!
             </p>
         </div>
-      
+        
         <vue-glide 
             :type="'slider'" 
             :perView="4" 
@@ -16,9 +17,32 @@
             :bound="true" 
             :animationDuration="1000"
             :peek="{ before: 100, after: 100 }"
-            :autoplay="1000"> 
+            :breakpoints="{
+                1024: {
+                    perView: 3,
+                    peek: {
+                        before: 20,
+                        after: 20,
+                    },
+                },
+                768: {
+                    perView: 2,
+                    peek: {
+                        before: 10,
+                        after: 10,
+                    },
+                },
+                600: {
+                    perView: 1,
+                    peek: {
+                        before: 0,
+                        after: 0,
+                    },
+                },
+            }"
+            :autoplay="2000"> 
             
-            <vue-glide-slide v-for="(Product, ProductIndex) in ProductsOnSale" :key="ProductIndex">
+            <vue-glide-slide v-for="(Product, ProductIndex) in SaleProducts" :key="ProductIndex">
                 <div class="sm:px-5 lg:px-4">
                     <shop-product :Product="Product"></shop-product>
                 </div>
@@ -32,22 +56,34 @@
         </vue-glide>
         
     </div>
+    <div v-else class="flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
+        <p class="text-6xl text-gray-50 uppercase animate-pulse bg-none ">Sale slider section</p>
+    </div>  
+</div>
 </template>
 <script>
 import { Glide, GlideSlide } from 'vue-glide-js'
 import ShopProduct from './../Product/Product' 
-export default {
-    props:['products'],
+export default { 
     components: {
         [Glide.name]: Glide,
         [GlideSlide.name]: GlideSlide,
         ShopProduct,
     },
-    computed: {
-        ProductsOnSale(){
-            return this.products;
-        }        
-    },    
+    data() {
+        return {
+            SaleProducts:[],
+        }
+    },
+    methods: {
+        async GetProductsOnSale(){
+            this.SaleProducts = await axios.get(route('slider.sale')).then(response => response.data);
+            return ;                
+        },
+    },      
+    mounted() {
+        this.GetProductsOnSale();
+    },
     
 } 
 </script>
