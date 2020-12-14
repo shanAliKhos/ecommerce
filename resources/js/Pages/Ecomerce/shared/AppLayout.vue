@@ -7,7 +7,7 @@
 
         <transition name="slide-fade">
 
-                <slot></slot>
+            <slot></slot>
 
         </transition>    
         
