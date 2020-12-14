@@ -32,28 +32,28 @@
 <script>
 import AppLayout from './../shared/AppLayout'  
 
-import HeroSlider from './../shared/Slider/HeroSlider'  
-import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'  
-import TrendingCollection from './components/TrendingCollection'   
-import TrendingSlider from './../shared/Slider/TrendingSlider'  
-import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'  
-import WelcomeSaleBanner from './components/WelcomeSaleBanner'   
-import WelcomeBrands from './components/WelcomeBrands'   
-import SaleSlider from './../shared/Slider/SaleSlider'  
+// import HeroSlider from './../shared/Slider/HeroSlider'  
+// import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'  
+// import TrendingCollection from './components/TrendingCollection'   
+// import TrendingSlider from './../shared/Slider/TrendingSlider'  
+// import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'  
+// import WelcomeSaleBanner from './components/WelcomeSaleBanner'   
+// import WelcomeBrands from './components/WelcomeBrands'   
+// import SaleSlider from './../shared/Slider/SaleSlider'  
  
  
 export default { 
     metaInfo: { title: 'Welcome' },
     layout: AppLayout, 
     components:{
-        HeroSlider,
-        WelcomeIcons,
-        TrendingCollection,
-        TrendingSlider,
-        TrendingMultiSlider,
-        WelcomeSaleBanner,
-        WelcomeBrands ,
-        SaleSlider,
+        HeroSlider:() => import('./../shared/Slider/HeroSlider'),
+        WelcomeIcons:() => import('./../shared/Partials/components/WelcomeIcons'),
+        TrendingCollection:() => import('./components/TrendingCollection'),
+        TrendingSlider:() => import('./../shared/Slider/TrendingSlider'),
+        TrendingMultiSlider:() => import('./../shared/Slider/TrendingMultiSlider'),
+        WelcomeSaleBanner:() => import('./components/WelcomeSaleBanner'),
+        WelcomeBrands:() => import('./components/WelcomeBrands'),
+        SaleSlider:() => import('./../shared/Slider/SaleSlider'),
     },
 
     mounted() {
