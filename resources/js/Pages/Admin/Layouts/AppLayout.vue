@@ -28,7 +28,8 @@
         </div>
     </div>
 </template>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style> 
+
 <script> 
     import Sidebar from './partials/Sidebar'
     import Navbar from './partials/Navbar'

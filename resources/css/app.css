@@ -1,101 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-@import url('https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css');
-@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css');
-@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css');
-
+@import url('https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css');  
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import 'tailwindcss/utilities';
-@import "bundles";
+@import "bundles"; 
+
  
 html {
     scroll-behavior: smooth;
 }
-
-#nprogress {
-  pointer-events: none;
-}
-
-#nprogress .bar {
-  background: #ea4335;
-
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 2px;
-}
-
-/* Fancy blur effect */
-#nprogress .peg { 
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #ea4335, 0 0 5px #ea4335;
-  opacity: 1.0;
   
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-      -ms-transform: rotate(3deg) translate(0px, -4px);
-          transform: rotate(3deg) translate(0px, -4px);
-}
-
-/* Remove these to get rid of the spinner */
-#nprogress .spinner { 
-  position: fixed;
-  z-index: 100;
-
-  top: 50%;
-  right: 50%;
-}
-
-#nprogress .spinner-icon {
-  width: 45px;
-  height: 45px;
-  box-sizing: border-box;
-
-  border: solid 4px transparent;
-  border-top-color: #ea4335;
-  border-left-color: #ea4335;
-  border-radius: 50%;
-
-  -webkit-animation: nprogress-spinner 400ms linear infinite;
-          animation: nprogress-spinner 400ms linear infinite;
-}
-
-@-webkit-keyframes nprogress-spinner {
-  0%   { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes nprogress-spinner {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-/* width */
 ::-webkit-scrollbar {
   width: 9px;
   height: 9px;
 }
-
-/* Track */
+ 
 ::-webkit-scrollbar-track {
   border-radius: 100vh;
   background: #edf2f7;
-}
-
-/* Handle */
+} 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e0;
   border-radius: 100vh;
   border: 3px solid #edf2f7;
 }
-
-/* Handle on hover */
+ 
 ::-webkit-scrollbar-thumb:hover {
   background: #a0aec0;
 }

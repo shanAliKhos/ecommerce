@@ -3,11 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <script src="{{ mix('js/app.js') }}" defer></script> 
-        <script src="https://js.stripe.com/v3/"></script> 
+        {{-- <script src="https://js.stripe.com/v3/"></script>  --}}
         @routes
     </head>  
     
@@ -15,5 +14,6 @@
        
         @inertia
 
+        <script src="{{ mix('js/app.js') }}" defer></script>  
     </body>
 </html>

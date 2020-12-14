@@ -1,6 +1,6 @@
 <template>
     <li class="mr-10 hidden lg:block">
-        <inertia-link :href="href" class="transition duration-1000 ease-in transform " :class="IsActiveLink,IsTop"  preserve-scroll >
+        <inertia-link :href="href" class="transition duration-1000 ease-in transform " :class="IsActiveLink,IsTop">
             <slot></slot>
         </inertia-link>     
     </li> 

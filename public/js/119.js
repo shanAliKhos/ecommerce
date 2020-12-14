@@ -56,7 +56,7 @@ var render = function() {
           staticClass: "transition duration-1000 ease-in transform ",
           class: _vm.IsActiveLink,
           IsTop: _vm.IsTop,
-          attrs: { href: _vm.href, "preserve-scroll": "" }
+          attrs: { href: _vm.href }
         },
         [_vm._t("default")],
         2

@@ -14,7 +14,7 @@
         </div>
 
         <vue-glide 
-            :type="'slider'" 
+            :type="'carousel'" 
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
@@ -46,9 +46,9 @@
             :autoplay="2000"> 
             
             <vue-glide-slide v-for="(Product, ProductIndex) in TrendingSliderProducts" :key="ProductIndex">
-                <div class="sm:px-5 lg:px-4">
-                    <shop-product :Product="Product"></shop-product>
-                </div>
+          
+                <shop-product :Product="Product"></shop-product>
+        
             </vue-glide-slide>  
 
             <template slot="control">
@@ -77,25 +77,12 @@ export default {
         [GlideSlide.name]: GlideSlide,
         ShopProduct,
     },
- 
-    // data() {
-    //     return {
-    //         TrendingProducts:[],
-    //     }
-    // },
-    // methods: {
-    //     async GetTrendingProducts(){
-    //         this.TrendingProducts = await axios.get(route('slider.trending')).then(response => response.data);
-    //         return ;                
-    //     },
-    // },      
+    
     computed: {
       TrendingSliderProducts(){
           return this.$page.FeaturedSliderProducts;
       },
     },
-    // mounted() {
-    //     this.GetTrendingProducts();
-    // },     
+ 
 }
 </script>

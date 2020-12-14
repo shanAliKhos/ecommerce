@@ -11,7 +11,7 @@
         </div>
         
         <vue-glide 
-            :type="'slider'" 
+            :type="'carousel'" 
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
@@ -43,9 +43,9 @@
             :autoplay="2000"> 
             
             <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex">
-                <div class="sm:px-5 lg:px-4">
-                    <shop-product :Product="Product"></shop-product>
-                </div>
+                
+                <shop-product :Product="Product"></shop-product>
+                
             </vue-glide-slide>  
 
             <template slot="control">

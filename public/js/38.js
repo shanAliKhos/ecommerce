@@ -131,8 +131,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Product_Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue");
-/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-glide-js */ "./node_modules/vue-glide-js/dist/vue-glide.common.js");
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_glide_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Product_Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue");
+var _components;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -171,51 +197,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    ShopProduct: _Product_Product__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
+  components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _defineProperty(_components, "ShopProduct", _Product_Product__WEBPACK_IMPORTED_MODULE_1__["default"]), _components),
   computed: {
     Products: function Products() {
       return this.$page.RelatedProducts;
     }
-  },
-  mounted: function mounted() {
-    new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"]('.related-product-slider', {
-      type: "carousel",
-      animationDuration: 1000,
-      hoverpause: true,
-      autoplay: 3000,
-      startAt: 0,
-      perView: 4,
-      gap: 0,
-      peek: {
-        before: 50,
-        after: 50
-      },
-      breakpoints: {
-        1024: {
-          perView: 3,
-          peek: {
-            before: 20,
-            after: 20
-          }
-        },
-        768: {
-          perView: 2,
-          peek: {
-            before: 10,
-            after: 10
-          }
-        },
-        600: {
-          perView: 1,
-          peek: {
-            before: 0,
-            after: 0
-          }
-        }
-      }
-    }).mount();
   }
 });
 
@@ -374,42 +360,95 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "pb-20 md:pb-32" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "related-product-slider relative" }, [
-      _c(
-        "div",
-        { staticClass: "glide__track", attrs: { "data-glide-el": "track" } },
-        [
-          _c(
-            "div",
-            { staticClass: "pt-12 relative glide__slides" },
-            _vm._l(_vm.Products, function(Product, ProductIndex) {
-              return _c(
-                "div",
-                {
-                  key: ProductIndex,
-                  staticClass: "relative group glide__slide"
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "sm:px-5 lg:px-4" },
-                    [_c("shop-product", { attrs: { Product: Product } })],
-                    1
-                  )
-                ]
-              )
-            }),
-            0
-          )
-        ]
-      ),
+  return _c(
+    "div",
+    { staticClass: "pb-20 md:pb-32" },
+    [
+      _vm._m(0),
       _vm._v(" "),
-      _vm._m(1)
-    ])
-  ])
+      _c(
+        "vue-glide",
+        {
+          attrs: {
+            type: "carousel",
+            perView: 4,
+            hoverpause: true,
+            bound: true,
+            animationDuration: 1000,
+            peek: { before: 100, after: 100 },
+            breakpoints: {
+              1024: {
+                perView: 3,
+                peek: {
+                  before: 20,
+                  after: 20
+                }
+              },
+              768: {
+                perView: 2,
+                peek: {
+                  before: 10,
+                  after: 10
+                }
+              },
+              600: {
+                perView: 1,
+                peek: {
+                  before: 0,
+                  after: 0
+                }
+              }
+            },
+            autoplay: 2000
+          }
+        },
+        [
+          _vm._l(_vm.Products, function(Product, ProductIndex) {
+            return _c(
+              "vue-glide-slide",
+              { key: ProductIndex },
+              [_c("shop-product", { attrs: { Product: Product } })],
+              1
+            )
+          }),
+          _vm._v(" "),
+          _c("template", { slot: "control" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                attrs: { "data-glide-dir": "<" }
+              },
+              [
+                _c("i", {
+                  staticClass:
+                    "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                attrs: { "data-glide-dir": ">" }
+              },
+              [
+                _c("i", {
+                  staticClass:
+                    "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                })
+              ]
+            )
+          ])
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -433,42 +472,6 @@ var staticRenderFns = [
             "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2 pb-6 sm:pb-8 lg:pb-0"
         },
         [_vm._v(" Get the latest news & updates from store")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { "data-glide-el": "controls" } }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
-          attrs: { "data-glide-dir": "<" }
-        },
-        [
-          _c("i", {
-            staticClass:
-              "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
-          attrs: { "data-glide-dir": ">" }
-        },
-        [
-          _c("i", {
-            staticClass:
-              "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
-          })
-        ]
       )
     ])
   }

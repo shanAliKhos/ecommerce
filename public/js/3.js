@@ -863,7 +863,7 @@ var render = function() {
               "cus-nav-link",
               {
                 attrs: {
-                  href: _vm.$route("welcome"),
+                  href: _vm.route("welcome"),
                   active: _vm.$page.currentRouteName == "welcome",
                   atTopOfPage: _vm.atTopOfPage
                 }
@@ -875,7 +875,7 @@ var render = function() {
               "cus-nav-link",
               {
                 attrs: {
-                  href: _vm.$route("shop.index"),
+                  href: _vm.route("shop.index"),
                   active: _vm.$page.currentRouteName == "shop.index",
                   atTopOfPage: _vm.atTopOfPage
                 }
@@ -887,7 +887,7 @@ var render = function() {
               "cus-nav-link",
               {
                 attrs: {
-                  href: _vm.$route("blog.index"),
+                  href: _vm.route("blog.index"),
                   active: _vm.$page.currentRouteName == "blog.index",
                   atTopOfPage: _vm.atTopOfPage
                 }
@@ -933,7 +933,7 @@ var render = function() {
           staticClass: "transition duration-1000 ease-in transform ",
           class: _vm.IsActiveLink,
           IsTop: _vm.IsTop,
-          attrs: { href: _vm.href, "preserve-scroll": "" }
+          attrs: { href: _vm.href }
         },
         [_vm._t("default")],
         2

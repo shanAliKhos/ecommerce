@@ -14,7 +14,7 @@
  
     </div>
 
-    <welcome-trending-multi-slider></welcome-trending-multi-slider>
+    <TrendingMultiSlider/>
  
     <div class="container">
   
@@ -35,7 +35,7 @@ import AppLayout from './../shared/AppLayout'
 import HeroSlider from './../shared/Slider/HeroSlider'  
 import TrendingCollection from './components/TrendingCollection'   
 import TrendingSlider from './../shared/Slider/TrendingSlider'  
-import WelcomeTrendingMultiSlider from './../shared/Slider/WelcomeTrendingMultiSlider'  
+import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'  
 import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'  
 import WelcomeSaleBanner from './components/WelcomeSaleBanner'   
 import WelcomeBrands from './components/WelcomeBrands'   
@@ -50,7 +50,7 @@ export default {
         WelcomeIcons,
         TrendingCollection,
         TrendingSlider,
-        WelcomeTrendingMultiSlider,
+        TrendingMultiSlider,
         WelcomeSaleBanner,
         WelcomeBrands,
         SaleSlider,

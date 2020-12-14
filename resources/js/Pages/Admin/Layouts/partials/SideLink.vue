@@ -21,7 +21,7 @@
             IsActiveLink() {
                 return this.active
                             ? 'rotate-45 font-semibold text-red-400 border-red-500 shadow-2xl'
-                            : 'font-semibold text-gray-400 border-gray-300 hover:text-blue-400 hover:border-blue-300' 
+                            : 'font-semibold text-gray-400  hover:text-blue-400 hover:border-blue-300' 
             }, 
 
 

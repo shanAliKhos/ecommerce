@@ -95,19 +95,19 @@
             <ul class="list-reset flex items-center lg:ml-8">
             
                 <cus-nav-link 
-                    :href="$route('welcome')" 
+                    :href="route('welcome')" 
                     :active="$page.currentRouteName == 'welcome'" 
                     :atTopOfPage="atTopOfPage"
                 >Home</cus-nav-link>
 
                 <cus-nav-link  
-                    :href="$route('shop.index')" 
+                    :href="route('shop.index')" 
                     :active="$page.currentRouteName == 'shop.index'" 
                     :atTopOfPage="atTopOfPage"
                 >Shop</cus-nav-link>                     
 
                 <cus-nav-link 
-                    :href="$route('blog.index')" 
+                    :href="route('blog.index')" 
                     :active="$page.currentRouteName == 'blog.index'" 
                     :atTopOfPage="atTopOfPage"
 
