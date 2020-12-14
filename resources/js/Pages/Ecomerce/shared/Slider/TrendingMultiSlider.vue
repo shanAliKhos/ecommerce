@@ -25,7 +25,7 @@
                            
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (9).png')"> </div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (14).jpg')"> </div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -58,7 +58,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (16).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -94,7 +94,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (5).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (18).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -127,9 +127,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover"
-                                            style="background-image:url('/img/product/product (11).png')">
-                                        </div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (20).jpg')"></div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -162,7 +160,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (25).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -195,7 +193,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (14).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -237,7 +235,7 @@
                             <p class="font-hkregular text-secondary-lighter text-lg pt-1"> Featured Collection </p>
                         </div>
                         <div class="relative group">
-                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (1).png')"></div>
+                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (14).jpg')"></div>
                             <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"></div>
                             <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group transition-opacity">
                                 <a href="/" class="bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide">View All Product</a>
@@ -257,7 +255,7 @@
                             <p class="font-hkregular text-secondary-lighter text-lg pt-1">Featured Collection</p>
                         </div>
                         <div class="relative group">
-                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14 relative" style="background-image:url('/img/product/product (5).png')"></div>
+                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14 relative" style="background-image:url('/img/product/product (21).jpg')"></div>
                             <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden"> </div>
                             <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group">
                                 <a href="/" class="bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide">View All Product</a>
@@ -284,7 +282,7 @@
                            
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (9).png')"> </div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (21).jpg')"> </div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -317,7 +315,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -353,7 +351,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (5).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (8).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -387,7 +385,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover"
-                                            style="background-image:url('/img/product/product (11).png')">
+                                            style="background-image:url('/img/product/product (12).jpg')">
                                         </div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
@@ -421,7 +419,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -454,7 +452,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (6).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -515,7 +513,7 @@
                            
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (9).png')"> </div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (23).jpg')"> </div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -548,7 +546,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (22).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -584,7 +582,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (5).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (24).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -618,7 +616,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover"
-                                            style="background-image:url('/img/product/product (11).png')">
+                                            style="background-image:url('/img/product/product (27).jpg')">
                                         </div>
                                         <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
@@ -652,7 +650,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (29).jpg')"></div>
                                         <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -685,7 +683,7 @@
 
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
-                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (12).png')"></div>
+                                        <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (36).jpg')"></div>
                                         <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
@@ -727,7 +725,7 @@
                             <p class="font-hkregular text-secondary-lighter text-lg pt-1">Featured Collection</p>
                         </div>
                         <div class="relative group">
-                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (10).png')"></div>
+                            <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (22).jpg')"></div>
                             <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"></div>
                             <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group">
                                 <a href="/" class="bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide">View All Product</a>

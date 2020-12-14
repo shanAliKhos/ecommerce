@@ -43,7 +43,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-01.png')"
+                "background-image": "url('./img/brands/brand (1).jpg')"
               }
             }),
             _vm._v(" "),
@@ -51,7 +51,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-02.png')"
+                "background-image": "url('./img/brands/brand (2).jpg')"
               }
             }),
             _vm._v(" "),
@@ -59,7 +59,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-03.png')"
+                "background-image": "url('./img/brands/brand (3).jpg')"
               }
             }),
             _vm._v(" "),
@@ -67,7 +67,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-04.png')"
+                "background-image": "url('./img/brands/brand (4).jpg')"
               }
             }),
             _vm._v(" "),
@@ -75,7 +75,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-05.png')"
+                "background-image": "url('./img/brands/brand (5).jpg')"
               }
             }),
             _vm._v(" "),
@@ -83,7 +83,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-center bg-no-repeat bg-cover w-1/2 sm:w-1/3 lg:w-1/6 h-24 mb-8 sm:mb-10 lg:mb-0",
               staticStyle: {
-                "background-image": "url('./img/brands/brand-06.png')"
+                "background-image": "url('./img/brands/brand (6).jpg')"
               }
             })
           ]

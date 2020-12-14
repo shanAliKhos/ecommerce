@@ -63,7 +63,7 @@ var staticRenderFns = [
               staticClass:
                 "px-10 h-56 sm:h-76 bg-left sm:bg-center bg-no-repeat bg-cover relative",
               staticStyle: {
-                "background-image": "url(./img/collection/collection-01.jpg)"
+                "background-image": "url('./img/collection/collection (1).jpg')"
               }
             },
             [
@@ -88,7 +88,7 @@ var staticRenderFns = [
                     "a",
                     {
                       staticClass: "flex items-center pt-5 group",
-                      attrs: { href: "/collection-list" }
+                      attrs: { href: "/shop" }
                     },
                     [
                       _c(
@@ -130,7 +130,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68",
               staticStyle: {
-                "background-image": "url(./img/collection/collection-02.jpg)"
+                "background-image": "url('./img/collection/collection (2).jpg')"
               }
             },
             [
@@ -195,7 +195,7 @@ var staticRenderFns = [
               staticClass:
                 "bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68 mt-8 sm:mt-10",
               staticStyle: {
-                "background-image": "url(./img/collection/collection-03.jpg)"
+                "background-image": "url('./img/collection/collection (3).jpg')"
               }
             },
             [
@@ -259,7 +259,7 @@ var staticRenderFns = [
             staticClass:
               "w-full lg:w-1/2 px-10 h-82 sm:h-94 lg:h-96 bg-left sm:bg-center bg-no-repeat bg-cover relative mt-8 sm:mt-10",
             staticStyle: {
-              "background-image": "url(./img/collection/collection-shoes.jpg)"
+              "background-image": "url('./img/collection/collection (4).jpg')"
             }
           },
           [
