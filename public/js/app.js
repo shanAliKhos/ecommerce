@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"2d4aa829b0ed7f86b905","2":"3ab21bf0c7b0a783f08d","3":"56fea0055722fdb7a029","4":"9339be042c93eb49d48d","5":"9794ff86af3ed48acbfd","6":"d06b7bb3b21fe16abe19","7":"5ef88d0b8c639e8ef9dd","8":"04ac3ed79e2295614b86","9":"dea0246c10d03b56b51d","10":"62247fce7dd6c6083452","11":"a46f8a8cd82c1ad136df","12":"e7ded343f0823f8d3ee0","13":"fc09a617cf454d9cee0c","14":"b87bd6a6b51057e61500","15":"68e72c5fa12a487b695c","16":"576ea3d0ca2baba653ef","17":"259033b2bf48f489048b","18":"cfe916149ecb7ea03758","19":"557ab35361c7d614a75a","20":"6ab930fd08e38be6a17f","21":"a9fe834d163ce9629158","22":"f09db82d897f9240840b","23":"7dbba6a40d11c51d5d6e","24":"adf13d0e33168dcb1ea9","25":"4b8e040512d7ab213407","26":"37a9ef5689be3575afd7","27":"934cf62814f894a1ace4","28":"f0d04d3f255c0bbecd18","29":"fe0e29bd0ce320b1c76b","30":"6d2384f997891cf1e7eb","31":"0f835837a06c3018534c","32":"0e1d66bf28d898250f41","33":"5d292dc64f27fe40dc58","34":"e83942c2aecc3005c7de","35":"6385c305c2b87956c5f7","36":"3b821a7de0ac5388fc1b","37":"3b9d9c7426d576a2bd8a","38":"72904fcba7ca4b1e8cc3","39":"ba817f40f3c1f290a380","40":"16634edd9242befabc5c","41":"6055c8b653f2f0b51d72","42":"8090d0eec472e94871a4","43":"9f5812f9f441e79a2b89","44":"6d550ad6cf042d8c3123","45":"db24de779688cb2f7c91","46":"248efc3bafd04fc63454","47":"811ffe13e6844563902f","48":"3c53ab61345f4402e0fe","49":"5b694f0d22527ce1570b","50":"a20e940089173c82d973","51":"f10f73e61f0bfc4b8930","52":"8afb6b75d99c8a549904","53":"d73a5c062afcfccc235b","54":"f87c85032b1f5edb305d","55":"4d53175adea2df3be5c9","56":"812c9c4b278c72b778c0","57":"a91c3bc3698bc4322c62","58":"1c30fceb52085a591493","59":"4d9046468799b35b1a9e","60":"99b51400eaecc94f79c6","61":"578fd7e0f08f3c3b2fa4","62":"19c8dc2add5f7742894d","63":"6797a1ee90475b309925","64":"87cd8acc2d920dea33a3","65":"4a734b7fe585d655c517","66":"398973de6dc4be67b445","67":"2e7f8d276277c0b5fe88","68":"630ce7196a035fa23d8a","69":"6ebfb94e87fbddc6568c","70":"4f85be02aa373bffc3c8","71":"6dc350b120a8c206a3fe","72":"b2e03ca94ba98a0286b1","73":"4adf62347c276113d6b5","74":"af6d5b9907c7b28b6af0","75":"2b4304788795c070fcfb","76":"0f0ce7010c2044da86b0","77":"76e68d7b9c2347936ad2","78":"df169abb712be954f593","79":"3e3c34b6dd75b2e13ee6","80":"060a55f95494e561586a","81":"aede5bade9563cb4a738","82":"80adfaa93d90cfe3d91b","83":"008cf2bcf2536c2abc7f","84":"fe5804bd05f615a9a932","85":"7d460981e2c580c8e0ae","86":"92c4e822778a3ec405a3","87":"bd552ee8ccfed0506bec","88":"497e0a53825df625b0c2","89":"23265ca18b6ecd79a3ca","90":"752f7cdead74b3da30c6","91":"a7f315dd3f6bec9276a6","92":"c74d5b1757587de6a475","93":"1f6dbd6e7cf727304c98","94":"c69a0a08c416e647690b","95":"0f2a367765a32a11efcc","96":"f1ddea920dcdf618b49d","97":"1fb8fb3c9f322627f2f2","98":"57c43a2115a0aa42c5e5","99":"26452e4f8e429bffc1e0","100":"f003be5d68480db1d58c","101":"7feda53497329ef91586","102":"40cf508c55a346c15376","103":"71ddec03ac48ba3073b9","104":"f5d742ddd7044cf698ea","105":"6f55d319b19016932514","106":"33aff69dcfbd4b9103ce","107":"27e058751980f9424512","108":"ff18fdfeb55f81f1d8f8","109":"3e4a6bd3b093bceb0bb5","110":"3e068613e8f0c1d472e6","111":"0d9e73fb08276723e3e2","112":"b46b02cdd249105cc7fc","113":"a2209175fc25eecca476","114":"ae259a022f88ab70d994","115":"e8ee45a2488620daeaaa","116":"380f97f0207ad2ca6db3","117":"0de77a5f3ca22e084e99","118":"13cd88700c86bdcee966","119":"fda7dced628a9376128d","120":"5174539cf2e7cb23e15a","121":"c4dd2017b39b44bc777d","122":"99841955eaa59a861c39","123":"08ae2bac58d3f5fdaef9","124":"098ec7a48e56a6939cc7","125":"d8d7b238d1ae15a19535","126":"b7ce391b5a0ccc5793cb","127":"31a2b35f1f4a742bee73","128":"6f7166ea31d24fca327a","129":"fa1b51617bef128d202b","130":"14598c7c134fc455c34e","131":"8bbba8e73a05fb3b16d8","132":"1ecee230e62a8df8cfa0","133":"81e08bdf1d25bba2535e","134":"dfdd66bb2ec8f149966e","135":"c8638217bd4d18105b95","136":"2794cc7d2d242effa2d0","137":"2a7a2668667840b6b32e","138":"97c90ac50f3a46439f83","139":"12a0b8f5512dc6339052","140":"df870bff62489aeb425a","141":"97e3c2d9312bdf60f7d8","142":"29132fb5e21841185aae","143":"6f69019144ce49ca8f59","144":"123b43606bef16a1240b","145":"6acbc3c9d558cf5bec2c","146":"b67d40be827be025241c","147":"3c867b66903fcbec8a84","148":"d8602ce7d25bdae4cee1","149":"54b6660b97d7da4e8df7","150":"58edbacc53dad179e1a9","151":"46e09a4da4ef824d20f2","152":"722fa65245a45974ad94","153":"ceaa635ac32e7cf684ab","154":"f2662a959d4d4ba1513a","155":"6af33d4744ea7353d792","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","166":"068fdb113a6d1355a51b","167":"8b85adb28169085407c2","168":"8519e6839543c542f825","169":"8cfde05e474ee76dc1cd","170":"36f7aaba60c6c36e8113","171":"6672e735771663ec5c4c","172":"0f9a5c5d6fc759740a37","173":"8762717f6b29435f6ff3","174":"95f79e25a5126232a31e","175":"3ec3c6fa815416a20c9d"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"2d4aa829b0ed7f86b905","2":"3ab21bf0c7b0a783f08d","3":"56fea0055722fdb7a029","4":"9339be042c93eb49d48d","5":"9794ff86af3ed48acbfd","6":"d06b7bb3b21fe16abe19","7":"5ef88d0b8c639e8ef9dd","8":"04ac3ed79e2295614b86","9":"dea0246c10d03b56b51d","10":"62247fce7dd6c6083452","11":"2b971caae028c7a0aa9e","12":"e7ded343f0823f8d3ee0","13":"fc09a617cf454d9cee0c","14":"b87bd6a6b51057e61500","15":"68e72c5fa12a487b695c","16":"576ea3d0ca2baba653ef","17":"259033b2bf48f489048b","18":"cfe916149ecb7ea03758","19":"557ab35361c7d614a75a","20":"6ab930fd08e38be6a17f","21":"a9fe834d163ce9629158","22":"f09db82d897f9240840b","23":"7dbba6a40d11c51d5d6e","24":"adf13d0e33168dcb1ea9","25":"4b8e040512d7ab213407","26":"37a9ef5689be3575afd7","27":"934cf62814f894a1ace4","28":"f0d04d3f255c0bbecd18","29":"fe0e29bd0ce320b1c76b","30":"6d2384f997891cf1e7eb","31":"0f835837a06c3018534c","32":"0e1d66bf28d898250f41","33":"5d292dc64f27fe40dc58","34":"e83942c2aecc3005c7de","35":"6385c305c2b87956c5f7","36":"3b821a7de0ac5388fc1b","37":"3b9d9c7426d576a2bd8a","38":"72904fcba7ca4b1e8cc3","39":"ba817f40f3c1f290a380","40":"16634edd9242befabc5c","41":"6055c8b653f2f0b51d72","42":"5dd3c477cdedea958b75","43":"9f5812f9f441e79a2b89","44":"6d550ad6cf042d8c3123","45":"db24de779688cb2f7c91","46":"248efc3bafd04fc63454","47":"811ffe13e6844563902f","48":"3c53ab61345f4402e0fe","49":"5b694f0d22527ce1570b","50":"a20e940089173c82d973","51":"f10f73e61f0bfc4b8930","52":"8afb6b75d99c8a549904","53":"d73a5c062afcfccc235b","54":"f87c85032b1f5edb305d","55":"4d53175adea2df3be5c9","56":"812c9c4b278c72b778c0","57":"a91c3bc3698bc4322c62","58":"1c30fceb52085a591493","59":"4d9046468799b35b1a9e","60":"99b51400eaecc94f79c6","61":"578fd7e0f08f3c3b2fa4","62":"19c8dc2add5f7742894d","63":"6797a1ee90475b309925","64":"87cd8acc2d920dea33a3","65":"4a734b7fe585d655c517","66":"398973de6dc4be67b445","67":"2e7f8d276277c0b5fe88","68":"630ce7196a035fa23d8a","69":"6ebfb94e87fbddc6568c","70":"4f85be02aa373bffc3c8","71":"6dc350b120a8c206a3fe","72":"b2e03ca94ba98a0286b1","73":"4adf62347c276113d6b5","74":"af6d5b9907c7b28b6af0","75":"2b4304788795c070fcfb","76":"0f0ce7010c2044da86b0","77":"76e68d7b9c2347936ad2","78":"df169abb712be954f593","79":"3e3c34b6dd75b2e13ee6","80":"060a55f95494e561586a","81":"aede5bade9563cb4a738","82":"80adfaa93d90cfe3d91b","83":"008cf2bcf2536c2abc7f","84":"fe5804bd05f615a9a932","85":"7d460981e2c580c8e0ae","86":"92c4e822778a3ec405a3","87":"bd552ee8ccfed0506bec","88":"497e0a53825df625b0c2","89":"23265ca18b6ecd79a3ca","90":"752f7cdead74b3da30c6","91":"a7f315dd3f6bec9276a6","92":"c74d5b1757587de6a475","93":"1f6dbd6e7cf727304c98","94":"c69a0a08c416e647690b","95":"0f2a367765a32a11efcc","96":"f1ddea920dcdf618b49d","97":"1fb8fb3c9f322627f2f2","98":"57c43a2115a0aa42c5e5","99":"26452e4f8e429bffc1e0","100":"f003be5d68480db1d58c","101":"7feda53497329ef91586","102":"40cf508c55a346c15376","103":"71ddec03ac48ba3073b9","104":"f5d742ddd7044cf698ea","105":"6f55d319b19016932514","106":"33aff69dcfbd4b9103ce","107":"27e058751980f9424512","108":"ff18fdfeb55f81f1d8f8","109":"3e4a6bd3b093bceb0bb5","110":"3e068613e8f0c1d472e6","111":"0d9e73fb08276723e3e2","112":"b46b02cdd249105cc7fc","113":"a2209175fc25eecca476","114":"ae259a022f88ab70d994","115":"e8ee45a2488620daeaaa","116":"380f97f0207ad2ca6db3","117":"0de77a5f3ca22e084e99","118":"13cd88700c86bdcee966","119":"fda7dced628a9376128d","120":"8b01c75cbef7014497f1","122":"99841955eaa59a861c39","123":"08ae2bac58d3f5fdaef9","124":"098ec7a48e56a6939cc7","125":"d8d7b238d1ae15a19535","126":"b7ce391b5a0ccc5793cb","127":"31a2b35f1f4a742bee73","128":"6f7166ea31d24fca327a","129":"fa1b51617bef128d202b","130":"14598c7c134fc455c34e","131":"8bbba8e73a05fb3b16d8","132":"1ecee230e62a8df8cfa0","133":"81e08bdf1d25bba2535e","134":"dfdd66bb2ec8f149966e","135":"c8638217bd4d18105b95","136":"2794cc7d2d242effa2d0","137":"2a7a2668667840b6b32e","138":"97c90ac50f3a46439f83","139":"12a0b8f5512dc6339052","140":"df870bff62489aeb425a","141":"97e3c2d9312bdf60f7d8","142":"29132fb5e21841185aae","143":"6f69019144ce49ca8f59","144":"123b43606bef16a1240b","145":"6acbc3c9d558cf5bec2c","146":"b67d40be827be025241c","147":"3c867b66903fcbec8a84","148":"d8602ce7d25bdae4cee1","149":"54b6660b97d7da4e8df7","150":"58edbacc53dad179e1a9","151":"46e09a4da4ef824d20f2","152":"722fa65245a45974ad94","153":"ceaa635ac32e7cf684ab","154":"f2662a959d4d4ba1513a","155":"6af33d4744ea7353d792","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","170":"36f7aaba60c6c36e8113","171":"6672e735771663ec5c4c","176":"eac69e04f10ef5f5cb20","177":"fa28bd9eaa49bb1d645b"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -47053,50 +47053,42 @@ var map = {
 	"./Ecomerce/shared/Slider/RelatedProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/RelatedProductsSlider.vue",
 		11,
-		38,
-		166
+		38
 	],
 	"./Ecomerce/shared/Slider/RelatedProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/RelatedProductsSlider.vue",
 		11,
-		38,
-		166
+		38
 	],
 	"./Ecomerce/shared/Slider/SaleSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue",
 		11,
-		47,
-		167
+		47
 	],
 	"./Ecomerce/shared/Slider/SaleSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue",
 		11,
-		47,
-		167
+		47
 	],
 	"./Ecomerce/shared/Slider/TrendingMultiSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue",
 		11,
-		49,
-		168
+		49
 	],
 	"./Ecomerce/shared/Slider/TrendingMultiSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue",
 		11,
-		49,
-		168
+		49
 	],
 	"./Ecomerce/shared/Slider/TrendingSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue",
 		11,
-		48,
-		169
+		48
 	],
 	"./Ecomerce/shared/Slider/TrendingSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue",
 		11,
-		48,
-		169
+		48
 	],
 	"./Ecomerce/shop/Index": [
 		"./resources/js/Pages/Ecomerce/shop/Index.vue",
@@ -47150,29 +47142,39 @@ var map = {
 	],
 	"./Ecomerce/shop/components/ShowProduct": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShowProduct.vue",
-		42
+		42,
+		177
 	],
 	"./Ecomerce/shop/components/ShowProduct.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShowProduct.vue",
-		42
+		42,
+		177
 	],
 	"./Ecomerce/welcome/Welcome": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
+		11,
 		3,
 		4,
 		5,
 		6,
 		7,
-		121
+		49,
+		48,
+		50,
+		176
 	],
 	"./Ecomerce/welcome/Welcome.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
+		11,
 		3,
 		4,
 		5,
 		6,
 		7,
-		121
+		49,
+		48,
+		50,
+		176
 	],
 	"./Ecomerce/welcome/components/TrendingCollection": [
 		"./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue",
