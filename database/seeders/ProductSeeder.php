@@ -18,15 +18,9 @@ class ProductSeeder extends Seeder
      */
     public function run()
     { 
-        for ($i=1; $i <= 50; $i++) {
+        for ($i=1; $i <= 43; $i++) {
             
-            $extension = "png";
-            
-            if($i>17){
-                
-                $extension = "jpg";
-
-            }
+            $extension = "jpg";
 
 
             DB::table('products')->insert([
