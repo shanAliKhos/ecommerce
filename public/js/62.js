@@ -105,6 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -301,68 +302,6 @@ var render = function() {
         "min-h-screen flex flex-col items-center justify-center bg-gray-100 "
     },
     [
-      _c("div", { staticClass: "flex w-full" }, [
-        _c(
-          "button",
-          {
-            staticClass:
-              "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ",
-            attrs: { type: "submit" }
-          },
-          [
-            _c("span", { staticClass: "mr-2 uppercase" }, [_vm._v("Login")]),
-            _vm._v(" "),
-            _c("span", { staticClass: "relative" }, [
-              _vm.sending
-                ? _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "transition  ease-in-out  animate-spin h-5 w-5 ",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 20 20",
-                        fill: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "fill-rule": "evenodd",
-                          d:
-                            "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
-                          "clip-rule": "evenodd"
-                        }
-                      })
-                    ]
-                  )
-                : _c(
-                    "svg",
-                    {
-                      staticClass: "h-6 w-6",
-                      attrs: {
-                        fill: "none",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                        }
-                      })
-                    ]
-                  )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
       _c(
         "div",
         {
@@ -656,7 +595,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center",
+                    "flex w-full items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-600 rounded py-2 w-full transition duration-150 ease-in ",
                   attrs: {
                     "preserve-scroll": "",
                     href: _vm.route("register"),

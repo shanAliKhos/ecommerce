@@ -247,7 +247,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".slide-fade-enter-active[data-v-485aad8c] {\n  transition: .8s cubic-bezier(.8, .1, 1, .04);\n}\n.slide-fade-leave-active[data-v-485aad8c] {\n  transition: .3s cubic-bezier(.8, .1, 1, .04);\n}\n.slide-fade-enter[data-v-485aad8c], .slide-fade-leave-to[data-v-485aad8c]{\n  transform: translateX(500px);\n  opacity: 0;\n} \n \n", ""]);
+exports.push([module.i, ".slide-fade-enter-active[data-v-485aad8c] {\n  transition:all .8s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-leave-active[data-v-485aad8c] {\n  transition:all .3s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-enter[data-v-485aad8c], .slide-fade-leave-to[data-v-485aad8c]{\n  transform: translate(-1500px);\n  opacity: 0;\n} \n \n", ""]);
 
 // exports
 
@@ -302,7 +302,7 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "transform-gpu leading-normal tracking-normal",
+      staticClass: " leading-normal tracking-normal",
       attrs: { id: "main-body" }
     },
     [
