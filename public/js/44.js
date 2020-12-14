@@ -1,133 +1,168 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[44],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
+/* harmony import */ var _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/ActionSection */ "./resources/js/Jetstream/ActionSection.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/DialogModal */ "./resources/js/Jetstream/DialogModal.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
 //
 //
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['href', 'active'],
-  computed: {
-    IsActiveLink: function IsActiveLink() {
-      return this.active ? 'antialiased outline-none text-center text-orange-500 outline-none appearance-none text-xs cursor-pointer' : 'antialiased outline-none text-center outline-none appearance-none text-xs cursor-pointer';
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MobileNavLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['mobileMenu', 'categories', 'subcategory'],
+  props: ['sessions'],
   components: {
-    MobileNavLink: _MobileNavLink__WEBPACK_IMPORTED_MODULE_0__["default"]
+    JetActionMessage: _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_0__["default"],
+    JetActionSection: _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_1__["default"],
+    JetButton: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__["default"],
+    JetDialogModal: _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_3__["default"],
+    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__["default"],
+    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__["default"],
+    JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
-  computed: {
-    IsMenuVisible: function IsMenuVisible() {
-      switch (this.$page.currentRouteName) {
-        default:
-          return true;
-          break;
-      }
+  data: function data() {
+    return {
+      confirmingLogout: false,
+      form: this.$inertia.form({
+        '_method': 'DELETE',
+        password: ''
+      }, {
+        bag: 'logoutOtherBrowserSessions'
+      })
+    };
+  },
+  methods: {
+    confirmLogout: function confirmLogout() {
+      var _this = this;
+
+      this.form.password = '';
+      this.confirmingLogout = true;
+      setTimeout(function () {
+        _this.$refs.password.focus();
+      }, 250);
     },
-    CountCartItems: function CountCartItems() {
-      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
-      }, 0) : 0;
-      return Qty;
+    logoutOtherBrowserSessions: function logoutOtherBrowserSessions() {
+      var _this2 = this;
+
+      this.form.post(route('other-browser-sessions.destroy'), {
+        preserveScroll: true
+      }).then(function (response) {
+        if (!_this2.form.hasErrors()) {
+          _this2.confirmingLogout = false;
+        }
+      });
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& ***!
+  \************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -139,353 +174,309 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "inertia-link",
-    { class: _vm.IsActiveLink, attrs: { href: _vm.href } },
-    [_vm._t("default")],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&":
-/*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286& ***!
-  \**********************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm.IsMenuVisible
-    ? _c(
-        "div",
-        {
-          staticClass:
-            "z-50 bg-white  block lg:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+  return _c("jet-action-section", {
+    scopedSlots: _vm._u([
+      {
+        key: "title",
+        fn: function() {
+          return [_vm._v("\n        Browser Sessions\n    ")]
         },
-        [
-          _c(
-            "div",
-            { staticClass: "grid grid-cols-4 gap-2 flex justify-around mt-1" },
-            [
-              _c(
-                "MobileNavLink",
-                {
-                  staticClass: "appearance-none focus:outline-none",
-                  attrs: {
-                    active: _vm.$page.currentRouteName == "welcome",
-                    href: _vm.route("welcome")
-                  }
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
+        proxy: true
+      },
+      {
+        key: "description",
+        fn: function() {
+          return [
+            _vm._v(
+              "\n        Manage and logout your active sessions on other browsers and devices.\n    "
+            )
+          ]
+        },
+        proxy: true
+      },
+      {
+        key: "content",
+        fn: function() {
+          return [
+            _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
+              _vm._v(
+                "\n            If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _vm.sessions.length > 0
+              ? _c(
+                  "div",
+                  { staticClass: "mt-5 space-y-6" },
+                  _vm._l(_vm.sessions, function(session, i) {
+                    return _c(
+                      "div",
+                      { key: i, staticClass: "flex items-center" },
+                      [
+                        _c("div", [
+                          session.agent.is_desktop
+                            ? _c(
+                                "svg",
+                                {
+                                  staticClass: "w-8 h-8 text-gray-500",
+                                  attrs: {
+                                    fill: "none",
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    viewBox: "0 0 24 24",
+                                    stroke: "currentColor"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      d:
+                                        "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    }
+                                  })
+                                ]
+                              )
+                            : _c(
+                                "svg",
+                                {
+                                  staticClass: "w-8 h-8 text-gray-500",
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 24 24",
+                                    "stroke-width": "2",
+                                    stroke: "currentColor",
+                                    fill: "none",
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      d: "M0 0h24v24H0z",
+                                      stroke: "none"
+                                    }
+                                  }),
+                                  _c("rect", {
+                                    attrs: {
+                                      x: "7",
+                                      y: "4",
+                                      width: "10",
+                                      height: "16",
+                                      rx: "1"
+                                    }
+                                  }),
+                                  _c("path", {
+                                    attrs: { d: "M11 5h2M12 17v.01" }
+                                  })
+                                ]
+                              )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _c("div", { staticClass: "text-sm text-gray-600" }, [
+                            _vm._v(
+                              "\n                        " +
+                                _vm._s(session.agent.platform) +
+                                " - " +
+                                _vm._s(session.agent.browser) +
+                                "\n                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c(
+                              "div",
+                              { staticClass: "text-xs text-gray-500" },
+                              [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(session.ip_address) +
+                                    ",\n\n                            "
+                                ),
+                                session.is_current_device
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "text-green-500 font-semibold"
+                                      },
+                                      [_vm._v("This device")]
+                                    )
+                                  : _c("span", [
+                                      _vm._v(
+                                        "Last active " +
+                                          _vm._s(session.last_active)
+                                      )
+                                    ])
+                              ]
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "flex items-center mt-5" },
+              [
+                _c(
+                  "jet-button",
+                  {
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.confirmLogout($event)
                       }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    { staticClass: "appearance-none focus:outline-none" },
-                    [_vm._v("Home")]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "MobileNavLink",
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                Logout Other Browser Sessions\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-action-message",
+                  {
+                    staticClass: "ml-3",
+                    attrs: { on: _vm.form.recentlySuccessful }
+                  },
+                  [_vm._v("\n                Done.\n            ")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("jet-dialog-modal", {
+              attrs: { show: _vm.confirmingLogout },
+              on: {
+                close: function($event) {
+                  _vm.confirmingLogout = false
+                }
+              },
+              scopedSlots: _vm._u([
                 {
-                  attrs: {
-                    active: _vm.$page.currentRouteName == "shop.index",
-                    href: _vm.route("shop.index")
-                  }
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Shop")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "MobileNavLink",
-                {
-                  staticClass: "group relative",
-                  attrs: {
-                    active: _vm.$page.currentRouteName == "cart.index",
-                    href: _vm.route("cart.index")
-                  }
-                },
-                [
-                  _vm.CountCartItems > 0
-                    ? _c(
-                        "span",
-                        {
-                          staticClass:
-                            "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
-                          class: { "bg-green-400": _vm.CountCartItems > 0 }
-                        },
-                        [_vm._v(_vm._s(_vm.CountCartItems))]
+                  key: "title",
+                  fn: function() {
+                    return [
+                      _vm._v(
+                        "\n                Logout Other Browser Sessions\n            "
                       )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        }
-                      })
                     ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Cart")])
-                ]
-              ),
-              _vm._v(" "),
-              !_vm.$page.user
-                ? _c(
-                    "MobileNavLink",
-                    {
-                      staticClass: "relative",
-                      attrs: {
-                        active: _vm.$page.currentRouteName == "login",
-                        href: _vm.route("login")
-                      }
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
-                        [
-                          _c("span", {
-                            staticClass:
-                              "relative inline-flex rounded-full h-3 w-3 bg-red-500"
-                          })
-                        ]
+                  },
+                  proxy: true
+                },
+                {
+                  key: "content",
+                  fn: function() {
+                    return [
+                      _vm._v(
+                        "\n                Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices.\n\n                "
                       ),
-                      _vm._v(" "),
                       _c(
-                        "svg",
-                        {
-                          staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            fill: "none",
-                            viewBox: "0 0 24 24",
-                            stroke: "currentColor"
-                          }
-                        },
+                        "div",
+                        { staticClass: "mt-4" },
                         [
-                          _c("path", {
+                          _c("jet-input", {
+                            ref: "password",
+                            staticClass: "mt-1 block w-3/4",
                             attrs: {
-                              "stroke-linecap": "round",
-                              "stroke-linejoin": "round",
-                              "stroke-width": "2",
-                              d:
-                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              type: "password",
+                              placeholder: "Password"
+                            },
+                            nativeOn: {
+                              keyup: function($event) {
+                                if (
+                                  !$event.type.indexOf("key") &&
+                                  _vm._k(
+                                    $event.keyCode,
+                                    "enter",
+                                    13,
+                                    $event.key,
+                                    "Enter"
+                                  )
+                                ) {
+                                  return null
+                                }
+                                return _vm.logoutOtherBrowserSessions($event)
+                              }
+                            },
+                            model: {
+                              value: _vm.form.password,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "password", $$v)
+                              },
+                              expression: "form.password"
                             }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Account")])
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              (_vm.$page.user
-              ? _vm.$page.user.is_admin
-              : false)
-                ? _c(
-                    "MobileNavLink",
-                    {
-                      staticClass: "relative",
-                      attrs: {
-                        active: _vm.$page.currentRouteName == "admin.dashboard",
-                        href: _vm.route("admin.dashboard")
-                      }
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
-                        [
-                          _c("span", {
-                            staticClass:
-                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
                           }),
                           _vm._v(" "),
-                          _c("span", {
-                            staticClass:
-                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
+                          _c("jet-input-error", {
+                            staticClass: "mt-2",
+                            attrs: { message: _vm.form.error("password") }
                           })
-                        ]
-                      ),
-                      _vm._v(" "),
+                        ],
+                        1
+                      )
+                    ]
+                  },
+                  proxy: true
+                },
+                {
+                  key: "footer",
+                  fn: function() {
+                    return [
                       _c(
-                        "svg",
+                        "jet-secondary-button",
                         {
-                          staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            fill: "none",
-                            viewBox: "0 0 24 24",
-                            stroke: "currentColor"
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.confirmingLogout = false
+                            }
                           }
                         },
                         [
-                          _c("path", {
-                            attrs: {
-                              "stroke-linecap": "round",
-                              "stroke-linejoin": "round",
-                              "stroke-width": "2",
-                              d:
-                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Account")])
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              (_vm.$page.user
-              ? !_vm.$page.user.is_admin
-              : false)
-                ? _c(
-                    "MobileNavLink",
-                    {
-                      staticClass: "relative",
-                      attrs: {
-                        active: _vm.$page.currentRouteName == "dashboard.index",
-                        href: _vm.route("dashboard.index")
-                      }
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
-                        [
-                          _c("span", {
-                            staticClass:
-                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
-                          }),
-                          _vm._v(" "),
-                          _c("span", {
-                            staticClass:
-                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
-                          })
+                          _vm._v(
+                            "\n                    Nevermind\n                "
+                          )
                         ]
                       ),
                       _vm._v(" "),
                       _c(
-                        "svg",
+                        "jet-button",
                         {
-                          staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            fill: "none",
-                            viewBox: "0 0 24 24",
-                            stroke: "currentColor"
+                          staticClass: "ml-2",
+                          class: { "opacity-25": _vm.form.processing },
+                          attrs: { disabled: _vm.form.processing },
+                          nativeOn: {
+                            click: function($event) {
+                              return _vm.logoutOtherBrowserSessions($event)
+                            }
                           }
                         },
                         [
-                          _c("path", {
-                            attrs: {
-                              "stroke-linecap": "round",
-                              "stroke-linejoin": "round",
-                              "stroke-width": "2",
-                              d:
-                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                            }
-                          })
+                          _vm._v(
+                            "\n                    Logout Other Browser Sessions\n                "
+                          )
                         ]
-                      ),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Account")])
+                      )
                     ]
-                  )
-                : _vm._e()
-            ],
-            1
-          )
-        ]
-      )
-    : _vm._e()
+                  },
+                  proxy: true
+                }
+              ])
+            })
+          ]
+        },
+        proxy: true
+      }
+    ])
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -494,18 +485,18 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue ***!
-  \**********************************************************************************/
+/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue ***!
+  \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
-/* harmony import */ var _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& */ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&");
+/* harmony import */ var _LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -514,9 +505,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -526,107 +517,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"
+component.options.__file = "resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
-  \*****************************************************************************************************************/
+/***/ "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& ***!
+  \******************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue?vue&type=template&id=70af8072&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavbar.vue?vue&type=template&id=c9b4e286& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&");
-/* harmony import */ var _MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileNavbar.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286& ***!
-  \****************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavbar.vue?vue&type=template&id=c9b4e286& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LogoutOtherBrowserSessionsForm_vue_vue_type_template_id_70af8072___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

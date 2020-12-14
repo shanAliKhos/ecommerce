@@ -118,19 +118,19 @@
     </div>
 </template>
 <script>
-// import ApplicationLogo from './ApplicationLogo'
-// import CusNavLink from './NavLink' 
-// import NavCart from './../../../Cart/NavCart'
-// import DropdownLink from './../../../../Shared/DropdownLink'
-// import Dropdown from './../../../../Shared/Dropdown'
+import ApplicationLogo from './ApplicationLogo'
+import CusNavLink from './NavLink' 
+import NavCart from './../../../Cart/NavCart'
+import DropdownLink from './../../../../Shared/DropdownLink'
+import Dropdown from './../../../../Shared/Dropdown'
 export default { 
     props:['mobileMenu','categories','subcategory','atTopOfPage'],
     components:{
-        ApplicationLogo:() => import('./ApplicationLogo'),
-        CusNavLink:() => import('./NavLink'),
-        NavCart:() => import('./../../../Cart/NavCart'),
-        DropdownLink:() => import('./../../../../Shared/DropdownLink'),
-        Dropdown:() => import('./../../../../Shared/Dropdown'),
+        ApplicationLogo,
+        CusNavLink,
+        NavCart,
+        DropdownLink,
+        Dropdown,
     },
 
     computed:{

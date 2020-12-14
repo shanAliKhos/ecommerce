@@ -37,12 +37,12 @@
 </div>
 </template>
 <script>
-// import ShopProduct from './../Product/Product'
+import ShopProduct from './../Product/Product'
 import Glide from '@glidejs/glide'
 
 export default { 
     components: {
-        ShopProduct:() => import('./../Product/Product'),
+        ShopProduct,
     },   
     mounted() {
 

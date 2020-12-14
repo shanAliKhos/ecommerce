@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"2d4aa829b0ed7f86b905","2":"3ab21bf0c7b0a783f08d","3":"5079070f4b9a1fee0de6","4":"62f736067df4d958873b","5":"8030c8867b805597965a","6":"e6bd49eac11cef31d1a2","7":"6f9a8d2f67b84a5c399c","8":"3f7166a1341e5bae67fe","9":"3c8d7a14c96ce97c3a7a","10":"28f931981f390857603c","11":"e07450ec01b1fe206909","12":"d29ee0838275660050d3","13":"cdc22ab59582bcb23e29","14":"b8aff8c51d8cd7829fae","15":"7930eb41c3b4476bd978","16":"3416d3726f9e4e46a7e1","17":"c954e88fe9b70a7fd254","18":"2c0aea143b10667a503d","19":"dd9d3e1a5779d2bdcf1c","20":"2d2df7cbebb594473536","21":"632d5e03c728696c3aa1","22":"c8c62abcaadc1e0c2c2a","23":"a73db9fb45664ea97274","24":"4e92fb50b054e5ba5798","25":"107be5d2dc64ee0d99a5","26":"8de4d9441afcd509ffa9","27":"9c809f42b4a836c138fe","28":"6270aa9191dc461666e8","29":"ca9eb866c6ffd5ce6535","30":"73db4349d1a5082a81b8","31":"8ba1534da46b08db6ee3","32":"a0798b8455bc36dfd252","33":"ec394b9dad4925ffe6ad","34":"ea2237d23ccb26244e69","35":"b9ce1cb46d1740d8a2f6","36":"ded99da290f29f330539","37":"aca9f0ce10cb670e97f4","38":"2e94d3f405ffda492515","39":"659dd9ba2c6b9bec023c","40":"44bfa8ac76b235f68012","41":"5d707707f0f5d8c1339a","42":"f8a7ff57f8485639a9d0","43":"f3388687f163299ba626","44":"6a4c93f626f99aafcba5","45":"e021d3a42ef18d4d7f13","46":"4ce508d166647692f1de","47":"dfb53aff898b4031356a","48":"e76b783d34e2eff4c75c","49":"f2f85b54bb6ed93c3424","50":"792817dfdd75ef9f3d28","51":"3df3a16cdbe35c056774","52":"d725c6e3025bab550908","53":"8b0a264e39f347205c3f","54":"3f4da225897fce2c0638","55":"65c34d647a20d4e30165","56":"2bb0a8135a5fdc1f647f","57":"478e4289a9b4a2cb1510","58":"7353f5a72b68b8282f31","59":"2c051d666c17ea7a8fce","60":"6be4ab361d292455ee04","61":"9b4af0e284b9e97369d6","62":"d6991ad9c1cfcf169d12","63":"cd51c3c724489c6b2e26","64":"bf455c7433f8af3ec447","65":"fe35fe21a7fe64da4efa","66":"ff25e09a248448d15186","67":"96658e26596168ad5cfc","68":"4d8b94650868a55e84b6","69":"7a44399ae0ee4dce51f0","70":"ea0aef34ef8b962bc8f7","71":"37d266067d573f785115","72":"61bcd8ebd028e21e649b","73":"12acb4ed52a188dd2426","74":"d0188a741d0e847468a1","75":"c0c6b6ae1bce923e2c41","76":"f93936cf1a1d721aaf02","77":"b99a5ef9b8c6d8856ec7","78":"2561da9a8069288630b5","79":"45c296c7628f0e9c9e20","80":"56857a4086799186f5c3","81":"099175e718ea69677e0e","82":"c1707bc10a5415c8857d","83":"2d961ac667442a11fe6c","84":"d91d60716e458c31faa8","85":"3d632ff5227b46ef601b","86":"9abe7f2547edcb8c33e9","87":"d4803c13956a932bf7b7","88":"bdbf626f1efdd8503491","89":"c410fc8f4a927b93a4eb","90":"f2d11a7221a5d87cd3a0","91":"bd91b282d96dc19077a6","92":"168e15824437cee7c586","93":"04ba830470eb3673ca81","94":"989bae1f06f199924903","95":"3e28fef0612d9a24f5e3","96":"bb0f0c49d9b1dd828330","97":"7af766480984e96cd915","98":"755393e5693d70ba0a4d","99":"f26a3a590a948755af0e","100":"56eaefea718763a717d6","101":"f672d96f0e4f0b300332","102":"475307f496cc7469d352","103":"b169ce8bff845695b6d4","104":"1eed8387b2a0a447d65e","105":"0097a128c0eae8de7aad","106":"879447244c34dc4026be","107":"d51391690a418d2a01d9","108":"0d3ed2c40f4e22ba4031","109":"ddfba0793884e5cb5a5d","110":"4859ccab9fcc42912670","111":"37d818fd1f3e002e2cfe","112":"ccc090257d98476e5289","113":"b489cf78029a56c29e2f","114":"1e01d54c3144ab234333","115":"afc89230cd837e4d2466","116":"83646eb626891b68b6c2","117":"1c8a5938520853342dfa","118":"7f773a43a2e6e447e844","119":"db3ce36353bfe8397fc7","120":"6201d47887fb122da048","121":"b3c06f1352fc0564ddd5","122":"832b58720e5c91f01c01","123":"6639d929e831cfcc66d2","124":"745cde15d6d1e5cd4ea8","125":"9ac0bd37de25a524c564","126":"625a30d3435ef0f70baa","127":"6e633ca639b9d90de7bc","128":"1093397d372b6f353864","129":"3271cf518cfd2606a5bb","130":"07924dd8bfa9644ac008","131":"7ef8063f83035fd9234e","132":"ddfd0025b5e8eb03c48a","133":"e7743a60d8d91da62c71","134":"82c31dab81e31a515f73","135":"b4d29f1e2e85b7bc48c8","136":"5192e6ac663ecdd08cf0","137":"fbaeafb5f7b0381b48b1","138":"17b9c1e40f1b95370cb5","139":"cd9535c9ca04aa64c2a0","140":"1be2494501022be59eeb","141":"11a5aed8315bb5533aa9","142":"dcd9933cf31de15659e5","143":"d487fcd92b74a02b9bda","144":"feb0e253ad942dd84d5a","145":"1628d1e2d5465619e7e3","146":"f5c35c65fe687ef5515a","147":"18504d6a0f7646be6710","148":"af583d7bc58581c608d5","149":"66081974cea425d3a1e0","150":"4a85190b2c31c45edcad","151":"b9544f840d6955accd23","152":"722fa65245a45974ad94","153":"ceaa635ac32e7cf684ab","154":"f2662a959d4d4ba1513a","155":"6af33d4744ea7353d792","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","166":"068fdb113a6d1355a51b","167":"8b85adb28169085407c2","168":"8519e6839543c542f825","169":"8cfde05e474ee76dc1cd","170":"36f7aaba60c6c36e8113","171":"fb7dd2b10b7b69cd383b","172":"a686615629c509cfcadc","173":"1b1a92da4f330bd9eef3","174":"233469d49701e4a50868","175":"fc507329382e58033bef","176":"f8d527bec66dd0ee8416","177":"d55a1d2e507d2fda335b","178":"46c4309eefcef46151b7","179":"9125fa7bd0b580a25f4f","180":"25b82ef6b0f7b7a2bf7d","181":"e42991ddfe16bc155a82"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"2d4aa829b0ed7f86b905","2":"3ab21bf0c7b0a783f08d","3":"56fea0055722fdb7a029","4":"9339be042c93eb49d48d","5":"1eb6b5ce88c621efd67c","6":"8432d4f93721872d5b04","7":"dd2890e484b09565d70b","8":"edd0934a111e4324a6cd","9":"fb77b51d27f0866bddf1","10":"28f931981f390857603c","11":"2b971caae028c7a0aa9e","12":"7146f5c7ac1193af062e","13":"088b6b5de873574182bb","14":"00705d16e35d33f11fa7","15":"c11e63d1e6d8a1796b69","16":"79d2ae1fd02ba7fbc670","17":"9f5263aaa1a050cafe7c","18":"2b50cfcb75740040e47c","19":"14d205579c6124bcb294","20":"20ff4809669232e9ac23","21":"d9900e4560e1e73a5de7","22":"83bbee3a5080b0b5c161","23":"8535db1aaa43fe854176","24":"d7c48e26da40fc8a7b4a","25":"4cef58d6e7fd15a1bf6b","26":"d20095f7fa31d9fdfbb2","27":"e4a4cbcd6b3290b8cd96","28":"2b90ce3841b588832cf6","29":"9c36abe43b6f71564347","30":"4d9c5d12170a30ff823c","31":"fea36e9140449f40b467","32":"b82068d052a654e9fed2","33":"09eafafab8199dad1d22","34":"3d2f701b7494a75eb51c","35":"e667c7de67ad3e64bc3c","36":"f25803bf8e5ed88152e2","37":"fb7d96c661f04e5b896c","38":"79e2e5e82f27601a578b","39":"ba817f40f3c1f290a380","40":"16634edd9242befabc5c","41":"6055c8b653f2f0b51d72","42":"c01887e6d982c1e11b07","43":"e5771e221e46c1febfbc","44":"2f924f1282102aa35911","45":"f76ff6f6e8f440fff6c8","46":"2cd7f4159eeb4b455497","47":"dfb53aff898b4031356a","48":"0ad1675559d1a6ac7728","49":"c78d4fa5f38de30cefb0","50":"90df8ebc47144039ad59","51":"920816fa98ebf54edd83","52":"937b8a88c7fb7423f6a1","53":"7329fddb497126248059","54":"f93f685109a6f19fc0b6","55":"d66d22e18a5e77a20637","56":"812c9c4b278c72b778c0","57":"a91c3bc3698bc4322c62","58":"1c30fceb52085a591493","59":"4d9046468799b35b1a9e","60":"99b51400eaecc94f79c6","61":"578fd7e0f08f3c3b2fa4","62":"19c8dc2add5f7742894d","63":"6797a1ee90475b309925","64":"87cd8acc2d920dea33a3","65":"4a734b7fe585d655c517","66":"398973de6dc4be67b445","67":"2e7f8d276277c0b5fe88","68":"630ce7196a035fa23d8a","69":"6ebfb94e87fbddc6568c","70":"4f85be02aa373bffc3c8","71":"6dc350b120a8c206a3fe","72":"b2e03ca94ba98a0286b1","73":"4adf62347c276113d6b5","74":"af6d5b9907c7b28b6af0","75":"2b4304788795c070fcfb","76":"0f0ce7010c2044da86b0","77":"76e68d7b9c2347936ad2","78":"df169abb712be954f593","79":"3e3c34b6dd75b2e13ee6","80":"060a55f95494e561586a","81":"aede5bade9563cb4a738","82":"80adfaa93d90cfe3d91b","83":"008cf2bcf2536c2abc7f","84":"fe5804bd05f615a9a932","85":"7d460981e2c580c8e0ae","86":"92c4e822778a3ec405a3","87":"bd552ee8ccfed0506bec","88":"497e0a53825df625b0c2","89":"3417fd983d861875fc7b","90":"ae07abf4736231e31c8d","91":"e9f7e82c9cccd61ee35a","92":"c7ed07b7e9ea1e905bc0","93":"1565543bb5c8e0857e3a","94":"cb875fb55c3d0f98d48a","95":"ad7e14059e36152c5778","96":"8c72c284c164e7a8602d","97":"f00bf70b2524803b4255","98":"5777c200a44e2505fa07","99":"692029680579698b4226","100":"ee92ed968c3fde8db39a","101":"d70850b2ad20e3beef8e","102":"e2604eb52fa7d40a96fc","103":"9b1cb08400f0a546664c","104":"358f7426a1adc0c5f480","105":"c7d9286decec15f839e9","106":"14ec78b1439cd7d3ec24","107":"1d9e0dcd5136ce569a53","108":"a10f1c70ea453d9ff070","109":"ea8d07607186924bedc0","110":"e42884ce83a86516d364","111":"f15c7ee4c5f2ef928c56","112":"5dd68f0e011c42d54706","113":"4b3852106f0fe943c84c","114":"cababcef391458270c8a","115":"e8ee45a2488620daeaaa","116":"713cee789c91af1e84dc","117":"dfef4b14c3b0a58ac11d","118":"718b4704debf04ba6cac","119":"88b69659cd763b222841","120":"2fd0357e1371dc870292","121":"b3c06f1352fc0564ddd5","122":"832b58720e5c91f01c01","123":"6639d929e831cfcc66d2","124":"745cde15d6d1e5cd4ea8","125":"9ac0bd37de25a524c564","126":"625a30d3435ef0f70baa","127":"6e633ca639b9d90de7bc","128":"1093397d372b6f353864","129":"3271cf518cfd2606a5bb","130":"07924dd8bfa9644ac008","131":"7ef8063f83035fd9234e","132":"ddfd0025b5e8eb03c48a","133":"e7743a60d8d91da62c71","134":"82c31dab81e31a515f73","135":"b4d29f1e2e85b7bc48c8","136":"5192e6ac663ecdd08cf0","137":"fbaeafb5f7b0381b48b1","138":"17b9c1e40f1b95370cb5","139":"cd9535c9ca04aa64c2a0","140":"1be2494501022be59eeb","141":"11a5aed8315bb5533aa9","142":"61883d0348d21542e7c4","143":"6f69019144ce49ca8f59","144":"123b43606bef16a1240b","145":"6acbc3c9d558cf5bec2c","146":"b67d40be827be025241c","147":"3c867b66903fcbec8a84","148":"d8602ce7d25bdae4cee1","149":"54b6660b97d7da4e8df7","150":"58edbacc53dad179e1a9","151":"46e09a4da4ef824d20f2","152":"722fa65245a45974ad94","153":"ceaa635ac32e7cf684ab","154":"f2662a959d4d4ba1513a","155":"6af33d4744ea7353d792","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","166":"068fdb113a6d1355a51b","167":"8b85adb28169085407c2","168":"27d8655c97e1f0bed3c7"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -45767,32 +45767,32 @@ var map = {
 	"./API/ApiTokenManager": [
 		"./resources/js/Pages/API/ApiTokenManager.vue",
 		10,
-		11,
-		13,
-		21
+		12,
+		14,
+		22
 	],
 	"./API/ApiTokenManager.vue": [
 		"./resources/js/Pages/API/ApiTokenManager.vue",
 		10,
-		11,
-		13,
-		21
+		12,
+		14,
+		22
 	],
 	"./API/Index": [
 		"./resources/js/Pages/API/Index.vue",
 		10,
-		11,
-		13,
-		21,
-		48
+		12,
+		14,
+		22,
+		49
 	],
 	"./API/Index.vue": [
 		"./resources/js/Pages/API/Index.vue",
 		10,
-		11,
-		13,
-		21,
-		48
+		12,
+		14,
+		22,
+		49
 	],
 	"./Admin/Layouts/AppLayout": [
 		"./resources/js/Pages/Admin/Layouts/AppLayout.vue",
@@ -45808,188 +45808,188 @@ var map = {
 	],
 	"./Admin/Layouts/partials/Footer": [
 		"./resources/js/Pages/Admin/Layouts/partials/Footer.vue",
-		98
+		103
 	],
 	"./Admin/Layouts/partials/Footer.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Footer.vue",
-		98
+		103
 	],
 	"./Admin/Layouts/partials/Navbar": [
 		"./resources/js/Pages/Admin/Layouts/partials/Navbar.vue",
-		99
+		104
 	],
 	"./Admin/Layouts/partials/Navbar.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Navbar.vue",
-		99
+		104
 	],
 	"./Admin/Layouts/partials/SideLink": [
 		"./resources/js/Pages/Admin/Layouts/partials/SideLink.vue",
-		100
+		105
 	],
 	"./Admin/Layouts/partials/SideLink.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/SideLink.vue",
-		100
+		105
 	],
 	"./Admin/Layouts/partials/Sidebar": [
 		"./resources/js/Pages/Admin/Layouts/partials/Sidebar.vue",
 		1,
-		152
+		151
 	],
 	"./Admin/Layouts/partials/Sidebar.vue": [
 		"./resources/js/Pages/Admin/Layouts/partials/Sidebar.vue",
 		1,
-		152
+		151
 	],
 	"./Admin/attribute-option/Create": [
 		"./resources/js/Pages/Admin/attribute-option/Create.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		53
+		56
 	],
 	"./Admin/attribute-option/Create.vue": [
 		"./resources/js/Pages/Admin/attribute-option/Create.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		53
+		56
 	],
 	"./Admin/attribute-option/Edit": [
 		"./resources/js/Pages/Admin/attribute-option/Edit.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		54
+		57
 	],
 	"./Admin/attribute-option/Edit.vue": [
 		"./resources/js/Pages/Admin/attribute-option/Edit.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		54
+		57
 	],
 	"./Admin/attribute-option/Index": [
 		"./resources/js/Pages/Admin/attribute-option/Index.vue",
 		0,
 		1,
 		2,
-		24,
-		75
+		25,
+		78
 	],
 	"./Admin/attribute-option/Index.vue": [
 		"./resources/js/Pages/Admin/attribute-option/Index.vue",
 		0,
 		1,
 		2,
-		24,
-		75
+		25,
+		78
 	],
 	"./Admin/attribute-option/components/ListItem": [
 		"./resources/js/Pages/Admin/attribute-option/components/ListItem.vue",
-		24,
-		154
+		25,
+		153
 	],
 	"./Admin/attribute-option/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/attribute-option/components/ListItem.vue",
-		24,
-		154
+		25,
+		153
 	],
 	"./Admin/attribute/Create": [
 		"./resources/js/Pages/Admin/attribute/Create.vue",
 		0,
 		1,
 		2,
-		55
+		58
 	],
 	"./Admin/attribute/Create.vue": [
 		"./resources/js/Pages/Admin/attribute/Create.vue",
 		0,
 		1,
 		2,
-		55
+		58
 	],
 	"./Admin/attribute/Edit": [
 		"./resources/js/Pages/Admin/attribute/Edit.vue",
 		0,
 		1,
 		2,
-		56
+		59
 	],
 	"./Admin/attribute/Edit.vue": [
 		"./resources/js/Pages/Admin/attribute/Edit.vue",
 		0,
 		1,
 		2,
-		56
+		59
 	],
 	"./Admin/attribute/Index": [
 		"./resources/js/Pages/Admin/attribute/Index.vue",
 		0,
 		1,
 		2,
-		25,
-		76
+		26,
+		79
 	],
 	"./Admin/attribute/Index.vue": [
 		"./resources/js/Pages/Admin/attribute/Index.vue",
 		0,
 		1,
 		2,
-		25,
-		76
+		26,
+		79
 	],
 	"./Admin/attribute/components/ListItem": [
 		"./resources/js/Pages/Admin/attribute/components/ListItem.vue",
-		25,
-		153
+		26,
+		152
 	],
 	"./Admin/attribute/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/attribute/components/ListItem.vue",
-		25,
-		153
+		26,
+		152
 	],
 	"./Admin/blog/Create": [
 		"./resources/js/Pages/Admin/blog/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		134
 	],
 	"./Admin/blog/Create.vue": [
 		"./resources/js/Pages/Admin/blog/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		134
 	],
 	"./Admin/blog/Edit": [
 		"./resources/js/Pages/Admin/blog/Edit.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		135
 	],
 	"./Admin/blog/Edit.vue": [
 		"./resources/js/Pages/Admin/blog/Edit.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		135
 	],
 	"./Admin/blog/Index": [
@@ -45997,188 +45997,188 @@ var map = {
 		0,
 		1,
 		2,
-		26,
-		77
+		27,
+		80
 	],
 	"./Admin/blog/Index.vue": [
 		"./resources/js/Pages/Admin/blog/Index.vue",
 		0,
 		1,
 		2,
-		26,
-		77
+		27,
+		80
 	],
 	"./Admin/blog/components/ListItem": [
 		"./resources/js/Pages/Admin/blog/components/ListItem.vue",
-		26,
-		155
+		27,
+		154
 	],
 	"./Admin/blog/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/blog/components/ListItem.vue",
-		26,
-		155
+		27,
+		154
 	],
 	"./Admin/brand/Create": [
 		"./resources/js/Pages/Admin/brand/Create.vue",
 		0,
 		1,
 		2,
-		49
+		50
 	],
 	"./Admin/brand/Create.vue": [
 		"./resources/js/Pages/Admin/brand/Create.vue",
 		0,
 		1,
 		2,
-		49
+		50
 	],
 	"./Admin/brand/Edit": [
 		"./resources/js/Pages/Admin/brand/Edit.vue",
 		0,
 		1,
 		2,
-		50
+		51
 	],
 	"./Admin/brand/Edit.vue": [
 		"./resources/js/Pages/Admin/brand/Edit.vue",
 		0,
 		1,
 		2,
-		50
+		51
 	],
 	"./Admin/brand/Index": [
 		"./resources/js/Pages/Admin/brand/Index.vue",
 		0,
 		1,
 		2,
-		27,
-		68
+		28,
+		69
 	],
 	"./Admin/brand/Index.vue": [
 		"./resources/js/Pages/Admin/brand/Index.vue",
 		0,
 		1,
 		2,
-		27,
-		68
+		28,
+		69
 	],
 	"./Admin/brand/components/ListItem": [
 		"./resources/js/Pages/Admin/brand/components/ListItem.vue",
-		27,
-		156
+		28,
+		155
 	],
 	"./Admin/brand/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/brand/components/ListItem.vue",
-		27,
-		156
+		28,
+		155
 	],
 	"./Admin/category/Create": [
 		"./resources/js/Pages/Admin/category/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		95
+		8,
+		100
 	],
 	"./Admin/category/Create.vue": [
 		"./resources/js/Pages/Admin/category/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		95
+		8,
+		100
 	],
 	"./Admin/category/Edit": [
 		"./resources/js/Pages/Admin/category/Edit.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		96
+		8,
+		101
 	],
 	"./Admin/category/Edit.vue": [
 		"./resources/js/Pages/Admin/category/Edit.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		96
+		8,
+		101
 	],
 	"./Admin/category/Index": [
 		"./resources/js/Pages/Admin/category/Index.vue",
 		0,
 		1,
 		2,
-		28,
-		78
+		29,
+		81
 	],
 	"./Admin/category/Index.vue": [
 		"./resources/js/Pages/Admin/category/Index.vue",
 		0,
 		1,
 		2,
-		28,
-		78
+		29,
+		81
 	],
 	"./Admin/category/components/ListItem": [
 		"./resources/js/Pages/Admin/category/components/ListItem.vue",
-		28,
-		157
+		29,
+		156
 	],
 	"./Admin/category/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/category/components/ListItem.vue",
-		28,
-		157
+		29,
+		156
 	],
 	"./Admin/customers": [
 		"./resources/js/Pages/Admin/customers/index.vue",
 		0,
 		1,
 		2,
-		16,
-		29
+		17,
+		30
 	],
 	"./Admin/customers/": [
 		"./resources/js/Pages/Admin/customers/index.vue",
 		0,
 		1,
 		2,
-		16,
-		29
+		17,
+		30
 	],
 	"./Admin/customers/components/ListItem": [
 		"./resources/js/Pages/Admin/customers/components/ListItem.vue",
-		16,
-		158
+		17,
+		157
 	],
 	"./Admin/customers/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/customers/components/ListItem.vue",
-		16,
-		158
+		17,
+		157
 	],
 	"./Admin/customers/index": [
 		"./resources/js/Pages/Admin/customers/index.vue",
 		0,
 		1,
 		2,
-		16,
-		29
+		17,
+		30
 	],
 	"./Admin/customers/index.vue": [
 		"./resources/js/Pages/Admin/customers/index.vue",
 		0,
 		1,
 		2,
-		16,
-		29
+		17,
+		30
 	],
 	"./Admin/customers/show": [
 		"./resources/js/Pages/Admin/customers/show.vue",
@@ -46197,335 +46197,335 @@ var map = {
 	"./Admin/dashboard": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		18,
+		19,
 		1,
 		2,
-		37
+		41
 	],
 	"./Admin/dashboard/": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		18,
+		19,
 		1,
 		2,
-		37
+		41
 	],
 	"./Admin/dashboard/index": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		18,
+		19,
 		1,
 		2,
-		37
+		41
 	],
 	"./Admin/dashboard/index.vue": [
 		"./resources/js/Pages/Admin/dashboard/index.vue",
 		0,
-		18,
+		19,
 		1,
 		2,
-		37
+		41
 	],
 	"./Admin/orders": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
 		1,
 		2,
-		17,
-		30
+		18,
+		31
 	],
 	"./Admin/orders/": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
 		1,
 		2,
-		17,
-		30
+		18,
+		31
 	],
 	"./Admin/orders/components/ListItem": [
 		"./resources/js/Pages/Admin/orders/components/ListItem.vue",
-		17,
-		159
+		18,
+		158
 	],
 	"./Admin/orders/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/orders/components/ListItem.vue",
-		17,
-		159
+		18,
+		158
 	],
 	"./Admin/orders/index": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
 		1,
 		2,
-		17,
-		30
+		18,
+		31
 	],
 	"./Admin/orders/index.vue": [
 		"./resources/js/Pages/Admin/orders/index.vue",
 		0,
 		1,
 		2,
-		17,
-		30
+		18,
+		31
 	],
 	"./Admin/orders/show": [
 		"./resources/js/Pages/Admin/orders/show.vue",
 		0,
 		1,
 		2,
-		79
+		82
 	],
 	"./Admin/orders/show.vue": [
 		"./resources/js/Pages/Admin/orders/show.vue",
 		0,
 		1,
 		2,
-		79
+		82
 	],
 	"./Admin/products/Attribute/Attribute": [
 		"./resources/js/Pages/Admin/products/Attribute/Attribute.vue",
 		0,
-		6,
+		7,
 		137
 	],
 	"./Admin/products/Attribute/Attribute.vue": [
 		"./resources/js/Pages/Admin/products/Attribute/Attribute.vue",
 		0,
-		6,
+		7,
 		137
 	],
 	"./Admin/products/Create": [
 		"./resources/js/Pages/Admin/products/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		97
+		8,
+		102
 	],
 	"./Admin/products/Create.vue": [
 		"./resources/js/Pages/Admin/products/Create.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
-		97
+		8,
+		102
 	],
 	"./Admin/products/Edit": [
 		"./resources/js/Pages/Admin/products/Edit.vue",
 		0,
-		6,
-		8,
-		42,
+		7,
+		9,
+		46,
 		1,
 		2,
-		7,
-		36,
-		31,
-		80
+		8,
+		40,
+		32,
+		83
 	],
 	"./Admin/products/Edit.vue": [
 		"./resources/js/Pages/Admin/products/Edit.vue",
 		0,
-		6,
-		8,
-		42,
+		7,
+		9,
+		46,
 		1,
 		2,
-		7,
-		36,
-		31,
-		80
+		8,
+		40,
+		32,
+		83
 	],
 	"./Admin/products/EditForm": [
 		"./resources/js/Pages/Admin/products/EditForm.vue",
-		6,
-		8,
 		7,
-		36,
-		160
+		9,
+		8,
+		40,
+		159
 	],
 	"./Admin/products/EditForm.vue": [
 		"./resources/js/Pages/Admin/products/EditForm.vue",
-		6,
-		8,
 		7,
-		36,
-		160
+		9,
+		8,
+		40,
+		159
 	],
 	"./Admin/products/Index": [
 		"./resources/js/Pages/Admin/products/Index.vue",
 		0,
 		1,
 		2,
-		32,
-		81
+		33,
+		84
 	],
 	"./Admin/products/Index.vue": [
 		"./resources/js/Pages/Admin/products/Index.vue",
 		0,
 		1,
 		2,
-		32,
-		81
+		33,
+		84
 	],
 	"./Admin/products/ProductAttributes": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
-		6,
-		31,
-		144
+		7,
+		32,
+		143
 	],
 	"./Admin/products/ProductAttributes.vue": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
-		6,
-		31,
-		144
+		7,
+		32,
+		143
 	],
 	"./Admin/products/ProductImages": [
 		"./resources/js/Pages/Admin/products/ProductImages.vue",
-		42,
-		101
+		46,
+		106
 	],
 	"./Admin/products/ProductImages.vue": [
 		"./resources/js/Pages/Admin/products/ProductImages.vue",
-		42,
-		101
+		46,
+		106
 	],
 	"./Admin/products/components/ListItem": [
 		"./resources/js/Pages/Admin/products/components/ListItem.vue",
-		32,
-		161
+		33,
+		160
 	],
 	"./Admin/products/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/products/components/ListItem.vue",
-		32,
-		161
+		33,
+		160
 	],
 	"./Admin/settings/Index": [
 		"./resources/js/Pages/Admin/settings/Index.vue",
 		0,
 		1,
 		2,
-		19,
+		20,
+		35,
 		34,
-		33,
-		65
+		67
 	],
 	"./Admin/settings/Index.vue": [
 		"./resources/js/Pages/Admin/settings/Index.vue",
 		0,
 		1,
 		2,
-		19,
+		20,
+		35,
 		34,
-		33,
-		65
+		67
 	],
 	"./Admin/settings/components/AnalyticsForm": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		33,
-		60
+		34,
+		64
 	],
 	"./Admin/settings/components/AnalyticsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		33,
-		60
+		34,
+		64
 	],
 	"./Admin/settings/components/FooterSeoForm": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		51
+		53
 	],
 	"./Admin/settings/components/FooterSeoForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue",
-		51
+		53
 	],
 	"./Admin/settings/components/GeneralForm": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		34,
-		61
+		35,
+		65
 	],
 	"./Admin/settings/components/GeneralForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		34,
-		61
+		35,
+		65
 	],
 	"./Admin/settings/components/PaymentsForm": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		19,
-		162
+		20,
+		161
 	],
 	"./Admin/settings/components/PaymentsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
-		19,
-		162
+		20,
+		161
 	],
 	"./Admin/settings/components/SocialLinksForm": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		52
+		54
 	],
 	"./Admin/settings/components/SocialLinksForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
-		52
+		54
 	],
 	"./Admin/sliders/HeroSlider": [
 		"./resources/js/Pages/Admin/sliders/HeroSlider.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		138
 	],
 	"./Admin/sliders/HeroSlider.vue": [
 		"./resources/js/Pages/Admin/sliders/HeroSlider.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		138
 	],
 	"./Admin/sliders/SaleSlider": [
 		"./resources/js/Pages/Admin/sliders/SaleSlider.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		66
+		68
 	],
 	"./Admin/sliders/SaleSlider.vue": [
 		"./resources/js/Pages/Admin/sliders/SaleSlider.vue",
 		0,
-		6,
+		7,
 		1,
 		2,
-		66
+		68
 	],
 	"./Admin/sliders/TrendingSlider": [
 		"./resources/js/Pages/Admin/sliders/TrendingSlider.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		139
 	],
 	"./Admin/sliders/TrendingSlider.vue": [
 		"./resources/js/Pages/Admin/sliders/TrendingSlider.vue",
 		0,
-		6,
-		8,
+		7,
+		9,
 		1,
 		2,
-		7,
+		8,
 		139
 	],
 	"./Auth/ForgetPassword": [
@@ -46533,157 +46533,178 @@ var map = {
 		3,
 		4,
 		5,
-		102
+		6,
+		107
 	],
 	"./Auth/ForgetPassword.vue": [
 		"./resources/js/Pages/Auth/ForgetPassword.vue",
 		3,
 		4,
 		5,
-		102
+		6,
+		107
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login.vue",
 		3,
 		4,
 		5,
-		23,
-		58
+		6,
+		24,
+		62
 	],
 	"./Auth/Login.vue": [
 		"./resources/js/Pages/Auth/Login.vue",
 		3,
 		4,
 		5,
-		23,
-		58
+		6,
+		24,
+		62
 	],
 	"./Auth/NewRegister": [
 		"./resources/js/Pages/Auth/NewRegister.vue",
 		3,
 		4,
 		5,
-		103
+		6,
+		108
 	],
 	"./Auth/NewRegister.vue": [
 		"./resources/js/Pages/Auth/NewRegister.vue",
 		3,
 		4,
 		5,
-		103
+		6,
+		108
 	],
 	"./Auth/ResetPassword": [
 		"./resources/js/Pages/Auth/ResetPassword.vue",
 		3,
 		4,
 		5,
-		104
+		6,
+		109
 	],
 	"./Auth/ResetPassword.vue": [
 		"./resources/js/Pages/Auth/ResetPassword.vue",
 		3,
 		4,
 		5,
-		104
+		6,
+		109
 	],
 	"./Auth/VerifyEmail": [
 		"./resources/js/Pages/Auth/VerifyEmail.vue",
 		3,
 		4,
 		5,
-		105
+		6,
+		110
 	],
 	"./Auth/VerifyEmail.vue": [
 		"./resources/js/Pages/Auth/VerifyEmail.vue",
 		3,
 		4,
 		5,
-		105
+		6,
+		110
 	],
 	"./Ecomerce/Blog/Index": [
 		"./resources/js/Pages/Ecomerce/Blog/Index.vue",
 		3,
 		4,
 		5,
-		69
+		6,
+		71
 	],
 	"./Ecomerce/Blog/Index.vue": [
 		"./resources/js/Pages/Ecomerce/Blog/Index.vue",
 		3,
 		4,
 		5,
-		69
+		6,
+		71
 	],
 	"./Ecomerce/Blog/Show": [
 		"./resources/js/Pages/Ecomerce/Blog/Show.vue",
-		43,
+		48,
 		3,
 		4,
 		5,
-		67
+		6,
+		36,
+		85
 	],
 	"./Ecomerce/Blog/Show.vue": [
 		"./resources/js/Pages/Ecomerce/Blog/Show.vue",
-		43,
+		48,
 		3,
 		4,
 		5,
-		67
+		6,
+		36,
+		85
 	],
 	"./Ecomerce/Blog/Sidebar": [
 		"./resources/js/Pages/Ecomerce/Blog/Sidebar.vue",
-		106
+		111
 	],
 	"./Ecomerce/Blog/Sidebar.vue": [
 		"./resources/js/Pages/Ecomerce/Blog/Sidebar.vue",
-		106
+		111
 	],
 	"./Ecomerce/Cart/CartItem": [
 		"./resources/js/Pages/Ecomerce/Cart/CartItem.vue",
-		35
+		39
 	],
 	"./Ecomerce/Cart/CartItem.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/CartItem.vue",
-		35
+		39
 	],
 	"./Ecomerce/Cart/CheckOutSuccess": [
 		"./resources/js/Pages/Ecomerce/Cart/CheckOutSuccess.vue",
 		3,
 		4,
 		5,
-		85
+		6,
+		90
 	],
 	"./Ecomerce/Cart/CheckOutSuccess.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/CheckOutSuccess.vue",
 		3,
 		4,
 		5,
-		85
+		6,
+		90
 	],
 	"./Ecomerce/Cart/CustomerInformation": [
 		"./resources/js/Pages/Ecomerce/Cart/CustomerInformation.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		82
+		6,
+		16,
+		86
 	],
 	"./Ecomerce/Cart/CustomerInformation.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/CustomerInformation.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		82
+		6,
+		16,
+		86
 	],
 	"./Ecomerce/Cart/Index": [
 		"./resources/js/Pages/Ecomerce/Cart/Index.vue",
 		3,
 		4,
 		5,
-		35,
+		6,
+		39,
 		140
 	],
 	"./Ecomerce/Cart/Index.vue": [
@@ -46691,79 +46712,84 @@ var map = {
 		3,
 		4,
 		5,
-		35,
+		6,
+		39,
 		140
 	],
 	"./Ecomerce/Cart/NavCart": [
 		"./resources/js/Pages/Ecomerce/Cart/NavCart.vue",
-		107
+		112
 	],
 	"./Ecomerce/Cart/NavCart.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/NavCart.vue",
-		107
+		112
 	],
 	"./Ecomerce/Cart/PaymentForm": [
 		"./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue",
-		14,
-		15
+		15,
+		16
 	],
 	"./Ecomerce/Cart/PaymentForm.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue",
-		14,
-		15
+		15,
+		16
 	],
 	"./Ecomerce/Cart/PaymentMethod": [
 		"./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		83
+		6,
+		16,
+		87
 	],
 	"./Ecomerce/Cart/PaymentMethod.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/PaymentMethod.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		83
+		6,
+		16,
+		87
 	],
 	"./Ecomerce/Cart/ShippingMethod": [
 		"./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		84
+		6,
+		16,
+		88
 	],
 	"./Ecomerce/Cart/ShippingMethod.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/ShippingMethod.vue",
-		14,
+		15,
 		3,
 		4,
 		5,
-		15,
-		84
+		6,
+		16,
+		88
 	],
 	"./Ecomerce/Cart/YourOrder": [
 		"./resources/js/Pages/Ecomerce/Cart/YourOrder.vue",
-		108
+		113
 	],
 	"./Ecomerce/Cart/YourOrder.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/YourOrder.vue",
-		108
+		113
 	],
 	"./Ecomerce/Cart/stripe/StripeCardElement": [
 		"./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue",
-		14,
+		15,
 		141
 	],
 	"./Ecomerce/Cart/stripe/StripeCardElement.vue": [
 		"./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue",
-		14,
+		15,
 		141
 	],
 	"./Ecomerce/contact/Contact": [
@@ -46771,512 +46797,544 @@ var map = {
 		3,
 		4,
 		5,
-		86
+		6,
+		91
 	],
 	"./Ecomerce/contact/Contact.vue": [
 		"./resources/js/Pages/Ecomerce/contact/Contact.vue",
 		3,
 		4,
 		5,
-		86
+		6,
+		91
 	],
 	"./Ecomerce/dashboard/Dashboard": [
 		"./resources/js/Pages/Ecomerce/dashboard/Dashboard.vue",
 		3,
 		4,
 		5,
-		12,
-		70
+		6,
+		13,
+		72
 	],
 	"./Ecomerce/dashboard/Dashboard.vue": [
 		"./resources/js/Pages/Ecomerce/dashboard/Dashboard.vue",
 		3,
 		4,
 		5,
-		12,
-		70
+		6,
+		13,
+		72
 	],
 	"./Ecomerce/dashboard/Order": [
 		"./resources/js/Pages/Ecomerce/dashboard/Order.vue",
 		3,
 		4,
 		5,
-		12,
-		71
+		6,
+		13,
+		73
 	],
 	"./Ecomerce/dashboard/Order.vue": [
 		"./resources/js/Pages/Ecomerce/dashboard/Order.vue",
 		3,
 		4,
 		5,
-		12,
-		71
+		6,
+		13,
+		73
 	],
 	"./Ecomerce/dashboard/WishList": [
 		"./resources/js/Pages/Ecomerce/dashboard/WishList.vue",
 		3,
 		4,
 		5,
-		12,
-		72
+		6,
+		13,
+		74
 	],
 	"./Ecomerce/dashboard/WishList.vue": [
 		"./resources/js/Pages/Ecomerce/dashboard/WishList.vue",
 		3,
 		4,
 		5,
-		12,
-		72
+		6,
+		13,
+		74
 	],
 	"./Ecomerce/shared/AcountsLayout": [
 		"./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue",
-		12,
-		109
+		13,
+		114
 	],
 	"./Ecomerce/shared/AcountsLayout.vue": [
 		"./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue",
-		12,
-		109
+		13,
+		114
 	],
 	"./Ecomerce/shared/AppLayout": [
 		"./resources/js/Pages/Ecomerce/shared/AppLayout.vue",
 		3,
 		4,
 		5,
-		163
+		6,
+		162
 	],
 	"./Ecomerce/shared/AppLayout.vue": [
 		"./resources/js/Pages/Ecomerce/shared/AppLayout.vue",
 		3,
 		4,
 		5,
-		163
+		6,
+		162
 	],
 	"./Ecomerce/shared/Partials/AppFooter": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue",
-		4,
-		164
+		5,
+		115
 	],
 	"./Ecomerce/shared/Partials/AppFooter.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue",
-		4,
-		164
+		5,
+		115
 	],
 	"./Ecomerce/shared/Partials/AppHeader": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue",
-		87
+		3,
+		4,
+		92
 	],
 	"./Ecomerce/shared/Partials/AppHeader.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/AppHeader.vue",
-		87
+		3,
+		4,
+		92
 	],
 	"./Ecomerce/shared/Partials/DashboardNavigation": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue",
-		12,
-		165
+		13,
+		163
 	],
 	"./Ecomerce/shared/Partials/DashboardNavigation.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue",
-		12,
-		165
+		13,
+		163
 	],
 	"./Ecomerce/shared/Partials/Pagination": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/Pagination.vue",
-		110
+		75
 	],
 	"./Ecomerce/shared/Partials/Pagination.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/Pagination.vue",
-		110
+		75
 	],
 	"./Ecomerce/shared/Partials/components/ApplicationLogo": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue",
-		111
+		116
 	],
 	"./Ecomerce/shared/Partials/components/ApplicationLogo.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue",
-		111
+		116
 	],
 	"./Ecomerce/shared/Partials/components/MobileNavLink": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue",
-		112
+		117
 	],
 	"./Ecomerce/shared/Partials/components/MobileNavLink.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue",
-		112
+		117
 	],
 	"./Ecomerce/shared/Partials/components/MobileNavbar": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue",
-		44,
-		166
+		4,
+		164
 	],
 	"./Ecomerce/shared/Partials/components/MobileNavbar.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue",
-		44,
-		166
+		4,
+		164
 	],
 	"./Ecomerce/shared/Partials/components/NavBar": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/NavBar.vue",
-		45,
-		167
+		3,
+		165
 	],
 	"./Ecomerce/shared/Partials/components/NavBar.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/NavBar.vue",
-		45,
-		167
+		3,
+		165
 	],
 	"./Ecomerce/shared/Partials/components/NavLink": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/NavLink.vue",
-		113
+		118
 	],
 	"./Ecomerce/shared/Partials/components/NavLink.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/NavLink.vue",
-		113
+		118
 	],
 	"./Ecomerce/shared/Partials/components/PaginationLink": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/PaginationLink.vue",
-		114
+		119
 	],
 	"./Ecomerce/shared/Partials/components/PaginationLink.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/PaginationLink.vue",
-		114
+		119
 	],
 	"./Ecomerce/shared/Partials/components/WelcomeIcons": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue",
-		145
+		144
 	],
 	"./Ecomerce/shared/Partials/components/WelcomeIcons.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue",
-		145
+		144
 	],
 	"./Ecomerce/shared/Product/Product": [
 		"./resources/js/Pages/Ecomerce/shared/Product/Product.vue",
-		115
+		120
 	],
 	"./Ecomerce/shared/Product/Product.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Product/Product.vue",
-		115
+		120
 	],
 	"./Ecomerce/shared/Slider/BlogPostsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/BlogPostsSlider.vue",
-		43,
-		143
+		48,
+		36
 	],
 	"./Ecomerce/shared/Slider/BlogPostsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/BlogPostsSlider.vue",
-		43,
-		143
+		48,
+		36
 	],
 	"./Ecomerce/shared/Slider/HeroSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue",
-		9,
-		116
+		11,
+		142
 	],
 	"./Ecomerce/shared/Slider/HeroSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue",
-		9,
-		116
+		11,
+		142
 	],
 	"./Ecomerce/shared/Slider/RelatedProductsSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/RelatedProductsSlider.vue",
-		9,
-		117
+		11,
+		37
 	],
 	"./Ecomerce/shared/Slider/RelatedProductsSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/RelatedProductsSlider.vue",
-		9,
-		117
+		11,
+		37
 	],
 	"./Ecomerce/shared/Slider/SaleSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue",
-		9,
-		118
+		11,
+		89
 	],
 	"./Ecomerce/shared/Slider/SaleSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue",
-		9,
-		118
+		11,
+		89
 	],
 	"./Ecomerce/shared/Slider/TrendingMultiSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue",
-		9,
-		46,
-		168
+		11,
+		42
 	],
 	"./Ecomerce/shared/Slider/TrendingMultiSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue",
-		9,
-		46,
-		168
+		11,
+		42
 	],
 	"./Ecomerce/shared/Slider/TrendingSlider": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue",
-		9,
-		119
+		11,
+		38
 	],
 	"./Ecomerce/shared/Slider/TrendingSlider.vue": [
 		"./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue",
-		9,
-		119
+		11,
+		38
 	],
 	"./Ecomerce/shop/Index": [
 		"./resources/js/Pages/Ecomerce/shop/Index.vue",
 		3,
 		4,
 		5,
-		63
+		6,
+		61
 	],
 	"./Ecomerce/shop/Index.vue": [
 		"./resources/js/Pages/Ecomerce/shop/Index.vue",
 		3,
 		4,
 		5,
-		63
+		6,
+		61
 	],
 	"./Ecomerce/shop/Show": [
 		"./resources/js/Pages/Ecomerce/shop/Show.vue",
-		9,
+		11,
 		3,
 		4,
 		5,
-		38,
-		62
+		6,
+		43,
+		37,
+		70
 	],
 	"./Ecomerce/shop/Show.vue": [
 		"./resources/js/Pages/Ecomerce/shop/Show.vue",
-		9,
+		11,
 		3,
 		4,
 		5,
-		38,
-		62
+		6,
+		43,
+		37,
+		70
 	],
 	"./Ecomerce/shop/components/ProductAttributes": [
 		"./resources/js/Pages/Ecomerce/shop/components/ProductAttributes.vue",
-		88
+		93
 	],
 	"./Ecomerce/shop/components/ProductAttributes.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/ProductAttributes.vue",
-		88
+		93
 	],
 	"./Ecomerce/shop/components/ShowProduct": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShowProduct.vue",
-		38
+		43,
+		166
 	],
 	"./Ecomerce/shop/components/ShowProduct.vue": [
 		"./resources/js/Pages/Ecomerce/shop/components/ShowProduct.vue",
-		38
+		43,
+		166
 	],
 	"./Ecomerce/welcome/Welcome": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
+		11,
 		3,
 		4,
 		5,
-		120
+		6,
+		42,
+		38,
+		47,
+		55
 	],
 	"./Ecomerce/welcome/Welcome.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/Welcome.vue",
+		11,
 		3,
 		4,
 		5,
-		120
+		6,
+		42,
+		38,
+		47,
+		55
 	],
 	"./Ecomerce/welcome/components/TrendingCollection": [
 		"./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue",
 		47,
-		169
+		167
 	],
 	"./Ecomerce/welcome/components/TrendingCollection.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue",
 		47,
-		169
+		167
 	],
 	"./Ecomerce/welcome/components/WelcomeBrands": [
 		"./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue",
-		146
+		145
 	],
 	"./Ecomerce/welcome/components/WelcomeBrands.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue",
-		146
+		145
 	],
 	"./Ecomerce/welcome/components/WelcomeSaleBanner": [
 		"./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue",
-		147
+		146
 	],
 	"./Ecomerce/welcome/components/WelcomeSaleBanner.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue",
-		147
+		146
 	],
 	"./Messenger/ContactsList": [
 		"./resources/js/Pages/Messenger/ContactsList.vue",
-		89
+		94
 	],
 	"./Messenger/ContactsList.vue": [
 		"./resources/js/Pages/Messenger/ContactsList.vue",
-		89
+		94
 	],
 	"./Messenger/Conversation": [
 		"./resources/js/Pages/Messenger/Conversation.vue",
-		20
+		21
 	],
 	"./Messenger/Conversation.vue": [
 		"./resources/js/Pages/Messenger/Conversation.vue",
-		20
+		21
 	],
 	"./Messenger/MessageComposer": [
 		"./resources/js/Pages/Messenger/MessageComposer.vue",
-		90
+		95
 	],
 	"./Messenger/MessageComposer.vue": [
 		"./resources/js/Pages/Messenger/MessageComposer.vue",
-		90
+		95
 	],
 	"./Messenger/MessagesFeed": [
 		"./resources/js/Pages/Messenger/MessagesFeed.vue",
-		91
+		96
 	],
 	"./Messenger/MessagesFeed.vue": [
 		"./resources/js/Pages/Messenger/MessagesFeed.vue",
-		91
+		96
 	],
 	"./Messenger/MessengerApp": [
 		"./resources/js/Pages/Messenger/MessengerApp.vue",
 		3,
 		4,
 		5,
-		20,
-		64
+		6,
+		21,
+		66
 	],
 	"./Messenger/MessengerApp.vue": [
 		"./resources/js/Pages/Messenger/MessengerApp.vue",
 		3,
 		4,
 		5,
-		20,
-		64
+		6,
+		21,
+		66
 	],
 	"./Messenger/Support": [
 		"./resources/js/Pages/Messenger/Support.vue",
-		3,
-		170
+		52
 	],
 	"./Messenger/Support.vue": [
 		"./resources/js/Pages/Messenger/Support.vue",
-		3,
-		170
+		52
 	],
 	"./Messenger/SupportComposer": [
 		"./resources/js/Pages/Messenger/SupportComposer.vue",
-		92
+		97
 	],
 	"./Messenger/SupportComposer.vue": [
 		"./resources/js/Pages/Messenger/SupportComposer.vue",
-		92
+		97
 	],
 	"./Messenger/SupportFeed": [
 		"./resources/js/Pages/Messenger/SupportFeed.vue",
-		93
+		98
 	],
 	"./Messenger/SupportFeed.vue": [
 		"./resources/js/Pages/Messenger/SupportFeed.vue",
-		93
+		98
 	],
 	"./Profile/DeleteUserForm": [
 		"./resources/js/Pages/Profile/DeleteUserForm.vue",
 		10,
-		11,
-		74
+		12,
+		77
 	],
 	"./Profile/DeleteUserForm.vue": [
 		"./resources/js/Pages/Profile/DeleteUserForm.vue",
 		10,
-		11,
-		74
+		12,
+		77
 	],
 	"./Profile/LogoutOtherBrowserSessionsForm": [
 		"./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue",
 		10,
-		11,
-		40,
-		73
+		12,
+		44,
+		76
 	],
 	"./Profile/LogoutOtherBrowserSessionsForm.vue": [
 		"./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue",
 		10,
-		11,
-		40,
-		73
+		12,
+		44,
+		76
 	],
 	"./Profile/Show": [
 		"./resources/js/Pages/Profile/Show.vue",
 		3,
 		4,
 		5,
+		6,
 		10,
-		11,
 		12,
 		13,
-		22,
-		40,
-		41,
-		57
+		14,
+		23,
+		44,
+		45,
+		60
 	],
 	"./Profile/Show.vue": [
 		"./resources/js/Pages/Profile/Show.vue",
 		3,
 		4,
 		5,
+		6,
 		10,
-		11,
 		12,
 		13,
-		22,
-		40,
-		41,
-		57
+		14,
+		23,
+		44,
+		45,
+		60
 	],
 	"./Profile/TwoFactorAuthenticationForm": [
 		"./resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue",
 		10,
-		11,
-		22,
+		12,
+		23,
 		133
 	],
 	"./Profile/TwoFactorAuthenticationForm.vue": [
 		"./resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue",
 		10,
-		11,
-		22,
+		12,
+		23,
 		133
 	],
 	"./Profile/UpdatePasswordForm": [
 		"./resources/js/Pages/Profile/UpdatePasswordForm.vue",
-		13,
-		59
+		14,
+		63
 	],
 	"./Profile/UpdatePasswordForm.vue": [
 		"./resources/js/Pages/Profile/UpdatePasswordForm.vue",
-		13,
-		59
+		14,
+		63
 	],
 	"./Profile/UpdateProfileInformationForm": [
 		"./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
 		10,
-		13,
-		41
+		14,
+		45
 	],
 	"./Profile/UpdateProfileInformationForm.vue": [
 		"./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
 		10,
-		13,
-		41
+		14,
+		45
 	],
 	"./Shared/DialogModal": [
 		"./resources/js/Pages/Shared/DialogModal.vue",
-		23
+		24
 	],
 	"./Shared/DialogModal.vue": [
 		"./resources/js/Pages/Shared/DialogModal.vue",
-		23
+		24
 	],
 	"./Shared/Dropdown": [
 		"./resources/js/Pages/Shared/Dropdown.vue",
@@ -47312,11 +47370,11 @@ var map = {
 	],
 	"./Shared/FormSection": [
 		"./resources/js/Pages/Shared/FormSection.vue",
-		94
+		99
 	],
 	"./Shared/FormSection.vue": [
 		"./resources/js/Pages/Shared/FormSection.vue",
-		94
+		99
 	],
 	"./Shared/Icon": [
 		"./resources/js/Pages/Shared/Icon.vue",
@@ -47336,11 +47394,11 @@ var map = {
 	],
 	"./Shared/Logo": [
 		"./resources/js/Pages/Shared/Logo.vue",
-		148
+		147
 	],
 	"./Shared/Logo.vue": [
 		"./resources/js/Pages/Shared/Logo.vue",
-		148
+		147
 	],
 	"./Shared/Modal": [
 		"./resources/js/Pages/Shared/Modal.vue",
@@ -47360,11 +47418,11 @@ var map = {
 	],
 	"./Shared/SearchFilter": [
 		"./resources/js/Pages/Shared/SearchFilter.vue",
-		149
+		148
 	],
 	"./Shared/SearchFilter.vue": [
 		"./resources/js/Pages/Shared/SearchFilter.vue",
-		149
+		148
 	],
 	"./Shared/SecondaryButton": [
 		"./resources/js/Pages/Shared/SecondaryButton.vue",
@@ -47376,19 +47434,19 @@ var map = {
 	],
 	"./Shared/SectionBorder": [
 		"./resources/js/Pages/Shared/SectionBorder.vue",
-		150
+		149
 	],
 	"./Shared/SectionBorder.vue": [
 		"./resources/js/Pages/Shared/SectionBorder.vue",
-		150
+		149
 	],
 	"./Shared/SectionTitle": [
 		"./resources/js/Pages/Shared/SectionTitle.vue",
-		151
+		150
 	],
 	"./Shared/SectionTitle.vue": [
 		"./resources/js/Pages/Shared/SectionTitle.vue",
-		151
+		150
 	],
 	"./Shared/SelectInput": [
 		"./resources/js/Pages/Shared/SelectInput.vue",

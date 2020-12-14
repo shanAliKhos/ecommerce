@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15,172 +15,119 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// import ApplicationLogo from './components/ApplicationLogo'
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    ApplicationLogo: function ApplicationLogo() {
-      return __webpack_require__.e(/*! import() */ 142).then(__webpack_require__.bind(null, /*! ./components/ApplicationLogo */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue"));
-    }
-  },
+  props: ['href', 'active'],
   computed: {
-    IsVisibleFooter: function IsVisibleFooter() {
-      switch (this.$page.currentRouteName) {
-        // case 'login':
-        //     return false;      
-        // break;
-        // case 'register':
-        //     return false;      
-        // break;
-        // case 'password.request':
-        //     return false;      
-        // break;
-        // case 'password.reset':
-        //     return false;      
-        // break;
-        // case 'verification.notice':
-        //     return false;      
-        // break;
-        // case 'cart.success':
-        //     return false;      
-        // break;
-        default:
-          return true;
-          break;
-      }
+    IsActiveLink: function IsActiveLink() {
+      return this.active ? 'antialiased outline-none text-center text-orange-500 outline-none appearance-none text-xs cursor-pointer' : 'antialiased outline-none text-center outline-none appearance-none text-xs cursor-pointer';
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624&":
-/*!********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624& ***!
-  \********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MobileNavLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['mobileMenu', 'categories', 'subcategory'],
+  components: {
+    MobileNavLink: _MobileNavLink__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    IsMenuVisible: function IsMenuVisible() {
+      switch (this.$page.currentRouteName) {
+        default:
+          return true;
+          break;
+      }
+    },
+    CountCartItems: function CountCartItems() {
+      var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
+        return TotalItems + Item.Qty;
+      }, 0) : 0;
+      return Qty;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -192,476 +139,373 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.IsVisibleFooter
-    ? _c("footer", { staticClass: "xxstheme-footer" }, [
-        _c("div", {
-          staticClass: "container text-center pt-20 md:pt-28 lg:pt-32"
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "bg-center bg-no-repeat bg-cover bg-footer-bg" },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "container py-16 sm:py-20 md:py-24" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-between"
-                },
-                [
-                  _c("div", { staticClass: "text-center lg:text-left" }, [
-                    _c(
-                      "h4",
-                      {
-                        staticClass: "font-semibold text-gray-300 text-2xl pb-8"
-                      },
-                      [_vm._v("Contact")]
-                    ),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "list-reset" }, [
-                      _c("li", { staticClass: "pb-2 block" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
-                            attrs: { href: "mailto:test.email0123@elyssi.com" }
-                          },
-                          [_vm._v(_vm._s(_vm.$page.SiteOptions.Email))]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "pb-2 block" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
-                            attrs: { href: "tel:0123234222" }
-                          },
-                          [_vm._v(_vm._s(_vm.$page.SiteOptions.Phone))]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        { staticClass: "pb-2 block" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass:
-                                "font-semibold text-gray-300 transition-colors hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("welcome") }
-                            },
-                            [
-                              _vm._v(
-                                " \r\n                                " +
-                                  _vm._s(_vm.$page.SiteOptions.Title) +
-                                  "\r\n                            "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "text-center py-16 lg:py-0" },
-                    [
-                      _c(
-                        "inertia-link",
-                        {
-                          staticClass:
-                            "font-semibold text-gray-300 text-4xl uppercase tracking-wider",
-                          attrs: { href: _vm.route("welcome") }
-                        },
-                        [
-                          _vm._v(
-                            "\r\n                        " +
-                              _vm._s(_vm.$page.SiteOptions.Title) +
-                              "\r\n                    "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "flex items-center justify-center pt-5"
-                        },
-                        [
-                          _vm.$page.SiteOptions.Social.Facebook
-                            ? _c(
-                                "a",
-                                {
-                                  staticClass: "group",
-                                  attrs: {
-                                    href: _vm.$page.SiteOptions.Social.Facebook,
-                                    target: "_blank"
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "sr-only" }, [
-                                    _vm._v("Social link")
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm._m(1)
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.$page.SiteOptions.Social.Twitter
-                            ? _c(
-                                "a",
-                                {
-                                  staticClass: "group",
-                                  attrs: {
-                                    href: _vm.$page.SiteOptions.Social.Twitter,
-                                    target: "_blank"
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "sr-only" }, [
-                                    _vm._v("Social link")
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm._m(2)
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.$page.SiteOptions.Social.Instagram
-                            ? _c(
-                                "a",
-                                {
-                                  staticClass: "group",
-                                  attrs: {
-                                    href:
-                                      _vm.$page.SiteOptions.Social.Instagram,
-                                    target: "_blank"
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "sr-only" }, [
-                                    _vm._v("Social link")
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm._m(3)
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.$page.SiteOptions.Social.Pinterest
-                            ? _c(
-                                "a",
-                                {
-                                  staticClass: "group",
-                                  attrs: {
-                                    href:
-                                      _vm.$page.SiteOptions.Social.Pinterest,
-                                    target: "_blank"
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "sr-only" }, [
-                                    _vm._v("Social link")
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm._m(4)
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.$page.SiteOptions.Social.LinkedIn
-                            ? _c(
-                                "a",
-                                {
-                                  staticClass: "group",
-                                  attrs: {
-                                    href: _vm.$page.SiteOptions.Social.LinkedIn,
-                                    target: "_blank"
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "sr-only" }, [
-                                    _vm._v("Social link")
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm._m(5)
-                                ]
-                              )
-                            : _vm._e()
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "text-center lg:text-left" }, [
-                    _c(
-                      "h4",
-                      {
-                        staticClass: "font-semibold text-gray-300 text-2xl pb-8"
-                      },
-                      [_vm._v("Link")]
-                    ),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "list-reset" }, [
-                      _c(
-                        "li",
-                        { staticClass: "pb-2 block" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass:
-                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("welcome") }
-                            },
-                            [_vm._v("HOME")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        { staticClass: "pb-2 block" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass:
-                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("shop.index") }
-                            },
-                            [_vm._v("SHOP")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        { staticClass: "pb-2 block" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass:
-                                "font-semibold text-gray-300 hover:text-primary text-base tracking-wide",
-                              attrs: { href: _vm.route("blog.index") }
-                            },
-                            [_vm._v("BLOG")]
-                          )
-                        ],
-                        1
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "container py-8" }, [
-          _c(
-            "p",
-            {
-              staticClass: "font-hkregular text-secondary text-base text-center"
-            },
-            [_vm._v(_vm._s(_vm.$page.SiteOptions.FooterCopyRightText))]
-          )
-        ])
-      ])
-    : _vm._e()
+  return _c(
+    "inertia-link",
+    { class: _vm.IsActiveLink, attrs: { href: _vm.href } },
+    [_vm._t("default")],
+    2
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "bg-gray-50 lg:rounded-b-full rounded-b-xl" }, [
-        _c("div", { staticClass: "py-10 text-center" }, [
-          _c(
-            "h3",
-            {
-              staticClass:
-                "font-semibold text-primary text-3xl sm:text-4xl tracking-wide"
-            },
-            [_vm._v(" Let's keep in touch")]
-          ),
-          _vm._v(" "),
-          _c(
-            "p",
-            {
-              staticClass:
-                "font-hkregular text-gray-300 text-lg sm:text-xl pt-3 px-6"
-            },
-            [_vm._v(" Join our list and save 15% off your first order.")]
-          ),
-          _vm._v(" "),
-          _c("form", { staticClass: "pt-10 sm:pt-12" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"
-              },
-              [
-                _c("input", {
-                  staticClass:
-                    "w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",
-                  attrs: {
-                    type: "email",
-                    name: "cta_email",
-                    id: "cta_email",
-                    placeholder: "ENTER YOUR EMAIL"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"
-              },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary mt-4  w-full shadow",
-                    attrs: { type: "button", "aria-label": "Subscribe button" }
-                  },
-                  [_vm._v("SUBSCRIBE")]
-                )
-              ]
-            )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
-      },
-      [
-        _c("i", {
-          staticClass:
-            "bx bxl-facebook text-secondary transition-colors group-hover:text-white"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
-      },
-      [
-        _c("i", {
-          staticClass:
-            "bx bxl-twitter text-secondary transition-colors group-hover:text-white"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
-      },
-      [
-        _c("i", {
-          staticClass:
-            "bx bxl-instagram text-secondary transition-colors group-hover:text-white"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
-      },
-      [
-        _c("i", {
-          staticClass:
-            "bx bxl-pinterest text-secondary transition-colors group-hover:text-white"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
-      },
-      [
-        _c("i", {
-          staticClass:
-            "bx bxl-linkedin text-secondary transition-colors group-hover:text-white"
-        })
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue":
-/*!*******************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue ***!
-  \*******************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.IsMenuVisible
+    ? _c(
+        "div",
+        {
+          staticClass:
+            "z-50 bg-white  block lg:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "grid grid-cols-4 gap-2 flex justify-around mt-1" },
+            [
+              _c(
+                "MobileNavLink",
+                {
+                  staticClass: "appearance-none focus:outline-none",
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "welcome",
+                    href: _vm.route("welcome")
+                  }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "appearance-none focus:outline-none" },
+                    [_vm._v("Home")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "MobileNavLink",
+                {
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "shop.index",
+                    href: _vm.route("shop.index")
+                  }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Shop")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "MobileNavLink",
+                {
+                  staticClass: "group relative",
+                  attrs: {
+                    active: _vm.$page.currentRouteName == "cart.index",
+                    href: _vm.route("cart.index")
+                  }
+                },
+                [
+                  _vm.CountCartItems > 0
+                    ? _c(
+                        "span",
+                        {
+                          staticClass:
+                            "text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",
+                          class: { "bg-green-400": _vm.CountCartItems > 0 }
+                        },
+                        [_vm._v(_vm._s(_vm.CountCartItems))]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Cart")])
+                ]
+              ),
+              _vm._v(" "),
+              !_vm.$page.user
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "login",
+                        href: _vm.route("login")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
+                            staticClass:
+                              "relative inline-flex rounded-full h-3 w-3 bg-red-500"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              (_vm.$page.user
+              ? _vm.$page.user.is_admin
+              : false)
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "admin.dashboard",
+                        href: _vm.route("admin.dashboard")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
+                            staticClass:
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                          }),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass:
+                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              (_vm.$page.user
+              ? !_vm.$page.user.is_admin
+              : false)
+                ? _c(
+                    "MobileNavLink",
+                    {
+                      staticClass: "relative",
+                      attrs: {
+                        active: _vm.$page.currentRouteName == "dashboard.index",
+                        href: _vm.route("dashboard.index")
+                      }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        [
+                          _c("span", {
+                            staticClass:
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                          }),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass:
+                              "relative inline-flex rounded-full h-3 w-3 bg-green-400"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Account")])
+                    ]
+                  )
+                : _vm._e()
+            ],
+            1
+          )
+        ]
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=template&id=3223f624& */ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624&");
-/* harmony import */ var _AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
+/* harmony import */ var _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -670,9 +514,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -682,38 +526,107 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppFooter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624& ***!
-  \**************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
+  \*****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppFooter.vue?vue&type=template&id=3223f624& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/AppFooter.vue?vue&type=template&id=3223f624&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_3223f624___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavbar.vue?vue&type=template&id=c9b4e286& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&");
+/* harmony import */ var _MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileNavbar.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavbar.vue?vue&type=template&id=c9b4e286& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue?vue&type=template&id=c9b4e286&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavbar_vue_vue_type_template_id_c9b4e286___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

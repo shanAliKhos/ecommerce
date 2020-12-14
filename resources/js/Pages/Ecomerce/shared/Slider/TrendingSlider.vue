@@ -68,15 +68,14 @@
 </div>
 </template>
 <script>
-// import ShopProduct from './../Product/Product'
+import ShopProduct from './../Product/Product'
 import { Glide, GlideSlide } from 'vue-glide-js'
 
 export default {
     components: {
         [Glide.name]: Glide,
         [GlideSlide.name]: GlideSlide,
-        ShopProduct:() => import('./../Product/Product'),
-
+        ShopProduct,
     },
     
     computed: {

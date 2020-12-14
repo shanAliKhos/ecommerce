@@ -31,16 +31,16 @@
     import AppHeader from './Partials/AppHeader' 
     import AppFooter from './Partials/AppFooter'  
  
-    import FlashMessage from './../../Shared/FlashMessage'  
-    import Support from './../../Messenger/Support'  
+    // import FlashMessage from './../../Shared/FlashMessage'  
+    // import Support from './../../Messenger/Support'  
  
 
     export default {
         components: {  
             AppHeader,
             AppFooter, 
-            FlashMessage,
-            Support,
+            FlashMessage:() => import('./../../Shared/FlashMessage'),
+            // Support,
  
         },  
 
