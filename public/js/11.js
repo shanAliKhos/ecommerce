@@ -108,9 +108,10 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+            staticClass:
+              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
             staticStyle: {
-              "background-image": "url(./img/main-slider/hero-slide-01.jpg)"
+              "background-image": "url('./img/product/product (1).png')"
             }
           },
           [
@@ -152,9 +153,10 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+            staticClass:
+              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
             staticStyle: {
-              "background-image": "url(./img/main-slider/hero-slide-03.jpg)"
+              "background-image": "url('./img/product/product (2).png')"
             }
           },
           [
@@ -192,9 +194,10 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+            staticClass:
+              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
             staticStyle: {
-              "background-image": "url(./img/main-slider/hero-slide-04.jpg)"
+              "background-image": "url('./img/product/product (3).png')"
             }
           },
           [
@@ -202,7 +205,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                  "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 bg-gray"
               },
               [
                 _c(
@@ -232,9 +235,10 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+            staticClass:
+              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
             staticStyle: {
-              "background-image": "url(./img/main-slider/hero-slide-05.jpg)"
+              "background-image": "url('./img/product/product (4).png')"
             }
           },
           [
