@@ -63,8 +63,10 @@ import AppLayout from './../Layouts/AppLayout'
 import ListItem from './components/ListItem'   
 import Pagination from './../../Shared/Pagination'  
 
-export default {
-    metaInfo: { title: 'Attributes' },
+export default { 
+    metaInfo() {
+        return { title: `Attributes` }
+    },            
     layout: AppLayout,  
     components:{ 
         ListItem,

@@ -24,8 +24,8 @@
 <script>
 import AppLayout from './../shared/AppLayout'    
 export default {
-    layout: AppLayout,  
- 
+  metaInfo: { title: 'Thanks for shopping' },   
+  layout: AppLayout,   
 }
 </script>
 <style scoped>

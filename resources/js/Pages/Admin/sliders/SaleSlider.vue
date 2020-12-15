@@ -10,26 +10,17 @@
                 <a href="#" class="text-gray-600">Sale Slider</a>
             </li>
         </ol>
-        <inertia-link 
-            :href="route('admin.dashboard')" 
-            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
-            >  
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
-            </svg>            
-            <span>Back</span>            
-       
-        </inertia-link>                
+
+        <BackButton/>             
  
-    </nav>
-    <p class="text-xl pb-6 flex items-center">Sale Slider</p>        
+    </nav>      
     <div class="flex justify-center">
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
 
                 <form class="p-10 bg-white rounded shadow-2xl" @submit.prevent="store">
-
-                    <p class="text-lg text-gray-800 font-medium pb-4">Sale Slider setting</p>
+ 
+                <p class="pb-6 flex font-semibold text-xl text-gray-400">Sale Slider</p>                        
                        
  
                     <div class="w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"> 
@@ -87,6 +78,7 @@
 <script>
 import AppLayout from './../Layouts/AppLayout'   
 import LoadingButton from './../../Shared/LoadingButton'    
+import BackButton from './../../Shared/BackButton'   
 import Multiselect from 'vue-multiselect'   
 import ShopProduct from './../../Ecomerce/shared/Product/Product' 
 
@@ -95,6 +87,7 @@ export default {
     layout:AppLayout,
     components: {
         LoadingButton,
+        BackButton,        
         Multiselect,  
         ShopProduct,        
     },
@@ -134,8 +127,11 @@ export default {
         SliderProducts(){ 
             return  this.form.SaleProducts ;
         },
-    }
-
+    },
+    mounted() { 
+        const self = this
+        self.$root.$emit('sidebar-close');
+    },
 
 };
 </script>

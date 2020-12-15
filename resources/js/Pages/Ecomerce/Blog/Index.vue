@@ -99,8 +99,10 @@
 <script>
 import AppLayout from './../shared/AppLayout'   
 import Sidebar from './Sidebar'  
+ 
 
 export default {
+    metaInfo: { title: 'Blogs' },  
     layout: AppLayout,     
     components:{
         Sidebar,

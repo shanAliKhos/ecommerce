@@ -55,14 +55,15 @@
 </template>
 
 <script>
-import BlogPostsSlider from './../shared/Slider/BlogPostsSlider'  
 import AppLayout from './../shared/AppLayout'  
 import Sidebar from './Sidebar'  
-export default {
+import BlogPostsSlider from './../shared/Slider/BlogPostsSlider'   
+
+export default { 
+    metaInfo() { 
+        return {title: `${this.$page.blog.title}`}
+    },     
     layout: AppLayout,  
-    metaInfo: { 
-        title: 'Blog-details' 
-    },
     components: {
         BlogPostsSlider,
         Sidebar,
@@ -74,6 +75,9 @@ export default {
     computed: {
       Blog(){
           return this.$page.blog;
+      },
+      Title(){
+          return this.$page.blog.title;
       },
 
     },

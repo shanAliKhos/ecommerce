@@ -6,7 +6,7 @@
             :style="'background-image:url(\'' + ProductImage + '\')'">
         </div> 
         <div class="absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full" v-if="Label.Active">
-            <p class="font-hkbold text-sm uppercase tracking-wide" :class="Label.Color"> {{Label.Title}}</p>
+            <p class="font-bold text-sm uppercase tracking-wide" :class="Label.Color"> {{Label.Title}}</p>
         </div>            
         <!-- <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded">
         </div>
@@ -21,7 +21,7 @@
     </div>
     <div class="p-2 relative h-28 ">
             <div class="flex items-center content-center py-2">
-                <h3 class="font-semibold text-xs text-gray-400 capitalize" :title="ProductName">{{ProductName.substring(0,65)+"..."}}</h3>
+                <p class="font-semibold text-xs text-gray-400 capitalize" :title="ProductName">{{ProductName.substring(0,65)+"..."}}</p>
             </div>
             <div class="flex  absolute bottom-7">
                 <p class="font-semibold text-red-400 text-sm">{{$page.SiteOptions.Currency.Symbol}}{{CurrentPrice}} </p>
@@ -35,7 +35,7 @@
                     <i class="bx bxs-star text-yellow-300"></i>
                     <i class="bx bxs-star text-yellow-300"></i>
                 </div>
-                <p class="font-hkregular text-sm text-secondary  ml-2">(45)</p>
+                <p class="font-regular text-sm text-secondary  ml-2">(45)</p>
             </div>            
     </div>
 </div> 

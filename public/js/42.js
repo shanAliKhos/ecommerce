@@ -832,7 +832,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -894,7 +894,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Coffee Cream")]
                               ),
@@ -930,7 +930,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v(" 45")]
                                 )
@@ -939,9 +939,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -963,7 +961,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -1025,7 +1023,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [
                                   _vm._v(
@@ -1065,7 +1063,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [
                                     _vm._v(
@@ -1078,9 +1076,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -1102,7 +1098,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -1164,7 +1160,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -1200,7 +1196,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -1209,9 +1205,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -1233,7 +1227,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -1295,7 +1289,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Coffee Cream")]
                               ),
@@ -1331,7 +1325,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -1340,9 +1334,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -1364,7 +1356,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -1426,7 +1418,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Floral Chick")]
                               ),
@@ -1462,7 +1454,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -1471,9 +1463,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -1495,7 +1485,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -1557,7 +1547,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -1593,7 +1583,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -1602,9 +1592,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -1664,7 +1652,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -1726,7 +1714,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Coffee Cream")]
                               ),
@@ -1762,7 +1750,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v(" 45")]
                                 )
@@ -1771,9 +1759,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -1795,7 +1781,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -1857,7 +1843,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [
                                   _vm._v(
@@ -1897,7 +1883,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [
                                     _vm._v(
@@ -1910,9 +1896,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -1934,7 +1918,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -1996,7 +1980,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -2032,7 +2016,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -2041,9 +2025,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -2065,7 +2047,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -2127,7 +2109,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Coffee Cream")]
                               ),
@@ -2163,7 +2145,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -2172,9 +2154,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -2196,7 +2176,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -2258,7 +2238,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Floral Chick")]
                               ),
@@ -2294,7 +2274,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -2303,9 +2283,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -2327,7 +2305,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -2389,7 +2367,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -2425,7 +2403,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -2434,9 +2412,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -2492,7 +2468,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -2554,7 +2530,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Coffee Cream")]
                               ),
@@ -2590,7 +2566,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v(" 45")]
                                 )
@@ -2599,9 +2575,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -2623,7 +2597,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -2685,7 +2659,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [
                                   _vm._v(
@@ -2725,7 +2699,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [
                                     _vm._v(
@@ -2738,9 +2712,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -2762,7 +2734,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -2824,7 +2796,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -2860,7 +2832,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -2869,9 +2841,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -2893,7 +2863,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("New")]
                           ),
@@ -2955,7 +2925,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Coffee Cream")]
                               ),
@@ -2991,7 +2961,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -3000,9 +2970,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -3024,7 +2992,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Hot")]
                           ),
@@ -3086,7 +3054,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v(" Floral Chick")]
                               ),
@@ -3122,7 +3090,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -3131,9 +3099,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$50.0")]
                             )
                           ]
@@ -3155,7 +3121,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
                             },
                             [_vm._v("Trend")]
                           ),
@@ -3217,7 +3183,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticClass:
-                                    "font-hkregular text-base text-secondary"
+                                    "font-regular text-base text-secondary"
                                 },
                                 [_vm._v("Cat eye")]
                               ),
@@ -3253,7 +3219,7 @@ var render = function() {
                                   "p",
                                   {
                                     staticClass:
-                                      "font-hkregular text-sm text-secondary ml-2"
+                                      "font-regular text-sm text-secondary ml-2"
                                   },
                                   [_vm._v("45")]
                                 )
@@ -3262,9 +3228,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "span",
-                              {
-                                staticClass: "font-hkbold text-primary text-xl"
-                              },
+                              { staticClass: "font-bold text-primary text-xl" },
                               [_vm._v("$75.0")]
                             )
                           ]
@@ -3296,16 +3260,14 @@ var staticRenderFns = [
           "h2",
           {
             staticClass:
-              "font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
           },
           [_vm._v(" New season, matching shoes ")]
         ),
         _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "font-hkregular text-secondary-lighter text-lg pt-1" },
-          [_vm._v(" Featured Collection ")]
-        )
+        _c("p", { staticClass: "font-regular text-gray-400 text-lg pt-1" }, [
+          _vm._v(" Featured Collection ")
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "relative group" }, [
@@ -3353,16 +3315,14 @@ var staticRenderFns = [
           "h2",
           {
             staticClass:
-              "font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
           },
           [_vm._v(" Stylish Backpacks, Only For You")]
         ),
         _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "font-hkregular text-secondary-lighter text-lg pt-1" },
-          [_vm._v("Featured Collection")]
-        )
+        _c("p", { staticClass: "font-regular text-gray-400 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "relative group" }, [
@@ -3410,16 +3370,14 @@ var staticRenderFns = [
           "h2",
           {
             staticClass:
-              "font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
           },
           [_vm._v("Summer? You need chick sunglasses")]
         ),
         _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "font-hkregular text-secondary-lighter text-lg pt-1" },
-          [_vm._v("Featured Collection")]
-        )
+        _c("p", { staticClass: "font-regular text-gray-400 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "relative group" }, [

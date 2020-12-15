@@ -6,19 +6,18 @@
 </template>
 <script>
 import AppLayout from './../shared/AppLayout' 
-import ProductAttributes from './components/ProductAttributes'  
+// import ProductAttributes from './components/ProductAttributes'  
 import ShopProductDetail from './components/ShowProduct'  
 import RelatedProductsSlider from './../shared/Slider/RelatedProductsSlider'
-
  
 export default {
+    
     layout: AppLayout,  
-    metaInfo: { 
-        title: 'Product',
+    metaInfo() { 
+        return {title: `${this.$page.Product.name}`}
     }, 
-    components: {
+    components: { 
         ShopProductDetail,
-        ProductAttributes,
         RelatedProductsSlider,
     }, 
 

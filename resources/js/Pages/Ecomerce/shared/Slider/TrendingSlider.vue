@@ -4,10 +4,10 @@
     
         <div class="flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0">
             <div class="text-center sm:text-left">
-                <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">Elyssi’s trends</h2>
-                <p class="font-hkregular text-secondary-lighter text-lg md:text-xl pt-2">Be styling, no matter the season!</p>
+                <h2 class="font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl">Elyssi’s trends</h2>
+                <p class="font-regular text-gray-400-lighter text-lg md:text-xl pt-2">Be styling, no matter the season!</p>
             </div>
-            <a href="/collection-grid" class="flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-hkregular text-xl text-primary">
+            <a href="/collection-grid" class="flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary">
                 Show more
                 <i class="bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"></i>
             </a>

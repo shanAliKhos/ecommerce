@@ -1,21 +1,13 @@
 <template>
-<footer class="xxstheme-footer" v-if="IsVisibleFooter">
- 
-    <div class="container text-center pt-20 md:pt-28 lg:pt-32">
-        <!-- <span class="font-hkregular md:text-lg text-secondary uppercase pb-1 md:pb-2 block">Follow US</span>
-        <h4 class="font-butlermedium text-3xl text-secondary pb-8 md:pb-10 lg:pb-12"> Instagram Feed </h4>
-
-        <div id="instafeed" x-data x-init="instagramGallery"></div> -->
-
-    </div>
+<div class="xxstheme-footer" v-if="IsVisibleFooter">
 
     <div class="bg-center bg-no-repeat bg-cover bg-footer-bg">
 
         <div class="container">
             <div class="bg-gray-50 lg:rounded-b-full rounded-b-xl">
                 <div class="py-10 text-center">
-                    <h3 class="font-semibold text-primary text-3xl sm:text-4xl tracking-wide"> Let's keep in touch</h3>
-                    <p class="font-hkregular text-gray-300 text-lg sm:text-xl pt-3 px-6"> Join our list and save 15% off your first order.</p>
+                    <p class="font-semibold text-primary text-3xl sm:text-4xl tracking-wide"> Let's keep in touch</p>
+                    <p class="font-regular text-gray-300 text-lg sm:text-xl pt-3 px-6"> Join our list and save 15% off your first order.</p>
                     <form class="pt-10 sm:pt-12">
                         <div class="w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center">
                             <!-- <label for="cta_email" class="block relative h-0 w-0 overflow-hidden text-gray-300">Email</label> -->
@@ -38,7 +30,7 @@
         <div class="container py-16 sm:py-20 md:py-24">
             <div class="w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-between">
                 <div class="text-center lg:text-left">
-                    <h4 class="font-semibold text-gray-300 text-2xl pb-8">Contact</h4>
+                    <p class="font-semibold text-gray-300 text-2xl pb-8">Contact</p>
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
@@ -103,7 +95,7 @@
                     </div>
                 </div>
                 <div class="text-center lg:text-left">
-                    <h4 class="font-semibold text-gray-300 text-2xl pb-8">Link</h4>
+                    <p class="font-semibold text-gray-300 text-2xl pb-8">Link</p>
                     <ul class="list-reset">
 
                         <li class="pb-2 block">
@@ -123,10 +115,10 @@
     </div>
 
     <div class="container py-8">
-        <p class="font-hkregular text-secondary text-base text-center">{{$page.SiteOptions.FooterCopyRightText}}</p>
+        <p class="font-regular text-gray-400 text-base text-center">{{$page.SiteOptions.FooterCopyRightText}}</p>
     </div>   
 
-</footer>
+</div>
 </template>
 <script> 
 import ApplicationLogo from './components/ApplicationLogo'
@@ -138,27 +130,26 @@ export default {
     computed: {
         IsVisibleFooter() {
             switch (this.$page.currentRouteName) {
-                // case 'login':
-                //     return false;      
-                // break;
-                // case 'register':
-                //     return false;      
-                // break;
-                // case 'password.request':
-                //     return false;      
-                // break;
-                // case 'password.reset':
-                //     return false;      
-                // break;
+                case 'login':
+                    return false;      
+                break;
+                case 'register':
+                    return false;      
+                break;
+                case 'password.request':
+                    return false;      
+                break;
+                case 'password.reset':
+                    return false;      
+                break;
             
-                // case 'verification.notice':
-                //     return false;      
-                // break;
+                case 'verification.notice':
+                    return false;      
+                break;
 
-                // case 'cart.success':
-                //     return false;      
-                // break;
- 
+                case 'cart.success':
+                    return false;      
+                break;
             
                 default:
                     return true;      

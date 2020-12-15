@@ -56,7 +56,7 @@
 </template>
 <script>
 import { Glide, GlideSlide } from 'vue-glide-js'
-import ShopProduct from './../Product/Product'
+import ShopProduct from './../Product/Product' 
 
 export default {
     components: {

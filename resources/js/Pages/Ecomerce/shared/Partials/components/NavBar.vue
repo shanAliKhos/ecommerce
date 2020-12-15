@@ -118,11 +118,14 @@
     </div>
 </template>
 <script>
+
 import ApplicationLogo from './ApplicationLogo'
 import CusNavLink from './NavLink' 
 import NavCart from './../../../Cart/NavCart'
 import DropdownLink from './../../../../Shared/DropdownLink'
 import Dropdown from './../../../../Shared/Dropdown'
+
+ 
 export default { 
     props:['mobileMenu','categories','subcategory','atTopOfPage'],
     components:{

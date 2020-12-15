@@ -147,7 +147,7 @@ import CartItem from './CartItem'
 
 export default {
     layout: AppLayout,     
-    metaInfo: { title: 'Shopping-cart' },    
+    metaInfo: { title: 'Cart' },    
     components: { 
         CartItem,
     }, 

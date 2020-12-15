@@ -26,7 +26,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (14).jpg')"> </div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary"> Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -48,10 +48,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2"> 45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2"> 45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -59,7 +59,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (16).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">
+                                            <p class="font-regular text-base text-secondary">
                                                 Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
@@ -82,12 +82,12 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">
+                                                <p class="font-regular text-sm text-secondary ml-2">
                                                     45
                                                 </p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -95,7 +95,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (18).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -117,10 +117,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -128,7 +128,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (20).jpg')"></div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary">Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -150,10 +150,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                         
@@ -161,7 +161,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (25).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Floral Chick</p>
+                                            <p class="font-regular text-base text-secondary"> Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -183,10 +183,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -194,7 +194,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (14).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -207,7 +207,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -216,10 +216,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                     
 
@@ -231,8 +231,8 @@
 
                     <div class="w-full lg:w-1/3 lg:pl-6 xl:pl-8">
                         <div class="text-right">
-                            <h2 class="font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"> New season, matching shoes </h2>
-                            <p class="font-hkregular text-secondary-lighter text-lg pt-1"> Featured Collection </p>
+                            <h2 class="font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"> New season, matching shoes </h2>
+                            <p class="font-regular text-gray-400 text-lg pt-1"> Featured Collection </p>
                         </div>
                         <div class="relative group">
                             <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (14).jpg')"></div>
@@ -251,8 +251,8 @@
 
                     <div class="w-full lg:w-1/3 lg:pr-6 xl:pr-8">
                         <div class="text-left">
-                            <h2 class="font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"> Stylish Backpacks, Only For You</h2>
-                            <p class="font-hkregular text-secondary-lighter text-lg pt-1">Featured Collection</p>
+                            <h2 class="font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"> Stylish Backpacks, Only For You</h2>
+                            <p class="font-regular text-gray-400 text-lg pt-1">Featured Collection</p>
                         </div>
                         <div class="relative group">
                             <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14 relative" style="background-image:url('/img/product/product (21).jpg')"></div>
@@ -283,7 +283,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (21).jpg')"> </div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -296,7 +296,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary"> Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -305,10 +305,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2"> 45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2"> 45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -316,7 +316,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -329,7 +329,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">
+                                            <p class="font-regular text-base text-secondary">
                                                 Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
@@ -339,12 +339,12 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">
+                                                <p class="font-regular text-sm text-secondary ml-2">
                                                     45
                                                 </p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -352,7 +352,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (8).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -365,7 +365,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -374,10 +374,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -387,7 +387,7 @@
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover"
                                             style="background-image:url('/img/product/product (12).jpg')">
                                         </div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -400,7 +400,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary">Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -409,10 +409,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                         
@@ -420,7 +420,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (10).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -433,7 +433,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Floral Chick</p>
+                                            <p class="font-regular text-base text-secondary"> Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -442,10 +442,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -453,7 +453,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (6).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -466,7 +466,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -475,10 +475,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                     
 
@@ -514,7 +514,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (23).jpg')"> </div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"> </div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -527,7 +527,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary"> Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -536,10 +536,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2"> 45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2"> 45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -547,7 +547,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (22).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -560,7 +560,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">
+                                            <p class="font-regular text-base text-secondary">
                                                 Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
@@ -570,12 +570,12 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">
+                                                <p class="font-regular text-sm text-secondary ml-2">
                                                     45
                                                 </p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -583,7 +583,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (24).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -596,7 +596,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -605,10 +605,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                                 
@@ -618,7 +618,7 @@
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover"
                                             style="background-image:url('/img/product/product (27).jpg')">
                                         </div>
-                                        <span class="text-v-green font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
+                                        <span class="text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">New</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -631,7 +631,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Coffee Cream</p>
+                                            <p class="font-regular text-base text-secondary">Coffee Cream</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -640,10 +640,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                         
@@ -651,7 +651,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (29).jpg')"></div>
-                                        <span class="text-v-red font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
+                                        <span class="text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Hot</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -664,7 +664,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary"> Floral Chick</p>
+                                            <p class="font-regular text-base text-secondary"> Floral Chick</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -673,10 +673,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$50.0</span>
+                                        <span class="font-bold text-primary text-xl">$50.0</span>
                                     </div>
                                 </vue-glide-slide>                                              
                             
@@ -684,7 +684,7 @@
                                 <vue-glide-slide> 
                                     <div class="relative rounded">
                                         <div class="w-68 h-68 bg-center bg-no-repeat bg-cover" style="background-image:url('/img/product/product (36).jpg')"></div>
-                                        <span class="text-v-blue font-hkbold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
+                                        <span class="text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full">Trend</span>
                                         <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"></div>
                                         <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity">
                                             <a href="javascript:;" class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3">
@@ -697,7 +697,7 @@
                                     </div>
                                     <div class="flex justify-between items-center pt-6">
                                         <div>
-                                            <p class="font-hkregular text-base text-secondary">Cat eye</p>
+                                            <p class="font-regular text-base text-secondary">Cat eye</p>
                                             <div class="flex items-center">
                                                 <div class="flex items-center">
                                                     <i class="bx bxs-star text-primary"></i>
@@ -706,10 +706,10 @@
                                                     <i class="bx bxs-star text-primary"></i>
                                                     <i class="bx bxs-star text-primary"></i>
                                                 </div>
-                                                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
+                                                <p class="font-regular text-sm text-secondary ml-2">45</p>
                                             </div>
                                         </div>
-                                        <span class="font-hkbold text-primary text-xl">$75.0</span>
+                                        <span class="font-bold text-primary text-xl">$75.0</span>
                                     </div>
                                 </vue-glide-slide>                                     
 
@@ -721,8 +721,8 @@
 
                     <div class="w-full lg:w-1/3 lg:pl-6 xl:pl-8">
                         <div class="text-right">
-                            <h2 class="font-hkbold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide">Summer? You need chick sunglasses</h2>
-                            <p class="font-hkregular text-secondary-lighter text-lg pt-1">Featured Collection</p>
+                            <h2 class="font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide">Summer? You need chick sunglasses</h2>
+                            <p class="font-regular text-gray-400 text-lg pt-1">Featured Collection</p>
                         </div>
                         <div class="relative group">
                             <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (22).jpg')"></div>

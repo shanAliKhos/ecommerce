@@ -30,18 +30,14 @@
 <script>  
     import AppHeader from './Partials/AppHeader' 
     import AppFooter from './Partials/AppFooter'  
- 
-    // import FlashMessage from './../../Shared/FlashMessage'  
-    // import Support from './../../Messenger/Support'  
- 
+    import FlashMessage from './../../Shared/FlashMessage'  
+  
 
     export default {
         components: {  
             AppHeader,
             AppFooter, 
-            FlashMessage:() => import('./../../Shared/FlashMessage'),
-            // Support,
- 
+            FlashMessage, 
         },  
 
         computed: {

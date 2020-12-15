@@ -10,26 +10,17 @@
                 <a href="#" class="text-gray-600">Create Brand</a>
             </li>
         </ol>
-        <inertia-link 
-            :href="route('admin.brand.index')" 
-            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
-            >  
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
-            </svg>            
-            <span>Back</span>            
-       
-        </inertia-link>                
+        
+        <BackButton/>              
  
-    </nav>
-    <p class="text-xl pb-6 flex items-center">Create Brand</p>        
+    </nav> 
     <div class="flex justify-center">
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
 
                 <form @submit.prevent="store"  class="p-10 bg-white rounded shadow-xl">
-                    <p class="text-lg text-gray-800 font-medium pb-4">Brand information</p>
-
+             
+                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Brand Create</p>    
                     <div class="flex flex-wrap -mx-3 mb-2">
              
                         <div class="w-full md:w-1/2 px-3  md:mb-0">
@@ -88,6 +79,7 @@ import AppLayout from './../Layouts/AppLayout'
 import FileInput from './../../Shared/FileInput' 
 import TextInput from './../../Shared/TextInput'   
 import LoadingButton from './../../Shared/LoadingButton'   
+import BackButton from './../../Shared/BackButton'   
 import SectionBorder from './../../Shared/SectionBorder'   
 
 export default {
@@ -99,6 +91,7 @@ export default {
         FileInput,
         TextInput,
         LoadingButton,
+        BackButton,
         SectionBorder,
     },
     data() {

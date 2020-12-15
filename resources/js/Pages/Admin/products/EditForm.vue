@@ -1,7 +1,8 @@
 <template>
 <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="update">
 
-    <p class="text-lg text-gray-800 font-medium pb-4">Product General information</p>
+    <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Edit</p>    
+
 
     <div class="flex flex-wrap -mx-3 mb-2">
 
@@ -95,11 +96,9 @@
                 placeholder="Weight" 
             aria-label="weight"/>
             
-        </div>      
-
+        </div>    
     </div>             
-      
-
+       
 
     <div class="flex flex-wrap -mx-3 mb-2">
 
@@ -135,8 +134,7 @@
             <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
         </div>   
     </div>         
-
-        
+ 
     <div class="flex flex-wrap -mx-3 mb-2">
 
         <select-input 
@@ -174,12 +172,11 @@
 
     </div>      
 
+
+    <SectionBorder/>
+    
     <div class="product-attributes" v-if="form.is_variable">
-
-        <SectionBorder/>
-
         <p class="text-lg text-gray-800 font-medium pb-4">Product Attributes information</p>
-
         <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
 
             <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
@@ -231,14 +228,13 @@
 
     </div> 
 
+
     <div class="product-variations" v-if="form.is_variable">   
-        <SectionBorder/>
-
         <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
-
-
-    
     </div> 
+
+    <SectionBorder/>
+
     
     <div class="mt-2 mb-10 relative"> 
         <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>

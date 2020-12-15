@@ -271,7 +271,7 @@ var render = function() {
                         "p",
                         {
                           staticClass:
-                            "font-hkbold text-sm uppercase tracking-wide",
+                            "font-bold text-sm uppercase tracking-wide",
                           class: _vm.Label.Color
                         },
                         [_vm._v(" " + _vm._s(_vm.Label.Title))]
@@ -288,7 +288,7 @@ var render = function() {
               { staticClass: "flex items-center content-center py-2" },
               [
                 _c(
-                  "h3",
+                  "p",
                   {
                     staticClass:
                       "font-semibold text-xs text-gray-400 capitalize",
@@ -341,7 +341,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "p",
-                { staticClass: "font-hkregular text-sm text-secondary  ml-2" },
+                { staticClass: "font-regular text-sm text-secondary  ml-2" },
                 [_vm._v("(45)")]
               )
             ])
@@ -502,7 +502,7 @@ var staticRenderFns = [
             "h2",
             {
               staticClass:
-                "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+                "font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl"
             },
             [_vm._v("Elyssi’s trends")]
           ),
@@ -511,7 +511,7 @@ var staticRenderFns = [
             "p",
             {
               staticClass:
-                "font-hkregular text-secondary-lighter text-lg md:text-xl pt-2"
+                "font-regular text-gray-400-lighter text-lg md:text-xl pt-2"
             },
             [_vm._v("Be styling, no matter the season!")]
           )
@@ -521,7 +521,7 @@ var staticRenderFns = [
           "a",
           {
             staticClass:
-              "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-hkregular text-xl text-primary",
+              "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary",
             attrs: { href: "/collection-grid" }
           },
           [

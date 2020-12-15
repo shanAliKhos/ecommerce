@@ -275,7 +275,7 @@ var render = function() {
                         "p",
                         {
                           staticClass:
-                            "font-hkbold text-sm uppercase tracking-wide",
+                            "font-bold text-sm uppercase tracking-wide",
                           class: _vm.Label.Color
                         },
                         [_vm._v(" " + _vm._s(_vm.Label.Title))]
@@ -292,7 +292,7 @@ var render = function() {
               { staticClass: "flex items-center content-center py-2" },
               [
                 _c(
-                  "h3",
+                  "p",
                   {
                     staticClass:
                       "font-semibold text-xs text-gray-400 capitalize",
@@ -345,7 +345,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "p",
-                { staticClass: "font-hkregular text-sm text-secondary  ml-2" },
+                { staticClass: "font-regular text-sm text-secondary  ml-2" },
                 [_vm._v("(45)")]
               )
             ])
@@ -441,10 +441,10 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c(
-                            "h4",
+                            "p",
                             {
                               staticClass:
-                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8 truncate "
+                                "font-semibold text-gray-400 text-xl md:text-2xl pt-5 pb-8 truncate "
                             },
                             [_vm._v(_vm._s(RelatedBlog.title))]
                           ),
@@ -467,7 +467,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
+                                "font-semibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
                             },
                             [_vm._v("Read more")]
                           )

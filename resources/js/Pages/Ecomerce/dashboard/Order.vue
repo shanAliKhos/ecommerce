@@ -292,6 +292,8 @@
 import AppLayout from './../shared/AppLayout'   
 import AcountsLayout from './../shared/AcountsLayout'   
 export default {
+    metaInfo: { title: 'Your Orders' },   
+
     layout: AppLayout, 
     components:{
         AcountsLayout,

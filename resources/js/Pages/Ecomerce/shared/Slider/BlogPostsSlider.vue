@@ -14,11 +14,11 @@
                             <span class="px-3">|</span>
                             <span>{{RelatedBlog.created_at}}</span>
                         </div>
-                        <h4 class="font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-8 truncate ">{{RelatedBlog.title}}</h4>
+                        <p class="font-semibold text-gray-400 text-xl md:text-2xl pt-5 pb-8 truncate ">{{RelatedBlog.title}}</p>
                             <span class="bg-white group-hover:bg-primary border transition-colors border-grey-darkest group-hover:border-primary rounded-full h-8 w-8 flex items-center justify-center">
                                 <i class="bx bx-chevron-right text-grey-darkest group-hover:text-white text-xl"></i>
                             </span>
-                            <span class="font-hksemibold text-grey-darkest  transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5">Read more</span>
+                            <span class="font-semibold text-grey-darkest transition-colors group-hover:text-primary sm:text-lg pl-3 sm:pl-5">Read more</span>
                     </div>
                     </inertia-link>
                 </div>

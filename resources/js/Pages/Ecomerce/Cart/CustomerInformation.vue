@@ -160,6 +160,7 @@ import YourOrder from './YourOrder'
 import PaymentForm from './PaymentForm';  
 
 export default {
+    metaInfo: { title: 'Customer Information' },   
     layout:AppLayout,
     components: {
         YourOrder,

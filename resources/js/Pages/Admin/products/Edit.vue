@@ -10,22 +10,14 @@
                 <a href="#" class="text-gray-600">Create Product</a>
             </li>
         </ol>
-        <inertia-link 
-            :href="route('admin.product.index')" 
-            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
-            >  
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
-            </svg>            
-            <span>Back</span>            
-       
-        </inertia-link>                
+        <BackButton/>
+ 
     </nav>
-    <p class="text-xl pb-6 flex items-center">Create Product</p>        
+     
     <div class="flex justify-center">
         <div class="w-full  pl-0 lg:pl-2">
             <div class="leading-loose">
-
+    
                 <edit-form :Product="Product" :Categories="Categories" :Brands="Brands"></edit-form>
 
             </div>
@@ -41,14 +33,19 @@ import AppLayout from './../Layouts/AppLayout'
 import ProductImages from './ProductImages' 
 import EditForm from './EditForm' 
 import ProductAttributes from './ProductAttributes' 
+import BackButton from './../../Shared/BackButton'   
+
  
 export default {
-    metaInfo: { title: 'Product Edit' },
+    metaInfo() {
+        return { title: `${this.$page.Product.slug} Edit` }
+    },   
     layout: AppLayout,       
     components: { 
         ProductImages,
         EditForm,
-        ProductAttributes
+        ProductAttributes,
+        BackButton
     },
 
     data () {

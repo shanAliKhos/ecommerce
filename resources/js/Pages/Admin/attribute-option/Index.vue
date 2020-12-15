@@ -1,5 +1,4 @@
 <template>
-
 <div>
 
     <nav class="text-sm font-semibold mb-6" aria-label="Breadcrumb">
@@ -54,15 +53,16 @@
     <pagination :links="Links" v-if="Links.length" ></pagination>
  
 </div>
-
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
 import ListItem from './components/ListItem'   
 import Pagination from './../../Shared/Pagination'  
 
-export default {
-    metaInfo: { title: 'AttributeOptions' },
+export default { 
+    metaInfo() {
+        return { title: `AttributeOptions` }
+    },        
     layout: AppLayout,  
     components:{ 
         ListItem,

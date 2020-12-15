@@ -43,7 +43,7 @@ let app = document.getElementById('app')
 
 new Vue({
   metaInfo: {
-    titleTemplate: (title) => title ? `${title} , OnlineShopping ` : 'OnlineShopping'
+    titleTemplate: (title) => title ? `${title} - E Commerce` : 'E Commerce'
   },
   render: h => h(InertiaApp, {
     props: {

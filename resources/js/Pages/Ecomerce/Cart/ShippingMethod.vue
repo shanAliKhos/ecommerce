@@ -126,6 +126,7 @@ import YourOrder from './YourOrder'
 import PaymentForm from './PaymentForm';  
 
 export default {
+    metaInfo: { title: 'Shipping Method' },   
     layout:AppLayout,
     components: {
         YourOrder,

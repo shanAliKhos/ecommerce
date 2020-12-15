@@ -243,6 +243,7 @@
 import AppLayout from './../shared/AppLayout'   
 import AcountsLayout from './../shared/AcountsLayout'   
 export default {
+    metaInfo: { title: 'WishList Items' },   
     layout: AppLayout, 
     components:{
         AcountsLayout,

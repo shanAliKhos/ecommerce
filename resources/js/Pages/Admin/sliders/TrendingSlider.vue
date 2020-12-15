@@ -10,26 +10,18 @@
                 <a href="#" class="text-gray-600">Trending Slider</a>
             </li>
         </ol>
-        <inertia-link 
-            :href="route('admin.dashboard')" 
-            class="transition duration-700 ease-in-out bg-red-400 hover:bg-red-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
-            >  
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
-            </svg>            
-            <span>Back</span>            
-       
-        </inertia-link>                
+
+        <BackButton/>           
  
-    </nav>
-    <p class="text-xl pb-6 flex items-center">Trending Slider</p>        
+    </nav> 
     <div class="flex justify-center">
         <div class="w-full pl-0 lg:pl-2">
             <div class="leading-loose ">
 
                 <form class="p-10 bg-white rounded shadow-2xl" @submit.prevent="store">
 
-                    <p class="text-lg text-gray-800 font-medium pb-4">Trending Slider Adjustment</p>
+                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Trending Slider</p>                        
+
  
                     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-4">
                          <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
@@ -52,24 +44,27 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
+import BackButton from './../../Shared/BackButton'   
 import LoadingButton from './../../Shared/LoadingButton'   
-import TextInput from './../../Shared/TextInput'   
-import FileInput from './../../Shared/FileInput' 
-import SelectInput from './../../Shared/SelectInput' 
-import Multiselect from 'vue-multiselect'
 
-import { VueEditor } from "vue2-editor";
+// import TextInput from './../../Shared/TextInput'   
+// import FileInput from './../../Shared/FileInput' 
+// import SelectInput from './../../Shared/SelectInput' 
+// import Multiselect from 'vue-multiselect'
+
+// import { VueEditor } from "vue2-editor";
 
 export default {
     metaInfo: { title: 'Blog Create' },
     layout:AppLayout,
     components: {
-        VueEditor,
         LoadingButton,
-        TextInput,
-        FileInput,
-        SelectInput,
-        Multiselect,
+        BackButton,
+        // VueEditor,
+        // TextInput,
+        // FileInput,
+        // SelectInput,
+        // Multiselect,
     },
 
     data() {
@@ -111,7 +106,10 @@ export default {
             // });
         }, 
     },           
-  
+    mounted() { 
+        const self = this
+        self.$root.$emit('sidebar-close');
+    },
 
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-<header class="xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated" 
+<div class="xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated" 
     :class="{ 'scrolled': !view.atTopOfPage }" >
     
     <nav-bar
@@ -18,11 +18,12 @@
         @mobile-menu-is-disabled="mobileMenu = false"    
     ></mobile-navbar>
 
-</header>
+</div>
 </template>
 <script> 
 import NavBar from './components/NavBar'  
 import MobileNavbar from './components/MobileNavbar'  
+ 
 export default { 
     components: {
         NavBar,
