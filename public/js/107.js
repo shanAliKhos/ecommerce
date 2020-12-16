@@ -21,7 +21,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
@@ -54,7 +53,7 @@ var render = function() {
       staticClass:
         "transition  duration-500 ease-in-out transform-gpu py-2 px-2 w-full flex items-center hover:shadow rounded-lg cursor-pointer mb-2 px-2 block border-b-4 font-semibold",
       class: _vm.IsActiveLink,
-      attrs: { href: _vm.href, "preserve-scroll": "" }
+      attrs: { href: _vm.href }
     },
     [_vm._t("default")],
     2

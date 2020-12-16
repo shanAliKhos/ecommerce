@@ -213,7 +213,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["GlideSlide"]), _defineProperty(_components, "ShopProduct", _Product_Product__WEBPACK_IMPORTED_MODULE_0__["default"]), _components),
   computed: {
     TrendingSliderProducts: function TrendingSliderProducts() {
-      return this.$page.FeaturedSliderProducts;
+      return this.$page.FeaturedSliderProducts.trending_slider;
     }
   }
 });

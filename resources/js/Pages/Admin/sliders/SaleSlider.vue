@@ -20,9 +20,8 @@
 
                 <form class="p-10 bg-white rounded shadow-2xl" @submit.prevent="store">
  
-                <p class="pb-6 flex font-semibold text-xl text-gray-400">Sale Slider</p>                        
+                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Sale Slider</p>                        
                        
- 
                     <div class="w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"> 
                         <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Products</label>
                         <multiselect    
@@ -42,19 +41,13 @@
                         <p class="text-red-500 text-xs italic" v-if="$page.errors.SaleProducts">{{$page.errors.SaleProducts}}</p>
                     </div>                          
 
-
                     <div class="flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-4 mt-10">
                         <div v-for="(Product, ProductIndex) in SliderProducts" :key="ProductIndex" class="w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block">
-
-                            <div class="px-2 md:px-2">
-
+                          
                                 <shop-product :Product="Product"></shop-product>
-
-                            </div>
-
+                        
                         </div> 
                     </div>
-  
 
                     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-4">
                          <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
@@ -66,7 +59,6 @@
                     </div>                          
  
                 </form> 
-
         
             </div>
 
@@ -83,7 +75,7 @@ import Multiselect from 'vue-multiselect'
 import ShopProduct from './../../Ecomerce/shared/Product/Product' 
 
 export default {
-    metaInfo: { title: 'Blog Create' },
+    metaInfo: { title: 'SaleSlider' },
     layout:AppLayout,
     components: {
         LoadingButton,
@@ -95,8 +87,8 @@ export default {
  
     data() {
         return {
-            form:{        
-                SaleProducts:null,            
+            form:{
+                SaleProducts:this.$page.slider.sale_slider,
             },
             sending:false,
         };
@@ -106,26 +98,20 @@ export default {
             const self = this;
             let formData = new FormData();
             formData.append("SaleProducts", JSON.stringify(self.form.SaleProducts) || ''); 
-            self.$inertia.post(route('admin.sale-slider.store'), formData,{
+            self.$inertia.post(route('admin.slider.sale.store'), formData,{
                 preserveState: true,           
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,
-                onSuccess: () => {
-                    if (Object.keys(this.$page.errors).length === 0) {
-                        this.form.SaleProducts = null 
-                    }
-                },             
+                        
             });            
         },
-    },
-
-  
+    }, 
     computed: {
         ProductsOnSale(){
-            return this.$page.ProductsOnSale;
+            return this.$page.sale_products;
         },
         SliderProducts(){ 
-            return  this.form.SaleProducts ;
+            return  this.form.SaleProducts;
         },
     },
     mounted() { 

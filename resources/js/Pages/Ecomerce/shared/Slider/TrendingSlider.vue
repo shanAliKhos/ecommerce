@@ -80,7 +80,7 @@ export default {
     
     computed: {
       TrendingSliderProducts(){
-          return this.$page.FeaturedSliderProducts;
+          return this.$page.FeaturedSliderProducts.trending_slider;
       },
     },
  

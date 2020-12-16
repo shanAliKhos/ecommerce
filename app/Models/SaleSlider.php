@@ -8,10 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SaleSlider extends Model
 {
     use HasFactory;
-
-    public function products()
-    {
-        return $this->belongsToMany(Product::class, 'sale_sliders');
-    }
-
+ 
 }

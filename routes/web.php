@@ -105,15 +105,23 @@ use Illuminate\Support\Facades\Password;
                 Route::resource('/blog', 'Admin\BlogController'); 
  
                 Route::resource('/product-attribute', 'Admin\ProductAttributeController');
-
-                Route::resource('/hero-slider', 'Admin\Silders\HeroSliderController');
-
-                Route::resource('/sale-slider', 'Admin\Silders\SaleSliderController');
-                
-                Route::resource('/trending-slider', 'Admin\Silders\TrendingSliderController');
-                 
+                                
                 Route::get('/setting', 'Admin\SettingController@index')->name('setting.index');
                 Route::put('/setting', 'Admin\SettingController@update')->name('setting.update');
+                
+
+                Route::prefix('slider')->name('slider.')->group(function () {           
+                    
+                    Route::get('hero', 'Admin\SliderController@HeroSlider')->name('hero.index');
+                    Route::post('hero', 'Admin\SliderController@HeroSliderStore')->name('hero.store');
+
+                    Route::get('sale', 'Admin\SliderController@SaleSlider')->name('sale.index');
+                    Route::post('sale', 'Admin\SliderController@SaleSliderStore')->name('sale.store');
+
+                    Route::get('trending', 'Admin\SliderController@TrendingSlider')->name('trending.index');
+                    Route::post('trending', 'Admin\SliderController@TrendingSliderStore')->name('trending.store');
+                    
+                });                 
                 
                 // Route::get('/product/{product}/image', 'Admin\ProductImageController@index')->name('product.images.index');
                 

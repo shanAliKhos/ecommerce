@@ -15,9 +15,10 @@ class CreateSaleSlidersTable extends Migration
     {
         Schema::create('sale_sliders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id')->nullable();  
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');            
-            $table->timestamps();
+            $table->unsignedBigInteger('slider_id')->index();
+            $table->foreign('slider_id')->references('id')->on('sliders')->onDelete('cascade');            
+            $table->unsignedBigInteger('product_id')->index()->nullable();  
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');             
         });
     }
 

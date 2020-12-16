@@ -70,25 +70,13 @@ export default {
         [GlideSlide.name]: GlideSlide,
         ShopProduct,
     },
-    // data() {
-    //     return {
-    //         SaleProducts:[],
-    //     }
-    // },
-    // methods: {
-    //     async GetProductsOnSale(){
-    //         this.SaleProducts = await axios.get(route('slider.sale')).then(response => response.data);
-    //         return ;                
-    //     },
-    // },
+ 
     computed: {
       SaleSliderProducts(){
-          return this.$page.SaleSliderProducts;
+          return this.$page.Slider.sale_slider;
       },
     },    
-    // mounted() {
-    //     this.GetProductsOnSale();
-    // },
+ 
     
 } 
 </script>

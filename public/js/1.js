@@ -21,7 +21,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
@@ -44,6 +43,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/Logo */ "./resources/js/Pages/Shared/Logo.vue");
 /* harmony import */ var _SideLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideLink */ "./resources/js/Pages/Admin/Layouts/partials/SideLink.vue");
+//
+//
 //
 //
 //
@@ -261,7 +262,7 @@ var render = function() {
       staticClass:
         "transition  duration-500 ease-in-out transform-gpu py-2 px-2 w-full flex items-center hover:shadow rounded-lg cursor-pointer mb-2 px-2 block border-b-4 font-semibold",
       class: _vm.IsActiveLink,
-      attrs: { href: _vm.href, "preserve-scroll": "" }
+      attrs: { href: _vm.href }
     },
     [_vm._t("default")],
     2
@@ -607,9 +608,9 @@ var render = function() {
                   "side-link",
                   {
                     attrs: {
-                      href: _vm.route("admin.hero-slider.index"),
+                      href: _vm.route("admin.slider.hero.index"),
                       active:
-                        _vm.$page.currentRouteName == "admin.hero-slider.index"
+                        _vm.$page.currentRouteName == "admin.slider.hero.index"
                     }
                   },
                   [
@@ -645,9 +646,9 @@ var render = function() {
                   "side-link",
                   {
                     attrs: {
-                      href: _vm.route("admin.sale-slider.index"),
+                      href: _vm.route("admin.slider.sale.index"),
                       active:
-                        _vm.$page.currentRouteName == "admin.sale-slider.index"
+                        _vm.$page.currentRouteName == "admin.slider.sale.index"
                     }
                   },
                   [
@@ -683,10 +684,10 @@ var render = function() {
                   "side-link",
                   {
                     attrs: {
-                      href: _vm.route("admin.trending-slider.index"),
+                      href: _vm.route("admin.slider.trending.index"),
                       active:
                         _vm.$page.currentRouteName ==
-                        "admin.trending-slider.index"
+                        "admin.slider.trending.index"
                     }
                   },
                   [

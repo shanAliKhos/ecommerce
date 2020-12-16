@@ -6,19 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Slider;
 use Inertia\Inertia;
 
 class ShopController extends Controller
 {
-    public function Home()
+    public function Home(Slider $slider)
     {
         $Product = new Product;
-    // return $Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get();
-    // return $Product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->take(12)->latest()->get();
-        
+ 
         return Inertia::render('Ecomerce/welcome/Welcome',[
-            'SaleSliderProducts'=>$Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get(),
-            'FeaturedSliderProducts'=>$Product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->take(12)->latest()->get(),
+            'Slider'=> $slider->where('name','sale')->with('sale_slider')->first(),
+            'FeaturedSliderProducts'=> $slider->where('name','trending')->with('trending_slider')->first(),
         ]);        
     }    
      

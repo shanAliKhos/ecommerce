@@ -205,25 +205,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _defineProperty(_components, "ShopProduct", _Product_Product__WEBPACK_IMPORTED_MODULE_1__["default"]), _components),
-  // data() {
-  //     return {
-  //         SaleProducts:[],
-  //     }
-  // },
-  // methods: {
-  //     async GetProductsOnSale(){
-  //         this.SaleProducts = await axios.get(route('slider.sale')).then(response => response.data);
-  //         return ;                
-  //     },
-  // },
   computed: {
     SaleSliderProducts: function SaleSliderProducts() {
-      return this.$page.SaleSliderProducts;
+      return this.$page.Slider.sale_slider;
     }
-  } // mounted() {
-  //     this.GetProductsOnSale();
-  // },
-
+  }
 });
 
 /***/ }),

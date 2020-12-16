@@ -84,14 +84,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -99,7 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Blog Create'
+    title: 'SaleSlider'
   },
   layout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -112,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        SaleProducts: null
+        SaleProducts: this.$page.slider.sale_slider
       },
       sending: false
     };
@@ -124,25 +116,20 @@ __webpack_require__.r(__webpack_exports__);
       var self = this;
       var formData = new FormData();
       formData.append("SaleProducts", JSON.stringify(self.form.SaleProducts) || '');
-      self.$inertia.post(route('admin.sale-slider.store'), formData, {
+      self.$inertia.post(route('admin.slider.sale.store'), formData, {
         preserveState: true,
         onStart: function onStart() {
           return _this.sending = true;
         },
         onFinish: function onFinish() {
           return _this.sending = false;
-        },
-        onSuccess: function onSuccess() {
-          if (Object.keys(_this.$page.errors).length === 0) {
-            _this.form.SaleProducts = null;
-          }
         }
       });
     }
   },
   computed: {
     ProductsOnSale: function ProductsOnSale() {
-      return this.$page.ProductsOnSale;
+      return this.$page.sale_products;
     },
     SliderProducts: function SliderProducts() {
       return this.form.SaleProducts;
@@ -485,14 +472,8 @@ var render = function() {
                       staticClass:
                         "w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"
                     },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "px-2 md:px-2" },
-                        [_c("shop-product", { attrs: { Product: Product } })],
-                        1
-                      )
-                    ]
+                    [_c("shop-product", { attrs: { Product: Product } })],
+                    1
                   )
                 }),
                 0
