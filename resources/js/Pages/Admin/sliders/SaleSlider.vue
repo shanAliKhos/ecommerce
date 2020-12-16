@@ -88,7 +88,7 @@ export default {
     data() {
         return {
             form:{
-                SaleProducts:this.$page.slider.sale_slider,
+                SaleProducts:this.$page.slider?this.$page.slider.sale_slider:null,
             },
             sending:false,
         };

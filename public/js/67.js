@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        TrendingProducts: this.$page.slider.trending_slider
+        TrendingProducts: this.$page.slider ? this.$page.slider.trending_slider : null
       },
       sending: false
     };
