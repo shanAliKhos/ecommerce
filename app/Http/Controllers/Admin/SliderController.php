@@ -22,9 +22,9 @@ class SliderController extends Controller
     }     
 
     public function TrendingSlider(Slider $slider,Product $product)
-    {  
+    {   
         return Inertia::render('Admin/sliders/TrendingSlider',[
-            'slider'=> $this->Model->where('name','trending')->with('trending_slider')->firstOrFail(),
+            'slider'=> $this->Model->where('name','trending')->with('trending_slider')->first(),
             'trending_products'=>$product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->get(),
         ]); 
     }
@@ -46,7 +46,7 @@ class SliderController extends Controller
     public function SaleSlider(Product $product)
     {   
         return Inertia::render('Admin/sliders/SaleSlider',[
-            'slider'=> $this->Model->where('name','sale')->with('sale_slider')->firstOrFail(),
+            'slider'=> $this->Model->where('name','sale')->with('sale_slider')->first(),
             'sale_products'=> $product->where('sale_price','>',0)->get(),
         ]); 
     }
