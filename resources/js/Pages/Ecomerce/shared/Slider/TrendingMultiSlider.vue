@@ -1,13 +1,13 @@
 <template>
     <div class="w-full relative">
-        <div class="absolute inset-y-0 right-0 w-13/14 bg-center bg-no-repeat bg-cover bg-products-bg"></div>
+        <div class="absolute inset-y-0 right-0 w-13/14" :class="{'bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 ':true}"></div>
         <div class="w-2/3 md:max-w-screen-sm lg:w-5/6 lg:max-w-full xl:w-5/6 xxl:max-w-screen-xxl mx-auto lg:ml-auto lg:mr-10 xl:mr-16 xxl:mx-auto relative z-10">
           
             <div class="py-16">
                 <div class="ml-0 flex justify-between">
 
                     <div class="hidden lg:block w-3/4 bg-white">
-                        <div class="py-12 px-4">
+                        <div class="py-12 px-4 shadow">
 
                             <vue-glide 
                                 :type="'carousel'" 
@@ -234,7 +234,7 @@
                             <h2 class="font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"> New season, matching shoes </h2>
                             <p class="font-regular text-gray-400 text-lg pt-1"> Featured Collection </p>
                         </div>
-                        <div class="relative group">
+                        <div class="relative group shadow-2xl">
                             <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (14).jpg')"></div>
                             <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"></div>
                             <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group transition-opacity">
@@ -264,7 +264,7 @@
                     </div>
 
                     <div class="hidden lg:block w-3/4 bg-white">
-                        <div class="py-12 px-4">
+                        <div class="py-12 px-4 shadow shadow-2xl">
                        
                             <vue-glide 
                                 :type="'carousel'" 
@@ -495,7 +495,7 @@
                 <div class="ml-0 flex justify-between">
                     
                     <div class="hidden lg:block w-3/4 bg-white">
-                        <div class="py-12 px-4">
+                        <div class="py-12 px-4 shadow">
                             
                             <vue-glide 
                                 :type="'carousel'" 
@@ -724,7 +724,7 @@
                             <h2 class="font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide">Summer? You need chick sunglasses</h2>
                             <p class="font-regular text-gray-400 text-lg pt-1">Featured Collection</p>
                         </div>
-                        <div class="relative group">
+                        <div class="relative group shadow-2xl">
                             <div class="h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14" style="background-image:url('/img/product/product (22).jpg')"></div>
                             <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"></div>
                             <div class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group">

@@ -13,11 +13,11 @@ class SettingsTableSeeder extends Seeder
     protected $settings = [
         [
             'key'                       =>  'site_name',
-            'value'                     =>  'e-shopping',
+            'value'                     =>  'e shop',
         ],
         [
             'key'                       =>  'site_title',
-            'value'                     =>  'E shop',
+            'value'                     =>  'e shop',
         ],
         [
             'key'                       =>  'default_email_address',
@@ -45,39 +45,39 @@ class SettingsTableSeeder extends Seeder
         ],
         [
             'key'                       =>  'footer_copyright_text',
-            'value'                     =>  '',
+            'value'                     =>  'COPYRIGHT @ shanalikhoso12@gmail.com',
         ],
         [
             'key'                       =>  'seo_meta_title',
-            'value'                     =>  '',
+            'value'                     =>  'ecommerce shopping website',
         ],
         [
             'key'                       =>  'seo_meta_description',
-            'value'                     =>  '',
+            'value'                     =>  'ecommerce shopping website',
         ],
         [
             'key'                       =>  'social_facebook',
-            'value'                     =>  '',
+            'value'                     =>  'https://www.facebook.com/',
         ],
         [
             'key'                       =>  'social_twitter',
-            'value'                     =>  '',
+            'value'                     =>  'https://twitter.com/?lang=en',
         ],
         [
             'key'                       =>  'social_instagram',
-            'value'                     =>  '',
+            'value'                     =>  'https://www.instagram.com/',
         ],
         [
             'key'                       =>  'social_linkedin',
-            'value'                     =>  '',
+            'value'                     =>  'https://pk.linkedin.com/',
         ],
         [
             'key'                       =>  'google_analytics',
-            'value'                     =>  '',
+            'value'                     =>  'google_analytics',
         ],
         [
             'key'                       =>  'facebook_pixels',
-            'value'                     =>  '',
+            'value'                     =>  'facebook_pixels',
         ],
         [
             'key'                       =>  'stripe_payment_method',
@@ -85,11 +85,11 @@ class SettingsTableSeeder extends Seeder
         ],
         [
             'key'                       =>  'stripe_key',
-            'value'                     =>  '',
+            'value'                     =>  'stripe_key',
         ],
         [
             'key'                       =>  'stripe_secret_key',
-            'value'                     =>  '',
+            'value'                     =>  'stripe_secret_key',
         ],
         [
             'key'                       =>  'paypal_payment_method',
@@ -97,11 +97,11 @@ class SettingsTableSeeder extends Seeder
         ],
         [
             'key'                       =>  'paypal_client_id',
-            'value'                     =>  '',
+            'value'                     =>  'paypal_client_id',
         ],
         [
             'key'                       =>  'paypal_secret_id',
-            'value'                     =>  '',
+            'value'                     =>  'paypal_secret_id',
         ],
     ];
 

@@ -12,6 +12,7 @@ use App\Models\Setting;
 use App\Models\Order;
 use Illuminate\Support\Str;
 use App\Notifications\InvoicePaid;
+use Config;
 
 
 
@@ -104,6 +105,13 @@ class CheckOutController extends Controller
         ]); 
 
 
+        if(Setting::get('stripe_payment_method') == 1){
+            config([
+                'services.stripe.key'=>Setting::get('stripe_key'),
+                'services.stripe.secret'=>Setting::get('stripe_secret_key'),
+            ]);
+        }         
+
         $Product = new Product; 
         $NewOrder = []; 
         $NewOrder['GrandTotal']= 0;
@@ -188,8 +196,14 @@ class CheckOutController extends Controller
                 'GrandTotal'=>$CreatedOrder->GrandTotal,
                 'OderItems'=> $CreatedOrder->items,
             ];
- 
-            $request->user()->notify(new InvoicePaid($notification));
+            
+            try { 
+
+                $request->user()->notify(new InvoicePaid($notification));
+
+            } catch (\Throwable $th) {
+                 
+            }
 
             return redirect()->route('cart.success')->with('success','Thank you! Your payment has been accepted.');
   

@@ -1,5 +1,5 @@
 <template> 
-    <div class="container border-t border-grey-dark pt-10 sm:pt-12">
+    <div class="container border-t border-grey-dark pt-10 sm:pt-12 mb-20 lg:mb-0">
         <!-- <div class="flex flex-wrap items-center"> 
             <a href="/cart/" class="  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ">Cart</a>
             <i class="bx bx-chevron-right text-sm text-secondary px-2"></i> 

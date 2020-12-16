@@ -1,5 +1,5 @@
 <template>
-<form class="bg-white rounded lg:px-20 pt-6 pb-8 needs-validation"
+<form class="bg-white rounded lg:px-20 pt-6 pb-8 needs-validation "
     id="payment-form"
     @submit.prevent="pay()"
     novalidate        

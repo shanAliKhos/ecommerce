@@ -6,8 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
 use Auth;
-use Config;
-use App\Models\Category;
+use Config; 
 use App\Models\User;
 use App\Models\Message;
 use App\Models\Setting;
@@ -35,26 +34,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     { 
-        $dbSetting = false;
-        $dbCategory = false;
+        $dbSetting = false; 
 
         if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
             $dbSetting = true;
-
-            if(Setting::get('stripe_payment_method') == 1){
-                config([
-                    'services.stripe.key'=>Setting::get('stripe_key'),
-                    'services.stripe.secret'=>Setting::get('stripe_secret_key'),
-                ]);
-            }            
-        }
-        if (!\App::runningInConsole() && count(Schema::getColumnListing('categories'))) {
-            $dbCategory = true;
-        }
+   
+        } 
        
         Inertia::share([  
-            // "Notofication"=> Auth()->user,
-            "SiteOptions" => [
+          
+            "SiteOptions" =>  [
                 "Title" => $dbSetting?Setting::get('site_title'):'',
                 "Logo" => $dbSetting?Setting::get('site_logo'):'',
                 "Favicon" => $dbSetting?Setting::get('site_favicon'):'',
@@ -72,27 +61,13 @@ class AppServiceProvider extends ServiceProvider
                 ], 
                 "FooterCopyRightText" => $dbSetting?Setting::get('footer_copyright_text'):'',
             ],
-            'Categories'=> $dbCategory?Category::where(['is_active'=>true,'menu'=>true])->get():[],
+          
             'Cart' => function () {
                 return [
                     'Items' => Session::get('CartItems'),
                 ];
             },
-            'Support' => function () {
-                 
-                $User = new User;
-                $Admin = $User->where('is_admin',true)->first();
-                $id = $Admin->id;
-
-                return Message::where(function($q) use ($id) {
-                    $q->where('from', auth()->id());
-                    $q->where('to', $id);
-                })->orWhere(function($q) use ($id) {
-                    $q->where('from', $id);
-                    $q->where('to', auth()->id());
-                })
-                ->get();
-            },
+           
             'flash' => function () {
                 return [
                     'success' => Session::get('success'),
@@ -100,6 +75,7 @@ class AppServiceProvider extends ServiceProvider
                     'info' => Session::get('info'),
                 ];
             },
+
         ]);        
 
     }
