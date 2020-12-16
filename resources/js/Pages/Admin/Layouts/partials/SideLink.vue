@@ -15,7 +15,7 @@
         props: ['href', 'active','atTopOfPage'], 
 
 
-        computed: {
+        computed: { 
        
             IsActiveLink() {
                 return this.active
