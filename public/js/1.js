@@ -316,7 +316,7 @@ var render = function() {
         _c("div", { staticClass: "mx-3 py-4 h-full" }, [
           _c(
             "div",
-            { staticClass: "py-2  pr-3" },
+            { staticClass: "py-1 pr-3" },
             [
               _c(
                 "side-link",
@@ -811,7 +811,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "py-2 pr-3" },
+            { staticClass: "py-1 pr-3" },
             [
               _c(
                 "side-link",
@@ -858,7 +858,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "w-full h-20 border-b  border-gray-300 flex px-4 items-center mb-4"
+          "w-full h-20 border-b  border-gray-300 flex px-4 items-center "
       },
       [
         _c("p", { staticClass: "font-semibold text-3xl text-blue-400 pl-4" }, [

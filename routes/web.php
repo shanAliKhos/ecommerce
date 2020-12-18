@@ -114,7 +114,7 @@ use Illuminate\Support\Facades\Password;
                     
                     Route::get('/hero', 'Admin\Silders\HeroSliderController@index')->name('hero.index');
                     Route::post('/hero', 'Admin\Silders\HeroSliderController@store')->name('hero.store');
-                    // Route::get('/hero', 'Admin\Silders\HeroSliderController@edit')->name('hero.index');
+                    Route::get('/hero/{heroslide}', 'Admin\Silders\HeroSliderController@edit')->name('hero.index');
                     // Route::post('/hero', 'Admin\Silders\HeroSliderController@update')->name('hero.store');
 
                     Route::get('/sale', 'Admin\Silders\SaleSliderController@edit')->name('sale.index');

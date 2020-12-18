@@ -43,12 +43,14 @@ class HeroSliderController extends Controller
         ]);
         $HeroSlider = $this->Model->where('name','hero')->first();
  
+ 
+
         $HeroSliderModel->create([ 
             "slider_id" => $HeroSlider->id,
             "title" => $request->title,
-            "button_url" => $request->title,
-            "button_title" => $request->title,
-            "image" => 'sadasdasdasd',
+            "button_url" => $request->button_url,
+            "button_title" => $request->button_title,
+            "image" => $request->file('image')->store('HeroSlider','public'),
         ]);  
 
         return back()->with('success','hero slide created');

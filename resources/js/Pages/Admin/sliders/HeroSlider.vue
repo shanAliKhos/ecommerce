@@ -98,15 +98,13 @@
                                         <tr>
                                             <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
                                             <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">IMAGE</th>
-                                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">TITLE</th>
-                                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">SKU</th> 
+                                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">TITLE</th> 
                                             <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ACTIONS</th>
                                         </tr>
                                     </thead>
                                     <tbody> 
-                                        <!-- <list-item v-for="(Product, ProductIndex) in Products" :key="ProductIndex" :ProductIndex="ProductIndex" :Product="Product" ></list-item>
-                                
-                                        <tr v-if="(!Products.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                                        <list-item v-for="(Slide, SlideIndex) in Slides" :key="SlideIndex" :SlideIndex="SlideIndex" :Slide="Slide" ></list-item>
+                                        <tr v-if="(!Slides.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                                             <td colspan="7" class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
                                                 <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
                                                     <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +113,7 @@
                                                     <span>No Record Found !  </span>
                                                 </p>
                                             </td> 
-                                        </tr>                                    -->
+                                        </tr>                                   
 
                                     </tbody>
                                 </table>    
@@ -145,6 +143,7 @@ import LoadingButton from './../../Shared/LoadingButton'
 import BackButton from './../../Shared/BackButton'   
 import FileInput from './../../Shared/FileInput'   
 import TextInput from './../../Shared/TextInput'   
+import ListItem from './components/ListItem'   
  
 
 export default {
@@ -155,6 +154,7 @@ export default {
         BackButton,
         FileInput,
         TextInput,        
+        ListItem,        
     },
 
     data() {
@@ -195,7 +195,13 @@ export default {
     mounted() { 
         const self = this
         self.$root.$emit('sidebar-close');
-    },            
+    },          
+    computed:{
+        Slides(){ 
+            return this.$page.slider?this.$page.slider.hero_slider:null;
+            
+        },        
+    },
  
 };
 </script>
