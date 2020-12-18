@@ -44,7 +44,7 @@
             
             <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex" >
                 
-                <shop-product :Product="Product" class="relative"></shop-product>
+                <shop-product :Product="Product" class="relative mt-2 mb-5 pb-2 z-30"></shop-product>
                 
             </vue-glide-slide>  
 

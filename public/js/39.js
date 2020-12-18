@@ -281,6 +281,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -822,7 +831,7 @@ var render = function() {
                         "p",
                         {
                           staticClass:
-                            "text-lg text-gray-800 font-medium pb-4 md:text-right mx-5"
+                            "text-lg text-gray-800 font-medium pb-4 md: mx-5"
                         },
                         [_vm._v("Product Attributes Values ")]
                       ),
@@ -932,55 +941,120 @@ var render = function() {
       _vm._v(" "),
       _c("SectionBorder"),
       _vm._v(" "),
-      _c("div", { staticClass: "mt-6" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
-          },
-          [
-            _c(
-              "loading-button",
-              {
-                staticClass:
-                  "transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
-                attrs: { loading: _vm.sending, type: "submit", as: "button" }
-              },
-              [
-                _vm._v(
-                  "\r\n                UPDATE PRODUCTS\r\n                    "
-                ),
-                !_vm.sending
-                  ? _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "transition duration-700 ease-in-out  h-5 w-5 ml-2",
+      _c(
+        "div",
+        { staticClass: "mt-5 lg:flex lg:item-center lg:justify-around" },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-full md:w-1/2 flex items-center lg:justify-start  sm:px-6 mt-2"
+            },
+            [
+              _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "w-full flex items-center justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex mr-2",
+                  attrs: {
+                    href: _vm.route("shop.show", _vm.Product.slug),
+                    type: "button",
+                    as: "button"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\r\n                SHOW PRODUCTS\r\n                    "
+                  ),
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "transition duration-700 ease-in-out  h-5 w-5 ml-2",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
                         attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 20 20",
-                          fill: "currentColor"
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                         }
-                      },
-                      [
-                        _c("path", {
+                      }),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-full md:w-1/2 flex items-center lg:justify-end  sm:px-6 mt-2"
+            },
+            [
+              _c(
+                "loading-button",
+                {
+                  staticClass:
+                    "w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex  mr-2",
+                  attrs: { loading: _vm.sending, type: "submit", as: "button" }
+                },
+                [
+                  _vm._v(
+                    "\r\n                UPDATE PRODUCTS\r\n                    "
+                  ),
+                  !_vm.sending
+                    ? _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "transition duration-700 ease-in-out  h-5 w-5 ml-2",
                           attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                            "clip-rule": "evenodd"
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 20 20",
+                            fill: "currentColor"
                           }
-                        })
-                      ]
-                    )
-                  : _vm._e()
-              ]
-            )
-          ],
-          1
-        )
-      ])
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "fill-rule": "evenodd",
+                              d:
+                                "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
+                              "clip-rule": "evenodd"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e()
+                ]
+              )
+            ],
+            1
+          )
+        ]
+      )
     ],
     1
   )

@@ -289,7 +289,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "xx-sidebar h-screen" }, [
+  return _c("div", { staticClass: "xx-sidebar h-full" }, [
     _vm.sideBarOpen
       ? _c("div", {
           staticClass:
@@ -313,7 +313,7 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
-        _c("div", { staticClass: "mx-3 py-4 h-screen" }, [
+        _c("div", { staticClass: "mx-3 py-4 h-full" }, [
           _c(
             "div",
             { staticClass: "py-2  pr-3" },

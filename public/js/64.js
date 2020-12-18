@@ -192,15 +192,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   methods: {// AddToCart(Item){   
@@ -569,72 +560,69 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "inertia-link",
-    {
-      staticClass: "z-30 p-2",
-      attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
-    },
-    [
-      _c(
-        "div",
-        {
-          staticClass:
-            "product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl hover:scale-105 rounded-lg"
-        },
-        [
-          _vm.SetLable.Active
-            ? _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full "
-                },
-                [
-                  _c(
-                    "p",
-                    {
-                      staticClass:
-                        "font-semibold text-sm uppercase tracking-wide",
-                      class: _vm.SetLable.Color
-                    },
-                    [_vm._v(" " + _vm._s(_vm.SetLable.Title))]
-                  )
-                ]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex justify-center items-center m-1" }, [
-            _c("div", {
-              staticClass:
-                "w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg",
-              style: "background-image:url('" + _vm.ProductImage + "')"
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-2 relative h-28 " }, [
-            _c(
-              "div",
-              { staticClass: "flex items-center content-center py-2" },
-              [
-                _c(
-                  "p",
+  return _c("div", { staticClass: "p-2 " }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl rounded-lg pb-4"
+      },
+      [
+        _c(
+          "inertia-link",
+          { attrs: { href: _vm.route("shop.show", _vm.Product.slug) } },
+          [
+            _vm.SetLable.Active
+              ? _c(
+                  "div",
                   {
                     staticClass:
-                      "font-semibold text-xs text-gray-400 capitalize",
-                    attrs: { title: _vm.ProductName }
+                      "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full"
                   },
-                  [_vm._v(_vm._s(_vm.ProductName.substring(0, 65) + "..."))]
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "font-semibold text-sm uppercase tracking-wide",
+                        class: _vm.SetLable.Color
+                      },
+                      [_vm._v(" " + _vm._s(_vm.SetLable.Title))]
+                    )
+                  ]
                 )
-              ]
-            ),
+              : _vm._e(),
             _vm._v(" "),
-            _c("div", { staticClass: "flex  absolute bottom-7" }, [
-              _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
-                _vm._v(
-                  _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
-                )
-              ]),
+            _c("div", { staticClass: "flex justify-center items-center" }, [
+              _c("div", {
+                staticClass:
+                  "w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg",
+                style: "background-image:url('" + _vm.ProductImage + "')"
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex items-center px-4 py-1" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden",
+                  attrs: { title: _vm.ProductName }
+                },
+                [_vm._v(_vm._s(_vm.ProductName))]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex px-4 py-1" }, [
+              _c(
+                "p",
+                { staticClass: "font-semibold text-red-400 text-normal" },
+                [
+                  _vm._v(
+                    _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
+                  )
+                ]
+              ),
               _vm._v(" "),
               _vm.SalePrice > 0
                 ? _c(
@@ -652,8 +640,8 @@ var render = function() {
                 : _vm._e()
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "flex absolute bottom-2" }, [
-              _c("div", { staticClass: "flex items-center text-xs" }, [
+            _c("div", { staticClass: "flex px-4" }, [
+              _c("div", { staticClass: "flex items-center  " }, [
                 _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
                 _vm._v(" "),
                 _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
@@ -671,11 +659,12 @@ var render = function() {
                 [_vm._v("(45)")]
               )
             ])
-          ])
-        ]
-      )
-    ]
-  )
+          ]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

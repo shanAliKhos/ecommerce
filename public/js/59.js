@@ -646,7 +646,7 @@ var render = function() {
                     { key: ProductIndex },
                     [
                       _c("shop-product", {
-                        staticClass: "relative",
+                        staticClass: "relative mt-2 mb-5 pb-2 z-30",
                         attrs: { Product: Product }
                       })
                     ],
