@@ -12,9 +12,6 @@
         </transition>    
         
     </main>         
-    <!-- <div v-if="Authenticated">
-        <Support></Support>
-    </div> -->
 
     <app-footer></app-footer>
 
@@ -40,31 +37,24 @@
             FlashMessage, 
         },  
 
-        computed: {
-            Authenticated(){
-                if(this.$page.user){
-                    return true
-                }
-                return false
-                
-            },
-        },
+ 
 
         
     }
 </script>
 <style scoped>
 .slide-fade-enter-active {  
-  transition: .8s cubic-bezier(.8, .1, 1, .04); 
+  transition:all .8s cubic-bezier(.2, .1, .8, .04); 
 
 }
 .slide-fade-leave-active {  
-  transition: .3s cubic-bezier(.8, .1, 1, .04); 
+  transition:all .3s cubic-bezier(.2, .1, .8, .04); 
 }
  
 .slide-fade-enter, .slide-fade-leave-to{
-  transform: translateY(500px);
+  transform: translateY(-100%); 
   opacity: 0;
 } 
+ 
  
 </style>

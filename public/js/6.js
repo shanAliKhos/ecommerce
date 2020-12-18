@@ -38,9 +38,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -49,15 +46,6 @@ __webpack_require__.r(__webpack_exports__);
     AppHeader: _Partials_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _Partials_AppFooter__WEBPACK_IMPORTED_MODULE_1__["default"],
     FlashMessage: _Shared_FlashMessage__WEBPACK_IMPORTED_MODULE_2__["default"]
-  },
-  computed: {
-    Authenticated: function Authenticated() {
-      if (this.$page.user) {
-        return true;
-      }
-
-      return false;
-    }
   }
 });
 
@@ -193,7 +181,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".slide-fade-enter-active[data-v-0b5ac64c] {\n  transition: .8s cubic-bezier(.8, .1, 1, .04);\n}\n.slide-fade-leave-active[data-v-0b5ac64c] {\n  transition: .3s cubic-bezier(.8, .1, 1, .04);\n}\n.slide-fade-enter[data-v-0b5ac64c], .slide-fade-leave-to[data-v-0b5ac64c]{\n  transform: translateY(500px);\n  opacity: 0;\n} \n \n", ""]);
+exports.push([module.i, ".slide-fade-enter-active[data-v-0b5ac64c] {\n  transition:all .8s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-leave-active[data-v-0b5ac64c] {\n  transition:all .3s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-enter[data-v-0b5ac64c], .slide-fade-leave-to[data-v-0b5ac64c]{\n  transform: translateY(-100%);\n  opacity: 0;\n} \n \n \n", ""]);
 
 // exports
 

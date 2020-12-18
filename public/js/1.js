@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'text-red-500 border-red-600 shadow-2xl' : 'text-gray-400  hover:text-blue-400 hover:border-blue-300';
+      return this.active ? 'text-red-500 border-red-600 shadow-2xl border-b-4 md:-translate-x-1 md:translate-y-1 animate-wiggle mb-3 mt-3' : 'text-gray-400  hover:text-blue-400 hover:border-blue-300 border mb-2';
     }
   }
 });
@@ -43,7 +43,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/Logo */ "./resources/js/Pages/Shared/Logo.vue");
 /* harmony import */ var _SideLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideLink */ "./resources/js/Pages/Admin/Layouts/partials/SideLink.vue");
-//
 //
 //
 //
@@ -260,7 +259,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "transition  duration-500 ease-in-out transform-gpu py-2 px-2 w-full flex items-center hover:shadow rounded-lg cursor-pointer mb-2 px-2 block border-b-4 font-semibold",
+        "py-2 px-2 flex rounded-lg cursor-pointer  block font-semibold transition duration-500 ease-in-out transform-gpu  items-center hover:shadow",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href }
     },
@@ -317,7 +316,7 @@ var render = function() {
         _c("div", { staticClass: "mx-3 py-4" }, [
           _c(
             "div",
-            { staticClass: "px-2" },
+            { staticClass: "px-3" },
             [
               _c(
                 "side-link",
@@ -353,6 +352,55 @@ var render = function() {
           ),
           _vm._v(" "),
           _c("div", { staticClass: "overflow-y-auto overflow-x-hidden h-96" }, [
+            _c(
+              "div",
+              { staticClass: "mb-4 mt-4 px-1" },
+              [
+                _c(
+                  "p",
+                  { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                  [_vm._v("BLOG")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "side-link",
+                  {
+                    attrs: {
+                      href: _vm.route("admin.blog.index"),
+                      active: _vm.$page.currentRouteName == "admin.blog.index"
+                    }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-6 w-6  mr-2",
+                        attrs: {
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d:
+                              "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Blog")])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
             _c(
               "div",
               { staticClass: "mb-4 mt-4 px-1" },
@@ -539,55 +587,6 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("Attributes Options")])
-                  ]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "mb-4 mt-4 px-1" },
-              [
-                _c(
-                  "p",
-                  { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
-                  [_vm._v("BLOG")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "side-link",
-                  {
-                    attrs: {
-                      href: _vm.route("admin.blog.index"),
-                      active: _vm.$page.currentRouteName == "admin.blog.index"
-                    }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "h-6 w-6  mr-2",
-                        attrs: {
-                          fill: "none",
-                          viewBox: "0 0 24 24",
-                          stroke: "currentColor"
-                        }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                            "stroke-width": "2",
-                            d:
-                              "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("span", [_vm._v("Blog")])
                   ]
                 )
               ],

@@ -191,8 +191,8 @@ class ProductController extends Controller
             $NewFile = $request->file('image')->store('Products','public');  
             try {
 
-                if(Storage::exists($Product->image)){
-                    Storage::delete($Product->image);
+                if(Storage::disk('public')->exists($Product->image)){
+                    Storage::disk('public')->delete($Product->image);
                 }  
 
             } catch (\Throwable $th) {
@@ -207,9 +207,9 @@ class ProductController extends Controller
 
         if(empty($request->image) && $Product->image){
 
-            if(Storage::exists($Product->image)){
+            if(Storage::disk('public')->exists($Product->image)){
             
-                Storage::delete($Product->image);
+                Storage::disk('public')->delete($Product->image);
             
             }          
             

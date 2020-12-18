@@ -1,247 +1,51 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\laragon\\www\\ecommerce\\resources\\js\\Pages\\Admin\\sliders\\TrendingSlider.vue: Unexpected token, expected \":\" (97:84)\n\n\u001b[0m \u001b[90m  95 | \u001b[39m        \u001b[36mreturn\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  96 | \u001b[39m            form\u001b[33m:\u001b[39m{\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 | \u001b[39m                \u001b[33mTrendingProducts\u001b[39m\u001b[33m:\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$page\u001b[33m.\u001b[39mslider\u001b[33m?\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$page\u001b[33m.\u001b[39mslider\u001b[33m.\u001b[39mtrending_slider\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  98 | \u001b[39m            }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  99 | \u001b[39m            sending\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 100 | \u001b[39m        }\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:790:17)\n    at Parser.raiseWithData (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:783:17)\n    at Parser.raise (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:777:17)\n    at Parser.unexpected (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9095:16)\n    at Parser.expect (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9081:28)\n    at Parser.parseConditional (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9921:12)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9913:17)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9870:21)\n    at C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9837:39\n    at Parser.allowInAnd (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11510:12)\n    at Parser.parseMaybeAssignAllowIn (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9837:17)\n    at Parser.parseObjectProperty (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11055:101)\n    at Parser.parseObjPropValue (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11080:100)\n    at Parser.parsePropertyDefinition (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11004:10)\n    at Parser.parseObjectLike (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10894:25)\n    at Parser.parseExprAtom (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10445:23)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10094:23)\n    at Parser.parseUpdate (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10074:21)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10063:17)\n    at Parser.parseExprOps (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9933:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9907:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9870:21)\n    at C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9837:39\n    at Parser.allowInAnd (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11510:12)\n    at Parser.parseMaybeAssignAllowIn (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9837:17)\n    at Parser.parseObjectProperty (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11055:101)\n    at Parser.parseObjPropValue (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11080:100)\n    at Parser.parsePropertyDefinition (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:11004:10)\n    at Parser.parseObjectLike (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10894:25)\n    at Parser.parseExprAtom (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10445:23)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10094:23)\n    at Parser.parseUpdate (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10074:21)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:10063:17)\n    at Parser.parseExprOps (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9933:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9907:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\ecommerce\\node_modules\\@babel\\parser\\lib\\index.js:9870:21)");
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "fieldset[disabled] .multiselect{\n  pointer-events:none\n}\n.multiselect__spinner{\n  position:absolute;\n  right:1px;\n  top:1px;\n  width:48px;\n  height:35px;\n  background:#fff;\n  display:block\n}\n.multiselect__spinner:after,.multiselect__spinner:before{\n  position:absolute;\n  content:\"\";\n  top:50%;\n  left:50%;\n  margin:-8px 0 0 -8px;\n  width:16px;\n  height:16px;\n  border-radius:100%;\n  border:2px solid transparent;\n  border-top-color:#41b883;\n  box-shadow:0 0 0 1px transparent\n}\n.multiselect__spinner:before{\n  -webkit-animation:spinning 2.4s cubic-bezier(.41,.26,.2,.62);\n          animation:spinning 2.4s cubic-bezier(.41,.26,.2,.62);\n  -webkit-animation-iteration-count:infinite;\n          animation-iteration-count:infinite\n}\n.multiselect__spinner:after{\n  -webkit-animation:spinning 2.4s cubic-bezier(.51,.09,.21,.8);\n          animation:spinning 2.4s cubic-bezier(.51,.09,.21,.8);\n  -webkit-animation-iteration-count:infinite;\n          animation-iteration-count:infinite\n}\n.multiselect__loading-enter-active,.multiselect__loading-leave-active{\n  transition:opacity .4s ease-in-out;\n  opacity:1\n}\n.multiselect__loading-enter,.multiselect__loading-leave-active{\n  opacity:0\n}\n.multiselect,.multiselect__input,.multiselect__single{\n  font-family:inherit;\n  font-size:16px;\n  touch-action:manipulation\n}\n.multiselect{\n  box-sizing:content-box;\n  display:block;\n  position:relative;\n  width:100%;\n  min-height:40px;\n  text-align:left;\n  color:#35495e\n}\n.multiselect *{\n  box-sizing:border-box\n}\n.multiselect:focus{\n  outline:none\n}\n.multiselect--disabled{\n  background:#ededed;\n  pointer-events:none;\n  opacity:.6\n}\n.multiselect--active{\n  z-index:50\n}\n.multiselect--active:not(.multiselect--above) .multiselect__current,.multiselect--active:not(.multiselect--above) .multiselect__input,.multiselect--active:not(.multiselect--above) .multiselect__tags{\n  border-bottom-left-radius:0;\n  border-bottom-right-radius:0\n}\n.multiselect--active .multiselect__select{\n  transform:rotate(180deg)\n}\n.multiselect--above.multiselect--active .multiselect__current,.multiselect--above.multiselect--active .multiselect__input,.multiselect--above.multiselect--active .multiselect__tags{\n  border-top-left-radius:0;\n  border-top-right-radius:0\n}\n.multiselect__input,.multiselect__single{\n  position:relative;\n  display:inline-block;\n  min-height:20px;\n  line-height:20px;\n  border:none;\n  border-radius:5px;\n  background:#fff;\n  padding:0 0 0 5px;\n  width:100%;\n  transition:border .1s ease;\n  box-sizing:border-box;\n  margin-bottom:8px;\n  vertical-align:top\n}\n.multiselect__input:-ms-input-placeholder{\n  color:#35495e\n}\n.multiselect__input::-moz-placeholder{\n  color:#35495e\n}\n.multiselect__input::placeholder{\n  color:#35495e\n}\n.multiselect__tag~.multiselect__input,.multiselect__tag~.multiselect__single{\n  width:auto\n}\n.multiselect__input:hover,.multiselect__single:hover{\n  border-color:#cfcfcf\n}\n.multiselect__input:focus,.multiselect__single:focus{\n  border-color:#a8a8a8;\n  outline:none\n}\n.multiselect__single{\n  padding-left:5px;\n  margin-bottom:8px\n}\n.multiselect__tags-wrap{\n  display:inline\n}\n.multiselect__tags{\n  min-height:40px;\n  display:block;\n  padding:8px 40px 0 8px;\n  border-radius:5px;\n  border:1px solid #e8e8e8;\n  background:#fff;\n  font-size:14px\n}\n.multiselect__tag{\n  position:relative;\n  display:inline-block;\n  padding:4px 26px 4px 10px;\n  border-radius:5px;\n  margin-right:10px;\n  color:#fff;\n  line-height:1;\n  background:#41b883;\n  margin-bottom:5px;\n  white-space:nowrap;\n  overflow:hidden;\n  max-width:100%;\n  text-overflow:ellipsis\n}\n.multiselect__tag-icon{\n  cursor:pointer;\n  margin-left:7px;\n  position:absolute;\n  right:0;\n  top:0;\n  bottom:0;\n  font-weight:700;\n  font-style:normal;\n  width:22px;\n  text-align:center;\n  line-height:22px;\n  transition:all .2s ease;\n  border-radius:5px\n}\n.multiselect__tag-icon:after{\n  content:\"\\D7\";\n  color:#266d4d;\n  font-size:14px\n}\n.multiselect__tag-icon:focus,.multiselect__tag-icon:hover{\n  background:#369a6e\n}\n.multiselect__tag-icon:focus:after,.multiselect__tag-icon:hover:after{\n  color:#fff\n}\n.multiselect__current{\n  min-height:40px;\n  overflow:hidden;\n  padding:8px 30px 0 12px;\n  white-space:nowrap;\n  border-radius:5px;\n  border:1px solid #e8e8e8\n}\n.multiselect__current,.multiselect__select{\n  line-height:16px;\n  box-sizing:border-box;\n  display:block;\n  margin:0;\n  text-decoration:none;\n  cursor:pointer\n}\n.multiselect__select{\n  position:absolute;\n  width:40px;\n  height:38px;\n  right:1px;\n  top:1px;\n  padding:4px 8px;\n  text-align:center;\n  transition:transform .2s ease\n}\n.multiselect__select:before{\n  position:relative;\n  right:0;\n  top:65%;\n  color:#999;\n  margin-top:4px;\n  border-color:#999 transparent transparent;\n  border-style:solid;\n  border-width:5px 5px 0;\n  content:\"\"\n}\n.multiselect__placeholder{\n  color:#adadad;\n  display:inline-block;\n  margin-bottom:10px;\n  padding-top:2px\n}\n.multiselect--active .multiselect__placeholder{\n  display:none\n}\n.multiselect__content-wrapper{\n  position:absolute;\n  display:block;\n  background:#fff;\n  width:100%;\n  max-height:240px;\n  overflow:auto;\n  border:1px solid #e8e8e8;\n  border-top:none;\n  border-bottom-left-radius:5px;\n  border-bottom-right-radius:5px;\n  z-index:50;\n  -webkit-overflow-scrolling:touch\n}\n.multiselect__content{\n  list-style:none;\n  display:inline-block;\n  padding:0;\n  margin:0;\n  min-width:100%;\n  vertical-align:top\n}\n.multiselect--above .multiselect__content-wrapper{\n  bottom:100%;\n  border-bottom-left-radius:0;\n  border-bottom-right-radius:0;\n  border-top-left-radius:5px;\n  border-top-right-radius:5px;\n  border-bottom:none;\n  border-top:1px solid #e8e8e8\n}\n.multiselect__content::webkit-scrollbar{\n  display:none\n}\n.multiselect__element{\n  display:block\n}\n.multiselect__option{\n  display:block;\n  padding:12px;\n  min-height:40px;\n  line-height:16px;\n  text-decoration:none;\n  text-transform:none;\n  vertical-align:middle;\n  position:relative;\n  cursor:pointer;\n  white-space:nowrap\n}\n.multiselect__option:after{\n  top:0;\n  right:0;\n  position:absolute;\n  line-height:40px;\n  padding-right:12px;\n  padding-left:20px;\n  font-size:13px\n}\n.multiselect__option--highlight{\n  background:#41b883;\n  outline:none;\n  color:#fff\n}\n.multiselect__option--highlight:after{\n  content:attr(data-select);\n  background:#41b883;\n  color:#fff\n}\n.multiselect__option--selected{\n  background:#f3f3f3;\n  color:#35495e;\n  font-weight:700\n}\n.multiselect__option--selected:after{\n  content:attr(data-selected);\n  color:silver\n}\n.multiselect__option--selected.multiselect__option--highlight{\n  background:#ff6a6a;\n  color:#fff\n}\n.multiselect__option--selected.multiselect__option--highlight:after{\n  background:#ff6a6a;\n  content:attr(data-deselect);\n  color:#fff\n}\n.multiselect--disabled .multiselect__current,.multiselect--disabled .multiselect__select{\n  background:#ededed;\n  color:#a6a6a6\n}\n.multiselect__option--disabled{\n  background:#ededed!important;\n  color:#a6a6a6!important;\n  cursor:text;\n  pointer-events:none\n}\n.multiselect__option--group{\n  background:#ededed;\n  color:#35495e\n}\n.multiselect__option--group.multiselect__option--highlight{\n  background:#35495e;\n  color:#fff\n}\n.multiselect__option--group.multiselect__option--highlight:after{\n  background:#35495e\n}\n.multiselect__option--disabled.multiselect__option--highlight{\n  background:#dedede\n}\n.multiselect__option--group-selected.multiselect__option--highlight{\n  background:#ff6a6a;\n  color:#fff\n}\n.multiselect__option--group-selected.multiselect__option--highlight:after{\n  background:#ff6a6a;\n  content:attr(data-deselect);\n  color:#fff\n}\n.multiselect-enter-active,.multiselect-leave-active{\n  transition:all .15s ease\n}\n.multiselect-enter,.multiselect-leave-active{\n  opacity:0\n}\n.multiselect__strong{\n  margin-bottom:8px;\n  line-height:20px;\n  display:inline-block;\n  vertical-align:top\n}\n[dir=rtl] .multiselect{\n  text-align:right\n}\n[dir=rtl] .multiselect__select{\n  right:auto;\n  left:1px\n}\n[dir=rtl] .multiselect__tags{\n  padding:8px 8px 0 40px\n}\n[dir=rtl] .multiselect__content{\n  text-align:right\n}\n[dir=rtl] .multiselect__option:after{\n  right:auto;\n  left:0\n}\n[dir=rtl] .multiselect__clear{\n  right:auto;\n  left:12px\n}\n[dir=rtl] .multiselect__spinner{\n  right:auto;\n  left:1px\n}\n@-webkit-keyframes spinning{\n0%{\n    transform:rotate(0)\n}\nto{\n    transform:rotate(2turn)\n}\n}\n@keyframes spinning{\n0%{\n    transform:rotate(0)\n}\nto{\n    transform:rotate(2turn)\n}\n}", ""]);
+
+// exports
+
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec& ***!
-  \**************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "nav",
-      {
-        staticClass: "text-sm font-semibold mb-6",
-        attrs: { "aria-label": "Breadcrumb" }
-      },
-      [
-        _c("ol", { staticClass: "list-none p-0 inline-flex" }, [
-          _c(
-            "li",
-            { staticClass: "flex items-center text-blue-500" },
-            [
-              _c(
-                "inertia-link",
-                {
-                  staticClass: "text-gray-700",
-                  attrs: { href: _vm.route("admin.dashboard") }
-                },
-                [_vm._v("Home")]
-              ),
-              _vm._v(" "),
-              _c(
-                "svg",
-                {
-                  staticClass: "  w-3 h-3 mx-3",
-                  attrs: {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 320 512"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
-                    }
-                  })
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(0)
-        ]),
-        _vm._v(" "),
-        _c("BackButton")
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "flex justify-center" }, [
-      _c("div", { staticClass: "w-full pl-0 lg:pl-2" }, [
-        _c("div", { staticClass: "leading-loose " }, [
-          _c(
-            "form",
-            {
-              staticClass: "p-10 bg-white rounded shadow-2xl",
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.store($event)
-                }
-              }
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticClass: "pb-6 flex font-semibold text-xl text-gray-400"
-                },
-                [_vm._v("Trending Slider")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"
-                },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass:
-                        "z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
-                      attrs: { for: "weight" }
-                    },
-                    [_vm._v("Products")]
-                  ),
-                  _vm._v(" "),
-                  _c("multiselect", {
-                    class: "py-2",
-                    attrs: {
-                      "deselect-label": "Can't remove this value",
-                      "track-by": "name",
-                      label: "name",
-                      placeholder: "Select from Trending Products",
-                      options: _vm.ProductsOnTrending,
-                      searchable: true,
-                      multiple: true,
-                      "close-on-select": false,
-                      "clear-on-select": false,
-                      "allow-empty": false
-                    },
-                    model: {
-                      value: _vm.form.TrendingProducts,
-                      callback: function($$v) {
-                        _vm.$set(_vm.form, "TrendingProducts", $$v)
-                      },
-                      expression: "form.TrendingProducts"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.errors.TrendingProducts
-                    ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
-                        _vm._v(_vm._s(_vm.$page.errors.TrendingProducts))
-                      ])
-                    : _vm._e()
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-4 mt-10"
-                },
-                _vm._l(_vm.SliderProducts, function(Product, ProductIndex) {
-                  return _c(
-                    "div",
-                    {
-                      key: ProductIndex,
-                      staticClass:
-                        "w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"
-                    },
-                    [_c("shop-product", { attrs: { Product: Product } })],
-                    1
-                  )
-                }),
-                0
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-4"
-                },
-                [
-                  _c(
-                    "loading-button",
-                    {
-                      staticClass:
-                        "flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
-                      attrs: {
-                        loading: _vm.sending,
-                        type: "submit",
-                        as: "button"
-                      }
-                    },
-                    [
-                      _c("span", [_vm._v("Save")]),
-                      _vm._v(" "),
-                      !_vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "transition duration-700 ease-in-out  h-5 w-5 ml-2",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e()
-                    ]
-                  )
-                ],
-                1
-              )
-            ]
-          )
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "flex items-center" }, [
-      _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
-        _vm._v("Trending Slider")
-      ])
-    ])
-  }
-]
-render._withStripped = true
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--6-2!./vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -357,71 +161,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue ***!
-  \*************************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************/
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=template&id=3892abec& */ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&");
-/* harmony import */ var _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/sliders/TrendingSlider.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec& ***!
-  \********************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=template&id=3892abec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../style-loader!../../css-loader??ref--6-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--6-2!./vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ })

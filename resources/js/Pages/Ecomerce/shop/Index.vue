@@ -28,18 +28,10 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-4">
+        <div class="flex flex-wrap justify-between pb-5 md:pb-5 sm:-px-3 md:-mx-5 -mx-4">
+ 
+           <shop-product v-for="(Product, index) in Products" :key="index" :Product="Product" class="w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"></shop-product>
 
-            <div v-for="(Product, index) in Products" :key="index" class="w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block">
-
-                <div class="px-2 md:px-2">
-
-                    <shop-product :Product="Product"></shop-product>
-
-                </div>
-
-            </div> 
-            
         </div>  
  
     </div> 

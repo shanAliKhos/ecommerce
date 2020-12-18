@@ -42,9 +42,9 @@ class ProductImageController extends Controller
     public function destroy(ProductImage $ProductImage)
     {
         
-        $exists = Storage::exists($ProductImage->image);
+        $exists = Storage::disk('public')->exists($ProductImage->image);
         if($exists){
-            Storage::delete($ProductImage->image);
+            Storage::disk('public')->delete($ProductImage->image);
         }
         $ProductImage->delete();
         $ProductImage->product->image = null ;

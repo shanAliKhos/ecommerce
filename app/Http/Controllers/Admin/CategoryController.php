@@ -76,16 +76,16 @@ class CategoryController extends Controller
             $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']); 
             $OldPath = $category->image;        
             $NewPath = $request->file('image')->store('public/Categories');  
-            if(Storage::exists($OldPath)){
-                Storage::delete($OldPath);
+            if(Storage::disk('public')->exists($OldPath)){
+                Storage::disk('public')->delete($OldPath);
             }  
             $category->update(['image' => $NewPath]);               
 
         }
             
         if(empty($request->image && $category->image)){
-            if(Storage::exists($category->image)){
-                Storage::delete($category->image);
+            if(Storage::disk('public')->exists($category->image)){
+                Storage::disk('public')->delete($category->image);
             }                  
             $category->update(['image' => null]);               
 
@@ -109,8 +109,8 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $image = $category->logo;
-        if(Storage::exists($image)){
-            Storage::delete($image);
+        if(Storage::disk('public')->exists($image)){
+            Storage::disk('public')->delete($image);
         } 
 
         try { 

@@ -93,16 +93,16 @@ class BlogController extends Controller
             $this->validate($request, [ 
                 "image" => 'required|mimes:jpg,jpeg,png|max:100',   
             ]);                     
-            if(Storage::exists($blog->image)){
-                Storage::delete($blog->image);
+            if(Storage::disk('public')->exists($blog->image)){
+                Storage::disk('public')->delete($blog->image);
             }  
             $blog->image = $request->file('image')->store('Blogs','public');   
         } 
 
         if(empty($request->image) && $blog->image){
 
-            if(Storage::exists($blog->image)){
-                Storage::delete($blog->image);
+            if(Storage::disk('public')->exists($blog->image)){
+                Storage::disk('public')->delete($blog->image);
             }          
 
             $blog->image = null;   

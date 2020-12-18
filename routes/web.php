@@ -112,14 +112,16 @@ use Illuminate\Support\Facades\Password;
 
                 Route::prefix('/slider')->name('slider.')->group(function () {           
                     
-                    Route::get('/hero', 'Admin\SliderController@HeroSlider')->name('hero.index');
-                    Route::post('/hero', 'Admin\SliderController@HeroSliderStore')->name('hero.store');
+                    Route::get('/hero', 'Admin\Silders\HeroSliderController@index')->name('hero.index');
+                    Route::post('/hero', 'Admin\Silders\HeroSliderController@store')->name('hero.store');
+                    // Route::get('/hero', 'Admin\Silders\HeroSliderController@edit')->name('hero.index');
+                    // Route::post('/hero', 'Admin\Silders\HeroSliderController@update')->name('hero.store');
 
-                    Route::get('/sale', 'Admin\SliderController@SaleSlider')->name('sale.index');
-                    Route::post('/sale', 'Admin\SliderController@SaleSliderStore')->name('sale.store');
+                    Route::get('/sale', 'Admin\Silders\SaleSliderController@edit')->name('sale.index');
+                    Route::post('/sale', 'Admin\Silders\SaleSliderController@update')->name('sale.store');
 
-                    Route::get('/trending', 'Admin\SliderController@TrendingSlider')->name('trending.index');
-                    Route::post('/trending', 'Admin\SliderController@TrendingSliderStore')->name('trending.store');
+                    Route::get('/trending', 'Admin\Silders\TrendingSliderController@edit')->name('trending.index');
+                    Route::post('/trending', 'Admin\Silders\TrendingSliderController@update')->name('trending.store');
                     
                 });                 
                 

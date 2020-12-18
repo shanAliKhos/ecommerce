@@ -30,16 +30,16 @@ class SettingController extends Controller
         if($request->hasFile('site_logo')){             
             $OldSiteLogo =  config('settings.site_logo');        
             $NewPath = $request->file('site_logo')->store('setting','public');  
-            if(Storage::exists($OldSiteLogo)){
-                Storage::delete($OldSiteLogo);
+            if(Storage::disk('public')->exists($OldSiteLogo)){
+                Storage::disk('public')->delete($OldSiteLogo);
             }    
             Setting::set('site_logo', $NewPath);             
         }
         
         if(empty($request->site_logo) && config('settings.site_logo')){
             
-            if(Storage::exists(config('settings.site_logo'))){
-                Storage::delete(config('settings.site_logo'));
+            if(Storage::disk('public')->exists(config('settings.site_logo'))){
+                Storage::disk('public')->delete(config('settings.site_logo'));
             }
             Setting::set('site_logo', null);             
         }               
@@ -47,17 +47,17 @@ class SettingController extends Controller
         if($request->hasFile('site_favicon')){             
             $OldSiteFavicon =  config('settings.site_favicon');      
             $NewPath = $request->file('site_favicon')->store('setting','public');  
-            if(Storage::exists($OldSiteFavicon)){
-                Storage::delete($OldSiteFavicon);
+            if(Storage::disk('public')->exists($OldSiteFavicon)){
+                Storage::disk('public')->delete($OldSiteFavicon);
             }  
             Setting::set('site_favicon', $NewPath);             
         } 
 
         if(empty($request->site_favicon) && config('settings.site_favicon')){
 
-            if(Storage::exists(config('settings.site_favicon'))){
+            if(Storage::disk('public')->exists(config('settings.site_favicon'))){
 
-                Storage::delete(config('settings.site_favicon'));
+                Storage::disk('public')->delete(config('settings.site_favicon'));
             }
             Setting::set('site_favicon', null);             
         }                 

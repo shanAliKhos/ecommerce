@@ -1,5 +1,5 @@
 <template>
-<div class="pb-20 md:pb-32" >
+<div class="pb-20 md:pb-32">
     <div v-if="SaleSliderProducts.length>0">
         <div class="text-center pb-12 md:pb-0">
             <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">
@@ -42,9 +42,9 @@
             }"
             :autoplay="2000"> 
             
-            <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex">
+            <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex" >
                 
-                <shop-product :Product="Product"></shop-product>
+                <shop-product :Product="Product" class="relative"></shop-product>
                 
             </vue-glide-slide>  
 
@@ -73,7 +73,7 @@ export default {
  
     computed: {
       SaleSliderProducts(){
-          return this.$page.Slider.sale_slider;
+          return this.$page.Slider?this.$page.Slider.sale_slider:[];
       },
     },    
  

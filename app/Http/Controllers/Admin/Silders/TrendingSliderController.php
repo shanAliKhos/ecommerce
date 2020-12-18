@@ -4,84 +4,42 @@ namespace App\Http\Controllers\Admin\Silders;
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 
+use App\Models\Slider;
 use App\Models\TrendingSlider;
+use App\Models\Product;
+
 use Illuminate\Http\Request;
 
 class TrendingSliderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+ 
+    public function __construct(Slider $slider)
     {
-        return Inertia::render('Admin/sliders/TrendingSlider'); 
-    }
+        $this->middleware('admin');  
+        $this->Model = $slider; 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    }     
+ 
+    public function edit(Product $product)
     {
-        //
+        return Inertia::render('Admin/sliders/TrendingSlider',[
+            'slider'=> $this->Model->where('name','trending')->with('trending_slider')->first(),
+            'trending_products'=> $product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->get(),
+        ]);                 
     }
+ 
+    public function update(Request $request)
+    {  
+        $TrendingSlider = $this->Model->where('name','trending')->first();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        if(!$TrendingSlider){
+            $TrendingSlider = $this->Model->create([
+                'name' => 'trending',
+            ]); 
+        }
+        $TrendingSlider->trending_slider()->sync(array_column(json_decode($request->TrendingProducts,true),'id'));
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\TrendingSlider  $trendingSlider
-     * @return \Illuminate\Http\Response
-     */
-    public function show(TrendingSlider $trendingSlider)
-    {
-        //
-    }
+        return back()->with('success','Trending slider updated');
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\TrendingSlider  $trendingSlider
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(TrendingSlider $trendingSlider)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TrendingSlider  $trendingSlider
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, TrendingSlider $trendingSlider)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\TrendingSlider  $trendingSlider
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(TrendingSlider $trendingSlider)
-    {
-        //
     }
 }

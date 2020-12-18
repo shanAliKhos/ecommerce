@@ -59,6 +59,7 @@ class BrandController extends Controller
  
     public function update(Brand $brand,Request $request)
     { 
+ 
         $this->validate($request, [
             'name'      =>  'required|unique:brands,name,' .$brand->id, 
             // 'logo'     =>  'mimes:jpg,jpeg,png|max:1000'
@@ -67,8 +68,8 @@ class BrandController extends Controller
         if($request->hasFile('logo')){    
             try {
            
-                if(Storage::exists($brand->logo)){
-                    Storage::delete($brand->logo);
+                if(Storage::disk('public')->exists($brand->logo)){
+                    Storage::disk('public')->delete($brand->logo);
                 }                  
 
             } catch (\Throwable $th) {
@@ -79,8 +80,8 @@ class BrandController extends Controller
         } 
 
         if(empty($request->logo) && $brand->logo){
-            if(Storage::exists($brand->logo)){
-                Storage::delete($brand->logo);
+            if(Storage::disk('public')->exists($brand->logo)){
+                Storage::disk('public')->delete($brand->logo);
             }          
             $brand->update(['logo' => null]);
         }
@@ -98,8 +99,8 @@ class BrandController extends Controller
     public function destroy(Brand $brand)
     { 
         $image = $brand->logo;
-        if(Storage::exists($image)){
-            Storage::delete($image);
+        if(Storage::disk('public')->exists($image)){
+            Storage::disk('public')->delete($image);
         } 
 
         try { 

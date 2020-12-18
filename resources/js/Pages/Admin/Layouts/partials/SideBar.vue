@@ -9,7 +9,7 @@
  
             <div class="mx-3 py-4">
 
-                <div class="px-2">
+                <div class="px-3">
                     <side-link class="mb-1"
                         :href="route('admin.dashboard')" 
                         :active="$page.currentRouteName == 'admin.dashboard'">
@@ -21,6 +21,19 @@
                 </div>
 
                 <div class="overflow-y-auto overflow-x-hidden h-96">
+                    <div class="mb-4 mt-4 px-1">
+                        <p class="text-lg font-semibold mb-1 text-gray-300">BLOG</p>
+
+        
+                        <side-link 
+                            :href="route('admin.blog.index')" 
+                            :active="$page.currentRouteName == 'admin.blog.index'">
+                            <svg class="h-6 w-6  mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                            <span >Blog</span>
+                        </side-link>     
+                    </div>                
             
                     <div class="mb-4 mt-4 px-1">
                         <p class="text-lg font-semibold mb-1 text-gray-300">Shop</p>
@@ -81,21 +94,7 @@
                         </side-link>                    
         
                     </div>    
-                    
-                    <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">BLOG</p>
-
-        
-                        <side-link 
-                            :href="route('admin.blog.index')" 
-                            :active="$page.currentRouteName == 'admin.blog.index'">
-                            <svg class="h-6 w-6  mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                            </svg>
-                            <span >Blog</span>
-                        </side-link>     
-                    </div>
-        
+                     
                     <div class="mb-4 mt-4 px-1">
                         <p class="text-lg font-semibold mb-1 text-gray-300">Sliders</p>
                     

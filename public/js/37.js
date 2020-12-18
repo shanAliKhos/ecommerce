@@ -54,17 +54,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
-  data: function data() {
-    return {
-      Label: {
-        Color: null,
-        Title: null,
-        Active: false
-      }
-    };
-  },
-  methods: {
-    // AddToCart(Item){   
+  methods: {// AddToCart(Item){   
     //     this.$root.$emit('Add-To-Cart',{
     //         "id":(Item.id)?Item.id:'',
     //         "name":(Item.name)?Item.name:'',
@@ -75,27 +65,6 @@ __webpack_require__.r(__webpack_exports__);
     //         "image":this.Product.image?Item.image:'./img/shoes-4.png',
     //     });      
     // },        
-    SetLable: function SetLable() {
-      if (this.Product.sale_price > 0) {
-        this.Label = {
-          Color: 'text-primary-light',
-          Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
-          Active: true
-        };
-      } else if (this.Product.is_featured) {
-        this.Label = {
-          Color: 'text-v-blue',
-          Title: 'Trend',
-          Active: true
-        };
-      } else {
-        this.Label = {
-          Color: 'text-v-green',
-          Title: 'new',
-          Active: true
-        };
-      }
-    }
   },
   computed: {
     ProductImage: function ProductImage() {
@@ -113,10 +82,35 @@ __webpack_require__.r(__webpack_exports__);
     },
     ProductName: function ProductName() {
       return this.Product.name;
+    },
+    SetLable: function SetLable() {
+      var lable;
+
+      if (this.Product.sale_price > 0) {
+        lable = {
+          Color: 'text-primary-light',
+          Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
+          Active: true
+        };
+      } else if (this.Product.is_featured) {
+        lable = {
+          Color: 'text-v-blue',
+          Title: 'Trend',
+          Active: true
+        };
+      } else {
+        lable = {
+          Color: 'text-v-green',
+          Title: 'new',
+          Active: true
+        };
+      }
+
+      return lable;
+    },
+    Currency: function Currency() {
+      return this.$page.SiteOptions.Currency.Symbol;
     }
-  },
-  mounted: function mounted() {
-    this.SetLable();
   }
 });
 
@@ -238,7 +232,7 @@ var render = function() {
   return _c(
     "inertia-link",
     {
-      staticClass: "z-30",
+      staticClass: "z-30 p-2",
       attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
     },
     [
@@ -246,41 +240,37 @@ var render = function() {
         "div",
         {
           staticClass:
-            "product-gird transition duration-500 ease-in-out transform motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 hover:scale-105 shadow-sm hover:shadow-md"
+            "product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl hover:scale-105 rounded-lg"
         },
         [
-          _c(
-            "div",
-            { staticClass: " rounded flex justify-center items-center p-2" },
-            [
-              _c("div", {
-                staticClass:
-                  "w-full h-68 bg-center bg-no-repeat bg-cover shadow-md hover:shadow-lg",
-                style: "background-image:url('" + _vm.ProductImage + "')"
-              }),
-              _vm._v(" "),
-              _vm.Label.Active
-                ? _c(
-                    "div",
+          _vm.SetLable.Active
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full "
+                },
+                [
+                  _c(
+                    "p",
                     {
                       staticClass:
-                        "absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                        "font-semibold text-sm uppercase tracking-wide",
+                      class: _vm.SetLable.Color
                     },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "font-bold text-sm uppercase tracking-wide",
-                          class: _vm.Label.Color
-                        },
-                        [_vm._v(" " + _vm._s(_vm.Label.Title))]
-                      )
-                    ]
+                    [_vm._v(" " + _vm._s(_vm.SetLable.Title))]
                   )
-                : _vm._e()
-            ]
-          ),
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex justify-center items-center m-1" }, [
+            _c("div", {
+              staticClass:
+                "w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg",
+              style: "background-image:url('" + _vm.ProductImage + "')"
+            })
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "p-2 relative h-28 " }, [
             _c(
@@ -302,9 +292,7 @@ var render = function() {
             _c("div", { staticClass: "flex  absolute bottom-7" }, [
               _c("p", { staticClass: "font-semibold text-red-400 text-sm" }, [
                 _vm._v(
-                  _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                    _vm._s(_vm.CurrentPrice) +
-                    " "
+                  _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
                 )
               ]),
               _vm._v(" "),
@@ -317,9 +305,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                          _vm._s(_vm.RegularPrice) +
-                          " "
+                        _vm._s(_vm.Currency) + _vm._s(_vm.RegularPrice) + " "
                       )
                     ]
                   )
@@ -378,7 +364,33 @@ var render = function() {
       ? _c(
           "div",
           [
-            _vm._m(0),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0"
+              },
+              [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary",
+                    attrs: { href: _vm.route("shop.index") }
+                  },
+                  [
+                    _vm._v("\r\n                Show more\r\n                "),
+                    _c("i", {
+                      staticClass:
+                        "bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"
+                    })
+                  ]
+                )
+              ],
+              1
+            ),
             _vm._v(" "),
             _c(
               "vue-glide",
@@ -424,7 +436,12 @@ var render = function() {
                   return _c(
                     "vue-glide-slide",
                     { key: ProductIndex },
-                    [_c("shop-product", { attrs: { Product: Product } })],
+                    [
+                      _c("shop-product", {
+                        staticClass: "relative",
+                        attrs: { Product: Product }
+                      })
+                    ],
                     1
                   )
                 }),
@@ -490,50 +507,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0"
-      },
-      [
-        _c("div", { staticClass: "text-center sm:text-left" }, [
-          _c(
-            "h2",
-            {
-              staticClass:
-                "font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl"
-            },
-            [_vm._v("Elyssi’s trends")]
-          ),
-          _vm._v(" "),
-          _c(
-            "p",
-            {
-              staticClass:
-                "font-regular text-gray-400-lighter text-lg md:text-xl pt-2"
-            },
-            [_vm._v("Be styling, no matter the season!")]
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary",
-            attrs: { href: "/collection-grid" }
-          },
-          [
-            _vm._v("\r\n                Show more\r\n                "),
-            _c("i", {
-              staticClass:
-                "bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"
-            })
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "text-center sm:text-left" }, [
+      _c(
+        "h2",
+        {
+          staticClass:
+            "font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl"
+        },
+        [_vm._v("Elyssi’s trends")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "font-regular text-gray-400-lighter text-lg md:text-xl pt-2"
+        },
+        [_vm._v("Be styling, no matter the season!")]
+      )
+    ])
   }
 ]
 render._withStripped = true

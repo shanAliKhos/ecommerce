@@ -7,14 +7,14 @@
                 <h2 class="font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl">Elyssi’s trends</h2>
                 <p class="font-regular text-gray-400-lighter text-lg md:text-xl pt-2">Be styling, no matter the season!</p>
             </div>
-            <a href="/collection-grid" class="flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary">
+            <inertia-link :href="route('shop.index')" class="flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary">
                 Show more
                 <i class="bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"></i>
-            </a>
+            </inertia-link>
         </div>
 
         <vue-glide 
-            :type="'carousel'" 
+           :type="'carousel'" 
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
@@ -47,7 +47,7 @@
             
             <vue-glide-slide v-for="(Product, ProductIndex) in TrendingSliderProducts" :key="ProductIndex">
           
-                <shop-product :Product="Product"></shop-product>
+                <shop-product :Product="Product" class="relative"></shop-product>
         
             </vue-glide-slide>  
 
