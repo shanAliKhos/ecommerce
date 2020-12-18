@@ -24,7 +24,7 @@
                        
  
                     <div class="w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"> 
-                        <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Products</label>
+                        <label class="z-30 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Products</label>
                         
                         <multiselect    
                             :class="'py-2'"

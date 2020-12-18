@@ -60,7 +60,7 @@
 }
  
 .slide-fade-enter, .slide-fade-leave-to{
-  transform: translate(-100%); 
+  transform: translate(100%); 
   opacity: 0;
 } 
  

@@ -1,16 +1,17 @@
 <template>
-    <div class="xx-sidebar">
+    <div class="xx-sidebar h-screen">
         <div class="bg-black opacity-50 fixed inset-0 md:top-0 md:left-0 h-screen lg:hidden z-50" v-if="sideBarOpen" @click="sideBarOpen = false"></div>
+        
         <div class="w-4/5 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-full lg:block bg-gray-100 border-r border-gray-300 z-50" :class="sideBarOpen ? '' : 'hidden'" id="main-nav">
     
-            <div class="w-full h-20 border-b  border-gray-300 flex px-4 items-center mb-8">
+            <div class="w-full h-20 border-b  border-gray-300 flex px-4 items-center mb-4">
                 <p class="font-semibold text-3xl text-blue-400 pl-4">LOGO</p>
             </div>
  
-            <div class="mx-3 py-4">
+            <div class="mx-3 py-4 h-screen">
 
-                <div class="px-3">
-                    <side-link class="mb-1"
+                <div class="py-2  pr-3">
+                    <side-link 
                         :href="route('admin.dashboard')" 
                         :active="$page.currentRouteName == 'admin.dashboard'">
                         <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
@@ -20,11 +21,10 @@
                     </side-link>            
                 </div>
 
-                <div class="overflow-y-auto overflow-x-hidden h-96">
+                <div class="overflow-y-auto overflow-x-hidden h-4/6">
+
                     <div class="mb-4 mt-4 px-1">
                         <p class="text-lg font-semibold mb-1 text-gray-300">BLOG</p>
-
-        
                         <side-link 
                             :href="route('admin.blog.index')" 
                             :active="$page.currentRouteName == 'admin.blog.index'">
@@ -154,7 +154,7 @@
         
                 </div>
 
-                <div class="px-2">                
+                <div class="py-2 pr-3">                
                     <side-link :href="route('welcome')" 
                         :active="$page.currentRouteName == 'welcome'">
                         <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">

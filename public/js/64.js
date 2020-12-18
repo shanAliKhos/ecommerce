@@ -420,7 +420,7 @@ var render = function() {
                     "label",
                     {
                       staticClass:
-                        "z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                        "z-30 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
                       attrs: { for: "weight" }
                     },
                     [_vm._v("Products")]
