@@ -1,15 +1,6 @@
 <template>
-<div class="pb-20 md:pb-32">
-    <div v-if="SaleSliderProducts.length>0">
-        <div class="text-center pb-12 md:pb-0">
-            <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">
-                On sale, only today
-            </h2>
-            <p class="font-hkregular text-secondary-lighter text-lg md:text-xl">
-                Get it while they last!
-            </p>
-        </div>
-        
+<div>
+    <div v-if="SaleSliderProducts.length>0">       
         <vue-glide 
             :type="'carousel'" 
             :perView="4" 
@@ -55,10 +46,12 @@
 
 
         </vue-glide>
-        
     </div>
-    <div v-else class="flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
-        <p class="text-6xl text-gray-50 uppercase animate-pulse bg-none ">Sale slider section</p>
+    <div v-else class="p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
+        <div class="flex-row group animate-pulse">
+            <p class="flex item-center justify-center text-6xl text-gray-50 uppercase">EMPTY SLIDER</p>
+            <p class="flex item-center justify-center text-2xl text-gray-200 uppercase">add some slide to see slider</p>
+        </div>        
     </div>  
 </div>
 </template>

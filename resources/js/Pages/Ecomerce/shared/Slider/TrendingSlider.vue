@@ -60,10 +60,12 @@
  
 
     </div>
-    <div v-else class="flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
-        <p class="text-6xl text-gray-50 uppercase animate-pulse bg-none ">Trending slider section</p>
-    </div>            
-
+    <div v-else class="p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
+        <div class="flex-row group animate-pulse">
+            <p class="flex item-center justify-center text-6xl text-gray-50 uppercase">EMPTY SLIDER</p>
+            <p class="flex item-center justify-center text-2xl text-gray-200 uppercase">add some slide to see slider</p>
+        </div>        
+    </div>        
 
 </div>
 </template>
@@ -80,7 +82,7 @@ export default {
     
     computed: {
       TrendingSliderProducts(){
-          return this.$page.FeaturedSliders.trending_slider;
+          return this.$page.FeaturedSliders?this.$page.FeaturedSliders.trending_slider:[];
       },
     },
  

@@ -1,5 +1,6 @@
 <template>
-       <vue-glide 
+    <div v-if="HeroSliders.length>0">
+        <vue-glide 
             :type="'carousel'" 
             :perView="1" 
             :hoverpause="true" 
@@ -17,7 +18,13 @@
                 </div>        
             </vue-glide-slide>   
         </vue-glide>
- 
+    </div>
+    <div v-else class="h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
+        <div class="flex-row group animate-pulse">
+            <p class="flex item-center justify-center text-6xl text-gray-50 uppercase">EMPTY SLIDER</p>
+            <p class="flex item-center justify-center text-2xl text-gray-200 uppercase">add some slide to see slider</p>
+        </div>        
+    </div>    
 </template>
 <script>
 import { Glide, GlideSlide } from 'vue-glide-js'
@@ -29,7 +36,7 @@ export default {
 
     computed: {
       HeroSliders(){
-          return this.$page.HeroSliders.hero_slider;
+          return this.$page.HeroSliders?this.$page.HeroSliders.hero_slider:[];
       },
     },    
 }

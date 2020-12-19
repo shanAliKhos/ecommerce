@@ -36,12 +36,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components),
   computed: {
     HeroSliders: function HeroSliders() {
-      return this.$page.HeroSliders.hero_slider;
+      return this.$page.HeroSliders ? this.$page.HeroSliders.hero_slider : [];
     }
   }
 });
@@ -63,63 +70,106 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "vue-glide",
-    {
-      attrs: {
-        type: "carousel",
-        perView: 1,
-        hoverpause: true,
-        bound: true,
-        navigation: true,
-        animationDuration: 1000,
-        autoplay: 3000
-      }
-    },
-    _vm._l(_vm.HeroSliders, function(HeroSlide, HeroSlideIndex) {
-      return _c("vue-glide-slide", { key: HeroSlideIndex }, [
-        _c(
-          "div",
-          {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
-            style: "background-image:url('" + HeroSlide.photo_url + "')"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
-              },
-              [
+  return _vm.HeroSliders.length > 0
+    ? _c(
+        "div",
+        [
+          _c(
+            "vue-glide",
+            {
+              attrs: {
+                type: "carousel",
+                perView: 1,
+                hoverpause: true,
+                bound: true,
+                navigation: true,
+                animationDuration: 1000,
+                autoplay: 3000
+              }
+            },
+            _vm._l(_vm.HeroSliders, function(HeroSlide, HeroSlideIndex) {
+              return _c("vue-glide-slide", { key: HeroSlideIndex }, [
                 _c(
-                  "h3",
+                  "div",
                   {
-                    staticClass:
-                      "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                    staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                    style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
-                  [_vm._v(_vm._s(HeroSlide.title))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-primary btn-lg mt-8",
-                    attrs: { href: HeroSlide.button_url, draggable: "true" }
-                  },
-                  [_vm._v(_vm._s(HeroSlide.button_title))]
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                      },
+                      [
+                        _c(
+                          "h3",
+                          {
+                            staticClass:
+                              "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                          },
+                          [_vm._v(_vm._s(HeroSlide.title))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "inertia-link",
+                          {
+                            staticClass: "btn btn-primary btn-lg mt-8",
+                            attrs: {
+                              href: HeroSlide.button_url,
+                              draggable: "true"
+                            }
+                          },
+                          [_vm._v(_vm._s(HeroSlide.button_title))]
+                        )
+                      ],
+                      1
+                    )
+                  ]
                 )
-              ],
-              1
-            )
-          ]
-        )
-      ])
-    }),
-    1
-  )
+              ])
+            }),
+            1
+          )
+        ],
+        1
+      )
+    : _c(
+        "div",
+        {
+          staticClass:
+            "h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+        },
+        [_vm._m(0)]
+      )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
+        },
+        [_vm._v("EMPTY SLIDER")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
+        },
+        [_vm._v("add some slide to see slider")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 

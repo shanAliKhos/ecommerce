@@ -5,6 +5,17 @@
 
     <WelcomeIcons/>
 
+    <div class="pb-20 md:pb-32">
+
+        <div class="text-center pb-12 md:pb-5">
+            <h2 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl">On sale</h2>
+            <p class="font-hkregular text-secondary-lighter text-lg md:text-xl">Get it while they last!</p>
+        </div>    
+        
+        <SaleSlider/>
+
+    </div>
+
     <TrendingCollection/> 
 
     <TrendingSlider/>
@@ -15,7 +26,6 @@
 
     <WelcomeSaleBanner/>
     
-    <SaleSlider/>
 
 </div> 
 </template>

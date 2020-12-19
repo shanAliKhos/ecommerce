@@ -190,13 +190,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_1__["GlideSlide"]), _defineProperty(_components, "ShopProduct", _Product_Product__WEBPACK_IMPORTED_MODULE_0__["default"]), _components),
   computed: {
     TrendingSliderProducts: function TrendingSliderProducts() {
-      return this.$page.FeaturedSliders.trending_slider;
+      return this.$page.FeaturedSliders ? this.$page.FeaturedSliders.trending_slider : [];
     }
   }
 });
@@ -481,18 +483,9 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+              "p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
           },
-          [
-            _c(
-              "p",
-              {
-                staticClass:
-                  "text-6xl text-gray-50 uppercase animate-pulse bg-none "
-              },
-              [_vm._v("Trending slider section")]
-            )
-          ]
+          [_vm._m(1)]
         )
   ])
 }
@@ -518,6 +511,30 @@ var staticRenderFns = [
             "font-regular text-gray-400-lighter text-lg md:text-xl pt-2"
         },
         [_vm._v("Be styling, no matter the season!")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
+        },
+        [_vm._v("EMPTY SLIDER")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
+        },
+        [_vm._v("add some slide to see slider")]
       )
     ])
   }

@@ -178,13 +178,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -348,13 +341,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "pb-20 md:pb-32" }, [
+  return _c("div", [
     _vm.SaleSliderProducts.length > 0
       ? _c(
           "div",
           [
-            _vm._m(0),
-            _vm._v(" "),
             _c(
               "vue-glide",
               {
@@ -447,18 +438,9 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+              "p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
           },
-          [
-            _c(
-              "p",
-              {
-                staticClass:
-                  "text-6xl text-gray-50 uppercase animate-pulse bg-none "
-              },
-              [_vm._v("Sale slider section")]
-            )
-          ]
+          [_vm._m(0)]
         )
   ])
 }
@@ -467,23 +449,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center pb-12 md:pb-0" }, [
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
       _c(
-        "h2",
+        "p",
         {
           staticClass:
-            "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
         },
-        [_vm._v("\r\n                On sale, only today\r\n            ")]
+        [_vm._v("EMPTY SLIDER")]
       ),
       _vm._v(" "),
       _c(
         "p",
         {
           staticClass:
-            "font-hkregular text-secondary-lighter text-lg md:text-xl"
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
         },
-        [_vm._v("\r\n                Get it while they last!\r\n            ")]
+        [_vm._v("add some slide to see slider")]
       )
     ])
   }

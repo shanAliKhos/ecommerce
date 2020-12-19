@@ -36,12 +36,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components),
   computed: {
     HeroSliders: function HeroSliders() {
-      return this.$page.HeroSliders.hero_slider;
+      return this.$page.HeroSliders ? this.$page.HeroSliders.hero_slider : [];
     }
   }
 });
@@ -64,13 +71,6 @@ var _components;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -159,6 +159,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_WelcomeBrands__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/WelcomeBrands */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue");
 /* harmony import */ var _components_WelcomeSaleBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/WelcomeSaleBanner */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeSaleBanner.vue");
 /* harmony import */ var _shared_Slider_SaleSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../shared/Slider/SaleSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -365,63 +375,106 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "vue-glide",
-    {
-      attrs: {
-        type: "carousel",
-        perView: 1,
-        hoverpause: true,
-        bound: true,
-        navigation: true,
-        animationDuration: 1000,
-        autoplay: 3000
-      }
-    },
-    _vm._l(_vm.HeroSliders, function(HeroSlide, HeroSlideIndex) {
-      return _c("vue-glide-slide", { key: HeroSlideIndex }, [
-        _c(
-          "div",
-          {
-            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
-            style: "background-image:url('" + HeroSlide.photo_url + "')"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
-              },
-              [
+  return _vm.HeroSliders.length > 0
+    ? _c(
+        "div",
+        [
+          _c(
+            "vue-glide",
+            {
+              attrs: {
+                type: "carousel",
+                perView: 1,
+                hoverpause: true,
+                bound: true,
+                navigation: true,
+                animationDuration: 1000,
+                autoplay: 3000
+              }
+            },
+            _vm._l(_vm.HeroSliders, function(HeroSlide, HeroSlideIndex) {
+              return _c("vue-glide-slide", { key: HeroSlideIndex }, [
                 _c(
-                  "h3",
+                  "div",
                   {
-                    staticClass:
-                      "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                    staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                    style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
-                  [_vm._v(_vm._s(HeroSlide.title))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-primary btn-lg mt-8",
-                    attrs: { href: HeroSlide.button_url, draggable: "true" }
-                  },
-                  [_vm._v(_vm._s(HeroSlide.button_title))]
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                      },
+                      [
+                        _c(
+                          "h3",
+                          {
+                            staticClass:
+                              "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                          },
+                          [_vm._v(_vm._s(HeroSlide.title))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "inertia-link",
+                          {
+                            staticClass: "btn btn-primary btn-lg mt-8",
+                            attrs: {
+                              href: HeroSlide.button_url,
+                              draggable: "true"
+                            }
+                          },
+                          [_vm._v(_vm._s(HeroSlide.button_title))]
+                        )
+                      ],
+                      1
+                    )
+                  ]
                 )
-              ],
-              1
-            )
-          ]
-        )
-      ])
-    }),
-    1
-  )
+              ])
+            }),
+            1
+          )
+        ],
+        1
+      )
+    : _c(
+        "div",
+        {
+          staticClass:
+            "h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+        },
+        [_vm._m(0)]
+      )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
+        },
+        [_vm._v("EMPTY SLIDER")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
+        },
+        [_vm._v("add some slide to see slider")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -443,13 +496,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "pb-20 md:pb-32" }, [
+  return _c("div", [
     _vm.SaleSliderProducts.length > 0
       ? _c(
           "div",
           [
-            _vm._m(0),
-            _vm._v(" "),
             _c(
               "vue-glide",
               {
@@ -542,18 +593,9 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+              "p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
           },
-          [
-            _c(
-              "p",
-              {
-                staticClass:
-                  "text-6xl text-gray-50 uppercase animate-pulse bg-none "
-              },
-              [_vm._v("Sale slider section")]
-            )
-          ]
+          [_vm._m(0)]
         )
   ])
 }
@@ -562,23 +604,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center pb-12 md:pb-0" }, [
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
       _c(
-        "h2",
+        "p",
         {
           staticClass:
-            "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
         },
-        [_vm._v("\r\n                On sale, only today\r\n            ")]
+        [_vm._v("EMPTY SLIDER")]
       ),
       _vm._v(" "),
       _c(
         "p",
         {
           staticClass:
-            "font-hkregular text-secondary-lighter text-lg md:text-xl"
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
         },
-        [_vm._v("\r\n                Get it while they last!\r\n            ")]
+        [_vm._v("add some slide to see slider")]
       )
     ])
   }
@@ -612,6 +654,13 @@ var render = function() {
       _vm._v(" "),
       _c("WelcomeIcons"),
       _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "pb-20 md:pb-32" },
+        [_vm._m(0), _vm._v(" "), _c("SaleSlider")],
+        1
+      ),
+      _vm._v(" "),
       _c("TrendingCollection"),
       _vm._v(" "),
       _c("TrendingSlider"),
@@ -620,14 +669,37 @@ var render = function() {
       _vm._v(" "),
       _c("WelcomeBrands"),
       _vm._v(" "),
-      _c("WelcomeSaleBanner"),
-      _vm._v(" "),
-      _c("SaleSlider")
+      _c("WelcomeSaleBanner")
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center pb-12 md:pb-5" }, [
+      _c(
+        "h2",
+        {
+          staticClass:
+            "font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
+        },
+        [_vm._v("On sale")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "font-hkregular text-secondary-lighter text-lg md:text-xl"
+        },
+        [_vm._v("Get it while they last!")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
