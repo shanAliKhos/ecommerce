@@ -16,8 +16,9 @@ class ShopController extends Controller
         $Product = new Product;
  
         return Inertia::render('Ecomerce/welcome/Welcome',[
-            'Slider'=> $slider->where('name','sale')->with('sale_slider')->first(),
-            'FeaturedSliderProducts'=> $slider->where('name','trending')->with('trending_slider')->first(),
+            'SaleSliders'=> $slider->where('name','sale')->with('sale_slider')->first(),
+            'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),
+            'HeroSliders'=> $slider->where('name','hero')->with('hero_slider')->first(),
         ]);        
     }    
      

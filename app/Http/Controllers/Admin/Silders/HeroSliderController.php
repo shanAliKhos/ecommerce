@@ -3,9 +3,8 @@ namespace App\Http\Controllers\Admin\Silders;
 
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
-
-use App\Models\Slider; 
-use App\Models\Product;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Slider;  
 use App\Models\HeroSlider;
 use Illuminate\Http\Request;
 
@@ -18,10 +17,9 @@ class HeroSliderController extends Controller
 
     }     
  
-    public function index(Product $product)
+    public function index()
     { 
         $HeroSlider = $this->Model->where('name','hero')->with('hero_slider')->first();
-        
         if(!$HeroSlider){ 
             $HeroSlider = $this->Model->create([
                 'name' => 'hero',
@@ -43,8 +41,7 @@ class HeroSliderController extends Controller
         ]);
         $HeroSlider = $this->Model->where('name','hero')->first();
  
- 
-
+  
         $HeroSliderModel->create([ 
             "slider_id" => $HeroSlider->id,
             "title" => $request->title,
@@ -57,28 +54,66 @@ class HeroSliderController extends Controller
 
     }    
 
-    public function edit(Product $product)
-    { 
+    public function edit(HeroSlider $hero)
+    {  
+ 
         return Inertia::render('Admin/sliders/HeroSlider',[
-            // 'slider'=> $this->Model->where('name','hero')->first(),
-            // 'trending_products'=> $product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->get(),
-        ]);                 
+            'slider'=> $hero->slider->load('hero_slider'), 
+            'hero_slide'=> $hero, 
+        ]);                    
     }
  
-    // public function update(Request $request)
-    // {  
-    //     $HeroSlider = $this->Model->where('name','hero')->first();
+    public function update(HeroSlider $hero,Request $request)
+    {   
+        $this->validate($request,[
+            "title" => 'required|string|min:3|max:255',
+            "button_url" => 'required|url',
+            "button_title" => 'required|string|min:2|max:255',
+        ]); 
         
-    //     if(!$HeroSlider){
-    //         $HeroSlider = $this->Model->create([
-    //             'name' => 'hero',
-    //         ]); 
-    //     }
-                
-    //     dd($request->all(),$HeroSlider->hero_slider);
-    //     // $HeroSlider->hero_slider()->sync(array_column(json_decode($request->TrendingProducts,true),'id'));
+        if($request->hasFile('image')){
+            $this->validate($request,[ 
+                "image" => 'required|mimes:jpg,jpeg,png|max:100',   
+            ]);              
+            
+            try {
+                if(Storage::disk('public')->exists($hero->image)){
+                    Storage::disk('public')->delete($hero->image);
+                }  
+            } catch (\Throwable $th) {    }
 
-    //     // return back()->with('success','Trending slider updated');
+            $hero->update([
+                'image' => $request->file('image')->store('HeroSlider','public')
+            ]);               
 
-    // }
+        } 
+
+        if(empty($request->image) && $hero->image){
+            if(Storage::disk('public')->exists($hero->image)){                
+                Storage::disk('public')->delete($hero->image);
+            }        
+            $Prodherouct->update(['image' => null]);
+        }          
+        $hero->update([ 
+            "title" => $request->title,
+            "button_url" => $request->button_url,
+            "button_title" => $request->button_title, 
+        ]);  
+        return redirect()->route('admin.slider.hero.index')->with('success','Hero slide updated');
+    }
+
+    public function destroy(HeroSlider $hero)
+    {  
+        if(Storage::disk('public')->exists($hero->image)){
+            Storage::disk('public')->delete($hero->image);
+        } 
+
+        try { 
+             $hero->delete();
+            return back()->with('success','hero slide removed');
+        } catch (\Throwable $th) {
+             
+            return back()->with('error','OPP s could not delete ');
+        } 
+    }    
 }

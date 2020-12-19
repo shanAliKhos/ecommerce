@@ -73,7 +73,7 @@ export default {
  
     computed: {
       SaleSliderProducts(){
-          return this.$page.Slider?this.$page.Slider.sale_slider:[];
+          return this.$page.SaleSliders?this.$page.SaleSliders.sale_slider:[];
       },
     },    
  

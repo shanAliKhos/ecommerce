@@ -7,40 +7,18 @@
             :animationDuration="1000"
             :autoplay="3000"> 
             
-            <vue-glide-slide>
-                <div class="sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50" style="background-image:url('./img/product/product (18).jpg')">
+            <vue-glide-slide v-for="(HeroSlide, HeroSlideIndex) in HeroSliders" :key="HeroSlideIndex" >
+                <div class="sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50" 
+                    :style="'background-image:url(\'' + HeroSlide.photo_url + '\')'">
                     <div class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
                         <p class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                            Store New Men’s Outdoor Collection
+                            {{HeroSlide.title}}
                         </p>
-                        <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
+                        <inertia-link :href="HeroSlide.button_url" class="btn btn-primary btn-lg mt-8">{{HeroSlide.button_title}}</inertia-link>
                     </div>
                 </div>            
             </vue-glide-slide>  
-            <vue-glide-slide>
-                <div class="sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50" style="background-image:url('./img/product/product (2).jpg')">
-                    <div class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
-                        <p class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Hoodie your way! <br /> For Men</p>
-                        <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
-                    </div>
-                </div>       
-            </vue-glide-slide>  
-            <vue-glide-slide>
-                <div class="sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50" style="background-image:url('./img/product/product (21).jpg')">
-                    <div class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 bg-gray">
-                        <p class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> Match and play Women’s Dresses </p>
-                        <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
-                    </div>
-                </div>       
-            </vue-glide-slide>  
-            <vue-glide-slide>
-                <div class="sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50" style="background-image:url('./img/product/product (10).jpg')">
-                    <div class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 ">
-                        <p class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Back to school, <br /> the stylish way</p>
-                        <a href="javascript:;" class="btn btn-primary btn-lg mt-8">Know more</a>
-                    </div>
-                </div>         
-            </vue-glide-slide>   
+ 
 
 
         </vue-glide>
@@ -52,6 +30,12 @@ export default {
     components: {
         [Glide.name]: Glide,
         [GlideSlide.name]: GlideSlide, 
+    },    
+
+    computed: {
+      HeroSliders(){
+          return this.$page.HeroSliders.hero_slider;
+      },
     },    
 }
 </script>

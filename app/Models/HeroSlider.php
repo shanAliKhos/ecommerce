@@ -30,4 +30,10 @@ class HeroSlider extends Model
         return 'https://ui-avatars.com/api/?name='.urlencode($this->title).'&color=7F9CF5&background=EBF4FF';
     }    
 
+    public function slider()
+    {
+        return $this->belongsTo(Slider::class);
+    }
+ 
+
 }
