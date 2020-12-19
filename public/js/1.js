@@ -215,6 +215,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -591,6 +606,58 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("span", [_vm._v("Attributes Options")])
+                    ]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mb-4 mt-4 px-1" },
+                [
+                  _c(
+                    "p",
+                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    [_vm._v("Collection")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "side-link",
+                    {
+                      attrs: {
+                        href: _vm.route("admin.slider.hero.index"),
+                        active:
+                          _vm.$page.currentRouteName ==
+                          "admin.slider.hero.index"
+                      }
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "h-6 w-6 mr-2",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d:
+                                "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Tending Collection")])
                     ]
                   )
                 ],

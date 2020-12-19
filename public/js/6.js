@@ -290,7 +290,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: " md:mt-40 mt-20 " },
+        { staticClass: "lg:mt-40 mt-20 " },
         [
           _c(
             "transition",
