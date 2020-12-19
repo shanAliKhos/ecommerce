@@ -23,32 +23,32 @@
                     <p class="pb-6 flex font-semibold text-xl text-gray-400">Sale Slider</p>                        
                        
                     <div class="md:flex"> 
-                    <div class="w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"> 
-                        <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Products</label>
-                        <multiselect    
-                            :class="'py-2'"
-                            v-model="form.SaleProducts" 
-                            deselect-label="Can't remove this value" 
-                            track-by="name"  
-                            label="name"  
-                            placeholder="Select Produt Sale" 
-                            :options="ProductsOnSale" 
-                            :searchable="true" 
-                            :multiple="true" 
-                            :close-on-select="false" 
-                            :clear-on-select="false"                                
-                            :allow-empty="true">
-                        </multiselect>   
-                        <p class="text-red-500 text-xs italic" v-if="$page.errors.SaleProducts">{{$page.errors.SaleProducts}}</p>
-                    </div>                          
-                    <div class="flex items-center w-full md:w-1/3 justify-end px-4 py-3  sm:px-6">
-                         <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
-                            <span>Save</span>
-                            <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>                
-                        </loading-button>     
-                    </div>                        
+                        <div class="w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"> 
+                            <label class="z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Products</label>
+                            <multiselect    
+                                :class="'py-2'"
+                                v-model="form.SaleProducts" 
+                                deselect-label="Can't remove this value" 
+                                track-by="name"  
+                                label="name"  
+                                placeholder="Select Produt Sale" 
+                                :options="ProductsOnSale" 
+                                :searchable="true" 
+                                :multiple="true" 
+                                :close-on-select="false" 
+                                :clear-on-select="false"                                
+                                :allow-empty="true">
+                            </multiselect>   
+                            <p class="text-red-500 text-xs italic" v-if="$page.errors.SaleProducts">{{$page.errors.SaleProducts}}</p>
+                        </div>                          
+                        <div class="flex items-center w-full md:w-1/3 justify-end px-4 py-3  sm:px-6">
+                            <loading-button :loading="sending" class="flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
+                                <span>Save</span>
+                                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>                
+                            </loading-button>     
+                        </div>                        
                     </div>                        
 
                     <div class="flex flex-wrap justify-between pb-5 md:pb-5 sm:-px-3 md:-mx-5 -mx-4"> 

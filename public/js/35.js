@@ -197,7 +197,7 @@ var render = function() {
             "div",
             { staticClass: "flex items-center justify-center py-5  lg:p-1" },
             [
-              _c("div", { staticClass: "flex-shrink-0 w-auto" }, [
+              _c("div", { staticClass: "flex-shrink-0 w-80 lg:w-auto" }, [
                 _c("img", {
                   staticClass:
                     "h-auto w-80 sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",

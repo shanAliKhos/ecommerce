@@ -445,7 +445,7 @@ var render = function() {
     {
       staticClass:
         "border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group",
-      attrs: { "preserve-scroll": "", href: _vm.route("cart.index") }
+      attrs: { href: _vm.route("cart.index") }
     },
     [
       _c("span", {

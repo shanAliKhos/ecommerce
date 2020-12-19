@@ -10,7 +10,7 @@
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">IMAGE</p>
 
         <div class="flex items-center justify-center py-5  lg:p-1">
-            <div class="flex-shrink-0 w-auto">
+            <div class="flex-shrink-0 w-80 lg:w-auto">
                 <img class="h-auto w-80 sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded" :src="Product.mainphoto_url" alt="">
             </div> 
         </div>             

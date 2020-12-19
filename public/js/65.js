@@ -90,6 +90,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -399,53 +403,108 @@ var render = function() {
                 [_vm._v("Trending Slider")]
               ),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"
-                },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass:
-                        "z-30 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
-                      attrs: { for: "weight" }
-                    },
-                    [_vm._v("Products")]
-                  ),
-                  _vm._v(" "),
-                  _c("multiselect", {
-                    class: "py-2",
-                    attrs: {
-                      "deselect-label": "Can't remove this value",
-                      "track-by": "name",
-                      label: "name",
-                      placeholder: "Select from Trending Products",
-                      options: _vm.ProductsOnTrending,
-                      searchable: true,
-                      multiple: true,
-                      "close-on-select": false,
-                      "clear-on-select": false,
-                      "allow-empty": false
-                    },
-                    model: {
-                      value: _vm.form.TrendingProducts,
-                      callback: function($$v) {
-                        _vm.$set(_vm.form, "TrendingProducts", $$v)
+              _c("div", { staticClass: "md:flex" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "w-full md:w-2/3  px-3  md:mb-0  mt-2 relative"
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "z-30 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                        attrs: { for: "weight" }
                       },
-                      expression: "form.TrendingProducts"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.errors.TrendingProducts
-                    ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
-                        _vm._v(_vm._s(_vm.$page.errors.TrendingProducts))
-                      ])
-                    : _vm._e()
-                ],
-                1
-              ),
+                      [_vm._v("Products")]
+                    ),
+                    _vm._v(" "),
+                    _c("multiselect", {
+                      class: "py-2",
+                      attrs: {
+                        "deselect-label": "Can't remove this value",
+                        "track-by": "name",
+                        label: "name",
+                        placeholder: "Select from Trending Products",
+                        options: _vm.ProductsOnTrending,
+                        searchable: true,
+                        multiple: true,
+                        "close-on-select": false,
+                        "clear-on-select": false,
+                        "allow-empty": false
+                      },
+                      model: {
+                        value: _vm.form.TrendingProducts,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "TrendingProducts", $$v)
+                        },
+                        expression: "form.TrendingProducts"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.$page.errors.TrendingProducts
+                      ? _c(
+                          "p",
+                          { staticClass: "text-red-500 text-xs italic" },
+                          [_vm._v(_vm._s(_vm.$page.errors.TrendingProducts))]
+                        )
+                      : _vm._e()
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center w-full md:w-1/3 justify-end px-4 py-3  sm:px-6"
+                  },
+                  [
+                    _c(
+                      "loading-button",
+                      {
+                        staticClass:
+                          "flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
+                        attrs: {
+                          loading: _vm.sending,
+                          type: "submit",
+                          as: "button"
+                        }
+                      },
+                      [
+                        _c("span", [_vm._v("Save")]),
+                        _vm._v(" "),
+                        !_vm.sending
+                          ? _c(
+                              "svg",
+                              {
+                                staticClass:
+                                  "transition duration-700 ease-in-out  h-5 w-5 ml-2",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 20 20",
+                                  fill: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          : _vm._e()
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -466,57 +525,6 @@ var render = function() {
                   )
                 }),
                 0
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "flex items-center justify-end px-4 py-3 text-right sm:px-6 mt-4"
-                },
-                [
-                  _c(
-                    "loading-button",
-                    {
-                      staticClass:
-                        "flex items-center uppercase transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2",
-                      attrs: {
-                        loading: _vm.sending,
-                        type: "submit",
-                        as: "button"
-                      }
-                    },
-                    [
-                      _c("span", [_vm._v("Save")]),
-                      _vm._v(" "),
-                      !_vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "transition duration-700 ease-in-out  h-5 w-5 ml-2",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e()
-                    ]
-                  )
-                ],
-                1
               )
             ]
           )
