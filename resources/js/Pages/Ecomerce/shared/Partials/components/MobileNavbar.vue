@@ -2,11 +2,11 @@
 <div v-if="IsMenuVisible" class="z-50 bg-white  block lg:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
     <div class="grid grid-cols-4 gap-2 flex justify-around mt-1"> 
 
-            <MobileNavLink :active="$page.currentRouteName == 'welcome'" :href="route('welcome')" class="appearance-none focus:outline-none">    
-                <svg class="ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <MobileNavLink :active="$page.currentRouteName == 'welcome'" :href="route('welcome')" class="appearance-none ">    
+                <svg class="ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>                    
-                <span class="appearance-none focus:outline-none">Home</span>
+                <span class="appearance-none ">Home</span>
             </MobileNavLink>         
     
             <MobileNavLink :active="$page.currentRouteName == 'shop.index'" :href="route('shop.index')">

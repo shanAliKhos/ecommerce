@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"597743800a8f7e6b5881","2":"1e73417be7586645e9e2","3":"56fea0055722fdb7a029","4":"9339be042c93eb49d48d","5":"3973eb5d4c886786f99b","6":"acc0bdf6362c4f3910b1","7":"dd2890e484b09565d70b","8":"edd0934a111e4324a6cd","9":"66fc51527a9e8e00f71e","10":"62247fce7dd6c6083452","11":"2b971caae028c7a0aa9e","12":"7146f5c7ac1193af062e","13":"088b6b5de873574182bb","14":"00705d16e35d33f11fa7","15":"c11e63d1e6d8a1796b69","16":"f0a32082ba0c0631338c","17":"9f5263aaa1a050cafe7c","18":"2b50cfcb75740040e47c","19":"8a675e409c72de6bfe05","20":"6ab930fd08e38be6a17f","21":"a9fe834d163ce9629158","22":"f09db82d897f9240840b","23":"7dbba6a40d11c51d5d6e","24":"adf13d0e33168dcb1ea9","25":"a35187f7264e67dac99d","26":"cfdfbfead5e182d7a519","27":"2be8b233590f0851246c","28":"a829994d3fa3751d9313","29":"fe460763f316a08d53a3","30":"5140cb52a29960c3c615","31":"e3f8acf3cc367bb184d2","32":"500bb6c1b40e4df3828b","33":"093d23d6ec055b06df5d","34":"1790fef5793974f885e7","35":"f0678be5dddd3f5d359b","36":"1c05e4560a6efafca684","37":"e2ac9673d942d628cb5e","38":"03b1555cfd0081bca87e","39":"b9ffc22c1f2f4b81413e","40":"49ad38347706e84ba4cd","41":"1ccd2898e14d40a26c13","42":"56724798e928d6eff373","43":"de6af662e8f153e92e37","44":"204863a26f4fe2e9acff","45":"0c08ce6f07f5824e93b5","46":"f037e3ec19378acfba54","47":"e85291fca0ef89144734","48":"50624c12f9dc337f169b","49":"30499851d567f5000103","50":"2f431f82e02f4a96d8ce","51":"0202cecbf4ecd79cd0d4","52":"972847354da49393343e","53":"1eeb383cf47e9c7f297b","54":"67d1831f25b96fa915a0","55":"ae14a68fe6f049c7858d","56":"671da42f255deccfff90","57":"83d6b20b32cb963c0296","58":"0d05a1ce240b40e41033","59":"cf1afba99c34c78c950b","60":"77ec1e23c095096178c6","61":"824bb4157e1c3201ad5a","62":"837c9863c74ac5ca4f92","63":"4833d2902da32ba350ca","64":"fbd13a39688432cca278","65":"7449a6db63e5cd60026e","66":"ea960e1147565dedd498","67":"c5b4f37cdebf29ec6054","68":"9fc30dfd5544f4293f78","69":"92f7e7de926df2486a21","70":"39b65bb1951d30e6a8bc","71":"892a31c90e022a1f261c","72":"a149edf8e3d7eb14386d","73":"7a167aa75f2941010146","74":"2d84f94cb1b8b339c083","75":"4b2c8771c3ea305191ff","76":"656bdd3b4c19b68b33a0","77":"b7563e84f25b88e0685f","78":"0e1e0965586996f13de3","79":"af4339ca474cc586f313","80":"af40d1484676a9c01024","81":"7ebbc7d04715d626b375","82":"9e5ad228835f52cd6d62","83":"53d41f612305f0f8ecda","84":"8255624100d2b76d951a","85":"825bf838226aff2c6c2f","86":"07c77b8178b0415e655b","87":"9d0fa6d4634571e7bca1","88":"c4d42dbf6ea1e4ca683c","89":"33cd30e04e60825555f3","90":"41c06ac9b7b1d474ed2c","91":"a879a28eee9b08df7d84","92":"1250c10d9c2a174b9c08","93":"52361954192163cc4288","94":"5455204e9d9bb07219c8","95":"307bd21540cb7bc72a3b","96":"1c0fb4cf55ce9a191a5a","97":"630ef5b546ba887bc79c","98":"17967861bb73d8b8fdd0","99":"7190461228bb77570952","100":"5eb8708265c6b7c8d786","101":"4f76cce6f507b156757f","102":"a774ab108b8c826e340d","103":"ce4f79547c5927c80409","104":"997002c9fc8ad1a8869a","105":"77b11a2263072a5776ac","106":"4fc7cf0a44c6dc6992d3","107":"c03000673eb374f99955","108":"3dcb2b502dfcdf0e0d57","109":"bd57a11bfcb59070920e","110":"7521b16e47ea4ad49708","111":"b3f4cf6271c88783ea88","112":"c9a357342e8fb9198e3b","113":"0f474348770a34ac8183","114":"e3d0e975bbf6dd935c60","115":"86d081bee085a3cbf476","116":"625f903dd28a7b554565","117":"291d4f83a217fa3dae18","118":"22e3754888a661c21520","119":"d86a2084d9c00758663e","120":"5f74610a1694acae73ad","121":"dfa3545a8ca9d002ffb8","122":"324adc77443a607e85ee","123":"9e045ffac7aa1f00f9ab","124":"ef2813682e495a7cc7cf","125":"4bad70090f262af36497","126":"54a341c5360de2127cca","127":"8b34f7f1dcfaf933a94f","128":"5dd0c680d0c9d83680ec","129":"87ca11869d2563fd4dfd","130":"726f3de73b3ed74811d3","131":"92d858e638d462c8bed3","132":"fce91b14084356ac254f","133":"eb6a3263e7e92b16fbf1","134":"a1d6ddb2849b203af197","135":"2f515b3615ce47757b20","136":"e63c31c98b7521ca8c9e","137":"228bd1c1b12e14cb84fc","138":"515b35d91fa1fb317f16","139":"5936830aad511dbb64f7","140":"d734d7412cf3f2eba7f2","141":"3d7a8a733873c5e92883","142":"1ae864668df3345f53e1","143":"aed7df463b73d7a85fe4","144":"e99616adf44248ddd168","145":"d9a0da08c287722357ce","146":"e41c9c95e79e5b9a008d","147":"fed8149b3e980a22b2fe","148":"45c3416028ebbc130cf8","149":"62c7749c5f55d36e0afb","150":"1ec34d0a79aa99a6c47f","151":"27d114192c311e02c3cf","152":"e04e7b818b1ad2ef765a","153":"7799637f297a7fd56d66","154":"64624598e1480b2b1900","155":"df8b84c7b2b57e19439c","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","166":"7799deab255192c4be32","167":"8b85adb28169085407c2","168":"8519e6839543c542f825","169":"8cfde05e474ee76dc1cd","170":"36f7aaba60c6c36e8113","171":"6672e735771663ec5c4c","172":"a0cabd9a9685f926eef1","173":"5bdb12b3749ffd967ff4"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f8adec1d359ac73faad1","1":"597743800a8f7e6b5881","2":"1e73417be7586645e9e2","3":"56fea0055722fdb7a029","4":"4ae4c2bbda69599bbd9f","5":"3973eb5d4c886786f99b","6":"abc990ccef8b47950afa","7":"dd2890e484b09565d70b","8":"edd0934a111e4324a6cd","9":"66fc51527a9e8e00f71e","10":"62247fce7dd6c6083452","11":"2b971caae028c7a0aa9e","12":"7146f5c7ac1193af062e","13":"088b6b5de873574182bb","14":"00705d16e35d33f11fa7","15":"c11e63d1e6d8a1796b69","16":"f0a32082ba0c0631338c","17":"9f5263aaa1a050cafe7c","18":"2b50cfcb75740040e47c","19":"8a675e409c72de6bfe05","20":"6ab930fd08e38be6a17f","21":"a9fe834d163ce9629158","22":"f09db82d897f9240840b","23":"7dbba6a40d11c51d5d6e","24":"adf13d0e33168dcb1ea9","25":"a35187f7264e67dac99d","26":"0e55ee0b27b2801f5013","27":"a9458442fd77d7dccfa5","28":"aec1bfe63b82c78fe9f1","29":"d893e0cb70b495aed0b2","30":"3dd739c7a491255a945b","31":"8f4eec3812a3be0beb8c","32":"17cca96e780658586a00","33":"5d292dc64f27fe40dc58","34":"e83942c2aecc3005c7de","35":"6385c305c2b87956c5f7","36":"3b821a7de0ac5388fc1b","37":"66508a7400e774ef76a1","38":"42791da2f9338978bcc6","39":"903f0685c3237d5ceca5","40":"49ad38347706e84ba4cd","41":"1ccd2898e14d40a26c13","42":"56724798e928d6eff373","43":"25ebfcea6764980e7dc3","44":"204863a26f4fe2e9acff","45":"0c08ce6f07f5824e93b5","46":"f037e3ec19378acfba54","47":"e85291fca0ef89144734","48":"37b031d254f47d566c18","49":"30499851d567f5000103","50":"2f431f82e02f4a96d8ce","51":"0202cecbf4ecd79cd0d4","52":"972847354da49393343e","53":"1eeb383cf47e9c7f297b","54":"67d1831f25b96fa915a0","55":"ae14a68fe6f049c7858d","56":"671da42f255deccfff90","57":"83d6b20b32cb963c0296","58":"0d05a1ce240b40e41033","59":"cf1afba99c34c78c950b","60":"2864e6843b03557cd59d","61":"824bb4157e1c3201ad5a","62":"6a1edfe23b1ae3d35e53","63":"4833d2902da32ba350ca","64":"32fa24d1eec5ce2a956c","65":"8fe9271dc0f462f71abb","66":"ea960e1147565dedd498","67":"c5b4f37cdebf29ec6054","68":"4b31186584fca28e63a7","69":"92f7e7de926df2486a21","70":"39b65bb1951d30e6a8bc","71":"892a31c90e022a1f261c","72":"278639880a6e22a154af","73":"7a167aa75f2941010146","74":"2d84f94cb1b8b339c083","75":"4b2c8771c3ea305191ff","76":"656bdd3b4c19b68b33a0","77":"b7563e84f25b88e0685f","78":"0e1e0965586996f13de3","79":"af4339ca474cc586f313","80":"af40d1484676a9c01024","81":"7ebbc7d04715d626b375","82":"9e5ad228835f52cd6d62","83":"53d41f612305f0f8ecda","84":"8255624100d2b76d951a","85":"825bf838226aff2c6c2f","86":"07c77b8178b0415e655b","87":"9d0fa6d4634571e7bca1","88":"c4d42dbf6ea1e4ca683c","89":"33cd30e04e60825555f3","90":"41c06ac9b7b1d474ed2c","91":"a879a28eee9b08df7d84","92":"1250c10d9c2a174b9c08","93":"52361954192163cc4288","94":"5455204e9d9bb07219c8","95":"307bd21540cb7bc72a3b","96":"1c0fb4cf55ce9a191a5a","97":"c431480109e1e7e87db8","98":"17967861bb73d8b8fdd0","99":"7190461228bb77570952","100":"5eb8708265c6b7c8d786","101":"4f76cce6f507b156757f","102":"a774ab108b8c826e340d","103":"ce4f79547c5927c80409","104":"997002c9fc8ad1a8869a","105":"77b11a2263072a5776ac","106":"4fc7cf0a44c6dc6992d3","107":"c03000673eb374f99955","108":"3dcb2b502dfcdf0e0d57","109":"bd57a11bfcb59070920e","110":"7521b16e47ea4ad49708","111":"b3f4cf6271c88783ea88","112":"c9a357342e8fb9198e3b","113":"0f474348770a34ac8183","114":"e3d0e975bbf6dd935c60","115":"86d081bee085a3cbf476","116":"625f903dd28a7b554565","117":"291d4f83a217fa3dae18","118":"22e3754888a661c21520","119":"d86a2084d9c00758663e","120":"5f74610a1694acae73ad","121":"dfa3545a8ca9d002ffb8","122":"324adc77443a607e85ee","123":"9e045ffac7aa1f00f9ab","124":"1caf4c3abda796ff95ce","125":"4bad70090f262af36497","126":"54a341c5360de2127cca","127":"1d082669f187b23318bc","128":"5dd0c680d0c9d83680ec","129":"87ca11869d2563fd4dfd","130":"726f3de73b3ed74811d3","131":"92d858e638d462c8bed3","132":"fce91b14084356ac254f","133":"eb6a3263e7e92b16fbf1","134":"a1d6ddb2849b203af197","135":"2f515b3615ce47757b20","136":"e63c31c98b7521ca8c9e","137":"228bd1c1b12e14cb84fc","138":"515b35d91fa1fb317f16","139":"5936830aad511dbb64f7","140":"d734d7412cf3f2eba7f2","141":"3d7a8a733873c5e92883","142":"1ae864668df3345f53e1","143":"aed7df463b73d7a85fe4","144":"e99616adf44248ddd168","145":"d9a0da08c287722357ce","146":"a869ca6b99844a9a68da","147":"fed8149b3e980a22b2fe","148":"45c3416028ebbc130cf8","149":"62c7749c5f55d36e0afb","150":"1ec34d0a79aa99a6c47f","151":"27d114192c311e02c3cf","152":"e04e7b818b1ad2ef765a","153":"7799637f297a7fd56d66","154":"64624598e1480b2b1900","155":"df8b84c7b2b57e19439c","156":"1a0a11c03d2d5e9a001a","157":"8152276772c6f10d373c","158":"a844604104bb12609690","159":"e28dd689446411419bbf","160":"3d396c372f0d020e20a0","161":"3d6e01187a4eb5a1bc6c","162":"515ea927a23a2a93faa2","163":"dc9846eb26e8fcc8d0f3","164":"5d40120d3f2912aafb50","165":"39e2ad4813ab5167f836","166":"068fdb113a6d1355a51b","167":"8b85adb28169085407c2","168":"8519e6839543c542f825","169":"8cfde05e474ee76dc1cd","170":"36f7aaba60c6c36e8113","171":"6672e735771663ec5c4c","172":"a0cabd9a9685f926eef1","173":"5bdb12b3749ffd967ff4","174":"72121c9dd7f0e923773f"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -45877,7 +45877,7 @@ var map = {
 		0,
 		1,
 		2,
-		28,
+		27,
 		85
 	],
 	"./Admin/attribute-option/Index.vue": [
@@ -45885,17 +45885,17 @@ var map = {
 		0,
 		1,
 		2,
-		28,
+		27,
 		85
 	],
 	"./Admin/attribute-option/components/ListItem": [
 		"./resources/js/Pages/Admin/attribute-option/components/ListItem.vue",
-		28,
+		27,
 		158
 	],
 	"./Admin/attribute-option/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/attribute-option/components/ListItem.vue",
-		28,
+		27,
 		158
 	],
 	"./Admin/attribute/Create": [
@@ -45931,7 +45931,7 @@ var map = {
 		0,
 		1,
 		2,
-		29,
+		28,
 		86
 	],
 	"./Admin/attribute/Index.vue": [
@@ -45939,17 +45939,17 @@ var map = {
 		0,
 		1,
 		2,
-		29,
+		28,
 		86
 	],
 	"./Admin/attribute/components/ListItem": [
 		"./resources/js/Pages/Admin/attribute/components/ListItem.vue",
-		29,
+		28,
 		157
 	],
 	"./Admin/attribute/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/attribute/components/ListItem.vue",
-		29,
+		28,
 		157
 	],
 	"./Admin/blog/Create": [
@@ -45997,7 +45997,7 @@ var map = {
 		0,
 		1,
 		2,
-		30,
+		29,
 		89
 	],
 	"./Admin/blog/Index.vue": [
@@ -46005,17 +46005,17 @@ var map = {
 		0,
 		1,
 		2,
-		30,
+		29,
 		89
 	],
 	"./Admin/blog/components/ListItem": [
 		"./resources/js/Pages/Admin/blog/components/ListItem.vue",
-		30,
+		29,
 		159
 	],
 	"./Admin/blog/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/blog/components/ListItem.vue",
-		30,
+		29,
 		159
 	],
 	"./Admin/brand/Create": [
@@ -46051,7 +46051,7 @@ var map = {
 		0,
 		1,
 		2,
-		31,
+		30,
 		73
 	],
 	"./Admin/brand/Index.vue": [
@@ -46059,17 +46059,17 @@ var map = {
 		0,
 		1,
 		2,
-		31,
+		30,
 		73
 	],
 	"./Admin/brand/components/ListItem": [
 		"./resources/js/Pages/Admin/brand/components/ListItem.vue",
-		31,
+		30,
 		160
 	],
 	"./Admin/brand/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/brand/components/ListItem.vue",
-		31,
+		30,
 		160
 	],
 	"./Admin/category/Create": [
@@ -46117,7 +46117,7 @@ var map = {
 		0,
 		1,
 		2,
-		32,
+		31,
 		90
 	],
 	"./Admin/category/Index.vue": [
@@ -46125,17 +46125,17 @@ var map = {
 		0,
 		1,
 		2,
-		32,
+		31,
 		90
 	],
 	"./Admin/category/components/ListItem": [
 		"./resources/js/Pages/Admin/category/components/ListItem.vue",
-		32,
+		31,
 		161
 	],
 	"./Admin/category/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/category/components/ListItem.vue",
-		32,
+		31,
 		161
 	],
 	"./Admin/customers": [
@@ -46232,7 +46232,7 @@ var map = {
 		1,
 		2,
 		18,
-		33
+		32
 	],
 	"./Admin/orders/": [
 		"./resources/js/Pages/Admin/orders/index.vue",
@@ -46240,7 +46240,7 @@ var map = {
 		1,
 		2,
 		18,
-		33
+		32
 	],
 	"./Admin/orders/components/ListItem": [
 		"./resources/js/Pages/Admin/orders/components/ListItem.vue",
@@ -46258,7 +46258,7 @@ var map = {
 		1,
 		2,
 		18,
-		33
+		32
 	],
 	"./Admin/orders/index.vue": [
 		"./resources/js/Pages/Admin/orders/index.vue",
@@ -46266,7 +46266,7 @@ var map = {
 		1,
 		2,
 		18,
-		33
+		32
 	],
 	"./Admin/orders/show": [
 		"./resources/js/Pages/Admin/orders/show.vue",
@@ -46324,7 +46324,7 @@ var map = {
 		2,
 		8,
 		41,
-		34,
+		33,
 		71
 	],
 	"./Admin/products/Edit.vue": [
@@ -46337,7 +46337,7 @@ var map = {
 		2,
 		8,
 		41,
-		34,
+		33,
 		71
 	],
 	"./Admin/products/EditForm": [
@@ -46361,7 +46361,7 @@ var map = {
 		0,
 		1,
 		2,
-		35,
+		34,
 		92
 	],
 	"./Admin/products/Index.vue": [
@@ -46369,21 +46369,21 @@ var map = {
 		0,
 		1,
 		2,
-		35,
+		34,
 		92
 	],
 	"./Admin/products/ProductAttributes": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
 		7,
-		34,
+		33,
 		148
 	],
 	"./Admin/products/ProductAttributes.vue": [
 		"./resources/js/Pages/Admin/products/ProductAttributes.vue",
 		0,
 		7,
-		34,
+		33,
 		148
 	],
 	"./Admin/products/ProductImages": [
@@ -46398,12 +46398,12 @@ var map = {
 	],
 	"./Admin/products/components/ListItem": [
 		"./resources/js/Pages/Admin/products/components/ListItem.vue",
-		35,
+		34,
 		165
 	],
 	"./Admin/products/components/ListItem.vue": [
 		"./resources/js/Pages/Admin/products/components/ListItem.vue",
-		35,
+		34,
 		165
 	],
 	"./Admin/settings/Index": [
@@ -46412,8 +46412,8 @@ var map = {
 		1,
 		2,
 		21,
-		27,
 		36,
+		35,
 		63
 	],
 	"./Admin/settings/Index.vue": [
@@ -46422,18 +46422,18 @@ var map = {
 		1,
 		2,
 		21,
-		27,
 		36,
+		35,
 		63
 	],
 	"./Admin/settings/components/AnalyticsForm": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		36,
+		35,
 		67
 	],
 	"./Admin/settings/components/AnalyticsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/AnalyticsForm.vue",
-		36,
+		35,
 		67
 	],
 	"./Admin/settings/components/FooterSeoForm": [
@@ -46446,23 +46446,23 @@ var map = {
 	],
 	"./Admin/settings/components/GeneralForm": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		27,
-		166
+		36,
+		68
 	],
 	"./Admin/settings/components/GeneralForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/GeneralForm.vue",
-		27,
-		166
+		36,
+		68
 	],
 	"./Admin/settings/components/PaymentsForm": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
 		21,
-		68
+		166
 	],
 	"./Admin/settings/components/PaymentsForm.vue": [
 		"./resources/js/Pages/Admin/settings/components/PaymentsForm.vue",
 		21,
-		68
+		166
 	],
 	"./Admin/settings/components/SocialLinksForm": [
 		"./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue",
@@ -46479,7 +46479,8 @@ var map = {
 		2,
 		19,
 		26,
-		72
+		72,
+		174
 	],
 	"./Admin/sliders/HeroSlider.vue": [
 		"./resources/js/Pages/Admin/sliders/HeroSlider.vue",
@@ -46488,7 +46489,8 @@ var map = {
 		2,
 		19,
 		26,
-		72
+		72,
+		174
 	],
 	"./Admin/sliders/SaleSlider": [
 		"./resources/js/Pages/Admin/sliders/SaleSlider.vue",
@@ -46524,12 +46526,12 @@ var map = {
 	],
 	"./Admin/sliders/components/Create": [
 		"./resources/js/Pages/Admin/sliders/components/Create.vue",
-		26,
+		72,
 		134
 	],
 	"./Admin/sliders/components/Create.vue": [
 		"./resources/js/Pages/Admin/sliders/components/Create.vue",
-		26,
+		72,
 		134
 	],
 	"./Admin/sliders/components/ListItem": [
@@ -46551,6 +46553,22 @@ var map = {
 		"./resources/js/Pages/Admin/sliders/components/Listing.vue",
 		19,
 		112
+	],
+	"./Admin/tending-collection/SaleSlider": [
+		"./resources/js/Pages/Admin/tending-collection/SaleSlider.vue",
+		0,
+		7,
+		1,
+		2,
+		48
+	],
+	"./Admin/tending-collection/SaleSlider.vue": [
+		"./resources/js/Pages/Admin/tending-collection/SaleSlider.vue",
+		0,
+		7,
+		1,
+		2,
+		48
 	],
 	"./Auth/ForgetPassword": [
 		"./resources/js/Pages/Auth/ForgetPassword.vue",
@@ -47141,9 +47159,9 @@ var map = {
 		4,
 		5,
 		6,
+		26,
 		43,
 		39,
-		48,
 		60
 	],
 	"./Ecomerce/welcome/Welcome.vue": [
@@ -47153,19 +47171,19 @@ var map = {
 		4,
 		5,
 		6,
+		26,
 		43,
 		39,
-		48,
 		60
 	],
 	"./Ecomerce/welcome/components/TrendingCollection": [
 		"./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue",
-		48,
+		26,
 		173
 	],
 	"./Ecomerce/welcome/components/TrendingCollection.vue": [
 		"./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue",
-		48,
+		26,
 		173
 	],
 	"./Ecomerce/welcome/components/WelcomeBrands": [

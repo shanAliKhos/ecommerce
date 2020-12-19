@@ -34,8 +34,8 @@
                             
   
                         </div>        
-                    </div>     
-
+                    </div>    
+                    
                 </div>                                                
         
             </div> 
@@ -48,6 +48,7 @@ import AppLayout from './../Layouts/AppLayout'
 import BackButton from './../../Shared/BackButton'  
 import Create from './components/Create'   
 import Listing from './components/Listing'   
+import TrendingCollection from './../../Ecomerce/welcome/components/TrendingCollection'   
  
 
 export default {
@@ -57,6 +58,7 @@ export default {
         BackButton,    
         Create,        
         Listing,        
+        TrendingCollection,        
     },
  
     mounted() { 

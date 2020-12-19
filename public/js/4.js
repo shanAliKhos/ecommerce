@@ -141,7 +141,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "inertia-link",
-    { class: _vm.IsActiveLink, attrs: { href: _vm.href } },
+    {
+      staticClass: "focus:outline-none",
+      class: _vm.IsActiveLink,
+      attrs: { href: _vm.href }
+    },
     [_vm._t("default")],
     2
   )
@@ -183,7 +187,7 @@ var render = function() {
               _c(
                 "MobileNavLink",
                 {
-                  staticClass: "appearance-none focus:outline-none",
+                  staticClass: "appearance-none ",
                   attrs: {
                     active: _vm.$page.currentRouteName == "welcome",
                     href: _vm.route("welcome")
@@ -194,7 +198,7 @@ var render = function() {
                     "svg",
                     {
                       staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none focus:outline-none",
+                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none ",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -215,11 +219,9 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "span",
-                    { staticClass: "appearance-none focus:outline-none" },
-                    [_vm._v("Home")]
-                  )
+                  _c("span", { staticClass: "appearance-none " }, [
+                    _vm._v("Home")
+                  ])
                 ]
               ),
               _vm._v(" "),

@@ -41,8 +41,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   methods: {// AddToCart(Item){   
@@ -132,14 +130,17 @@ var render = function() {
       [
         _c(
           "inertia-link",
-          { attrs: { href: _vm.route("shop.show", _vm.Product.slug) } },
+          {
+            staticClass: "focus:outline-none",
+            attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
+          },
           [
             _vm.SetLable.Active
               ? _c(
                   "div",
                   {
                     staticClass:
-                      "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full"
+                      "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30"
                   },
                   [
                     _c(
@@ -155,13 +156,17 @@ var render = function() {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _c("div", { staticClass: "flex justify-center items-center" }, [
-              _c("div", {
-                staticClass:
-                  "w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg",
-                style: "background-image:url('" + _vm.ProductImage + "')"
-              })
-            ]),
+            _c(
+              "div",
+              { staticClass: "flex justify-center items-center h-64 pb-4 p-2" },
+              [
+                _c("img", {
+                  staticClass:
+                    "w-auto h-full bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg",
+                  attrs: { src: _vm.ProductImage }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "flex items-center px-4 py-1" }, [
               _c(

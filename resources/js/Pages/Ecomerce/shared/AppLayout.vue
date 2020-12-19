@@ -3,7 +3,7 @@
     
     <app-header></app-header>
     
-    <main class="lg:mt-40 mt-20 ">
+    <main class=" md:mt-40 mt-20 ">
 
         <transition name="slide-fade">
 

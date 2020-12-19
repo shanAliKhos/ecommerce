@@ -36,11 +36,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components),
@@ -76,6 +71,7 @@ var render = function() {
         perView: 1,
         hoverpause: true,
         bound: true,
+        navigation: true,
         animationDuration: 1000,
         autoplay: 3000
       }
@@ -85,8 +81,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass:
-              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
+            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
             style: "background-image:url('" + HeroSlide.photo_url + "')"
           },
           [
@@ -98,25 +93,19 @@ var render = function() {
               },
               [
                 _c(
-                  "p",
+                  "h3",
                   {
                     staticClass:
                       "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   },
-                  [
-                    _vm._v(
-                      "\n                     " +
-                        _vm._s(HeroSlide.title) +
-                        "\n                 "
-                    )
-                  ]
+                  [_vm._v(_vm._s(HeroSlide.title))]
                 ),
                 _vm._v(" "),
                 _c(
                   "inertia-link",
                   {
                     staticClass: "btn btn-primary btn-lg mt-8",
-                    attrs: { href: HeroSlide.button_url }
+                    attrs: { href: HeroSlide.button_url, draggable: "true" }
                   },
                   [_vm._v(_vm._s(HeroSlide.button_title))]
                 )

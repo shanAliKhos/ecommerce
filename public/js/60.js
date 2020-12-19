@@ -36,11 +36,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components),
@@ -69,6 +64,7 @@ var _components;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -377,6 +373,7 @@ var render = function() {
         perView: 1,
         hoverpause: true,
         bound: true,
+        navigation: true,
         animationDuration: 1000,
         autoplay: 3000
       }
@@ -386,8 +383,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass:
-              "sm:bg-center bg-no-repeat bg-object lg:bg-right bg-gray-50",
+            staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
             style: "background-image:url('" + HeroSlide.photo_url + "')"
           },
           [
@@ -399,25 +395,19 @@ var render = function() {
               },
               [
                 _c(
-                  "p",
+                  "h3",
                   {
                     staticClass:
                       "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   },
-                  [
-                    _vm._v(
-                      "\n                     " +
-                        _vm._s(HeroSlide.title) +
-                        "\n                 "
-                    )
-                  ]
+                  [_vm._v(_vm._s(HeroSlide.title))]
                 ),
                 _vm._v(" "),
                 _c(
                   "inertia-link",
                   {
                     staticClass: "btn btn-primary btn-lg mt-8",
-                    attrs: { href: HeroSlide.button_url }
+                    attrs: { href: HeroSlide.button_url, draggable: "true" }
                   },
                   [_vm._v(_vm._s(HeroSlide.button_title))]
                 )
@@ -516,13 +506,13 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
                       attrs: { "data-glide-dir": "<" }
                     },
                     [
                       _c("i", {
                         staticClass:
-                          "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                          "bx bx-chevron-left text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
                       })
                     ]
                   ),
@@ -531,13 +521,13 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
                       attrs: { "data-glide-dir": ">" }
                     },
                     [
                       _c("i", {
                         staticClass:
-                          "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                          "bx bx-chevron-right text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
                       })
                     ]
                   )

@@ -1,14 +1,12 @@
 <template>
 <div class="p-2 ">
     <div class="product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl rounded-lg pb-4">
-        <inertia-link :href="route('shop.show',Product.slug)">
-            <div class="absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full" v-if="SetLable.Active">
+        <inertia-link :href="route('shop.show',Product.slug)" class="focus:outline-none">
+            <div class="absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30" v-if="SetLable.Active">
                 <p class="font-semibold text-sm uppercase tracking-wide" :class="SetLable.Color"> {{SetLable.Title}}</p>
             </div>            
-            <div class="flex justify-center items-center">
-                <div class="w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg"
-                    :style="'background-image:url(\'' + ProductImage + '\')'">
-                </div>  
+            <div class="flex justify-center items-center h-64 pb-4 p-2">
+                <img :src="ProductImage" class="w-auto h-full bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg">
             </div>
             <div class="flex items-center px-4 py-1">
                 <p class="font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden" :title="ProductName">{{ProductName}}</p>

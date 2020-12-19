@@ -41,8 +41,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   methods: {// AddToCart(Item){   
@@ -179,6 +177,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -217,14 +216,17 @@ var render = function() {
       [
         _c(
           "inertia-link",
-          { attrs: { href: _vm.route("shop.show", _vm.Product.slug) } },
+          {
+            staticClass: "focus:outline-none",
+            attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
+          },
           [
             _vm.SetLable.Active
               ? _c(
                   "div",
                   {
                     staticClass:
-                      "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full"
+                      "absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30"
                   },
                   [
                     _c(
@@ -240,13 +242,17 @@ var render = function() {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _c("div", { staticClass: "flex justify-center items-center" }, [
-              _c("div", {
-                staticClass:
-                  "w-full h-68 bg-center bg-no-repeat bg-cover transition duration-500 ease-in-out hover:shadow-lg rounded-lg",
-                style: "background-image:url('" + _vm.ProductImage + "')"
-              })
-            ]),
+            _c(
+              "div",
+              { staticClass: "flex justify-center items-center h-64 pb-4 p-2" },
+              [
+                _c("img", {
+                  staticClass:
+                    "w-auto h-full bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg",
+                  attrs: { src: _vm.ProductImage }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "flex items-center px-4 py-1" }, [
               _c(
@@ -382,7 +388,12 @@ var render = function() {
             return _c(
               "vue-glide-slide",
               { key: ProductIndex },
-              [_c("shop-product", { attrs: { Product: Product } })],
+              [
+                _c("shop-product", {
+                  staticClass: "relative mt-2 mb-5 pb-2 z-30",
+                  attrs: { Product: Product }
+                })
+              ],
               1
             )
           }),
@@ -392,13 +403,13 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "transition-all shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                  "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
                 attrs: { "data-glide-dir": "<" }
               },
               [
                 _c("i", {
                   staticClass:
-                    "bx bx-chevron-left text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                    "bx bx-chevron-left text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
                 })
               ]
             ),
@@ -407,13 +418,13 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "transition-all shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-50 transform -translate-y-1/2 bg-grey hover:bg-primary border border-grey-dark z-10 cursor-pointer group",
+                  "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
                 attrs: { "data-glide-dir": ">" }
               },
               [
                 _c("i", {
                   staticClass:
-                    "bx bx-chevron-right text-primary transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                    "bx bx-chevron-right text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
                 })
               ]
             )

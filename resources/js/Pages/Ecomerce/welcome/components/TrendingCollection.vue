@@ -8,7 +8,7 @@
         </div>
         <div class="w-full lg:w-1/2 mt-6 sm:mt-10 lg:mt-0">
             <div class="px-10 h-56 sm:h-76 bg-left sm:bg-center bg-no-repeat bg-cover relative"
-                style="background-image:url('./img/collection/collection (1).jpg')">
+                 :style="'background-image:url(\'./img/collection/collection (1).jpg\')'">
                 <div class="w-2/3 absolute inset-0 px-6 md:px-10 py-14 ">
                     <p class="font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl">Passion Pearl <br /> Collection</p>
                     <a href="/shop" class="flex items-center pt-5 group">
@@ -53,7 +53,7 @@
         </div>
         <div class="w-full lg:w-1/2 px-10 h-82 sm:h-94 lg:h-96 bg-left sm:bg-center bg-no-repeat bg-cover relative mt-8 sm:mt-10"
             style="background-image:url('./img/collection/collection (4).jpg')">
-            <div class="w-2/3 absolute inset-0 px-6 md:px-10 py-14 sm:py-16">
+            <div class="w-2/3 absolute inse t-0 px-6 md:px-10 py-14 sm:py-16">
                 <p class="font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl">W.W. Shoes </p>
                 <a href="/collection-list" class="flex items-center pt-5 group">
                     <div class="bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center">
