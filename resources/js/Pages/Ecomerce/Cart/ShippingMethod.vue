@@ -151,8 +151,7 @@ export default {
             let formData = new FormData();
             formData.append("shipment_type", self.form.shipment_type || ''); 
 
-            self.$inertia.post(this.route('cart.ShippingMethodStore'), formData,{
-                preserveState: true, 
+            self.$inertia.post(this.route('cart.ShippingMethodStore'), formData,{ 
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false, 
             });

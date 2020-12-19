@@ -165,8 +165,7 @@ export default {
         },
         ProceedToCheckOut() { 
             this.$inertia.get(this.route('cart.CustomerInfomation'), {
-                preserveState: true,
-                preserveScroll: true,    
+                replace:true,
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,          
             })                  

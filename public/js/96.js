@@ -339,10 +339,7 @@ var render = function() {
                   {
                     staticClass:
                       "flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all",
-                    attrs: {
-                      "preserve-scroll": "",
-                      href: _vm.route("cart.index")
-                    }
+                    attrs: { href: _vm.route("cart.index") }
                   },
                   [
                     _c("i", {

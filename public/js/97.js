@@ -166,7 +166,6 @@ __webpack_require__.r(__webpack_exports__);
       var formData = new FormData();
       formData.append("shipment_type", self.form.shipment_type || '');
       self.$inertia.post(this.route('cart.ShippingMethodStore'), formData, {
-        preserveState: true,
         onStart: function onStart() {
           return _this.sending = true;
         },

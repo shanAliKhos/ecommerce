@@ -199,7 +199,7 @@ export default {
             formData.append("saveinformation", self.form.saveinformation || '');
 
             self.$inertia.post(this.route('cart.CustomerInfomationStore'), formData,{
-                preserveState: true,              
+                preserveState: true,     
                 onStart: () => this.sending = true,
                 onFinish: () => this.sending = false,
                       

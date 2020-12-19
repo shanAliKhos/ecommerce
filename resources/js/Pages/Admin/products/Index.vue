@@ -23,7 +23,7 @@
          
     </nav>    
 
-    <div class="my-8 p-10 bg-white rounded shadow-2xl">
+    <div class="my-8 p-10 ">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Listing</p>    
         <table class="border-collapse w-full table-auto ">
             <thead>
@@ -40,6 +40,7 @@
                 </tr>
             </thead>
             <tbody> 
+            
                 <list-item v-for="(Product, ProductIndex) in Products" :key="ProductIndex" :ProductIndex="ProductIndex" :Product="Product" ></list-item>
          
                 <tr v-if="(!Products.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">

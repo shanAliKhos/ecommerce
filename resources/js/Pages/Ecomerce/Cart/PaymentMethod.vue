@@ -59,7 +59,7 @@
        
                 <div class="flex flex-col-reverse sm:flex-row justify-between items-center pt-8 sm:pt-12">
 
-                    <inertia-link preserve-scroll :href="route('cart.index')"
+                    <inertia-link  :href="route('cart.index')"
                         class="flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all">
                         <i class="bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"></i>
                         Return to Cart

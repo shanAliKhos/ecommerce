@@ -180,8 +180,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$inertia.get(this.route('cart.CustomerInfomation'), {
-        preserveState: true,
-        preserveScroll: true,
+        replace: true,
         onStart: function onStart() {
           return _this.sending = true;
         },

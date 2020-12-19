@@ -157,7 +157,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3    block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -181,7 +181,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 block lg:table-cell relative lg:static"
+            "order-first border-l border-b border-gray-300 w-full lg:w-auto p-3    block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -193,15 +193,19 @@ var render = function() {
             [_vm._v("IMAGE")]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "flex items-center py-5  lg:p-1" }, [
-            _c("div", { staticClass: "flex-shrink-0 h-full w-auto" }, [
-              _c("img", {
-                staticClass:
-                  "h-full w-auto sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",
-                attrs: { src: _vm.Product.mainphoto_url, alt: "" }
-              })
-            ])
-          ])
+          _c(
+            "div",
+            { staticClass: "flex items-center justify-center py-5  lg:p-1" },
+            [
+              _c("div", { staticClass: "flex-shrink-0 w-auto" }, [
+                _c("img", {
+                  staticClass:
+                    "h-auto w-80 sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",
+                  attrs: { src: _vm.Product.mainphoto_url, alt: "" }
+                })
+              ])
+            ]
+          )
         ]
       ),
       _vm._v(" "),
@@ -209,7 +213,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 text-center block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3     block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -221,9 +225,14 @@ var render = function() {
             [_vm._v("NAME")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
-            _vm._v(_vm._s(_vm.Product.name))
-          ])
+          _c(
+            "p",
+            {
+              staticClass:
+                "py-5  lg:p-1 font-semibold overflow-ellipsis overflow-hidden"
+            },
+            [_vm._v(_vm._s(_vm.Product.name))]
+          )
         ]
       ),
       _vm._v(" "),
@@ -231,7 +240,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 text-center block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3     block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -253,7 +262,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 text-center block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3     block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -268,11 +277,7 @@ var render = function() {
           _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(
               "\r\n            $" +
-                _vm._s(
-                  _vm.Product.sale_price > 0
-                    ? _vm.Product.sale_price
-                    : _vm.Product.regular_price
-                ) +
+                _vm._s(_vm.Product.current_price) +
                 "\r\n        "
             )
           ])
@@ -283,7 +288,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 text-center block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3     block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -321,7 +326,7 @@ var render = function() {
         "td",
         {
           staticClass:
-            "w-full lg:w-auto p-3  text-center border-b-gray-300 text-center block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3     block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -350,7 +355,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "w-4 h-4",
+                      staticClass: "w-auto h-8",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",

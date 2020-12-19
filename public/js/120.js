@@ -30,8 +30,6 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       self.$inertia.post(route('cart.store'), Item, {
-        // preserveState: true,
-        // preserveScroll: true, 
         onSuccess: function onSuccess() {
           if (Object.keys(_this.$page.errors).length === 0) {
             _this.$root.$emit('item-is-added-to-cart');
