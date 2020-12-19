@@ -4,17 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
- 
- 
-//////////////////////////////////////// SLIDER //////////////////////////////////// 
-    // Route::prefix('slider')->group(function () { 
-        // Route::get('sale','Blog\BlogController@index')->name('blog.index');  
-        // Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
-        // Route::get('/{blog}','Blog\BlogController@show')->name('blog.show');  
-        // Route::get('/category/{slug}','Blog\BlogController@showByCategory')->name('blog.by-category');
-    // }); 
-//////////////////////////////////////// SLIDER //////////////////////////////////// 
-
+  
 //////////////////////////////////////// BLOG //////////////////////////////////// 
     Route::prefix('blog')->group(function () { 
         Route::get('/','Blog\BlogController@index')->name('blog.index');  
@@ -33,10 +23,8 @@ use Illuminate\Support\Facades\Password;
 
     // Route::get('sale-slider', 'Ecommerce\ShopController@SaleSlider')->name('slider.sale');
     // Route::get('trending-slider', 'Ecommerce\ShopController@TrendingSlider')->name('slider.trending');
-
-
 //////////////////////////////////////// SHOP ////////////////////////////////////
-
+ 
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
@@ -113,9 +101,6 @@ use Illuminate\Support\Facades\Password;
                 Route::prefix('/slider')->name('slider.')->group(function () {           
                     
                     Route::resource('/hero', 'Admin\Silders\HeroSliderController');
-                    // Route::post('/hero', 'Admin\Silders\HeroSliderController@store')->name('hero.store');
-                    // Route::get('/hero/{heroslide}/edit', 'Admin\Silders\HeroSliderController@edit')->name('hero.edit');
-                    // Route::post('/hero', 'Admin\Silders\HeroSliderController@update')->name('hero.store');
 
                     Route::get('/sale', 'Admin\Silders\SaleSliderController@edit')->name('sale.index');
                     Route::post('/sale', 'Admin\Silders\SaleSliderController@update')->name('sale.store');

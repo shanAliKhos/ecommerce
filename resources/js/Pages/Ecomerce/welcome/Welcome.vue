@@ -24,7 +24,7 @@
 
     <WelcomeBrands/> 
 
-    <WelcomeSaleBanner/>
+    <SaleBanner/>
     
 
 </div> 
@@ -39,7 +39,7 @@ import TrendingCollection from './components/TrendingCollection'
 import TrendingSlider from './../shared/Slider/TrendingSlider'
 import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'
 import WelcomeBrands from './components/WelcomeBrands'
-import WelcomeSaleBanner from './components/WelcomeSaleBanner'
+import SaleBanner from './components/SaleBanner'
 import SaleSlider from './../shared/Slider/SaleSlider'
   
 export default { 
@@ -48,12 +48,12 @@ export default {
     components:{
         HeroSlider,
         WelcomeIcons ,
+        SaleSlider,
         TrendingCollection,
         TrendingSlider,
         TrendingMultiSlider,
-        WelcomeSaleBanner,
         WelcomeBrands ,
-        SaleSlider,
+        SaleBanner,
     },
 
     mounted() {
