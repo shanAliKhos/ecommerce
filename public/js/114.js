@@ -59,8 +59,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Ecomerce_shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -243,7 +241,7 @@ var render = function() {
                     {
                       staticClass:
                         "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in",
-                      attrs: { type: "submit" }
+                      attrs: { type: "submit", disabled: _vm.sending }
                     },
                     [
                       _c("span", { staticClass: "mr-2 uppercase" }, [

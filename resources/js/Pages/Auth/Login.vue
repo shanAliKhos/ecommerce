@@ -49,7 +49,7 @@
         </div>
 
         <div class="flex w-full">
-          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ">
+          <button type="submit" :disabled="sending" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ">
             <span class="mr-2 uppercase">Login</span>
             <span class="relative">
               <svg v-if="sending" class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

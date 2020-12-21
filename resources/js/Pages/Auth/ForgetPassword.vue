@@ -1,7 +1,5 @@
 <template>
- 
- 
-
+  
 <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
   <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md z-20">
     <div class="font-medium self-center text-xl sm:text-2xl uppercase text-primary">Forget Password</div>
@@ -30,7 +28,7 @@
         </div>
    
         <div class="flex w-full">
-          <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in">
+          <button type="submit" :disabled="sending" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in">
             <span class="mr-2 uppercase">Email Password Reset Link</span>
             <span class="relative">
               <svg v-if="sending" class="transition  ease-in-out  animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

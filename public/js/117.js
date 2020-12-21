@@ -454,7 +454,7 @@ var render = function() {
                     {
                       staticClass:
                         "flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-700 rounded py-2 w-full transition duration-150 ease-in",
-                      attrs: { type: "submit" }
+                      attrs: { type: "submit", disabled: _vm.sending }
                     },
                     [
                       _c("span", { staticClass: "mr-2 uppercase" }, [
