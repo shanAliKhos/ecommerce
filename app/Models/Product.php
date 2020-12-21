@@ -76,7 +76,7 @@ class Product extends Model
 
     public function Skuds()
     {
-        return $this->hasMany(Sku::class);
+        return $this->belongsToMany(Sku::class,'skus','product_id','sku');
     }    
   
 

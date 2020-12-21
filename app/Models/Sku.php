@@ -15,6 +15,9 @@ class Sku extends Model
     {
         return $this->hasMany(SkuValue::class);
     }    
-
+    public function product()
+    {
+        return $this->belongsToMany(Product::class);
+    }  
 
 }

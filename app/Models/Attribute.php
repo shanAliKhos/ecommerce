@@ -24,7 +24,6 @@ class Attribute extends Model
         return $this->hasMany(AttributeValue::class);
     }
   
- 
     public function variants()
     {
         return $this->hasMany(Variant::class);

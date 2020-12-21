@@ -844,7 +844,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
           },
           [
             _c("span", {
@@ -857,7 +857,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
+                    "font-semibold text-orange-500 text-xl tracking-wide"
                 },
                 [_vm._v(" Free shipping")]
               ),
@@ -866,7 +866,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
+                    "font-regular text-gray-500 text-base tracking-wide"
                 },
                 [_vm._v(" On all orders over only $50 ")]
               )
@@ -878,7 +878,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
           },
           [
             _c("span", {
@@ -891,7 +891,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
+                    "font-semibold text-orange-500 text-xl tracking-wide"
                 },
                 [_vm._v(" Always available")]
               ),
@@ -900,7 +900,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
+                    "font-regular text-gray-500 text-base tracking-wide"
                 },
                 [_vm._v(" 24/7 call center availabl e")]
               )
@@ -912,7 +912,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
           },
           [
             _c("span", {
@@ -925,7 +925,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hksemibold text-primary text-xl tracking-wide"
+                    "font-semibold text-orange-500 text-xl tracking-wide"
                 },
                 [_vm._v(" Free returns")]
               ),
@@ -934,7 +934,7 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-hkregular text-secondary-lighter text-base tracking-wide"
+                    "font-regular text-gray-500 text-base tracking-wide"
                 },
                 [_vm._v(" 7 days free return policy")]
               )

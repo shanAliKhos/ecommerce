@@ -16,7 +16,7 @@ use App\Models\Variant;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Arr;
  
 class ProductController extends Controller
 {
@@ -64,12 +64,13 @@ class ProductController extends Controller
 
         }    
               
-        try {
+ 
+        try { 
 
             $Product = $Product->create([
                 'brand_id'=>$request->brand_id,
                 'name'=>$request->name,
-                'slug'=>Str::slug($request->name),
+                'slug'=>Str::slug($request->name).'-'.Str::limit(Str::random(40), 5,rand(1,10000)),
                 'description'=>$request->description,
                 'image'=> isset($NewImage)?$NewImage:null,
                 'is_featured'=>$request->is_featured,
@@ -86,38 +87,35 @@ class ProductController extends Controller
             return back()->with('error','OPPS fail to store in database, Please contact support team ');
         }       
 
-        $ProductCategories = json_decode($request->categories,true);
-    
-        if(!empty($ProductCategories)){
-            $Product->categories()->sync(array_column($ProductCategories,'id'));
-        }
-        
-        if($request->is_variable){ 
- 
-            $ProductAttributes = json_decode($request->Attributes,true); 
-            
-            if(!empty($ProductAttributes)){
-                
-                $Product->attributes()->sync(array_column($ProductAttributes,'id'));
-                 
-                $AttributeValues = array_column($ProductAttributes,'product_attribute_values');
-                 
-                if($AttributeValues){
-                 
-                    $CountSku = 0 ;    
-                    foreach ($Product->variations as $attrkey => $variation) { 
+        $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id'));  
 
-                        $variation->variant_options()->sync(array_column($AttributeValues[$attrkey],'id'));
-                        $CountSku += count($AttributeValues[$attrkey]);
+        $request->Attributes = json_decode($request->Attributes,true);
+
+        if($request->is_variable && !empty($request->Attributes)){ 
             
-                    }
-                    
-                    
-                }                  
- 
- 
-                 
-            }  
+            $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
+        
+            $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');      
+
+            if(!empty(Arr::collapse($ProductAttributesValues))){
+                
+                $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
+                $SkuNamesStart = array_shift($SkuNames);
+                $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames);
+                $SkuString=[];
+                foreach ($Skuds as $Skudkey => $Skud) {
+                    $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
+                }   
+                
+                $Product->Skuds()->sync($SkuString);                 
+
+                foreach ($Product->variations as $attrkey => $variation) { 
+                    $variation->variant_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
+                }
+                      
+            } 
+             
+
         } 
       
         return redirect()->route('admin.product.index')->with('success', 'Successfull ! Product Created');
@@ -133,11 +131,11 @@ class ProductController extends Controller
     {     
         $Product->load('categories','brand','images'); 
         
-        $Skuds = $Product->Skuds->map(function($sku){
+        // $Skuds = $Product->Skuds->map(function($sku){
 
-                    return $sku->skud_options->load('Variants');
+        //             return $sku->skud_options->load('Variants');
 
-                });
+        //         });
  
         $product_attributes = $Product->variations->map(function($variation){
             return $variation->Attribute->load('attribute_values');
@@ -150,10 +148,11 @@ class ProductController extends Controller
         foreach ($product_attributes as $key => $product_attribute) {
             $product_attributes[$key]['product_attribute_values'] = $product_attribute_values[$key]; 
         }
+
         $Product = $Product->toArray();
+
         $Product['variations'] = $product_attributes;
     
-   
         $attributes = $attribute->with('attribute_values')->get();
  
         $Brands = $brand->all(['*'],'name','asc');
@@ -179,8 +178,6 @@ class ProductController extends Controller
             "is_active" => 'required|boolean',
             "is_featured" => 'required|boolean',             
         ]);  
- 
-        
 
         if($request->hasFile('image')){
 
@@ -229,67 +226,42 @@ class ProductController extends Controller
             'sale_price'=>$request->sale_price,
         ]);
 
-        
-        $ProductCategories = json_decode($request->categories,true);
-        
-        if(!empty($ProductCategories)){
+        $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id')); 
 
-            $Product->categories()->sync(array_column($ProductCategories,'id'));
-
-        }else{
-
-            if($Product->categories()){ 
-
-                $Product->categories()->sync([]);
-
-            }
-        }
-
-
-        if($request->is_variable){ 
-
-       
-            $ProductAttributes = json_decode($request->Attributes,true);
-             
-            if($ProductAttributes){
-                
-                $Product->attributes()->sync(array_column($ProductAttributes,'id'));
-                
-                $ProductAttributesValues = array_column($ProductAttributes,'product_attribute_values');
-                if($ProductAttributesValues){
-                     
-                    $CountSku = 0 ;    
-                    foreach ($Product->variations as $attrkey => $variation) { 
-                        $variation->variant_options()->sync(array_column($ProductAttributesValues[$attrkey],'id'));
-                        $CountSku += count($ProductAttributesValues[$attrkey]);   
-
-                    }
-                    
-                    
-                } 
- 
-
+        $request->Attributes = json_decode($request->Attributes,true);
+  
+        if($request->is_variable && !empty($request->Attributes)){ 
+            
+            $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
+            $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');
+   
+            if(!empty(Arr::collapse($ProductAttributesValues))){
                 
 
-            }else{
+                $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
+                $SkuNamesStart = array_shift($SkuNames);
+                $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames);
 
-                $Product->attributes()->sync([]);
+                $SkuString=[];
+                foreach ($Skuds as $Skudkey => $Skud) {
 
-            }
-       
-        }else{
-            $Product->attributes()->sync([]);
-        }
- 
+                    $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
+                }   
+                
+                $Product->Skuds()->sync($SkuString);                 
 
-              
+                foreach ($Product->variations as $attrkey => $variation) { 
+                    $variation->variant_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
+                }
+                      
+            } 
+  
+        } 
         return back()->with('success', 'Successfull ! Product updated');
-
-
     } 
 
     public function destroy(Product $Product)
     {
-        //
+        return back()->with("can't delete");
     }    
 }

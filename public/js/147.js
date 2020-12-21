@@ -43,6 +43,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components),
@@ -92,7 +98,7 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass: "bg-left sm:bg-center bg-no-repeat bg-cover",
+                    staticClass: "md:bg-left bg-center bg-no-repeat bg-cover",
                     style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
                   [
@@ -100,31 +106,48 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 "
+                          "py-36  px-10 md:px-12 xl:px-24 text-left w-5/6 lg:w-3/4 xl:w-2/3"
                       },
                       [
                         _c(
                           "h3",
                           {
                             staticClass:
-                              "font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                              "font-medium text-gray-500  text-4xl md:text-5xl lg:text-6xl"
                           },
                           [_vm._v(_vm._s(HeroSlide.title))]
                         ),
                         _vm._v(" "),
                         _c(
-                          "inertia-link",
+                          "div",
                           {
-                            staticClass: "btn btn-primary btn-lg mt-8",
-                            attrs: {
-                              href: HeroSlide.button_url,
-                              draggable: "true"
-                            }
+                            staticClass:
+                              "flex items-center justify-center lg:justify-start mt-5 lg:mt-2"
                           },
-                          [_vm._v(_vm._s(HeroSlide.button_title))]
+                          [
+                            _c(
+                              "inertia-link",
+                              {
+                                staticClass:
+                                  "w-full lg:w-2/3 flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex ",
+                                attrs: {
+                                  href: HeroSlide.button_url,
+                                  type: "button",
+                                  as: "button"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(HeroSlide.button_title) +
+                                    "\n                        "
+                                )
+                              ]
+                            )
+                          ],
+                          1
                         )
-                      ],
-                      1
+                      ]
                     )
                   ]
                 )

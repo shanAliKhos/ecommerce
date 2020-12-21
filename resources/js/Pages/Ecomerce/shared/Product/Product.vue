@@ -12,7 +12,7 @@
                 <p class="font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden" :title="ProductName">{{ProductName}}</p>
             </div>
             <div class="flex px-4 py-1">
-                <p class="font-semibold text-red-400 text-normal">{{Currency}} {{CurrentPrice}} </p>
+                <p class="font-semibold text-red-500 text-normal">{{Currency}} {{CurrentPrice}} </p>
                 <p v-if="SalePrice>0" class="font-semibold line-through text-gray-400 text-xs ml-3">{{Currency}}{{RegularPrice}} </p>
             </div>
             <div class="flex px-4">
@@ -23,7 +23,7 @@
                     <i class="bx bxs-star text-yellow-300"></i>
                     <i class="bx bxs-star text-yellow-300"></i>
                 </div>
-                <p class="font-regular text-sm text-secondary  ml-2">(45)</p>
+                <p class="font-regular text-sm text-gray-500  ml-2">(45)</p>
             </div>            
 
         </inertia-link>
@@ -70,14 +70,14 @@ export default {
             if(this.Product.sale_price > 0){
     
                 lable ={
-                    Color:'text-primary-light',
+                    Color:'text-orange-500',
                     Title:'-' +Math.round( ((this.Product.regular_price - this.Product.sale_price)/ this.Product.regular_price) * 100) + '%',
                     Active:true,                
                 };
                 
             }else if(this.Product.is_featured){                    
                 lable={
-                    Color:'text-v-blue',
+                    Color:'text-blue-500',
                     Title:'Trend',
                     Active:true,                
                 };       
@@ -85,7 +85,7 @@ export default {
             }else{
 
                 lable={
-                    Color:'text-v-green',
+                    Color:'text-green-500',
                     Title:'new',
                     Active:true,                
                 };   

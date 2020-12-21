@@ -18,8 +18,10 @@ class CreateSkusTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');  
             $table->string('sku');
-            $table->decimal('price', 8, 2); 
-            $table->integer('qty');
+            $table->decimal('price', 8, 2)->nullable(); 
+            $table->integer('qty')->nullable();
+            $table->timestamps();
+
         });
     }
 

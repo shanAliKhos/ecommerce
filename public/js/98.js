@@ -77,19 +77,19 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.Product.sale_price > 0) {
         lable = {
-          Color: 'text-primary-light',
+          Color: 'text-orange-500',
           Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
           Active: true
         };
       } else if (this.Product.is_featured) {
         lable = {
-          Color: 'text-v-blue',
+          Color: 'text-blue-500',
           Title: 'Trend',
           Active: true
         };
       } else {
         lable = {
-          Color: 'text-v-green',
+          Color: 'text-green-500',
           Title: 'new',
           Active: true
         };
@@ -269,7 +269,7 @@ var render = function() {
             _c("div", { staticClass: "flex px-4 py-1" }, [
               _c(
                 "p",
-                { staticClass: "font-semibold text-red-400 text-normal" },
+                { staticClass: "font-semibold text-red-500 text-normal" },
                 [
                   _vm._v(
                     _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
@@ -308,7 +308,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "p",
-                { staticClass: "font-regular text-sm text-secondary  ml-2" },
+                { staticClass: "font-regular text-sm text-gray-500  ml-2" },
                 [_vm._v("(45)")]
               )
             ])
@@ -354,7 +354,7 @@ var render = function() {
                   perView: 4,
                   hoverpause: true,
                   bound: true,
-                  animationDuration: 1000,
+                  animationDuration: 500,
                   peek: { before: 100, after: 100 },
                   breakpoints: {
                     1024: {
@@ -402,7 +402,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25 left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
                       attrs: { "data-glide-dir": "<" }
                     },
                     [
@@ -417,7 +417,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
                       attrs: { "data-glide-dir": ">" }
                     },
                     [

@@ -77,19 +77,19 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.Product.sale_price > 0) {
         lable = {
-          Color: 'text-primary-light',
+          Color: 'text-orange-500',
           Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
           Active: true
         };
       } else if (this.Product.is_featured) {
         lable = {
-          Color: 'text-v-blue',
+          Color: 'text-blue-500',
           Title: 'Trend',
           Active: true
         };
       } else {
         lable = {
-          Color: 'text-v-green',
+          Color: 'text-green-500',
           Title: 'new',
           Active: true
         };
@@ -121,20 +121,6 @@ var _components;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -283,7 +269,7 @@ var render = function() {
             _c("div", { staticClass: "flex px-4 py-1" }, [
               _c(
                 "p",
-                { staticClass: "font-semibold text-red-400 text-normal" },
+                { staticClass: "font-semibold text-red-500 text-normal" },
                 [
                   _vm._v(
                     _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
@@ -322,7 +308,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "p",
-                { staticClass: "font-regular text-sm text-secondary  ml-2" },
+                { staticClass: "font-regular text-sm text-gray-500  ml-2" },
                 [_vm._v("(45)")]
               )
             ])
@@ -355,39 +341,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "pb-20 md:pb-24 lg:pb-32" }, [
+  return _c("div", [
     _vm.TrendingSliderProducts.length > 0
       ? _c(
           "div",
           [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "flex flex-col sm:flex-row justify-between items-center sm:pb-4 lg:pb-0 mb-12 sm:mb-10 md:mb-0"
-              },
-              [
-                _vm._m(0),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass:
-                      "flex items-center group pt-8 sm:pt-0 border-b border-primary transition-colors hover:border-primary-light pb-2 font-regular text-xl text-primary",
-                    attrs: { href: _vm.route("shop.index") }
-                  },
-                  [
-                    _vm._v("\r\n                Show more\r\n                "),
-                    _c("i", {
-                      staticClass:
-                        "bx bx-chevron-right text-primary transition-colors group-hover:text-primary-light pl-3 pt-2 text-xl"
-                    })
-                  ]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
             _c(
               "vue-glide",
               {
@@ -396,7 +354,7 @@ var render = function() {
                   perView: 4,
                   hoverpause: true,
                   bound: true,
-                  animationDuration: 1000,
+                  animationDuration: 500,
                   peek: { before: 100, after: 100 },
                   breakpoints: {
                     1024: {
@@ -447,7 +405,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25 sm:left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25  left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
                       attrs: { "data-glide-dir": "<" }
                     },
                     [
@@ -462,7 +420,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 sm:right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 cursor-pointer group",
+                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
                       attrs: { "data-glide-dir": ">" }
                     },
                     [
@@ -485,35 +443,11 @@ var render = function() {
             staticClass:
               "p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
           },
-          [_vm._m(1)]
+          [_vm._m(0)]
         )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center sm:text-left" }, [
-      _c(
-        "h2",
-        {
-          staticClass:
-            "font-regular text-gray-400 text-3xl md:text-4xl lg:text-7xl"
-        },
-        [_vm._v("Elyssi’s trends")]
-      ),
-      _vm._v(" "),
-      _c(
-        "p",
-        {
-          staticClass:
-            "font-regular text-gray-400-lighter text-lg md:text-xl pt-2"
-        },
-        [_vm._v("Be styling, no matter the season!")]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

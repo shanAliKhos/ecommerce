@@ -37,7 +37,7 @@ class Category extends Model
 
     protected function defaultPhotoUrl()
     {
-        return 'https://ui-avatars.com/api/?name='.urlencode($this->title).'&color=7F9CF5&background=EBF4FF';
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
     }
 
     public function setNameAttribute($value)

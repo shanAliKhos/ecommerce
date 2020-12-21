@@ -965,7 +965,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                SHOW PRODUCTS\r\n                    "
+                    "\r\n                SHOW PRODUCTS\r\n                "
                   ),
                   _c(
                     "svg",

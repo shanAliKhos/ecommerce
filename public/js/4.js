@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'antialiased outline-none text-center text-orange-500 outline-none appearance-none text-xs cursor-pointer' : 'antialiased outline-none text-center outline-none appearance-none text-xs cursor-pointer';
+      return this.active ? 'text-orange-500' : '';
     }
   }
 });
@@ -142,7 +142,8 @@ var render = function() {
   return _c(
     "inertia-link",
     {
-      staticClass: "focus:outline-none",
+      staticClass:
+        "antialiased text-center focus:outline-none md:cursor-pointer text-xs",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href }
     },
@@ -187,7 +188,6 @@ var render = function() {
               _c(
                 "MobileNavLink",
                 {
-                  staticClass: "appearance-none ",
                   attrs: {
                     active: _vm.$page.currentRouteName == "welcome",
                     href: _vm.route("welcome")
@@ -197,8 +197,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto fill-current appearance-none ",
+                      staticClass: "ml-1 h-6 w-auto fill-current",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -218,10 +217,9 @@ var render = function() {
                       })
                     ]
                   ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "appearance-none " }, [
-                    _vm._v("Home")
-                  ])
+                  _vm._v(
+                    "                    \r\n                Home\r\n            "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -237,8 +235,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      staticClass: "h-6 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -287,8 +284,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass:
-                        "ml-1 transition duration-700 ease-in-out h-6 w-auto",
+                      staticClass: "h-6 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -308,8 +304,7 @@ var render = function() {
                       })
                     ]
                   ),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Cart")])
+                  _vm._v(" \r\n                Cart\r\n            ")
                 ]
               ),
               _vm._v(" "),

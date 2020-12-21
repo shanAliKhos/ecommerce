@@ -77,19 +77,19 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.Product.sale_price > 0) {
         lable = {
-          Color: 'text-primary-light',
+          Color: 'text-orange-500',
           Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
           Active: true
         };
       } else if (this.Product.is_featured) {
         lable = {
-          Color: 'text-v-blue',
+          Color: 'text-blue-500',
           Title: 'Trend',
           Active: true
         };
       } else {
         lable = {
-          Color: 'text-v-green',
+          Color: 'text-green-500',
           Title: 'new',
           Active: true
         };
@@ -183,7 +183,7 @@ var render = function() {
             _c("div", { staticClass: "flex px-4 py-1" }, [
               _c(
                 "p",
-                { staticClass: "font-semibold text-red-400 text-normal" },
+                { staticClass: "font-semibold text-red-500 text-normal" },
                 [
                   _vm._v(
                     _vm._s(_vm.Currency) + " " + _vm._s(_vm.CurrentPrice) + " "
@@ -222,7 +222,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "p",
-                { staticClass: "font-regular text-sm text-secondary  ml-2" },
+                { staticClass: "font-regular text-sm text-gray-500  ml-2" },
                 [_vm._v("(45)")]
               )
             ])
