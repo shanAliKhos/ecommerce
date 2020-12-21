@@ -24,7 +24,7 @@
     </nav>
 
 
-    <div class="my-8 p-10 bg-white rounded shadow-2xl">
+    <div class="py-5 px-5 bg-white rounded shadow-2xl">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Brand Listing</p>    
         <table class="border-collapse w-full table-auto">
             <thead>

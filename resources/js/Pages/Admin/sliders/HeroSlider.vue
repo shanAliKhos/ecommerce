@@ -27,7 +27,7 @@
                     </div>  
 
                     <div class="w-full md:w-1/2 px-3 md:mb-0">
-                        <div class="p-3 bg-white rounded shadow-2xl">
+                        <div class="py-5 px-5 bg-white rounded-lg shadow-2xl">
                             <p class="pb-6 flex font-semibold text-xl text-gray-400">Slide</p>    
 
                             <Listing />

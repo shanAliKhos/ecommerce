@@ -248,7 +248,7 @@ var render = function() {
             _c("div", { staticClass: "w-full md:w-1/2 px-3 md:mb-0" }, [
               _c(
                 "div",
-                { staticClass: "p-3 bg-white rounded shadow-2xl" },
+                { staticClass: "py-5 px-5 bg-white rounded-lg shadow-2xl" },
                 [
                   _c(
                     "p",

@@ -10,7 +10,7 @@
     
                 <Navbar />
     
-                <div class="p-5 bg-gray-100 min-h-screen">
+                <div class="p-2 bg-gray-100 min-h-screen">
 
                     <transition name="slide-fade">
  

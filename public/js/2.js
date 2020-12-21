@@ -321,7 +321,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "p-5 bg-gray-100 min-h-screen" },
+                { staticClass: "p-2 bg-gray-100 min-h-screen" },
                 [
                   _c(
                     "transition",

@@ -73,8 +73,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -230,85 +228,84 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "my-8 p-10 " }, [
-        _c(
-          "p",
-          { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
-          [_vm._v("Product Listing")]
-        ),
+      _c(
+        "p",
+        { staticClass: "pb-5 pt-5 flex font-semibold text-xl text-gray-400" },
+        [_vm._v("Product Listing")]
+      ),
+      _vm._v(" "),
+      _c("table", { staticClass: "border-collapse w-full table-auto " }, [
+        _vm._m(1),
         _vm._v(" "),
-        _c("table", { staticClass: "border-collapse w-full table-auto " }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            [
-              _vm._l(_vm.Products, function(Product, ProductIndex) {
-                return _c("list-item", {
-                  key: ProductIndex,
-                  attrs: { ProductIndex: ProductIndex, Product: Product }
-                })
-              }),
-              _vm._v(" "),
-              !_vm.Products.length > 0
-                ? _c(
-                    "tr",
-                    {
-                      staticClass:
-                        "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
-                    },
-                    [
-                      _c(
-                        "td",
-                        {
-                          staticClass:
-                            "w-full lg:w-auto p-3 text-gray-800 text-center  -b  block lg:table-cell relative lg:static ",
-                          attrs: { colspan: "7" }
-                        },
-                        [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"
-                            },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass: "h-10 w-10 mr-5 text-red-500",
+        _c(
+          "tbody",
+          [
+            _vm._l(_vm.Products, function(Product, ProductIndex) {
+              return _c("list-item", {
+                key: ProductIndex,
+                staticClass: "px-4 py-4 rounded-lg",
+                attrs: { ProductIndex: ProductIndex, Product: Product }
+              })
+            }),
+            _vm._v(" "),
+            !_vm.Products.length > 0
+              ? _c(
+                  "tr",
+                  {
+                    staticClass:
+                      "bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+                  },
+                  [
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "w-full lg:w-auto  text-gray-800 text-center  -b  block lg:table-cell relative lg:static ",
+                        attrs: { colspan: "7" }
+                      },
+                      [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "h-10 w-10 mr-5 text-red-500",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  fill: "none",
+                                  viewBox: "0 0 24 24",
+                                  stroke: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
                                   attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    d:
+                                      "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                   }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d:
-                                        "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("No Record Found !  ")])
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                : _vm._e()
-            ],
-            2
-          )
-        ])
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("No Record Found !  ")])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              : _vm._e()
+          ],
+          2
+        )
       ]),
       _vm._v(" "),
       _c("pagination", { attrs: { links: _vm.Links } })
@@ -337,7 +334,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "py-5 font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("#")]
         ),
@@ -346,7 +343,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("IMAGE")]
         ),
@@ -355,7 +352,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("NAME")]
         ),
@@ -364,7 +361,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("SKU")]
         ),
@@ -373,7 +370,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("Price")]
         ),
@@ -382,7 +379,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("Status")]
         ),
@@ -391,7 +388,7 @@ var staticRenderFns = [
           "th",
           {
             staticClass:
-              "p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell"
+              "font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell"
           },
           [_vm._v("ACTIONS")]
         )

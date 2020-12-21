@@ -103,10 +103,10 @@ class ProductController extends Controller
                 $SkuNamesStart = array_shift($SkuNames);
                 $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames);
                 $SkuString=[];
+
                 foreach ($Skuds as $Skudkey => $Skud) {
                     $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
-                }   
-                
+                }    
                 $Product->Skuds()->sync($SkuString);                 
 
                 foreach ($Product->variations as $attrkey => $variation) { 
@@ -235,27 +235,30 @@ class ProductController extends Controller
             $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
             $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');
    
-            if(!empty(Arr::collapse($ProductAttributesValues))){
-                
-
-                $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
-                $SkuNamesStart = array_shift($SkuNames);
-                $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames);
-
-                $SkuString=[];
-                foreach ($Skuds as $Skudkey => $Skud) {
-
-                    $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
-                }   
-                
-                $Product->Skuds()->sync($SkuString);                 
-
+            if(!empty(Arr::collapse($ProductAttributesValues))){                   
+                                
                 foreach ($Product->variations as $attrkey => $variation) { 
                     $variation->variant_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
                 }
-                      
+
+                $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
+                $SkuNamesStart = array_shift($SkuNames);
+                $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames); 
+                 
+                $SkuString=[];
+                
+                foreach ($Skuds as $Skudkey => $Skud) {
+                    $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
+                }   
+                $Product->Skuds()->sync($SkuString);                
+                
+                $SkuOptions = Arr::pluck($ProductAttributesValues, '*'); 
+                $SkuOptionsStart = array_shift($SkuOptions);
+                $SkudsOpt = collect($SkuOptionsStart)->crossJoin(...$SkuOptions);                 
+
+                dd($SkudsOpt,$Product->Skus);
+                
             } 
-  
         } 
         return back()->with('success', 'Successfull ! Product updated');
     } 
