@@ -110,8 +110,10 @@ class CheckOutController extends Controller
                 'services.stripe.key'=>Setting::get('stripe_key'),
                 'services.stripe.secret'=>Setting::get('stripe_secret_key'),
             ]);
+        }else{
+            return back()->with('error','OPPs ! something went wrong contact support. Thanks!');
         }         
-
+            
         $Product = new Product; 
         $NewOrder = []; 
         $NewOrder['GrandTotal']= 0;

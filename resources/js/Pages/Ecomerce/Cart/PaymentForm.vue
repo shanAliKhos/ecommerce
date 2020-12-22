@@ -80,18 +80,18 @@ export default {
             };
             createToken(options).then(result => {
             
-                if(result.error){ 
-                    this.$swal({  
-                        showConfirmButton: true,  
-                        icon: 'error',
-                        title: 'Opps ! ' +result.error.message ,
-                    })
-                    return false;
-                }
-                 
+                // if(result.error){ 
+                //     this.$swal({  
+                //         showConfirmButton: true,  
+                //         icon: 'error',
+                //         title: 'Opps ! ' +result.error.message ,
+                //     })
+                //     return false;
+                // }
+
                 if (result.token) {
                     let hiddenInput = document.createElement("input");
-                    hiddenInput.setAttribute("type", "hidden");
+                    hiddenInput.setAttribute("type", "hidden"); 
                     hiddenInput.setAttribute("name", "stripeToken");
                     hiddenInput.setAttribute("value", result.token.id);
                     this.$el.appendChild(hiddenInput);
