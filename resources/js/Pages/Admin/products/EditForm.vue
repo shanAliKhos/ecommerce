@@ -2,8 +2,7 @@
 <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="update">
 
     <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Edit</p>    
-
-
+ 
     <div class="flex flex-wrap -mx-3 mb-2">
 
 
@@ -98,8 +97,7 @@
             
         </div>    
     </div>             
-       
-
+        
     <div class="flex flex-wrap -mx-3 mb-2">
 
         <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
@@ -171,8 +169,7 @@
         </select-input>         
 
     </div>      
-
-
+ 
     <SectionBorder/>
     
     <div class="product-attributes" v-if="form.is_variable">
@@ -227,15 +224,13 @@
         </div>          
 
     </div> 
-
-
+ 
     <div class="product-variations" v-if="form.is_variable">   
         <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
     </div> 
 
     <SectionBorder/>
-
-    
+ 
     <div class="mt-2 mb-10 relative"> 
         <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
         <vue-editor v-model="form.description"></vue-editor>        
@@ -243,11 +238,8 @@
     </div>         
 
     <SectionBorder/>
-
-
-
-    <div class="mt-5 lg:flex lg:item-center lg:justify-around">
-       
+ 
+    <div class="mt-5 lg:flex lg:item-center lg:justify-around"> 
         <div class="w-full md:w-1/2 flex items-center lg:justify-start  sm:px-6 mt-2">
             <inertia-link :href="route('shop.show',Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex mr-2" type="button" as="button">
                 SHOW PRODUCTS

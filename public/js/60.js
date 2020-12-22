@@ -419,7 +419,8 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass: "md:bg-left bg-center bg-no-repeat bg-cover",
+                    staticClass:
+                      "rounded-2xl shadow md:bg-left bg-center bg-no-repeat bg-cover h-screen flex-col item-center justify-center",
                     style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
                   [
@@ -427,14 +428,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "py-36  px-10 md:px-12 xl:px-24 text-left w-5/6 lg:w-3/4 xl:w-2/3"
+                          "py-36 px-10 md:px-12 xl:px-24 text-left w-5/6 lg:w-2/4 xl:w-2/3"
                       },
                       [
                         _c(
                           "h3",
                           {
                             staticClass:
-                              "font-medium text-gray-500  text-4xl md:text-5xl lg:text-6xl"
+                              "font-medium text-gray-500 text-4xl md:text-5xl lg:text-6xl lg:w-2/3"
                           },
                           [_vm._v(_vm._s(HeroSlide.title))]
                         ),

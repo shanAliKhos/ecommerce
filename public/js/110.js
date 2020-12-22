@@ -122,7 +122,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-full h-20 px-6 bg-gray-100 border-b border-gray-300 flex items-center justify-between"
+          "w-full h-20 px-6  border-b border-gray-300 flex items-center justify-between"
       },
       [
         _c("div", { staticClass: "flex" }, [

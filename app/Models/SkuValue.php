@@ -9,6 +9,9 @@ class SkuValue extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['variant_id', 'variant_option_id','sku_id'];
+
+
     public function Variants()
     {
         return $this->belongsTo(Variant::class);

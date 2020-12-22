@@ -150,14 +150,14 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "font-semibold text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0"
+        "rounded-lg text-xs text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10"
     },
     [
       _c(
         "td",
         {
           staticClass:
-            "border-l border-b border-gray-300 w-1/2 lg:w-auto px-auto py-auto  block lg:table-cell relative lg:static"
+            "border-l border-b border-gray-300 w-1/2 lg:w-auto p-3    block lg:table-cell relative lg:static"
         },
         [
           _c(
@@ -169,7 +169,7 @@ var render = function() {
             [_vm._v("#")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1  " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(
               "\r\n            " + _vm._s(_vm.ProductIndex + 1) + "\r\n        "
             )
@@ -227,7 +227,10 @@ var render = function() {
           _vm._v(" "),
           _c(
             "p",
-            { staticClass: "py-5 lg:p-1  overflow-ellipsis overflow-hidden" },
+            {
+              staticClass:
+                "py-5  lg:p-1 font-semibold overflow-ellipsis overflow-hidden"
+            },
             [_vm._v(_vm._s(_vm.Product.name))]
           )
         ]
@@ -249,7 +252,7 @@ var render = function() {
             [_vm._v("SKU")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1  " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(_vm._s(_vm.Product.sku))
           ])
         ]
@@ -271,7 +274,7 @@ var render = function() {
             [_vm._v("PRICE")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1  " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm._v(
               "\r\n            $" +
                 _vm._s(_vm.Product.current_price) +
@@ -297,7 +300,7 @@ var render = function() {
             [_vm._v("STATUS")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "py-5  lg:p-1  " }, [
+          _c("p", { staticClass: "py-5  lg:p-1 font-semibold " }, [
             _vm.Product.is_active
               ? _c(
                   "span",
@@ -343,7 +346,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700  hover:text-white py-1 px-1 border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
+                    "transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
                   attrs: {
                     href: _vm.route("admin.product.edit", _vm.Product.id)
                   }

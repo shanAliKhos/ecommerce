@@ -304,24 +304,25 @@ var render = function() {
     "div",
     {
       staticClass: " leading-normal tracking-normal",
+      class: { "bg-gray-800 text-gray-300": false },
       attrs: { id: "main-body" }
     },
     [
       _c(
         "div",
-        { staticClass: "flex flex-wrap" },
+        { staticClass: "flex w-full h-full" },
         [
-          _c("Sidebar"),
+          _c("Sidebar", { staticClass: "bg-gray-100 text-gray-400" }),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "w-full bg-gray-100 pl-0 lg:pl-64 h-screen " },
+            { staticClass: "w-full bg-gray-100 pl-0 lg:pl-64" },
             [
-              _c("Navbar"),
+              _c("Navbar", { staticClass: "bg-gray-100" }),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "p-2 bg-gray-100 min-h-screen" },
+                { staticClass: "px-2 py-2 bg-gray-100 h-full" },
                 [
                   _c(
                     "transition",
@@ -434,7 +435,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-full h-20 px-6 bg-gray-100 border-b border-gray-300 flex items-center justify-between"
+          "w-full h-20 px-6  border-b border-gray-300 flex items-center justify-between"
       },
       [
         _c("div", { staticClass: "flex" }, [

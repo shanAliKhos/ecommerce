@@ -37,7 +37,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -290,7 +289,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: "lg:mt-40 mt-20 " },
+        { staticClass: "lg:mt-28 mt-20" },
         [
           _c(
             "transition",

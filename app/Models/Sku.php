@@ -11,10 +11,11 @@ class Sku extends Model
 
     use HasFactory;
 
-    public function skud_options()
+    public function skus_options()
     {
         return $this->hasMany(SkuValue::class);
     }    
+ 
     public function product()
     {
         return $this->belongsToMany(Product::class);

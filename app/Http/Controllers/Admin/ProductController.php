@@ -165,8 +165,7 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $Product)
     { 
-          
-        $this->validate($request,[ 
+        $this->validate($request,[
             "name" => 'required|string|min:2|max:255',
             "sku" => 'required|string|min:2|max:255',
             // "brand" => null
@@ -177,7 +176,7 @@ class ProductController extends Controller
             "weight" => 'numeric|max:100', 
             "is_active" => 'required|boolean',
             "is_featured" => 'required|boolean',             
-        ]);  
+        ]);
 
         if($request->hasFile('image')){
 
@@ -200,7 +199,7 @@ class ProductController extends Controller
             
 
             $Product->update(['image' => $NewFile]);               
-        } 
+        }
 
         if(empty($request->image) && $Product->image){
 
@@ -211,7 +210,7 @@ class ProductController extends Controller
             }          
             
             $Product->update(['image' => null]);
-        }        
+        }
 
         $Product->update([
             'brand_id'=>$request->brand_id,
@@ -226,40 +225,54 @@ class ProductController extends Controller
             'sale_price'=>$request->sale_price,
         ]);
 
-        $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id')); 
+        $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id'));
 
         $request->Attributes = json_decode($request->Attributes,true);
   
-        if($request->is_variable && !empty($request->Attributes)){ 
+        if($request->is_variable && !empty($request->Attributes)){
             
             $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
             $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');
    
-            if(!empty(Arr::collapse($ProductAttributesValues))){                   
+            if(!empty(Arr::collapse($ProductAttributesValues))){
                                 
-                foreach ($Product->variations as $attrkey => $variation) { 
+                foreach ($Product->variations as $attrkey => $variation) {
                     $variation->variant_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
                 }
+ 
+                $AttributeOptions = Arr::pluck($ProductAttributesValues, '*'); 
+                $AttributeOptionsStart = array_shift($AttributeOptions);
+                $SkudsOptions = collect($AttributeOptionsStart)->crossJoin(...$AttributeOptions);
+ 
 
-                $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
-                $SkuNamesStart = array_shift($SkuNames);
-                $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames); 
-                 
-                $SkuString=[];
-                
-                foreach ($Skuds as $Skudkey => $Skud) {
-                    $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
-                }   
-                $Product->Skuds()->sync($SkuString);                
-                
-                $SkuOptions = Arr::pluck($ProductAttributesValues, '*'); 
-                $SkuOptionsStart = array_shift($SkuOptions);
-                $SkudsOpt = collect($SkuOptionsStart)->crossJoin(...$SkuOptions);                 
-
-                dd($SkudsOpt,$Product->Skus);
-                
+                $SkuNames=[];
+                foreach ($SkudsOptions as $SkudsOptionkey => $SkudsOption) { 
+                    // $SkuNames[$SkudsOptionkey] = preg_replace_array('/[&-=_]+/', ['#'.$SkudsOptionkey.$Product->id.($SkudsOptionkey+1).'','-'], Arr::query(data_get($SkudsOption, '*.name'))); 
+                    data_fill($SkudsOption, '*.skuName', preg_replace_array('/[&-=_]+/', ['#'.$SkudsOptionkey.$Product->id.($SkudsOptionkey+1).'','-'], Arr::query(data_get($SkudsOption, '*.name'))));
+                    $SkudsOptions[$SkudsOptionkey] = $SkudsOption; 
+                } 
+                $ProductSkus = $Product->Skuds()->sync(data_get($SkudsOptions, '*.*.skuName'));
             } 
+            
+            foreach ($Product->Skus as $Skukey => $Sku) {
+            
+                foreach ($SkudsOptions[$Skukey] as $SkudsOptionkey => $SkudsOption) {
+                    
+                    $Sku->skus_options()->sku_id = $Sku->id;
+                    $Sku->skus_options()->variant_id = $Sku->id;
+                    $Sku->skus_options()->attribute_id = $SkudsOption->$SkudsOption;
+
+                    dd($SkudsOption);
+                }
+ 
+            } 
+            
+            dd($SkudsOptions);
+
+
+
         } 
+
         return back()->with('success', 'Successfull ! Product updated');
     } 
 

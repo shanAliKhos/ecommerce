@@ -80,27 +80,34 @@ export default {
             };
             createToken(options).then(result => {
             
+                if(result.error){ 
+                    this.$swal({  
+                        showConfirmButton: true,  
+                        icon: 'error',
+                        title: 'Opps ! ' +result.error.message ,
+                    })
+                    return false;
+                }
+                 
                 if (result.token) {
                     let hiddenInput = document.createElement("input");
                     hiddenInput.setAttribute("type", "hidden");
                     hiddenInput.setAttribute("name", "stripeToken");
                     hiddenInput.setAttribute("value", result.token.id);
                     this.$el.appendChild(hiddenInput);
-                    // Submit the form
-                    // this.$el.submit();
-                    
+
                     let payment_Form =  {
                         CustomerInformation:this.$page.CustomerInformation,
                         ShipmentInformation:this.$page.ShipmentInformation,
                         stripeToken:result.token.id,
                         NameOnCard:options.NameOnCard,
                     };
-                     
-
+            
                     this.$inertia.post(this.route('cart.checkout'), payment_Form,{
                         preserveState: true,  
                         onStart: () => this.sending = true,
                         onFinish: () => this.sending = false,                
+                           
                     });                    
 
                 } 

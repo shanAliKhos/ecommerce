@@ -20,11 +20,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
-    IsActiveLink: function IsActiveLink() {
-      return this.active ? 'block font-semibold text-orange-500 border-b-4  border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4   hover:border-orange-300 px-2';
+    classes: function classes() {
+      var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
+      var is_atTop = this.atTopOfPage ? 'text-md' : 'fixed top-0 text-xs';
+      return is_active.concat(is_atTop);
     },
-    IsTop: function IsTop() {
-      return this.atTopOfPage ? 'text-lg' : 'text-sm';
+    IsAtTop: function IsAtTop() {
+      this.atTopOfPage ? true : false;
     }
   }
 });
@@ -48,14 +50,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "li",
-    { staticClass: "mr-10 hidden lg:block" },
+    { staticClass: "mr-10 hidden lg:block", class: { "pb-2": !_vm.IsAtTop } },
     [
       _c(
         "inertia-link",
         {
-          staticClass: "transition duration-1000 ease-in transform ",
-          class: _vm.IsActiveLink,
-          IsTop: _vm.IsTop,
+          staticClass: "transition duration-300 ease-in transform px-2",
+          class: _vm.classes,
           attrs: { href: _vm.href }
         },
         [_vm._t("default")],

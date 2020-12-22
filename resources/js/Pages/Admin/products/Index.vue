@@ -22,40 +22,41 @@
                 
          
     </nav>    
- 
-    <p class="pb-5 pt-5 flex font-semibold text-xl text-gray-400">Product Listing</p>    
-    <table class="border-collapse w-full table-auto ">
-        <thead>
-            <tr>
-                <th class="py-5 font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">#</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">IMAGE</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">NAME</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">SKU</th>
-                <!-- <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">Brand</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">Categories</th> -->
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">Price</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">Status</th>
-                <th class="font-bold uppercase bg-gray-200 text-gray-600 hidden lg:table-cell">ACTIONS</th>
-            </tr>
-        </thead>
-        <tbody> 
-        
-            <list-item v-for="(Product, ProductIndex) in Products" :key="ProductIndex" :ProductIndex="ProductIndex" :Product="Product" class="px-4 py-4 rounded-lg"></list-item>
-        
-            <tr v-if="(!Products.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                <td colspan="7" class="w-full lg:w-auto  text-gray-800 text-center  -b  block lg:table-cell relative lg:static ">
-                    <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
-                        <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>                        
-                        <span>No Record Found !  </span>
-                    </p>
-                </td> 
-            </tr>                                   
+    <div class="mt-5">
+        <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Listing</p>    
+        <table class="border-collapse w-full table-auto ">
+            <thead>
+                <tr>
+                    <th class="border-l border-b border-gray-300 p-5 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">#</th>
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">IMAGE</th>
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">NAME</th>
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">SKU</th>
+                    <!-- <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">Brand</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">Categories</th> -->
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">Price</th>
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">Status</th>
+                    <th class="border-l border-b border-gray-300 p-3 font-bold uppercase bg-gray-200 text-gray-600   hidden lg:table-cell">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody> 
+            
+                <list-item v-for="(Product, ProductIndex) in Products" :key="ProductIndex" :ProductIndex="ProductIndex" :Product="Product" ></list-item>
+            
+                <tr v-if="(!Products.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                    <td colspan="7" class="w-full lg:w-auto p-3 text-gray-800 text-center  -b  block lg:table-cell relative lg:static ">
+                        <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
+                            <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>                        
+                            <span>No Record Found !  </span>
+                        </p>
+                    </td> 
+                </tr>                                   
 
-        </tbody>
-    </table>     
-    
+            </tbody>
+        </table>    
+    </div>
+  
     <pagination :links="Links"></pagination>
  </div> 
 </template>

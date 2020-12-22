@@ -1,16 +1,16 @@
 <template>
-    <div class=" leading-normal tracking-normal" id="main-body">
+    <div class=" leading-normal tracking-normal" id="main-body" :class="{'bg-gray-800 text-gray-300':false}">
     
-        <div class="flex flex-wrap">
+        <div class="flex w-full h-full">
     
-            <Sidebar />
+            <Sidebar class="bg-gray-100 text-gray-400" />
             
     
-            <div class="w-full bg-gray-100 pl-0 lg:pl-64 h-screen " >
+            <div class="w-full bg-gray-100 pl-0 lg:pl-64" >
     
-                <Navbar />
+                <Navbar class="bg-gray-100"/>
     
-                <div class="p-2 bg-gray-100 min-h-screen">
+                <div class="px-2 py-2 bg-gray-100 h-full">
 
                     <transition name="slide-fade">
  

@@ -3,7 +3,7 @@
     
     <app-header></app-header>
     
-    <main class="lg:mt-40 mt-20 ">
+    <main class="lg:mt-28 mt-20">
 
         <transition name="slide-fade">
 
@@ -15,8 +15,7 @@
 
     <app-footer></app-footer>
 
-    <portal-target name="modal" multiple>
-    </portal-target>
+    <portal-target name="modal" multiple></portal-target>
 
     <flash-message v-if="$page.flash"></flash-message> 
  

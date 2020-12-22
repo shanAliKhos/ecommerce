@@ -93,15 +93,23 @@ __webpack_require__.r(__webpack_exports__);
         NameOnCard: this.name_on_card
       };
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])(options).then(function (result) {
+        if (result.error) {
+          _this.$swal({
+            showConfirmButton: true,
+            icon: 'error',
+            title: 'Opps ! ' + result.error.message
+          });
+
+          return false;
+        }
+
         if (result.token) {
           var hiddenInput = document.createElement("input");
           hiddenInput.setAttribute("type", "hidden");
           hiddenInput.setAttribute("name", "stripeToken");
           hiddenInput.setAttribute("value", result.token.id);
 
-          _this.$el.appendChild(hiddenInput); // Submit the form
-          // this.$el.submit();
-
+          _this.$el.appendChild(hiddenInput);
 
           var payment_Form = {
             CustomerInformation: _this.$page.CustomerInformation,
