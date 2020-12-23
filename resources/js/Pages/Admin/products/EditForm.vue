@@ -3,7 +3,7 @@
 
     <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Edit</p>    
  
-    <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="flex flex-wrap  mb-2">
 
 
         <div class="w-full md:w-1/2 px-3  md:mb-0">
@@ -98,7 +98,7 @@
         </div>    
     </div>             
         
-    <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="flex flex-wrap  mb-2">
 
         <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
             <label class="z-20 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
@@ -133,7 +133,7 @@
         </div>   
     </div>         
  
-    <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="flex flex-wrap  mb-2">
 
         <select-input 
             v-model="form.is_active" 
@@ -174,7 +174,7 @@
     
     <div class="product-attributes" v-if="form.is_variable">
         <p class="text-lg text-gray-800 font-medium pb-4">Product Attributes information</p>
-        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
+        <div class="flex flex-wrap  mb-2" v-if="form.is_variable">
 
             <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
                 <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
@@ -196,7 +196,8 @@
             
         </div>                 
 
-        <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.attributes)">
+        <div class="flex flex-wrap  mb-2" v-if="form.is_variable && (form.attributes)">
+            
             <div class="w-full md:w-1/2">
             </div>
             
@@ -221,12 +222,55 @@
                     <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
                 </div>       
             </div>    
+
         </div>          
 
     </div> 
  
     <div class="product-variations" v-if="form.is_variable">   
         <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
+
+        <div class="py-2 px-2 w-3/6 bg-gray-100" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
+            <div class="bg-white text-blue-500">{{ProductSku.sku}}</div>
+
+
+            <div class="flex flex-wrap  mb-2">
+ 
+                <div class="w-full md:w-1/2 " v-for="(skus_option, skus_option_index) in ProductSku.skus_options" :key="skus_option_index">
+                    <p>{{skus_option.variant_option.attributes_option.attribute.name}} - {{skus_option.variant_option.attributes_option.name}}</p>
+                </div>
+
+                <div class="w-full md:w-1/2 px-3 md:mb-0 relative">
+
+                    <text-input  
+                        type="text"  
+                        class="w-full" 
+                        v-model="ProductSku.qty" 
+                        autocomplete="sku Quantity" 
+                        :error="$page.errors.sku_qty"
+                        label='#SKU Quantity'    
+                        :labelRequire='true'    
+                        placeholder="Sku Quantity" 
+                    aria-label="sku quantity"/>
+
+                    <text-input   
+                        type="text"  
+                        class="w-full" 
+                        v-model="ProductSku.price" 
+                        autocomplete="price" 
+                        :error="$page.errors.sku_price"
+                        label='$ Price'    
+                        :labelRequire='true'    
+                        placeholder="Sku Price" 
+                    aria-label="price"/>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
     </div> 
 
     <SectionBorder/>
@@ -353,6 +397,9 @@ export default {
         },
         Attributes(){ 
             return this.$page.attributes;
+        }, 
+        ProductSkus(){ 
+            return this.$page.Product.skus;
         }, 
     },
 

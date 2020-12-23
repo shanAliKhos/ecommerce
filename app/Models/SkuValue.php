@@ -12,9 +12,14 @@ class SkuValue extends Model
     protected $fillable = ['variant_id', 'variant_option_id','sku_id'];
 
 
-    public function Variants()
+    public function Variant()
     {
         return $this->belongsTo(Variant::class);
+    }  
+
+    public function variant_option()
+    {
+        return $this->belongsTo(VariantOption::class,'variant_option_id');
     }  
     
 }

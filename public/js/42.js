@@ -282,6 +282,50 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -366,6 +410,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     Attributes: function Attributes() {
       return this.$page.attributes;
+    },
+    ProductSkus: function ProductSkus() {
+      return this.$page.Product.skus;
     }
   }
 });
@@ -405,7 +452,7 @@ var render = function() {
         [_vm._v("Product Edit")]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+      _c("div", { staticClass: "flex flex-wrap  mb-2" }, [
         _c("div", { staticClass: "w-full md:w-1/2 px-3  md:mb-0" }, [
           _c(
             "div",
@@ -568,7 +615,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+      _c("div", { staticClass: "flex flex-wrap  mb-2" }, [
         _c(
           "div",
           { staticClass: "w-full md:w-1/2 px-3 md:mb-0 relative mt-2" },
@@ -667,7 +714,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex flex-wrap -mx-3 mb-2" },
+        { staticClass: "flex flex-wrap  mb-2" },
         [
           _c(
             "select-input",
@@ -756,7 +803,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm.form.is_variable
-              ? _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+              ? _c("div", { staticClass: "flex flex-wrap  mb-2" }, [
                   _c(
                     "div",
                     {
@@ -812,7 +859,7 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm.form.is_variable && _vm.form.attributes
-              ? _c("div", { staticClass: "flex flex-wrap -mx-3 mb-2" }, [
+              ? _c("div", { staticClass: "flex flex-wrap  mb-2" }, [
                   _c("div", { staticClass: "w-full md:w-1/2" }),
                   _vm._v(" "),
                   _c(
@@ -884,11 +931,117 @@ var render = function() {
         : _vm._e(),
       _vm._v(" "),
       _vm.form.is_variable
-        ? _c("div", { staticClass: "product-variations" }, [
-            _c("p", { staticClass: "text-lg text-gray-800 font-medium pb-4" }, [
-              _vm._v("Product Possible variations")
-            ])
-          ])
+        ? _c(
+            "div",
+            { staticClass: "product-variations" },
+            [
+              _c(
+                "p",
+                { staticClass: "text-lg text-gray-800 font-medium pb-4" },
+                [_vm._v("Product Possible variations")]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.ProductSkus, function(ProductSku, ProductSkuIndex) {
+                return _c(
+                  "div",
+                  {
+                    key: ProductSkuIndex,
+                    staticClass: "py-2 px-2 w-3/6 bg-gray-100"
+                  },
+                  [
+                    _c("div", { staticClass: "bg-white text-blue-500" }, [
+                      _vm._v(_vm._s(ProductSku.sku))
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "flex flex-wrap  mb-2" },
+                      [
+                        _vm._l(ProductSku.skus_options, function(
+                          skus_option,
+                          skus_option_index
+                        ) {
+                          return _c(
+                            "div",
+                            {
+                              key: skus_option_index,
+                              staticClass: "w-full md:w-1/2 "
+                            },
+                            [
+                              _c("p", [
+                                _vm._v(
+                                  _vm._s(
+                                    skus_option.variant_option.attributes_option
+                                      .attribute.name
+                                  ) +
+                                    " - " +
+                                    _vm._s(
+                                      skus_option.variant_option
+                                        .attributes_option.name
+                                    )
+                                )
+                              ])
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "w-full md:w-1/2 px-3 md:mb-0 relative"
+                          },
+                          [
+                            _c("text-input", {
+                              staticClass: "w-full",
+                              attrs: {
+                                type: "text",
+                                autocomplete: "sku Quantity",
+                                error: _vm.$page.errors.sku_qty,
+                                label: "#SKU Quantity",
+                                labelRequire: true,
+                                placeholder: "Sku Quantity",
+                                "aria-label": "sku quantity"
+                              },
+                              model: {
+                                value: ProductSku.qty,
+                                callback: function($$v) {
+                                  _vm.$set(ProductSku, "qty", $$v)
+                                },
+                                expression: "ProductSku.qty"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("text-input", {
+                              staticClass: "w-full",
+                              attrs: {
+                                type: "text",
+                                autocomplete: "price",
+                                error: _vm.$page.errors.sku_price,
+                                label: "$ Price",
+                                labelRequire: true,
+                                placeholder: "Sku Price",
+                                "aria-label": "price"
+                              },
+                              model: {
+                                value: ProductSku.price,
+                                callback: function($$v) {
+                                  _vm.$set(ProductSku, "price", $$v)
+                                },
+                                expression: "ProductSku.price"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ],
+                      2
+                    )
+                  ]
+                )
+              })
+            ],
+            2
+          )
         : _vm._e(),
       _vm._v(" "),
       _c("SectionBorder"),

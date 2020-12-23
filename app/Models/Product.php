@@ -78,10 +78,20 @@ class Product extends Model
     {
         return $this->belongsToMany(Sku::class,'skus','product_id','sku');
     }    
- 
+    
     public function Skus()
     {
         return $this->hasMany(Sku::class,'product_id');
+    }    
+    
+    public function skuds_options()
+    {
+        return $this->belongsToMany(SkuValue::class,'sku_values','product_id','sku_id');
+    }    
+
+    public function skus_options()
+    {
+        return $this->hasMany(SkuValue::class,'product_id');
     }    
   
 

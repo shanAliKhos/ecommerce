@@ -15,10 +15,11 @@ class Sku extends Model
     {
         return $this->hasMany(SkuValue::class);
     }    
- 
-    public function product()
-    {
-        return $this->belongsToMany(Product::class);
-    }  
 
+    // public function skuds_options()
+    // {
+    //     return $this->belongsToMany(SkuValue::class,'sku_values','sku_id','product_id');
+    // }    
+    
+ 
 }

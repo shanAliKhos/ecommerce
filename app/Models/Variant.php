@@ -16,15 +16,20 @@ class Variant extends Model
     public function Attribute()
     {
         return $this->belongsTo(Attribute::class);
-    }    
+    }//this is related attributes      
 
-    public function variant_options()
+    public function attribute_options()
     {
         return $this->belongsToMany(AttributeValue::class, 'variant_options','variant_id','attribute_value_id');
     }    
 
-    public function Skuds()
+    public function variant_options()
     {
-        return $this->belongsToMany(Sku::class, 'skus','variant_id','sku_id');
+        return $this->hasMany(VariantOption::class,'variant_id');
     }    
+
+    // public function Skuds()
+    // {
+    //     return $this->belongsToMany(Sku::class, 'skus','variant_id','sku_id');
+    // }    
 }
