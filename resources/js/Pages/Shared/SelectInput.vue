@@ -1,12 +1,12 @@
 <template>
   <div class="mt-2 relative">
-      <label v-if="label" class="absolute top-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" :class="fixedClasses"  :for="id">{{label}}<span class="text-red-500" v-if="labelRequire"> *</span></label> 
+      <label v-if="label" class="absolute rounded-lg top-0  text-purple-700 px-1 text-xs font-semibold uppercase z-20" :class="fixedClasses"  :for="id">{{label}}<span class="text-red-500" v-if="labelRequire"> *</span></label> 
       <div class="relative">
           <select  
           :id="id" ref="input" 
           v-model="selected" 
           v-bind="$attrs"
-          class="focus:bg-white block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-4 px-4 pr-8 rounded leading-tight shadow focus:outline-none focus:shadow-outline">
+          class="w-full px-4 py-1 text-gray-700 bg-white rounded appearance-none shadow-sm hover:shadow-2xl focus:shadow-2xl border-2 border-transparent focus:outline-none  focus:border-purple-600">
             <slot />
           </select>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" :class="{'mt-5':label}">

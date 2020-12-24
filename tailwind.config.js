@@ -55,7 +55,8 @@ module.exports = {
            animation: ['hover', 'focus'],
            transform: ['hover', 'focus'],
            appearance: ['hover', 'focus'],
-           outline: ['hover', 'active'],           
+           outline: ['hover', 'active'],  
+           boxShadow: ['active'],        
         }        
     },
 

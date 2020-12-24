@@ -1,289 +1,229 @@
 <template>
-<form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="update">
+<form  @submit.prevent="update" class="p-10 bg-white rounded shadow-xl"> 
 
     <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Edit</p>    
  
     <div class="flex flex-wrap  mb-2">
-
-
-        <div class="w-full md:w-1/2 px-3  md:mb-0">
-
-            <div class="mt-2">
-                <file-input 
+    
+        <div class="w-full md:w-1/3 px-2  md:mb-0">
+   
+            <file-input 
                 v-model="form.image" 
                 :preview_img="form.image" 
                 :defualt_preview_img="form.name" 
                 :error="$page.errors.image" 
-                class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
+                class="pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 bg-white rounded" 
                 type="file" 
                 accept="image/*" 
                 label="Photo" 
-                :preview="true"/>
-            </div>                                  
+            :preview="true"/>
+             
+            <div class="w-full  md:mb-0 relative mt-2">
+                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
+                <multiselect 
+                    v-model="form.brand" 
+                    deselect-label="Can't remove this value" 
+                    track-by="name"  
+                    label="name" 
+                    placeholder="Select Brand" 
+                    :options="Brands" 
+                    :searchable="false" 
+                    :allow-empty="false">
+                </multiselect>             
+                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>        
+            </div>    
+    
+            <div class="w-full md:mb-0 relative mt-2"> 
+                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="Categories">Categories</label>
+                <multiselect 
+                    v-model="form.categories" 
+                    :options="CategoriesOption" 
+                    :multiple="true" 
+                    :close-on-select="false" 
+                    :clear-on-select="false" 
+                    :preserve-search="true" 
+                    placeholder="Select categories" 
+                    label="name" 
+                    track-by="name"  
+                    > 
+                </multiselect>                        
+                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
+            </div>                      
             
         </div>  
 
-        <div class="w-full md:w-1/2 px-3 md:mb-0">
-        
+        <div class="w-full md:w-2/3 px-2 md:mb-0">
+
             <text-input 
                 id="name" 
                 type="text" 
-                class="w-full " 
+                class="w-full mb-2" 
                 v-model="form.name" 
                 autocomplete="name" 
                 :error="$page.errors.name"
                 label='Name'    
                 :labelRequire='true'    
-                    placeholder="Name" 
+                placeholder="Name" 
             aria-label="Name"/>
-
-            <text-input 
-                id="sku" 
-                type="text"  
-                class="w-full " 
-                v-model="form.sku" 
-                autocomplete="sku" 
-                :error="$page.errors.sku"
-                label='#SKU'    
-                :labelRequire='true'    
-                    placeholder="SKU" 
-            aria-label="SKU"/>
-
-            <text-input 
-                id="quantity" 
-                type="text"  
-                class="w-full " 
-                v-model="form.quantity" 
-                autocomplete="quantity" 
-                :error="$page.errors.quantity"
-                label='#Quantity'    
-                :labelRequire='true'    
-                    placeholder="Quantity" 
-            aria-label="quantity"/>
-
-            <text-input 
-                id="regular_price" 
-                type="text"  
-                class="w-full " 
-                v-model="form.regular_price" 
-                autocomplete="regular_price" 
-                :error="$page.errors.regular_price"
-                label='$ RegularPrice'    
-                :labelRequire='true'    
-                    placeholder="RegularPrice" 
-            aria-label="regular_price"/>
-
-            <text-input 
-                id="sale_price" 
-                type="text"  
-                class="w-full "  
-                v-model="form.sale_price" 
-                autocomplete="sale_price" 
-                :error="$page.errors.sale_price"
-                label='$ SalePrice'      
-                placeholder="SalePrice" 
-            aria-label="sale_price"/>
-
-            <text-input 
-                id="weight" 
-                type="text"  
-                class="w-full"  
-                v-model="form.weight" 
-                autocomplete="weight" 
-                :error="$page.errors.weight"
-                label='Weight'       
-                placeholder="Weight" 
-            aria-label="weight"/>
-            
-        </div>    
-    </div>             
+             
+            <div class="w-full flex flex-wrap item-center md:justify-end py-2 px-2 ">
         
-    <div class="flex flex-wrap  mb-2">
+                <div class=" w-full md:w-1/3">
+                    <label for="is_active" class="flex items-center cursor-pointer">
+                        <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Status</div>
+                        <div class="relative">
+                            <input id="is_active" type="checkbox" class="hidden" v-model="form.is_active" />
+                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                        </div>
+                    </label>
+                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_active">{{$page.errors.is_active}}</p>                 
+                </div>        
 
-        <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-            <label class="z-20 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
-            <multiselect 
-                v-model="form.brand" 
-                deselect-label="Can't remove this value" 
-                track-by="name"  
-                label="name" 
-                placeholder="Select Brand" 
-                :options="Brands" 
-                :searchable="false" 
-                :allow-empty="false">
-            </multiselect>             
-            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>
-        </div>            
+                <div class=" w-full md:w-1/3">
+                    <label for="is_featured" class="flex items-center cursor-pointer">
+                        <div :class="{'text-green-400':form.is_featured,'text-red-500':!form.is_featured}" class=" px-2 font-semibold ">Featured</div>
+                        <div class="relative">
+                            <input id="is_featured" type="checkbox" class="hidden" v-model="form.is_featured" />
+                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                        </div>
+                    </label> 
+                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_featured">{{$page.errors.is_featured}}</p>                 
+                </div>        
 
-        <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-            <label class=" z-20  absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Categories</label>
-            <multiselect 
-                v-model="form.categories" 
-                :options="CategoriesOption" 
-                :multiple="true" 
-                :close-on-select="false" 
-                :clear-on-select="false" 
-                :preserve-search="true" 
-                placeholder="Select categories" 
-                label="name" 
-                track-by="name"  
-                > 
-            </multiselect>                        
-            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
-        </div>   
-    </div>         
- 
-    <div class="flex flex-wrap  mb-2">
+                <div class="w-full md:w-1/3">
+                    <label for="is_variable" class="flex items-center cursor-pointer">
+                        <div :class="{'text-green-400':form.is_variable,'text-red-500':!form.is_variable}" class=" px-2 font-semibold ">Variations</div>
+                        <div class="relative">
+                            <input id="is_variable" type="checkbox" class="hidden" v-model="form.is_variable" />
+                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                        </div>
+                    </label> 
+                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_variable">{{$page.errors.is_variable}}</p>                 
+                </div>        
 
-        <select-input 
-            v-model="form.is_active" 
-            class="w-full md:w-1/3 px-3  md:mb-0 "  
-            :fixedClasses="'right-3 z-20'"
-            :error="$page.errors.is_active"
-            label='Status'    
-            :labelRequire='true'>
-        <option :value="0">Disable</option>
-        <option :value="1">Active</option>                        
-        </select-input> 
-
-        <select-input 
-            v-model="form.is_featured" 
-            class="w-full md:w-1/3 px-3  md:mb-0 "  
-            :fixedClasses="'right-3 z-20'"
-            :error="$page.errors.is_featured"
-            label='Featured'    
-            :labelRequire='true'>
-        <option :value="0">No</option>
-        <option :value="1">YES</option>                        
-        </select-input> 
-
-        <select-input 
-            v-model="form.is_variable" 
-            class="w-full md:w-1/3 px-3  md:mb-0 "  
-            :fixedClasses="'right-3 z-20'"
-            :error="$page.errors.is_variable"
-            label='Type'    
-            :labelRequire='true'>
-        <option :value="0">Simple</option>
-        <option :value="1">Variable</option>                        
-        </select-input>         
-
-    </div>      
- 
-    <SectionBorder/>
-    
-    <div class="product-attributes" v-if="form.is_variable">
-        <p class="text-lg text-gray-800 font-medium pb-4">Product Attributes information</p>
-        <div class="flex flex-wrap  mb-2" v-if="form.is_variable">
-
-            <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-                <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
-                <multiselect  
-                    v-model="form.attributes" 
-                    deselect-label="remove this value" 
-                    :multiple="true" 
-                    :close-on-select="false" 
-                    :clear-on-select="false"                                     
-                    track-by="name"  
-                    label="name" 
-                    placeholder="Select an Attribute" 
-                    :options="Attributes" 
-                    :searchable="true" 
-                    :allow-empty="true">
-                </multiselect>                                   
-                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>
-            </div>         
-            
-        </div>                 
-
-        <div class="flex flex-wrap  mb-2" v-if="form.is_variable && (form.attributes)">
-            
-            <div class="w-full md:w-1/2">
             </div>
-            
-            <div class="w-full md:w-1/2">
-                <p class="text-lg text-gray-800 font-medium pb-4 md: mx-5">Product Attributes Values </p>
 
-                <div class="w-full px-3 md:mb-0 relative mt-5"   v-for="(attribute, index) in form.attributes" :key="index">
-                    <label class=" z-20  absolute bottom-8  right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
-                    <multiselect   
-                        v-model="attribute.product_attribute_values"
+            <SectionBorder/>
+
+            <transition-group name="slide-fade">
+                     
+                <div class="w-full md:mb-0 relative " v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
+                    <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
+                    <multiselect  
+                        v-model="form.attributes" 
                         deselect-label="remove this value" 
                         :multiple="true" 
+                        class="mb-10"
                         :close-on-select="false" 
                         :clear-on-select="false"                                     
                         track-by="name"  
                         label="name" 
                         placeholder="Select an Attribute" 
-                        :options="attribute.attribute_values" 
+                        :options="Attributes" 
                         :searchable="true" 
                         :allow-empty="true">
                     </multiselect>                                   
-                    <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
-                </div>       
-            </div>    
+                    <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>             
+                </div>     
 
-        </div>          
+                <div v-if="form.is_variable && (form.attributes)" :key="'add-attribute-section-opts'">  
+                    <transition-group name="slide-fade"> 
+                    <div class="w-full  md:mb-0 relative mt-2" v-for="(attribute, index) in form.attributes" :key="'attribute_value'+index">
+                        <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
+                        <multiselect   
+                            v-model="attribute.product_attribute_values"
+                            deselect-label="remove this value" 
+                            :multiple="true" 
+                            :close-on-select="false" 
+                            :clear-on-select="false"                                     
+                            track-by="name"  
+                            label="name" 
+                            :placeholder="`select ${attribute.name}`" 
+                            :options="attribute.attribute_values" 
+                            :searchable="true" 
+                            :allow-empty="false">
+                        </multiselect>     
+                    </div>                 
+                    </transition-group>        
+                </div>    
+                
+                <div v-else :key="'simple-opts'"> 
 
-    </div> 
- 
-    <div class="product-variations" v-if="form.is_variable">   
-        <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
-
-        <div class="py-2 px-2 w-3/6 bg-gray-100" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
-            <div class="bg-white text-blue-500">{{ProductSku.sku}}</div>
-
-
-            <div class="flex flex-wrap  mb-2">
- 
-                <div class="w-full md:w-1/2 " v-for="(skus_option, skus_option_index) in ProductSku.skus_options" :key="skus_option_index">
-                    <p>{{skus_option.variant_option.attributes_option.attribute.name}} - {{skus_option.variant_option.attributes_option.name}}</p>
-                </div>
-
-                <div class="w-full md:w-1/2 px-3 md:mb-0 relative">
-
-                    <text-input  
+                    <text-input 
+                        id="sku" 
                         type="text"  
-                        class="w-full" 
-                        v-model="ProductSku.qty" 
-                        autocomplete="sku Quantity" 
-                        :error="$page.errors.sku_qty"
-                        label='#SKU Quantity'    
+                        class="w-full " 
+                        v-model="form.sku" 
+                        autocomplete="sku" 
+                        :error="$page.errors.sku"
+                        label='#SKU'    
                         :labelRequire='true'    
-                        placeholder="Sku Quantity" 
-                    aria-label="sku quantity"/>
+                            placeholder="SKU" 
+                    aria-label="SKU"/>
 
-                    <text-input   
+                    <text-input 
+                        id="quantity" 
                         type="text"  
-                        class="w-full" 
-                        v-model="ProductSku.price" 
-                        autocomplete="price" 
-                        :error="$page.errors.sku_price"
-                        label='$ Price'    
+                        class="w-full " 
+                        v-model="form.quantity" 
+                        autocomplete="quantity" 
+                        :error="$page.errors.quantity"
+                        label='#Quantity'    
                         :labelRequire='true'    
-                        placeholder="Sku Price" 
-                    aria-label="price"/>
+                            placeholder="Quantity" 
+                    aria-label="quantity"/>
 
-                </div>
-            </div>
+                    <text-input 
+                        id="regular_price" 
+                        type="text"  
+                        class="w-full " 
+                        v-model="form.regular_price" 
+                        autocomplete="regular_price" 
+                        :error="$page.errors.regular_price"
+                        label='$ RegularPrice'    
+                        :labelRequire='true'    
+                        placeholder="RegularPrice" 
+                    aria-label="regular_price"/>
 
+                    <text-input 
+                        id="sale_price" 
+                        type="text"  
+                        class="w-full "  
+                        v-model="form.sale_price" 
+                        autocomplete="sale_price" 
+                        :error="$page.errors.sale_price"
+                        label='$ SalePrice'      
+                        placeholder="SalePrice" 
+                    aria-label="sale_price"/>
 
+                    <text-input 
+                        id="weight" 
+                        type="text"  
+                        class="w-full"  
+                        v-model="form.weight" 
+                        autocomplete="weight" 
+                        :error="$page.errors.weight"
+                        label='Weight'       
+                        placeholder="Weight" 
+                    aria-label="weight"/>     
+                </div>              
 
-        </div>
+            </transition-group>
 
-    </div> 
-
-    <SectionBorder/>
+        </div>    
  
-    <div class="mt-2 mb-10 relative"> 
-        <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
-        <vue-editor v-model="form.description"></vue-editor>        
+    </div>      
+  
+    <div class="mt-5 mb-5 px-2 relative"> 
+        <label class="absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
+        <vue-editor class="bg-gray-50 hover:bg-white focus:bg-white" v-model="form.description"></vue-editor>        
         <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
-    </div>         
+    </div>    
 
-    <SectionBorder/>
- 
-    <div class="mt-5 lg:flex lg:item-center lg:justify-around"> 
+    <div class="mt-5 lg:flex lg:item-center lg:justify-around fixes bottom-0"> 
         <div class="w-full md:w-1/2 flex items-center lg:justify-start  sm:px-6 mt-2">
             <inertia-link :href="route('shop.show',Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex mr-2" type="button" as="button">
                 SHOW PRODUCTS
@@ -301,7 +241,60 @@
                     </svg>                
             </loading-button>        
         </div> 
-    </div>
+    </div>       
+
+    <SectionBorder/>
+    
+ 
+    <div class="product-variations" v-if="form.is_variable && ProductSkus.length>0">   
+        <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
+
+        <div class="flex flex-wrap">
+            <div class="py-2 px-2 w-full bg-gray-100" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
+                <div class="bg-white text-blue-500">{{ProductSku.sku}}</div>
+
+
+                <div class="flex flex-wrap  mb-2">
+    
+                    <div class="w-full md:w-1/2 " v-for="(skus_option, skus_option_index) in ProductSku.skus_options" :key="skus_option_index">
+                        <p>{{skus_option.variant_option.attributes_option.attribute.name}} - {{skus_option.variant_option.attributes_option.name}}</p>
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-2 md:mb-0 relative">
+
+                        <text-input  
+                            type="text"  
+                            class="w-full" 
+                            v-model="ProductSku.qty" 
+                            autocomplete="sku Quantity" 
+                            :error="$page.errors.sku_qty"
+                            label='#SKU Quantity'    
+                            :labelRequire='true'    
+                            placeholder="Sku Quantity" 
+                        aria-label="sku quantity"/>
+
+                        <text-input   
+                            type="text"  
+                            class="w-full" 
+                            v-model="ProductSku.price" 
+                            autocomplete="price" 
+                            :error="$page.errors.sku_price"
+                            label='$ Price'    
+                            :labelRequire='true'    
+                            placeholder="Sku Price" 
+                        aria-label="price"/>
+
+                    </div>
+                </div>
+    
+            </div>
+        </div> 
+    </div> 
+
+
+    <SectionBorder/>
+ 
+ 
 
 </form>      
 </template>
@@ -310,6 +303,7 @@ import Multiselect from 'vue-multiselect'
 import LoadingButton from './../../Shared/LoadingButton'   
 import FileInput from './../../Shared/FileInput'   
 import TextInput from './../../Shared/TextInput'   
+// import ToggleInput from './../../Shared/ToggleInput'   
 import SelectInput from './../../Shared/SelectInput'   
 import SectionBorder from './../../Shared/SectionBorder'   
 import { VueEditor } from "vue2-editor";
@@ -323,6 +317,7 @@ export default {
         Multiselect,
         LoadingButton,
         FileInput, 
+        // ToggleInput, 
         TextInput,
         SelectInput,        
         SectionBorder,        
@@ -345,8 +340,8 @@ export default {
                 quantity: this.Product.quantity,
                 weight: this.Product.weight,
                 description: this.Product.description,
-                is_active: this.Product.is_active?1:0,
-                is_featured: this.Product.is_featured?1:0,
+                is_active: this.Product.is_active,
+                is_featured: this.Product.is_featured,
                 image: this.Product.mainphoto_url,
                 is_variable:this.Product.variations.length?1:0,
                 attributes:this.Product.variations,                
@@ -361,18 +356,18 @@ export default {
 
             let formData = new FormData();
             formData.append("name", self.form.name || '');
-            formData.append("sku", self.form.sku || '');
+            // formData.append("sku", self.form.sku || '');
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '');
             formData.append("categories", JSON.stringify(self.form.categories) || '');
-            formData.append("is_variable", self.form.is_variable || 0);
+            formData.append("is_variable", self.form.is_variable?1:0 || 0);
             formData.append("Attributes", JSON.stringify(self.form.attributes) || '');          
             formData.append("regular_price", self.form.regular_price || 0);
             formData.append("sale_price", self.form.sale_price || 0);
             formData.append("quantity", self.form.quantity || 0);
             formData.append("weight", self.form.weight || 0);
             formData.append("description", self.form.description || '' );
-            formData.append("is_active", self.form.is_active || 0);
-            formData.append("is_featured", self.form.is_featured || 0);
+            formData.append("is_active", self.form.is_active?1:0 || 0);
+            formData.append("is_featured", self.form.is_featured?1:0 || 0);
             formData.append("image", self.form.image || '');            
             formData.append('_method', 'put')
             
@@ -394,14 +389,50 @@ export default {
             //         return category;
             //     }
             // });             
-        },
+        },  
         Attributes(){ 
             return this.$page.attributes;
         }, 
         ProductSkus(){ 
             return this.$page.Product.skus;
         }, 
+        ProductStatus(){ 
+            return this.form.is_active?'Active':'Deactive';
+        }, 
+        ProductIsFeatured(){ 
+            return this.form.is_featured?'Featured':'Not Featured';
+        }, 
+        
     },
 
 }
 </script>
+<style scoped>
+.toggle-path {
+    transition: background 0.3s ease-in-out;
+}
+.toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+input:checked ~ .toggle-circle {
+    transform: translateX(100%);
+}
+input:checked ~ .toggle-path {
+    background-color:#81E6D9;
+}
+ 
+.slide-fade-enter-active {  
+    transition: all 0.5s ease-in-out;
+}
+.slide-fade-leave-active {  
+    transition: all 0.2s ease-in-out;
+}
+
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(100px); 
+  opacity: 0;
+}  
+ 
+</style>

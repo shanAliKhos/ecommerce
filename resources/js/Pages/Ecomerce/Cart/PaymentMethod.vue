@@ -79,7 +79,7 @@ import YourOrder from './YourOrder'
 import PaymentForm from './PaymentForm';  
 
 export default {
-    metaInfo: { title: 'PAyment Form' },   
+    metaInfo: { title: 'Payment Form' },   
     layout:AppLayout,
     components: {
         YourOrder,

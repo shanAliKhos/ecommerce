@@ -1,5 +1,5 @@
 <template>
-<tr class="rounded-lg text-xs text-gray-500 bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10">
+<tr class="rounded-lg text-xs text-gray-500  lg:hover:bg-white hover:shadow-lg flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 hover:shadow-2xl">
     <td class="border-l border-b border-gray-300 w-1/2 lg:w-auto p-3    block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
         <p class="py-5  lg:p-1 font-semibold ">

@@ -3,56 +3,31 @@
         <div class="pt-16 pb-24 flex flex-col lg:flex-row justify-between -mx-5">
             <div class="lg:1/2 flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between px-5">
                 <div class="sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col">
-
-                    <div class="w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0">
-                        <div
-                            class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
-                            <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
-                                @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url('./../../img/product/product (1).png')">
-                            </div>
-                        </div>
+ 
+                    <div class="w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer  pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50" @click="selectedImage = $event.target.style.backgroundImage" :style="`background-image:url('${this.Product.mainphoto_url}')`"></div>
+                        
+                    <div v-for="n in 3" :key="n+1" 
+                        class="w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50" @click="selectedImage = $event.target.style.backgroundImage" 
+                        :style="`background-image:url('./../../img/product/product (${Math.floor(Math.random() * 40)}).jpg')`" >
                     </div>
-
+                        
+                    <!--              
                     <div class="w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0">
                         <div
                             class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
                             <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
                                 @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url('./../../img/product/product (2).png')">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0">
-                        <div
-                            class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
-                            <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
-                                @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url('./../../img/product/product (3).png')">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0">
-                        <div
-                            class="bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center">
-                            <div class="w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer"
-                                @click="selectedImage = $event.target.style.backgroundImage"
-                                style="background-image:url('./../../img/product/product (4).png')"
+                                style="background-image:url('./../../img/product/product (4).jpg')"
                                 >
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                    -->
 
                 </div>
                 <div class="w-full sm:w-96 lg:w-80 xl:w-90 relative pb-5 sm:pb-0">
-                    <div
-                        class="bg-v-pink border border-grey relative h-80 sm:h-94 xl:h-96 rounded flex items-center justify-center">
-                        <div class="w-56 xl:w-64 h-76 sm:h-82 xl:h-86 my-6 sm:my-12 xl:my-24 bg-center bg-no-repeat bg-cover"
-                            :style="'background-image:'+selectedImage+''"  
-                            >
-                        </div>
+                    <div class="bg-v-pink border border-grey relative h-80 sm:h-94 xl:h-96 rounded flex items-center justify-center">
+                        <div class="w-full h-full my-6  bg-center bg-no-repeat bg-cover" :style="'background-image:'+selectedImage+''"></div>
                     </div>
                 </div>
             </div> 
@@ -62,11 +37,7 @@
                     <div class="border-b border-grey-dark mb-8">
                         <div class="flex items-center">
                             <p class="font-mono text-3xl capitalize text-gray-900 overflow-ellipsis overflow-hidden" >{{Product.name}}</p>
-                            <small class="rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2" 
-                                :class="Label.Color"
-                                v-if="Label.Active">
-                                {{Label.Title}}
-                            </small>
+                            <small class="rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2" :class="Label.Color" v-if="Label.Active">{{Label.Title}}</small>
                         </div>
                         <div class="flex items-center pt-2">
                             <div class="flex items-center">
@@ -396,7 +367,7 @@ export default {
             },        
             sending:false,
             activeTab:'description',
-            selectedImage:null,                        
+            selectedImage:`url('${this.Product.mainphoto_url}')`,                        
         }
     },
     watch: { 

@@ -678,7 +678,7 @@ var render = function() {
           "label",
           {
             staticClass:
-              "absolute top-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+              "absolute rounded top-0  text-purple-600  px-1 text-xs font-semibold uppercase",
             class: _vm.fixedClasses,
             attrs: { for: _vm.id }
           },
@@ -697,7 +697,7 @@ var render = function() {
         {
           ref: "input",
           staticClass:
-            "w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",
+            "w-full px-4 py-2 text-blue-500 bg-gray-50 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600 ",
           attrs: { id: _vm.id, type: _vm.type, "aria-label": _vm.label },
           domProps: { value: _vm.value },
           on: {

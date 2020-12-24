@@ -34,7 +34,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     value: null,
@@ -120,68 +119,72 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-2 relative" }, [
-    _c("input", {
-      ref: "file",
-      staticClass: "hidden",
-      class: { "is-invalid": _vm.error },
-      attrs: { type: "file", accept: _vm.accept },
-      on: { change: _vm.change }
-    }),
-    _vm._v(" "),
-    _vm.label
-      ? _c(
-          "label",
-          {
-            staticClass:
-              "absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
-            attrs: { for: _vm.label }
-          },
-          [_vm._v(_vm._s(_vm.label))]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "mt-3" }, [
-      _vm.showPreview
-        ? _c("img", {
-            staticClass: "rounded h-auto w-auto object-cover",
-            attrs: { src: _vm.imagePreview, alt: "Current Photo" }
-          })
-        : _vm._e()
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "p-1" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "mt-2 mr-2 inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150",
-          attrs: { type: "button" },
-          on: { click: _vm.browse }
-        },
-        [_vm._v("\n        New Photo\n      ")]
-      ),
+  return _c(
+    "div",
+    { staticClass: "mt-1 relative border-2 border-gray-200 bg-gray-50" },
+    [
+      _c("input", {
+        ref: "file",
+        staticClass: "hidden",
+        class: { "is-invalid": _vm.error },
+        attrs: { type: "file", accept: _vm.accept },
+        on: { change: _vm.change }
+      }),
       _vm._v(" "),
-      _vm.value
+      _vm.label
         ? _c(
-            "button",
+            "label",
             {
               staticClass:
-                "mt-2 inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150",
-              attrs: { type: "button" },
-              on: { click: _vm.remove }
+                "absolute rounded-lg top-0 right-0  text-purple-700  px-1 text-xs font-semibold uppercase",
+              attrs: { for: _vm.label }
             },
-            [_vm._v("\n        Remove Photo\n      ")]
+            [_vm._v(_vm._s(_vm.label))]
           )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-3" }, [
+        _vm.showPreview
+          ? _c("img", {
+              staticClass: "rounded h-auto w-auto md:w-52 object-cover",
+              attrs: { src: _vm.imagePreview, alt: "Current Photo" }
+            })
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-2" }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "mt-1 mr-1 inline-flex items-center px-2 py-1 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150",
+            attrs: { type: "button" },
+            on: { click: _vm.browse }
+          },
+          [_vm._v("\n        New Photo\n      ")]
+        ),
+        _vm._v(" "),
+        _vm.value
+          ? _c(
+              "button",
+              {
+                staticClass:
+                  "mt-1 inline-flex items-center px-2 py-1 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150",
+                attrs: { type: "button" },
+                on: { click: _vm.remove }
+              },
+              [_vm._v("\n        Remove Photo\n      ")]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _vm.error
+        ? _c("p", { staticClass: " text-red-500 text-xs italic" }, [
+            _vm._v(_vm._s(_vm.error))
+          ])
         : _vm._e()
-    ]),
-    _vm._v(" "),
-    _vm.error
-      ? _c("p", { staticClass: " text-red-500 text-xs italic" }, [
-          _vm._v(_vm._s(_vm.error))
-        ])
-      : _vm._e()
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

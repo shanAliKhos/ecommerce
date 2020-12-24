@@ -80,14 +80,14 @@ export default {
             };
             createToken(options).then(result => {
             
-                // if(result.error){ 
-                //     this.$swal({  
-                //         showConfirmButton: true,  
-                //         icon: 'error',
-                //         title: 'Opps ! ' +result.error.message ,
-                //     })
-                //     return false;
-                // }
+                if(result.error){ 
+                    this.$swal({  
+                        showConfirmButton: true,  
+                        icon: 'error',
+                        title: 'Opps something went wrong ! contact support ',
+                    })
+                    return false;
+                }
 
                 if (result.token) {
                     let hiddenInput = document.createElement("input");

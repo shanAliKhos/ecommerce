@@ -44,7 +44,7 @@ class ProductController extends Controller
  
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
-            "sku" => 'required|string|min:2|max:255',
+            // "sku" => 'required|string|min:2|max:255',
             // "brand" => null
             // "categories" => []
             "regular_price" => 'required|numeric|min:0.1|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
@@ -63,8 +63,7 @@ class ProductController extends Controller
             
             $NewImage = $request->file('image')->store('Products','public');   
 
-        }    
-              
+        }     
  
         try { 
 
@@ -91,7 +90,6 @@ class ProductController extends Controller
         $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id'));  
 
         $request->Attributes = json_decode($request->Attributes,true);
-
         if($request->is_variable && !empty($request->Attributes)){ 
             
             $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
@@ -99,17 +97,7 @@ class ProductController extends Controller
             $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');      
 
             if(!empty(Arr::collapse($ProductAttributesValues))){
-                
-                // $SkuNames = Arr::pluck($ProductAttributesValues, '*.name'); 
-                // $SkuNamesStart = array_shift($SkuNames);
-                // $Skuds = collect($SkuNamesStart)->crossJoin(...$SkuNames);
-                // $SkuString=[];
-
-                // foreach ($Skuds as $Skudkey => $Skud) {
-                //     $SkuString[] = preg_replace_array('/[&-=_]+/', ['#'.$Skudkey.$Product->id.($Skudkey+1).'','-'], Arr::query($Skud));
-                // }    
-                // $Product->Skuds()->sync($SkuString);                 
-
+     
                 foreach ($Product->variations as $attrkey => $variation) { 
                     $variation->attribute_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
                 }
@@ -146,8 +134,7 @@ class ProductController extends Controller
 
 
                       
-            } 
-             
+            }  
 
         } 
       
@@ -201,7 +188,7 @@ class ProductController extends Controller
     { 
         $this->validate($request,[
             "name" => 'required|string|min:2|max:255',
-            "sku" => 'required|string|min:2|max:255',
+            // "sku" => 'required|string|min:2|max:255',
             // "brand" => null
             // "categories" => []
             "regular_price" => 'required|numeric|min:0.1|max:99999999|regex:/^\d+(\.\d{1,2})?$/',
@@ -260,16 +247,17 @@ class ProductController extends Controller
         ]);
 
         $Product->categories()->sync(data_get(json_decode($request->categories,true), '*.id'));
-
+        
         $request->Attributes = json_decode($request->Attributes,true);
-  
+        
         if($request->is_variable && !empty($request->Attributes)){
             
             $Product->attributes()->sync(data_get($request->Attributes, '*.id'));
+             
             $ProductAttributesValues = data_get($request->Attributes, '*.product_attribute_values');
-
+            
             if(!empty(Arr::collapse($ProductAttributesValues))){
-               
+                
                 foreach ($Product->variations as $attrkey => $variation) {
                     $variation->attribute_options()->sync(data_get($ProductAttributesValues[$attrkey],'*.id'));
                 }
@@ -301,11 +289,19 @@ class ProductController extends Controller
                             'variant_option_id' => $skuOption['id'],
                         ]; 
                     }           
-                }        
+                }
+                        
                 $Product->skuds_options()->sync($skuOptions_id_array);                
               
-            } 
+            }
       
+        }else{
+            $Product->attributes()->sync([]);
+            foreach ($Product->variations as $attrkey => $variation) {
+                $variation->attribute_options()->sync([]);
+            }            
+            $Product->Skuds()->sync([]);
+            $Product->skuds_options()->sync([]);                
         } 
 
         return back()->with('success', 'Successfull ! Product updated');

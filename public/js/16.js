@@ -93,14 +93,16 @@ __webpack_require__.r(__webpack_exports__);
         NameOnCard: this.name_on_card
       };
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])(options).then(function (result) {
-        // if(result.error){ 
-        //     this.$swal({  
-        //         showConfirmButton: true,  
-        //         icon: 'error',
-        //         title: 'Opps ! ' +result.error.message ,
-        //     })
-        //     return false;
-        // }
+        if (result.error) {
+          _this.$swal({
+            showConfirmButton: true,
+            icon: 'error',
+            title: 'Opps something went wrong ! contact support '
+          });
+
+          return false;
+        }
+
         if (result.token) {
           var hiddenInput = document.createElement("input");
           hiddenInput.setAttribute("type", "hidden");

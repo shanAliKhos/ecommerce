@@ -350,35 +350,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -404,7 +375,7 @@ __webpack_require__.r(__webpack_exports__);
       },
       sending: false,
       activeTab: 'description',
-      selectedImage: null
+      selectedImage: "url('".concat(this.Product.mainphoto_url, "')")
     };
   },
   watch: {
@@ -526,138 +497,38 @@ var render = function() {
                   "sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col"
               },
               [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
-                      },
-                      [
-                        _c("div", {
-                          staticClass:
-                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
-                          staticStyle: {
-                            "background-image":
-                              "url('./../../img/product/product (1).png')"
-                          },
-                          on: {
-                            click: function($event) {
-                              _vm.selectedImage =
-                                $event.target.style.backgroundImage
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]
-                ),
+                _c("div", {
+                  staticClass:
+                    "w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer  pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50",
+                  style:
+                    "background-image:url('" +
+                    this.Product.mainphoto_url +
+                    "')",
+                  on: {
+                    click: function($event) {
+                      _vm.selectedImage = $event.target.style.backgroundImage
+                    }
+                  }
+                }),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  {
+                _vm._l(3, function(n) {
+                  return _c("div", {
+                    key: n + 1,
                     staticClass:
-                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
-                      },
-                      [
-                        _c("div", {
-                          staticClass:
-                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
-                          staticStyle: {
-                            "background-image":
-                              "url('./../../img/product/product (2).png')"
-                          },
-                          on: {
-                            click: function($event) {
-                              _vm.selectedImage =
-                                $event.target.style.backgroundImage
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
-                      },
-                      [
-                        _c("div", {
-                          staticClass:
-                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
-                          staticStyle: {
-                            "background-image":
-                              "url('./../../img/product/product (3).png')"
-                          },
-                          on: {
-                            click: function($event) {
-                              _vm.selectedImage =
-                                $event.target.style.backgroundImage
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-28 sm:w-32 lg:w-24 xl:w-28 relative pb-5 mr-3 sm:pr-0"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-v-pink border border-grey relative h-28 rounded flex items-center justify-center"
-                      },
-                      [
-                        _c("div", {
-                          staticClass:
-                            "w-16 h-20 my-3 bg-center bg-no-repeat bg-cover cursor-pointer",
-                          staticStyle: {
-                            "background-image":
-                              "url('./../../img/product/product (4).png')"
-                          },
-                          on: {
-                            click: function($event) {
-                              _vm.selectedImage =
-                                $event.target.style.backgroundImage
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]
-                )
-              ]
+                      "w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50",
+                    style:
+                      "background-image:url('./../../img/product/product (" +
+                      Math.floor(Math.random() * 40) +
+                      ").jpg')",
+                    on: {
+                      click: function($event) {
+                        _vm.selectedImage = $event.target.style.backgroundImage
+                      }
+                    }
+                  })
+                })
+              ],
+              2
             ),
             _vm._v(" "),
             _c(
@@ -676,7 +547,7 @@ var render = function() {
                   [
                     _c("div", {
                       staticClass:
-                        "w-56 xl:w-64 h-76 sm:h-82 xl:h-86 my-6 sm:my-12 xl:my-24 bg-center bg-no-repeat bg-cover",
+                        "w-full h-full my-6  bg-center bg-no-repeat bg-cover",
                       style: "background-image:" + _vm.selectedImage + ""
                     })
                   ]
@@ -707,13 +578,7 @@ var render = function() {
                           "rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2",
                         class: _vm.Label.Color
                       },
-                      [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(_vm.Label.Title) +
-                            "\n                        "
-                        )
-                      ]
+                      [_vm._v(_vm._s(_vm.Label.Title))]
                     )
                   : _vm._e()
               ]),

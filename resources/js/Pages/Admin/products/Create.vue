@@ -19,111 +19,25 @@
 
                 <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="store">
 
-                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Create</p>    
-
-                    
-                    <div class="general-section mb-20 ">
-                        
-                        <div class="flex flex-wrap -mx-3 mb-2">
+                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Create</p>     
                 
-                            <div class="w-full md:w-1/2 px-3  md:mb-0">
-
-                                <div class="mt-2">
-                                    
-                                    <file-input 
-                                    v-model="form.image" 
-                                    :defualt_preview_img="form.name" 
-                                    :error="$page.errors.image" 
-                                    class="pr-6 pb-8 w-full w-full px-5 py-4 text-gray-700 bg-gray-100 rounded" 
-                                    type="file" 
-                                    accept="image/*" 
-                                    label="Photo" 
-                                    :preview="true"/>
-
-                                </div>                                  
-                                
-                            </div>  
-
-                            <div class="w-full md:w-1/2 px-3 md:mb-0">
+                    <div class="flex flex-wrap  mb-2">
+                    
+                        <div class="w-full md:w-1/3 px-2  md:mb-0">
+                
+                            <file-input 
+                                v-model="form.image" 
+                                :preview_img="form.image" 
+                                :defualt_preview_img="form.name" 
+                                :error="$page.errors.image" 
+                                class="pr-6 pb-8 w-full w-full px-5 py-2 text-gray-700 rounded" 
+                                type="file" 
+                                accept="image/*" 
+                                label="Photo" 
+                            :preview="true"/>
                             
-                                <text-input 
-                                    id="name" 
-                                    type="text" 
-                                    class="w-full " 
-                                    v-model="form.name" 
-                                    autocomplete="name" 
-                                    :error="$page.errors.name"
-                                    label='Name'    
-                                    :labelRequire='true'    
-                                    placeholder="Name" 
-                                aria-label="Name"/>
-    
-                                <text-input 
-                                    id="sku" 
-                                    type="text"  
-                                    class="w-full " 
-                                    v-model="form.sku" 
-                                    autocomplete="sku" 
-                                    :error="$page.errors.sku"
-                                    label='#SKU'    
-                                    :labelRequire='true'    
-                                    placeholder="SKU" 
-                                aria-label="SKU"/>
-
-                                <text-input 
-                                    id="quantity" 
-                                    type="text"  
-                                    class="w-full " 
-                                    v-model="form.quantity" 
-                                    autocomplete="quantity" 
-                                    :error="$page.errors.quantity"
-                                    label='#Quantity'    
-                                    :labelRequire='true'    
-                                    placeholder="Quantity" 
-                                aria-label="quantity"/>
-    
-                                <text-input 
-                                    id="regular_price" 
-                                    type="text"  
-                                    class="w-full " 
-                                    v-model="form.regular_price" 
-                                    autocomplete="regular_price" 
-                                    :error="$page.errors.regular_price"
-                                    label='$ RegularPrice'    
-                                    :labelRequire='true'    
-                                    placeholder="RegularPrice" 
-                                aria-label="regular_price"/>
-
-                                <text-input 
-                                    id="sale_price" 
-                                    type="text"  
-                                    class="w-full "  
-                                    v-model="form.sale_price" 
-                                    autocomplete="sale_price" 
-                                    :error="$page.errors.sale_price"
-                                    label='$ SalePrice'      
-                                    placeholder="SalePrice" 
-                                aria-label="sale_price"/>
-
-                                <text-input 
-                                    id="weight" 
-                                    type="text"  
-                                    class="w-full"  
-                                    v-model="form.weight" 
-                                    autocomplete="weight" 
-                                    :error="$page.errors.weight"
-                                    label='Weight'       
-                                    placeholder="Weight" 
-                                aria-label="weight"/>
-                                
-                            </div>      
-
-                        </div>          
-      
-                        <div class="flex flex-wrap -mx-3 mb-2">
-
-                            <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-                                <label class="z-20 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
+                            <div class="w-full  md:mb-0 relative mt-2">
+                                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
                                 <multiselect 
                                     v-model="form.brand" 
                                     deselect-label="Can't remove this value" 
@@ -134,11 +48,11 @@
                                     :searchable="false" 
                                     :allow-empty="false">
                                 </multiselect>             
-                                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>
-                            </div>            
-
-                            <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-                                <label class=" z-20  absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Categories</label>
+                                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>        
+                            </div>    
+                    
+                            <div class="w-full md:mb-0 relative mt-2"> 
+                                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="Categories">Categories</label>
                                 <multiselect 
                                     v-model="form.categories" 
                                     :options="CategoriesOption" 
@@ -152,128 +66,192 @@
                                     > 
                                 </multiselect>                        
                                 <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
-                            </div>         
+                            </div>                      
+                            
+                        </div>  
 
-                        </div>      
+                        <div class="w-full md:w-2/3 px-2 md:mb-0">
 
-                        <div class="flex flex-wrap -mx-3 mb-2">
+                            <text-input 
+                                id="name" 
+                                type="text" 
+                                class="w-full mb-2" 
+                                v-model="form.name" 
+                                autocomplete="name" 
+                                :error="$page.errors.name"
+                                label='Name'    
+                                :labelRequire='true'    
+                                placeholder="Name" 
+                            aria-label="Name"/>
+                            
+                            <div class="w-full flex flex-wrap item-center md:justify-end py-2 px-2 ">
+                        
+                                <div class=" w-full md:w-1/3">
+                                    <label for="is_active" class="flex items-center cursor-pointer">
+                                        <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Status</div>
+                                        <div class="relative">
+                                            <input id="is_active" type="checkbox" class="hidden" v-model="form.is_active" />
+                                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                        </div>
+                                    </label>
+                                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_active">{{$page.errors.is_active}}</p>                 
+                                </div>        
 
-                            <select-input 
-                                v-model="form.is_active" 
-                                class="w-full md:w-1/3 px-3  md:mb-0 "  
-                                :fixedClasses="'right-3 z-20'"
-                                :error="$page.errors.is_active"
-                                label='Status'    
-                                :labelRequire='true'>
-                            <option :value="0">Disable</option>
-                            <option :value="1">Active</option>                        
-                            </select-input> 
+                                <div class=" w-full md:w-1/3">
+                                    <label for="is_featured" class="flex items-center cursor-pointer">
+                                        <div :class="{'text-green-400':form.is_featured,'text-red-500':!form.is_featured}" class=" px-2 font-semibold ">Featured</div>
+                                        <div class="relative">
+                                            <input id="is_featured" type="checkbox" class="hidden" v-model="form.is_featured" />
+                                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                        </div>
+                                    </label> 
+                                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_featured">{{$page.errors.is_featured}}</p>                 
+                                </div>        
 
-                            <select-input 
-                                v-model="form.is_featured" 
-                                class="w-full md:w-1/3 px-3  md:mb-0 "  
-                                :fixedClasses="'right-3 z-20'"
-                                :error="$page.errors.is_featured"
-                                label='Featured'    
-                                :labelRequire='true'>
-                            <option :value="0">No</option>
-                            <option :value="1">YES</option>                        
-                            </select-input> 
+                                <div class="w-full md:w-1/3">
+                                    <label for="is_variable" class="flex items-center cursor-pointer">
+                                        <div :class="{'text-green-400':form.is_variable,'text-red-500':!form.is_variable}" class=" px-2 font-semibold ">Variations</div>
+                                        <div class="relative">
+                                            <input id="is_variable" type="checkbox" class="hidden" v-model="form.is_variable" />
+                                            <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                        </div>
+                                    </label> 
+                                    <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_variable">{{$page.errors.is_variable}}</p>                 
+                                </div>        
 
+                            </div>
 
-                            <select-input 
-                                v-model="form.is_variable" 
-                                class="w-full md:w-1/3 px-3  md:mb-0 "  
-                                :fixedClasses="'right-3 z-20'"
-                                :error="$page.errors.is_variable"
-                                label='Type'    
-                                :labelRequire='true'>
-                            <option :value="0">Simple</option>
-                            <option :value="1">Variable</option>                        
-                            </select-input>                             
- 
-                        </div>                          
-
-                        <div class="product-attributes" v-if="form.is_variable">
                             <SectionBorder/>
 
-                            <p class="text-lg text-gray-800 font-medium pb-4">Product Attributes information</p>
-
-                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable">
-
-                                <div class="w-full md:w-1/2 px-3 md:mb-0 relative mt-2">
-                                    <label class=" z-20  absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
+                            <transition-group name="slide-fade">
+                                    
+                                <div class="w-full md:mb-0 relative " v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
+                                    <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
                                     <multiselect  
                                         v-model="form.attributes" 
                                         deselect-label="remove this value" 
                                         :multiple="true" 
+                                        class="mb-10"
                                         :close-on-select="false" 
                                         :clear-on-select="false"                                     
-                                        track-by="name" 
+                                        track-by="name"  
                                         label="name" 
                                         placeholder="Select an Attribute" 
                                         :options="Attributes" 
                                         :searchable="true" 
                                         :allow-empty="true">
                                     </multiselect>                                   
-                                    <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.Attribute">{{$page.errors.Attribute}}</p>
-                                </div>         
-                                
-                            </div>                 
+                                    <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>             
+                                </div>     
 
-                            <div class="flex flex-wrap -mx-3 mb-2" v-if="form.is_variable && (form.attributes)">
-
-                                <div class="w-full md:w-1/2">
-                                </div>
-
-                                <div class="w-full md:w-1/2">
-                                    <p class="text-lg text-gray-800 font-medium pb-4 md:text-right">Product Attributes Values </p>
-                                    
-                                    <div class="w-full px-3 md:mb-0 relative mt-5" v-for="(attribute, index) in form.attributes" :key="index">
-                                        <label class="z-20 absolute bottom-8 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
+                                <div v-if="form.is_variable " :key="'add-attribute-section-opts'">  
+                                    <transition-group name="slide-fade"> 
+                                    <div class="w-full  md:mb-0 relative mt-2" v-for="(attribute, index) in form.attributes" :key="'attribute_value'+index">
+                                        <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
                                         <multiselect   
                                             v-model="attribute.product_attribute_values"
                                             deselect-label="remove this value" 
                                             :multiple="true" 
                                             :close-on-select="false" 
                                             :clear-on-select="false"                                     
-                                            track-by="name" 
+                                            track-by="name"  
                                             label="name" 
-                                            placeholder="Select an Attribute" 
+                                            :placeholder="`select ${attribute.name}`" 
                                             :options="attribute.attribute_values" 
                                             :searchable="true" 
-                                            :allow-empty="true">
-                                        </multiselect>                                   
-                                        <!-- <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p> -->
-                                    </div>       
-
+                                            :allow-empty="false">
+                                        </multiselect>     
+                                    </div>                 
+                                    </transition-group>        
                                 </div>    
+                                
+                                <div v-else :key="'simple-opts'"> 
 
-                            </div>                                                       
- 
-                        </div>         
+                                    <text-input 
+                                        id="sku" 
+                                        type="text"  
+                                        class="w-full " 
+                                        v-model="form.sku" 
+                                        autocomplete="sku" 
+                                        :error="$page.errors.sku"
+                                        label='#SKU'    
+                                        :labelRequire='true'    
+                                            placeholder="SKU" 
+                                    aria-label="SKU"/>
 
-                        <SectionBorder/>
+                                    <text-input 
+                                        id="quantity" 
+                                        type="text"  
+                                        class="w-full " 
+                                        v-model="form.quantity" 
+                                        autocomplete="quantity" 
+                                        :error="$page.errors.quantity"
+                                        label='#Quantity'    
+                                        :labelRequire='true'    
+                                            placeholder="Quantity" 
+                                    aria-label="quantity"/>
 
-                        <div class="mt-2 mb-10 relative"> 
-                            <label class="absolute top-0 right-0 bg-blue-200 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
-                            <vue-editor v-model="form.description"></vue-editor>       
- 
-                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
-                        </div>         
+                                    <text-input 
+                                        id="regular_price" 
+                                        type="text"  
+                                        class="w-full " 
+                                        v-model="form.regular_price" 
+                                        autocomplete="regular_price" 
+                                        :error="$page.errors.regular_price"
+                                        label='$ RegularPrice'    
+                                        :labelRequire='true'    
+                                        placeholder="RegularPrice" 
+                                    aria-label="regular_price"/>
 
-                        <SectionBorder/>
-                        
-                    </div>
-                     
-                    <div class="mt-5 flex items-center justify-end   text-right"> 
-                        <loading-button :loading="sending" class="transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center mr-2" type="submit" as="button">
-                            SAVE PRODUCTS
-                                <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>                
-                        </loading-button>                        
-                    </div>
+                                    <text-input 
+                                        id="sale_price" 
+                                        type="text"  
+                                        class="w-full "  
+                                        v-model="form.sale_price" 
+                                        autocomplete="sale_price" 
+                                        :error="$page.errors.sale_price"
+                                        label='$ SalePrice'      
+                                        placeholder="SalePrice" 
+                                    aria-label="sale_price"/>
+
+                                    <text-input 
+                                        id="weight" 
+                                        type="text"  
+                                        class="w-full"  
+                                        v-model="form.weight" 
+                                        autocomplete="weight" 
+                                        :error="$page.errors.weight"
+                                        label='Weight'       
+                                        placeholder="Weight" 
+                                    aria-label="weight"/>     
+                                </div>              
+
+                            </transition-group>
+
+                        </div>    
+                
+                    </div>      
+                
+                    <div class="mt-5 mb-5 px-2 relative"> 
+                        <label class="absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
+                        <vue-editor v-model="form.description"></vue-editor>        
+                        <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
+                    </div>    
+
+                    <div class="mt-5 lg:flex lg:item-center lg:justify-around fixes bottom-0"> 
+                
+                        <div class="w-full md:w-1/2 flex items-center lg:justify-end  sm:px-6 mt-2">
+                            <loading-button :loading="sending" class="w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex  mr-2" type="submit" as="button">
+                                UPDATE PRODUCTS
+                                    <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>                
+                            </loading-button>        
+                        </div> 
+                    </div>       
 
                 </form>       
 
@@ -320,8 +298,8 @@ export default {
                 quantity:null,
                 weight:null,
                 description:null,
-                is_active:1,
-                is_featured:0,
+                is_active:true,
+                is_featured:false,
                 image:null,
                 is_variable:0,
                 attributes:null, 
@@ -345,15 +323,15 @@ export default {
             formData.append("sku", self.form.sku || '');
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '');
             formData.append("categories", JSON.stringify(self.form.categories) || '');
-            formData.append("is_variable", self.form.is_variable || 0);
+            formData.append("is_variable", self.form.is_variable?1:0 || 0);
             formData.append("Attributes", JSON.stringify(self.form.attributes) || ''); 
             formData.append("regular_price", self.form.regular_price || 0);
             formData.append("sale_price", self.form.sale_price || 0);
             formData.append("quantity", self.form.quantity || 0);
             formData.append("weight", self.form.weight || 0);
             formData.append("description", self.form.description || '' );
-            formData.append("is_active", self.form.is_active || 0);
-            formData.append("is_featured", self.form.is_featured || 0);
+            formData.append("is_active", self.form.is_active?1:0 || 0);
+            formData.append("is_featured", self.form.is_featured?1:0 || 0);
             formData.append("image", self.form.image || null);
  
             self.$inertia.post(route('admin.product.store'), formData, {
@@ -416,5 +394,33 @@ export default {
  
 }
 </script>
+<style scoped>
+.toggle-path {
+    transition: background 0.3s ease-in-out;
+}
+.toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+input:checked ~ .toggle-circle {
+    transform: translateX(100%);
+}
+input:checked ~ .toggle-path {
+    background-color:#81E6D9;
+}
  
+.slide-fade-enter-active {  
+    transition: all 0.5s ease-in-out;
+}
+.slide-fade-leave-active {  
+    transition: all 0.2s ease-in-out;
+}
+
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(100px); 
+  opacity: 0;
+}  
+ 
+</style> 
 
