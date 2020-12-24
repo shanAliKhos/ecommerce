@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->text('image')->nullable();
             $table->boolean('is_featured')->default(0); 
             $table->boolean('is_active')->default(1);              
-            $table->string('sku');
+            $table->string('sku')->nullable();
             $table->unsignedInteger('quantity');
             $table->decimal('weight', 3, 2)->nullable();
             $table->decimal('regular_price', 8, 2);
