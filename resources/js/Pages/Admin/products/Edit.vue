@@ -13,27 +13,20 @@
         <BackButton/>
  
     </nav>
-     
-    <div class="flex justify-center">
-        <div class="w-full  pl-0 lg:pl-2">
-            <div class="leading-loose">
-    
-                <edit-form :Product="Product" :Categories="Categories" :Brands="Brands"></edit-form>
-
-            </div>
-        </div>    
-    </div>               
-        
+       
+    <GeneralForm/>
  
  
 </div> 
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout' 
-import ProductImages from './ProductImages' 
-import EditForm from './EditForm' 
-import ProductAttributes from './ProductAttributes' 
 import BackButton from './../../Shared/BackButton'   
+import GeneralForm from './components/GeneralForm' 
+
+// import EditForm from './EditForm' 
+// import ProductImages from './ProductImages' 
+// import ProductAttributes from './ProductAttributes' 
 
  
 export default {
@@ -42,51 +35,11 @@ export default {
     },   
     layout: AppLayout,       
     components: { 
-        ProductImages,
-        EditForm,
-        ProductAttributes,
-        BackButton
-    },
-
-    data () {
-        return {
-            Images:this.$page.Product.images,
-        }
+        BackButton,
+        GeneralForm, 
     },
   
-    mounted() {
-        const self = this;
-        self.$root.$on('image-upload-success',() => { 
-            axios.get(route('admin.product.images.index',self.Product.id)).then (function(response){
-                self.Images = response.data;
-            });                        
-        })
-    },
-    beforeDestroy () {
-        this.$root.$off('image-upload-success');  
-    }, 
-
-    computed: {
-        Product(){
-            return this.$page.Product
-        },
-        ProductImages(){
-            return this.$page.Product.images;
-        },
-        Categories(){
-            return this.$page.Categories
-        },
-        Brands(){
-            return this.$page.Brands
-        },
-    },
-
- 
-    mounted() { 
-        const self = this
-        self.$root.$emit('sidebar-close');
-    },
-     
+    
  
 }
 </script>

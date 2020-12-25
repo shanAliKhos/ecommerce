@@ -177,11 +177,11 @@ class ProductController extends Controller
     
         $attributes = $attribute->with('attribute_values')->get();
  
-        $Brands = $brand->all(['*'],'name','asc');
-        $Categories = $category->all(['*'],'name','asc');  
+        $brands = $brand->all(['*'],'name','asc');
+        $categories = $category->all(['*'],'name','asc');  
         $__csrf_token = csrf_token();    
         
-        return Inertia::render('Admin/products/Edit',compact('Categories', 'Brands','Product','attributes','__csrf_token')); 
+        return Inertia::render('Admin/products/Edit',compact('categories', 'brands','Product','attributes','__csrf_token')); 
     }
 
     public function update(Request $request, Product $Product)

@@ -11,7 +11,7 @@
             </li>
         </ol>
         
-        <inertia-link 
+        <!-- <inertia-link 
             :href="route('admin.brand.create')" 
             class="transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
             >  
@@ -20,11 +20,40 @@
             </svg>            
             <span>Add New</span>            
        
-        </inertia-link>
+        </inertia-link> -->
     </nav>
 
+    <div class="flex justify-center">
+        <div class="w-full pl-0 lg:pl-2">
+            <div class="leading-loose ">
 
-    <div class="py-5 px-5 bg-white rounded shadow-2xl">
+                <p class="pb-6 flex font-semibold text-xl text-gray-400">Brands</p> 
+                <div class="flex flex-wrap -mx-3 mb-2">
+
+                    <div class="w-full md:w-1/2 px-3  md:mb-0">
+                       
+                        <BrandForm/>
+
+                    </div>  
+ 
+
+                    <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        <div class="py-5 px-5 bg-white rounded-lg shadow-2xl">
+                            <p class="pb-6 flex font-semibold text-xl text-gray-400">Listing</p>    
+
+                            <Listing />
+                            
+                        </div>        
+                    </div>    
+                    
+                </div>                                                
+        
+            </div> 
+        </div>    
+    </div>   
+
+
+    <!-- <div class="py-5 px-5 bg-white rounded shadow-2xl">
         <p class="pb-6 flex font-semibold text-xl text-gray-400">Brand Listing</p>    
         <table class="border-collapse w-full table-auto">
             <thead>
@@ -47,11 +76,11 @@
                             <span>No Record Found !  </span>
                         </p>
                     </td> 
-                </tr>                   
+                </tr>
             </tbody>
         </table>    
     </div>
- 
+  -->
      <pagination :links="Links"></pagination>
 
 
@@ -60,7 +89,8 @@
 <script>
 import AppLayout from './../Layouts/AppLayout'  
 import Pagination from './../../Shared/Pagination'  
-import ListItem from './components/ListItem'   
+import Listing from './components/Listing'   
+import BrandForm from './components/BrandForm'   
 
 export default {
     metaInfo: { title: 'Brands' },
@@ -72,15 +102,14 @@ export default {
     },
     components:{
         Pagination,        
-        ListItem,
+        Listing,
+        BrandForm,
     },
 
     computed: {
-        Brands(){
-            return this.$page.Brands.data;
-        },
+
         Links(){
-            return this.$page.Brands.links;
+            return this.$page.brands.links;
         },
            
     },

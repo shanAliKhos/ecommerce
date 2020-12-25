@@ -91,7 +91,7 @@
             <text-input 
                 id="default_email_address" 
                 type="email" 
-                class="col-span-6 sm:col-span-3 mt-1 block w-full py-3" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full  " 
                 v-model="form.default_email_address" 
                 autocomplete="default_email_address" 
                 :error="$page.errors.default_email_address"
@@ -103,7 +103,7 @@
             <text-input 
                 id="phone" 
                 type="number" 
-                class="col-span-6 sm:col-span-3 mt-1 block w-full py-3" 
+                class="col-span-6 sm:col-span-3 mt-1 block w-full " 
                 v-model="form.phone"  
                 :error="$page.errors.phone"
                 label='Phone'    

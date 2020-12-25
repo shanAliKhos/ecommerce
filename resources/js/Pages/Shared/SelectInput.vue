@@ -6,14 +6,14 @@
           :id="id" ref="input" 
           v-model="selected" 
           v-bind="$attrs"
-          class="w-full px-4 py-1 text-gray-700 bg-white rounded appearance-none shadow-sm hover:shadow-2xl focus:shadow-2xl border-2 border-transparent focus:outline-none  focus:border-purple-600">
+          class="transition duration-700 ease-in-out w-full px-4 py-2 text-gray-700 bg-gray-50 rounded appearance-none shadow-sm hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  hover:bg-white hover:shadow-2xl focus:shadow-2xl focus:border-purple-600">
             <slot />
           </select>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" :class="{'mt-5':label}">
             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
           </div>
       </div>
-      <p class="absolute bottom-0 text-red-500 text-xs italic" :class="fixedClasses" v-if="error">{{error}}</p>                 
+      <p class="transition duration-700 ease-in-out absolute bottom-0 text-red-500 text-xs italic" :class="fixedClasses" v-if="error">{{error}}</p>                 
   </div>
 </template>
 

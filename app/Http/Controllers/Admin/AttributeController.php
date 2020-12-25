@@ -17,13 +17,14 @@ class AttributeController extends Controller
     public function index()
     {
         $Attribute = new Attribute;
-        $Attributes = $Attribute->paginate(8); 
-        return Inertia::render('Admin/attribute/Index',compact('Attributes'));
+        return Inertia::render('Admin/attribute/Index',[
+            'attributes'=>$Attribute->paginate(5),
+        ]);
     }
  
     public function create()
     { 
-        return Inertia::render('Admin/attribute/Create');
+        // return Inertia::render('Admin/attribute/Create');
     }
 
  
@@ -53,10 +54,14 @@ class AttributeController extends Controller
         return redirect()->route('admin.attribute.index')->with('success', 'Attribute created');
     }
  
-    public function edit(Attribute $Attribute)
+    public function edit(Attribute $attribute)
     { 
-        $Attribute->values;
-        return Inertia::render('Admin/attribute/Edit',compact('Attribute')); 
+        $attribute->values;
+        return Inertia::render('Admin/attribute/Index',[
+            'attribute'=>$attribute,
+            'attributes'=>$attribute->paginate('5'),
+        ]);
+ 
     }
 
  
@@ -75,7 +80,7 @@ class AttributeController extends Controller
             'is_filterable' => $request->is_filterable?1:0,
             'is_required' => $request->is_required?1:0, 
         ]);
-        return back()->with('success', 'Attribute updated');
+        return redirect()->route('admin.attribute.index')->with('success', 'Attribute updated');
  
         // $attribute = $this->attributeRepository->updateAttribute($params);
     }

@@ -1,6 +1,5 @@
 <template>
 <div>
-
     <nav class="text-sm font-semibold mb-6" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
             <li class="flex items-center text-blue-500"> 
@@ -12,43 +11,38 @@
             </li>
         </ol>
         
-        <inertia-link 
-            :href="route('admin.attribute-option.create')" 
-            class="transition duration-700 ease-in-out bg-blue-400 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center float-right"
-            >  
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
-            </svg>            
-            <span>Add New</span>            
-       
-        </inertia-link>
+ 
     </nav>
-    <div class="py-5 px-5 bg-white rounded shadow-2xl">
-        <p class="pb-6 flex font-semibold text-xl text-gray-400">Attributes Options Listing</p>    
-        <table class="border-collapse w-full ">
-            <thead>
-                <tr>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th> 
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Attribute</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ACTIONS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <list-item v-for="(AttributesOption, AttributesOptionIndex) in AttributesOptions" :key="AttributesOptionIndex" :optionIndex="AttributesOptionIndex" :attribute_option='AttributesOption' class="font-bold" ></list-item>
-                <tr v-if="(!AttributesOptions.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                    <td colspan="7" class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
-                        <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
-                            <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>                        
-                            <span>No Record Found !  </span>
-                        </p>
-                    </td> 
-                </tr>                     
-            </tbody>
-        </table>    
-    </div> 
+ 
+
+    <div class="flex justify-center">
+        <div class="w-full pl-0 lg:pl-2">
+            <div class="leading-loose ">
+
+                <p class="pb-6 flex font-semibold text-xl text-gray-400">Attribute Options</p> 
+                <div class="flex flex-wrap -mx-3 mb-2">
+
+                    <div class="w-full md:w-1/2 px-3  md:mb-0">
+                       
+                        <AttributeOptionForm/>
+
+                    </div>  
+ 
+
+                    <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        <div class="py-5 px-5 bg-white rounded-lg shadow-2xl">
+                            <p class="pb-6 flex font-semibold text-xl text-gray-400">Listing</p>    
+
+                            <Listing />
+                            
+                        </div>        
+                    </div>    
+                    
+                </div>                                                
+        
+            </div> 
+        </div>    
+    </div>       
 
     <pagination :links="Links" v-if="Links.length" ></pagination>
  
@@ -56,7 +50,8 @@
 </template>
 <script>
 import AppLayout from './../Layouts/AppLayout'   
-import ListItem from './components/ListItem'   
+import Listing from './components/Listing'   
+import AttributeOptionForm from './components/AttributeOptionForm'   
 import Pagination from './../../Shared/Pagination'  
 
 export default { 
@@ -65,14 +60,12 @@ export default {
     },        
     layout: AppLayout,  
     components:{ 
-        ListItem,
+        AttributeOptionForm,
+        Listing,
         Pagination,
     },
 
-    computed: {
-        AttributesOptions(){
-            return this.$page.attribute_options.data;
-        },
+    computed: { 
         Links(){
             return this.$page.attribute_options.links;
         },

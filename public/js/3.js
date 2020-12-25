@@ -109,7 +109,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['atTopOfPage']
+  props: ['atTopOfPage'],
+  computed: {
+    IsAtTop: function IsAtTop() {
+      return this.atTopOfPage ? 'scale-100 md:scale-100' : 'scale-50  md:scale-50';
+    }
+  }
 });
 
 /***/ }),
@@ -262,7 +267,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     IsAtTop: function IsAtTop() {
-      return this.atTopOfPage ? 'w-8 h-8' : 'w-5 h-5';
+      return this.atTopOfPage ? 'transition duration-300 ease-in-out transform scale-100 md:scale-100' : 'transition duration-300 ease-in-out transform scale-75 md:scale-75';
     }
   },
   methods: {
@@ -296,7 +301,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     classes: function classes() {
       var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
-      var is_atTop = this.atTopOfPage ? 'text-md' : 'fixed top-0 text-xs';
+      var is_atTop = this.atTopOfPage ? 'scale-100 md:scale-100' : 'fixed top-0 scale-75 md:scale-75';
       return is_active.concat(is_atTop);
     },
     IsAtTop: function IsAtTop() {
@@ -451,7 +456,7 @@ var render = function() {
     [
       _c("span", {
         staticClass:
-          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover",
+          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-8 h-8",
         class: _vm.IsAtTop
       }),
       _vm._v(" "),
@@ -494,8 +499,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", {
     staticClass:
-      "transition delay-500 duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo ",
-    class: { "w-12 h-12": !_vm.atTopOfPage, "w-20 h-20": _vm.atTopOfPage }
+      "transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo transition duration-300 ease-in-out transform w-20 h-20",
+    class: _vm.IsAtTop
   })
 }
 var staticRenderFns = []
@@ -523,9 +528,13 @@ var render = function() {
   return _c("div", { staticClass: "container relative" }, [
     _c(
       "div",
-      { staticClass: "flex justify-between items-center" },
+      {
+        staticClass:
+          "transition duration-300 ease-in-out transform flex justify-between items-center",
+        class: { "md:h-10": !_vm.atTopOfPage }
+      },
       [
-        _c("div", { staticClass: "hidden lg:block" }, [
+        _c("div", { staticClass: "hidden lg:block h-10" }, [
           _c("div", { staticClass: "flex items-center" }, [
             _c(
               "a",
@@ -537,7 +546,7 @@ var render = function() {
               [
                 _c("span", {
                   staticClass:
-                    "transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover",
+                    "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover",
                   class: _vm.IsAtTop
                 })
               ]
@@ -553,7 +562,7 @@ var render = function() {
               [
                 _c("span", {
                   staticClass:
-                    "transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover",
+                    "w-8 h-8 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover",
                   class: _vm.IsAtTop
                 })
               ]
@@ -572,7 +581,8 @@ var render = function() {
             _c(
               "svg",
               {
-                staticClass: "text-gray-400 hover:text-gray-500 text-xs",
+                staticClass:
+                  "text-gray-400 hover:text-gray-500 text-xs w-8 h-8",
                 class: _vm.IsAtTop,
                 attrs: {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -602,7 +612,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "hidden lg:block" }, [
+        _c("div", { staticClass: "hidden lg:block h-10" }, [
           _c(
             "div",
             { staticClass: "flex items-center" },
@@ -629,7 +639,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -665,7 +675,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -705,7 +715,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover",
+                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -718,7 +728,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "block lg:hidden" }, [
+        _c("div", { staticClass: "block lg:hidden h-10" }, [
           _c(
             "div",
             { staticClass: "ml-3 relative" },
@@ -733,7 +743,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "text-gray-500",
+                            staticClass: "w-8 h-8 text-gray-500",
                             class: _vm.IsAtTop,
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
@@ -926,7 +936,7 @@ var render = function() {
       _c(
         "inertia-link",
         {
-          staticClass: "transition duration-300 ease-in transform px-2",
+          staticClass: "transition duration-300 ease-in-out transform  px-2",
           class: _vm.classes,
           attrs: { href: _vm.href }
         },

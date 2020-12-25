@@ -52,15 +52,15 @@
 </script>
 <style scoped>
 .slide-fade-enter-active {  
-  transition:all .8s cubic-bezier(.2, .1, .8, .04); 
+  transition:all 0.8s ease-in-out .2s; 
 
 }
 .slide-fade-leave-active {  
-  transition:all .3s cubic-bezier(.2, .1, .8, .04); 
+  transition:all 0.3s ease-in-out; 
 }
  
 .slide-fade-enter, .slide-fade-leave-to{
-  transform: translate(80%); 
+  transform: translate(200px); 
   opacity: 0;
 } 
  

@@ -248,7 +248,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".slide-fade-enter-active[data-v-485aad8c] {\n  transition:all .8s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-leave-active[data-v-485aad8c] {\n  transition:all .3s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-enter[data-v-485aad8c], .slide-fade-leave-to[data-v-485aad8c]{\n  transform: translate(80%);\n  opacity: 0;\n} \n \n", ""]);
+exports.push([module.i, ".slide-fade-enter-active[data-v-485aad8c] {\n  transition:all 0.8s ease-in-out .2s;\n}\n.slide-fade-leave-active[data-v-485aad8c] {\n  transition:all 0.3s ease-in-out;\n}\n.slide-fade-enter[data-v-485aad8c], .slide-fade-leave-to[data-v-485aad8c]{\n  transform: translate(200px);\n  opacity: 0;\n} \n \n", ""]);
 
 // exports
 

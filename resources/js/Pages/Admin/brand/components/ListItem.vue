@@ -1,4 +1,4 @@
-<template>
+<template> 
 <tr class="text-gray-500 font-semibold bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
     <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">#</p>
@@ -17,10 +17,10 @@
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NAME</p>
             <p class="py-5 lg:p-1 ">{{ brand.name }}</p>
     </td>
-    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <!-- <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">SLUG</p>
             <p class="py-5  lg:p-1 ">{{ brand.slug  }}</p>
-    </td> 
+    </td>  -->
     <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">ACTIONS</p>
         <div class="inline-flex py-5  lg:p-1 ">
@@ -44,7 +44,7 @@
         </div>             
     
     </td>
-</tr>       
+</tr>     
 </template>
 <script>
 import LoadingButton from './../../../Shared/LoadingButton'   

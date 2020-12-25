@@ -83,6 +83,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -105,7 +107,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     handleScroll: function handleScroll() {
-      if (window.pageYOffset > 0) {
+      // alert(window.pageYOffset);
+      if (window.pageYOffset > 400) {
         if (this.view.atTopOfPage) this.view.atTopOfPage = false;
       } else {
         if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
@@ -180,7 +183,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".slide-fade-enter-active[data-v-0b5ac64c] {\n  transition:all .8s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-leave-active[data-v-0b5ac64c] {\n  transition:all .3s cubic-bezier(.2, .1, .8, .04);\n}\n.slide-fade-enter[data-v-0b5ac64c], .slide-fade-leave-to[data-v-0b5ac64c]{\n  transform: translateY(-100%);\n  opacity: 0;\n} \n \n \n", ""]);
+exports.push([module.i, ".slide-fade-enter-active[data-v-0b5ac64c] {\n  transition:all 0.5s ease-in-out;\n}\n.slide-fade-leave-active[data-v-0b5ac64c] {\n  transition:all 0.3s ease-in-out;\n}\n.slide-fade-enter[data-v-0b5ac64c], .slide-fade-leave-to[data-v-0b5ac64c]{\n  transform: translateY(100px);\n  opacity: 0;\n} \n \n \n", ""]);
 
 // exports
 
@@ -199,7 +202,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".xxstheme-header.scrolled[data-v-082068e0] {\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n  border-bottom: 0px;\n}\r\n", ""]);
+exports.push([module.i, ".xxstheme-header.scrolled[data-v-082068e0] {\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\r\n", ""]);
 
 // exports
 
@@ -289,7 +292,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: "lg:mt-28 mt-20" },
+        { staticClass: "lg:mt-2 mt-2" },
         [
           _c(
             "transition",
@@ -336,11 +339,12 @@ var render = function() {
     "div",
     {
       staticClass:
-        "xxstheme-header fixed flex w-full bg-white items-center justify-between flex-wrap z-50 m-auto top-0 animated",
-      class: { scrolled: !_vm.view.atTopOfPage }
+        "xxstheme-header transition duration-500 ease-in top-0 w-full bg-white z-50 ",
+      class: { "fixed scrolled": !_vm.view.atTopOfPage }
     },
     [
       _c("nav-bar", {
+        staticClass: "z-50",
         attrs: {
           atTopOfPage: _vm.view.atTopOfPage,
           mobileMenu: _vm.mobileMenu,
@@ -358,6 +362,7 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("mobile-navbar", {
+        staticClass: "z-50",
         attrs: {
           mobileMenu: _vm.mobileMenu,
           categories: _vm.categories,

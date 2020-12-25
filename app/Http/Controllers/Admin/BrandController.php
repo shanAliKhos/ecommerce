@@ -17,16 +17,17 @@ class BrandController extends Controller
 
     public function index()
     {
-        $Brand = new Brand;
-        $Brands = $Brand->paginate(8); 
+        $Brand = new Brand; 
 
-        return Inertia::render('Admin/brand/Index',compact('Brands'));
+        return Inertia::render('Admin/brand/Index',[
+            'brands'=> $Brand->paginate(8),
+        ]);
  
     }
  
     public function create()
     { 
-        return Inertia::render('Admin/brand/Create');
+        // return Inertia::render('Admin/brand/Create');
  
     }
  
@@ -53,7 +54,11 @@ class BrandController extends Controller
  
     public function edit(Brand $brand)
     {  
-        return Inertia::render('Admin/brand/Edit',compact('brand'));
+        return Inertia::render('Admin/brand/Index',[
+            'brands'=> $brand->paginate(8),
+            'brand'=> $brand,
+        ]);        
+        // return Inertia::render('Admin/brand/Edit',compact('brand'));
  
     } 
  
@@ -92,7 +97,9 @@ class BrandController extends Controller
             'slug' => Str::slug($request->name),
         ]);        
             
-        return back()->with('success','success ! brand updated');
+        return redirect()->route('admin.brand.index')->with('success', 'brand updated');
+
+        // return back()->with('success','success ! brand updated');
 
     } 
 

@@ -19,7 +19,7 @@
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs   uppercase">NAME</p>
         <p class="py-5  lg:p-1">{{ Category.name }}</p>
     </td> 
-    <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
+    <!-- <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Featured</p>
         <p class="py-5  lg:p-1">
             <span class="rounded bg-green-400 text-white py-1 px-3 text-xs" v-if="Category.is_featured">YES</span>
@@ -32,7 +32,7 @@
             <span class="rounded bg-green-400 text-white py-1 px-3 text-xs " v-if="Category.menu">YES</span>
             <span class="rounded bg-red-400 text-white py-1 px-3 text-xs " v-else>NO</span>
         </p>
-    </td>
+    </td> -->
     <td class="w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static">
         <p class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</p>
             <div class="inline-flex py-5  lg:p-1">

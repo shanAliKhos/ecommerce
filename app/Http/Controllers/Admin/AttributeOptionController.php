@@ -19,16 +19,20 @@ class AttributeOptionController extends Controller
 
     public function index()
     {
-        $AttributeValue = new AttributeValue;
-        $attribute_options = $AttributeValue->with('attribute')->paginate(8);  
-        return Inertia::render('Admin/attribute-option/Index',compact('attribute_options'));   
+        $AttributeValue = new AttributeValue; 
+        $attribute = new Attribute;
+
+        return Inertia::render('Admin/attribute-option/Index',[
+            'attribute_options'=>$AttributeValue->with('attribute')->paginate(8),
+            'attributes'=>$attribute->all(),
+        ]);   
     }
  
     public function create()
     {
-        $attribute = new Attribute;
-        $attributes = $attribute->all();  
-        return Inertia::render('Admin/attribute-option/Create',compact('attributes'));   
+        // $attribute = new Attribute;
+        // $attributes = $attribute->all();  
+        // return Inertia::render('Admin/attribute-option/Create',compact('attributes'));   
     }
  
     public function store(Request $request)
@@ -65,8 +69,12 @@ class AttributeOptionController extends Controller
     public function edit(AttributeValue $attribute_option)
     { 
         $attribute = new Attribute;
-        $attributes = $attribute->all();          
-        $attribute_option->load('attribute');
+     
+        return Inertia::render('Admin/attribute-option/Index',[
+            'attribute_option'=>$attribute_option->load('attribute'),
+            'attribute_options'=>$attribute_option->with('attribute')->paginate(8),
+            'attributes'=>$attribute->all(),
+        ]);         
         return Inertia::render('Admin/attribute-option/Edit',compact('attribute_option','attributes')); 
     }
  

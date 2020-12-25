@@ -24,57 +24,55 @@
         
     </nav>    
 
-    <div class="py-5 px-5 bg-white rounded shadow-2xl">
-        <p class="pb-6 flex font-semibold text-xl text-gray-400">Category Listing</p>    
-        <table class="border-collapse w-full table-auto ">
-            <thead>
-                <tr>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Image</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Featured</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Menu</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">ACTIONS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <list-item v-for="(Category, CategoryIndex) in Categories" :key="CategoryIndex"  :CategoryIndex="CategoryIndex" :Category="Category"></list-item>
-                <tr v-if="(!Categories.length > 0)" class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                    <td colspan="7" class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b border-gray-300 block lg:table-cell relative lg:static ">
-                        <p class="py-5 lg:p-1 text-lg text-gray-300 text-semibold uppercase inline-flex items-center"> 
-                            <svg class="h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>                        
-                            <span>No Record Found !  </span>
-                        </p>
-                    </td> 
-                </tr>                    
-            </tbody>
-        </table>    
-    </div>
+    <div class="flex justify-center">
+        <div class="w-full pl-0 lg:pl-2">
+            <div class="leading-loose ">
 
+                <p class="pb-6 flex font-semibold text-xl text-gray-400">Categories</p> 
+                <div class="flex flex-wrap -mx-3 mb-2">
+
+                    <div class="w-full md:w-1/2 px-3  md:mb-0">
+                       
+                        <CategoryForm/>
+
+                    </div>  
+ 
+
+                    <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        <div class="py-5 px-5 bg-white rounded-lg shadow-2xl">
+                            <p class="pb-6 flex font-semibold text-xl text-gray-400">Listing</p>    
+
+                            <Listing />
+                            
+                        </div>        
+                    </div>    
+                    
+                </div>                                                
+        
+            </div> 
+        </div>    
+    </div>   
     <pagination :links="Links"></pagination>
    
 </div>
 </template>
 <script>
-import Pagination from './../../Shared/Pagination'  
-
 import AppLayout from './../Layouts/AppLayout'   
-import ListItem from './components/ListItem'   
+import Listing from './components/Listing'   
+import CategoryForm from './components/CategoryForm'   
+import Pagination from './../../Shared/Pagination'  
 export default {
     layout: AppLayout, 
     metaInfo: { title: 'Categories' },
     components:{
-        ListItem,
+        Listing,
+        CategoryForm,
         Pagination,        
     },
     computed: {
-        Categories(){
-            return this.$page.Categories.data;
-        },
+
         Links(){
-            return this.$page.Categories.links;
+            return this.$page.categories.links;
         },
     },
  

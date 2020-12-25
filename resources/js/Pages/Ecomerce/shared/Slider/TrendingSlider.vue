@@ -6,7 +6,7 @@
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
-            :animationDuration="500"
+            :animationDuration="200"
             :peek="{ before: 100, after: 100 }"
             :breakpoints="{
                 1024: {

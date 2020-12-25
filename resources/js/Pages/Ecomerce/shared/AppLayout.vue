@@ -3,7 +3,7 @@
     
     <app-header></app-header>
     
-    <main class="lg:mt-28 mt-20">
+    <main class="lg:mt-2 mt-2">
 
         <transition name="slide-fade">
 
@@ -43,15 +43,15 @@
 </script>
 <style scoped>
 .slide-fade-enter-active {  
-  transition:all .8s cubic-bezier(.2, .1, .8, .04); 
+  transition:all 0.5s ease-in-out; 
 
 }
 .slide-fade-leave-active {  
-  transition:all .3s cubic-bezier(.2, .1, .8, .04); 
+  transition:all 0.3s ease-in-out; 
 }
  
 .slide-fade-enter, .slide-fade-leave-to{
-  transform: translateY(-100%); 
+  transform: translateY(100px); 
   opacity: 0;
 } 
  

@@ -33,20 +33,26 @@ class ShopController extends Controller
     }
 
     public function show(Product $Product,$slug)
-    {  
-        $Product = $Product->where('slug',$slug)->with('images','categories')->firstOrFail();         
-        $RelatedProducts = $Product->get()->random(10);
-        return Inertia::render('Ecomerce/shop/Show', compact('Product','RelatedProducts'));
-    }
- 
-    public function GetFeaturedProducts(Product $product)
-    {
-        $FeatureProduct = $product->latest()->where('is_featured',true)->take(8)->get();
- 
-        return response()->json($FeatureProduct);
+    {   
+        $Product = $Product->where('slug',$slug)->with('images','categories','brand')->firstOrFail();
         
-    }
+        $Product->Skus->map(function($sku){
+            return $sku->skus_options->map(function($skudsOption){
+                return $skudsOption->variant_option->attributes_option->attribute;
+            });
+        });
+   
+        $Product->variations->map(function($variation){
+            return $variation->load('attribute_options')->Attribute;
+        })->toArray();
+        
  
+        return Inertia::render('Ecomerce/shop/Show', [
+            'Product'=> $Product,
+            'RelatedProducts'=>$Product->get()->random(10),
+        ]);
+    }
+  
     public function GetCategoryProducts(Category $category,Product $product,$slug)
     {   
 
@@ -59,17 +65,6 @@ class ShopController extends Controller
 
     }    
  
-
-    // public function SaleSlider()
-    // {
-    //     $Product = new Product;
-    //     return $Product->where('quantity','>',0)->where('sale_price','>',0)->take(10)->latest()->get();
-    // }
-
-    // public function TrendingSlider()
-    // {
-    //     $Product = new Product;
-    //     return $Product->where('quantity','>',0)->where('regular_price','>',0)->where('is_featured',true)->take(12)->latest()->get();
-    // }
+ 
 
 }

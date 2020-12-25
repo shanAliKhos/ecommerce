@@ -29,8 +29,8 @@ class BlogController extends Controller
     public function create()
     {
         $Category = new Category;
-        $Categories = $Category->all();
-        return Inertia::render('Admin/blog/Create',compact('Categories'));
+        $categories = $Category->all();
+        return Inertia::render('Admin/blog/Create',compact('categories'));
     }
 
     public function store(Request $request)
@@ -70,11 +70,12 @@ class BlogController extends Controller
         //
     }
  
-    public function edit(Blog $blog)
-    {  
+    public function edit(Blog $blog,Category $category)
+    {   
+        $categories = $category->all();        
         $blog->load('category');
-        $blog->body =  json_decode($blog->body,true);
-        return Inertia::render('Admin/blog/Edit',compact('blog'));        
+        $blog->body =  json_decode($blog->body,true); 
+        return Inertia::render('Admin/blog/Edit',compact('blog','categories'));        
     }
    
     public function update(Request $request, Blog $blog)

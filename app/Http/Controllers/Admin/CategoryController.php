@@ -22,17 +22,20 @@ class CategoryController extends Controller
  
     public function index()
     {
-        $Category = new Category;
-        $Categories = $Category->paginate(8); 
+        $Category = new Category; 
+        return Inertia::render('Admin/category/Index',[
+            'categories'=>$Category->paginate(8),
+            'CategoriesOptions'=>$Category->where(['is_active'=>true,'menu'=>true])->get(),
+        ]);
  
-        return Inertia::render('Admin/category/Index',compact('Categories'));
+        // return Inertia::render('Admin/category/Index',compact('categories'));
     }
  
     public function create()
     {
-        $Category = new Category;
-        $Categories = $Category->where(['is_active'=>true,'menu'=>true])->get();   
-        return Inertia::render('Admin/category/Create',compact('Categories'));
+        // $Category = new Category;
+        // $Categories = $Category->where(['is_active'=>true,'menu'=>true])->get();   
+        // return Inertia::render('Admin/category/Create',compact('Categories'));
     }
  
     public function store(Request $request)
@@ -63,8 +66,13 @@ class CategoryController extends Controller
  
     public function edit(Category $Category)
     {     
-        $Categories = $Category->where(['is_active'=>true,'menu'=>true])->where('id',!$Category->id)->with('parent')->get();      
-        return Inertia::render('Admin/category/Edit',compact('Categories', 'Category'));
+        // $Categories = $Category->where(['is_active'=>true,'menu'=>true])->where('id',!$Category->id)->with('parent')->get();      
+        // return Inertia::render('Admin/category/Edit',compact('Categories', 'Category'));
+        return Inertia::render('Admin/category/Index',[
+            'category'=>$Category->load('parent'),
+            'CategoriesOptions'=>$Category->where(['is_active'=>true,'menu'=>true])->where('id', '!=' ,$Category->id)->get(),
+            'categories'=>$Category->paginate(8),
+        ]);        
     }  
 
     public function update(Category $category, Request $request)
@@ -102,7 +110,7 @@ class CategoryController extends Controller
             'menu' => $request->menu?1:0, 
         ]);                
 
-        return back()->with('success','success ! Category updated'); 
+        return redirect()->route('admin.category.index')->with('success','success ! Category updated'); 
 
     }
  

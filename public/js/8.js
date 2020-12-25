@@ -468,7 +468,7 @@ var render = function() {
             ],
             ref: "input",
             staticClass:
-              "w-full px-4 py-1 text-gray-700 bg-white rounded appearance-none shadow-sm hover:shadow-2xl focus:shadow-2xl border-2 border-transparent focus:outline-none  focus:border-purple-600",
+              "transition duration-700 ease-in-out w-full px-4 py-2 text-gray-700 bg-gray-50 rounded appearance-none shadow-sm hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  hover:bg-white hover:shadow-2xl focus:shadow-2xl focus:border-purple-600",
             attrs: { id: _vm.id },
             on: {
               change: function($event) {
@@ -528,7 +528,8 @@ var render = function() {
       ? _c(
           "p",
           {
-            staticClass: "absolute bottom-0 text-red-500 text-xs italic",
+            staticClass:
+              "transition duration-700 ease-in-out absolute bottom-0 text-red-500 text-xs italic",
             class: _vm.fixedClasses
           },
           [_vm._v(_vm._s(_vm.error))]
@@ -583,7 +584,7 @@ var render = function() {
         {
           ref: "input",
           staticClass:
-            "w-full px-4 py-2 text-blue-500 bg-gray-50 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600 ",
+            "transition duration-700 ease-in-out w-full px-4 py-2 text-blue-500 bg-gray-50 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600 ",
           attrs: { id: _vm.id, type: _vm.type, "aria-label": _vm.label },
           domProps: { value: _vm.value },
           on: {
@@ -602,7 +603,8 @@ var render = function() {
       ? _c(
           "p",
           {
-            staticClass: "absolute bottom-0 text-red-500 text-xs italic",
+            staticClass:
+              "transition duration-700 ease-in-out absolute bottom-0 text-red-500 text-xs italic",
             class: _vm.fixedClasses
           },
           [_vm._v(_vm._s(_vm.error))]
