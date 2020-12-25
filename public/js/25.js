@@ -1,9 +1,121 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[25],{
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8&":
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8& ***!
-  \********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['Category', 'CategoryIndex'],
+  components: {
+    LoadingButton: _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      sending: false
+    };
+  },
+  methods: {
+    destroy: function destroy() {
+      var self = this;
+      self.$swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          self.$inertia["delete"](self.route('admin.category.destroy', self.Category.id), {
+            preserveState: true,
+            preserveScroll: true,
+            onStart: function onStart() {
+              return self.sending = true;
+            },
+            onFinish: function onFinish() {
+              return self.sending = false;
+            }
+          });
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c& ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -16,335 +128,250 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between" },
+    "tr",
+    {
+      staticClass:
+        "text-gray-500 font-semibold bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0 font-bold"
+    },
     [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "w-full lg:w-1/2 mt-6 sm:mt-10 lg:mt-0" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "px-10 h-56 sm:h-76 bg-left sm:bg-center bg-no-repeat bg-cover relative",
-            style: "background-image:url('./img/collection/collection (1).jpg')"
-          },
-          [_vm._m(1)]
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3)
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "lg:w-1/2 px-10 mx-auto lg:mx-0 text-center lg:text-left"
-      },
-      [
-        _c("div", { staticClass: "lg:w-3/4 xl:w-2/3 lg:pt-10 pb-4 md:pb-10" }, [
+      _c(
+        "td",
+        {
+          staticClass:
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+        },
+        [
           _c(
             "p",
             {
               staticClass:
-                "font-semibold text-gray-400 text-3xl md:text-4xl lg:text-7xl"
+                "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
             },
-            [_vm._v("Trending Collections")]
+            [_vm._v("#")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "font-semibold text-gray-300 text-lg pt-4" }, [
-            _vm._v("Checkout our newest trends this coming season")
+          _c("p", { staticClass: "py-5  lg:p-1" }, [
+            _vm._v(
+              "\r\n            " +
+                _vm._s(_vm.CategoryIndex + 1) +
+                "\r\n        "
+            )
           ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "w-2/3 absolute inset-0 px-6 md:px-10 py-14 " },
-      [
-        _c(
-          "p",
-          {
-            staticClass:
-              "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
-          },
-          [_vm._v("Passion Pearl "), _c("br"), _vm._v(" Collection")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "flex items-center pt-5 group",
-            attrs: { href: "/shop" }
-          },
-          [
-            _c(
-              "div",
-              {
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "td",
+        {
+          staticClass:
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 block lg:table-cell relative lg:static"
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass:
+                "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+            },
+            [_vm._v("IMAGE")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex items-center py-5  lg:p-1" }, [
+            _c("div", { staticClass: "flex-shrink-0 h-full w-full" }, [
+              _c("img", {
                 staticClass:
-                  "bg-white rounded-full h-8 w-8 flex items-center justify-center"
-              },
-              [
-                _c("i", {
-                  staticClass:
-                    "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c("span", [
+                  "h-full w-full sm:w-44 sm:h-44 lg:w-20 lg:h-20 rounded",
+                attrs: { src: _vm.Category.photo_url, alt: "" }
+              })
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "td",
+        {
+          staticClass:
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass:
+                "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs   uppercase"
+            },
+            [_vm._v("NAME")]
+          ),
+          _vm._v(" "),
+          _c("p", { staticClass: "py-5  lg:p-1" }, [
+            _vm._v(_vm._s(_vm.Category.name))
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "td",
+        {
+          staticClass:
+            "w-full lg:w-auto p-3  text-center border border-b border-gray-300 text-center block lg:table-cell relative lg:static"
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass:
+                "lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase"
+            },
+            [_vm._v("Actions")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "inline-flex py-5  lg:p-1" },
+            [
               _c(
-                "p",
+                "inertia-link",
                 {
                   staticClass:
-                    "font-semibold transition-colors text-primary group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                    "transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
+                  attrs: {
+                    href: _vm.route("admin.category.edit", _vm.Category.id)
+                  }
                 },
-                [_vm._v(" Get it now")]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "w-full lg:w-1/2 lg:px-10 mt-8 sm:mt-10" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68",
-            staticStyle: {
-              "background-image": "url('./img/collection/collection (2).jpg')"
-            }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "md:w-2/3 absolute inset-0 px-6 md:px-10 py-14" },
-              [
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
-                  },
-                  [_vm._v("Hoodie your way! For Men")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "flex items-center pt-5 group",
-                    attrs: { href: "/collection-list" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
-                      },
-                      [_vm._v(" Get it now")]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68 mt-8 sm:mt-10",
-            staticStyle: {
-              "background-image": "url('./img/collection/collection (3).jpg')"
-            }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "w-2/3 absolute inset-0 px-6 md:px-10 py-14" },
-              [
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
-                  },
-                  [
-                    _vm._v(
-                      "\n                    Anabelle Purses  \n                "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "flex items-center pt-5 group",
-                    attrs: { href: "/collection-list" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
-                      },
-                      [_vm._v(" Get it now")]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full lg:w-1/2 px-10 h-82 sm:h-94 lg:h-96 bg-left sm:bg-center bg-no-repeat bg-cover relative mt-8 sm:mt-10",
-        staticStyle: {
-          "background-image": "url('./img/collection/collection (4).jpg')"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "w-2/3 absolute inse t-0 px-6 md:px-10 py-14 sm:py-16"
-          },
-          [
-            _c(
-              "p",
-              {
-                staticClass:
-                  "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
-              },
-              [_vm._v("W.W. Shoes ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "flex items-center pt-5 group",
-                attrs: { href: "/collection-list" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"
-                  },
-                  [
-                    _c("i", {
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "w-4 h-4",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.destroy($event)
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "button",
+                    {
                       staticClass:
-                        "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
-                  },
-                  [_vm._v("Get it now")]
-                )
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  }
-]
+                        "transition duration-500 ease-in-out bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1 border border-red-500 hover:border-transparent rounded inline-flex items-center",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _vm.sending
+                        ? _c(
+                            "svg",
+                            {
+                              staticClass: "animate-spin h-5 w-5",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20",
+                                fill: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "fill-rule": "evenodd",
+                                  d:
+                                    "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                                  "clip-rule": "evenodd"
+                                }
+                              })
+                            ]
+                          )
+                        : _c(
+                            "svg",
+                            {
+                              staticClass: "w-4 h-4",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d:
+                                    "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                }
+                              })
+                            ]
+                          )
+                    ]
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue ***!
-  \*******************************************************************************/
+/***/ "./resources/js/Pages/Admin/category/components/ListItem.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/components/ListItem.vue ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingCollection.vue?vue&type=template&id=248e50d8& */ "./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListItem.vue?vue&type=template&id=25f1a23c& */ "./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c&");
+/* harmony import */ var _ListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListItem.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -354,24 +381,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue"
+component.options.__file = "resources/js/Pages/Admin/category/components/ListItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListItem.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c& ***!
+  \**************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingCollection.vue?vue&type=template&id=248e50d8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue?vue&type=template&id=248e50d8&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListItem.vue?vue&type=template&id=25f1a23c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/category/components/ListItem.vue?vue&type=template&id=25f1a23c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingCollection_vue_vue_type_template_id_248e50d8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListItem_vue_vue_type_template_id_25f1a23c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
