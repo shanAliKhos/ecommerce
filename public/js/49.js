@@ -320,7 +320,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -360,6 +359,9 @@ __webpack_require__.r(__webpack_exports__);
     AddToCart: function AddToCart() {
       this.sending = true;
       this.$root.$emit('Add-To-Cart', this.CartItem);
+    },
+    AttrColor: function AttrColor(clr) {
+      return "bg-".concat(clr, "-500");
     }
   },
   computed: {
@@ -736,7 +738,10 @@ var render = function() {
                               {
                                 key: attribute_option_index,
                                 staticClass:
-                                  "bg-secondary-light px-2 py-2 rounded-full mr-2"
+                                  "px-2 py-2 rounded-full mr-2 text-white text-xs",
+                                class: _vm.AttrColor(
+                                  attribute_option.name.toLowerCase()
+                                )
                               },
                               [_vm._v(_vm._s(attribute_option.name))]
                             )
@@ -907,7 +912,7 @@ var render = function() {
                     {
                       staticClass:
                         "flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-4 py-3 text-white font-semibold shadow uppercase",
-                      class: { "opacity-50": _vm.sending },
+                      class: { "opacity-50 pointer-events-none": _vm.sending },
                       attrs: { disabled: _vm.sending, type: "button" },
                       on: { click: _vm.AddToCart }
                     },

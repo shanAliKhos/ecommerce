@@ -94,6 +94,8 @@ __webpack_require__.r(__webpack_exports__);
       if (newQty > this.CartItem.Instock || newQty < 1) {
         this.CartItem.Qty = oldQty;
       }
+
+      this.update();
     }
   },
   computed: {
@@ -252,9 +254,7 @@ var render = function() {
                     },
                     domProps: { value: _vm.CartItem.Qty },
                     on: {
-                      change: function($event) {
-                        return _vm.update()
-                      },
+                      change: _vm.update,
                       input: function($event) {
                         if ($event.target.composing) {
                           return
@@ -393,7 +393,6 @@ var render = function() {
                 attrs: { type: "number", id: "quantity-form-mobile", min: "1" },
                 domProps: { value: _vm.CartItem.Qty },
                 on: {
-                  change: _vm.update,
                   input: function($event) {
                     if ($event.target.composing) {
                       return

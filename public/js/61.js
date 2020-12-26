@@ -290,7 +290,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -306,18 +305,18 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       sortBy: 'current_price',
-      sortDirection: 'asc'
+      sortDirection: 'desc'
     };
   },
-  methods: {
-    sort: function sort(s) {
-      if (s === this.sortBy) {
-        this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
-      }
-
-      this.sortBy = s;
-    }
-  },
+  // remember:'sortDirection',
+  // methods: {
+  // sort(s){ 
+  // if(s === this.sortBy) {
+  //     this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+  // }
+  //         this.sortBy = s;
+  //     }        
+  // },
   computed: {
     Products: function Products() {
       var _this = this;
@@ -611,7 +610,9 @@ var render = function() {
           "div",
           { staticClass: "py-10 flex flex-col sm:flex-row justify-between" },
           [
-            _vm._m(0),
+            _c("div", {
+              staticClass: "flex items-center justify-center sm:justify-start"
+            }),
             _vm._v(" "),
             _c(
               "div",
@@ -658,11 +659,11 @@ var render = function() {
                     }
                   },
                   [
-                    _c("option", { attrs: { value: "desc" } }, [
+                    _c("option", { domProps: { value: "asc" } }, [
                       _vm._v("Price: Low - High")
                     ]),
                     _vm._v(" "),
-                    _c("option", { attrs: { value: "asc" } }, [
+                    _c("option", { domProps: { value: "desc" } }, [
                       _vm._v("Price: High - Low")
                     ])
                   ]
@@ -691,54 +692,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "flex items-center justify-center sm:justify-start" },
-      [
-        _c("i", { staticClass: "bx bxs-filter-alt text-primary text-xl" }),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass:
-              "font-hkregular text-secondary md:text-lg px-2 leading-none block"
-          },
-          [_vm._v("\n                    Filter ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex items-center border border-grey-darker p-2 rounded"
-          },
-          [
-            _c("a", { attrs: { href: "/collection-list" } }, [
-              _c("i", {
-                staticClass:
-                  "bx bx-menu text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "w-px h-4 mx-2 bg-grey-darker" }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/collection-grid" } }, [
-              _c("i", {
-                staticClass:
-                  "bx bxs-grid text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
-              })
-            ])
-          ]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

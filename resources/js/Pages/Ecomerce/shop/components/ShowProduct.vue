@@ -86,7 +86,7 @@
                         <p>{{ProductVariation.attribute.name}}</p>
                     </div>
                     <div class="w-2/3 sm:w-5/6 flex items-center" v-if="ProductVariation.attribute.name == 'Color'">
-                        <div class="bg-secondary-light px-2 py-2 rounded-full mr-2" v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index">{{attribute_option.name}}</div>
+                        <div :class="AttrColor(attribute_option.name.toLowerCase())" class="px-2 py-2 rounded-full mr-2 text-white text-xs" v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index">{{attribute_option.name}}</div>
                         <!-- <div class="bg-secondary-light px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-green px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-blue px-2 py-2 rounded-full"></div> -->
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="flex items-center  justify-end hidden lg:block ">
-                    <button :disabled="sending" :class="{'opacity-50':sending}"  @click="AddToCart" 
+                    <button :disabled="sending" :class="{'opacity-50 pointer-events-none':sending}"  @click="AddToCart" 
                     class="flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-4 py-3 text-white font-semibold shadow uppercase" type="button">
                         <svg v-if="!sending" class=" transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -143,8 +143,7 @@
                         <span class="px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer" @click="CartItem.Qty--">
                             <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
                         </span>                 
-                        <input type="number" class="rounded-r-none w-2/3 py-1 px-1 text-center"
-                        v-model.number="CartItem.Qty" min="1" /> 
+                        <input type="number" class="rounded-r-none w-2/3 py-1 px-1 text-center" v-model.number="CartItem.Qty" min="1" /> 
                         <span class="text-xs absolute text-semibold bottom-5 px-0 right-12 transition duration-500 ease-in-out " :class="{'text-green-400':ProductQuantity > 0,'text-red-700':ProductQuantity < 1}">  /stock {{ProductQuantity}} </span>
                         <span class="px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer" @click="CartItem.Qty++">
                             <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
@@ -353,6 +352,9 @@ export default {
             this.sending = true;
             this.$root.$emit('Add-To-Cart',this.CartItem);      
         },            
+        AttrColor(clr){  
+         return `bg-${clr}-500`
+        },            
         
     },
     computed: { 
@@ -372,7 +374,7 @@ export default {
             return this.Product.name;
         },
         ProductQuantity(){
-            return this.Product.quantity -this.CartItem.Qty;
+            return this.Product.quantity - this.CartItem.Qty;
         },
         ProductDescription(){
             return this.Product.description;

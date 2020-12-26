@@ -14,7 +14,7 @@
             <div class="w-full sm:w-1/5 xl:w-1/4 text-center border-b-0 border-grey-dark pb-0">
                 <div class="mx-auto mr-8 xl:mr-4">
                     <div class="flex justify-center relative">
-                        <input v-model.number="CartItem.Qty" @change="update()" type="number" id="quantity-form-desktop" class="form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center" min="1" />
+                        <input v-model.number="CartItem.Qty" @change="update" type="number" id="quantity-form-desktop" class="form-input form-quantity rounded-r-none w-16 py-0 px-2 text-center" min="1" />
                         <div class="flex flex-col">
                             <span class="px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer" @click="plus">
                                 <i class="bx bxs-up-arrow text-xs text-primary pointer-events-none"></i>
@@ -44,7 +44,7 @@
                 <span class="font-hkregular text-secondary text-base mt-2 font-bold">{{CartItem.name}}</span>
                 <span class="font-hkregular text-secondary block">{{$page.SiteOptions.Currency.Symbol}} {{ CartItem.price * CartItem.Qty}} </span>
                 <div class="w-2/3 sm:w-5/6 flex mt-2"  >
-                    <input v-model.number="CartItem.Qty" @change="update"  type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
+                    <input v-model.number="CartItem.Qty" type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
                     <div class="flex flex-row">
                         <span class="px-2 bg-white flex-1 border  border-l-0 border-grey-darker cursor-pointer flex items-center justify-center" @click="minus">
                             <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
@@ -84,7 +84,8 @@ export default {
             if(newQty > this.CartItem.Instock || newQty < 1 ){
                 this.CartItem.Qty =  oldQty
             }
-        }
+            this.update();
+        },
     },    
     computed: {
         CartQty(){

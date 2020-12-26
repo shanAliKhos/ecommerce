@@ -150,10 +150,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -287,7 +283,11 @@ var render = function() {
                         "flex items-center mt-2 justify-center uppercase transition duration-700 ease-in-out border  bg-primary-lightest border-primary-light text-primary   focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow  w-full lg:w-1/3 lg:mr-2",
                       attrs: { href: _vm.route("shop.index") }
                     },
-                    [_vm._v("CONTINUE SHOPPING")]
+                    [
+                      _vm._v(
+                        "\n                        CONTINUE SHOPPING\n                    "
+                      )
+                    ]
                   ),
                   _vm._v(" "),
                   (_vm.CartItems
@@ -349,7 +349,7 @@ var render = function() {
                                   })
                                 ]
                               ),
-                          _vm._v("        \n                    Empty cart")
+                          _vm._v("Empty cart\n                    ")
                         ]
                       )
                     : _vm._e()
@@ -502,11 +502,7 @@ var render = function() {
                     return _c("cart-item", {
                       key: index,
                       attrs: { CartItem: item, cartindex: index },
-                      on: {
-                        "update-this-item": function($event) {
-                          return _vm.update()
-                        }
-                      }
+                      on: { "update-this-item": _vm.update }
                     })
                   })
                 ],
