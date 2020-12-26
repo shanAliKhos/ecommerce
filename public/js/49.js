@@ -321,18 +321,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -444,7 +432,6 @@ __webpack_require__.r(__webpack_exports__);
     this.$root.$on('item-is-added-to-cart', function () {
       _this.sending = false;
     });
-    this.SetLable();
   }
 });
 
@@ -748,7 +735,8 @@ var render = function() {
                               "div",
                               {
                                 key: attribute_option_index,
-                                staticClass: "rounded-full mr-2"
+                                staticClass:
+                                  "bg-secondary-light px-2 py-2 rounded-full mr-2"
                               },
                               [_vm._v(_vm._s(attribute_option.name))]
                             )

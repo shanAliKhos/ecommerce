@@ -86,7 +86,7 @@
                         <p>{{ProductVariation.attribute.name}}</p>
                     </div>
                     <div class="w-2/3 sm:w-5/6 flex items-center" v-if="ProductVariation.attribute.name == 'Color'">
-                        <div v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index" class="rounded-full mr-2">{{attribute_option.name}}</div>
+                        <div class="bg-secondary-light px-2 py-2 rounded-full mr-2" v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index">{{attribute_option.name}}</div>
                         <!-- <div class="bg-secondary-light px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-green px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-blue px-2 py-2 rounded-full"></div> -->
@@ -97,19 +97,7 @@
                         </select>
                     </div>                        
                 </div>                
-                <!-- <div class="flex items-center justify-between pb-4">
-                    <div class="w-1/3 sm:w-1/5">
-                        <p>Size</p>
-                    </div>
-                    <div class="w-2/3 sm:w-5/6">
-                        <select class="w-2/3 form-select">
-                            <option value="0">Small</option>
-                            <option value="1">Medium</option>
-                            <option value="2">Large</option>
-                        </select>
-                    </div>
-                </div> -->
-
+            
                 <div class="hidden lg:block">
                     <div class="flex items-center justify-between pb-5"> 
                         <div class="w-1/3 sm:w-1/5">
@@ -438,8 +426,7 @@ export default {
     mounted () {
         this.$root.$on('item-is-added-to-cart',()=>{
             this.sending = false;
-        });
-        this.SetLable(); 
+        }); 
     }, 
 
 }

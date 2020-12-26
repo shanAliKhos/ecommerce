@@ -20,10 +20,10 @@
                 <p class="font-hkregular text-secondary md:text-lg mr-2 -mt-2">Sort by:
                 </p>
 
-                <select class="w-2/3 form-select">
-                    <option value="0">Best Match</option>
-                    <option value="1">Price: Low - High</option>
-                    <option value="2">Price: High - Low</option>
+                <select v-model="sortDirection" class="w-2/3 form-select">
+                    <!-- <option value="0">Best Match</option> -->
+                    <option value="desc">Price: Low - High</option>
+                    <option value="asc">Price: High - Low</option>
                 </select>
             </div>
         </div>
@@ -53,12 +53,33 @@ export default {
         ShopProduct,
         Pagination, 
     },
+    data() {
+        return {
+            sortBy: 'current_price',
+            sortDirection: 'asc',            
+        };
+    },
+    methods: {
+        sort(s){ 
+            if(s === this.sortBy) {
+                this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+            }
+            this.sortBy = s;
+        }        
+    },
      
 
      computed: {
         Products(){
-            return this.$page.Products.data;
+            // return this.$page.Products.data;
+            return this.$page.Products.data.sort((p1,p2) => {
+                let modifier = 1;
+                if(this.sortDirection === 'desc') modifier = -1;
+                if(p1[this.sortBy] < p2[this.sortBy]) return -1 * modifier; if(p1[this.sortBy] > p2[this.sortBy]) return 1 * modifier;
+                return 0;
+            });             
         },  
+
         Pagination(){
             return {
                 first_page_url:this.$page.Products.first_page_url,

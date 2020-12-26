@@ -239,9 +239,33 @@ __webpack_require__.r(__webpack_exports__);
     ShopProduct: _shared_Product_Product__WEBPACK_IMPORTED_MODULE_2__["default"],
     Pagination: _shared_Partials_Pagination__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
+  data: function data() {
+    return {
+      sortBy: 'current_price',
+      sortDirection: 'asc'
+    };
+  },
+  methods: {
+    sort: function sort(s) {
+      if (s === this.sortBy) {
+        this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+      }
+
+      this.sortBy = s;
+    }
+  },
   computed: {
     Products: function Products() {
-      return this.$page.Products.data;
+      var _this = this;
+
+      // return this.$page.Products.data;
+      return this.$page.Products.data.sort(function (p1, p2) {
+        var modifier = 1;
+        if (_this.sortDirection === 'desc') modifier = -1;
+        if (p1[_this.sortBy] < p2[_this.sortBy]) return -1 * modifier;
+        if (p1[_this.sortBy] > p2[_this.sortBy]) return 1 * modifier;
+        return 0;
+      });
     },
     Pagination: function Pagination() {
       return {
@@ -519,7 +543,70 @@ var render = function() {
     { staticClass: "shop-section" },
     [
       _c("div", { staticClass: "container" }, [
-        _vm._m(0),
+        _c(
+          "div",
+          { staticClass: "py-10 flex flex-col sm:flex-row justify-between" },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "flex items-center justify-center sm:justify-end mt-6 sm:mt-0 w-76"
+              },
+              [
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "font-hkregular text-secondary md:text-lg mr-2 -mt-2"
+                  },
+                  [_vm._v("Sort by:\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.sortDirection,
+                        expression: "sortDirection"
+                      }
+                    ],
+                    staticClass: "w-2/3 form-select",
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.sortDirection = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c("option", { attrs: { value: "desc" } }, [
+                      _vm._v("Price: Low - High")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "asc" } }, [
+                      _vm._v("Price: High - Low")
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -551,76 +638,40 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "py-10 flex flex-col sm:flex-row justify-between" },
+      { staticClass: "flex items-center justify-center sm:justify-start" },
       [
+        _c("i", { staticClass: "bx bxs-filter-alt text-primary text-xl" }),
+        _vm._v(" "),
         _c(
-          "div",
-          { staticClass: "flex items-center justify-center sm:justify-start" },
-          [
-            _c("i", { staticClass: "bx bxs-filter-alt text-primary text-xl" }),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass:
-                  "font-hkregular text-secondary md:text-lg px-2 leading-none block"
-              },
-              [_vm._v("\n                    Filter ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "flex items-center border border-grey-darker p-2 rounded"
-              },
-              [
-                _c("a", { attrs: { href: "/collection-list" } }, [
-                  _c("i", {
-                    staticClass:
-                      "bx bx-menu text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "w-px h-4 mx-2 bg-grey-darker" }),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "/collection-grid" } }, [
-                  _c("i", {
-                    staticClass:
-                      "bx bxs-grid text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
-                  })
-                ])
-              ]
-            )
-          ]
+          "p",
+          {
+            staticClass:
+              "font-hkregular text-secondary md:text-lg px-2 leading-none block"
+          },
+          [_vm._v("\n                    Filter ")]
         ),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "flex items-center justify-center sm:justify-end mt-6 sm:mt-0 w-76"
+              "flex items-center border border-grey-darker p-2 rounded"
           },
           [
-            _c(
-              "p",
-              {
+            _c("a", { attrs: { href: "/collection-list" } }, [
+              _c("i", {
                 staticClass:
-                  "font-hkregular text-secondary md:text-lg mr-2 -mt-2"
-              },
-              [_vm._v("Sort by:\n                ")]
-            ),
+                  "bx bx-menu text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
+              })
+            ]),
             _vm._v(" "),
-            _c("select", { staticClass: "w-2/3 form-select" }, [
-              _c("option", { attrs: { value: "0" } }, [_vm._v("Best Match")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "1" } }, [
-                _vm._v("Price: Low - High")
-              ]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "2" } }, [
-                _vm._v("Price: High - Low")
-              ])
+            _c("div", { staticClass: "w-px h-4 mx-2 bg-grey-darker" }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/collection-grid" } }, [
+              _c("i", {
+                staticClass:
+                  "bx bxs-grid text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
+              })
             ])
           ]
         )
