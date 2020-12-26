@@ -108,6 +108,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   methods: {// AddToCart(Item){   
@@ -403,7 +467,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-2 " }, [
+  return _c("div", { staticClass: "p-2" }, [
     _c(
       "div",
       {
@@ -445,7 +509,7 @@ var render = function() {
               [
                 _c("img", {
                   staticClass:
-                    "w-auto h-full bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg",
+                    "w-auto h-56 bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg",
                   attrs: { src: _vm.ProductImage }
                 })
               ]
@@ -610,15 +674,11 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          {
-            staticClass:
-              "flex flex-wrap justify-between pb-5 md:pb-5 sm:-px-3 md:-mx-5 -mx-6 "
-          },
+          { staticClass: "flex flex-wrap justify-between pb-5 -mx-3" },
           _vm._l(_vm.Products, function(Product, index) {
             return _c("shop-product", {
               key: index,
-              staticClass:
-                "w-1/2 md:w-1/5 lg:w-1/5 relative mt-2 mb-5  z-30  lg:last:hidden xl:last:block",
+              staticClass: "w-1/2 md:w-1/5 relative mt-2 mb-5 z-30",
               attrs: { Product: Product }
             })
           }),

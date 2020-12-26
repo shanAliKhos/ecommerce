@@ -1,7 +1,7 @@
 <template> 
 
-<div class="min-h-screen flex flex-col items-center justify-center bg-gray-100  z-20">
-  <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
+<div class="flex flex-col items-center justify-center px-5  z-20">
+  <div class="flex flex-col bg-white shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
     <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Verify Email</div>
  
     <div class="relative mt-10 h-px bg-gray-300 mb-15">
