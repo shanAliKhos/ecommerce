@@ -1,1 +1,646 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{103:function(t,e,s){"use strict";s.r(e);var r=s(26),o=s(27),a=s(36),n=s(19),i=s(20),l=s(22),c={components:{JetActionSection:r.a,JetDangerButton:a.a,JetDialogModal:o.a,JetInput:n.a,JetInputError:i.a,JetSecondaryButton:l.a},data:function(){return{confirmingUserDeletion:!1,deleting:!1,form:this.$inertia.form({_method:"DELETE",password:""},{bag:"deleteUser"})}},methods:{confirmUserDeletion:function(){var t=this;this.form.password="",this.confirmingUserDeletion=!0,setTimeout((function(){t.$refs.password.focus()}),250)},deleteUser:function(){var t=this;this.form.post(route("current-user.destroy"),{preserveScroll:!0}).then((function(e){t.form.hasErrors()||(t.confirmingUserDeletion=!1)}))}}},u=s(0),d=Object(u.a)(c,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("jet-action-section",{scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n        Delete Account\n    ")]},proxy:!0},{key:"description",fn:function(){return[t._v("\n        Permanently delete your account.\n    ")]},proxy:!0},{key:"content",fn:function(){return[s("div",{staticClass:"max-w-xl text-sm text-gray-600"},[t._v("\n            Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.\n        ")]),t._v(" "),s("div",{staticClass:"mt-5"},[s("jet-danger-button",{nativeOn:{click:function(e){return t.confirmUserDeletion(e)}}},[t._v("\n                Delete Account\n            ")])],1),t._v(" "),s("jet-dialog-modal",{attrs:{show:t.confirmingUserDeletion},on:{close:function(e){t.confirmingUserDeletion=!1}},scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n                Delete Account\n            ")]},proxy:!0},{key:"content",fn:function(){return[t._v("\n                Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.\n\n                "),s("div",{staticClass:"mt-4"},[s("jet-input",{ref:"password",staticClass:"mt-1 block w-3/4",attrs:{type:"password",placeholder:"Password"},nativeOn:{keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"enter",13,e.key,"Enter")?null:t.deleteUser(e)}},model:{value:t.form.password,callback:function(e){t.$set(t.form,"password",e)},expression:"form.password"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("password")}})],1)]},proxy:!0},{key:"footer",fn:function(){return[s("jet-secondary-button",{nativeOn:{click:function(e){t.confirmingUserDeletion=!1}}},[t._v("\n                    Nevermind\n                ")]),t._v(" "),s("jet-danger-button",{staticClass:"ml-2",class:{"opacity-25":t.form.processing},attrs:{disabled:t.form.processing},nativeOn:{click:function(e){return t.deleteUser(e)}}},[t._v("\n                    Delete Account\n                ")])]},proxy:!0}])})]},proxy:!0}])})}),[],!1,null,null,null);e.default=d.exports},104:function(t,e,s){"use strict";s.r(e);var r=s(25),o=s(26),a=s(21),n=s(27),i=s(19),l=s(20),c=s(22),u={props:["sessions"],components:{JetActionMessage:r.a,JetActionSection:o.a,JetButton:a.a,JetDialogModal:n.a,JetInput:i.a,JetInputError:l.a,JetSecondaryButton:c.a},data:function(){return{confirmingLogout:!1,form:this.$inertia.form({_method:"DELETE",password:""},{bag:"logoutOtherBrowserSessions"})}},methods:{confirmLogout:function(){var t=this;this.form.password="",this.confirmingLogout=!0,setTimeout((function(){t.$refs.password.focus()}),250)},logoutOtherBrowserSessions:function(){var t=this;this.form.post(route("other-browser-sessions.destroy"),{preserveScroll:!0}).then((function(e){t.form.hasErrors()||(t.confirmingLogout=!1)}))}}},d=s(0),p=Object(d.a)(u,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("jet-action-section",{scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n        Browser Sessions\n    ")]},proxy:!0},{key:"description",fn:function(){return[t._v("\n        Manage and logout your active sessions on other browsers and devices.\n    ")]},proxy:!0},{key:"content",fn:function(){return[s("div",{staticClass:"max-w-xl text-sm text-gray-600"},[t._v("\n            If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.\n        ")]),t._v(" "),t.sessions.length>0?s("div",{staticClass:"mt-5 space-y-6"},t._l(t.sessions,(function(e,r){return s("div",{key:r,staticClass:"flex items-center"},[s("div",[e.agent.is_desktop?s("svg",{staticClass:"w-8 h-8 text-gray-500",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"}})]):s("svg",{staticClass:"w-8 h-8 text-gray-500",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24","stroke-width":"2",stroke:"currentColor",fill:"none","stroke-linecap":"round","stroke-linejoin":"round"}},[s("path",{attrs:{d:"M0 0h24v24H0z",stroke:"none"}}),s("rect",{attrs:{x:"7",y:"4",width:"10",height:"16",rx:"1"}}),s("path",{attrs:{d:"M11 5h2M12 17v.01"}})])]),t._v(" "),s("div",{staticClass:"ml-3"},[s("div",{staticClass:"text-sm text-gray-600"},[t._v("\n                        "+t._s(e.agent.platform)+" - "+t._s(e.agent.browser)+"\n                    ")]),t._v(" "),s("div",[s("div",{staticClass:"text-xs text-gray-500"},[t._v("\n                            "+t._s(e.ip_address)+",\n\n                            "),e.is_current_device?s("span",{staticClass:"text-green-500 font-semibold"},[t._v("This device")]):s("span",[t._v("Last active "+t._s(e.last_active))])])])])])})),0):t._e(),t._v(" "),s("div",{staticClass:"flex items-center mt-5"},[s("jet-button",{nativeOn:{click:function(e){return t.confirmLogout(e)}}},[t._v("\n                Logout Other Browser Sessions\n            ")]),t._v(" "),s("jet-action-message",{staticClass:"ml-3",attrs:{on:t.form.recentlySuccessful}},[t._v("\n                Done.\n            ")])],1),t._v(" "),s("jet-dialog-modal",{attrs:{show:t.confirmingLogout},on:{close:function(e){t.confirmingLogout=!1}},scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n                Logout Other Browser Sessions\n            ")]},proxy:!0},{key:"content",fn:function(){return[t._v("\n                Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices.\n\n                "),s("div",{staticClass:"mt-4"},[s("jet-input",{ref:"password",staticClass:"mt-1 block w-3/4",attrs:{type:"password",placeholder:"Password"},nativeOn:{keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"enter",13,e.key,"Enter")?null:t.logoutOtherBrowserSessions(e)}},model:{value:t.form.password,callback:function(e){t.$set(t.form,"password",e)},expression:"form.password"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("password")}})],1)]},proxy:!0},{key:"footer",fn:function(){return[s("jet-secondary-button",{nativeOn:{click:function(e){t.confirmingLogout=!1}}},[t._v("\n                    Nevermind\n                ")]),t._v(" "),s("jet-button",{staticClass:"ml-2",class:{"opacity-25":t.form.processing},attrs:{disabled:t.form.processing},nativeOn:{click:function(e){return t.logoutOtherBrowserSessions(e)}}},[t._v("\n                    Logout Other Browser Sessions\n                ")])]},proxy:!0}])})]},proxy:!0}])})}),[],!1,null,null,null);e.default=p.exports},105:function(t,e,s){"use strict";s.r(e);var r=s(25),o=s(21),a=s(33),n=s(19),i=s(20),l=s(34),c={components:{JetActionMessage:r.a,JetButton:o.a,JetFormSection:a.a,JetInput:n.a,JetInputError:i.a,JetLabel:l.a},data:function(){return{form:this.$inertia.form({current_password:"",password:"",password_confirmation:""},{bag:"updatePassword"})}},methods:{updatePassword:function(){var t=this;this.form.put(route("user-password.update"),{preserveScroll:!0}).then((function(){t.$refs.current_password.focus()}))}}},u=s(0),d=Object(u.a)(c,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("jet-form-section",{on:{submitted:t.updatePassword},scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n        Update Password\n    ")]},proxy:!0},{key:"description",fn:function(){return[t._v("\n        Ensure your account is using a long, random password to stay secure.\n    ")]},proxy:!0},{key:"form",fn:function(){return[s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("jet-label",{attrs:{for:"current_password",value:"Current Password"}}),t._v(" "),s("jet-input",{ref:"current_password",staticClass:"mt-1 block w-full",attrs:{id:"current_password",type:"password",autocomplete:"current-password"},model:{value:t.form.current_password,callback:function(e){t.$set(t.form,"current_password",e)},expression:"form.current_password"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("current_password")}})],1),t._v(" "),s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("jet-label",{attrs:{for:"password",value:"New Password"}}),t._v(" "),s("jet-input",{staticClass:"mt-1 block w-full",attrs:{id:"password",type:"password",autocomplete:"new-password"},model:{value:t.form.password,callback:function(e){t.$set(t.form,"password",e)},expression:"form.password"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("password")}})],1),t._v(" "),s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("jet-label",{attrs:{for:"password_confirmation",value:"Confirm Password"}}),t._v(" "),s("jet-input",{staticClass:"mt-1 block w-full",attrs:{id:"password_confirmation",type:"password",autocomplete:"new-password"},model:{value:t.form.password_confirmation,callback:function(e){t.$set(t.form,"password_confirmation",e)},expression:"form.password_confirmation"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("password_confirmation")}})],1)]},proxy:!0},{key:"actions",fn:function(){return[s("jet-action-message",{staticClass:"mr-3",attrs:{on:t.form.recentlySuccessful}},[t._v("\n            Saved.\n        ")]),t._v(" "),s("jet-button",{class:{"opacity-25":t.form.processing},attrs:{disabled:t.form.processing}},[t._v("\n            Save\n        ")])]},proxy:!0}])})}),[],!1,null,null,null);e.default=d.exports},106:function(t,e,s){"use strict";s.r(e);var r=s(21),o=s(33),a=s(19),n=s(20),i=s(34),l=s(25),c=s(22),u={components:{JetActionMessage:l.a,JetButton:r.a,JetFormSection:o.a,JetInput:a.a,JetInputError:n.a,JetLabel:i.a,JetSecondaryButton:c.a},props:["user"],data:function(){return{form:this.$inertia.form({_method:"PUT",name:this.user.name,email:this.user.email,photo:null},{bag:"updateProfileInformation",resetOnSuccess:!1}),photoPreview:null}},methods:{updateProfileInformation:function(){this.$refs.photo&&(this.form.photo=this.$refs.photo.files[0]),this.form.post(route("user-profile-information.update"),{preserveScroll:!0})},selectNewPhoto:function(){this.$refs.photo.click()},updatePhotoPreview:function(){var t=this,e=new FileReader;e.onload=function(e){t.photoPreview=e.target.result},e.readAsDataURL(this.$refs.photo.files[0])},deletePhoto:function(){var t=this;this.$inertia.delete(route("current-user-photo.destroy"),{preserveScroll:!0}).then((function(){t.photoPreview=null}))}}},d=s(0),p=Object(d.a)(u,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("jet-form-section",{on:{submitted:t.updateProfileInformation},scopedSlots:t._u([{key:"title",fn:function(){return[t._v("\n        Profile Information\n    ")]},proxy:!0},{key:"description",fn:function(){return[t._v("\n        Update your account's profile information and email address.\n    ")]},proxy:!0},{key:"form",fn:function(){return[t.$page.jetstream.managesProfilePhotos?s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("input",{ref:"photo",staticClass:"hidden",attrs:{type:"file"},on:{change:t.updatePhotoPreview}}),t._v(" "),s("jet-label",{attrs:{for:"photo",value:"Photo"}}),t._v(" "),s("div",{directives:[{name:"show",rawName:"v-show",value:!t.photoPreview,expression:"! photoPreview"}],staticClass:"mt-2"},[s("img",{staticClass:"rounded-full h-20 w-20 object-cover",attrs:{src:t.user.profile_photo_url,alt:"Current Profile Photo"}})]),t._v(" "),s("div",{directives:[{name:"show",rawName:"v-show",value:t.photoPreview,expression:"photoPreview"}],staticClass:"mt-2"},[s("span",{staticClass:"block rounded-full w-20 h-20",style:"background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('"+t.photoPreview+"');"})]),t._v(" "),s("jet-secondary-button",{staticClass:"mt-2 mr-2",attrs:{type:"button"},nativeOn:{click:function(e){return e.preventDefault(),t.selectNewPhoto(e)}}},[t._v("\n                Select A New Photo\n            ")]),t._v(" "),t.user.profile_photo_path?s("jet-secondary-button",{staticClass:"mt-2",attrs:{type:"button"},nativeOn:{click:function(e){return e.preventDefault(),t.deletePhoto(e)}}},[t._v("\n                Remove Photo\n            ")]):t._e(),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("photo")}})],1):t._e(),t._v(" "),s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("jet-label",{attrs:{for:"name",value:"Name"}}),t._v(" "),s("jet-input",{staticClass:"mt-1 block w-full",attrs:{id:"name",type:"text",autocomplete:"name"},model:{value:t.form.name,callback:function(e){t.$set(t.form,"name",e)},expression:"form.name"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("name")}})],1),t._v(" "),s("div",{staticClass:"col-span-6 sm:col-span-4"},[s("jet-label",{attrs:{for:"email",value:"Email"}}),t._v(" "),s("jet-input",{staticClass:"mt-1 block w-full",attrs:{id:"email",type:"email"},model:{value:t.form.email,callback:function(e){t.$set(t.form,"email",e)},expression:"form.email"}}),t._v(" "),s("jet-input-error",{staticClass:"mt-2",attrs:{message:t.form.error("email")}})],1)]},proxy:!0},{key:"actions",fn:function(){return[s("jet-action-message",{staticClass:"mr-3",attrs:{on:t.form.recentlySuccessful}},[t._v("\n            Saved.\n        ")]),t._v(" "),s("jet-button",{class:{"opacity-25":t.form.processing},attrs:{disabled:t.form.processing}},[t._v("\n            Save\n        ")])]},proxy:!0}])})}),[],!1,null,null,null);e.default=p.exports},122:function(t,e,s){var r=s(347);"string"==typeof r&&(r=[[t.i,r,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};s(9)(r,o);r.locals&&(t.exports=r.locals)},23:function(t,e,s){"use strict";s.r(e);var r={components:{DashboardNavigation:s(48).default}},o=s(0),a=Object(o.a)(r,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"container border-t border-grey-dark"},[e("div",{staticClass:"pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24 flex flex-col lg:flex-row justify-between"},[e("dashboard-navigation"),this._v(" "),this._t("default")],2)])}),[],!1,null,null,null);e.default=a.exports},25:function(t,e,s){"use strict";var r={props:["on"]},o=s(0),a=Object(o.a)(r,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",[e("transition",{attrs:{"leave-active-class":"transition ease-in duration-1000","leave-class":"opacity-100","leave-to-class":"opacity-0"}},[e("div",{directives:[{name:"show",rawName:"v-show",value:this.on,expression:"on"}],staticClass:"text-sm text-gray-600"},[this._t("default")],2)])],1)}),[],!1,null,null,null);e.a=a.exports},31:function(t,e,s){"use strict";s.r(e);var r={computed:{Alert:function(){this.$page.flash.success&&this.$swal({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3,timerProgressBar:!0,icon:"success",title:this.$page.flash.success}),this.$page.flash.error&&this.$swal({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3,timerProgressBar:!0,icon:"error",title:this.$page.flash.error})}}},o=s(0),a=Object(o.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div",[this._v("\n    "+this._s(this.Alert)+"\n")])}),[],!1,null,null,null);e.default=a.exports},321:function(t,e,s){"use strict";s.r(e);var r=s(4),o=s(23),a=s(103),n=s(41),i=s(104),l=s(111),c=s(105),u=s(106),d={props:["sessions"],layout:r.default,components:{AcountsLayout:o.default,DeleteUserForm:a.default,JetSectionBorder:n.a,LogoutOtherBrowserSessionsForm:i.default,TwoFactorAuthenticationForm:l.default,UpdatePasswordForm:c.default,UpdateProfileInformationForm:u.default},mounted:function(){this.$root.$emit("sidebar-close")}},p=s(0),f=Object(p.a)(d,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("acounts-layout",[s("div",{staticClass:"lg:w-3/4 mt-12 lg:mt-0"},[s("update-profile-information-form",{attrs:{user:t.$page.user}}),t._v(" "),s("jet-section-border"),t._v(" "),s("update-password-form",{staticClass:"mt-10 sm:mt-0"}),t._v(" "),t.$page.jetstream.canManageTwoFactorAuthentication?s("div",[s("jet-section-border"),t._v(" "),s("two-factor-authentication-form",{staticClass:"mt-10 sm:mt-0"})],1):t._e(),t._v(" "),s("jet-section-border"),t._v(" "),s("logout-other-browser-sessions-form",{staticClass:"mt-10 sm:mt-0",attrs:{sessions:t.sessions}}),t._v(" "),s("jet-section-border"),t._v(" "),s("delete-user-form",{staticClass:"mt-10 sm:mt-0"})],1)])}),[],!1,null,null,null);e.default=f.exports},33:function(t,e,s){"use strict";var r={components:{JetSectionTitle:s(47).a},computed:{hasActions:function(){return!!this.$slots.actions}}},o=s(0),a=Object(o.a)(r,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"md:grid md:grid-cols-3 md:gap-6"},[s("jet-section-title",{scopedSlots:t._u([{key:"title",fn:function(){return[t._t("title")]},proxy:!0},{key:"description",fn:function(){return[t._t("description")]},proxy:!0}],null,!0)}),t._v(" "),s("div",{staticClass:"mt-5 md:mt-0 md:col-span-2"},[s("form",{on:{submit:function(e){return e.preventDefault(),t.$emit("submitted")}}},[s("div",{staticClass:"shadow overflow-hidden sm:rounded-md"},[s("div",{staticClass:"px-4 py-5 bg-white sm:p-6"},[s("div",{staticClass:"grid grid-cols-6 gap-6"},[t._t("form")],2)]),t._v(" "),t.hasActions?s("div",{staticClass:"flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"},[t._t("actions")],2):t._e()])])])],1)}),[],!1,null,null,null);e.a=a.exports},34:function(t,e,s){"use strict";var r={props:["value"]},o=s(0),a=Object(o.a)(r,(function(){var t=this.$createElement,e=this._self._c||t;return e("label",{staticClass:"block font-medium text-sm text-gray-700"},[this.value?e("span",[this._v(this._s(this.value))]):e("span",[this._t("default")],2)])}),[],!1,null,null,null);e.a=a.exports},346:function(t,e,s){"use strict";s(122)},347:function(t,e,s){(t.exports=s(8)(!1)).push([t.i,".slide-fade-enter-active[data-v-016d11a2]{transition:all .5s ease-in-out}.slide-fade-leave-active[data-v-016d11a2]{transition:all .3s ease-in-out}.slide-fade-enter[data-v-016d11a2],.slide-fade-leave-to[data-v-016d11a2]{transform:translateY(100px);opacity:0}",""])},4:function(t,e,s){"use strict";s.r(e);var r=s(44),o=s(43),a=s(31),n={components:{AppHeader:r.default,AppFooter:o.default,FlashMessage:a.default}},i=(s(346),s(0)),l=Object(i.a)(n,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"font-serif"},[e("app-header"),this._v(" "),e("main",{staticClass:"lg:mt-2 mt-2"},[e("transition",{attrs:{name:"slide-fade"}},[this._t("default")],2)],1),this._v(" "),e("app-footer"),this._v(" "),e("portal-target",{attrs:{name:"modal",multiple:""}}),this._v(" "),this.$page.flash?e("flash-message"):this._e()],1)}),[],!1,null,"016d11a2",null);e.default=l.exports},41:function(t,e,s){"use strict";var r=s(0),o=Object(r.a)({},(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"hidden sm:block"},[e("div",{staticClass:"py-8"},[e("div",{staticClass:"border-t border-gray-200"})])])}],!1,null,null,null);e.a=o.exports},43:function(t,e,s){"use strict";s.r(e);var r={components:{ApplicationLogo:s(32).default},computed:{IsVisibleFooter:function(){switch(this.$page.currentRouteName){case"login":case"register":case"password.request":case"password.reset":case"verification.notice":case"cart.index":case"cart.CustomerInfomation":case"cart.ShippingMethod":case"cart.PaymentMethod":case"cart.success":return!1;default:return!0}}}},o=s(0),a=Object(o.a)(r,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return t.IsVisibleFooter?s("div",{staticClass:"xxstheme-footer bg-gray-200 "},[t._m(0),t._v(" "),s("div",{staticClass:"py-16 sm:py-20 md:py-24 text-gray-500"},[s("div",{staticClass:"flex flex-col lg:flex-row items-center justify-around lg:px-20"},[s("div",{staticClass:"lg:w-1/3 py-5 order-2 lg:order-1"},[s("p",{staticClass:"font-semibold text-2xl pb-8 flex items-center justify-center lg:justify-start"},[t._v("Contact")]),t._v(" "),s("ul",[s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("a",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:"mailto:test.email0123@elyssi.com"}},[t._v(t._s(t.$page.SiteOptions.Email))])]),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("a",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:"tel:0123234222"}},[t._v(t._s(t.$page.SiteOptions.Phone))])]),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("inertia-link",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:t.route("welcome")}},[t._v(" \r\n                            "+t._s(t.$page.SiteOptions.Title)+"\r\n                        ")])],1)])]),t._v(" "),s("div",{staticClass:"lg:w-1/3 py-5 order-1 lg:order-2"},[s("inertia-link",{staticClass:"font-semibold  text-4xl uppercase tracking-wider flex items-center justify-center",attrs:{href:t.route("welcome")}},[t._v("\r\n                    "+t._s(t.$page.SiteOptions.Title)+"\r\n                ")]),t._v(" "),s("div",{staticClass:"flex items-center justify-center pt-5"},[t.$page.SiteOptions.Social.Facebook?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Facebook,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(1)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Twitter?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Twitter,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(2)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Instagram?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Instagram,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(3)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Pinterest?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Pinterest,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(4)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.LinkedIn?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.LinkedIn,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(5)]):t._e()])],1),t._v(" "),s("div",{staticClass:"w-1/3 py-5 order-3 lg:order-3"},[s("p",{staticClass:"font-semibold text-2xl pb-8 flex items-center justify-center lg:justify-end"},[t._v("Link")]),t._v(" "),s("ul",[s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("welcome")}},[t._v("HOME")])],1),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("shop.index")}},[t._v("SHOP")])],1),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("blog.index")}},[t._v("BLOG")])],1)])])])]),t._v(" "),s("div",{staticClass:"hidden lg:block "},[s("div",{staticClass:"flex item-centen justify-center border-gray-50 border rounded"},[s("div",{staticClass:"font-semibold text-gray-400 text-base rounded bg-white py-1 px-5 mb-2"},[s("p",{staticClass:"flex transition duration-500 ease-in-out transform  hover:translate-x-2 hover:text-orange-500 "},[t._v(t._s(t.$page.SiteOptions.FooterCopyRightText))])])])])]):t._e()}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-gray-50 lg:rounded-b-full rounded-b-xl"},[e("div",{staticClass:"py-10 text-center"},[e("p",{staticClass:"font-semibold text-primary text-3xl sm:text-4xl tracking-wide"},[this._v(" Let's keep in touch")]),this._v(" "),e("p",{staticClass:"font-regular  text-lg sm:text-xl pt-3 px-6"},[this._v(" Join our list and save 15% off your first order.")]),this._v(" "),e("form",{staticClass:"pt-10 sm:pt-12"},[e("div",{staticClass:"w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"},[e("input",{staticClass:"w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",attrs:{type:"email",name:"cta_email",id:"cta_email",placeholder:"ENTER YOUR EMAIL"}})]),this._v(" "),e("div",{staticClass:"w-4/6 sm:w-3/4 lg:w-2/5  mx-auto my-2 flex flex-col sm:flex-row justify-center items-center"},[e("button",{staticClass:"flex flex-inline justify-center items-center transition duration-700 ease-in bg-gradient-to-r from-yellow-500 via-yellow-400 to-orange-500 shadow-lg hover:shadow-2xl shadow-lg hover:bg-gradient-to-l from-yellow-500 via-yellow-400 to-orange-500 focus:outline-none rounded px-2 py-3 text-white font-semibold shadow   uppercase w-full",attrs:{type:"button","aria-label":"Subscribe button"}},[this._v("SUBSCRIBE")])])])])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-facebook text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-twitter text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-instagram text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-pinterest text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-linkedin text-secondary transition-colors group-hover:text-white"})])}],!1,null,null,null);e.default=a.exports},48:function(t,e,s){"use strict";s.r(e);var r=s(0),o=Object(r.a)({},(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"lg:w-1/4"},[s("p",{staticClass:"font-butlerregular text-secondary text-2xl sm:text-3xl lg:text-4xl pb-6"},[t._v("My Account")]),t._v(" "),s("div",{staticClass:"pl-3 flex flex-col"},[t.$page.user.is_admin?s("inertia-link",{staticClass:"transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",class:{"text-primary border-primary":"admin.dashboard"==t.$page.currentRouteName,"font-hkregular text-grey-darkest":"admin.dashboard"!=t.$page.currentRouteName},attrs:{href:t.route("admin.dashboard"),as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[s("path",{attrs:{"fill-rule":"evenodd",d:"M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z","clip-rule":"evenodd"}})]),t._v("                 \n        Adminstration\n        ")]):t._e(),t._v(" "),t._m(0),t._v(" "),t.$page&&!t.$page.user.is_admin?s("inertia-link",{staticClass:"transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",class:{"text-primary border-primary":"dashboard.index"==t.$page.currentRouteName,"font-hkregular text-grey-darkest":"dashboard.index"!=t.$page.currentRouteName},attrs:{href:t.route("dashboard.index"),"preserve-scroll":"","preserve-state":"",as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"}})]),t._v("\n        Dashboard\n        ")]):t._e(),t._v(" "),s("inertia-link",{staticClass:"transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",class:{"text-primary border-primary":"dashboard.order"==t.$page.currentRouteName,"font-hkregular text-grey-darkest":"dashboard.order"!=t.$page.currentRouteName},attrs:{href:t.route("dashboard.order"),"preserve-scroll":"","preserve-state":"",as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"}})]),t._v("            \n\n        Orders\n        ")]),t._v(" "),s("inertia-link",{staticClass:"transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",class:{"text-primary border-primary":"dashboard.wishlist"==t.$page.currentRouteName,"font-hkregular text-grey-darkest":"dashboard.wishlist"!=t.$page.currentRouteName},attrs:{href:t.route("dashboard.wishlist"),"preserve-scroll":"","preserve-state":"",as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"}})]),t._v("                \n        Wishlist\n        ")]),t._v(" "),s("inertia-link",{staticClass:"transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",class:{"text-primary border-primary":"profile.show"==t.$page.currentRouteName,"font-hkregular text-grey-darkest":"profile.show"!=t.$page.currentRouteName},attrs:{href:t.route("profile.show"),"preserve-scroll":"","preserve-state":"",as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M16 7a4 4 0 11-8 0 4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"}})]),t._v("                \n        Account Details\n        ")]),t._v(" "),s("inertia-link",{staticClass:"font-hkregular text-grey-darkest transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",attrs:{href:t.route("logout"),method:"post",as:"button",type:"button"}},[s("svg",{staticClass:"w-8 h-8 mr-2",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[s("path",{attrs:{"fill-rule":"evenodd",d:"M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z","clip-rule":"evenodd"}})]),t._v("                 \n        Logout\n        ")])],1)])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"divide-y divide-blue-300"},[e("div",{staticClass:"text-center py-2"})])}],!1,null,null,null);e.default=o.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[16],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-stripe-elements-plus */ "./node_modules/vue-stripe-elements-plus/dist/index.js");
+/* harmony import */ var vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _stripe_StripeCardElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stripe/StripeCardElement */ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    StripeCardElement: _stripe_StripeCardElement__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      name_on_card: "",
+      sending: false
+    };
+  },
+  methods: {
+    pay: function pay() {
+      var _this = this;
+
+      var self = this; // createToken returns a Promise which resolves in a result object with
+      // either a token or an error key.
+      // See https://stripe.com/docs/api#tokens for the token object.
+      // See https://stripe.com/docs/api#errors for the error object.
+      // More general https://stripe.com/docs/stripe.js#stripe-create-token.
+
+      var options = {
+        NameOnCard: this.name_on_card
+      };
+      Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])(options).then(function (result) {
+        if (result.error) {
+          _this.$swal({
+            showConfirmButton: true,
+            icon: 'error',
+            title: 'Opps something went wrong ! contact support '
+          });
+
+          return false;
+        }
+
+        if (result.token) {
+          var hiddenInput = document.createElement("input");
+          hiddenInput.setAttribute("type", "hidden");
+          hiddenInput.setAttribute("name", "stripeToken");
+          hiddenInput.setAttribute("value", result.token.id);
+
+          _this.$el.appendChild(hiddenInput);
+
+          var payment_Form = {
+            CustomerInformation: _this.$page.CustomerInformation,
+            ShipmentInformation: _this.$page.ShipmentInformation,
+            stripeToken: result.token.id,
+            NameOnCard: options.NameOnCard
+          };
+
+          _this.$inertia.post(_this.route('cart.checkout'), payment_Form, {
+            preserveState: true,
+            onStart: function onStart() {
+              return _this.sending = true;
+            },
+            onFinish: function onFinish() {
+              return _this.sending = false;
+            }
+          });
+        }
+      });
+    }
+  },
+  mounted: function mounted() {
+    window.addEventListener("load", function () {
+      var forms = document.getElementsByClassName("needs-validation");
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener("submit", function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        }, false);
+      });
+    }, false);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-stripe-elements-plus */ "./node_modules/vue-stripe-elements-plus/dist/index.js");
+/* harmony import */ var vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      complete: false,
+      errorMessage: "",
+      stripeOptions: {
+        // see https://stripe.com/docs/stripe.js#element-options for details
+        hidePostalCode: true
+      },
+      style: {
+        base: {
+          color: "#32325d",
+          fontFamily: '"Nunito", sans-serif',
+          fontSmoothing: "antialiased",
+          fontSize: "16px",
+          "::placeholder": {
+            color: "#aab7c4"
+          }
+        },
+        invalid: {
+          color: "#fa755a",
+          iconColor: "#fa755a"
+        }
+      }
+    };
+  },
+  components: {
+    Card: vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["Card"]
+  },
+  methods: {
+    change: function change(event) {
+      this.errorMessage = event.error ? event.error.message : "";
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      staticClass: "bg-white rounded lg:px-20 pt-6 pb-8 needs-validation ",
+      attrs: { id: "payment-form", novalidate: "" },
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.pay()
+        }
+      }
+    },
+    [
+      _c("div", { staticClass: "mb-4" }, [
+        _c(
+          "label",
+          {
+            staticClass: "block text-gray-700 text-sm font-bold mb-2",
+            attrs: { for: "username" }
+          },
+          [_vm._v("Name on Card")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.name_on_card,
+              expression: "name_on_card"
+            }
+          ],
+          staticClass: "form-input",
+          attrs: {
+            id: "nameoncard",
+            type: "text",
+            placeholder: "Name On Card"
+          },
+          domProps: { value: _vm.name_on_card },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.name_on_card = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mb-6" },
+        [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-700 text-sm font-bold mb-2",
+              attrs: { for: "username" }
+            },
+            [_vm._v("Card Number")]
+          ),
+          _vm._v(" "),
+          _c("stripe-card-element")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "flex items-center justify-end  hidden lg:block" },
+        [
+          _c(
+            "button",
+            {
+              staticClass:
+                "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
+              attrs: { type: "submit" }
+            },
+            [
+              _vm.sending
+                ? _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20",
+                        fill: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                          "clip-rule": "evenodd"
+                        }
+                      })
+                    ]
+                  )
+                : _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "transition duration-700 ease-in-out  h-5 w-5 mr-2",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20",
+                        fill: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
+                          "clip-rule": "evenodd"
+                        }
+                      })
+                    ]
+                  ),
+              _vm._v("      \r\n            PAY NOW\r\n        ")
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "grid grid-cols-4 gap-2 flex justify-around" },
+            [
+              _c("div", {
+                staticClass: "w-1/2 relative px-2 py-2 flex item-center"
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "w-1/2 relative px-2 py-2 flex item-center justify-end"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                      class: { "opacity-50 pointer-events-none": _vm.sending },
+                      attrs: { disabled: _vm.sending, type: "submit" }
+                    },
+                    [
+                      _vm.sending
+                        ? _c(
+                            "svg",
+                            {
+                              staticClass:
+                                "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                }
+                              })
+                            ]
+                          )
+                        : _c(
+                            "svg",
+                            {
+                              staticClass:
+                                "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                }
+                              })
+                            ]
+                          ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "tracking-tighter" }, [
+                        _vm._v("Proceed")
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("card", {
+        staticClass: "stripe-card form-input ",
+        class: { complete: _vm.complete },
+        attrs: { stripe: _vm.$page.stripekey, options: _vm.stripeOptions },
+        on: {
+          change: function($event) {
+            return _vm.change($event)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("div", {
+        attrs: { id: "card-errors", role: "alert" },
+        domProps: { textContent: _vm._s(_vm.errorMessage) }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PaymentForm.vue?vue&type=template&id=ca023d34& */ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34&");
+/* harmony import */ var _PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/Cart/PaymentForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=template&id=ca023d34& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/PaymentForm.vue?vue&type=template&id=ca023d34&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_ca023d34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./StripeCardElement.vue?vue&type=template&id=3c332071& */ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071&");
+/* harmony import */ var _StripeCardElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StripeCardElement.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _StripeCardElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StripeCardElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./StripeCardElement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StripeCardElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071& ***!
+  \******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./StripeCardElement.vue?vue&type=template&id=3c332071& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/Cart/stripe/StripeCardElement.vue?vue&type=template&id=3c332071&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StripeCardElement_vue_vue_type_template_id_3c332071___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

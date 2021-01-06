@@ -250,8 +250,7 @@
                 </div> 
 
                 <SectionBorder/>
-                
-            
+                 
                 <div class="product-variations" v-if="form.is_variable && ProductSkus.length>0">   
                     <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
 

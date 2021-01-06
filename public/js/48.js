@@ -1,1 +1,3727 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[48,54,133,149],{0:function(t,e,s){"use strict";function a(t,e,s,a,r,i,o,l){var n,c="function"==typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=s,c._compiled=!0),a&&(c.functional=!0),i&&(c._scopeId="data-v-"+i),o?(n=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),r&&r.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(o)},c._ssrRegister=n):r&&(n=l?function(){r.call(this,(c.functional?this.parent:this).$root.$options.shadowRoot)}:r),n)if(c.functional){c._injectStyles=n;var d=c.render;c.render=function(t,e){return n.call(e),d(t,e)}}else{var u=c.beforeCreate;c.beforeCreate=u?[].concat(u,n):[n]}return{exports:t,options:c}}s.d(e,"a",(function(){return a}))},122:function(t,e,s){var a=s(347);"string"==typeof a&&(a=[[t.i,a,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};s(9)(a,r);a.locals&&(t.exports=a.locals)},301:function(t,e,s){"use strict";s.r(e);var a={layout:s(4).default,metaInfo:{title:"new-registration"},data:function(){return{sending:!1,form:{email:null,password:null,password_confirmation:null}}},methods:{submit:function(){var t=this,e=this.form;this.$inertia.post(route("register"),e,{preserveState:!0,preserveScroll:!0,onStart:function(){return t.sending=!0},onFinish:function(){return t.sending=!1}})}},mounted:function(){this.$root.$emit("sidebar-close")}},r=s(0),i=Object(r.a)(a,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"flex flex-col items-center justify-center px-5 py-5  z-20"},[s("div",{staticClass:"flex flex-col bg-white shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md"},[s("div",{staticClass:"font-medium self-center text-xl sm:text-2xl uppercase text-primary"},[t._v("New Registration")]),t._v(" "),t._m(0),t._v(" "),s("div",{staticClass:"mt-10"},[s("form",{on:{submit:function(e){return e.preventDefault(),t.submit(e)}}},[s("div",{staticClass:"flex flex-col mb-6"},[s("label",{staticClass:"mb-1 text-xs sm:text-sm tracking-wide text-gray-600",attrs:{for:"email"}},[t._v("Name:")]),t._v(" "),s("div",{staticClass:"relative"},[s("div",{staticClass:"inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"},[s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"}})])]),t._v(" "),s("input",{directives:[{name:"model",rawName:"v-model",value:t.form.name,expression:"form.name"}],staticClass:"text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",attrs:{id:"name",type:"text",name:"name",placeholder:"Name",autofocus:""},domProps:{value:t.form.name},on:{input:function(e){e.target.composing||t.$set(t.form,"name",e.target.value)}}}),t._v(" "),t.$page.errors.name?s("p",{staticClass:" text-red-500 text-xs italic"},[t._v(t._s(t.$page.errors.name))]):t._e()])]),t._v(" "),s("div",{staticClass:"flex flex-col mb-6"},[s("label",{staticClass:"mb-1 text-xs sm:text-sm tracking-wide text-gray-600",attrs:{for:"email"}},[t._v("E-Mail Address:")]),t._v(" "),s("div",{staticClass:"relative"},[s("div",{staticClass:"inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"},[s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"}})])]),t._v(" "),s("input",{directives:[{name:"model",rawName:"v-model",value:t.form.email,expression:"form.email"}],staticClass:"text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",attrs:{id:"email",type:"email",name:"email",placeholder:"E-Mail Address",autofocus:""},domProps:{value:t.form.email},on:{input:function(e){e.target.composing||t.$set(t.form,"email",e.target.value)}}}),t._v(" "),t.$page.errors.email?s("p",{staticClass:" text-red-500 text-xs italic"},[t._v(t._s(t.$page.errors.email))]):t._e()])]),t._v(" "),s("div",{staticClass:"flex flex-col mb-6"},[s("label",{staticClass:"mb-1 text-xs sm:text-sm tracking-wide text-gray-600",attrs:{for:"password"}},[t._v("Password:")]),t._v(" "),s("div",{staticClass:"relative"},[s("div",{staticClass:"inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"},[s("span",[s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"}})])])]),t._v(" "),s("input",{directives:[{name:"model",rawName:"v-model",value:t.form.password,expression:"form.password"}],staticClass:"text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",attrs:{id:"password",type:"password",name:"password",placeholder:"Password"},domProps:{value:t.form.password},on:{input:function(e){e.target.composing||t.$set(t.form,"password",e.target.value)}}}),t._v(" "),t.$page.errors.password?s("p",{staticClass:" text-red-500 text-xs italic"},[t._v(t._s(t.$page.errors.password))]):t._e()])]),t._v(" "),s("div",{staticClass:"flex flex-col mb-6"},[s("label",{staticClass:"mb-1 text-xs sm:text-sm tracking-wide text-gray-600",attrs:{for:"password"}},[t._v("Confirm Password:")]),t._v(" "),s("div",{staticClass:"relative"},[s("div",{staticClass:"inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"},[s("span",[s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"}})])])]),t._v(" "),s("input",{directives:[{name:"model",rawName:"v-model",value:t.form.password_confirmation,expression:"form.password_confirmation"}],staticClass:"text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400",attrs:{id:"password",type:"password",name:"password_confirmation",placeholder:"password_confirmation"},domProps:{value:t.form.password_confirmation},on:{input:function(e){e.target.composing||t.$set(t.form,"password_confirmation",e.target.value)}}}),t._v(" "),t.$page.errors.password_confirmation?s("p",{staticClass:" text-red-500 text-xs italic"},[t._v(t._s(t.$page.errors.password_confirmation))]):t._e()])]),t._v(" "),s("div",{staticClass:"flex w-full"},[s("button",{staticClass:"flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in",attrs:{type:"submit",disabled:t.sending}},[s("span",{staticClass:"mr-2 uppercase"},[t._v("Register")]),t._v(" "),s("span",{staticClass:"relative"},[t.sending?s("svg",{staticClass:"transition  ease-in-out  animate-spin h-5 w-5 ",attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"currentColor"}},[s("path",{attrs:{"fill-rule":"evenodd",d:"M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z","clip-rule":"evenodd"}})]):s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"}})])])])])])]),t._v(" "),s("div",{staticClass:"flex justify-center items-center mt-6"},[s("inertia-link",{staticClass:"inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center",attrs:{"preserve-scroll":"",href:t.route("login"),target:"_blank"}},[s("span",[s("svg",{staticClass:"h-6 w-6",attrs:{fill:"none","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",viewBox:"0 0 24 24",stroke:"currentColor"}},[s("path",{attrs:{d:"M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"}})])]),t._v(" "),s("span",{staticClass:"ml-2"},[t._v("Already registered?")])])],1)])])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"relative mt-10 h-px bg-gray-300 mb-15"},[e("div",{staticClass:"absolute left-0 top-0 flex justify-center w-full -mt-2"},[e("span",{staticClass:"bg-white px-4 text-xs text-gray-500 uppercase"},[this._v("Resgistration Form")])])])}],!1,null,null,null);e.default=i.exports},31:function(t,e,s){"use strict";s.r(e);var a={computed:{Alert:function(){this.$page.flash.success&&this.$swal({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3,timerProgressBar:!0,icon:"success",title:this.$page.flash.success}),this.$page.flash.error&&this.$swal({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3,timerProgressBar:!0,icon:"error",title:this.$page.flash.error})}}},r=s(0),i=Object(r.a)(a,(function(){var t=this.$createElement;return(this._self._c||t)("div",[this._v("\n    "+this._s(this.Alert)+"\n")])}),[],!1,null,null,null);e.default=i.exports},346:function(t,e,s){"use strict";s(122)},347:function(t,e,s){(t.exports=s(8)(!1)).push([t.i,".slide-fade-enter-active[data-v-016d11a2]{transition:all .5s ease-in-out}.slide-fade-leave-active[data-v-016d11a2]{transition:all .3s ease-in-out}.slide-fade-enter[data-v-016d11a2],.slide-fade-leave-to[data-v-016d11a2]{transform:translateY(100px);opacity:0}",""])},4:function(t,e,s){"use strict";s.r(e);var a=s(44),r=s(43),i=s(31),o={components:{AppHeader:a.default,AppFooter:r.default,FlashMessage:i.default}},l=(s(346),s(0)),n=Object(l.a)(o,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"font-serif"},[e("app-header"),this._v(" "),e("main",{staticClass:"lg:mt-2 mt-2"},[e("transition",{attrs:{name:"slide-fade"}},[this._t("default")],2)],1),this._v(" "),e("app-footer"),this._v(" "),e("portal-target",{attrs:{name:"modal",multiple:""}}),this._v(" "),this.$page.flash?e("flash-message"):this._e()],1)}),[],!1,null,"016d11a2",null);e.default=n.exports},43:function(t,e,s){"use strict";s.r(e);var a={components:{ApplicationLogo:s(32).default},computed:{IsVisibleFooter:function(){switch(this.$page.currentRouteName){case"login":case"register":case"password.request":case"password.reset":case"verification.notice":case"cart.index":case"cart.CustomerInfomation":case"cart.ShippingMethod":case"cart.PaymentMethod":case"cart.success":return!1;default:return!0}}}},r=s(0),i=Object(r.a)(a,(function(){var t=this,e=t.$createElement,s=t._self._c||e;return t.IsVisibleFooter?s("div",{staticClass:"xxstheme-footer bg-gray-200 "},[t._m(0),t._v(" "),s("div",{staticClass:"py-16 sm:py-20 md:py-24 text-gray-500"},[s("div",{staticClass:"flex flex-col lg:flex-row items-center justify-around lg:px-20"},[s("div",{staticClass:"lg:w-1/3 py-5 order-2 lg:order-1"},[s("p",{staticClass:"font-semibold text-2xl pb-8 flex items-center justify-center lg:justify-start"},[t._v("Contact")]),t._v(" "),s("ul",[s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("a",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:"mailto:test.email0123@elyssi.com"}},[t._v(t._s(t.$page.SiteOptions.Email))])]),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("a",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:"tel:0123234222"}},[t._v(t._s(t.$page.SiteOptions.Phone))])]),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-start"},[s("inertia-link",{staticClass:"font-semibold  transition-colors hover:text-primary text-base tracking-wide",attrs:{href:t.route("welcome")}},[t._v(" \r\n                            "+t._s(t.$page.SiteOptions.Title)+"\r\n                        ")])],1)])]),t._v(" "),s("div",{staticClass:"lg:w-1/3 py-5 order-1 lg:order-2"},[s("inertia-link",{staticClass:"font-semibold  text-4xl uppercase tracking-wider flex items-center justify-center",attrs:{href:t.route("welcome")}},[t._v("\r\n                    "+t._s(t.$page.SiteOptions.Title)+"\r\n                ")]),t._v(" "),s("div",{staticClass:"flex items-center justify-center pt-5"},[t.$page.SiteOptions.Social.Facebook?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Facebook,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(1)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Twitter?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Twitter,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(2)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Instagram?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Instagram,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(3)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.Pinterest?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.Pinterest,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(4)]):t._e(),t._v(" "),t.$page.SiteOptions.Social.LinkedIn?s("a",{staticClass:"group",attrs:{href:t.$page.SiteOptions.Social.LinkedIn,target:"_blank"}},[s("span",{staticClass:"sr-only"},[t._v("Social link")]),t._v(" "),t._m(5)]):t._e()])],1),t._v(" "),s("div",{staticClass:"w-1/3 py-5 order-3 lg:order-3"},[s("p",{staticClass:"font-semibold text-2xl pb-8 flex items-center justify-center lg:justify-end"},[t._v("Link")]),t._v(" "),s("ul",[s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("welcome")}},[t._v("HOME")])],1),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("shop.index")}},[t._v("SHOP")])],1),t._v(" "),s("li",{staticClass:"pb-2 block flex items-center justify-center lg:justify-end"},[s("inertia-link",{staticClass:"font-semibold  hover:text-primary text-base tracking-wide",attrs:{href:t.route("blog.index")}},[t._v("BLOG")])],1)])])])]),t._v(" "),s("div",{staticClass:"hidden lg:block "},[s("div",{staticClass:"flex item-centen justify-center border-gray-50 border rounded"},[s("div",{staticClass:"font-semibold text-gray-400 text-base rounded bg-white py-1 px-5 mb-2"},[s("p",{staticClass:"flex transition duration-500 ease-in-out transform  hover:translate-x-2 hover:text-orange-500 "},[t._v(t._s(t.$page.SiteOptions.FooterCopyRightText))])])])])]):t._e()}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-gray-50 lg:rounded-b-full rounded-b-xl"},[e("div",{staticClass:"py-10 text-center"},[e("p",{staticClass:"font-semibold text-primary text-3xl sm:text-4xl tracking-wide"},[this._v(" Let's keep in touch")]),this._v(" "),e("p",{staticClass:"font-regular  text-lg sm:text-xl pt-3 px-6"},[this._v(" Join our list and save 15% off your first order.")]),this._v(" "),e("form",{staticClass:"pt-10 sm:pt-12"},[e("div",{staticClass:"w-4/6 sm:w-3/4 lg:w-2/5 xl:w-2/5 mx-auto flex flex-col sm:flex-row justify-center items-center"},[e("input",{staticClass:"w-full px-5 py-3 text-gray-700 bg-gray-100 rounded appearance-none shadow focus:outline-none focus:shadow-outline focus:bg-white",attrs:{type:"email",name:"cta_email",id:"cta_email",placeholder:"ENTER YOUR EMAIL"}})]),this._v(" "),e("div",{staticClass:"w-4/6 sm:w-3/4 lg:w-2/5  mx-auto my-2 flex flex-col sm:flex-row justify-center items-center"},[e("button",{staticClass:"flex flex-inline justify-center items-center transition duration-700 ease-in bg-gradient-to-r from-yellow-500 via-yellow-400 to-orange-500 shadow-lg hover:shadow-2xl shadow-lg hover:bg-gradient-to-l from-yellow-500 via-yellow-400 to-orange-500 focus:outline-none rounded px-2 py-3 text-white font-semibold shadow   uppercase w-full",attrs:{type:"button","aria-label":"Subscribe button"}},[this._v("SUBSCRIBE")])])])])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-facebook text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-twitter text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-instagram text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-pinterest text-secondary transition-colors group-hover:text-white"})])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"},[e("i",{staticClass:"bx bxl-linkedin text-secondary transition-colors group-hover:text-white"})])}],!1,null,null,null);e.default=i.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[48],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-glide-js */ "./node_modules/vue-glide-js/dist/vue-glide.common.js");
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_glide_js__WEBPACK_IMPORTED_MODULE_0__);
+var _components;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _components)
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "w-full relative",
+      class: {
+        "bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 ": true
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-2/3 md:max-w-screen-sm lg:w-5/6 lg:max-w-full xl:w-5/6 xxl:max-w-screen-xxl mx-auto lg:ml-auto lg:mr-10 xl:mr-16 xxl:mx-auto relative z-10"
+        },
+        [
+          _c("div", { staticClass: "py-16" }, [
+            _c("div", { staticClass: "ml-0 flex justify-between" }, [
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4  " },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        [
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (14).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v(" 45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (16).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                                Floral Chick"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    45\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (18).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (20).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (25).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Floral Chick")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (14).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "pb-16" }, [
+            _c("div", { staticClass: "ml-auto flex justify-between" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4" },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        [
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (21).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v(" 45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (10).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                                Floral Chick"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    45\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (8).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (12).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (10).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Floral Chick")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (6).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "pb-16" }, [
+            _c("div", { staticClass: "ml-0 flex justify-between" }, [
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4  " },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        [
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (23).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v(" 45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (22).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                                Floral Chick"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    45\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (24).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (27).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-green font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("New")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Coffee Cream")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (29).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-red font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Hot")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v(" Floral Chick")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$50.0")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-glide-slide", [
+                            _c("div", { staticClass: "relative rounded" }, [
+                              _c("div", {
+                                staticClass:
+                                  "w-68 h-68 bg-center bg-no-repeat bg-cover",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/img/product/product (36).jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "text-v-blue font-bold text-sm uppercase tracking-wide absolute top-0 right-0 bg-white px-5 py-1 my-4 mx-4 rounded-full"
+                                },
+                                [_vm._v("Trend")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden rounded"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 group transition-opacity"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-cart"
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all ",
+                                      attrs: { href: "javascript:;" }
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass:
+                                          "bg-contain bg-center bg-no-repeat h-6 w-6 bg-icon-heart"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex justify-between items-center pt-6"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "font-regular text-base text-secondary"
+                                    },
+                                    [_vm._v("Cat eye")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex items-center" },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "bx bxs-star text-primary"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "font-regular text-sm text-secondary ml-2"
+                                        },
+                                        [_vm._v("45")]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "font-bold text-primary text-xl"
+                                  },
+                                  [_vm._v("$75.0")]
+                                )
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pl-6 xl:pl-8" }, [
+      _c("div", { staticClass: "text-right" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v(" New season, matching shoes ")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v(" Featured Collection ")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14",
+          staticStyle: {
+            "background-image": "url('/img/product/product (14).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group transition-opacity"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pr-6 xl:pr-8 " }, [
+      _c("div", { staticClass: "text-left" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v(" Stylish Backpacks, Only For You")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14 relative",
+          staticStyle: {
+            "background-image": "url('/img/product/product (21).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pl-6 xl:pl-8" }, [
+      _c("div", { staticClass: "text-right" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v("Summer? You need chick sunglasses")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14",
+          staticStyle: {
+            "background-image": "url('/img/product/product (22).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingMultiSlider.vue?vue&type=template&id=7530c476& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&");
+/* harmony import */ var _TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingMultiSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingMultiSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingMultiSlider.vue?vue&type=template&id=7530c476& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
