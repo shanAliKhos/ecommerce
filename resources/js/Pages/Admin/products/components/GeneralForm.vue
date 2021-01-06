@@ -2,7 +2,7 @@
 <div class="flex justify-center">
     <div class="w-full pl-0 lg:pl-2">
         <div class="leading-loose">
-            <form class="p-10 bg-white rounded shadow-xl"  @submit.prevent="store">
+            <form   @submit.prevent="store">
 
                 <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Create</p>     
 
