@@ -5,7 +5,7 @@
         :id="id"
         ref="input"     
         v-bind="$attrs"
-        class="transition duration-700 ease-in-out w-full px-4 py-2 text-blue-500 bg-gray-50 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600 " 
+        class="transition duration-700 ease-in-out w-full px-4 py-2 bg-gray-50 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600 " 
         :type="type" 
         :value="value" 
         @input="$emit('input', $event.target.value)"

@@ -376,7 +376,7 @@ var render = function() {
     "button",
     _vm._b(
       {
-        staticClass: "flex items-center uppercase",
+        staticClass: "flex items-center uppercase z-40",
         attrs: { disabled: _vm.loading }
       },
       "button",
