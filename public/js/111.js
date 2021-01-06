@@ -26,7 +26,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'text-red-500 border-red-600 shadow-2xl border-b-4 md:-translate-x-1 md:translate-y-1 animate-wiggle mb-3 mt-3' : '  hover:text-blue-400 hover:border-blue-300 border mb-2';
+      return this.active ? 'text-red-500 border-red-600 shadow-2xl border-b-4 md:-translate-x-1 md:translate-y-1 md:animate-wiggle mb-3 mt-3' : '  hover:text-blue-400 hover:border-blue-300 border mb-2';
     }
   }
 });

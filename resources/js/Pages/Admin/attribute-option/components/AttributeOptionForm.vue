@@ -24,7 +24,7 @@
             id="name" 
             type="text" 
             class="w-full  mt-2"  
-            :fixedClasses="'right-3 z-50'"
+            :fixedClasses="'right-3 z-20'"
             v-model="form.name"  
             :error="$page.errors.name"
             label='Name'    
@@ -35,7 +35,7 @@
             id="code" 
             type="text" 
             class="w-full  mt-2"  
-            :fixedClasses="'right-3 z-50'"
+            :fixedClasses="'right-3 z-20'"
             v-model="form.code"  
             :error="$page.errors.code"
             label='Code'    

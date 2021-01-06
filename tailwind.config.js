@@ -23,12 +23,7 @@ module.exports = {
                 'icon-return': "url('/img/partials/icons/icon-return.svg')", 
                 'icon-support': "url('/img/partials/icons/icon-support.svg')", 
                 'icon-shipping': "url('/img/partials/icons/icon-shipping.svg')", 
-                // 'coupon-bg': "url('/img/partials/bg/bg_coupon.jpg')", 
-                // 'cta-bg': "url('/img/partials/bg/bg_cta.jpg')", 
-                // 'footer-bg': "url('/img/partials/bg/bg_footer.jpg')", 
-                // 'mega-menu-bg': "url('/img/partials/bg/bg_mega_menu.jpg')", 
-                // 'products-bg': "url('/img/partials/bg/bg_products.jpg')", 
-                // 'profile-bg': "url('/img/partials/bg/profile_bg.jpg')", 
+ 
             }),  
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
@@ -40,7 +35,7 @@ module.exports = {
                 }
             },
             animation: {
-                wiggle: 'wiggle 1s ease-in-out 1',
+                wiggle: 'wiggle 2s ease-in-out infinite',
             },                                             
         },
     },

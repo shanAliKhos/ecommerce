@@ -197,7 +197,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "ml-1 h-6 w-auto fill-current",
+                      staticClass: "ml-1 h-8 w-auto fill-current",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -235,7 +235,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "h-6 w-auto",
+                      staticClass: "h-8 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -284,7 +284,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "h-6 w-auto",
+                      staticClass: "h-8 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -334,7 +334,7 @@ var render = function() {
                         "svg",
                         {
                           staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                            "ml-3 transition duration-700 ease-in-out h-8 w-auto",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             fill: "none",
@@ -393,7 +393,7 @@ var render = function() {
                         "svg",
                         {
                           staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-6 w-auto",
+                            "ml-3 transition duration-700 ease-in-out h-8 w-auto",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             fill: "none",

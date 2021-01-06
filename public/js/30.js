@@ -412,7 +412,7 @@ var render = function() {
             attrs: {
               id: "name",
               type: "text",
-              fixedClasses: "right-3 z-50",
+              fixedClasses: "right-3 z-20",
               error: _vm.$page.errors.name,
               label: "Name",
               labelRequire: true,
@@ -432,7 +432,7 @@ var render = function() {
             attrs: {
               id: "code",
               type: "text",
-              fixedClasses: "right-3 z-50",
+              fixedClasses: "right-3 z-20",
               error: _vm.$page.errors.code,
               label: "Code",
               labelRequire: true,
