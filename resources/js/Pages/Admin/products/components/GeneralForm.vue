@@ -1,6 +1,6 @@
 <template>
 <div class="flex justify-center">
-    <div class="w-full pl-0 lg:pl-2">
+    <div class="w-full pl-0 md:pl-2">
         <div class="leading-loose">
             <form   @submit.prevent="store">
 
@@ -19,54 +19,7 @@
                             type="file" 
                             accept="image/*" 
                             label="Photo" 
-                        :preview="true"/>
-                        
-                        <transition-group name="slide-fade">
-  
-                            <div class="w-full md:mb-0 relative mt-5" v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
-                                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
-                                <multiselect  
-                                    v-model="form.attributes" 
-                                    deselect-label="remove this value" 
-                                    :multiple="true" 
-                                    class="mb-10"
-                                    :close-on-select="false" 
-                                    :clear-on-select="false"                                     
-                                    track-by="name"  
-                                    label="name" 
-                                    placeholder="Select an Attribute" 
-                                    :options="Attributes" 
-                                    :searchable="true" 
-                                    :allow-empty="true">
-                                </multiselect>                                   
-                                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>             
-                            </div>     
-
-                            <div  v-if="form.is_variable " :key="'add-attribute-section-opts'">  
-                                <transition-group name="slide-fade"> 
-                                <div class="w-full md:mb-0 relative mt-2" v-for="(attribute, index) in form.attributes" :key="'attribute_value'+index">
-                                    <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
-                                    <multiselect   
-                                        v-model="attribute.product_attribute_values"
-                                        deselect-label="remove this value" 
-                                        :multiple="true" 
-                                        :close-on-select="false" 
-                                        :clear-on-select="false"                                     
-                                        track-by="name"  
-                                        label="name" 
-                                        :placeholder="`select ${attribute.name}`" 
-                                        :options="attribute.attribute_values" 
-                                        :searchable="true" 
-                                        :allow-empty="false">
-                                    </multiselect>     
-                                </div>                 
-                                </transition-group>        
-                            </div>
-
-                            <SectionBorder v-if="form.is_variable" :key="'varitation-border-bottom'" />
-
-                             
-                        </transition-group>  
+                        :preview="true"/> 
                                                      
                         <div class="w-full  md:mb-0 relative mt-2">
                             <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
@@ -107,10 +60,8 @@
                             v-model="form.sku" 
                             autocomplete="sku" 
                             :error="$page.errors.sku"
-                            label='#SKU'    
-                            :labelRequire='true'    
-                                placeholder="SKU" 
-                        aria-label="SKU"/>
+                            label='#SKU'     
+                        placeholder="SKU"/>
 
                         <text-input 
                             id="quantity" 
@@ -157,9 +108,7 @@
                             label='Weight'       
                             placeholder="Weight" 
                         aria-label="weight"/>     
-                                                             
-
-                                  
+                                 
                         
                     </div>  
 
@@ -172,16 +121,15 @@
                             v-model="form.name" 
                             autocomplete="name" 
                             :error="$page.errors.name"
-                            label='Name'    
+                            label='Product Name'    
                             :labelRequire='true'    
-                            placeholder="Name" 
-                        aria-label="Name"/>
+                        placeholder="Product Name"/>
                         
                         <div class="w-full flex flex-wrap item-center md:justify-end py-2 px-2 ">
                     
                             <div class=" w-full md:w-1/3">
                                 <label for="is_active" class="flex items-center cursor-pointer">
-                                    <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Status</div>
+                                    <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Active</div>
                                     <div class="relative">
                                         <input id="is_active" type="checkbox" class="hidden" v-model="form.is_active" />
                                         <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
@@ -216,12 +164,60 @@
                             </div>        
 
                         </div>
- 
-                        <SectionBorder/>
 
-                        <div class="mt-5 mb-5 px-2 relative h-full"> 
+                        
+                        <transition-group name="slide-fade">
+  
+                            <div class="w-full md:mb-0 relative mt-5" v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
+                                <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
+                                <multiselect  
+                                    v-model="form.attributes" 
+                                    deselect-label="remove this value" 
+                                    :multiple="true" 
+                                    class="mb-10"
+                                    :close-on-select="false" 
+                                    :clear-on-select="false"                                     
+                                    track-by="name"  
+                                    label="name" 
+                                    placeholder="Select an Attribute" 
+                                    :options="Attributes" 
+                                    :searchable="true" 
+                                    :allow-empty="true">
+                                </multiselect>                                   
+                                <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.attributes">{{$page.errors.attributes}}</p>             
+                            </div>     
+
+                            <div  v-if="form.is_variable " :key="'add-attribute-section-opts'">  
+                                <transition-group name="slide-fade"> 
+                                <div class="w-full md:mb-0 relative mt-2" v-for="(attribute, index) in form.attributes" :key="'attribute_value'+index">
+                                    <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Attribute {{attribute.name}}</label>
+                                    <multiselect   
+                                        v-model="attribute.product_attribute_values"
+                                        deselect-label="remove this value" 
+                                        :multiple="true" 
+                                        :close-on-select="false" 
+                                        :clear-on-select="false"                                     
+                                        track-by="name"  
+                                        label="name" 
+                                        :placeholder="`select ${attribute.name}`" 
+                                        :options="attribute.attribute_values" 
+                                        :searchable="true" 
+                                        :allow-empty="false">
+                                    </multiselect>     
+                                </div>                 
+                                </transition-group>        
+                            </div>
+
+                            <SectionBorder v-if="form.is_variable" :key="'varitation-border-bottom'" />
+
+                             
+                        </transition-group>                          
+ 
+                 
+
+                        <div class="mt-5 mb-5 px-2 relative "> 
                             <label class="absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
-                            <vue-editor v-model="form.description" class="transition duration-700 ease-in-out w-full   bg-gray-50 rounded-lg shadow-sm hover:bg-white hover:shadow-2xl focus:bg-white focus:shadow-2xl focus:outline-none focus:border-purple-600 border-2 border-gray-200 z-20 overflow-auto h-64"></vue-editor>        
+                            <vue-editor id="DescriptionEditor" v-model="form.description"  class="transition duration-700 ease-in-out w-full bg-gray-50 rounded-lg shadow-sm hover:bg-white hover:shadow-2xl focus:bg-white focus:shadow-2xl focus:outline-none focus:border-purple-600 border-2 border-gray-200 z-20"></vue-editor>        
                             <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
                         </div>    
                         
@@ -232,10 +228,10 @@
                 </div>      
 
 
-                <div class="mt-5 lg:flex lg:item-center lg:justify-around fixes bottom-0"> 
+                <div class="md:flex-none flex fixed bottom-0 right-0 z-50"> 
 
-                    <div v-if="$page.Product" class="w-full md:w-1/2 flex items-center lg:justify-start  sm:px-6 mt-2">
-                        <inertia-link :href="route('shop.show',$page.Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex mr-2" type="button" as="button">
+                    <div v-if="$page.Product" class="flex items-center md:justify-start px-2 py-2">
+                        <inertia-link :href="route('shop.show',$page.Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400 opacity-50 hover:opacity-100 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1 text-black hover:text-white font-semibold shadow inline-flex" type="button" as="button">
                             SHOW PRODUCTS
                             <svg class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -244,8 +240,8 @@
                         </inertia-link >        
                     </div>                 
 
-                    <div class="w-full md:w-1/2 flex items-center lg:justify-end  sm:px-6 mt-2">
-                        <loading-button :loading="sending" class="uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex  mr-2" type="submit" as="button">
+                    <div class=" flex items-center md:justify-end px-2 py-2">
+                        <loading-button :loading="sending" class="uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1 text-black opacity-50 hover:opacity-100 hover:text-white font-semibold shadow inline-flex" type="submit" as="button">
                             {{ $page.Product?'update':'save'}}
                             <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -254,8 +250,7 @@
                     </div> 
                     
                 </div> 
-
-                <SectionBorder/>
+ 
                  
                 <div class="product-variations" v-if="form.is_variable && ProductSkus.length>0">   
                     <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
@@ -301,8 +296,7 @@
                         </div>
                     </div> 
                 </div> 
-
-
+ 
                 <SectionBorder/>                      
 
             </form>    
@@ -439,7 +433,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
     .slide-fade-enter-active {  
         transition: all 0.5s ease-in-out;
@@ -451,4 +445,7 @@ export default {
         transform: translateY(100px); 
         opacity: 0;
     }   
+    #DescriptionEditor {
+        height: 270px !important;
+    }    
 </style>
