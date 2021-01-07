@@ -356,6 +356,7 @@ export default {
             formData.append("description", self.form.description || '' )
             formData.append("is_active", self.form.is_active?1:0 || 0)
             formData.append("is_featured", self.form.is_featured?1:0 || 0)
+            formData.append("ProductSkus", JSON.stringify(self.ProductSkus) || '')
             formData.append("image", self.form.image || '')
             
             if(self.$page.Product){

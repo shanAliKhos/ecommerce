@@ -42,6 +42,7 @@ class ProductController extends Controller
     public function store(Request $request,Product $Product)
     {       
  
+        dd(json_decode($request->ProductSkus,true));
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
             // "sku" => 'required|string|min:2|max:255',
@@ -187,6 +188,8 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $Product)
     { 
+  
+
         $this->validate($request,[
             "name" => 'required|string|min:2|max:255',
             // "sku" => 'required|string|min:2|max:255',
@@ -279,9 +282,8 @@ class ProductController extends Controller
                 $vartionsOptionsShift = array_shift($vartionsOptions);
                 $skuOptions = collect($vartionsOptionsShift)->crossJoin(...$vartionsOptions);
                 foreach ($Product->Skus as $Skukey => $Sku) {
-
-                    $Sku->price =  $Product->current_price;
-                    $Sku->qty = $Product->quantity;
+                    $Sku->price =  json_decode($request->ProductSkus,true)[$Skukey]?json_decode($request->ProductSkus,true)[$Skukey]['price']:$Product->current_price;
+                    $Sku->qty = json_decode($request->ProductSkus,true)[$Skukey]?json_decode($request->ProductSkus,true)[$Skukey]['qty']:$Product->quantity;
                     $Sku->save(); 
 
                     foreach ($skuOptions[$Skukey] as $skuOptionKey => $skuOption) { 
