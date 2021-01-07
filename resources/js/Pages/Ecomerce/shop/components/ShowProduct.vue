@@ -85,7 +85,7 @@
                     <div class="w-1/3 sm:w-1/5">
                         <p>{{ProductVariation.attribute.name}}</p>
                     </div>
-                    <div class="w-2/3 sm:w-5/6 flex items-center" v-if="ProductVariation.attribute.name == 'Color'">
+                    <div class="w-2/3 sm:w-5/6 flex items-center" v-if="(ProductVariation.attribute.name == 'Color')">
                         <button type="button" :class="AttrColor(attribute_option.name.toLowerCase())" class="px-2 py-2 rounded-full focus:outline-red  mr-2 " v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index"> </button>
                         <!-- <div class="bg-secondary-light px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-green px-2 py-2 rounded-full mr-2"></div>
