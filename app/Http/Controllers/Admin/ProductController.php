@@ -282,8 +282,8 @@ class ProductController extends Controller
                 $vartionsOptionsShift = array_shift($vartionsOptions);
                 $skuOptions = collect($vartionsOptionsShift)->crossJoin(...$vartionsOptions);
                 foreach ($Product->Skus as $Skukey => $Sku) {
-                    $Sku->price =  json_decode($request->ProductSkus,true)[$Skukey]?json_decode($request->ProductSkus,true)[$Skukey]['price']:$Product->current_price;
-                    $Sku->qty = json_decode($request->ProductSkus,true)[$Skukey]?json_decode($request->ProductSkus,true)[$Skukey]['qty']:$Product->quantity;
+                    $Sku->price =  isset(json_decode($request->ProductSkus,true)[$Skukey])?json_decode($request->ProductSkus,true)[$Skukey]['price']:$Product->current_price;
+                    $Sku->qty = isset(json_decode($request->ProductSkus,true)[$Skukey])?json_decode($request->ProductSkus,true)[$Skukey]['qty']:$Product->quantity;
                     $Sku->save(); 
 
                     foreach ($skuOptions[$Skukey] as $skuOptionKey => $skuOption) { 
