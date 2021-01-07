@@ -236,7 +236,7 @@
                                 <div class="w-1/2 md:w-2/3 md:flex md:flex-wrap px-2 md:mb-0 relative">
 
                                     <text-input  
-                                        type="text"  
+                                        type="number"  
                                         class="w-full md:w-1/2 px-2" 
                                         v-model="ProductSku.qty" 
                                         autocomplete="sku Quantity" 
@@ -247,7 +247,7 @@
                                     aria-label="sku quantity"/>
 
                                     <text-input   
-                                        type="text"  
+                                        type="number"  
                                         class="w-full md:w-1/2  px-2" 
                                         v-model="ProductSku.price" 
                                         autocomplete="price" 

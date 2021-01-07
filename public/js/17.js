@@ -1324,7 +1324,7 @@ var render = function() {
                                   _c("text-input", {
                                     staticClass: "w-full md:w-1/2 px-2",
                                     attrs: {
-                                      type: "text",
+                                      type: "number",
                                       autocomplete: "sku Quantity",
                                       error: _vm.$page.errors.sku_qty,
                                       label: "#SKU Quantity",
@@ -1344,7 +1344,7 @@ var render = function() {
                                   _c("text-input", {
                                     staticClass: "w-full md:w-1/2  px-2",
                                     attrs: {
-                                      type: "text",
+                                      type: "number",
                                       autocomplete: "price",
                                       error: _vm.$page.errors.sku_price,
                                       label: "$ Price",
