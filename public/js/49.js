@@ -395,6 +395,9 @@ __webpack_require__.r(__webpack_exports__);
     ProductCategories: function ProductCategories() {
       return this.$page.Product.categories;
     },
+    ProductBrand: function ProductBrand() {
+      return this.$page.Product.brand;
+    },
     CartQty: function CartQty() {
       self = this;
       return self.CartItem.Qty;
@@ -633,32 +636,23 @@ var render = function() {
                   ])
                 : _vm._e(),
               _vm._v(" "),
-              _c("div", { staticClass: "flex items-center" }, [
-                _c(
-                  "div",
-                  { staticClass: " text-gray-400 mt-1 mb-1 text-xs" },
-                  [
-                    _c("span", { staticClass: "pr-2" }, [_vm._v("Brands:")]),
-                    _vm._v(" "),
-                    _vm._l(_vm.ProductCategories, function(
-                      ProductCategory,
-                      index
-                    ) {
-                      return _c(
-                        "span",
-                        { key: index, staticClass: "capitalize " },
-                        [
-                          _vm._v(_vm._s(ProductCategory.name) + " "),
-                          _vm.ProductCategories.length > index + 1
-                            ? _c("span", [_vm._v(",  ")])
-                            : _vm._e()
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                )
-              ])
+              _vm.ProductBrand
+                ? _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "div",
+                      { staticClass: " text-gray-400 mt-1 mb-1 text-xs" },
+                      [
+                        _c("span", { staticClass: "pr-2" }, [
+                          _vm._v("Brands:")
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "capitalize " }, [
+                          _vm._v(_vm._s(_vm.ProductBrand.name) + "  ")
+                        ])
+                      ]
+                    )
+                  ])
+                : _vm._e()
             ])
           ]),
           _vm._v(" "),
@@ -733,25 +727,19 @@ var render = function() {
                             attribute_option,
                             attribute_option_index
                           ) {
-                            return _c(
-                              "div",
-                              {
-                                key: attribute_option_index,
-                                staticClass:
-                                  "px-2 py-2 rounded-full mr-2 text-white text-xs",
-                                class: _vm.AttrColor(
-                                  attribute_option.name.toLowerCase()
-                                )
-                              },
-                              [_vm._v(_vm._s(attribute_option.name))]
-                            )
+                            return _c("button", {
+                              key: attribute_option_index,
+                              staticClass:
+                                "px-2 py-2 rounded-full focus:outline-red  mr-2 ",
+                              class: _vm.AttrColor(
+                                attribute_option.name.toLowerCase()
+                              ),
+                              attrs: { type: "button" }
+                            })
                           }),
                           0
                         )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    ProductVariation.attribute.name == "Size"
-                      ? _c("div", { staticClass: "w-2/3 sm:w-5/6" }, [
+                      : _c("div", { staticClass: "w-2/3 sm:w-5/6" }, [
                           _c(
                             "select",
                             { staticClass: "w-2/3 form-select" },
@@ -771,7 +759,6 @@ var render = function() {
                             0
                           )
                         ])
-                      : _vm._e()
                   ]
                 )
               }),

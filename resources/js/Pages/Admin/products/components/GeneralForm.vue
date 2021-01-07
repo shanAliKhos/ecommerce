@@ -268,7 +268,7 @@
                 <div class="md:flex-none flex fixed bottom-0 right-0 z-50"> 
 
                     <div v-if="$page.Product" class="flex items-center md:justify-start px-2 py-2">
-                        <inertia-link :href="route('shop.show',$page.Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400 opacity-50 hover:opacity-100 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1 text-black hover:text-white font-semibold shadow inline-flex" type="button" as="button">
+                        <inertia-link :href="route('shop.show',$page.Product.slug)" class="w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400  hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex" type="button" as="button">
                             SHOW PRODUCTS
                             <svg class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -278,7 +278,7 @@
                     </div>                 
 
                     <div class=" flex items-center md:justify-end px-2 py-2">
-                        <loading-button :loading="sending" class="uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1 text-black opacity-50 hover:opacity-100 hover:text-white font-semibold shadow inline-flex" type="submit" as="button">
+                        <loading-button :loading="sending" class="uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex" type="submit" as="button">
                             {{ $page.Product?'update':'save'}}
                             <svg v-if="!sending"  class="transition duration-700 ease-in-out  h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />

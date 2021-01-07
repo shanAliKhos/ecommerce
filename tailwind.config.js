@@ -36,7 +36,11 @@ module.exports = {
             },
             animation: {
                 wiggle: 'wiggle 2s ease-in-out infinite',
-            },                                             
+            },
+            outline: { 
+                red: ['2px dotted #f05252', '3px'],
+
+            }                                            
         },
     },
 

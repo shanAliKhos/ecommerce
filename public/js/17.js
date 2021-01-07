@@ -1389,7 +1389,7 @@ var render = function() {
                           "inertia-link",
                           {
                             staticClass:
-                              "w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400 opacity-50 hover:opacity-100 hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1 text-black hover:text-white font-semibold shadow inline-flex",
+                              "w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400  hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex",
                             attrs: {
                               href: _vm.route(
                                 "shop.show",
@@ -1453,7 +1453,7 @@ var render = function() {
                       "loading-button",
                       {
                         staticClass:
-                          "uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1 text-black opacity-50 hover:opacity-100 hover:text-white font-semibold shadow inline-flex",
+                          "uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex",
                         attrs: {
                           loading: _vm.sending,
                           type: "submit",

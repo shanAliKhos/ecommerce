@@ -41,8 +41,7 @@ class ProductController extends Controller
 
     public function store(Request $request,Product $Product)
     {       
- 
-        dd(json_decode($request->ProductSkus,true));
+  
         $this->validate($request,[ 
             "name" => 'required|string|min:2|max:255',
             // "sku" => 'required|string|min:2|max:255',

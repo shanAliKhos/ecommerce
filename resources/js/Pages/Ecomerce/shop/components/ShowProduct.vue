@@ -52,10 +52,10 @@
                             <span v-for="(ProductCategory, index) in ProductCategories" :key="index" class="capitalize ">{{ProductCategory.name}} <span  v-if="ProductCategories.length > (index+1)">,  </span></span> 
                         </div>                                        
                     </div>
-                    <div class="flex items-center">
+                    <div class="flex items-center"  v-if="ProductBrand">
                         <div class=" text-gray-400 mt-1 mb-1 text-xs">
                             <span class="pr-2">Brands:</span>
-                            <span v-for="(ProductCategory, index) in ProductCategories" :key="index" class="capitalize ">{{ProductCategory.name}} <span  v-if="ProductCategories.length > (index+1)">,  </span></span> 
+                            <span  class="capitalize ">{{ProductBrand.name}}  </span></span> 
                         </div>                                        
                     </div>
                 </div>
@@ -86,12 +86,12 @@
                         <p>{{ProductVariation.attribute.name}}</p>
                     </div>
                     <div class="w-2/3 sm:w-5/6 flex items-center" v-if="ProductVariation.attribute.name == 'Color'">
-                        <div :class="AttrColor(attribute_option.name.toLowerCase())" class="px-2 py-2 rounded-full mr-2 text-white text-xs" v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index">{{attribute_option.name}}</div>
+                        <button type="button" :class="AttrColor(attribute_option.name.toLowerCase())" class="px-2 py-2 rounded-full focus:outline-red  mr-2 " v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index"> </button>
                         <!-- <div class="bg-secondary-light px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-green px-2 py-2 rounded-full mr-2"></div>
                         <div class="bg-v-blue px-2 py-2 rounded-full"></div> -->
                     </div>
-                    <div class="w-2/3 sm:w-5/6" v-if="ProductVariation.attribute.name == 'Size'">
+                    <div class="w-2/3 sm:w-5/6" v-else>
                         <select class="w-2/3 form-select">
                             <option v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index" :value="attribute_option.id">{{attribute_option.name}}</option> 
                         </select>
@@ -387,6 +387,9 @@ export default {
         }, 
         ProductCategories(){
             return this.$page.Product.categories;
+        }, 
+        ProductBrand(){
+            return this.$page.Product.brand;
         }, 
         CartQty(){
             self = this;
