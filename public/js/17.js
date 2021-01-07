@@ -314,17 +314,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -344,7 +333,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   remember: 'form',
   data: function data() {
-    return _defineProperty({
+    var _ref;
+
+    return _ref = {
       sending: false,
       form: {
         name: this.$page.Product ? this.$page.Product.name : null,
@@ -362,7 +353,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         is_variable: this.$page.Product ? this.$page.Product.variations.length > 0 ? true : false : false,
         attributes: this.$page.Product ? this.$page.Product.variations : null
       }
-    }, "sending", false);
+    }, _defineProperty(_ref, "sending", false), _defineProperty(_ref, "showAttr", false), _ref;
   },
   methods: {
     store: function store() {
@@ -1065,152 +1056,134 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "transition-group",
-                    { attrs: { name: "slide-fade" } },
-                    [
-                      _vm.form.is_variable
-                        ? _c(
-                            "div",
-                            {
-                              key: "add-attribute-multiselect",
-                              staticClass: "w-full md:mb-0 relative mt-5"
-                            },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase",
-                                  attrs: { for: "weight" }
+                  _c("transition-group", { attrs: { name: "slide-fade" } }, [
+                    _vm.form.is_variable
+                      ? _c(
+                          "div",
+                          {
+                            key: "add-attribute-multiselect",
+                            staticClass: "w-full md:mb-0 relative mt-5"
+                          },
+                          [
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase",
+                                attrs: { for: "weight" }
+                              },
+                              [_vm._v("Product Attributes")]
+                            ),
+                            _vm._v(" "),
+                            _c("multiselect", {
+                              staticClass: "mb-10",
+                              attrs: {
+                                "deselect-label": "remove this value",
+                                multiple: true,
+                                "close-on-select": false,
+                                "clear-on-select": false,
+                                "track-by": "name",
+                                label: "name",
+                                placeholder: "Select an Attribute",
+                                options: _vm.Attributes,
+                                searchable: true,
+                                "allow-empty": true
+                              },
+                              model: {
+                                value: _vm.form.attributes,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.form, "attributes", $$v)
                                 },
-                                [_vm._v("Product Attributes")]
-                              ),
-                              _vm._v(" "),
-                              _c("multiselect", {
-                                staticClass: "mb-10",
-                                attrs: {
-                                  "deselect-label": "remove this value",
-                                  multiple: true,
-                                  "close-on-select": false,
-                                  "clear-on-select": false,
-                                  "track-by": "name",
-                                  label: "name",
-                                  placeholder: "Select an Attribute",
-                                  options: _vm.Attributes,
-                                  searchable: true,
-                                  "allow-empty": true
-                                },
-                                model: {
-                                  value: _vm.form.attributes,
-                                  callback: function($$v) {
-                                    _vm.$set(_vm.form, "attributes", $$v)
+                                expression: "form.attributes"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm.$page.errors.attributes
+                              ? _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
                                   },
-                                  expression: "form.attributes"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _vm.$page.errors.attributes
-                                ? _c(
-                                    "p",
-                                    {
-                                      staticClass:
-                                        "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(_vm.$page.errors.attributes)
-                                      )
-                                    ]
-                                  )
-                                : _vm._e()
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.form.is_variable
-                        ? _c(
-                            "div",
-                            { key: "add-attribute-section-opts" },
-                            [
-                              _c(
-                                "transition-group",
-                                { attrs: { name: "slide-fade" } },
-                                _vm._l(_vm.form.attributes, function(
-                                  attribute,
-                                  index
-                                ) {
-                                  return _c(
-                                    "div",
-                                    {
-                                      key: "attribute_value" + index,
-                                      staticClass:
-                                        "w-full md:mb-0 relative mt-2"
-                                    },
-                                    [
-                                      _c(
-                                        "label",
-                                        {
-                                          staticClass:
-                                            "z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase",
-                                          attrs: { for: "weight" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Attribute " +
-                                              _vm._s(attribute.name)
+                                  [_vm._v(_vm._s(_vm.$page.errors.attributes))]
+                                )
+                              : _vm._e()
+                          ],
+                          1
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.form.is_variable
+                      ? _c(
+                          "div",
+                          { key: "add-attribute-section-opts" },
+                          [
+                            _c(
+                              "transition-group",
+                              { attrs: { name: "slide-fade" } },
+                              _vm._l(_vm.form.attributes, function(
+                                attribute,
+                                index
+                              ) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: "attribute_value" + index,
+                                    staticClass: "w-full md:mb-0 relative mt-2"
+                                  },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase",
+                                        attrs: { for: "weight" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Attribute " + _vm._s(attribute.name)
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("multiselect", {
+                                      attrs: {
+                                        "deselect-label": "remove this value",
+                                        multiple: true,
+                                        "close-on-select": false,
+                                        "clear-on-select": false,
+                                        "track-by": "name",
+                                        label: "name",
+                                        placeholder: "select " + attribute.name,
+                                        options: attribute.attribute_values,
+                                        searchable: true,
+                                        "allow-empty": false
+                                      },
+                                      model: {
+                                        value:
+                                          attribute.product_attribute_values,
+                                        callback: function($$v) {
+                                          _vm.$set(
+                                            attribute,
+                                            "product_attribute_values",
+                                            $$v
                                           )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("multiselect", {
-                                        attrs: {
-                                          "deselect-label": "remove this value",
-                                          multiple: true,
-                                          "close-on-select": false,
-                                          "clear-on-select": false,
-                                          "track-by": "name",
-                                          label: "name",
-                                          placeholder:
-                                            "select " + attribute.name,
-                                          options: attribute.attribute_values,
-                                          searchable: true,
-                                          "allow-empty": false
                                         },
-                                        model: {
-                                          value:
-                                            attribute.product_attribute_values,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              attribute,
-                                              "product_attribute_values",
-                                              $$v
-                                            )
-                                          },
-                                          expression:
-                                            "attribute.product_attribute_values"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                }),
-                                0
-                              )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.form.is_variable
-                        ? _c("SectionBorder", {
-                            key: "varitation-border-bottom"
-                          })
-                        : _vm._e()
-                    ],
-                    1
-                  ),
+                                        expression:
+                                          "attribute.product_attribute_values"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              }),
+                              0
+                            )
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  ]),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -1251,13 +1224,153 @@ var render = function() {
                         : _vm._e()
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _c("SectionBorder")
+                  )
                 ],
                 1
               )
             ]),
+            _vm._v(" "),
+            _vm.form.is_variable
+              ? _c("SectionBorder", { key: "varitation-border-bottom" })
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.form.is_variable && _vm.ProductSkus.length > 0
+              ? _c("div", { staticClass: "product-variations" }, [
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "pb-6 flex font-semibold text-xl text-gray-400"
+                    },
+                    [_vm._v("Product Possible variations")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "flex flex-wrap " },
+                    _vm._l(_vm.ProductSkus, function(
+                      ProductSku,
+                      ProductSkuIndex
+                    ) {
+                      return _c(
+                        "div",
+                        {
+                          key: ProductSkuIndex,
+                          staticClass:
+                            "w-full bg-gray-100 bg-white shadow mb-4 rounded shadow"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "px-2 py-2 rounded-lg bg-gray-50 text-blue-700 font-semibold"
+                            },
+                            [_vm._v(_vm._s(ProductSku.sku))]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "flex flex-wrap mb-2 px-2 py-2" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "w-1/2 md:w-1/3" },
+                                _vm._l(ProductSku.skus_options, function(
+                                  skus_option,
+                                  skus_option_index
+                                ) {
+                                  return _c(
+                                    "p",
+                                    {
+                                      key: skus_option_index,
+                                      staticClass: "text-gray-600"
+                                    },
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticClass: "font-semibold" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              skus_option.variant_option
+                                                .attributes_option.attribute
+                                                .name
+                                            ) + " -"
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(
+                                        " " +
+                                          _vm._s(
+                                            skus_option.variant_option
+                                              .attributes_option.name
+                                          )
+                                      )
+                                    ]
+                                  )
+                                }),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-1/2 md:w-2/3 md:flex md:flex-wrap px-2 md:mb-0 relative"
+                                },
+                                [
+                                  _c("text-input", {
+                                    staticClass: "w-full md:w-1/2 px-2",
+                                    attrs: {
+                                      type: "text",
+                                      autocomplete: "sku Quantity",
+                                      error: _vm.$page.errors.sku_qty,
+                                      label: "#SKU Quantity",
+                                      labelRequire: true,
+                                      placeholder: "Sku Quantity",
+                                      "aria-label": "sku quantity"
+                                    },
+                                    model: {
+                                      value: ProductSku.qty,
+                                      callback: function($$v) {
+                                        _vm.$set(ProductSku, "qty", $$v)
+                                      },
+                                      expression: "ProductSku.qty"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    staticClass: "w-full md:w-1/2  px-2",
+                                    attrs: {
+                                      type: "text",
+                                      autocomplete: "price",
+                                      error: _vm.$page.errors.sku_price,
+                                      label: "$ Price",
+                                      labelRequire: true,
+                                      placeholder: "Sku Price",
+                                      "aria-label": "price"
+                                    },
+                                    model: {
+                                      value: ProductSku.price,
+                                      callback: function($$v) {
+                                        _vm.$set(ProductSku, "price", $$v)
+                                      },
+                                      expression: "ProductSku.price"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "div",
@@ -1382,127 +1495,7 @@ var render = function() {
                   1
                 )
               ]
-            ),
-            _vm._v(" "),
-            _vm.form.is_variable && _vm.ProductSkus.length > 0
-              ? _c("div", { staticClass: "product-variations" }, [
-                  _c(
-                    "p",
-                    { staticClass: "text-lg text-gray-800 font-medium pb-4" },
-                    [_vm._v("Product Possible variations")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "flex flex-wrap" },
-                    _vm._l(_vm.ProductSkus, function(
-                      ProductSku,
-                      ProductSkuIndex
-                    ) {
-                      return _c(
-                        "div",
-                        {
-                          key: ProductSkuIndex,
-                          staticClass: "py-2 px-2 w-full bg-gray-100"
-                        },
-                        [
-                          _c("div", { staticClass: "bg-white text-blue-500" }, [
-                            _vm._v(_vm._s(ProductSku.sku))
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "flex flex-wrap  mb-2" },
-                            [
-                              _vm._l(ProductSku.skus_options, function(
-                                skus_option,
-                                skus_option_index
-                              ) {
-                                return _c(
-                                  "div",
-                                  {
-                                    key: skus_option_index,
-                                    staticClass: "w-full md:w-1/2 "
-                                  },
-                                  [
-                                    _c("p", [
-                                      _vm._v(
-                                        _vm._s(
-                                          skus_option.variant_option
-                                            .attributes_option.attribute.name
-                                        ) +
-                                          " - " +
-                                          _vm._s(
-                                            skus_option.variant_option
-                                              .attributes_option.name
-                                          )
-                                      )
-                                    ])
-                                  ]
-                                )
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "w-full md:w-1/2 px-2 md:mb-0 relative"
-                                },
-                                [
-                                  _c("text-input", {
-                                    staticClass: "w-full",
-                                    attrs: {
-                                      type: "text",
-                                      autocomplete: "sku Quantity",
-                                      error: _vm.$page.errors.sku_qty,
-                                      label: "#SKU Quantity",
-                                      labelRequire: true,
-                                      placeholder: "Sku Quantity",
-                                      "aria-label": "sku quantity"
-                                    },
-                                    model: {
-                                      value: ProductSku.qty,
-                                      callback: function($$v) {
-                                        _vm.$set(ProductSku, "qty", $$v)
-                                      },
-                                      expression: "ProductSku.qty"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("text-input", {
-                                    staticClass: "w-full",
-                                    attrs: {
-                                      type: "text",
-                                      autocomplete: "price",
-                                      error: _vm.$page.errors.sku_price,
-                                      label: "$ Price",
-                                      labelRequire: true,
-                                      placeholder: "Sku Price",
-                                      "aria-label": "price"
-                                    },
-                                    model: {
-                                      value: ProductSku.price,
-                                      callback: function($$v) {
-                                        _vm.$set(ProductSku, "price", $$v)
-                                      },
-                                      expression: "ProductSku.price"
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            ],
-                            2
-                          )
-                        ]
-                      )
-                    }),
-                    0
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _c("SectionBorder")
+            )
           ],
           1
         )

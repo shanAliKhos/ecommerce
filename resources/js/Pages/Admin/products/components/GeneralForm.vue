@@ -108,8 +108,7 @@
                             label='Weight'       
                             placeholder="Weight" 
                         aria-label="weight"/>     
-                                 
-                        
+                                  
                     </div>  
 
                     <div class="w-full md:w-2/3 px-2 md:mb-0">
@@ -163,8 +162,7 @@
                                 <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_variable">{{$page.errors.is_variable}}</p>                 
                             </div>        
 
-                        </div>
-
+                        </div> 
                         
                         <transition-group name="slide-fade">
   
@@ -206,28 +204,67 @@
                                     </multiselect>     
                                 </div>                 
                                 </transition-group>        
-                            </div>
-
-                            <SectionBorder v-if="form.is_variable" :key="'varitation-border-bottom'" />
-
-                             
+                            </div> 
                         </transition-group>                          
- 
-                 
-
+   
                         <div class="mt-5 mb-5 px-2 relative "> 
                             <label class="absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
                             <vue-editor id="DescriptionEditor" v-model="form.description"  class="transition duration-700 ease-in-out w-full bg-gray-50 rounded-lg shadow-sm hover:bg-white hover:shadow-2xl focus:bg-white focus:shadow-2xl focus:outline-none focus:border-purple-600 border-2 border-gray-200 z-20"></vue-editor>        
                             <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
                         </div>    
-                        
-                        <SectionBorder/>
-   
+                          
                     </div>    
 
-                </div>      
+                </div>       
 
+                <SectionBorder v-if="form.is_variable" :key="'varitation-border-bottom'" />
 
+                <div class="product-variations" v-if="form.is_variable && ProductSkus.length>0">   
+                    <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Possible variations</p>
+
+                    <div class="flex flex-wrap ">
+                        <div class="w-full bg-gray-100 bg-white shadow mb-4 rounded shadow" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
+
+                            <div class="px-2 py-2 rounded-lg bg-gray-50 text-blue-700 font-semibold">{{ProductSku.sku}}</div>
+ 
+                            <div class="flex flex-wrap mb-2 px-2 py-2">
+                
+                                <div class="w-1/2 md:w-1/3">
+                                    <p class="text-gray-600" v-for="(skus_option, skus_option_index) in ProductSku.skus_options" :key="skus_option_index"><span class="font-semibold">{{skus_option.variant_option.attributes_option.attribute.name}} -</span> {{skus_option.variant_option.attributes_option.name}}</p>
+                                </div>
+
+                                <div class="w-1/2 md:w-2/3 md:flex md:flex-wrap px-2 md:mb-0 relative">
+
+                                    <text-input  
+                                        type="text"  
+                                        class="w-full md:w-1/2 px-2" 
+                                        v-model="ProductSku.qty" 
+                                        autocomplete="sku Quantity" 
+                                        :error="$page.errors.sku_qty"
+                                        label='#SKU Quantity'    
+                                        :labelRequire='true'    
+                                        placeholder="Sku Quantity" 
+                                    aria-label="sku quantity"/>
+
+                                    <text-input   
+                                        type="text"  
+                                        class="w-full md:w-1/2  px-2" 
+                                        v-model="ProductSku.price" 
+                                        autocomplete="price" 
+                                        :error="$page.errors.sku_price"
+                                        label='$ Price'    
+                                        :labelRequire='true'    
+                                        placeholder="Sku Price" 
+                                    aria-label="price"/>
+
+                                </div>
+
+                            </div>
+                
+                        </div>
+                    </div> 
+                </div> 
+ 
                 <div class="md:flex-none flex fixed bottom-0 right-0 z-50"> 
 
                     <div v-if="$page.Product" class="flex items-center md:justify-start px-2 py-2">
@@ -250,55 +287,7 @@
                     </div> 
                     
                 </div> 
- 
-                 
-                <div class="product-variations" v-if="form.is_variable && ProductSkus.length>0">   
-                    <p class="text-lg text-gray-800 font-medium pb-4">Product Possible variations</p>
-
-                    <div class="flex flex-wrap">
-                        <div class="py-2 px-2 w-full bg-gray-100" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
-                            <div class="bg-white text-blue-500">{{ProductSku.sku}}</div>
-
-
-                            <div class="flex flex-wrap  mb-2">
-                
-                                <div class="w-full md:w-1/2 " v-for="(skus_option, skus_option_index) in ProductSku.skus_options" :key="skus_option_index">
-                                    <p>{{skus_option.variant_option.attributes_option.attribute.name}} - {{skus_option.variant_option.attributes_option.name}}</p>
-                                </div>
-
-                                <div class="w-full md:w-1/2 px-2 md:mb-0 relative">
-
-                                    <text-input  
-                                        type="text"  
-                                        class="w-full" 
-                                        v-model="ProductSku.qty" 
-                                        autocomplete="sku Quantity" 
-                                        :error="$page.errors.sku_qty"
-                                        label='#SKU Quantity'    
-                                        :labelRequire='true'    
-                                        placeholder="Sku Quantity" 
-                                    aria-label="sku quantity"/>
-
-                                    <text-input   
-                                        type="text"  
-                                        class="w-full" 
-                                        v-model="ProductSku.price" 
-                                        autocomplete="price" 
-                                        :error="$page.errors.sku_price"
-                                        label='$ Price'    
-                                        :labelRequire='true'    
-                                        placeholder="Sku Price" 
-                                    aria-label="price"/>
-
-                                </div>
-                            </div>
-                
-                        </div>
-                    </div> 
-                </div> 
- 
-                <SectionBorder/>                      
-
+  
             </form>    
         </div>
     </div>    
@@ -346,6 +335,7 @@ export default {
                 attributes:this.$page.Product?this.$page.Product.variations:null,                
             },    
             sending:false,
+            showAttr:false,
         }
     },
   
