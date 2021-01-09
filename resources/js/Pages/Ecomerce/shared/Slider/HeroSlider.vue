@@ -10,7 +10,7 @@
             :autoplay="3000"> 
             
             <vue-glide-slide v-for="(HeroSlide, HeroSlideIndex) in HeroSliders" :key="HeroSlideIndex">
-                <div class="rounded-2xl shadow md:bg-left bg-center bg-no-repeat bg-cover h-screen flex-col item-center justify-center" :style="'background-image:url(\'' + HeroSlide.photo_url + '\')'">
+                <div class="rounded md:bg-left bg-center bg-no-repeat bg-cover h-full w-full flex-col item-center justify-center" :style="'background-image:url(\'' + HeroSlide.photo_url + '\')'">
                     <div class="py-36 px-10 md:px-12 xl:px-24 text-left w-5/6 lg:w-2/4 xl:w-2/3">
                     
                         <h3 class="font-medium text-gray-500 text-4xl md:text-5xl lg:text-6xl lg:w-2/3">{{HeroSlide.title}}</h3> 

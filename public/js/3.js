@@ -30,6 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       self.$inertia.post(route('cart.store'), Item, {
+        preserveScroll: true,
         onSuccess: function onSuccess() {
           if (Object.keys(_this.$page.errors).length === 0) {
             _this.$root.$emit('item-is-added-to-cart');
@@ -464,10 +465,10 @@ var render = function() {
         "span",
         {
           staticClass:
-            "text-white border-2 border-white shadow  absolute py-auto  px-2 my-0 mx-1 rounded-full",
+            "text-white border border-white shadow  absolute py-auto px-2 my-0 mx-1 rounded-full",
           class: {
-            "bg-v-green": _vm.CountCartItems > 0,
-            "bg-red-400": _vm.CountCartItems === 0
+            "bg-green-400": _vm.CountCartItems > 0,
+            hidden: _vm.CountCartItems === 0
           }
         },
         [_vm._v(_vm._s(_vm.CountCartItems))]
@@ -525,7 +526,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container relative" }, [
+  return _c("div", { staticClass: "container mx-auto px-auto relative " }, [
     _c(
       "div",
       {

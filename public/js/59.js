@@ -206,13 +206,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -420,7 +413,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "rounded-2xl shadow md:bg-left bg-center bg-no-repeat bg-cover h-screen flex-col item-center justify-center",
+                      "rounded md:bg-left bg-center bg-no-repeat bg-cover h-full w-full flex-col item-center justify-center",
                     style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
                   [
@@ -549,11 +542,11 @@ var render = function() {
                   perView: 4,
                   hoverpause: true,
                   bound: true,
-                  animationDuration: 200,
+                  animationDuration: 600,
                   peek: { before: 100, after: 100 },
                   breakpoints: {
                     1024: {
-                      perView: 3,
+                      perView: 2,
                       peek: {
                         before: 20,
                         after: 20
@@ -574,7 +567,7 @@ var render = function() {
                       }
                     }
                   },
-                  autoplay: 2000
+                  autoplay: 3000
                 }
               },
               [
@@ -584,7 +577,7 @@ var render = function() {
                     { key: ProductIndex },
                     [
                       _c("shop-product", {
-                        staticClass: "relative mt-2 mb-5 pb-2 z-30",
+                        staticClass: "relative mt-2 mb-5 pb-2 z-30 ",
                         attrs: { Product: Product }
                       })
                     ],
@@ -688,7 +681,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
     [
       _c("HeroSlider"),
       _vm._v(" "),
@@ -724,7 +716,9 @@ var render = function() {
                   attrs: { href: _vm.route("shop.index") }
                 },
                 [
-                  _vm._v("\n                Show more\n                "),
+                  _vm._v(
+                    "\n                    Show more\n                    "
+                  ),
                   _c("i", {
                     staticClass:
                       "bx bx-chevron-right text-orange-500 transition-colors group-hover:text-orange-400 pl-3 pt-2 text-xl"
@@ -742,9 +736,7 @@ var render = function() {
       _vm._v(" "),
       _c("TrendingMultiSlider"),
       _vm._v(" "),
-      _c("WelcomeBrands"),
-      _vm._v(" "),
-      _c("SaleBanner")
+      _c("WelcomeBrands")
     ],
     1
   )
@@ -818,12 +810,12 @@ var render = function() {
     "div",
     {
       staticClass:
-        "py-5 sm:py-16 mt-10 md:mt-16 mb-12 sm:mb-6 md:mb-12 lg:mb-28 relative w-full"
+        "py-5 sm:py-16 mt-10   mb-12 sm:mb-6 md:mb-12 md:mb-28 relative w-full"
     },
     [
       _c("div", {
         staticClass:
-          "bg-left bg-no-repeat bg-cover lg:w-6/11 xl:w-3/5 h-76 sm:h-82 md:h-86 lg:h-90 z-20 relative shadow-2xl",
+          "bg-left bg-no-repeat bg-cover md:w-6/11  h-76  z-20 relative shadow-2xl",
         staticStyle: { "background-image": "url(./img/coupon-image.jpg)" }
       }),
       _vm._v(" "),
@@ -831,7 +823,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "lg:absolute right-0 bottom-0  lg:w-6/11 xl:w-3/5 ml-auto h-76 sm:h-82 md:h-86 lg:h-90",
+            "md:absolute right-0 bottom-0  md:w-6/11 xl:w-3/5 ml-auto h-76 sm:h-82 md:h-86 md:h-90",
           class: {
             "bg-gradient-to-l from-yellow-400 via-yellow-300 to-orange-500 shadow-lg hover:shadow-2xl": true
           }
@@ -850,7 +842,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "py-14 sm:py-20 xl:py-24 lg:pr-8 lg:pl-40 xl:pl-76 w-5/6 sm:w-3/5 mx-auto text-center lg:text-left"
+          "py-14 sm:py-20 xl:py-24 md:pr-8 md:pl-40 xl:pl-76 w-5/6 sm:w-3/5 mx-auto text-center md:text-left"
       },
       [
         _c(

@@ -1,5 +1,5 @@
 <template> 
-        <inertia-link :href="href" :class="IsActiveLink" class="antialiased text-center focus:outline-none md:cursor-pointer text-xs">
+        <inertia-link :href="href" :class="IsActiveLink" class="flex flex-col justify-center item-center antialiased text-center focus:outline-none md:cursor-pointer text-xs appearance-none ">
             <slot></slot>
         </inertia-link>     
 </template>

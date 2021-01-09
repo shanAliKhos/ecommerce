@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container relative">
 
     <div class="pt-16 pb-24 flex flex-col lg:flex-row justify-between -mx-5">
         <div class="lg:1/2 flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between px-5">
@@ -25,17 +25,12 @@
                 <div class="border-b border-grey-dark mb-8">
                     <div class="flex items-center">
                         <p class="font-mono text-3xl capitalize text-gray-900 overflow-ellipsis overflow-hidden" >{{Product.name}}</p>
-                        <small class="rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2" :class="Product.label.color" v-if="Product.label.active">{{Product.label.title}}</small>
+                        <small class="rounded-full text-white uppercase text-sm text-center px-4 py-2 m-2" :class="Product.label.bg_scolor" v-if="Product.label.active">{{Product.label.title}}</small>
                     </div>
                     <div class="flex items-center pt-2">
                         <div class="flex items-center">
-                            <i class="bx bxs-star text-primary"></i>
-                            <i class="bx bxs-star text-primary"></i>
-                            <i class="bx bxs-star text-primary"></i>
-                            <i class="bx bxs-star text-primary"></i>
-                            <i class="bx bxs-star text-primary"></i>
-                        </div>
-                        <span class="font-semibold text-sm text-gray-400 ml-2">(45)</span>
+                            <i v-for="n in 5" :class="{'bxs-star':n<=Product.rating,'bx-star':n>Product.rating}" class="bx text-yellow-300 border border-white text-lg"></i>   
+                        </div> 
                     </div>                        
                     <div class="flex items-center pt-2">
                         <span class="font-semibold text-red-600 text-2xl text-red-600">
@@ -63,105 +58,104 @@
         
             <div class="product-attrbute-variation text-gray-500">
                 <div class="flex items-center justify-between pb-4">
-                    <div class="w-1/3 sm:w-1/5">
+                    <div class="w-1/4 flex flex-wrap items-center">
                         <p >SKU </p>
                     </div>
-                    <div class="w-2/3 sm:w-5/6 flex items-center">
-                        <p>{{ SkuCode }}</p>
-                                
+                    <div class="w-3/4 flex flex-wrap items-center">
+                        <p>{{ SkuCode }}</p> 
                     </div>
                 </div>                
                 <div class="flex items-center justify-between pb-4">
-                    <div class="w-1/3 sm:w-1/5">
+                    <div class="flex flex-wrap w-1/4">
                         <p >Availability </p>
                     </div>
-                    <div class="w-2/3 sm:w-5/6 flex items-center">
-                        <p class="font-semibold text-v-green" v-if="ProductQuantity > 0">In Stock {{ ProductQuantity }}</p>
-                        <p class="font-semibold text-v-red " v-else>Out of Stock {{ ProductQuantity }}</p>
+                    <div class="w-3/4 flex flex-wrap items-center">
+                        <p class="font-semibold text-green-400" v-if="ProductQuantity > 0">In Stock {{ ProductQuantity }}</p>
+                        <p class="font-semibold text-red-400 " v-else>Out of Stock {{ ProductQuantity }}</p>
                     </div>
                 </div>                
                 
-                <div class="flex items-center justify-between pb-4" v-for="(ProductVariation, ProductVariationIndex) in ProductVariations" :key="ProductVariationIndex">
-                    <div class="w-1/3 sm:w-1/5">
+                <div class="flex flex-wrap items-center justify-between pb-4" v-for="(ProductVariation, ProductVariationIndex) in ProductVariations" :key="ProductVariationIndex">
+                    <div class="flex flex-wrap w-1/4">
                         <p>{{ProductVariation.attribute.name}}</p>
+                    </div> 
+                    <div class="w-3/4 flex flex-wrap items-center" v-if="(ProductVariation.attribute.name == 'Color')">
+                        <label class="w-1/2 md:w-1/3 flex inline-flex items-center mt-3" v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index">
+                            <input type="radio" v-model="form.selectedSku" class="form-radio px-3 py-3 rounded focus:outline-red " :class="AttrColor(attribute_option.name.toLowerCase())" :value="attribute_option.id" :key="attribute_option_index">
+                            <span class="px-2 text-xs text-gray-700 font-semibold">{{attribute_option.name}}</span>
+                        </label>                    
                     </div>
-                    <div class="w-2/3 sm:w-5/6 flex items-center" v-if="(ProductVariation.attribute.name == 'Color')">
-                        <button type="button" :class="AttrColor(attribute_option.name.toLowerCase())" class="px-2 py-2 rounded-full focus:outline-red  mr-2 " v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index"> </button>
-                        <!-- <div class="bg-secondary-light px-2 py-2 rounded-full mr-2"></div>
-                        <div class="bg-v-green px-2 py-2 rounded-full mr-2"></div>
-                        <div class="bg-v-blue px-2 py-2 rounded-full"></div> -->
-                    </div>
-                    <div class="w-2/3 sm:w-5/6" v-else>
-                        <select class="w-2/3 form-select">
+                    <div class="w-3/4" v-else>
+                        <select class="w-2/3 transition duration-700 ease-in-out px-4 py-2 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600">
                             <option v-for="(attribute_option, attribute_option_index) in ProductVariation.attribute_options" :key="attribute_option_index" :value="attribute_option.id">{{attribute_option.name}}</option> 
                         </select>
-                    </div>                        
+                    </div>                      
                 </div>                
             
-                <div class="hidden lg:block">
+                <div class="items-center hidden lg:block">
                     <div class="flex items-center justify-between pb-5"> 
-                        <div class="w-1/3 sm:w-1/5">
+                        <div class="w-1/4 flex flex-wrap items-center">
                             <p>Quantity</p>
                         </div>
-                        <div class="w-2/3 sm:w-5/6 flex"> 
-                            <input type="number" class="form-input rounded-r-none  w-2/3 py-0 px-2 text-center " v-model.number="CartItem.Qty" min="1" />
+                        <div class="w-3/4 flex flex-wrap items-center"> 
+                            <input type="number" class="w-3/5 transition duration-700 ease-in-out px-4 py-2 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600" v-model.number="CartItem.Qty" min="1" />
                             <div class="flex flex-col inline-flex ml-2">
-                                <span class="px-1 bg-white border border-grey-darker flex-1 rounded-tr cursor-pointer "
+                                <button class="px-1 bg-white border border-grey-darker flex-1 rounded-tr cursor-pointer transition transform duration-500 focus:scale-110 focus:outline-none"
                                     @click="CartItem.Qty++"> 
                                     <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>                                                                                                          
-                                </span>
-                                <span class="px-1 bg-white flex-1 border rounded-br border-grey-darker cursor-pointer mt-1"
+                                </button>
+                                <button class="px-1 bg-white flex-1 border rounded-br border-grey-darker cursor-pointer mt-1 transition transform duration-500 focus:scale-110  focus:outline-none"
                                     @click="CartItem.Qty--"> 
                                     <svg class="text-primary pointer-events-none h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
                                     </svg>                                                                  
-                                </span>
+                                </button>
                             </div>   
                         </div>         
-                    </div>
-                <div class="flex items-center  justify-end hidden lg:block ">
+                    </div> 
+                </div>
+
+                <div class="fixed bottom-10 right-0 flex flex-wrap items-center  justify-end hidden lg:block py-4 px-4 z-50">
                     <button :disabled="sending" :class="{'opacity-50 pointer-events-none':sending}"  @click="AddToCart" 
-                    class="flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none cursor-pointer rounded-lg px-4 py-3 text-white font-semibold shadow uppercase" type="button">
+                    class="flex flex-inline justify-center items-center  transition transform duration-500 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none cursor-pointer rounded-lg px-4 py-3 text-white font-semibold shadow uppercase  focus:scale-105" type="button">
                         <svg v-if="!sending" class=" transition duration-700 ease-in-out  h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                         <svg v-if="sending"  class="transition  ease-in-out  animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>                                   
-                        <span class=" ml-2 pointer-events-none pointer-events-none">{{CartButtonName}}</span>
+                        <span class=" ml-2 pointer-events-none">{{CartButtonName}}</span>
                     </button> 
-                </div>                    
-                </div>
-
+                </div>  
             </div>        
-
-                <div class="mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
-                <div class="grid grid-cols-4 gap-2 flex justify-around">  
+     
+            <div class="mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
+                <div class="flex justify-around">  
                 
                     <div class="w-1/2 relative px-2 py-2">
 
-                        <button class="transition transform duration-500 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-minus bx-border font-semibold" @click="CartItem.Qty--"></button>
+                        <button class="transition transform duration-500 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-red-400 transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-minus bx-border font-semibold" @click="CartItem.Qty--"></button>
     
-                        <span class="px-5 py-4 bg-gray-50 text-red-500 cursor-pointer font-semibold">{{CartItem.Qty}}</span>         
+                        <span class="px-5 py-4 bg-gray-50 text-green-500 cursor-pointer font-semibold">{{CartItem.Qty}}</span>         
 
-                        <button class="transition transform duration-300 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-plus bx-border font-semibold" @click="CartItem.Qty++"></button>
+                        <button class="transition transform duration-300 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-green-400 transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-plus bx-border font-semibold" @click="CartItem.Qty++"></button>
 
                     </div>  
 
                     <div class="flex justify-end w-1/2 relative  px-2 py-2 ">
                         <button :disabled="sending" type="button" :class="{'opacity-50 pointer-events-none':sending}" @click="AddToCart"
-                            class="text-xs px-2 flex items-center transition transform  duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none focus:scale-125   rounded text-white font-normal tracking-wide cursor-pointer" >
+                            class="group text-xs px-2 flex items-center transition transform  duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none focus:scale-125   rounded text-white font-normal tracking-wide cursor-pointer" >
 
-                            <svg v-if="!sending" class="pointer-events-none transition duration-700 ease-in-out  h-4 w-4 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg v-if="!sending" class=" transition transform  duration-700 ease-in-out  h-4 w-4 group-hover:scale-125" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                             
                             <svg v-if="sending"  class="pointer-events-none transition  ease-in-out  animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>                               
-                            <span class="tracking-tighter pointer-events-none">{{CartButtonName}}</span>
+                            <span class="tracking-tighter pointer-events-none ml-2">{{CartButtonName}}</span>
                         </button> 
                     </div>
 
@@ -180,7 +174,7 @@
                 Description
             </span>
 
-            <!-- <span @click="activeTab = 'additional-information'"
+            <span @click="activeTab = 'additional-information'"
                 class="tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors"
                 :class="{ 'active': activeTab=== 'additional-information' }">
                 Additional Information
@@ -190,7 +184,7 @@
                 class="tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors"
                 :class="{ 'active': activeTab=== 'reviews' }">
                 Reviews
-            </span> -->
+            </span>
 
         </div>
         <div class="tab-content relative">
@@ -202,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div :class="{ 'active': activeTab=== 'additional-information' }"
+            <div :class="{ 'active': activeTab=== 'additional-information' }"
                 class="tab-pane bg-grey-light py-10 md:py-16   transition-opacity" role="tabpanel">
                 <div class="w-5/6 mx-auto">
                     <div class="font-hkregular text-secondary text-base">
@@ -305,7 +299,7 @@
                 <div class="w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left">
                     <a href="/" class="btn btn-primary">Submit Review</a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -331,12 +325,8 @@ export default {
                 Qty:1,
                 price:this.Product?this.Product.current_price:0,
                 image:this.Product?this.Product.mainphoto_url:'', 
-            },                 
-            Label:{
-                Color:null,
-                Title:null,
-                Active:false,
-            },        
+            },
+            form:{},     
             sending:false,
             activeTab:'description',
             selectedImage:`url('${this.Product.mainphoto_url}')`,                        
@@ -355,7 +345,7 @@ export default {
             this.$root.$emit('Add-To-Cart',this.CartItem);      
         },            
         AttrColor(clr){  
-         return `bg-${clr}-500`
+         return `bg-${clr}-400 text-${clr}-400`
         },            
         
     },
@@ -403,11 +393,12 @@ export default {
                  
         CartButtonName(){
               let button;  
-              button = 'Add'
+              button = 'Add to cart'
               if(this.$page.Cart.Items){
                 this.$page.Cart.Items.filter((Item) => {
                     if (Item.id == this.$page.Product.id) {
-                        button =  'Update'
+                        button =  'Update to cart'
+                        this.CartItem.Qty = Item.Qty
                     } 
                 });
               } 

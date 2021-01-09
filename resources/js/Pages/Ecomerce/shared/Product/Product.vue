@@ -1,31 +1,25 @@
 <template>
-<div class="p-1">
+<div class="p-1  ">
     <div class="product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl rounded-lg pb-4">
         <inertia-link :href="route('shop.show',Product.slug)" class="focus:outline-none">
-            <div class="absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30" v-if="SetLable.Active">
-                <p class="font-semibold text-sm uppercase tracking-wide" :class="SetLable.Color"> {{SetLable.Title}}</p>
-            </div>            
-            <div class="flex justify-center items-center w-auto h-64 mb-5">
-                <img :src="ProductImage" class="w-auto h-64 bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded">
+            <div class="absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30" v-if="Product.label.active">
+                <p class="font-semibold text-sm uppercase tracking-wide" :class="Product.label.text_color"> {{Product.label.title}}</p>
+            </div>     
+            <div class="flex justify-center items-center w-auto h-56 mb-1 bg-gray-100">
+                <img :src="ProductImage" class="w-auto h-full bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded">
             </div>
-            <div class="flex items-center px-4  ">
-                <p class="font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden" :title="ProductName">{{ProductName}}</p>
+            <div class="flex flex-wrap items-center px-4 py-2">
+                <p class="font-mono font-semibold text-normal text-red-700 capitalize  overflow-ellipsis truncate overflow-hidden" :title="ProductName">{{ProductName}}</p>
             </div>
-            <div class="flex px-4 ">
+            <div class="flex items-center  px-2">
+                <div class="flex  items-center group text-text-sm">
+                    <i v-for="n in 5" :class="{'bxs-star':n<=Product.rating,'bx-star':n>Product.rating}" class="bx text-yellow-300 border border-white"></i>   
+                </div> 
+            </div>             
+            <div class="flex px-4">
                 <p class="font-semibold text-red-500 text-normal">{{Currency}} {{CurrentPrice}} </p>
                 <p v-if="SalePrice>0" class="font-semibold line-through text-gray-400 text-xs ml-3">{{Currency}}{{RegularPrice}} </p>
-            </div>
-            <div class="flex px-4">
-                <div class="flex items-center  ">
-                    <i class="bx bxs-star text-yellow-300"></i>
-                    <i class="bx bxs-star text-yellow-300"></i>
-                    <i class="bx bxs-star text-yellow-300"></i>
-                    <i class="bx bxs-star text-yellow-300"></i>
-                    <i class="bx bxs-star text-yellow-300"></i>
-                </div>
-                <p class="font-regular text-sm text-gray-500  ml-2">(45)</p>
-            </div>            
-
+            </div>       
         </inertia-link>
     </div> 
 
@@ -129,37 +123,11 @@ export default {
         ProductName(){
             return this.Product.name;
         },
-        SetLable(){
-            let lable;
-            if(this.Product.sale_price > 0){
-    
-                lable ={
-                    Color:'text-orange-500',
-                    Title:'-' +Math.round( ((this.Product.regular_price - this.Product.sale_price)/ this.Product.regular_price) * 100) + '%',
-                    Active:true,                
-                };
-                
-            }else if(this.Product.is_featured){                    
-                lable={
-                    Color:'text-blue-500',
-                    Title:'Trend',
-                    Active:true,                
-                };       
-                
-            }else{
-
-                lable={
-                    Color:'text-green-500',
-                    Title:'new',
-                    Active:true,                
-                };   
-
-            }  
-         return lable;
-        },  
+ 
         Currency(){
             return this.$page.SiteOptions.Currency.Symbol;
-        }
+        },
+      
         
     },
  

@@ -45,7 +45,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "antialiased text-center focus:outline-none md:cursor-pointer text-xs",
+        "flex flex-col justify-center item-center antialiased text-center focus:outline-none md:cursor-pointer text-xs appearance-none ",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href }
     },

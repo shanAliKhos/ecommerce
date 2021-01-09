@@ -1,5 +1,5 @@
 <template>
-    <div class="container relative">
+    <div class="container mx-auto px-auto relative ">
         
         <div class="transition duration-300 ease-in-out transform flex justify-between items-center" :class="{'md:h-10':!atTopOfPage}">
             <div class="hidden lg:block h-10">

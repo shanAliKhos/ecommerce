@@ -17,7 +17,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between" },
+    {
+      staticClass:
+        "pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between font-mono"
+    },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -55,12 +58,12 @@ var staticRenderFns = [
             "p",
             {
               staticClass:
-                "font-semibold text-gray-400 text-3xl md:text-4xl lg:text-7xl"
+                "font-semibold text-gray-800 text-3xl md:text-4xl lg:text-7xl"
             },
             [_vm._v("Trending Collections")]
           ),
           _vm._v(" "),
-          _c("p", { staticClass: "font-semibold text-gray-300 text-lg pt-4" }, [
+          _c("p", { staticClass: "font-semibold text-gray-500 text-lg pt-4" }, [
             _vm._v("Checkout our newest trends this coming season")
           ])
         ])
@@ -79,7 +82,7 @@ var staticRenderFns = [
           "p",
           {
             staticClass:
-              "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
+              "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
           },
           [_vm._v("Passion Pearl "), _c("br"), _vm._v(" Collection")]
         ),
@@ -100,7 +103,7 @@ var staticRenderFns = [
               [
                 _c("i", {
                   staticClass:
-                    "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
+                    "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                 })
               ]
             ),
@@ -110,9 +113,9 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "font-semibold transition-colors text-primary group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                    "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                 },
-                [_vm._v(" Get it now")]
+                [_vm._v("Get it now")]
               )
             ])
           ]
@@ -146,7 +149,7 @@ var staticRenderFns = [
                   "p",
                   {
                     staticClass:
-                      "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
+                      "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
                   },
                   [_vm._v("Hoodie your way! For Men")]
                 ),
@@ -167,7 +170,7 @@ var staticRenderFns = [
                       [
                         _c("i", {
                           staticClass:
-                            "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
+                            "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                         })
                       ]
                     ),
@@ -176,9 +179,9 @@ var staticRenderFns = [
                       "p",
                       {
                         staticClass:
-                          "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                          "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                       },
-                      [_vm._v(" Get it now")]
+                      [_vm._v("Get it now")]
                     )
                   ]
                 )
@@ -205,7 +208,7 @@ var staticRenderFns = [
                   "p",
                   {
                     staticClass:
-                      "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
+                      "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
                   },
                   [
                     _vm._v(
@@ -230,7 +233,7 @@ var staticRenderFns = [
                       [
                         _c("i", {
                           staticClass:
-                            "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
+                            "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                         })
                       ]
                     ),
@@ -239,9 +242,9 @@ var staticRenderFns = [
                       "p",
                       {
                         staticClass:
-                          "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                          "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                       },
-                      [_vm._v(" Get it now")]
+                      [_vm._v("Get it now")]
                     )
                   ]
                 )
@@ -276,7 +279,7 @@ var staticRenderFns = [
               "p",
               {
                 staticClass:
-                  "font-semibold text-gray-400 text-xl sm:text-2xl md:text-3xl"
+                  "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
               },
               [_vm._v("W.W. Shoes ")]
             ),
@@ -297,7 +300,7 @@ var staticRenderFns = [
                   [
                     _c("i", {
                       staticClass:
-                        "bx bx-chevron-right text-xl text-primary group-hover:text-v-red transition-colors"
+                        "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                     })
                   ]
                 ),
@@ -306,7 +309,7 @@ var staticRenderFns = [
                   "p",
                   {
                     staticClass:
-                      "font-semibold text-primary transition-colors group-hover:text-v-red sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                      "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                   },
                   [_vm._v("Get it now")]
                 )

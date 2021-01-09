@@ -99,7 +99,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "rounded-2xl shadow md:bg-left bg-center bg-no-repeat bg-cover h-screen flex-col item-center justify-center",
+                      "rounded md:bg-left bg-center bg-no-repeat bg-cover h-full w-full flex-col item-center justify-center",
                     style: "background-image:url('" + HeroSlide.photo_url + "')"
                   },
                   [

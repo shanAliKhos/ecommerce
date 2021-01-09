@@ -316,12 +316,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -340,11 +334,7 @@ __webpack_require__.r(__webpack_exports__);
         price: this.Product ? this.Product.current_price : 0,
         image: this.Product ? this.Product.mainphoto_url : ''
       },
-      Label: {
-        Color: null,
-        Title: null,
-        Active: false
-      },
+      form: {},
       sending: false,
       activeTab: 'description',
       selectedImage: "url('".concat(this.Product.mainphoto_url, "')")
@@ -363,7 +353,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$root.$emit('Add-To-Cart', this.CartItem);
     },
     AttrColor: function AttrColor(clr) {
-      return "bg-".concat(clr, "-500");
+      return "bg-".concat(clr, "-400 text-").concat(clr, "-400");
     }
   },
   computed: {
@@ -411,12 +401,13 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var button;
-      button = 'Add';
+      button = 'Add to cart';
 
       if (this.$page.Cart.Items) {
         this.$page.Cart.Items.filter(function (Item) {
           if (Item.id == _this.$page.Product.id) {
-            button = 'Update';
+            button = 'Update to cart';
+            _this.CartItem.Qty = Item.Qty;
           }
         });
       }
@@ -450,7 +441,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container relative" }, [
     _c(
       "div",
       {
@@ -550,15 +541,31 @@ var render = function() {
                       "small",
                       {
                         staticClass:
-                          "rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2",
-                        class: _vm.Product.label.color
+                          "rounded-full text-white uppercase text-sm text-center px-4 py-2 m-2",
+                        class: _vm.Product.label.bg_scolor
                       },
                       [_vm._v(_vm._s(_vm.Product.label.title))]
                     )
                   : _vm._e()
               ]),
               _vm._v(" "),
-              _vm._m(0),
+              _c("div", { staticClass: "flex items-center pt-2" }, [
+                _c(
+                  "div",
+                  { staticClass: "flex items-center" },
+                  _vm._l(5, function(n) {
+                    return _c("i", {
+                      staticClass:
+                        "bx text-yellow-300 border border-white text-lg",
+                      class: {
+                        "bxs-star": n <= _vm.Product.rating,
+                        "bx-star": n > _vm.Product.rating
+                      }
+                    })
+                  }),
+                  0
+                )
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "flex items-center pt-2" }, [
                 _c(
@@ -657,11 +664,11 @@ var render = function() {
                 "div",
                 { staticClass: "flex items-center justify-between pb-4" },
                 [
-                  _vm._m(1),
+                  _vm._m(0),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "w-2/3 sm:w-5/6 flex items-center" },
+                    { staticClass: "w-3/4 flex flex-wrap items-center" },
                     [_c("p", [_vm._v(_vm._s(_vm.SkuCode))])]
                   )
                 ]
@@ -671,21 +678,21 @@ var render = function() {
                 "div",
                 { staticClass: "flex items-center justify-between pb-4" },
                 [
-                  _vm._m(2),
+                  _vm._m(1),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "w-2/3 sm:w-5/6 flex items-center" },
+                    { staticClass: "w-3/4 flex flex-wrap items-center" },
                     [
                       _vm.ProductQuantity > 0
                         ? _c(
                             "p",
-                            { staticClass: "font-semibold text-v-green" },
+                            { staticClass: "font-semibold text-green-400" },
                             [_vm._v("In Stock " + _vm._s(_vm.ProductQuantity))]
                           )
                         : _c(
                             "p",
-                            { staticClass: "font-semibold text-v-red " },
+                            { staticClass: "font-semibold text-red-400 " },
                             [
                               _vm._v(
                                 "Out of Stock " + _vm._s(_vm.ProductQuantity)
@@ -705,37 +712,84 @@ var render = function() {
                   "div",
                   {
                     key: ProductVariationIndex,
-                    staticClass: "flex items-center justify-between pb-4"
+                    staticClass:
+                      "flex flex-wrap items-center justify-between pb-4"
                   },
                   [
-                    _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+                    _c("div", { staticClass: "flex flex-wrap w-1/4" }, [
                       _c("p", [_vm._v(_vm._s(ProductVariation.attribute.name))])
                     ]),
                     _vm._v(" "),
                     ProductVariation.attribute.name == "Color"
                       ? _c(
                           "div",
-                          { staticClass: "w-2/3 sm:w-5/6 flex items-center" },
+                          { staticClass: "w-3/4 flex flex-wrap items-center" },
                           _vm._l(ProductVariation.attribute_options, function(
                             attribute_option,
                             attribute_option_index
                           ) {
-                            return _c("button", {
-                              key: attribute_option_index,
-                              staticClass:
-                                "px-2 py-2 rounded-full focus:outline-red  mr-2 ",
-                              class: _vm.AttrColor(
-                                attribute_option.name.toLowerCase()
-                              ),
-                              attrs: { type: "button" }
-                            })
+                            return _c(
+                              "label",
+                              {
+                                key: attribute_option_index,
+                                staticClass:
+                                  "w-1/2 md:w-1/3 flex inline-flex items-center mt-3"
+                              },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.selectedSku,
+                                      expression: "form.selectedSku"
+                                    }
+                                  ],
+                                  key: attribute_option_index,
+                                  staticClass:
+                                    "form-radio px-3 py-3 rounded focus:outline-red ",
+                                  class: _vm.AttrColor(
+                                    attribute_option.name.toLowerCase()
+                                  ),
+                                  attrs: { type: "radio" },
+                                  domProps: {
+                                    value: attribute_option.id,
+                                    checked: _vm._q(
+                                      _vm.form.selectedSku,
+                                      attribute_option.id
+                                    )
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.$set(
+                                        _vm.form,
+                                        "selectedSku",
+                                        attribute_option.id
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "px-2 text-xs text-gray-700 font-semibold"
+                                  },
+                                  [_vm._v(_vm._s(attribute_option.name))]
+                                )
+                              ]
+                            )
                           }),
                           0
                         )
-                      : _c("div", { staticClass: "w-2/3 sm:w-5/6" }, [
+                      : _c("div", { staticClass: "w-3/4" }, [
                           _c(
                             "select",
-                            { staticClass: "w-2/3 form-select" },
+                            {
+                              staticClass:
+                                "w-2/3 transition duration-700 ease-in-out px-4 py-2 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600"
+                            },
                             _vm._l(ProductVariation.attribute_options, function(
                               attribute_option,
                               attribute_option_index
@@ -756,142 +810,266 @@ var render = function() {
                 )
               }),
               _vm._v(" "),
-              _c("div", { staticClass: "hidden lg:block" }, [
+              _c("div", { staticClass: "items-center hidden lg:block" }, [
                 _c(
                   "div",
                   { staticClass: "flex items-center justify-between pb-5" },
                   [
-                    _vm._m(3),
+                    _vm._m(2),
                     _vm._v(" "),
-                    _c("div", { staticClass: "w-2/3 sm:w-5/6 flex" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model.number",
-                            value: _vm.CartItem.Qty,
-                            expression: "CartItem.Qty",
-                            modifiers: { number: true }
-                          }
-                        ],
-                        staticClass:
-                          "form-input rounded-r-none  w-2/3 py-0 px-2 text-center ",
-                        attrs: { type: "number", min: "1" },
-                        domProps: { value: _vm.CartItem.Qty },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "w-3/4 flex flex-wrap items-center" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model.number",
+                              value: _vm.CartItem.Qty,
+                              expression: "CartItem.Qty",
+                              modifiers: { number: true }
                             }
-                            _vm.$set(
-                              _vm.CartItem,
-                              "Qty",
-                              _vm._n($event.target.value)
-                            )
-                          },
-                          blur: function($event) {
-                            return _vm.$forceUpdate()
+                          ],
+                          staticClass:
+                            "w-3/5 transition duration-700 ease-in-out px-4 py-2 rounded-lg shadow-sm hover:bg-white focus:bg-white hover:shadow-2xl focus:shadow-2xl border-2 border-gray-200 focus:outline-none  focus:border-purple-600",
+                          attrs: { type: "number", min: "1" },
+                          domProps: { value: _vm.CartItem.Qty },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.CartItem,
+                                "Qty",
+                                _vm._n($event.target.value)
+                              )
+                            },
+                            blur: function($event) {
+                              return _vm.$forceUpdate()
+                            }
                           }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "flex flex-col inline-flex ml-2" },
-                        [
-                          _c(
-                            "span",
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "flex flex-col inline-flex ml-2" },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "px-1 bg-white border border-grey-darker flex-1 rounded-tr cursor-pointer transition transform duration-500 focus:scale-110 focus:outline-none",
+                                on: {
+                                  click: function($event) {
+                                    _vm.CartItem.Qty++
+                                  }
+                                }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "text-primary pointer-events-none h-5 w-5",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "px-1 bg-white flex-1 border rounded-br border-grey-darker cursor-pointer mt-1 transition transform duration-500 focus:scale-110  focus:outline-none",
+                                on: {
+                                  click: function($event) {
+                                    _vm.CartItem.Qty--
+                                  }
+                                }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "text-primary pointer-events-none h-5 w-5",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M20 12H4"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "fixed bottom-10 right-0 flex flex-wrap items-center  justify-end hidden lg:block py-4 px-4 z-50"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "flex flex-inline justify-center items-center  transition transform duration-500 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none cursor-pointer rounded-lg px-4 py-3 text-white font-semibold shadow uppercase  focus:scale-105",
+                      class: { "opacity-50 pointer-events-none": _vm.sending },
+                      attrs: { disabled: _vm.sending, type: "button" },
+                      on: { click: _vm.AddToCart }
+                    },
+                    [
+                      !_vm.sending
+                        ? _c(
+                            "svg",
                             {
                               staticClass:
-                                "px-1 bg-white border border-grey-darker flex-1 rounded-tr cursor-pointer ",
-                              on: {
-                                click: function($event) {
-                                  _vm.CartItem.Qty++
-                                }
+                                " transition duration-700 ease-in-out  h-5 w-5 ",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor"
                               }
                             },
                             [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "text-primary pointer-events-none h-5 w-5",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "px-1 bg-white flex-1 border rounded-br border-grey-darker cursor-pointer mt-1",
-                              on: {
-                                click: function($event) {
-                                  _vm.CartItem.Qty--
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d:
+                                    "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                                 }
-                              }
-                            },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "text-primary pointer-events-none h-5 w-5",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d: "M20 12H4"
-                                    }
-                                  })
-                                ]
-                              )
+                              })
                             ]
                           )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.sending
+                        ? _c(
+                            "svg",
+                            {
+                              staticClass:
+                                "transition  ease-in-out  animate-spin h-5 w-5",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20",
+                                fill: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d:
+                                    "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                }
+                              })
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("span", { staticClass: " ml-2 pointer-events-none" }, [
+                        _vm._v(_vm._s(_vm.CartButtonName))
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+            },
+            [
+              _c("div", { staticClass: "flex justify-around" }, [
+                _c("div", { staticClass: "w-1/2 relative px-2 py-2" }, [
+                  _c("button", {
+                    staticClass:
+                      "transition transform duration-500 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-red-400 transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-minus bx-border font-semibold",
+                    on: {
+                      click: function($event) {
+                        _vm.CartItem.Qty--
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "px-5 py-4 bg-gray-50 text-green-500 cursor-pointer font-semibold"
+                    },
+                    [_vm._v(_vm._s(_vm.CartItem.Qty))]
+                  ),
+                  _vm._v(" "),
+                  _c("button", {
+                    staticClass:
+                      "transition transform duration-300 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-green-400 transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-plus bx-border font-semibold",
+                    on: {
+                      click: function($event) {
+                        _vm.CartItem.Qty++
+                      }
+                    }
+                  })
+                ]),
                 _vm._v(" "),
                 _c(
                   "div",
                   {
-                    staticClass:
-                      "flex items-center  justify-end hidden lg:block "
+                    staticClass: "flex justify-end w-1/2 relative  px-2 py-2 "
                   },
                   [
                     _c(
                       "button",
                       {
                         staticClass:
-                          "flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none cursor-pointer rounded-lg px-4 py-3 text-white font-semibold shadow uppercase",
+                          "group text-xs px-2 flex items-center transition transform  duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none focus:scale-125   rounded text-white font-normal tracking-wide cursor-pointer",
                         class: {
                           "opacity-50 pointer-events-none": _vm.sending
                         },
@@ -904,7 +1082,7 @@ var render = function() {
                               "svg",
                               {
                                 staticClass:
-                                  " transition duration-700 ease-in-out  h-5 w-5 ",
+                                  " transition transform  duration-700 ease-in-out  h-4 w-4 group-hover:scale-125",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -931,7 +1109,7 @@ var render = function() {
                               "svg",
                               {
                                 staticClass:
-                                  "transition  ease-in-out  animate-spin h-5 w-5",
+                                  "pointer-events-none transition  ease-in-out  animate-spin h-4 w-4",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   viewBox: "0 0 20 20",
@@ -956,7 +1134,7 @@ var render = function() {
                           "span",
                           {
                             staticClass:
-                              " ml-2 pointer-events-none pointer-events-none"
+                              "tracking-tighter pointer-events-none ml-2"
                           },
                           [_vm._v(_vm._s(_vm.CartButtonName))]
                         )
@@ -965,137 +1143,6 @@ var render = function() {
                   ]
                 )
               ])
-            ],
-            2
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
-            },
-            [
-              _c(
-                "div",
-                { staticClass: "grid grid-cols-4 gap-2 flex justify-around" },
-                [
-                  _c("div", { staticClass: "w-1/2 relative px-2 py-2" }, [
-                    _c("button", {
-                      staticClass:
-                        "transition transform duration-500 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-minus bx-border font-semibold",
-                      on: {
-                        click: function($event) {
-                          _vm.CartItem.Qty--
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "px-5 py-4 bg-gray-50 text-red-500 cursor-pointer font-semibold"
-                      },
-                      [_vm._v(_vm._s(_vm.CartItem.Qty))]
-                    ),
-                    _vm._v(" "),
-                    _c("button", {
-                      staticClass:
-                        "transition transform duration-300 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-plus bx-border font-semibold",
-                      on: {
-                        click: function($event) {
-                          _vm.CartItem.Qty++
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "flex justify-end w-1/2 relative  px-2 py-2 "
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "text-xs px-2 flex items-center transition transform  duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none focus:scale-125   rounded text-white font-normal tracking-wide cursor-pointer",
-                          class: {
-                            "opacity-50 pointer-events-none": _vm.sending
-                          },
-                          attrs: { disabled: _vm.sending, type: "button" },
-                          on: { click: _vm.AddToCart }
-                        },
-                        [
-                          !_vm.sending
-                            ? _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "pointer-events-none transition duration-700 ease-in-out  h-4 w-4 ",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    stroke: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d:
-                                        "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                                    }
-                                  })
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.sending
-                            ? _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "pointer-events-none transition  ease-in-out  animate-spin h-4 w-4",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    viewBox: "0 0 20 20",
-                                    fill: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                      "stroke-width": "2",
-                                      d:
-                                        "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                                    }
-                                  })
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "tracking-tighter pointer-events-none"
-                            },
-                            [_vm._v(_vm._s(_vm.CartButtonName))]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              )
             ]
           )
         ])
@@ -1129,6 +1176,40 @@ var render = function() {
                 }
               },
               [_vm._v("\r\n                Description\r\n            ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
+                class: { active: _vm.activeTab === "additional-information" },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = "additional-information"
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  "\r\n                Additional Information\r\n            "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
+                class: { active: _vm.activeTab === "reviews" },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = "reviews"
+                  }
+                }
+              },
+              [_vm._v("\r\n                Reviews\r\n            ")]
             )
           ]
         ),
@@ -1154,6 +1235,36 @@ var render = function() {
                 ]
               )
             ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "tab-pane bg-grey-light py-10 md:py-16   transition-opacity",
+              class: { active: _vm.activeTab === "additional-information" },
+              attrs: { role: "tabpanel" }
+            },
+            [_vm._m(3)]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "tab-pane bg-grey-light py-10 md:py-16   transition-opacity",
+              class: { active: _vm.activeTab === "reviews" },
+              attrs: { role: "tabpanel" }
+            },
+            [
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _vm._m(7)
+            ]
           )
         ])
       ]
@@ -1165,29 +1276,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex items-center pt-2" }, [
-      _c("div", { staticClass: "flex items-center" }, [
-        _c("i", { staticClass: "bx bxs-star text-primary" }),
-        _vm._v(" "),
-        _c("i", { staticClass: "bx bxs-star text-primary" }),
-        _vm._v(" "),
-        _c("i", { staticClass: "bx bxs-star text-primary" }),
-        _vm._v(" "),
-        _c("i", { staticClass: "bx bxs-star text-primary" }),
-        _vm._v(" "),
-        _c("i", { staticClass: "bx bxs-star text-primary" })
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "font-semibold text-sm text-gray-400 ml-2" }, [
-        _vm._v("(45)")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+    return _c("div", { staticClass: "w-1/4 flex flex-wrap items-center" }, [
       _c("p", [_vm._v("SKU ")])
     ])
   },
@@ -1195,7 +1284,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+    return _c("div", { staticClass: "flex flex-wrap w-1/4" }, [
       _c("p", [_vm._v("Availability ")])
     ])
   },
@@ -1203,9 +1292,328 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/3 sm:w-1/5" }, [
+    return _c("div", { staticClass: "w-1/4 flex flex-wrap items-center" }, [
       _c("p", [_vm._v("Quantity")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-5/6 mx-auto" }, [
+      _c("div", { staticClass: "font-hkregular text-secondary text-base" }, [
+        _vm._v(
+          "\r\n                        On the main compartment has multiple pockets available for your tools, chargers,\r\n                        make up, keys, etc. "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" Size::13.4”Lx 6.5”W x 15.4”H. "),
+        _c("br"),
+        _vm._v(" Weight:\r\n                        1.57pounds. "),
+        _c("br"),
+        _vm._v(" Color: light brown.\r\n\r\n                    ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-5/6 mx-auto border-b border-grey-darker pb-8 text-center sm:text-left"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+          },
+          [
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" })
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
+          _vm._v("\r\n                        Perfect for everyday use")
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+          },
+          [
+            _vm._v(
+              "\r\n                        I loooveeeee this product!!! It feels so soft and smells like real leather!!! I\r\n                        ordered this fancy backpack looking for something that can be used at work and, at\r\n                        the same time, after work; and I found it. Honestly.. Amazing!!"
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3"
+          },
+          [
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_c("span", [_vm._v("By")]), _vm._v(" Melanie Ashwood")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "font-hkregular text-grey-darkest text-sm block px-4"
+              },
+              [_vm._v(".")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_vm._v("\r\n                            6 days ago")]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-5/6 mx-auto border-b border-transparent pb-8 text-center sm:text-left"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+          },
+          [
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "bx bxs-star text-primary" })
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
+          _vm._v("\r\n                        Gift for my girlfriend")
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+          },
+          [
+            _vm._v(
+              "\r\n                        I paid this thing thinking about my girlfriend’s birthday present, however I had my\r\n                        doubts cuz’ she is kind of picky. But Seriously, from now on, Elyssi is my best\r\n                        friend! She loved it!! She’s crazy about it! DISCLAIMER: It is smaller than it\r\n                        appears. "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex justify-center sm:justify-start items-center pt-3"
+          },
+          [
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_c("span", [_vm._v("By")]), _vm._v(" Jake Houston")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "font-hkregular text-grey-darkest text-sm block px-4"
+              },
+              [_vm._v(".")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              [_vm._v("\r\n                            4 days ago")]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "w-5/6 mx-auto" }, [
+      _c(
+        "div",
+        {
+          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+        },
+        [
+          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "name" }
+              },
+              [_vm._v("Name")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input",
+              attrs: {
+                type: "text",
+                placeholder: "Enter your Name",
+                id: "name"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "email" }
+              },
+              [_vm._v("Email\r\n                                address")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input ",
+              attrs: {
+                type: "email",
+                placeholder: "Enter your email",
+                id: "email"
+              }
+            })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+        },
+        [
+          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2",
+                attrs: { for: "review_title" }
+              },
+              [_vm._v("Review\r\n                                Title")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-input ",
+              attrs: {
+                type: "text",
+                placeholder: "Enter your review title",
+                id: "review_title"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+            _c(
+              "label",
+              {
+                staticClass: "font-hkregular text-secondary text-sm block mb-2"
+              },
+              [_vm._v("Rating")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex pt-4" }, [
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "bx bxs-star text-grey-darker text-xl" })
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "sm:w-12/25 pt-10" }, [
+        _c(
+          "label",
+          {
+            staticClass: "font-hkregular text-secondary text-sm block mb-2",
+            attrs: { for: "message" }
+          },
+          [_vm._v("ReviewMessage")]
+        ),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-textarea",
+          attrs: { placeholder: "Give your review tittle", id: "message" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left"
+      },
+      [
+        _c("a", { staticClass: "btn btn-primary", attrs: { href: "/" } }, [
+          _vm._v("Submit Review")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

@@ -1,8 +1,7 @@
 <template>
-<div class="shop-section">
+<div class="shop-section "> 
 
-    <div class="container"> 
-
+   
         <div class="py-10 flex flex-col sm:flex-row justify-between">
             <div class="flex items-center justify-center sm:justify-start">
                 <!-- <i class="bx bxs-filter-alt text-primary text-xl"></i>
@@ -29,11 +28,11 @@
 
         <div class="flex flex-wrap justify-between pb-5 -mx-3">
  
-           <shop-product v-for="(Product, index) in Products" :key="index" :Product="Product" class="w-1/2 md:w-1/5 relative mt-2 mb-5 z-30"></shop-product>
+           <shop-product v-for="(Product, index) in Products" :key="index" :Product="Product" class="w-1/2 md:w-1/6 relative mt-2 mb-5 z-30"></shop-product>
 
         </div>  
  
-    </div> 
+  
     
     <pagination :Pagination="Pagination"></pagination>
 

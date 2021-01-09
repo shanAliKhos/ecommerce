@@ -30,7 +30,7 @@
                 </div>                      
 
                  <div class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 ">
-                    <div class="grid grid-cols-4 gap-2 flex justify-around"> 
+                    <div class=" flex justify-around"> 
 
                         <div class="w-1/2 relative px-2 py-2 flex item-center">
                             <div class="pt-3 flex justify-between"> 

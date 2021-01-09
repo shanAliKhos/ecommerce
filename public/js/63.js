@@ -245,12 +245,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product'],
   methods: {// AddToCart(Item){   
@@ -281,31 +275,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     ProductName: function ProductName() {
       return this.Product.name;
-    },
-    SetLable: function SetLable() {
-      var lable;
-
-      if (this.Product.sale_price > 0) {
-        lable = {
-          Color: 'text-orange-500',
-          Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
-          Active: true
-        };
-      } else if (this.Product.is_featured) {
-        lable = {
-          Color: 'text-blue-500',
-          Title: 'Trend',
-          Active: true
-        };
-      } else {
-        lable = {
-          Color: 'text-green-500',
-          Title: 'new',
-          Active: true
-        };
-      }
-
-      return lable;
     },
     Currency: function Currency() {
       return this.$page.SiteOptions.Currency.Symbol;
@@ -619,7 +588,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-1" }, [
+  return _c("div", { staticClass: "p-1  " }, [
     _c(
       "div",
       {
@@ -634,7 +603,7 @@ var render = function() {
             attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
           },
           [
-            _vm.SetLable.Active
+            _vm.Product.label.active
               ? _c(
                   "div",
                   {
@@ -647,9 +616,9 @@ var render = function() {
                       {
                         staticClass:
                           "font-semibold text-sm uppercase tracking-wide",
-                        class: _vm.SetLable.Color
+                        class: _vm.Product.label.text_color
                       },
-                      [_vm._v(" " + _vm._s(_vm.SetLable.Title))]
+                      [_vm._v(" " + _vm._s(_vm.Product.label.title))]
                     )
                   ]
                 )
@@ -658,30 +627,52 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "flex justify-center items-center w-auto h-64 mb-5"
+                staticClass:
+                  "flex justify-center items-center w-auto h-56 mb-1 bg-gray-100"
               },
               [
                 _c("img", {
                   staticClass:
-                    "w-auto h-64 bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded",
+                    "w-auto h-full bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded",
                   attrs: { src: _vm.ProductImage }
                 })
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "flex items-center px-4  " }, [
+            _c(
+              "div",
+              { staticClass: "flex flex-wrap items-center px-4 py-2" },
+              [
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "font-mono font-semibold text-normal text-red-700 capitalize  overflow-ellipsis truncate overflow-hidden",
+                    attrs: { title: _vm.ProductName }
+                  },
+                  [_vm._v(_vm._s(_vm.ProductName))]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex items-center  px-2" }, [
               _c(
-                "p",
-                {
-                  staticClass:
-                    "font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden",
-                  attrs: { title: _vm.ProductName }
-                },
-                [_vm._v(_vm._s(_vm.ProductName))]
+                "div",
+                { staticClass: "flex  items-center group text-text-sm" },
+                _vm._l(5, function(n) {
+                  return _c("i", {
+                    staticClass: "bx text-yellow-300 border border-white",
+                    class: {
+                      "bxs-star": n <= _vm.Product.rating,
+                      "bx-star": n > _vm.Product.rating
+                    }
+                  })
+                }),
+                0
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "flex px-4 " }, [
+            _c("div", { staticClass: "flex px-4" }, [
               _c(
                 "p",
                 { staticClass: "font-semibold text-red-500 text-normal" },
@@ -706,26 +697,6 @@ var render = function() {
                     ]
                   )
                 : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex px-4" }, [
-              _c("div", { staticClass: "flex items-center  " }, [
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "bx bxs-star text-yellow-300" })
-              ]),
-              _vm._v(" "),
-              _c(
-                "p",
-                { staticClass: "font-regular text-sm text-gray-500  ml-2" },
-                [_vm._v("(45)")]
-              )
             ])
           ]
         )

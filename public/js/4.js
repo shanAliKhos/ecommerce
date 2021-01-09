@@ -95,10 +95,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['mobileMenu', 'categories', 'subcategory'],
@@ -143,7 +139,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "antialiased text-center focus:outline-none md:cursor-pointer text-xs",
+        "flex flex-col justify-center item-center antialiased text-center focus:outline-none md:cursor-pointer text-xs appearance-none ",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href }
     },
@@ -178,12 +174,12 @@ var render = function() {
         "div",
         {
           staticClass:
-            "z-50 bg-white  block lg:hidden fixed bottom-0 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+            "z-50 bg-white block lg:hidden fixed bottom-0 right-0 left-0 border-t-2 border-gray-200 text-gray-400 py-1"
         },
         [
           _c(
             "div",
-            { staticClass: "grid grid-cols-4 gap-2 flex justify-around mt-1" },
+            { staticClass: "flex justify-around" },
             [
               _c(
                 "MobileNavLink",
@@ -197,7 +193,8 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "ml-1 h-8 w-auto fill-current",
+                      staticClass:
+                        "pointer-events-none\t h-6 w-auto fill-current",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -217,9 +214,10 @@ var render = function() {
                       })
                     ]
                   ),
-                  _vm._v(
-                    "                    \r\n                Home\r\n            "
-                  )
+                  _vm._v(" "),
+                  _c("span", { staticClass: "pointer-events-none" }, [
+                    _vm._v("Home")
+                  ])
                 ]
               ),
               _vm._v(" "),
@@ -235,7 +233,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "h-8 w-auto",
+                      staticClass: "h-6 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -284,7 +282,7 @@ var render = function() {
                   _c(
                     "svg",
                     {
-                      staticClass: "h-8 w-auto",
+                      staticClass: "h-6 w-auto",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         fill: "none",
@@ -304,7 +302,8 @@ var render = function() {
                       })
                     ]
                   ),
-                  _vm._v(" \r\n                Cart\r\n            ")
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Cart")])
                 ]
               ),
               _vm._v(" "),
@@ -320,21 +319,10 @@ var render = function() {
                     },
                     [
                       _c(
-                        "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
-                        [
-                          _c("span", {
-                            staticClass:
-                              "relative inline-flex rounded-full h-3 w-3 bg-red-500"
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
                         "svg",
                         {
                           staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-8 w-auto",
+                            "flex justify-center transition duration-700 ease-in-out h-6 w-auto",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             fill: "none",
@@ -375,7 +363,9 @@ var render = function() {
                     [
                       _c(
                         "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        {
+                          staticClass: "flex h-6 w-auto absolute top-0 right-0 "
+                        },
                         [
                           _c("span", {
                             staticClass:
@@ -393,7 +383,7 @@ var render = function() {
                         "svg",
                         {
                           staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-8 w-auto",
+                            " transition duration-700 ease-in-out h-6 w-auto",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             fill: "none",
@@ -434,7 +424,9 @@ var render = function() {
                     [
                       _c(
                         "span",
-                        { staticClass: "flex h-3 w-3 absolute right-0" },
+                        {
+                          staticClass: "flex h-6 w-auto absolute top-0 right-0 "
+                        },
                         [
                           _c("span", {
                             staticClass:
@@ -452,7 +444,7 @@ var render = function() {
                         "svg",
                         {
                           staticClass:
-                            "ml-3 transition duration-700 ease-in-out h-8 w-auto ",
+                            "ml-3 transition duration-700 ease-in-out h-6 w-auto ",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             fill: "none",

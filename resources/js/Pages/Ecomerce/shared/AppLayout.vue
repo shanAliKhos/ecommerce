@@ -1,16 +1,14 @@
 <template>
-<div class="font-serif"> 
+<div class="font-serif select-none"> 
     
     <app-header></app-header>
-    
-    <main class="lg:mt-2 mt-2">
-
+     
+    <main class="lg:mt-2 mt-2 container mx-auto my-auto px-5 md:px-2"> 
         <transition name="slide-fade">
 
             <slot></slot>
 
-        </transition>    
-        
+        </transition>     
     </main>         
 
     <app-footer></app-footer>

@@ -585,99 +585,86 @@ var render = function() {
                       "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
                   },
                   [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "grid grid-cols-4 gap-2 flex justify-around"
-                      },
-                      [
-                        _c("div", {
+                    _c("div", { staticClass: "flex justify-around" }, [
+                      _c("div", {
+                        staticClass: "w-1/2 relative px-2 py-2 flex item-center"
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
                           staticClass:
-                            "w-1/2 relative px-2 py-2 flex item-center"
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "w-1/2 relative px-2 py-2 flex item-center justify-end"
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
-                                class: {
-                                  "opacity-50 pointer-events-none": _vm.sending
-                                },
-                                attrs: {
-                                  disabled: _vm.sending,
-                                  type: "button"
-                                },
-                                on: { click: _vm.store }
+                            "w-1/2 relative px-2 py-2 flex item-center justify-end"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                              class: {
+                                "opacity-50 pointer-events-none": _vm.sending
                               },
-                              [
-                                _vm.sending
-                                  ? _c(
-                                      "svg",
-                                      {
-                                        staticClass:
-                                          "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                              attrs: { disabled: _vm.sending, type: "button" },
+                              on: { click: _vm.store }
+                            },
+                            [
+                              _vm.sending
+                                ? _c(
+                                    "svg",
+                                    {
+                                      staticClass:
+                                        "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        fill: "none",
+                                        viewBox: "0 0 24 24",
+                                        stroke: "currentColor"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
                                         attrs: {
-                                          xmlns: "http://www.w3.org/2000/svg",
-                                          fill: "none",
-                                          viewBox: "0 0 24 24",
-                                          stroke: "currentColor"
+                                          "stroke-linecap": "round",
+                                          "stroke-linejoin": "round",
+                                          "stroke-width": "2",
+                                          d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                         }
-                                      },
-                                      [
-                                        _c("path", {
-                                          attrs: {
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            "stroke-width": "2",
-                                            d: "M17 8l4 4m0 0l-4 4m4-4H3"
-                                          }
-                                        })
-                                      ]
-                                    )
-                                  : _c(
-                                      "svg",
-                                      {
-                                        staticClass:
-                                          "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                      })
+                                    ]
+                                  )
+                                : _c(
+                                    "svg",
+                                    {
+                                      staticClass:
+                                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        fill: "none",
+                                        viewBox: "0 0 24 24",
+                                        stroke: "currentColor"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
                                         attrs: {
-                                          xmlns: "http://www.w3.org/2000/svg",
-                                          fill: "none",
-                                          viewBox: "0 0 24 24",
-                                          stroke: "currentColor"
+                                          "stroke-linecap": "round",
+                                          "stroke-linejoin": "round",
+                                          "stroke-width": "2",
+                                          d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                         }
-                                      },
-                                      [
-                                        _c("path", {
-                                          attrs: {
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            "stroke-width": "2",
-                                            d: "M17 8l4 4m0 0l-4 4m4-4H3"
-                                          }
-                                        })
-                                      ]
-                                    ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "tracking-tighter" },
-                                  [_vm._v("Proceed")]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
+                                      })
+                                    ]
+                                  ),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "tracking-tighter" }, [
+                                _vm._v("Proceed")
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ])
                   ]
                 )
               ],

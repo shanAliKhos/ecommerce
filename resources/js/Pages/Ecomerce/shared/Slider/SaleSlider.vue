@@ -6,11 +6,11 @@
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
-            :animationDuration="200"
+            :animationDuration="600"
             :peek="{ before: 100, after: 100 }"
             :breakpoints="{
                 1024: {
-                    perView: 3,
+                    perView: 2,
                     peek: {
                         before: 20,
                         after: 20,
@@ -31,11 +31,11 @@
                     },
                 },
             }"
-            :autoplay="2000"> 
+            :autoplay="3000"> 
             
             <vue-glide-slide v-for="(Product, ProductIndex) in SaleSliderProducts" :key="ProductIndex" >
                 
-                <shop-product :Product="Product" class="relative mt-2 mb-5 pb-2 z-30"></shop-product>
+                <shop-product :Product="Product" class="relative mt-2 mb-5 pb-2 z-30 "></shop-product>
                 
             </vue-glide-slide>  
 

@@ -20,6 +20,7 @@ class Product extends Model
     protected $casts = [
         'quantity'  =>  'integer',
         'brand_id'  =>  'integer',
+        'rating'  =>  'integer',
         'sale_price'  =>  'integer',
         'regular_price'  =>  'integer',
         'is_active'    =>  'boolean',
@@ -31,6 +32,7 @@ class Product extends Model
         'current_price',
         'on_sale',
         'label',
+        'rating',
     ];
 
 
@@ -39,14 +41,16 @@ class Product extends Model
         if($this->sale_price > 0){ 
     
             $lable=[
-                'color'=>'bg-orange-500',
+                'bg_color'=>'bg-orange-500',
+                'text_color'=>'text-orange-500',
                 'title'=>'-'.round(( ($this->regular_price - $this->sale_price) / $this->regular_price) * 100). ' %',
                 'active'=>true,                
                 ]; 
         }else if($this->is_featured){                     
  
             $lable=[
-                'color'=>'bg-blue-500',
+                'bg_color'=>'bg-blue-500',
+                'text_color'=>'text-blue-500',
                 'title'=>'Trend',
                 'active'=>true,                
                 ];               
@@ -54,7 +58,8 @@ class Product extends Model
         }else{
  
             $lable=[
-                'color'=>'bg-green-500',
+                'bg_color'=>'bg-green-500',
+                'text_color'=>'text-green-500',
                 'title'=>'new',
                 'active'=>true,                
                 ];            
@@ -64,6 +69,11 @@ class Product extends Model
         return $lable;        
 
       
+    }
+
+    public function getRatingAttribute()
+    { 
+        return rand(1,5);
     }
 
     public function getOnSaleAttribute()

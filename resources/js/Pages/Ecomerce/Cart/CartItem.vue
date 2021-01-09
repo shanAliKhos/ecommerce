@@ -1,8 +1,9 @@
 <template>
+<transition  name="slide-fade">
 <div> 
     <div class="normal-display-item">
-        <div class="py-3 border-b border-grey-dark flex-row justify-between items-center mb-0 hidden md:flex">
-            <i class="bx bx-x text-grey-darkest text-2xl sm:text-3xl mr-6 cursor-pointer" @click="RemoveCartItem"></i>
+        <div class="py-3 border-b border-grey-dark flex-row justify-between items-center mb-0 hidden md:flex ">
+            <i class="transition duration-500 ease-in-out transform hover:scale-125 bx bx-x hover:text-red-500 text-grey-darkest text-2xl sm:text-3xl mr-6 cursor-pointer" @click="RemoveCartItem"></i>
             <div class="w-1/2 lg:w-3/5 xl:w-1/2 flex flex-row items-center border-b-0 border-grey-dark pt-0 pb-0 text-left">
                 <div class="w-20 mx-0 relative pr-0">
                     <div class="h-20 rounded flex items-center justify-center">
@@ -59,6 +60,7 @@
     </div>
 
 </div> 
+</transition>        
 </template>
 <script>
 export default {
@@ -110,4 +112,11 @@ export default {
     font-weight: 400; 
 }
     
+ 
+    .slide-fade-leave-active {  
+        transition: all 0.5s ease-in-out;
+    } 
+    .slide-fade-leave-to{
+        opacity: 0;
+    }    
 </style>

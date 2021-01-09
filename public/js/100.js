@@ -143,7 +143,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "xxstheme-header transition duration-500 ease-in top-0 w-full bg-white z-50 ",
+        "xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full",
       class: { "fixed scrolled": !_vm.view.atTopOfPage }
     },
     [

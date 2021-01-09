@@ -1,5 +1,5 @@
 <template>
-<div class="xxstheme-header transition duration-500 ease-in top-0 w-full bg-white z-50 " 
+<div class="xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full" 
     :class="{ 'fixed scrolled': !view.atTopOfPage }" >
     
     <nav-bar    

@@ -4,9 +4,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import 'tailwindcss/utilities';
-@import "bundles"; 
+/* @import "bundles";  */
  
- 
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
 html {
     scroll-behavior: smooth;
 }

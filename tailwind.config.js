@@ -29,6 +29,10 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             }, 
             keyframes: {
+                wiggleX: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' },
+                },
                 wiggle: {
                   '0%, 100%': { transform: 'translate(-2px)' },
                   '50%': { transform: 'translate(2px)' },
@@ -38,6 +42,7 @@ module.exports = {
                 },
             },
             animation: {
+                wiggleX: 'wiggleX 3s ease-in-out infinite',
                 wiggle: 'wiggle 1s ease-in-out infinite',
                 bounceIn: 'bounceIn 1s ease-in-out 1',
             },
@@ -55,7 +60,7 @@ module.exports = {
         extend: {
            transform: ['hover', 'focus'],
            scale: ['focus-within'],
-           animation: ['hover', 'focus'],
+           animation: ['hover', 'focus','group'],
            transform: ['hover', 'focus'],
            appearance: ['hover', 'focus'],
            outline: ['hover', 'active'],  

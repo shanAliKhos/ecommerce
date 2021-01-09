@@ -35,8 +35,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -288,13 +286,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "font-serif" },
+    { staticClass: "font-serif select-none" },
     [
       _c("app-header"),
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: "lg:mt-2 mt-2" },
+        { staticClass: "lg:mt-2 mt-2 container mx-auto my-auto px-5 md:px-2" },
         [
           _c(
             "transition",
@@ -341,7 +339,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "xxstheme-header transition duration-500 ease-in top-0 w-full bg-white z-50 ",
+        "xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full",
       class: { "fixed scrolled": !_vm.view.atTopOfPage }
     },
     [
