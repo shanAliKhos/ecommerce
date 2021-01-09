@@ -1,17 +1,17 @@
 <template>
-<div class="p-2">
+<div class="p-1">
     <div class="product-gird transition duration-700 ease-in-out shadow-sm hover:shadow-2xl rounded-lg pb-4">
         <inertia-link :href="route('shop.show',Product.slug)" class="focus:outline-none">
             <div class="absolute top-0 right-0 bg-white px-4 py-1 my-4 mx-4 rounded-full z-30" v-if="SetLable.Active">
                 <p class="font-semibold text-sm uppercase tracking-wide" :class="SetLable.Color"> {{SetLable.Title}}</p>
             </div>            
-            <div class="flex justify-center items-center h-64 pb-4 p-2">
-                <img :src="ProductImage" class="w-auto h-56 bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg">
+            <div class="flex justify-center items-center w-auto h-64 mb-5">
+                <img :src="ProductImage" class="w-auto h-64 bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded">
             </div>
-            <div class="flex items-center px-4 py-1">
+            <div class="flex items-center px-4  ">
                 <p class="font-semibold text-xs text-gray-400 capitalize  overflow-ellipsis truncate overflow-hidden" :title="ProductName">{{ProductName}}</p>
             </div>
-            <div class="flex px-4 py-1">
+            <div class="flex px-4 ">
                 <p class="font-semibold text-red-500 text-normal">{{Currency}} {{CurrentPrice}} </p>
                 <p v-if="SalePrice>0" class="font-semibold line-through text-gray-400 text-xs ml-3">{{Currency}}{{RegularPrice}} </p>
             </div>

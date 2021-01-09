@@ -320,6 +320,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     Product: {
@@ -405,37 +407,28 @@ __webpack_require__.r(__webpack_exports__);
     ProductVariations: function ProductVariations() {
       return this.$page.Product.variations;
     },
-    SetLable: function SetLable() {
-      var lable;
+    CartButtonName: function CartButtonName() {
+      var _this = this;
 
-      if (this.Product.sale_price > 0) {
-        lable = {
-          Color: 'bg-orange-500',
-          Title: '-' + Math.round((this.Product.regular_price - this.Product.sale_price) / this.Product.regular_price * 100) + '%',
-          Active: true
-        };
-      } else if (this.Product.is_featured) {
-        lable = {
-          Color: 'bg-blue-500',
-          Title: 'Trend',
-          Active: true
-        };
-      } else {
-        lable = {
-          Color: 'bg-green-500',
-          Title: 'new',
-          Active: true
-        };
+      var button;
+      button = 'Add';
+
+      if (this.$page.Cart.Items) {
+        this.$page.Cart.Items.filter(function (Item) {
+          if (Item.id == _this.$page.Product.id) {
+            button = 'Update';
+          }
+        });
       }
 
-      return lable;
+      return button;
     }
   },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     this.$root.$on('item-is-added-to-cart', function () {
-      _this.sending = false;
+      _this2.sending = false;
     });
   }
 });
@@ -552,15 +545,15 @@ var render = function() {
                   [_vm._v(_vm._s(_vm.Product.name))]
                 ),
                 _vm._v(" "),
-                _vm.SetLable.Active
+                _vm.Product.label.active
                   ? _c(
                       "small",
                       {
                         staticClass:
                           "rounded-full  text-white uppercase text-sm text-center px-4 py-2 m-2",
-                        class: _vm.SetLable.Color
+                        class: _vm.Product.label.color
                       },
-                      [_vm._v(_vm._s(_vm.SetLable.Title))]
+                      [_vm._v(_vm._s(_vm.Product.label.title))]
                     )
                   : _vm._e()
               ]),
@@ -804,13 +797,13 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "flex flex-col   inline-flex " },
+                        { staticClass: "flex flex-col inline-flex ml-2" },
                         [
                           _c(
                             "span",
                             {
                               staticClass:
-                                "px-1 bg-white border border-l-0 border-grey-darker flex-1 rounded-tr cursor-pointer ",
+                                "px-1 bg-white border border-grey-darker flex-1 rounded-tr cursor-pointer ",
                               on: {
                                 click: function($event) {
                                   _vm.CartItem.Qty++
@@ -848,7 +841,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "px-1 bg-white flex-1 border border-t-0 border-l-0 rounded-br border-grey-darker cursor-pointer",
+                                "px-1 bg-white flex-1 border rounded-br border-grey-darker cursor-pointer mt-1",
                               on: {
                                 click: function($event) {
                                   _vm.CartItem.Qty--
@@ -885,85 +878,93 @@ var render = function() {
                       )
                     ])
                   ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center  justify-end hidden lg:block "
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none cursor-pointer rounded-lg px-4 py-3 text-white font-semibold shadow uppercase",
+                        class: {
+                          "opacity-50 pointer-events-none": _vm.sending
+                        },
+                        attrs: { disabled: _vm.sending, type: "button" },
+                        on: { click: _vm.AddToCart }
+                      },
+                      [
+                        !_vm.sending
+                          ? _c(
+                              "svg",
+                              {
+                                staticClass:
+                                  " transition duration-700 ease-in-out  h-5 w-5 ",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  fill: "none",
+                                  viewBox: "0 0 24 24",
+                                  stroke: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    d:
+                                      "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                  }
+                                })
+                              ]
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.sending
+                          ? _c(
+                              "svg",
+                              {
+                                staticClass:
+                                  "transition  ease-in-out  animate-spin h-5 w-5",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 20 20",
+                                  fill: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    d:
+                                      "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                  }
+                                })
+                              ]
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              " ml-2 pointer-events-none pointer-events-none"
+                          },
+                          [_vm._v(_vm._s(_vm.CartButtonName))]
+                        )
+                      ]
+                    )
+                  ]
                 )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "flex items-center  justify-end hidden lg:block "
-                },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "flex flex-inline justify-center items-center transition duration-1000 ease-in bg-yellow-400 hover:bg-yellow-600 focus:outline-none rounded-lg px-4 py-3 text-white font-semibold shadow uppercase",
-                      class: { "opacity-50 pointer-events-none": _vm.sending },
-                      attrs: { disabled: _vm.sending, type: "button" },
-                      on: { click: _vm.AddToCart }
-                    },
-                    [
-                      !_vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                " transition duration-700 ease-in-out  h-5 w-5 ",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d:
-                                    "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.sending
-                        ? _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "transition  ease-in-out  animate-spin h-5 w-5",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d:
-                                    "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                                }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("span", { staticClass: " ml-2 pointer-events-none" }, [
-                        _vm._v("Add to cart")
-                      ])
-                    ]
-                  )
-                ]
-              )
+              ])
             ],
             2
           ),
@@ -980,51 +981,12 @@ var render = function() {
                 { staticClass: "grid grid-cols-4 gap-2 flex justify-around" },
                 [
                   _c("div", { staticClass: "w-1/2 relative px-2 py-2" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "px-1 py-2 bg-white flex-1 border border-gray-200 rounded cursor-pointer",
-                        on: {
-                          click: function($event) {
-                            _vm.CartItem.Qty--
-                          }
-                        }
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "bx bxs-down-arrow text-xs text-primary pointer-events-none"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model.number",
-                          value: _vm.CartItem.Qty,
-                          expression: "CartItem.Qty",
-                          modifiers: { number: true }
-                        }
-                      ],
-                      staticClass: "rounded-r-none w-2/3 py-1 px-1 text-center",
-                      attrs: { type: "number", min: "1" },
-                      domProps: { value: _vm.CartItem.Qty },
+                    _c("button", {
+                      staticClass:
+                        "transition transform duration-500 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-minus bx-border font-semibold",
                       on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.CartItem,
-                            "Qty",
-                            _vm._n($event.target.value)
-                          )
-                        },
-                        blur: function($event) {
-                          return _vm.$forceUpdate()
+                        click: function($event) {
+                          _vm.CartItem.Qty--
                         }
                       }
                     }),
@@ -1033,46 +995,33 @@ var render = function() {
                       "span",
                       {
                         staticClass:
-                          "text-xs absolute text-semibold bottom-5 px-0 right-12 transition duration-500 ease-in-out ",
-                        class: {
-                          "text-green-400": _vm.ProductQuantity > 0,
-                          "text-red-700": _vm.ProductQuantity < 1
-                        }
+                          "px-5 py-4 bg-gray-50 text-red-500 cursor-pointer font-semibold"
                       },
-                      [_vm._v("  /stock " + _vm._s(_vm.ProductQuantity) + " ")]
+                      [_vm._v(_vm._s(_vm.CartItem.Qty))]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "px-1 py-2 bg-white border  border-gray-200 flex-1 rounded cursor-pointer",
-                        on: {
-                          click: function($event) {
-                            _vm.CartItem.Qty++
-                          }
+                    _c("button", {
+                      staticClass:
+                        "transition transform duration-300 ease-in focus:outline-none focus:scale-125 px-2 py-2 text-primary transition duration-700 ease-in-out transform focus:text-green-500 bg-white bx bx-plus bx-border font-semibold",
+                      on: {
+                        click: function($event) {
+                          _vm.CartItem.Qty++
                         }
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "bx bxs-up-arrow text-xs text-primary pointer-events-none"
-                        })
-                      ]
-                    )
+                      }
+                    })
                   ]),
                   _vm._v(" "),
                   _c(
                     "div",
                     {
-                      staticClass: "flex justify-end w-1/2 relative px-2 py-2 "
+                      staticClass: "flex justify-end w-1/2 relative  px-2 py-2 "
                     },
                     [
                       _c(
                         "button",
                         {
                           staticClass:
-                            "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                            "text-xs px-2 flex items-center transition transform  duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none focus:scale-125   rounded text-white font-normal tracking-wide cursor-pointer",
                           class: {
                             "opacity-50 pointer-events-none": _vm.sending
                           },
@@ -1085,7 +1034,7 @@ var render = function() {
                                 "svg",
                                 {
                                   staticClass:
-                                    "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                    "pointer-events-none transition duration-700 ease-in-out  h-4 w-4 ",
                                   attrs: {
                                     xmlns: "http://www.w3.org/2000/svg",
                                     fill: "none",
@@ -1094,21 +1043,15 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "svg",
-                                    {
-                                      staticClass: "h-4 w-4 fill-current mr-2",
-                                      attrs: { viewBox: "0 0 20 20" }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                        }
-                                      })
-                                    ]
-                                  )
+                                  _c("path", {
+                                    attrs: {
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round",
+                                      "stroke-width": "2",
+                                      d:
+                                        "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                    }
+                                  })
                                 ]
                               )
                             : _vm._e(),
@@ -1118,7 +1061,7 @@ var render = function() {
                                 "svg",
                                 {
                                   staticClass:
-                                    "transition  ease-in-out  animate-spin h-5 w-auto mr-1",
+                                    "pointer-events-none transition  ease-in-out  animate-spin h-4 w-4",
                                   attrs: {
                                     xmlns: "http://www.w3.org/2000/svg",
                                     viewBox: "0 0 20 20",
@@ -1126,28 +1069,27 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "svg",
-                                    {
-                                      staticClass: "h-6 w-6 fill-current mr-2",
-                                      attrs: { viewBox: "0 0 20 20" }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
-                                        }
-                                      })
-                                    ]
-                                  )
+                                  _c("path", {
+                                    attrs: {
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round",
+                                      "stroke-width": "2",
+                                      d:
+                                        "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                    }
+                                  })
                                 ]
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _c("span", { staticClass: "tracking-tighter" }, [
-                            _vm._v("Add To Cart")
-                          ])
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "tracking-tighter pointer-events-none"
+                            },
+                            [_vm._v(_vm._s(_vm.CartButtonName))]
+                          )
                         ]
                       )
                     ]

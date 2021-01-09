@@ -39,21 +39,31 @@ class CartController extends Controller
         ]);
   
         $SessionCartItem = session()->get('CartItems'); 
+        
         if($SessionCartItem){  
             
             $UpdateCartItem = $SessionCartItem;
+
             $existsAtKey =  array_search($request->id, array_column($UpdateCartItem, 'id'));
+            
             if($existsAtKey !== false ){
-                $UpdateCartItem[$existsAtKey]['Qty']++; 
+                
+                $UpdateCartItem[$existsAtKey]['Qty'] = $request->Qty; 
+
             }else{
+
                 $UpdateCartItem[] = $request->all();
+
             }
+
             session()->put('CartItems', $UpdateCartItem );
+
         }else{
+            
             $NewCartItem[] =  $request->all();
             session()->put('CartItems', $NewCartItem );
-        }
-        return back()->with('success', 'success ! Added to cart');
+        } 
+        return back()->with('success', ($request->Qty>1)?$request->Qty.' Items ':$request->Qty.' Item '.'added To cart');
  
     } 
  
@@ -68,16 +78,16 @@ class CartController extends Controller
     } 
   
     public function update(Request $request,$Type)
-    { 
+    {  
         if($Type == "update"){
 
-            session()->put('CartItems', $request->all() ); 
+            session()->put('CartItems', $request->all()); 
     
-            return back()->with('success', 'success ! cart updated ');
+            return back()->with('success', 'cart updated ');
   
         }else{ 
 
-            return back()->with('error', 'OPPS ! could not update cart');
+            return back()->with('error', 'could not update cart');
  
         }  
     } 
@@ -88,13 +98,13 @@ class CartController extends Controller
         unset($CartItems[$CartIndex]);
         $UpdatedCartItems = array_values($CartItems);
         session()->put('CartItems', $UpdatedCartItems ); 
-        return back()->with('success', 'Success ! Removed item ');
+        return back()->with('success', 'cart item removed ');
     } 
 
     public function CartEmpty()
     {  
         $CartItems = session()->forget('CartItems'); 
-        return back()->with('success', 'Success ! cart is clear ');
+        return back()->with('success', 'cart clear');
     } 
  
 }

@@ -150,7 +150,7 @@ var render = function() {
     "tr",
     {
       staticClass:
-        "rounded-lg text-xs text-gray-500  lg:hover:bg-white hover:shadow-lg flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 hover:shadow-2xl"
+        "group transition duration-500 ease-in-out transform rounded-lg text-xs text-gray-500  lg:hover:bg-white hover:shadow-lg flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 hover:shadow-2xl hover:bg-white  "
     },
     [
       _c(

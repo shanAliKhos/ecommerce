@@ -71,7 +71,7 @@ class SettingController extends Controller
             Setting::set($key, $setting);
         }
      
-        return back()->with('success', 'Successfull ! settings updated');
+        return back()->with('success', 'settings updated');
 
     }
     

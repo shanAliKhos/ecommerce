@@ -619,7 +619,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-2" }, [
+  return _c("div", { staticClass: "p-1" }, [
     _c(
       "div",
       {
@@ -657,17 +657,19 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "flex justify-center items-center h-64 pb-4 p-2" },
+              {
+                staticClass: "flex justify-center items-center w-auto h-64 mb-5"
+              },
               [
                 _c("img", {
                   staticClass:
-                    "w-auto h-56 bg-center bg-no-repeat bg-cover transition transform hover:scale-105  duration-500 ease-in-out hover:shadow-lg rounded-lg",
+                    "w-auto h-64 bg-center bg-no-repeat bg-cover transition transform duration-500 ease-in-out hover:shadow-lg rounded",
                   attrs: { src: _vm.ProductImage }
                 })
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "flex items-center px-4 py-1" }, [
+            _c("div", { staticClass: "flex items-center px-4  " }, [
               _c(
                 "p",
                 {
@@ -679,7 +681,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "flex px-4 py-1" }, [
+            _c("div", { staticClass: "flex px-4 " }, [
               _c(
                 "p",
                 { staticClass: "font-semibold text-red-500 text-normal" },

@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['atTopOfPage'],
   computed: {
     IsAtTop: function IsAtTop() {
-      return this.atTopOfPage ? 'scale-100 md:scale-100' : 'scale-50  md:scale-50';
+      return this.atTopOfPage ? 'scale-100  sm:scale-100 md:scale-100 ' : 'scale-50  sm:scale-50  md:scale-50';
     }
   }
 });

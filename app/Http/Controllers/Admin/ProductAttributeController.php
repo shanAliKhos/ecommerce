@@ -138,7 +138,7 @@ class ProductAttributeController extends Controller
 
         }     
         
-      return back()->with('success','success ! attribute updated');
+      return back()->with('success','attribute updated');
 
     }
 
@@ -147,6 +147,6 @@ class ProductAttributeController extends Controller
     {
         $ProductAttribute->delete();
 
-        return back()->with('success','success ! Product attribute removed');
+        return back()->with('success','Product attribute removed');
     }
 }

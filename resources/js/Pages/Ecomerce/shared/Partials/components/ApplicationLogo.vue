@@ -8,8 +8,8 @@ props:['atTopOfPage'],
     computed:{
             IsAtTop() {
                 return this.atTopOfPage
-                            ? 'scale-100 md:scale-100'
-                            : 'scale-50  md:scale-50' 
+                            ? 'scale-100  sm:scale-100 md:scale-100 '
+                            : 'scale-50  sm:scale-50  md:scale-50' 
             },
  
     }, 

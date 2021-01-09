@@ -134,7 +134,7 @@ class ProductController extends Controller
     
             } 
           
-            return redirect()->route('admin.product.index')->with('success', 'Successfull ! Product Created');            
+            return redirect()->route('admin.product.index')->with('success', 'Product Created');            
 
         } catch (\Throwable $th) { 
             return back()->with('error','OPPS fail to store in database, Please contact support team ');
@@ -307,7 +307,7 @@ class ProductController extends Controller
             $Product->skuds_options()->sync([]);                
         } 
 
-        return back()->with('success', 'Successfull ! Product updated');
+        return back()->with('success', 'Product updated');
     } 
 
     public function destroy(Product $Product)

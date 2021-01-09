@@ -1,7 +1,7 @@
 <template>
     <inertia-link :href="route('cart.index')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group">
 
-        <span class="transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-8 h-8" :class="IsAtTop"></span>
+        <span class="transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-7 h-7" :class="IsAtTop"></span>
         <span class="text-white border-2 border-white shadow  absolute py-auto  px-2 my-0 mx-1 rounded-full" :class="{'bg-v-green':CountCartItems>0,'bg-red-400':CountCartItems === 0 }" >{{CountCartItems}}</span>
 
     </inertia-link>

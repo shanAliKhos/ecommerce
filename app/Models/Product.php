@@ -20,6 +20,8 @@ class Product extends Model
     protected $casts = [
         'quantity'  =>  'integer',
         'brand_id'  =>  'integer',
+        'sale_price'  =>  'integer',
+        'regular_price'  =>  'integer',
         'is_active'    =>  'boolean',
         'is_featured'  =>  'boolean'
     ];
@@ -27,8 +29,47 @@ class Product extends Model
     protected $appends = [
         'mainphoto_url',
         'current_price',
+        'on_sale',
+        'label',
     ];
 
+
+    public function getLabelAttribute()
+    { 
+        if($this->sale_price > 0){ 
+    
+            $lable=[
+                'color'=>'bg-orange-500',
+                'title'=>'-'.round(( ($this->regular_price - $this->sale_price) / $this->regular_price) * 100). ' %',
+                'active'=>true,                
+                ]; 
+        }else if($this->is_featured){                     
+ 
+            $lable=[
+                'color'=>'bg-blue-500',
+                'title'=>'Trend',
+                'active'=>true,                
+                ];               
+            
+        }else{
+ 
+            $lable=[
+                'color'=>'bg-green-500',
+                'title'=>'new',
+                'active'=>true,                
+                ];            
+
+        }  
+        
+        return $lable;        
+
+      
+    }
+
+    public function getOnSaleAttribute()
+    { 
+        return $this->sale_price > 0;
+    }
 
     public function getMainphotoUrlAttribute()
     { 

@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['atTopOfPage'],
   computed: {
     IsAtTop: function IsAtTop() {
-      return this.atTopOfPage ? 'scale-100 md:scale-100' : 'scale-50  md:scale-50';
+      return this.atTopOfPage ? 'scale-100  sm:scale-100 md:scale-100 ' : 'scale-50  sm:scale-50  md:scale-50';
     }
   }
 });
@@ -456,7 +456,7 @@ var render = function() {
     [
       _c("span", {
         staticClass:
-          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-8 h-8",
+          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-7 h-7",
         class: _vm.IsAtTop
       }),
       _vm._v(" "),
@@ -546,7 +546,7 @@ var render = function() {
               [
                 _c("span", {
                   staticClass:
-                    "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover",
+                    "w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover",
                   class: _vm.IsAtTop
                 })
               ]
@@ -562,7 +562,7 @@ var render = function() {
               [
                 _c("span", {
                   staticClass:
-                    "w-8 h-8 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover",
+                    "w-7 h-7 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover",
                   class: _vm.IsAtTop
                 })
               ]
@@ -582,7 +582,7 @@ var render = function() {
               "svg",
               {
                 staticClass:
-                  "text-gray-400 hover:text-gray-500 text-xs w-8 h-8",
+                  "text-gray-400 hover:text-gray-500 text-xs w-7 h-7",
                 class: _vm.IsAtTop,
                 attrs: {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -639,7 +639,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -675,7 +675,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -715,7 +715,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-8 h-8 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover",
+                          "w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -743,7 +743,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "w-8 h-8 text-gray-500",
+                            staticClass: "w-7 h-7 text-gray-500",
                             class: _vm.IsAtTop,
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",

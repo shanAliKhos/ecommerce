@@ -1258,14 +1258,14 @@ var render = function() {
                         {
                           key: ProductSkuIndex,
                           staticClass:
-                            "w-full bg-gray-100 bg-white shadow mb-4 rounded shadow"
+                            "w-full md:w-1/2  bg-gray-100 bg-white shadow mb-4 rounded shadow"
                         },
                         [
                           _c(
                             "div",
                             {
                               staticClass:
-                                "px-2 py-2 rounded-lg bg-gray-50 text-blue-700 font-semibold"
+                                "px-2 py-2 rounded-lg bg-gray-50 text-blue-800 font-semibold"
                             },
                             [_vm._v(_vm._s(ProductSku.sku))]
                           ),
@@ -1322,7 +1322,7 @@ var render = function() {
                                 },
                                 [
                                   _c("text-input", {
-                                    staticClass: "w-full md:w-1/2 px-2",
+                                    staticClass: "w-full px-2",
                                     attrs: {
                                       type: "number",
                                       autocomplete: "sku Quantity",
@@ -1342,7 +1342,7 @@ var render = function() {
                                   }),
                                   _vm._v(" "),
                                   _c("text-input", {
-                                    staticClass: "w-full md:w-1/2  px-2",
+                                    staticClass: "w-full  px-2",
                                     attrs: {
                                       type: "number",
                                       autocomplete: "price",

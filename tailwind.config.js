@@ -30,12 +30,16 @@ module.exports = {
             }, 
             keyframes: {
                 wiggle: {
-                  '0%, 100%': { transform: 'rotate(-2deg)' },
-                  '50%': { transform: 'rotate(2deg)' },
-                }
+                  '0%, 100%': { transform: 'translate(-2px)' },
+                  '50%': { transform: 'translate(2px)' },
+                },
+                bounceIn: {
+                  '0%, 100%': { transform:'scale(2)' }, 
+                },
             },
             animation: {
-                wiggle: 'wiggle 2s ease-in-out infinite',
+                wiggle: 'wiggle 1s ease-in-out infinite',
+                bounceIn: 'bounceIn 1s ease-in-out 1',
             },
             outline: { 
                 red: ['2px dotted #f05252', '3px'],

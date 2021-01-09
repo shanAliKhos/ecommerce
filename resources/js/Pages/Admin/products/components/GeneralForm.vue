@@ -223,9 +223,9 @@
                     <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Possible variations</p>
 
                     <div class="flex flex-wrap ">
-                        <div class="w-full bg-gray-100 bg-white shadow mb-4 rounded shadow" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
+                        <div class="w-full md:w-1/2  bg-gray-100 bg-white shadow mb-4 rounded shadow" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
 
-                            <div class="px-2 py-2 rounded-lg bg-gray-50 text-blue-700 font-semibold">{{ProductSku.sku}}</div>
+                            <div class="px-2 py-2 rounded-lg bg-gray-50 text-blue-800 font-semibold">{{ProductSku.sku}}</div>
  
                             <div class="flex flex-wrap mb-2 px-2 py-2">
                 
@@ -237,7 +237,7 @@
 
                                     <text-input  
                                         type="number"  
-                                        class="w-full md:w-1/2 px-2" 
+                                        class="w-full px-2" 
                                         v-model="ProductSku.qty" 
                                         autocomplete="sku Quantity" 
                                         :error="$page.errors.sku_qty"
@@ -248,7 +248,7 @@
 
                                     <text-input   
                                         type="number"  
-                                        class="w-full md:w-1/2  px-2" 
+                                        class="w-full  px-2" 
                                         v-model="ProductSku.price" 
                                         autocomplete="price" 
                                         :error="$page.errors.sku_price"

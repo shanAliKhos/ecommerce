@@ -60,7 +60,7 @@ class CategoryController extends Controller
         $Category->is_active = $request->is_active?1:0; 
         $Category->save();
 
-        return redirect()->route('admin.category.index')->with('success','success ! Category Created');
+        return redirect()->route('admin.category.index')->with('success','Category created');
         
     }
  
@@ -110,7 +110,7 @@ class CategoryController extends Controller
             'menu' => $request->menu?1:0, 
         ]);                
 
-        return redirect()->route('admin.category.index')->with('success','success ! Category updated'); 
+        return redirect()->route('admin.category.index')->with('success','Category updated'); 
 
     }
  
