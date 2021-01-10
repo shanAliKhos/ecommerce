@@ -579,7 +579,7 @@ var render = function() {
     [
       _c(
         "div",
-        { staticClass: "py-10 flex flex-col sm:flex-row justify-between" },
+        { staticClass: "py-4 flex flex-col sm:flex-row justify-between" },
         [
           _c("div", {
             staticClass: "flex items-center justify-center sm:justify-start"
@@ -646,7 +646,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex flex-wrap justify-between pb-5 -mx-3" },
+        { staticClass: "flex flex-wrap justify-between mb-2" },
         _vm._l(_vm.Products, function(Product, index) {
           return _c("shop-product", {
             key: index,

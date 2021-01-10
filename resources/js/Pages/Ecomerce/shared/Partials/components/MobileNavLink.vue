@@ -1,15 +1,34 @@
 <template> 
-        <inertia-link :href="href" :class="IsActiveLink" class="flex flex-col justify-center item-center antialiased text-center focus:outline-none md:cursor-pointer text-xs appearance-none ">
-            <slot></slot>
-        </inertia-link>     
+  <button :disabled="loading" v-bind="$attrs" :class="IsActiveLink" @click="send" class="flex flex-col justify-center item-center antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50"> 
+    <svg :class="{'animate-spin':loading}" class="transition ease-in-out pointer-events-none h-6 w-auto fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path v-if="loading"   fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+        <slot name="icon" v-else></slot>
+    </svg>  
+    <slot />
+  </button> 
 </template>
 
 <script>
     export default {
-        props: ['href', 'active'],
-
+        data() {
+            return {
+                loading:false,
+            }
+        },
+        props: ['href', 'active'], 
+        methods: {
+          send(){  
+            const self=this;
+            self.$inertia.visit(this.href, {
+                method: 'get', 
+                onStart:  () => self.loading = true,  
+                onSuccess:  () => self.loading = false,  
+            })            
+ 
+             
+          },
+        },
         computed: {
-       
             IsActiveLink() {
                 return this.active
                             ? 'text-orange-500'

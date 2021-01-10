@@ -3,7 +3,7 @@
     
     <app-header></app-header>
      
-    <main class="lg:mt-2 mt-2 container mx-auto my-auto px-5 md:px-2"> 
+    <main class="container mx-auto my-auto "> 
         <transition name="slide-fade">
 
             <slot></slot>

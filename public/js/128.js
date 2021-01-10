@@ -15,8 +15,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      loading: false
+    };
+  },
   props: ['href', 'active'],
+  methods: {
+    send: function send() {
+      var self = this;
+      self.$inertia.visit(this.href, {
+        method: 'get',
+        onStart: function onStart() {
+          return self.loading = true;
+        },
+        onSuccess: function onSuccess() {
+          return self.loading = false;
+        }
+      });
+    }
+  },
   computed: {
     IsActiveLink: function IsActiveLink() {
       return this.active ? 'text-orange-500' : '';
@@ -42,14 +65,49 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "inertia-link",
-    {
-      staticClass:
-        "flex flex-col justify-center item-center antialiased text-center focus:outline-none md:cursor-pointer text-xs appearance-none ",
-      class: _vm.IsActiveLink,
-      attrs: { href: _vm.href }
-    },
-    [_vm._t("default")],
+    "button",
+    _vm._b(
+      {
+        staticClass:
+          "flex flex-col justify-center item-center antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50",
+        class: _vm.IsActiveLink,
+        attrs: { disabled: _vm.loading },
+        on: { click: _vm.send }
+      },
+      "button",
+      _vm.$attrs,
+      false
+    ),
+    [
+      _c(
+        "svg",
+        {
+          staticClass:
+            "transition ease-in-out pointer-events-none h-6 w-auto fill-current ",
+          class: { "animate-spin": _vm.loading },
+          attrs: {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "currentColor"
+          }
+        },
+        [
+          _vm.loading
+            ? _c("path", {
+                attrs: {
+                  "fill-rule": "evenodd",
+                  d:
+                    "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                  "clip-rule": "evenodd"
+                }
+              })
+            : _vm._t("icon")
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
     2
   )
 }

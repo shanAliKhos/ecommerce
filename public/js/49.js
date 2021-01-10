@@ -302,8 +302,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -426,31 +424,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container relative" }, [
+  return _c("div", { staticClass: "px-2 py-2" }, [
     _c(
       "div",
       {
         staticClass:
-          "pt-16 pb-24 flex flex-col lg:flex-row justify-between -mx-5"
+          "flex flex-col lg:flex-row justify-between md:mx-5 md:py-5 md:mt-5"
       },
       [
         _c(
           "div",
           {
             staticClass:
-              "lg:1/2 flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between px-5"
+              "lg:w-1/2 flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-around"
           },
           [
             _c(
               "div",
               {
                 staticClass:
-                  "sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col"
+                  "sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col justify-between "
               },
               [
                 _c("div", {
                   staticClass:
-                    "w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer  pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50",
+                    "w-20 h-20 bg-center bg-no-repeat bg-cover cursor-pointer border-2 border-gray-300 bg-gray-50 mt-2 md:mt-0",
                   style:
                     "background-image:url('" +
                     this.$page.Product.mainphoto_url +
@@ -466,7 +464,7 @@ var render = function() {
                   return _c("div", {
                     key: n + 1,
                     staticClass:
-                      "w-28 h-28 my-3 bg-center bg-no-repeat bg-cover cursor-pointer pb-5 mr-3 sm:pr-0 border-2 border-gray-300 bg-gray-50",
+                      "w-20 h-20  bg-center bg-no-repeat bg-cover cursor-pointer  border-2 border-gray-300 bg-gray-50 mt-2 ",
                     style:
                       "background-image:url('./../../img/product/product (" +
                       Math.floor(Math.random() * 40) +
@@ -486,29 +484,20 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "w-full sm:w-96 lg:w-80 xl:w-90 relative pb-5 sm:pb-0"
+                  "w-full relative bg-pink-100 border border-grey md:mr-5 flex items-center justify-center"
               },
               [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "bg-v-pink border border-grey relative h-80 sm:h-94 xl:h-96 rounded flex items-center justify-center"
-                  },
-                  [
-                    _c("div", {
-                      staticClass:
-                        "w-full h-full my-6  bg-center bg-no-repeat bg-cover",
-                      style: "background-image:" + _vm.selectedImage + ""
-                    })
-                  ]
-                )
+                _c("div", {
+                  staticClass:
+                    "flex items-center justify-between w-96 h-96 bg-center bg-no-repeat bg-cover",
+                  style: "background-image:" + _vm.selectedImage + ""
+                })
               ]
             )
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "lg:w-1/2 pt-5 lg:pt-0 px-5" }, [
+        _c("div", { staticClass: "lg:w-1/2 pt-5 lg:pt-0" }, [
           _c("div", { staticClass: "product-title" }, [
             _c("div", { staticClass: "border-b border-grey-dark mb-8" }, [
               _c("div", { staticClass: "flex items-center" }, [

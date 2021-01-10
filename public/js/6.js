@@ -292,7 +292,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "main",
-        { staticClass: "lg:mt-2 mt-2 container mx-auto my-auto px-5 md:px-2" },
+        { staticClass: "container mx-auto my-auto " },
         [
           _c(
             "transition",
@@ -339,7 +339,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full",
+        "xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full px-2",
       class: { "fixed scrolled": !_vm.view.atTopOfPage }
     },
     [
