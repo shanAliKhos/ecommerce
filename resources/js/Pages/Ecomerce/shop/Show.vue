@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <shop-product-detail :Product="Product"></shop-product-detail>
+        <shop-product-detail></shop-product-detail>
+        
         <related-products-slider></related-products-slider> 
     </div> 
 </template>
@@ -21,12 +22,7 @@ export default {
         RelatedProductsSlider,
     }, 
 
-    computed: {
-        Product(){
-            return this.$page.Product;
-        }, 
-        
-    },
+
     mounted() {
         const self = this
         self.$root.$emit('sidebar-close');     

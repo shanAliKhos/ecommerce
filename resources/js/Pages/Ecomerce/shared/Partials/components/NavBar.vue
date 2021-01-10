@@ -17,7 +17,7 @@
                 </div>
             </div>
             <button @click="back" type="button" class="lg:hidden">
-                <svg  class="text-gray-400 hover:text-gray-500 text-xs w-7 h-7" :class="IsAtTop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg  class=" hover:text-gray-800 text-xs w-7 h-7" :class="IsAtTop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>                       
             </button>
@@ -58,13 +58,13 @@
                 <div class="ml-3 relative">
                     <dropdown align="right" width="48">
                         <template #trigger> 
-                            <svg :class="IsAtTop" class="w-7 h-7 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg :class="IsAtTop" class="w-7 h-7 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                             </svg>        
                         </template>
 
                         <template #content> 
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs ">
                                 Menu
                             </div>  
                             <div class="border-t border-gray-100"></div>
@@ -81,7 +81,7 @@
                                     Logout
                                 </dropdown-link>
                             <div class="border-t border-gray-100"></div>
-                            <div v-if="$page.user" class="block px-4 py-2 text-xs text-gray-400">
+                            <div v-if="$page.user" class="block px-4 py-2 text-xs ">
                                 {{$page.user.name}} is logged In
                             </div>  
                             
@@ -90,7 +90,7 @@
                 </div>             
             </div>
         </div>
-        <div class="flex justify-center text-gray-400 font-semibold" >
+        <div class="flex justify-center  font-semibold" >
             <ul class="list-reset flex items-center lg:ml-8">
             
                 <cus-nav-link 

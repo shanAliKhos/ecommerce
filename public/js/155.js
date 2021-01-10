@@ -18,6 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
  // import ProductAttributes from './components/ProductAttributes'  
 
 
@@ -32,11 +33,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     ShopProductDetail: _components_ShowProduct__WEBPACK_IMPORTED_MODULE_1__["default"],
     RelatedProductsSlider: _shared_Slider_RelatedProductsSlider__WEBPACK_IMPORTED_MODULE_2__["default"]
-  },
-  computed: {
-    Product: function Product() {
-      return this.$page.Product;
-    }
   },
   mounted: function mounted() {
     var self = this;
@@ -64,11 +60,7 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "container" },
-    [
-      _c("shop-product-detail", { attrs: { Product: _vm.Product } }),
-      _vm._v(" "),
-      _c("related-products-slider")
-    ],
+    [_c("shop-product-detail"), _vm._v(" "), _c("related-products-slider")],
     1
   )
 }

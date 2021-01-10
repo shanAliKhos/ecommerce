@@ -301,7 +301,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container border-t border-grey-dark mb-20 lg:mb-0" },
+    { staticClass: "h-screen border-t border-grey-dark mb-20 lg:mb-0" },
     [
       _c(
         "div",

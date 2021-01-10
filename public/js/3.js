@@ -301,7 +301,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     classes: function classes() {
-      var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
+      var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
       var is_atTop = this.atTopOfPage ? 'scale-100 md:scale-100' : 'fixed top-0 scale-75 md:scale-75';
       return is_active.concat(is_atTop);
     },
@@ -451,7 +451,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group",
+        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 ml-8 group",
       attrs: { href: _vm.route("cart.index") }
     },
     [
@@ -582,8 +582,7 @@ var render = function() {
             _c(
               "svg",
               {
-                staticClass:
-                  "text-gray-400 hover:text-gray-500 text-xs w-7 h-7",
+                staticClass: " hover:text-gray-800 text-xs w-7 h-7",
                 class: _vm.IsAtTop,
                 attrs: {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -744,7 +743,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "w-7 h-7 text-gray-500",
+                            staticClass: "w-7 h-7 ",
                             class: _vm.IsAtTop,
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
@@ -773,17 +772,11 @@ var render = function() {
                     key: "content",
                     fn: function() {
                       return [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "block px-4 py-2 text-xs text-gray-400"
-                          },
-                          [
-                            _vm._v(
-                              "\n                            Menu\n                        "
-                            )
-                          ]
-                        ),
+                        _c("div", { staticClass: "block px-4 py-2 text-xs " }, [
+                          _vm._v(
+                            "\n                            Menu\n                        "
+                          )
+                        ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "border-t border-gray-100" }),
                         _vm._v(" "),
@@ -831,10 +824,7 @@ var render = function() {
                         _vm.$page.user
                           ? _c(
                               "div",
-                              {
-                                staticClass:
-                                  "block px-4 py-2 text-xs text-gray-400"
-                              },
+                              { staticClass: "block px-4 py-2 text-xs " },
                               [
                                 _vm._v(
                                   "\n                            " +
@@ -858,54 +848,50 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "flex justify-center text-gray-400 font-semibold" },
-      [
-        _c(
-          "ul",
-          { staticClass: "list-reset flex items-center lg:ml-8" },
-          [
-            _c(
-              "cus-nav-link",
-              {
-                attrs: {
-                  href: _vm.route("welcome"),
-                  active: _vm.$page.currentRouteName == "welcome",
-                  atTopOfPage: _vm.atTopOfPage
-                }
-              },
-              [_vm._v("Home")]
-            ),
-            _vm._v(" "),
-            _c(
-              "cus-nav-link",
-              {
-                attrs: {
-                  href: _vm.route("shop.index"),
-                  active: _vm.$page.currentRouteName == "shop.index",
-                  atTopOfPage: _vm.atTopOfPage
-                }
-              },
-              [_vm._v("Shop")]
-            ),
-            _vm._v(" "),
-            _c(
-              "cus-nav-link",
-              {
-                attrs: {
-                  href: _vm.route("blog.index"),
-                  active: _vm.$page.currentRouteName == "blog.index",
-                  atTopOfPage: _vm.atTopOfPage
-                }
-              },
-              [_vm._v("Blog")]
-            )
-          ],
-          1
-        )
-      ]
-    )
+    _c("div", { staticClass: "flex justify-center  font-semibold" }, [
+      _c(
+        "ul",
+        { staticClass: "list-reset flex items-center lg:ml-8" },
+        [
+          _c(
+            "cus-nav-link",
+            {
+              attrs: {
+                href: _vm.route("welcome"),
+                active: _vm.$page.currentRouteName == "welcome",
+                atTopOfPage: _vm.atTopOfPage
+              }
+            },
+            [_vm._v("Home")]
+          ),
+          _vm._v(" "),
+          _c(
+            "cus-nav-link",
+            {
+              attrs: {
+                href: _vm.route("shop.index"),
+                active: _vm.$page.currentRouteName == "shop.index",
+                atTopOfPage: _vm.atTopOfPage
+              }
+            },
+            [_vm._v("Shop")]
+          ),
+          _vm._v(" "),
+          _c(
+            "cus-nav-link",
+            {
+              attrs: {
+                href: _vm.route("blog.index"),
+                active: _vm.$page.currentRouteName == "blog.index",
+                atTopOfPage: _vm.atTopOfPage
+              }
+            },
+            [_vm._v("Blog")]
+          )
+        ],
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = []

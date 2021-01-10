@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     classes: function classes() {
-      var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  text-gray-300 hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
+      var is_active = this.active ? 'block font-semibold text-orange-500 border-b-4 border-orange-500 px-2' : 'hover:-translate-x-1 block font-semibold  hover:text-orange-300  border-b-4 hover:border-orange-300 px-2';
       var is_atTop = this.atTopOfPage ? 'scale-100 md:scale-100' : 'fixed top-0 scale-75 md:scale-75';
       return is_active.concat(is_atTop);
     },

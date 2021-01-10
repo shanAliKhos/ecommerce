@@ -116,7 +116,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 ml-8 group",
+        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 ml-8 group",
       attrs: { href: _vm.route("cart.index") }
     },
     [

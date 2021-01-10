@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     handleScroll: function handleScroll() {
       // alert(window.pageYOffset);
-      if (window.pageYOffset > 400) {
+      if (window.pageYOffset > 600) {
         if (this.view.atTopOfPage) this.view.atTopOfPage = false;
       } else {
         if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
@@ -286,7 +286,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "font-serif select-none" },
+    { staticClass: "font-serif select-none text-gray-600" },
     [
       _c("app-header"),
       _vm._v(" "),

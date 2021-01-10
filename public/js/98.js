@@ -109,23 +109,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass:
-        "min-h-screen flex flex-col items-center justify-center bg-gray-300"
-    },
+    { staticClass: "flex flex-col items-center justify-center " },
     [
       _c(
         "div",
         {
           staticClass:
-            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10  rounded-md w-full max-w-md"
+            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10  rounded-md w-full max-w-md mt-20 py-10"
         },
         [
           _c(
             "div",
             {
               staticClass:
-                "font-medium self-center text-xl sm:text-2xl uppercase text-primary"
+                "font-medium self-center text-xl sm:text-2xl uppercase text-orange-500"
             },
             [_vm._v("Thank You For Shopping !")]
           ),
@@ -134,7 +131,10 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "flex justify-center items-center mt-6" },
+            {
+              staticClass:
+                "py-2 shadow hover:shadow-2xl hover:border-gray-200 flex justify-center items-center mt-6"
+            },
             [
               _c(
                 "inertia-link",
@@ -193,7 +193,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mt-10" }, [
-      _c("p", { staticClass: "lead p-10" }, [
+      _c("p", { staticClass: "lead p-10 text-gray-500" }, [
         _c("strong", [_vm._v("Please check your email")]),
         _vm._v(" for further.")
       ])

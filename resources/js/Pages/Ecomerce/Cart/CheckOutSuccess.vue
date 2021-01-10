@@ -1,12 +1,12 @@
 <template>
-<div class="min-h-screen flex flex-col items-center justify-center bg-gray-300">
-  <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10  rounded-md w-full max-w-md">
-    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-primary">Thank You For Shopping !</div> 
+<div class="flex flex-col items-center justify-center ">
+  <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10  rounded-md w-full max-w-md mt-20 py-10">
+    <div class="font-medium self-center text-xl sm:text-2xl uppercase text-orange-500">Thank You For Shopping !</div> 
     <div class="mt-10">
-        <p class="lead p-10"><strong>Please check your email</strong> for further.</p> 
+        <p class="lead p-10 text-gray-500"><strong>Please check your email</strong> for further.</p> 
     </div>
 
-    <div class="flex justify-center items-center mt-6">
+    <div class="py-2 shadow hover:shadow-2xl hover:border-gray-200 flex justify-center items-center mt-6">
       <inertia-link preserve-scroll  :href="route('shop.index')" target="_blank" class="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">
         <span> 
         <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">

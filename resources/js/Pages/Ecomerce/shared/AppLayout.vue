@@ -1,5 +1,5 @@
 <template>
-<div class="font-serif select-none"> 
+<div class="font-serif select-none text-gray-600"> 
     
     <app-header></app-header>
      
