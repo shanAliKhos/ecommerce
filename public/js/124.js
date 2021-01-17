@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[124],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12,31 +12,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// import DashboardNavigation from './Partials/DashboardNavigation'
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    DashboardNavigation: function DashboardNavigation() {
-      return __webpack_require__.e(/*! import() */ 54).then(__webpack_require__.bind(null, /*! ./Partials/DashboardNavigation */ "./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue"));
+  props: ['atTopOfPage'],
+  computed: {
+    IsAtTop: function IsAtTop() {
+      return this.atTopOfPage ? 'scale-100  sm:scale-100 md:scale-100 ' : 'scale-50  sm:scale-50  md:scale-50';
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90&":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90& ***!
-  \***************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -48,17 +38,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container border-t border-grey-dark" }, [
-    _c(
-      "div",
-      {
-        staticClass:
-          "pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24 flex flex-col lg:flex-row justify-between"
-      },
-      [_c("dashboard-navigation"), _vm._v(" "), _vm._t("default")],
-      2
-    )
-  ])
+  return _c("div", {
+    staticClass:
+      "transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo transition duration-300 ease-in-out transform w-20 h-20",
+    class: _vm.IsAtTop
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -179,18 +163,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue":
-/*!**************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue ***!
-  \**************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue ***!
+  \************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AcountsLayout.vue?vue&type=template&id=3d797f90& */ "./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90&");
-/* harmony import */ var _AcountsLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AcountsLayout.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApplicationLogo.vue?vue&type=template&id=f92e5d00& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&");
+/* harmony import */ var _ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApplicationLogo.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -199,9 +183,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _AcountsLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -211,38 +195,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/AcountsLayout.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AcountsLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./AcountsLayout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AcountsLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApplicationLogo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90& ***!
-  \*********************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./AcountsLayout.vue?vue&type=template&id=3d797f90& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/AcountsLayout.vue?vue&type=template&id=3d797f90&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApplicationLogo.vue?vue&type=template&id=f92e5d00& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AcountsLayout_vue_vue_type_template_id_3d797f90___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

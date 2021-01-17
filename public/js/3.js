@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     ApplicationLogo: function ApplicationLogo() {
-      return __webpack_require__.e(/*! import() */ 189).then(__webpack_require__.bind(null, /*! ./components/ApplicationLogo */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue"));
+      return __webpack_require__.e(/*! import() */ 190).then(__webpack_require__.bind(null, /*! ./components/ApplicationLogo */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue"));
     }
   },
   computed: {

@@ -323,15 +323,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1443,72 +1434,6 @@ var render = function() {
               "div",
               { staticClass: "md:flex-none flex fixed bottom-0 right-0 z-50" },
               [
-                _vm.$page.Product
-                  ? _c(
-                      "div",
-                      {
-                        staticClass:
-                          "flex items-center md:justify-start px-2 py-2"
-                      },
-                      [
-                        _c(
-                          "inertia-link",
-                          {
-                            staticClass:
-                              "w-full flex items-center justify-center transition duration-700 ease-in-out transform  bg-yellow-400  hover:bg-yellow-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex",
-                            attrs: {
-                              href: _vm.route(
-                                "shop.show",
-                                _vm.$page.Product.slug
-                              ),
-                              type: "button",
-                              as: "button"
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\r\n                            SHOW PRODUCTS\r\n                            "
-                            ),
-                            _c(
-                              "svg",
-                              {
-                                staticClass:
-                                  "transition duration-700 ease-in-out  h-5 w-5 ml-2",
-                                attrs: {
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  fill: "none",
-                                  viewBox: "0 0 24 24",
-                                  stroke: "currentColor"
-                                }
-                              },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    "stroke-linecap": "round",
-                                    "stroke-linejoin": "round",
-                                    "stroke-width": "2",
-                                    d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("path", {
-                                  attrs: {
-                                    "stroke-linecap": "round",
-                                    "stroke-linejoin": "round",
-                                    "stroke-width": "2",
-                                    d:
-                                      "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                  }
-                                })
-                              ]
-                            )
-                          ]
-                        )
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
                 _c(
                   "div",
                   {

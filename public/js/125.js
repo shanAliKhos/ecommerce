@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[125],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12,21 +12,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['atTopOfPage'],
+  data: function data() {
+    return {
+      loading: false
+    };
+  },
+  props: ['href', 'active'],
+  methods: {
+    send: function send() {
+      var self = this;
+      self.$inertia.visit(this.href, {
+        method: 'get',
+        onStart: function onStart() {
+          return self.loading = true;
+        },
+        onSuccess: function onSuccess() {
+          return self.loading = false;
+        }
+      });
+    }
+  },
   computed: {
-    IsAtTop: function IsAtTop() {
-      return this.atTopOfPage ? 'scale-100  sm:scale-100 md:scale-100 ' : 'scale-50  sm:scale-50  md:scale-50';
+    IsActiveLink: function IsActiveLink() {
+      return this.active ? 'text-orange-500' : '';
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -38,11 +64,52 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {
-    staticClass:
-      "transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo transition duration-300 ease-in-out transform w-20 h-20",
-    class: _vm.IsAtTop
-  })
+  return _c(
+    "button",
+    _vm._b(
+      {
+        staticClass:
+          "antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50",
+        class: _vm.IsActiveLink,
+        attrs: { disabled: _vm.loading },
+        on: { click: _vm.send }
+      },
+      "button",
+      _vm.$attrs,
+      false
+    ),
+    [
+      _c(
+        "svg",
+        {
+          staticClass:
+            "transition ease-in-out pointer-events-none h-7 w-auto fill-current ",
+          class: { "animate-spin": _vm.loading },
+          attrs: {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "currentColor"
+          }
+        },
+        [
+          _vm.loading
+            ? _c("path", {
+                attrs: {
+                  "fill-rule": "evenodd",
+                  d:
+                    "M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z",
+                  "clip-rule": "evenodd"
+                }
+              })
+            : _vm._t("icon")
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -163,17 +230,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue":
-/*!************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue ***!
-  \************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApplicationLogo.vue?vue&type=template&id=f92e5d00& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&");
-/* harmony import */ var _ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApplicationLogo.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&");
+/* harmony import */ var _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
+/* harmony import */ var _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileNavLink.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -183,9 +250,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -195,38 +262,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApplicationLogo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&":
-/*!*******************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00& ***!
-  \*******************************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60& ***!
+  \*****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApplicationLogo.vue?vue&type=template&id=f92e5d00& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/ApplicationLogo.vue?vue&type=template&id=f92e5d00&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./MobileNavLink.vue?vue&type=template&id=7fcbca60& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue?vue&type=template&id=7fcbca60&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApplicationLogo_vue_vue_type_template_id_f92e5d00___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileNavLink_vue_vue_type_template_id_7fcbca60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

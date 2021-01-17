@@ -63,6 +63,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['Product', 'ProductIndex'],
@@ -346,7 +353,7 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass:
-                    "transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border-blue-500 hover:border-transparent rounded inline-flex items-center mr-3",
+                    "transition duration-500 ease-in-out bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border-blue-500 hover:border-transparent rounded inline-flex items-center mr-2",
                   attrs: {
                     href: _vm.route("admin.product.edit", _vm.Product.id)
                   }
@@ -371,6 +378,49 @@ var render = function() {
                           "stroke-width": "2",
                           d:
                             "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "transition duration-500 ease-in-out bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-1 px-1 border-blue-500 hover:border-transparent rounded inline-flex justify-center items-center",
+                  attrs: { href: _vm.route("shop.show", _vm.Product.slug) }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "w-auto h-8",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                         }
                       })
                     ]

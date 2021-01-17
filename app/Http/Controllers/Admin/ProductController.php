@@ -181,6 +181,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $Product)
     {
  
+        
         $this->validate($request, [
             "name" => 'required|string|min:2|max:255',
             "sku" => ($request->is_variable>0)?'required':'|string|min:2|max:255',
@@ -284,9 +285,7 @@ class ProductController extends Controller
             foreach ($Product->variations as $attrkey => $variation) {
                 $variation->attribute_options()->sync([]);
             }
-   
-            $Product->Skuds()->sync([]);
-            $Product->skuds_options()->sync([]);
+            $Product->Skuds()->sync([]); 
         }
 
         return back()->with('success', 'Product updated');

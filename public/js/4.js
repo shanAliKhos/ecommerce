@@ -89,10 +89,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     NavBar: function NavBar() {
-      return __webpack_require__.e(/*! import() */ 50).then(__webpack_require__.bind(null, /*! ./components/NavBar */ "./resources/js/Pages/Ecomerce/shared/Partials/components/NavBar.vue"));
+      return __webpack_require__.e(/*! import() */ 51).then(__webpack_require__.bind(null, /*! ./components/NavBar */ "./resources/js/Pages/Ecomerce/shared/Partials/components/NavBar.vue"));
     },
     MobileNavbar: function MobileNavbar() {
-      return __webpack_require__.e(/*! import() */ 51).then(__webpack_require__.bind(null, /*! ./components/MobileNavbar */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue"));
+      return __webpack_require__.e(/*! import() */ 52).then(__webpack_require__.bind(null, /*! ./components/MobileNavbar */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavbar.vue"));
     }
   },
   data: function data() {

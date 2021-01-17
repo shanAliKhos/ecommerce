@@ -56,10 +56,10 @@ class Sku extends Model
         return $this->hasMany(SkuValue::class);
     }    
 
-    // public function skuds_options()
-    // {
-    //     return $this->belongsToMany(SkuValue::class,'sku_values','sku_id','product_id');
-    // }    
+    public function skuds_options()
+    {
+        return $this->belongsToMany(SkuValue::class,'sku_values','sku_id','product_id');
+    }    
     
 
  
