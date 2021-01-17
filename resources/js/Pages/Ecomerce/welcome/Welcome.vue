@@ -42,7 +42,7 @@
 <script>
 import AppLayout from './../shared/AppLayout'  
 
-import HeroSlider from './../shared/Slider/HeroSlider'
+// import HeroSlider from './../shared/Slider/HeroSlider'
 import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'
 import TrendingCollection from './components/TrendingCollection'
 import TrendingSlider from './../shared/Slider/TrendingSlider'
@@ -55,7 +55,7 @@ export default {
     metaInfo: { title: 'Welcome' },
     layout: AppLayout, 
     components:{
-        HeroSlider,
+        HeroSlider :() => import('./../shared/Slider/HeroSlider'),
         WelcomeIcons ,
         SaleSlider,
         TrendingCollection,
