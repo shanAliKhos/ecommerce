@@ -5,14 +5,14 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider; 
 use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
-use Auth;
-use Config; 
-use App\Models\User;
-use App\Models\Message;
+// use Auth;
+// use Config; 
+// use App\Models\User;
+// use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
-  
-use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+// use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -38,33 +38,32 @@ class AppServiceProvider extends ServiceProvider
 
         if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
             $dbSetting = true;
-   
+            $Settings = Arr::pluck(Setting::all(), 'value','key'); 
         } 
-       
+        
         Inertia::share([  
-          
             "SiteOptions" =>  [
-                "Title" => 'title',
-                "Logo" => '',
-                "Favicon" => '',
-                "Email" => '',
-                "Phone" => '',
+                "Title" => isset($Settings['site_title'])?$Settings['site_title']:'',
+                "Logo" => isset($Settings['site_logo'])?$Settings['site_logo']:'',
+                "Favicon" => isset($Settings['site_favicon'])?$Settings['site_favicon']:'',
+                "Email" => isset($Settings['default_email_address'])?$Settings['default_email_address']:'',
+                "Phone" => isset($Settings['phone'])?$Settings['phone']:'',
                 "Currency" => [  
-                    "Code" => '',
-                    "Symbol" => '',
+                    "Code" => isset($Settings['currency_code'])?$Settings['currency_code']:'',
+                    "Symbol" => isset($Settings['currency_symbol'])?$Settings['currency_symbol']:'',
                 ],
                 "Social" => [
-                    "Facebook"=> '',
-                    "Twitter"=> '',
-                    "Instagram"=> '',
-                    "LinkedIn"=> '',
+                    "Facebook"=> isset($Settings['social_facebook'])?$Settings['social_facebook']:'',
+                    "Twitter"=> isset($Settings['social_twitter'])?$Settings['social_twitter']:'',
+                    "Instagram"=> isset($Settings['social_instagram'])?$Settings['social_instagram']:'',
+                    "LinkedIn"=> isset($Settings['social_linkedin'])?$Settings['social_linkedin']:'',
                 ], 
-                "FooterCopyRightText" => '',
+                "FooterCopyRightText" => isset($Settings['footer_copyright_text'])?$Settings['footer_copyright_text']:'',
             ],
           
             'Cart' => function () {
                 return [
-                    'Items' => '',
+                    'Items' => Session::get('CartItems'),
                 ];
             },
            
