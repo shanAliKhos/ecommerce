@@ -71,11 +71,11 @@
 </div>      
 </template>
 <script>
-import MobileNavLink from './MobileNavLink'
+// import MobileNavLink from './MobileNavLink'
 export default {
     props:['mobileMenu','categories','subcategory'],
     components:{
-        MobileNavLink
+        MobileNavLink:() => import('./MobileNavLink'),
     }, 
     computed:{
         IsMenuVisible(){

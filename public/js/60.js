@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[60],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12,6 +12,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TextInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../Shared/TextInput */ "./resources/js/Pages/Shared/TextInput.vue");
 /* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Shared/LoadingButton */ "./resources/js/Pages/Shared/LoadingButton.vue");
 /* harmony import */ var _Shared_FormSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../Shared/FormSection */ "./resources/js/Pages/Shared/FormSection.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -97,9 +111,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        footer_copyright_text: this.settings ? this.settings.footer_copyright_text : null,
-        seo_meta_title: this.settings ? this.settings.seo_meta_title : null,
-        seo_meta_description: this.settings ? this.settings.seo_meta_description : null
+        social_facebook: this.settings ? this.settings.social_facebook : null,
+        social_twitter: this.settings ? this.settings.social_twitter : null,
+        social_instagram: this.settings ? this.settings.social_instagram : null,
+        social_linkedin: this.settings ? this.settings.social_linkedin : null
       },
       sending: false
     };
@@ -108,9 +123,10 @@ __webpack_require__.r(__webpack_exports__);
     update: function update() {
       var self = this;
       var formData = new FormData();
-      formData.append("footer_copyright_text", self.form.footer_copyright_text || '');
-      formData.append("seo_meta_title", self.form.seo_meta_title || '');
-      formData.append("seo_meta_description", self.form.seo_meta_description || '');
+      formData.append("social_facebook", self.form.social_facebook || '');
+      formData.append("social_twitter", self.form.social_twitter || '');
+      formData.append("social_instagram", self.form.social_instagram || '');
+      formData.append("social_linkedin", self.form.social_linkedin || '');
       formData.append('_method', 'put');
       self.$emit('form-is-updated', formData);
       this.sending = true;
@@ -268,10 +284,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -289,7 +305,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Footer & SEO\n    ")]
+          return [_vm._v("\n        Social Links\n    ")]
         },
         proxy: true
       },
@@ -298,7 +314,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Update your account's Footer & SEO information and Option.\n    "
+              "\n        Update your account's Social Links information .\n    "
             )
           ]
         },
@@ -311,63 +327,84 @@ var render = function() {
             _c("text-input", {
               staticClass: "col-span-6 sm:col-span-6 mt-1 block w-full",
               attrs: {
-                id: "footer_copyright_text",
+                id: "social_facebook",
                 type: "text",
-                autocomplete: "footer_copyright_text",
-                error: _vm.$page.errors.footer_copyright_text,
-                label: "footer_copyright_text",
+                autocomplete: "social_facebook",
+                error: _vm.$page.errors.social_facebook,
+                label: "social_facebook",
                 labelRequire: true,
-                placeholder: "footer_copyright_text",
-                "aria-label": "footer_copyright_text"
+                placeholder: "social_facebook",
+                "aria-label": "social_facebook"
               },
               model: {
-                value: _vm.form.footer_copyright_text,
+                value: _vm.form.social_facebook,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "footer_copyright_text", $$v)
+                  _vm.$set(_vm.form, "social_facebook", $$v)
                 },
-                expression: "form.footer_copyright_text"
+                expression: "form.social_facebook"
               }
             }),
             _vm._v(" "),
             _c("text-input", {
               staticClass: "col-span-6 sm:col-span-6 mt-1 block w-full",
               attrs: {
-                id: "seo_meta_title",
+                id: "social_twitter",
                 type: "text",
-                autocomplete: "seo_meta_title",
-                error: _vm.$page.errors.seo_meta_title,
-                label: "seo_meta_title",
+                autocomplete: "social_twitter",
+                error: _vm.$page.errors.social_twitter,
+                label: "social_twitter",
                 labelRequire: true,
-                placeholder: "seo_meta_title",
-                "aria-label": "seo_meta_title"
+                placeholder: "social_twitter",
+                "aria-label": "social_twitter"
               },
               model: {
-                value: _vm.form.seo_meta_title,
+                value: _vm.form.social_twitter,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "seo_meta_title", $$v)
+                  _vm.$set(_vm.form, "social_twitter", $$v)
                 },
-                expression: "form.seo_meta_title"
+                expression: "form.social_twitter"
               }
             }),
             _vm._v(" "),
             _c("text-input", {
               staticClass: "col-span-6 sm:col-span-6 mt-1 block w-full",
               attrs: {
-                id: "seo_meta_description",
+                id: "social_instagram",
                 type: "text",
-                autocomplete: "seo_meta_description",
-                error: _vm.$page.errors.seo_meta_description,
-                label: "seo_meta_description",
+                autocomplete: "social_instagram",
+                error: _vm.$page.errors.social_instagram,
+                label: "social_instagram",
                 labelRequire: true,
-                placeholder: "seo_meta_description",
-                "aria-label": "seo_meta_description"
+                placeholder: "social_instagram",
+                "aria-label": "social_instagram"
               },
               model: {
-                value: _vm.form.seo_meta_description,
+                value: _vm.form.social_instagram,
                 callback: function($$v) {
-                  _vm.$set(_vm.form, "seo_meta_description", $$v)
+                  _vm.$set(_vm.form, "social_instagram", $$v)
                 },
-                expression: "form.seo_meta_description"
+                expression: "form.social_instagram"
+              }
+            }),
+            _vm._v(" "),
+            _c("text-input", {
+              staticClass: "col-span-6 sm:col-span-6 mt-1 block w-full",
+              attrs: {
+                id: "social_linkedin",
+                type: "text",
+                autocomplete: "social_linkedin",
+                error: _vm.$page.errors.social_linkedin,
+                label: "social_linkedin",
+                labelRequire: true,
+                placeholder: "social_linkedin",
+                "aria-label": "social_linkedin"
+              },
+              model: {
+                value: _vm.form.social_linkedin,
+                callback: function($$v) {
+                  _vm.$set(_vm.form, "social_linkedin", $$v)
+                },
+                expression: "form.social_linkedin"
               }
             })
           ]
@@ -809,17 +846,17 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue ***!
-  \************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FooterSeoForm.vue?vue&type=template&id=3e51bae0& */ "./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0&");
-/* harmony import */ var _FooterSeoForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterSeoForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js&");
+/* harmony import */ var _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SocialLinksForm.vue?vue&type=template&id=45cd202c& */ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&");
+/* harmony import */ var _SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SocialLinksForm.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -829,9 +866,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FooterSeoForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -841,38 +878,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/settings/components/FooterSeoForm.vue"
+component.options.__file = "resources/js/Pages/Admin/settings/components/SocialLinksForm.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterSeoForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FooterSeoForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterSeoForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SocialLinksForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0& ***!
-  \*******************************************************************************************************/
+/***/ "./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c& ***!
+  \*********************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FooterSeoForm.vue?vue&type=template&id=3e51bae0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/FooterSeoForm.vue?vue&type=template&id=3e51bae0&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SocialLinksForm.vue?vue&type=template&id=45cd202c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/settings/components/SocialLinksForm.vue?vue&type=template&id=45cd202c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterSeoForm_vue_vue_type_template_id_3e51bae0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SocialLinksForm_vue_vue_type_template_id_45cd202c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

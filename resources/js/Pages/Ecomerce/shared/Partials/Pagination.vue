@@ -6,11 +6,11 @@
 </div>     
 </template>
 <script>
-import PaginationLink from './components/PaginationLink'
+// import PaginationLink from './components/PaginationLink'
 export default {
     props:['Pagination'],
     components: {
-        PaginationLink,
+        PaginationLink:() => import('./components/PaginationLink'),
     },
     computed: {
         Links(){

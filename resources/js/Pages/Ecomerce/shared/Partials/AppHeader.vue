@@ -23,13 +23,13 @@
 </div>
 </template>
 <script> 
-import NavBar from './components/NavBar'  
-import MobileNavbar from './components/MobileNavbar'  
+// import NavBar from './components/NavBar'  
+// import MobileNavbar from './components/MobileNavbar'  
  
 export default { 
     components: {
-        NavBar,
-        MobileNavbar,
+        NavBar:() => import('./components/NavBar'),
+        MobileNavbar:() => import('./components/MobileNavbar'),
     },
     data() {
         return {

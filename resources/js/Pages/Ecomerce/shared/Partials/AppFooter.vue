@@ -121,11 +121,11 @@
 </div>
 </template>
 <script> 
-import ApplicationLogo from './components/ApplicationLogo'
+// import ApplicationLogo from './components/ApplicationLogo'
 
 export default { 
     components:{
-        ApplicationLogo,
+        ApplicationLogo:() => import('./components/ApplicationLogo'),
     },
     computed: {
         IsVisibleFooter() {
