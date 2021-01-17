@@ -22,6 +22,11 @@ class ShopController extends Controller
             'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),
             'HeroSliders'=> $slider->where('name','hero')->with('hero_slider')->first(),
         ]);        
+        // return Inertia::render('Ecomerce/welcome/Welcome',[
+        //     'SaleSliders'=> $slider->where('name','sale')->with('sale_slider')->first(),
+        //     'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),
+        //     'HeroSliders'=> $slider->where('name','hero')->with('hero_slider')->first(),
+        // ]);        
     }    
      
     public function index(Request $request, Product $Product)

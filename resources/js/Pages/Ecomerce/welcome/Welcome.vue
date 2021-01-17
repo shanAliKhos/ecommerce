@@ -45,11 +45,11 @@ import AppLayout from './../shared/AppLayout'
 // import HeroSlider from './../shared/Slider/HeroSlider'
 import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'
 import TrendingCollection from './components/TrendingCollection'
-import TrendingSlider from './../shared/Slider/TrendingSlider'
+// import TrendingSlider from './../shared/Slider/TrendingSlider'
 import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'
 import WelcomeBrands from './components/WelcomeBrands'
 import SaleBanner from './components/SaleBanner'
-import SaleSlider from './../shared/Slider/SaleSlider'
+// import SaleSlider from './../shared/Slider/SaleSlider'
   
 export default { 
     metaInfo: { title: 'Welcome' },
@@ -57,9 +57,9 @@ export default {
     components:{
         HeroSlider :() => import('./../shared/Slider/HeroSlider'),
         WelcomeIcons ,
-        SaleSlider,
+        SaleSlider :() => import('./../shared/Slider/SaleSlider'),
         TrendingCollection,
-        TrendingSlider,
+        TrendingSlider :() => import('./../shared/Slider/TrendingSlider'),
         TrendingMultiSlider,
         WelcomeBrands ,
         SaleBanner,
