@@ -13,7 +13,7 @@
                 <div class="rounded md:bg-left bg-center bg-no-repeat bg-cover h-full w-full flex-col item-center justify-center" :style="'background-image:url(\'' + HeroSlide.photo_url + '\')'">
                     <div class="py-36 px-10 md:px-12 xl:px-24 text-left w-5/6 lg:w-2/4 xl:w-2/3">
                     
-                        <h3 class="font-medium text-gray-500 text-4xl md:text-5xl lg:text-6xl lg:w-2/3">{{HeroSlide.title}}</h3> 
+                        <h3 class="font-medium   text-4xl md:text-5xl lg:text-6xl lg:w-2/3">{{HeroSlide.title}}</h3> 
                         <div class="flex items-center justify-center lg:justify-start mt-5 lg:mt-2">
                             <inertia-link :href="HeroSlide.button_url" class="w-full lg:w-2/3 flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded-lg px-2 py-2 text-white font-semibold shadow inline-flex " type="button" as="button">
                                 {{HeroSlide.button_title}}

@@ -428,7 +428,7 @@ var render = function() {
                           "h3",
                           {
                             staticClass:
-                              "font-medium text-gray-500 text-4xl md:text-5xl lg:text-6xl lg:w-2/3"
+                              "font-medium   text-4xl md:text-5xl lg:text-6xl lg:w-2/3"
                           },
                           [_vm._v(_vm._s(HeroSlide.title))]
                         ),

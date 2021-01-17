@@ -289,7 +289,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "font-serif select-none text-gray-600" },
+    { staticClass: "font-serif select-none text-gray-800" },
     [
       _c("app-header"),
       _vm._v(" "),
