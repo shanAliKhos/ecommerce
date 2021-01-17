@@ -5,8 +5,8 @@
      
     <main class="container mx-auto my-auto "> 
         <transition name="slide-fade">
-
-            <slot></slot>
+            <slot> 
+            </slot>
 
         </transition>     
     </main>         
@@ -16,7 +16,10 @@
     <portal-target name="modal" multiple></portal-target>
 
     <flash-message v-if="$page.flash"></flash-message> 
- 
+    <!-- <div class="fixed z-50 top-0 bottom-0 left-0 right-0 h-screen w-screen my-auto mx-auto container" v-if="$page.inProgress">
+      
+      <div class="flex item-center justify-center  bg-cover bg-center bg-no-repeat h-screen w-screen bg-shopping-loader z-50"></div>
+    </div> -->
 
 </div> 
 </template>
@@ -33,10 +36,7 @@
             AppFooter, 
             FlashMessage, 
         },  
-
  
-
-        
     }
 </script>
 <style scoped>

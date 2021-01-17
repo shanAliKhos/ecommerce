@@ -24,7 +24,7 @@
                 <div class="overflow-y-auto overflow-x-hidden h-4/6">
 
                     <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">BLOG</p>
+                        <p class="text-sm font-semibold mb-1 text-blue-500">BLOG</p>
                         <side-link 
                             :href="route('admin.blog.index')" 
                             :active="$page.currentRouteName == 'admin.blog.index'">
@@ -36,7 +36,7 @@
                     </div>                
             
                     <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">Shop</p>
+                        <p class="text-sm text-blue-500 font-semibold mb-1 ">Shop</p>
         
                         <side-link 
                             :href="route('admin.order.index')" 
@@ -96,7 +96,7 @@
                     </div>    
                      
                     <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">Collection</p>
+                        <p class="text-sm text-blue-500 font-semibold mb-1 ">Collection</p>
                      
                         <side-link 
                             :href="route('admin.slider.hero.index')" 
@@ -111,7 +111,7 @@
                     </div>
                      
                     <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">Sliders</p>
+                        <p class="text-sm text-blue-500 font-semibold mb-1 ">Sliders</p>
                     
 
                         <side-link 
@@ -144,7 +144,7 @@
                     </div>
         
                     <div class="mb-4 mt-4 px-1">
-                        <p class="text-lg font-semibold mb-1 text-gray-300">Site</p>
+                        <p class="text-sm text-blue-500 font-semibold mb-1 ">Site</p>
 
                         <side-link 
                             :href="route('admin.customer.index')" 

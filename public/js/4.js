@@ -176,7 +176,7 @@ var render = function() {
     _vm._b(
       {
         staticClass:
-          "flex flex-col justify-center item-center antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50",
+          "antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50",
         class: _vm.IsActiveLink,
         attrs: { disabled: _vm.loading },
         on: { click: _vm.send }
@@ -190,7 +190,7 @@ var render = function() {
         "svg",
         {
           staticClass:
-            "transition ease-in-out pointer-events-none h-6 w-auto fill-current ",
+            "transition ease-in-out pointer-events-none h-7 w-auto fill-current ",
           class: { "animate-spin": _vm.loading },
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",

@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2 relative">
-      <label v-if="label" class="absolute rounded top-0  text-purple-600  px-1 text-xs font-semibold uppercase" :class="fixedClasses"  :for="id">{{label}}<span class="text-red-500" v-if="labelRequire"> *</span></label>
+      <label v-if="label" class="absolute rounded top-0  text-purple-600  px-1 text-xs font-semibold uppercase" :class="fixedClasses"  :for="id">{{label}}<span class="text-red-500 text-xl" v-if="labelRequire"> *</span></label>
       <input 
         :id="id"
         ref="input"     

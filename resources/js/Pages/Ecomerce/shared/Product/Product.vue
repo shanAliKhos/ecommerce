@@ -13,7 +13,7 @@
             </div>
             <div class="flex items-center  px-2">
                 <div class="flex  items-center group text-text-sm">
-                    <i v-for="n in 5" :class="{'bxs-star':n<=Product.rating,'bx-star':n>Product.rating}" class="bx text-yellow-300 border border-white"></i>   
+                    <i v-for="n in 5" :key="(n+1)" :class="{'bxs-star':n<=Product.rating,'bx-star':n>Product.rating}" class="bx text-yellow-300 border border-white"></i>   
                 </div> 
             </div>             
             <div class="flex px-4">

@@ -23,7 +23,7 @@ module.exports = {
                 'icon-return': "url('/img/partials/icons/icon-return.svg')", 
                 'icon-support': "url('/img/partials/icons/icon-support.svg')", 
                 'icon-shipping': "url('/img/partials/icons/icon-shipping.svg')", 
- 
+                'shopping-loader': "url('/img/partials/loader/shopping-loader.gif')",  
             }),  
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

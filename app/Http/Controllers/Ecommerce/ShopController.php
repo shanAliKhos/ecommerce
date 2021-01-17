@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Slider;
 use Inertia\Inertia;
+use Illuminate\Support\Arr;
+
 
 class ShopController extends Controller
 {
@@ -29,27 +31,31 @@ class ShopController extends Controller
                     ->orwhere('sale_price','>',0.00)
                     ->latest()->paginate(20);
 
+              
+
         return Inertia::render('Ecomerce/shop/Index',compact('Products'));
     }
 
     public function show(Product $Product,$slug)
-    {   
+    {    
         $Product = $Product->where('slug',$slug)->with('images','categories','brand')->firstOrFail();
-        
-        $Product->Skus->map(function($sku){
-            return $sku->skus_options->map(function($skudsOption){
-                return $skudsOption->variant_option->attributes_option->attribute;
+          
+        $skuOptions =  $Product->Skus->map(function($sku) use($Product){
+            return $sku->skus_options->map(function($skudsOption) use($Product,$sku){  
+                Arr::add($sku, 'attribute_options_ids', data_get($sku->skus_options->load('variant_option')->toArray(), '*.variant_option.attribute_value_id'));
+                return $skudsOption->variant_option = $skudsOption->variant_option->attribute_value_id;
             });
         });
    
         $Product->variations->map(function($variation){
+            $variation->selected = $variation->attribute_options[0]->id;
             return $variation->load('attribute_options')->Attribute;
         })->toArray();
-        
- 
+         
+  
         return Inertia::render('Ecomerce/shop/Show', [
             'Product'=> $Product,
-            'RelatedProducts'=>$Product->get()->random(10),
+            'RelatedProducts'=>$Product->get()->random(1,10),
         ]);
     }
   

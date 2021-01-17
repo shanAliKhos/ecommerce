@@ -1,9 +1,9 @@
 <template>
-    <div class=" leading-normal tracking-normal" id="main-body" :class="{'bg-gray-800 text-gray-400':false}">
+    <div class=" leading-normal tracking-normal" id="main-body" :class="{'bg-gray-800 text-gray-500':false}">
     
         <div class="flex w-full h-full">
     
-            <Sidebar class="bg-gray-100 text-gray-400" />
+            <Sidebar class="bg-gray-100 text-gray-500 text-sm" />
     
             <div class="w-full bg-gray-100 pl-0 lg:pl-64">
     

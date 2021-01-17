@@ -21,40 +21,38 @@
                             label="Photo" 
                         :preview="true"/> 
                                                      
-                        <div class="w-full  md:mb-0 relative mt-2">
-                            <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
-                            <multiselect 
-                                v-model="form.brand" 
-                                deselect-label="Can't remove this value" 
-                                track-by="name"  
-                                label="name" 
-                                placeholder="Select Brand" 
-                                :options="Brands" 
-                                :searchable="false" 
-                                :allow-empty="false">
-                            </multiselect>             
-                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>        
-                        </div>    
-                
-                        <div class="w-full md:mb-0 relative mt-2"> 
-                            <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="Categories">Categories</label>
-                            <multiselect 
-                                v-model="form.categories" 
-                                :options="CategoriesOption" 
-                                :multiple="true" 
-                                :close-on-select="false" 
-                                :clear-on-select="false" 
-                                :preserve-search="true" 
-                                placeholder="Select categories" 
-                                label="name" 
-                                track-by="name"  
-                                > 
-                            </multiselect>                        
-                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
-                        </div>    
+                    
+                        <div class="flex flex-wrap item-center md:justify-end  ">
+                            <div class=" w-1/2 ">
+                                <label for="is_active" class="flex items-center cursor-pointer">
+                                    <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Active</div>
+                                    <div class="relative">
+                                        <input id="is_active" type="checkbox" class="hidden" v-model="form.is_active" />
+                                        <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                        <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                    </div>
+                                </label>
+                                <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_active">{{$page.errors.is_active}}</p>                 
+                            </div>        
 
+                            <div class="w-1/2">
+                                <label for="is_featured" class="flex items-center cursor-pointer">
+                                    <div :class="{'text-green-400':form.is_featured,'text-red-500':!form.is_featured}" class=" px-2 font-semibold ">Featured</div>
+                                    <div class="relative">
+                                        <input id="is_featured" type="checkbox" class="hidden" v-model="form.is_featured" />
+                                        <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                        <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                    </div>
+                                </label> 
+                                <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_featured">{{$page.errors.is_featured}}</p>                 
+                            </div>        
+                        </div> 
+
+                           
+    
                         <text-input 
                             id="sku" 
+                            v-if="!form.is_variable"
                             type="text"  
                             class="w-full " 
                             v-model="form.sku" 
@@ -107,7 +105,9 @@
                             :error="$page.errors.weight"
                             label='Weight'       
                             placeholder="Weight" 
-                        aria-label="weight"/>     
+                        aria-label="weight"/>   
+
+                         
                                   
                     </div>  
 
@@ -123,56 +123,27 @@
                             label='Product Name'    
                             :labelRequire='true'    
                         placeholder="Product Name"/>
-                        
-                        <div class="w-full flex flex-wrap item-center md:justify-end py-2 px-2 ">
-                    
-                            <div class=" w-full md:w-1/3">
-                                <label for="is_active" class="flex items-center cursor-pointer">
-                                    <div :class="{'text-green-400':form.is_active,'text-red-500':!form.is_active}" class="px-2 font-semibold ">Active</div>
-                                    <div class="relative">
-                                        <input id="is_active" type="checkbox" class="hidden" v-model="form.is_active" />
-                                        <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
-                                        <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
-                                    </div>
-                                </label>
-                                <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_active">{{$page.errors.is_active}}</p>                 
-                            </div>        
 
-                            <div class=" w-full md:w-1/3">
-                                <label for="is_featured" class="flex items-center cursor-pointer">
-                                    <div :class="{'text-green-400':form.is_featured,'text-red-500':!form.is_featured}" class=" px-2 font-semibold ">Featured</div>
-                                    <div class="relative">
-                                        <input id="is_featured" type="checkbox" class="hidden" v-model="form.is_featured" />
-                                        <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
-                                        <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
-                                    </div>
-                                </label> 
-                                <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_featured">{{$page.errors.is_featured}}</p>                 
-                            </div>        
+                        <div class="flex py-2">
+                            <label for="is_variable" class="flex items-center cursor-pointer">
+                                <div :class="{'text-green-400':form.is_variable,'text-red-500':!form.is_variable}" class=" px-2 font-semibold ">Variations</div>
+                                <div class="relative">
+                                    <input id="is_variable" type="checkbox" class="hidden" v-model="form.is_variable" />
+                                    <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
+                                    <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+                                </div>
+                            </label> 
+                            <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_variable">{{$page.errors.is_variable}}</p>                 
+                        </div>    
 
-                            <div class="w-full md:w-1/3">
-                                <label for="is_variable" class="flex items-center cursor-pointer">
-                                    <div :class="{'text-green-400':form.is_variable,'text-red-500':!form.is_variable}" class=" px-2 font-semibold ">Variations</div>
-                                    <div class="relative">
-                                        <input id="is_variable" type="checkbox" class="hidden" v-model="form.is_variable" />
-                                        <div class="toggle-path bg-red-400 w-9 h-5 rounded-full shadow-inner" ></div>
-                                        <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"></div>
-                                    </div>
-                                </label> 
-                                <p class="text-red-500 text-xs italic"  v-if="$page.errors.is_variable">{{$page.errors.is_variable}}</p>                 
-                            </div>        
-
-                        </div> 
-                        
                         <transition-group name="slide-fade">
-  
-                            <div class="w-full md:mb-0 relative mt-5" v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
+
+                            <div class="relative " v-if="form.is_variable" :key="'add-attribute-multiselect'"> 
                                 <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Product Attributes</label>
                                 <multiselect  
                                     v-model="form.attributes" 
                                     deselect-label="remove this value" 
-                                    :multiple="true" 
-                                    class="mb-10"
+                                    :multiple="true"  
                                     :close-on-select="false" 
                                     :clear-on-select="false"                                     
                                     track-by="name"  
@@ -205,15 +176,51 @@
                                 </div>                 
                                 </transition-group>        
                             </div> 
-                        </transition-group>                          
+
+                            <SectionBorder v-if="form.is_variable" :key="'varitation-border-bottom'" />
+                        </transition-group>                               
+                         
+                        <div class="w-full  md:mb-0 relative mt-2">
+                            <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Brands</label>
+                            <multiselect 
+                                v-model="form.brand" 
+                                deselect-label="Can't remove this value" 
+                                track-by="name"  
+                                label="name" 
+                                placeholder="Select Brand" 
+                                :options="Brands" 
+                                :searchable="false" 
+                                :allow-empty="false">
+                            </multiselect>             
+                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.brand">{{$page.errors.brand}}</p>        
+                        </div>    
+                
+                        <div class="w-full md:mb-0 relative mt-2"> 
+                            <label class="z-20 absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="Categories">Categories</label>
+                            <multiselect 
+                                v-model="form.categories" 
+                                :options="CategoriesOption" 
+                                :multiple="true" 
+                                :close-on-select="false" 
+                                :clear-on-select="false" 
+                                :preserve-search="true" 
+                                placeholder="Select categories" 
+                                label="name" 
+                                track-by="name"  
+                                > 
+                            </multiselect>                        
+                            <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.categories">{{$page.errors.categories}}</p>
+                        </div>                          
    
-                        <div class="mt-5 mb-5 px-2 relative "> 
+   
+                        <div class="mt-5 mb-5 relative "> 
                             <label class="absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase" for="weight">Description</label>
                             <vue-editor id="DescriptionEditor" v-model="form.description"  class="transition duration-700 ease-in-out w-full bg-gray-50 rounded-lg shadow-sm hover:bg-white hover:shadow-2xl focus:bg-white focus:shadow-2xl focus:outline-none focus:border-purple-600 border-2 border-gray-200 z-20"></vue-editor>        
                             <p class="z-20 absolute bottom-0 right-3 text-red-500 text-xs italic" v-if="$page.errors.description">{{$page.errors.description}}</p>
-                        </div>    
-                          
+                        </div>     
+ 
                     </div>    
+ 
 
                 </div>       
 
@@ -223,7 +230,7 @@
                     <p class="pb-6 flex font-semibold text-xl text-gray-400">Product Possible variations</p>
 
                     <div class="flex flex-wrap ">
-                        <div class="w-full md:w-1/2  bg-gray-100 bg-white shadow mb-4 rounded shadow" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
+                        <div class="w-full md:w-1/2   bg-white   mb-4 rounded shadow" v-for="(ProductSku, ProductSkuIndex) in ProductSkus" :key="ProductSkuIndex">
 
                             <div class="px-2 py-2 rounded-lg bg-gray-50 text-blue-800 font-semibold">{{ProductSku.sku}}</div>
  
@@ -238,9 +245,9 @@
                                     <text-input  
                                         type="number"  
                                         class="w-full px-2" 
-                                        v-model="ProductSku.qty" 
-                                        autocomplete="sku Quantity" 
-                                        :error="$page.errors.sku_qty"
+                                        v-model="ProductSku.quantity" 
+                                        autocomplete="SkuQuantity" 
+                                        :error="$page.errors.ProductSku?ProductSku.quantity:''"
                                         label='#SKU Quantity'    
                                         :labelRequire='true'    
                                         placeholder="Sku Quantity" 
@@ -249,13 +256,24 @@
                                     <text-input   
                                         type="number"  
                                         class="w-full  px-2" 
-                                        v-model="ProductSku.price" 
-                                        autocomplete="price" 
-                                        :error="$page.errors.sku_price"
-                                        label='$ Price'    
+                                        v-model="ProductSku.regular_price" 
+                                        autocomplete="regular_price" 
+                                        :error="$page.errors.ProductSku?ProductSku.regular_price:''"
+                                        label='$ regular_price'    
                                         :labelRequire='true'    
-                                        placeholder="Sku Price" 
-                                    aria-label="price"/>
+                                        placeholder="Regular Price" 
+                                    aria-label="regular_price"/>
+
+                                    <text-input   
+                                        type="number"  
+                                        class="w-full px-2" 
+                                        v-model="ProductSku.sale_price" 
+                                        autocomplete="sale_price" 
+                                        :error="$page.errors.ProductSku?ProductSku.sale_price:''"
+                                        label='$ sale_price'    
+                                        :labelRequire='true'    
+                                        placeholder="Sale Price" 
+                                    aria-label="sale_price"/>
 
                                 </div>
 
@@ -344,11 +362,11 @@ export default {
             self = this; 
             let formData = new FormData()
             formData.append("name", self.form.name || '')
-            formData.append("sku", self.form.sku || '')
+            formData.append("sku", self.form.sku || null)
             formData.append("brand_id", self.form.brand?self.form.brand.id:null || '')
             formData.append("categories", JSON.stringify(self.form.categories) || '')
             formData.append("is_variable", self.form.is_variable?1:0 || 0)
-            formData.append("Attributes", JSON.stringify(self.form.attributes) || '')
+            formData.append("Attributes", JSON.stringify(self.form.attributes) || null)
             formData.append("regular_price", self.form.regular_price || 0)
             formData.append("sale_price", self.form.sale_price || 0)
             formData.append("quantity", self.form.quantity || 0)

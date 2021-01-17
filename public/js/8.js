@@ -572,7 +572,9 @@ var render = function() {
           [
             _vm._v(_vm._s(_vm.label)),
             _vm.labelRequire
-              ? _c("span", { staticClass: "text-red-500" }, [_vm._v(" *")])
+              ? _c("span", { staticClass: "text-red-500 text-xl" }, [
+                  _vm._v(" *")
+                ])
               : _vm._e()
           ]
         )

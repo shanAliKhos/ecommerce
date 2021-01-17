@@ -4,70 +4,64 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+// use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage; 
 
 class Product extends Model
 {
     use HasFactory;
  
-
     protected $fillable = [
         'brand_id', 'sku', 'name', 'slug', 'description', 'quantity','image',
         'weight', 'regular_price', 'sale_price', 'is_active', 'is_featured',
     ];
  
-    protected $casts = [
-        'quantity'  =>  'integer',
-        'brand_id'  =>  'integer',
+    protected $casts = [ 
         'rating'  =>  'integer',
-        'sale_price'  =>  'integer',
-        'regular_price'  =>  'integer',
+        'quantity'  =>  'integer', 
+        'brand_id'  =>  'integer',
         'is_active'    =>  'boolean',
         'is_featured'  =>  'boolean'
     ];
  
-    protected $appends = [
+    protected $appends = [ 
         'mainphoto_url',
-        'current_price',
-        'on_sale',
+        'current_price',          
+        'on_sale',          
         'label',
         'rating',
     ];
-
-
+ 
     public function getLabelAttribute()
     { 
-        if($this->sale_price > 0){ 
-    
-            $lable=[
-                'bg_color'=>'bg-orange-500',
-                'text_color'=>'text-orange-500',
-                'title'=>'-'.round(( ($this->regular_price - $this->sale_price) / $this->regular_price) * 100). ' %',
+ 
+        if($this->sale_price > 0){
+            return  [
+                'bg_color'=>'bg-red-500',
+                'text_color'=>'text-red-500',
+                'title'=>'Sale -'. (int) round(($this->regular_price - $this->sale_price)/ $this->regular_price * 100)  .'%', 
                 'active'=>true,                
-                ]; 
+            ];               
+
         }else if($this->is_featured){                     
  
-            $lable=[
+            return  [
                 'bg_color'=>'bg-blue-500',
-                'text_color'=>'text-blue-500',
+                'text_color'=>'text-green-500',
                 'title'=>'Trend',
                 'active'=>true,                
-                ];               
+            ];               
             
         }else{
  
-            $lable=[
+            return  [
                 'bg_color'=>'bg-green-500',
                 'text_color'=>'text-green-500',
                 'title'=>'new',
                 'active'=>true,                
-                ];            
+            ];            
 
-        }  
-        
-        return $lable;        
-
+        }   
       
     }
 
@@ -83,18 +77,21 @@ class Product extends Model
 
     public function getMainphotoUrlAttribute()
     { 
-        return asset($this->image
-        ? Storage::disk('local')->url($this->image)
-        : $this->defaultPhotoUrl());
+        if (Storage::disk('s3')->exists($this->image)) {
+            // dd( Storage::disk('s3')->url($this->image));
+            return Storage::disk('s3')->url($this->image);
+        }
+        return $this->defaultPhotoUrl();
+ 
     }
 
     public function getCurrentPriceAttribute()
     { 
         return ($this->sale_price > 0)
         ? $this->sale_price 
-        : $this->regular_price ;
-    }
-
+        : $this->regular_price;
+    } 
+    
     protected function defaultPhotoUrl()
     {
         return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
@@ -127,7 +124,7 @@ class Product extends Model
 
     public function Skuds()
     {
-        return $this->belongsToMany(Sku::class,'skus','product_id','sku');
+        return $this->belongsToMany(Sku::class,'skus','product_id','name');
     }    
     
     public function Skus()

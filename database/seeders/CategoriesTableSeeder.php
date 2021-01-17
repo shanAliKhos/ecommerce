@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 
 class CategoriesTableSeeder extends Seeder
@@ -21,5 +22,15 @@ class CategoriesTableSeeder extends Seeder
             'parent_id'     =>  null,
             'menu'          =>  0,
         ]);   
+        for ($i=0; $i < 9; $i++) { 
+            Category::create([
+                'name'          =>  'Category '.($i+1),
+                'slug'          =>  Str::slug('Product'.$i),
+                'description'   =>  'This is the category '.($i+1).', testing',
+                'parent_id'     =>  0,
+                'menu'          =>  1,
+            ]);    
+        }
+
     }
 }

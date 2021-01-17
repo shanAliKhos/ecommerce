@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active', 'atTopOfPage'],
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'text-red-500 border-red-600 shadow-2xl border-b-4 md:-translate-x-1 md:translate-y-1 md:animate-wiggle mb-3 mt-3 bg-white' : 'hover:text-blue-400 hover:bg-white hover:shadow-2xl hover:border-blue-300 border-b-4 mb-2';
+      return this.active ? 'text-red-500 border-red-600 shadow-2xl border-b-4  scale-110 animate-pulse mb-3 mt-3 bg-white' : 'hover:text-red-500 hover:bg-white hover:shadow-2xl hover:border-red-500 border-b-4 mb-2 hover:scale-110 hover:animate-pulse ';
     }
   }
 });
@@ -274,7 +274,7 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "py-2 px-2 flex rounded-xl lg:cursor-pointer  block font-semibold transition duration-500 ease-in-out transform  items-center hover:shadow",
+        "py-2 px-2 flex rounded-xl lg:cursor-pointer block font-semibold transition duration-500 ease-in-out transform  items-center hover:shadow",
       class: _vm.IsActiveLink,
       attrs: { href: _vm.href }
     },
@@ -375,7 +375,7 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    { staticClass: "text-sm font-semibold mb-1 text-blue-500" },
                     [_vm._v("BLOG")]
                   ),
                   _vm._v(" "),
@@ -424,7 +424,9 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    {
+                      staticClass: "text-sm text-blue-500 font-semibold mb-1 "
+                    },
                     [_vm._v("Shop")]
                   ),
                   _vm._v(" "),
@@ -618,7 +620,9 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    {
+                      staticClass: "text-sm text-blue-500 font-semibold mb-1 "
+                    },
                     [_vm._v("Collection")]
                   ),
                   _vm._v(" "),
@@ -670,7 +674,9 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    {
+                      staticClass: "text-sm text-blue-500 font-semibold mb-1 "
+                    },
                     [_vm._v("Sliders")]
                   ),
                   _vm._v(" "),
@@ -800,7 +806,9 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-lg font-semibold mb-1 text-gray-300" },
+                    {
+                      staticClass: "text-sm text-blue-500 font-semibold mb-1 "
+                    },
                     [_vm._v("Site")]
                   ),
                   _vm._v(" "),
