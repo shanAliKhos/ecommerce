@@ -128,8 +128,17 @@ class BlogController extends Controller
 
     public function destroy(Blog $blog)
     {
-        $blog->delete();
-
-        return back()->with('success','blog deleted');
+        
+        try { 
+             
+            if(Storage::disk('s3')->exists($blog->image)){
+                Storage::disk('s3')->delete($blog->image);
+            } 
+            $blog->delete(); 
+            return back()->with('success','blog deleted');
+        } catch (\Throwable $th) {
+             
+            return back()->with('error','OPP s could not delete ');
+        } 
     }
 }

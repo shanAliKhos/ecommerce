@@ -29,35 +29,35 @@ class SettingController extends Controller
     {  
         if($request->hasFile('site_logo')){             
             $OldSiteLogo =  config('settings.site_logo');        
-            $NewPath = $request->file('site_logo')->store('setting','public');  
-            if(Storage::disk('public')->exists($OldSiteLogo)){
-                Storage::disk('public')->delete($OldSiteLogo);
+            $NewPath = $request->file('site_logo')->store('setting','s3');  
+            if(Storage::disk('s3')->exists($OldSiteLogo)){
+                Storage::disk('s3')->delete($OldSiteLogo);
             }    
             Setting::set('site_logo', $NewPath);             
         }
         
         if(empty($request->site_logo) && config('settings.site_logo')){
             
-            if(Storage::disk('public')->exists(config('settings.site_logo'))){
-                Storage::disk('public')->delete(config('settings.site_logo'));
+            if(Storage::disk('s3')->exists(config('settings.site_logo'))){
+                Storage::disk('s3')->delete(config('settings.site_logo'));
             }
             Setting::set('site_logo', null);             
         }               
         
         if($request->hasFile('site_favicon')){             
             $OldSiteFavicon =  config('settings.site_favicon');      
-            $NewPath = $request->file('site_favicon')->store('setting','public');  
-            if(Storage::disk('public')->exists($OldSiteFavicon)){
-                Storage::disk('public')->delete($OldSiteFavicon);
+            $NewPath = $request->file('site_favicon')->store('setting','s3');  
+            if(Storage::disk('s3')->exists($OldSiteFavicon)){
+                Storage::disk('s3')->delete($OldSiteFavicon);
             }  
             Setting::set('site_favicon', $NewPath);             
         } 
 
         if(empty($request->site_favicon) && config('settings.site_favicon')){
 
-            if(Storage::disk('public')->exists(config('settings.site_favicon'))){
+            if(Storage::disk('s3')->exists(config('settings.site_favicon'))){
 
-                Storage::disk('public')->delete(config('settings.site_favicon'));
+                Storage::disk('s3')->delete(config('settings.site_favicon'));
             }
             Setting::set('site_favicon', null);             
         }                 
