@@ -47,7 +47,8 @@ class CategoryController extends Controller
         $Category = new Category; 
         if ($request->hasFile('image')) {
             $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:100']);  
-            $path = $request->file('image')->store('public/Categories');
+            $path = $request->file('image')->store('Categories','s3'); 
+
             $Category->image = $path;
         }    
 
@@ -80,24 +81,30 @@ class CategoryController extends Controller
         $this->validate($request,[
             'name'=> 'required|min:2|max:255|unique:categories,name,' .$category->id
         ]); 
+
         if($request->hasFile('image')){
-            $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']); 
-            $OldPath = $category->image;        
-            $NewPath = $request->file('image')->store('public/Categories');  
-            if(Storage::disk('public')->exists($OldPath)){
-                Storage::disk('public')->delete($OldPath);
-            }  
-            $category->update(['image' => $NewPath]);               
-
-        }
+            $this->validate($request,['image'=>'mimes:jpg,jpeg,png|max:1000']);   
             
-        if(empty($request->image && $category->image)){
-            if(Storage::disk('public')->exists($category->image)){
-                Storage::disk('public')->delete($category->image);
-            }                  
-            $category->update(['image' => null]);               
+                try { 
+                    if(Storage::disk('public')->exists($category->image)){
+                        Storage::disk('public')->delete($category->image);
+                    }  
+                } catch (\Throwable $th) { }
+                $category->update(['image' => $request->file('image')->store('public/Categories')]);               
+    
+            }
+                
+            if(empty($request->image && $category->image)){
+                try { 
+                    
+                    if(Storage::disk('public')->exists($category->image)){
+                        Storage::disk('public')->delete($category->image);
+                    }                  
+                } catch (\Throwable $th) { }
+                $category->update(['image' => null]);               
+    
+            }            
 
-        }
     
  
         $category->update([
@@ -115,13 +122,11 @@ class CategoryController extends Controller
     }
  
     public function destroy(Category $category)
-    {
-        $image = $category->logo;
-        if(Storage::disk('public')->exists($image)){
-            Storage::disk('public')->delete($image);
-        } 
-
+    { 
         try { 
+            if(Storage::disk('public')->exists($category->logo)){
+                Storage::disk('public')->delete($category->logo);
+            }             
             $category->delete();
             return back()->with('success','category deleted');
         } catch (\Throwable $th) {

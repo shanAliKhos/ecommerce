@@ -31,9 +31,13 @@ class Brand extends Model
 
     public function getPhotoUrlAttribute()
     { 
-        return asset($this->logo
-        ? Storage::disk('local')->url($this->logo)
-        : $this->defaultPhotoUrl());
+        try {
+            if (Storage::disk('s3')->exists($this->logo)) { 
+                return Storage::disk('s3')->url($this->logo);
+            }
+        } catch (\Throwable $th) {
+            return $this->defaultPhotoUrl();
+        }            
     }
 
     protected function defaultPhotoUrl()

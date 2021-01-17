@@ -30,9 +30,13 @@ class Blog extends Model
 
     public function getPhotoUrlAttribute()
     { 
-        return asset($this->image
-        ? Storage::disk('local')->url($this->image)
-        : $this->defaultPhotoUrl());
+        try {
+            if (Storage::disk('s3')->exists($this->image)) { 
+                return Storage::disk('s3')->url($this->image);
+            }
+        } catch (\Throwable $th) {
+            return $this->defaultPhotoUrl();
+        }             
     }
 
     protected function defaultPhotoUrl()

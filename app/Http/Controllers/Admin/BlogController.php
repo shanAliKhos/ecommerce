@@ -46,9 +46,8 @@ class BlogController extends Controller
          
         $Blog = new Blog;
         
-        if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('Blogs','public');  
-            $Blog->image = $path ;
+        if ($request->hasFile('image')) { 
+            $Blog->image = $request->file('image')->store('Blogs','s3') ;
         }             
         
         $Blog->title = $request->title;
@@ -93,17 +92,24 @@ class BlogController extends Controller
 
             $this->validate($request, [ 
                 "image" => 'required|mimes:jpg,jpeg,png|max:100',   
-            ]);                     
-            if(Storage::disk('public')->exists($blog->image)){
-                Storage::disk('public')->delete($blog->image);
-            }  
-            $blog->image = $request->file('image')->store('Blogs','public');   
+            ]);                  
+            try {
+                if(Storage::disk('s3')->exists($blog->image)){
+                    Storage::disk('s3')->delete($blog->image);
+                }   
+            } catch (\Throwable $th) {
+            }
+            
+            $blog->image = $request->file('image')->store('Blogs','s3');   
         } 
 
         if(empty($request->image) && $blog->image){
-
-            if(Storage::disk('public')->exists($blog->image)){
-                Storage::disk('public')->delete($blog->image);
+            try {
+                if(Storage::disk('s3')->exists($blog->image)){
+                    Storage::disk('s3')->delete($blog->image);
+                }   
+            } catch (\Throwable $th) {
+                //throw $th;
             }          
 
             $blog->image = null;   

@@ -41,7 +41,7 @@ class BrandController extends Controller
         ]);        
         if ($request->hasFile('logo')) {
 
-            $path = $request->file('logo')->store('Brands','public');  
+            $path = $request->file('logo')->store('Brands','s3');  
             $brand->logo = $path;
         }    
         $brand->name = $request->name; 
@@ -71,23 +71,22 @@ class BrandController extends Controller
         ]);         
         
         if($request->hasFile('logo')){    
+            
             try {
-           
-                if(Storage::disk('public')->exists($brand->logo)){
-                    Storage::disk('public')->delete($brand->logo);
+                if(Storage::disk('s3')->exists($brand->logo)){
+                    Storage::disk('s3')->delete($brand->logo);
                 }                  
+            } catch (\Throwable $th) {}      
 
-            } catch (\Throwable $th) {
-                 
-
-            }      
             $brand->update(['logo' => $request->file('logo')->store('Brands','public')]);               
         } 
 
         if(empty($request->logo) && $brand->logo){
-            if(Storage::disk('public')->exists($brand->logo)){
-                Storage::disk('public')->delete($brand->logo);
-            }          
+            try {                
+                if(Storage::disk('public')->exists($brand->logo)){
+                    Storage::disk('public')->delete($brand->logo);
+                }          
+            } catch (\Throwable $th) {}      
             $brand->update(['logo' => null]);
         }
 
@@ -105,12 +104,12 @@ class BrandController extends Controller
 
     public function destroy(Brand $brand)
     { 
-        $image = $brand->logo;
-        if(Storage::disk('public')->exists($image)){
-            Storage::disk('public')->delete($image);
-        } 
-
+        
         try { 
+            $image = $brand->logo;
+            if(Storage::disk('public')->exists($image)){
+                Storage::disk('public')->delete($image);
+            } 
             $brand = $brand->delete();
             return back()->with('success','brand removed');
         } catch (\Throwable $th) {
