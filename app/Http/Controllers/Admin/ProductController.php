@@ -26,7 +26,7 @@ class ProductController extends Controller
     public function index()
     {
         $Product = new Product;
-        $Products = $Product->with('categories', 'brand', 'images')->OrderBy('updated_at','desc')->latest()->paginate(8);
+        $Products = $Product->with('categories', 'brand', 'images')->OrderBy('updated_at','asc')->latest()->paginate(8);
 
         return Inertia::render('Admin/products/Index', compact('Products'));
     }
