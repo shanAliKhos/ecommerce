@@ -47,7 +47,7 @@ class HeroSliderController extends Controller
             "title" => $request->title,
             "button_url" => $request->button_url,
             "button_title" => $request->button_title,
-            "image" => $request->file('image')->store('HeroSlider','public'),
+            "image" => $request->file('image')->store('HeroSlider','s3'),
         ]);  
 
         return back()->with('success','hero slide created');
@@ -77,8 +77,8 @@ class HeroSliderController extends Controller
             ]);              
             
             try {
-                if(Storage::disk('public')->exists($hero->image)){
-                    Storage::disk('public')->delete($hero->image);
+                if(Storage::disk('s3')->exists($hero->image)){
+                    Storage::disk('s3')->delete($hero->image);
                 }  
             } catch (\Throwable $th) {    }
 
@@ -89,10 +89,12 @@ class HeroSliderController extends Controller
         } 
 
         if(empty($request->image) && $hero->image){
-            if(Storage::disk('public')->exists($hero->image)){                
-                Storage::disk('public')->delete($hero->image);
-            }        
-            $Prodherouct->update(['image' => null]);
+            try {                
+                if(Storage::disk('public')->exists($hero->image)){                
+                    Storage::disk('public')->delete($hero->image);
+                }        
+            } catch (\Throwable $th) {    }
+            $hero->update(['image' => null]);
         }          
         $hero->update([ 
             "title" => $request->title,
