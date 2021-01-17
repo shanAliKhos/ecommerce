@@ -53,7 +53,7 @@ class ProductController extends Controller
             "is_variable" => 'required|boolean',
             "is_featured" => 'required|boolean',             
         ]);
-
+ 
  
         try {
            
