@@ -43,12 +43,12 @@
 import AppLayout from './../shared/AppLayout'  
 
 // import HeroSlider from './../shared/Slider/HeroSlider'
-import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'
-import TrendingCollection from './components/TrendingCollection'
+// import WelcomeIcons from './../shared/Partials/components/WelcomeIcons'
+// import TrendingCollection from './components/TrendingCollection'
 // import TrendingSlider from './../shared/Slider/TrendingSlider'
-import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'
-import WelcomeBrands from './components/WelcomeBrands'
-import SaleBanner from './components/SaleBanner'
+// import TrendingMultiSlider from './../shared/Slider/TrendingMultiSlider'
+// import WelcomeBrands from './components/WelcomeBrands'
+// import SaleBanner from './components/SaleBanner'
 // import SaleSlider from './../shared/Slider/SaleSlider'
   
 export default { 
@@ -56,13 +56,13 @@ export default {
     layout: AppLayout, 
     components:{
         HeroSlider :() => import('./../shared/Slider/HeroSlider'),
-        WelcomeIcons ,
+        WelcomeIcons :() => import('./../shared/Partials/components/WelcomeIcons'),
         SaleSlider :() => import('./../shared/Slider/SaleSlider'),
-        TrendingCollection,
+        TrendingCollection :() => import('./components/TrendingCollection'),
         TrendingSlider :() => import('./../shared/Slider/TrendingSlider'),
-        TrendingMultiSlider,
-        WelcomeBrands ,
-        SaleBanner,
+        TrendingMultiSlider :() => import('./../shared/Slider/TrendingMultiSlider'),
+        WelcomeBrands :() => import('./components/WelcomeBrands'),
+        SaleBanner:() => import('./components/SaleBanner'),
     },
 
     mounted() {
