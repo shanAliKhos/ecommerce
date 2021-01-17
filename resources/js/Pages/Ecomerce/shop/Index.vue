@@ -41,15 +41,15 @@
 
 <script>
 import AppLayout from './../shared/AppLayout'   
-import Pagination from './../shared/Partials/Pagination'  
-import ShopProduct from './../shared/Product/Product'
+// import Pagination from './../shared/Partials/Pagination'  
+// import ShopProduct from './../shared/Product/Product'
 
 export default {
     layout: AppLayout,     
     metaInfo: { title: 'Shop' }, 
     components: {   
-        ShopProduct,
-        Pagination, 
+        ShopProduct :() => import('./../shared/Product/Product'),
+        Pagination :() => import('./../shared/Partials/Pagination'),
     },
     data() {
         return {

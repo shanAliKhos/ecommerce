@@ -44,27 +44,27 @@ class AppServiceProvider extends ServiceProvider
         Inertia::share([  
           
             "SiteOptions" =>  [
-                "Title" => $dbSetting?Setting::get('site_title'):'',
-                "Logo" => $dbSetting?Setting::get('site_logo'):'',
-                "Favicon" => $dbSetting?Setting::get('site_favicon'):'',
-                "Email" => $dbSetting?Setting::get('default_email_address'):'',
-                "Phone" => $dbSetting?Setting::get('phone'):'',
+                "Title" => 'title',
+                "Logo" => '',
+                "Favicon" => '',
+                "Email" => '',
+                "Phone" => '',
                 "Currency" => [  
-                    "Code" => $dbSetting?Setting::get('currency_code'):'',
-                    "Symbol" => $dbSetting?Setting::get('currency_symbol'):'',
+                    "Code" => '',
+                    "Symbol" => '',
                 ],
                 "Social" => [
-                    "Facebook"=> $dbSetting?Setting::get('social_facebook'):'',
-                    "Twitter"=> $dbSetting?Setting::get('social_twitter'):'',
-                    "Instagram"=> $dbSetting?Setting::get('social_instagram'):'',
-                    "LinkedIn"=> $dbSetting?Setting::get('social_linkedin'):'',
+                    "Facebook"=> '',
+                    "Twitter"=> '',
+                    "Instagram"=> '',
+                    "LinkedIn"=> '',
                 ], 
-                "FooterCopyRightText" => $dbSetting?Setting::get('footer_copyright_text'):'',
+                "FooterCopyRightText" => '',
             ],
           
             'Cart' => function () {
                 return [
-                    'Items' => Session::get('CartItems'),
+                    'Items' => '',
                 ];
             },
            
