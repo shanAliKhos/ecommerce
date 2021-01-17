@@ -56,14 +56,14 @@
 </div>
 </template>
 <script>
-import ShopProduct from './../Product/Product'
 import { Glide, GlideSlide } from 'vue-glide-js'
+// import ShopProduct from './../Product/Product'
 
 export default {
     components: {
         [Glide.name]: Glide,
         [GlideSlide.name]: GlideSlide,
-        ShopProduct,
+        ShopProduct:() => import('./../Product/Product'),
     },
     
     computed: {

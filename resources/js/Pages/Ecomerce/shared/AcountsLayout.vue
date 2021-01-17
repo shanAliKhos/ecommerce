@@ -12,11 +12,11 @@
 </template>
 
 <script>   
-import DashboardNavigation from './Partials/DashboardNavigation'
+// import DashboardNavigation from './Partials/DashboardNavigation'
 
 export default { 
     components: {
-        DashboardNavigation,        
+        DashboardNavigation:() => import('./Partials/DashboardNavigation'),        
     }
     
 }
