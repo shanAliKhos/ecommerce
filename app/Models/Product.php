@@ -77,12 +77,13 @@ class Product extends Model
 
     public function getMainphotoUrlAttribute()
     { 
-        if (Storage::disk('s3')->exists($this->image)) {
-            // dd( Storage::disk('s3')->url($this->image));
-            return Storage::disk('s3')->url($this->image);
-        }
-        return $this->defaultPhotoUrl();
- 
+        try {
+            if (Storage::disk('s3')->exists($this->image)) { 
+                return Storage::disk('s3')->url($this->image);
+            }
+        } catch (\Throwable $th) {
+            return $this->defaultPhotoUrl();
+        }        
     }
 
     public function getCurrentPriceAttribute()
