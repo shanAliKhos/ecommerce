@@ -64,11 +64,6 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'visibility' => 'public',
-            'cache' => [
-                'store' => 'memcached',
-                'expire' => 600,
-                'prefix' => 'cache-prefix',
-            ],            
         ],
 
     ],
