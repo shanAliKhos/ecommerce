@@ -9,7 +9,7 @@
         
         <ProductHeader :selectedSku="selectedSku" />
 
-        <ProductVariations :CartItem="CartItem" @sku:changed="UpdateSku" />
+        <ProductVariations :ProductQuantity="ProductQuantity" @sku:changed="UpdateSku" />
 
         <div class="text-xs fixed bottom-0 right-1 flex flex-wrap justify-end items-center hidden lg:block py-3 px-3 z-50 bg-white shadow-2xl border border-gray-200 rounded-lg">
           <p class="text-red-700 font-semibold flex">SKU : {{ SkuCode }}</p>
@@ -187,6 +187,8 @@
       </div>
     </div>
 
+    <SectionBorder/>
+
     <ProductDetails />
   </div>
 </template>
@@ -195,13 +197,17 @@
 import ProductImages from "./ProductImages";
 import ProductDetails from "./ProductDetails";
 import ProductHeader from "./ProductHeader";
-import ProductVariations from "./ProductVariations";
+import ProductVariations from "./ProductVariations"; 
+import SectionBorder from '@/Jetstream/SectionBorder'
+
+
 export default {
   components: {
     ProductImages,
     ProductDetails,
     ProductHeader,
     ProductVariations,
+    SectionBorder,
   },
   data() {
     return {
@@ -210,7 +216,7 @@ export default {
         Sku_id: null,
         name: this.$page.Product ? this.$page.Product.name : "",
         slug: this.$page.Product ? this.$page.Product.slug : "",
-        Instock: 0,
+        Instock: this.Sku_id,
         Qty: 1,
         price: this.$page.Product ? this.$page.Product.current_price : 0,
         image: this.$page.Product ? this.$page.Product.mainphoto_url : "",
@@ -255,10 +261,11 @@ export default {
     },
     ProductQuantity() {
       const self = this;
-      let PrdQty = self.selectedSku.quantity ? self.selectedSku.quantity: self.$page.Product.quantity;
+      let PrdQty = self.selectedSku.id ? self.selectedSku.quantity: self.$page.Product.quantity; 
       self.CartItem.Instock = PrdQty;
       return PrdQty - self.CartItem.Qty;
     },
+    
     CartQty() {
       self = this;
       return self.CartItem.Qty;

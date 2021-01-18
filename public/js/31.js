@@ -514,10 +514,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hidden sm:block" }, [
-      _c("div", { staticClass: "py-8" }, [
-        _c("div", { staticClass: "border-t border-gray-200" })
-      ])
+    return _c("div", { staticClass: "py-8" }, [
+      _c("div", { staticClass: "border-t border-gray-200" })
     ])
   }
 ]

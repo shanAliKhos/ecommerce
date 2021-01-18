@@ -9,6 +9,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Pages_Shared_Tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Pages/Shared/Tabs */ "./resources/js/Pages/Shared/Tabs.vue");
+/* harmony import */ var _Pages_Shared_Tab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Pages/Shared/Tab */ "./resources/js/Pages/Shared/Tab.vue");
 //
 //
 //
@@ -176,17 +178,74 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Tabs: _Pages_Shared_Tabs__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Tab: _Pages_Shared_Tab__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      activeTab: "description"
+    };
+  },
+  computed: {
+    ProductDescription: function ProductDescription() {
+      return this.$page.Product.description;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    name: {
+      required: true
+    },
+    selected: {
+      "default": false
+    }
+  },
+  data: function data() {
+    return {
+      isActive: false
+    };
+  },
+  computed: {
+    href: function href() {
+      return "#" + this.name.toLowerCase().replace(/ /g, "-");
+    }
+  },
+  mounted: function mounted() {
+    this.isActive = this.selected;
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -212,12 +271,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      activeTab: "description"
+      tabs: []
     };
   },
-  computed: {
-    ProductDescription: function ProductDescription() {
-      return this.$page.Product.description;
+  created: function created() {
+    this.tabs = this.$children;
+  },
+  methods: {
+    selectTab: function selectTab(selectedTab) {
+      this.tabs.forEach(function (tab) {
+        tab.isActive = tab.href == selectedTab.href;
+      });
     }
   }
 });
@@ -240,100 +304,37 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    {
-      staticClass: "pb-16 sm:pb-20 md:pb-24",
-      attrs: { "x-data": "{ activeTab: 'description' }" }
-    },
+    "tabs",
     [
-      _c(
-        "div",
-        {
-          staticClass: "tabs flex flex-col sm:flex-row",
-          attrs: { role: "tablist" }
-        },
-        [
-          _c(
-            "span",
-            {
-              staticClass:
-                "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
-              class: { active: _vm.activeTab === "description" },
-              on: {
-                click: function($event) {
-                  _vm.activeTab = "description"
-                }
-              }
-            },
-            [_vm._v("\n      Description\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              staticClass:
-                "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
-              class: { active: _vm.activeTab === "additional-information" },
-              on: {
-                click: function($event) {
-                  _vm.activeTab = "additional-information"
-                }
-              }
-            },
-            [_vm._v("\n      Additional Information\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              staticClass:
-                "tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors",
-              class: { active: _vm.activeTab === "reviews" },
-              on: {
-                click: function($event) {
-                  _vm.activeTab = "reviews"
-                }
-              }
-            },
-            [_vm._v("\n      Reviews\n    ")]
-          )
-        ]
-      ),
+      _c("tab", { attrs: { name: "Description", selected: true } }, [
+        _c("div", {
+          staticClass: "font-hkregular text-secondary text-base",
+          domProps: { innerHTML: _vm._s(_vm.ProductDescription) }
+        })
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "tab-content relative" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "tab-pane bg-grey-light py-10 md:py-16 transition-opacity",
-            class: { active: _vm.activeTab === "description" },
-            attrs: { role: "tabpanel" }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "w-5/6 mx-auto text-center sm:text-left" },
-              [
-                _c("div", {
-                  staticClass: "font-hkregular text-secondary text-base",
-                  domProps: { innerHTML: _vm._s(_vm.ProductDescription) }
-                })
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "tab-pane bg-grey-light py-10 md:py-16 transition-opacity",
-            class: { active: _vm.activeTab === "additional-information" },
-            attrs: { role: "tabpanel" }
-          },
-          [_vm._m(0)]
-        ),
-        _vm._v(" "),
+      _c("tab", { attrs: { name: "Additional Information" } }, [
+        _c("div", { staticClass: "w-5/6 mx-auto" }, [
+          _c(
+            "div",
+            { staticClass: "font-hkregular text-secondary text-base" },
+            [
+              _vm._v(
+                "\n        On the main compartment has multiple pockets available for your tools,\n        chargers, make up, keys, etc. "
+              ),
+              _c("br"),
+              _c("br"),
+              _vm._v("\n        Size::13.4”Lx 6.5”W x 15.4”H. "),
+              _c("br"),
+              _vm._v("\n        Weight: 1.57pounds. "),
+              _c("br"),
+              _vm._v("\n        Color: light brown.\n      ")
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tab", { attrs: { name: "Reviews" } }, [
         _c(
           "div",
           {
@@ -343,343 +344,455 @@ var render = function() {
             attrs: { role: "tabpanel" }
           },
           [
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3),
-            _vm._v(" "),
-            _vm._m(4)
-          ]
-        )
-      ])
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-5/6 mx-auto" }, [
-      _c("div", { staticClass: "font-hkregular text-secondary text-base" }, [
-        _vm._v(
-          "\n          On the main compartment has multiple pockets available for your\n          tools, chargers, make up, keys, etc. "
-        ),
-        _c("br"),
-        _c("br"),
-        _vm._v("\n          Size::13.4”Lx 6.5”W x 15.4”H. "),
-        _c("br"),
-        _vm._v("\n          Weight: 1.57pounds. "),
-        _c("br"),
-        _vm._v("\n          Color: light brown.\n        ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-5/6 mx-auto border-b border-grey-darker pb-8 text-center sm:text-left"
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
-          },
-          [
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" })
-          ]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
-          _vm._v("\n          Perfect for everyday use\n        ")
-        ]),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
-          },
-          [
-            _vm._v(
-              "\n          I loooveeeee this product!!! It feels so soft and smells like real\n          leather!!! I ordered this fancy backpack looking for something that\n          can be used at work and, at the same time, after work; and I found\n          it. Honestly.. Amazing!!\n        "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex justify-center sm:justify-start items-center pt-3"
-          },
-          [
             _c(
-              "p",
-              { staticClass: "font-hkregular text-grey-darkest text-sm" },
+              "div",
+              {
+                staticClass:
+                  "w-5/6 mx-auto border-b border-grey-darker pb-8 text-center sm:text-left"
+              },
               [
-                _c("span", [_vm._v("By")]),
-                _vm._v(" Melanie Ashwood\n          ")
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+                  },
+                  [
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "font-hkbold text-secondary text-lg pt-3" },
+                  [_vm._v("\n          Perfect for everyday use\n        ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+                  },
+                  [
+                    _vm._v(
+                      "\n          I loooveeeee this product!!! It feels so soft and smells like real\n          leather!!! I ordered this fancy backpack looking for something that\n          can be used at work and, at the same time, after work; and I found\n          it. Honestly.. Amazing!!\n        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex justify-center sm:justify-start items-center pt-3"
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass: "font-hkregular text-grey-darkest text-sm"
+                      },
+                      [
+                        _c("span", [_vm._v("By")]),
+                        _vm._v(" Melanie Ashwood\n          ")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular text-grey-darkest text-sm block px-4"
+                      },
+                      [_vm._v(".")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "font-hkregular text-grey-darkest text-sm"
+                      },
+                      [_vm._v("6 days ago")]
+                    )
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
             _c(
-              "span",
+              "div",
               {
                 staticClass:
-                  "font-hkregular text-grey-darkest text-sm block px-4"
+                  "w-5/6 mx-auto border-b border-transparent pb-8 text-center sm:text-left"
               },
-              [_vm._v(".")]
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
+                  },
+                  [
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "bx bxs-star text-primary" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "font-hkbold text-secondary text-lg pt-3" },
+                  [_vm._v("\n          Gift for my girlfriend\n        ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
+                  },
+                  [
+                    _vm._v(
+                      "\n          I paid this thing thinking about my girlfriend’s birthday present,\n          however I had my doubts cuz’ she is kind of picky. But Seriously,\n          from now on, Elyssi is my best friend! She loved it!! She’s crazy\n          about it! DISCLAIMER: It is smaller than it appears.\n        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex justify-center sm:justify-start items-center pt-3"
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass: "font-hkregular text-grey-darkest text-sm"
+                      },
+                      [
+                        _c("span", [_vm._v("By")]),
+                        _vm._v(" Jake Houston\n          ")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-hkregular text-grey-darkest text-sm block px-4"
+                      },
+                      [_vm._v(".")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "font-hkregular text-grey-darkest text-sm"
+                      },
+                      [_vm._v("4 days ago")]
+                    )
+                  ]
+                )
+              ]
             ),
             _vm._v(" "),
+            _c("form", { staticClass: "w-5/6 mx-auto" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+                },
+                [
+                  _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-sm block mb-2",
+                        attrs: { for: "name" }
+                      },
+                      [_vm._v("Name")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-input",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter your Name",
+                        id: "name"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-sm block mb-2",
+                        attrs: { for: "email" }
+                      },
+                      [_vm._v("Email address")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-input",
+                      attrs: {
+                        type: "email",
+                        placeholder: "Enter your email",
+                        id: "email"
+                      }
+                    })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
+                },
+                [
+                  _c("div", { staticClass: "sm:w-1/2 px-5" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-sm block mb-2",
+                        attrs: { for: "review_title" }
+                      },
+                      [_vm._v("Review Title")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-input",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter your review title",
+                        id: "review_title"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "font-hkregular text-secondary text-sm block mb-2"
+                      },
+                      [_vm._v("Rating")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "flex pt-4" }, [
+                      _c("i", {
+                        staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+                      }),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+                      }),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+                      }),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
+                      }),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "bx bxs-star text-grey-darker text-xl"
+                      })
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "sm:w-12/25 pt-10" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass:
+                      "font-hkregular text-secondary text-sm block mb-2",
+                    attrs: { for: "message" }
+                  },
+                  [_vm._v("ReviewMessage")]
+                ),
+                _vm._v(" "),
+                _c("textarea", {
+                  staticClass: "form-textarea",
+                  attrs: {
+                    placeholder: "Give your review tittle",
+                    id: "message"
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
             _c(
-              "p",
-              { staticClass: "font-hkregular text-grey-darkest text-sm" },
-              [_vm._v("6 days ago")]
+              "div",
+              {
+                staticClass:
+                  "w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left"
+              },
+              [
+                _c(
+                  "a",
+                  { staticClass: "btn btn-primary", attrs: { href: "/" } },
+                  [_vm._v("Submit Review")]
+                )
+              ]
             )
           ]
         )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-5/6 mx-auto border-b border-transparent pb-8 text-center sm:text-left"
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex justify-center sm:justify-start items-center pt-3 xl:pt-5"
-          },
-          [
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "bx bxs-star text-primary" })
-          ]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "font-hkbold text-secondary text-lg pt-3" }, [
-          _vm._v("\n          Gift for my girlfriend\n        ")
-        ]),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass: "font-hkregular text-secondary pt-4 lg:w-5/6 xl:w-2/3"
-          },
-          [
-            _vm._v(
-              "\n          I paid this thing thinking about my girlfriend’s birthday present,\n          however I had my doubts cuz’ she is kind of picky. But Seriously,\n          from now on, Elyssi is my best friend! She loved it!! She’s crazy\n          about it! DISCLAIMER: It is smaller than it appears.\n        "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex justify-center sm:justify-start items-center pt-3"
-          },
-          [
-            _c(
-              "p",
-              { staticClass: "font-hkregular text-grey-darkest text-sm" },
-              [_c("span", [_vm._v("By")]), _vm._v(" Jake Houston\n          ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass:
-                  "font-hkregular text-grey-darkest text-sm block px-4"
-              },
-              [_vm._v(".")]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              { staticClass: "font-hkregular text-grey-darkest text-sm" },
-              [_vm._v("4 days ago")]
-            )
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "w-5/6 mx-auto" }, [
-      _c(
-        "div",
-        {
-          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
-        },
-        [
-          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
-            _c(
-              "label",
-              {
-                staticClass: "font-hkregular text-secondary text-sm block mb-2",
-                attrs: { for: "name" }
-              },
-              [_vm._v("Name")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-input",
-              attrs: {
-                type: "text",
-                placeholder: "Enter your Name",
-                id: "name"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
-            _c(
-              "label",
-              {
-                staticClass: "font-hkregular text-secondary text-sm block mb-2",
-                attrs: { for: "email" }
-              },
-              [_vm._v("Email address")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-input",
-              attrs: {
-                type: "email",
-                placeholder: "Enter your email",
-                id: "email"
-              }
-            })
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "flex flex-col sm:flex-row justify-between pt-10 -mx-5"
-        },
-        [
-          _c("div", { staticClass: "sm:w-1/2 px-5" }, [
-            _c(
-              "label",
-              {
-                staticClass: "font-hkregular text-secondary text-sm block mb-2",
-                attrs: { for: "review_title" }
-              },
-              [_vm._v("Review Title")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-input",
-              attrs: {
-                type: "text",
-                placeholder: "Enter your review title",
-                id: "review_title"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm:w-1/2 px-5 pt-10 sm:pt-0" }, [
-            _c(
-              "label",
-              {
-                staticClass: "font-hkregular text-secondary text-sm block mb-2"
-              },
-              [_vm._v("Rating")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex pt-4" }, [
-              _c("i", {
-                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
-              }),
-              _vm._v(" "),
-              _c("i", {
-                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
-              }),
-              _vm._v(" "),
-              _c("i", {
-                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
-              }),
-              _vm._v(" "),
-              _c("i", {
-                staticClass: "bx bxs-star text-grey-darker text-xl pr-1"
-              }),
-              _vm._v(" "),
-              _c("i", { staticClass: "bx bxs-star text-grey-darker text-xl" })
-            ])
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "sm:w-12/25 pt-10" }, [
-        _c(
-          "label",
-          {
-            staticClass: "font-hkregular text-secondary text-sm block mb-2",
-            attrs: { for: "message" }
-          },
-          [_vm._v("ReviewMessage")]
-        ),
-        _vm._v(" "),
-        _c("textarea", {
-          staticClass: "form-textarea",
-          attrs: { placeholder: "Give your review tittle", id: "message" }
-        })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left"
-      },
-      [
-        _c("a", { staticClass: "btn btn-primary", attrs: { href: "/" } }, [
-          _vm._v("Submit Review")
-        ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.isActive,
+          expression: "isActive"
+        }
       ]
-    )
-  }
-]
+    },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "flex flex-wrap py-5 px-5 mb-10" }, [
+    _c("div", { staticClass: "w-full" }, [
+      _c(
+        "ul",
+        { staticClass: "flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row" },
+        _vm._l(_vm.tabs, function(tab) {
+          return _c(
+            "li",
+            {
+              key: tab.name + "-tab",
+              staticClass: "-mb-px mr-2 last:mr-0 flex-auto text-center",
+              class: { "is-active": tab.isActive }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal",
+                  class: {
+                    "text-white bg-pink-600 ": tab.isActive,
+                    "text-pink-600": !tab.isActive
+                  },
+                  attrs: { href: tab.href },
+                  on: {
+                    click: function($event) {
+                      return _vm.selectTab(tab)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fas fa-space-shuttle text-base mr-1"
+                  }),
+                  _vm._v("  \n                    " + _vm._s(tab.name))
+                ]
+              )
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+        },
+        [
+          _c("div", { staticClass: "px-4 py-5 flex-auto" }, [
+            _c(
+              "div",
+              { staticClass: "tab-content tab-space" },
+              [_vm._t("default")],
+              2
+            )
+          ])
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -862,6 +975,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductDetails_vue_vue_type_template_id_0d11cd44___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductDetails_vue_vue_type_template_id_0d11cd44___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tab.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Shared/Tab.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tab.vue?vue&type=template&id=2c913fb4& */ "./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4&");
+/* harmony import */ var _Tab_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tab.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Tab_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Shared/Tab.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tab_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Tab.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tab.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tab_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Tab.vue?vue&type=template&id=2c913fb4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tab.vue?vue&type=template&id=2c913fb4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tab_vue_vue_type_template_id_2c913fb4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tabs.vue":
+/*!********************************************!*\
+  !*** ./resources/js/Pages/Shared/Tabs.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tabs.vue?vue&type=template&id=694257ef& */ "./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef&");
+/* harmony import */ var _Tabs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tabs.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Tabs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Shared/Tabs.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tabs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Tabs.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tabs.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tabs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Tabs.vue?vue&type=template&id=694257ef& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Tabs.vue?vue&type=template&id=694257ef&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tabs_vue_vue_type_template_id_694257ef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

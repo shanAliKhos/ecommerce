@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["CartItem"],
+  props: ["ProductQuantity"],
   data: function data() {
     return {
       form: {
@@ -122,9 +122,6 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
       return selectedSku;
-    },
-    ProductQuantity: function ProductQuantity() {
-      return this.$page.Product.quantity - this.CartItem ? this.CartItem.Qty : 0;
     },
     SkuCode: function SkuCode() {
       var self = this;

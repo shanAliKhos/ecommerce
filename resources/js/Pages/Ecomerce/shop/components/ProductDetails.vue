@@ -1,58 +1,25 @@
 <template>
-  <div class="pb-16 sm:pb-20 md:pb-24" x-data="{ activeTab: 'description' }">
-    <div class="tabs flex flex-col sm:flex-row" role="tablist">
-      <span
-        @click="activeTab = 'description'"
-        class="tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors"
-        :class="{ active: activeTab === 'description' }"
-      >
-        Description
-      </span>
-
-      <span
-        @click="activeTab = 'additional-information'"
-        class="tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors"
-        :class="{ active: activeTab === 'additional-information' }"
-      >
-        Additional Information
-      </span>
-
-      <span
-        @click="activeTab = 'reviews'"
-        class="tab-item bg-white hover:bg-grey-light px-10 py-5 text-center sm:text-left border-t-2 border-transparent font-hkbold text-secondary cursor-pointer transition-colors"
-        :class="{ active: activeTab === 'reviews' }"
-      >
-        Reviews
-      </span>
-    </div>
-    <div class="tab-content relative">
+  <tabs>
+    <tab name="Description" :selected="true">
       <div
-        :class="{ active: activeTab === 'description' }"
-        class="tab-pane bg-grey-light py-10 md:py-16 transition-opacity"
-        role="tabpanel"
-      >
-        <div class="w-5/6 mx-auto text-center sm:text-left">
-          <div
-            class="font-hkregular text-secondary text-base"
-            v-html="ProductDescription"
-          ></div>
+        class="font-hkregular text-secondary text-base"
+        v-html="ProductDescription"
+      ></div>
+    </tab>
+
+    <tab name="Additional Information">
+      <div class="w-5/6 mx-auto">
+        <div class="font-hkregular text-secondary text-base">
+          On the main compartment has multiple pockets available for your tools,
+          chargers, make up, keys, etc. <br /><br />
+          Size::13.4”Lx 6.5”W x 15.4”H. <br />
+          Weight: 1.57pounds. <br />
+          Color: light brown.
         </div>
       </div>
-      <div
-        :class="{ active: activeTab === 'additional-information' }"
-        class="tab-pane bg-grey-light py-10 md:py-16 transition-opacity"
-        role="tabpanel"
-      >
-        <div class="w-5/6 mx-auto">
-          <div class="font-hkregular text-secondary text-base">
-            On the main compartment has multiple pockets available for your
-            tools, chargers, make up, keys, etc. <br /><br />
-            Size::13.4”Lx 6.5”W x 15.4”H. <br />
-            Weight: 1.57pounds. <br />
-            Color: light brown.
-          </div>
-        </div>
-      </div>
+    </tab>
+
+    <tab name="Reviews">
       <div
         :class="{ active: activeTab === 'reviews' }"
         class="tab-pane bg-grey-light py-10 md:py-16 transition-opacity"
@@ -195,11 +162,19 @@
           <a href="/" class="btn btn-primary">Submit Review</a>
         </div>
       </div>
-    </div>
-  </div>
+    </tab>
+  </tabs>
 </template>
 <script>
+
+import Tabs from '@/Pages/Shared/Tabs'
+import Tab from '@/Pages/Shared/Tab'
+
 export default {
+  components: {
+    Tabs,
+    Tab,
+  },
   data() {
     return {
       activeTab: "description",

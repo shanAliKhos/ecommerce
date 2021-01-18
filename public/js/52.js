@@ -86,7 +86,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['mobileMenu', 'categories', 'subcategory'],
   components: {
     MobileNavLink: function MobileNavLink() {
-      return __webpack_require__.e(/*! import() */ 191).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
+      return __webpack_require__.e(/*! import() */ 193).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
     }
   },
   computed: {
@@ -353,7 +353,7 @@ var render = function() {
                         103016370
                       )
                     },
-                    [_vm._v(" "), _c("span", [_vm._v("Account")])]
+                    [_vm._v(" "), _c("span", [_vm._v("Login")])]
                   )
                 : _vm._e(),
               _vm._v(" "),

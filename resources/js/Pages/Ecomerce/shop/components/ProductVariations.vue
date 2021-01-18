@@ -79,7 +79,7 @@
 </template>
 <script>
 export default {
-  props: ["CartItem"],
+  props: ["ProductQuantity"],
   data() {
     return {
       form: {
@@ -88,6 +88,7 @@ export default {
       },
     };
   },
+  
   methods: {
     AttrColor(clr,sel,oid){
         let color = `bg-${clr}-400 text-${clr}-400`;
@@ -110,12 +111,7 @@ export default {
         }
       }); 
       return selectedSku;
-    },
-    ProductQuantity() {
-      return this.$page.Product.quantity - this.CartItem
-        ? this.CartItem.Qty
-        : 0;
-    },
+    }, 
     SkuCode() {
       const self = this;
       return self.SelectedSku.name?self.SelectedSku.name:self.$page.Product.sku; 
