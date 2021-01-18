@@ -166,13 +166,12 @@
   </tabs>
 </template>
 <script>
-
-import Tabs from '@/Pages/Shared/Tabs'
+ 
 import Tab from '@/Pages/Shared/Tab'
 
 export default {
   components: {
-    Tabs,
+    Tabs:() => import('@/Pages/Shared/Tabs'),
     Tab,
   },
   data() {
