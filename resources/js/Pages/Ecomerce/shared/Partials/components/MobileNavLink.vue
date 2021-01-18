@@ -23,6 +23,7 @@
                 method: 'get', 
                 onStart:  () => self.loading = true,  
                 onSuccess:  () => self.loading = false,  
+                onCancel: () => self.loading = false,
             })            
  
              

@@ -51,7 +51,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.$page.Product.name;
     },
     ProductIsOnSale: function ProductIsOnSale() {
-      return this.selectedSku.on_sale ? this.selectedSku.on_sale : this.$page.Product.on_sale;
+      return this.selectedSku.id ? this.selectedSku.on_sale : this.$page.Product.on_sale;
     },
     ProductRegularPrice: function ProductRegularPrice() {
       return this.selectedSku.regular_price ? this.selectedSku.regular_price : this.$page.Product.regular_price;

@@ -1,10 +1,10 @@
 <template>
 <div class="xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full px-2" 
-    :class="{ 'fixed scrolled': !view.atTopOfPage }" >
+    :class="{ 'fixed scrolled': !atTopOfPage }" >
     
     <nav-bar    
         class="z-50"
-        :atTopOfPage="view.atTopOfPage"
+        :atTopOfPage="atTopOfPage"
         :mobileMenu="mobileMenu"
         :categories="categories"
         :subcategory="subcategory"
@@ -36,9 +36,7 @@ export default {
             mobileMenu:false,
             categories:false,
             subcategory:false,     
-            view: {
-                atTopOfPage: true
-            }                         
+            atTopOfPage: true,
         }
     },
     beforeMount () {
@@ -48,9 +46,9 @@ export default {
         handleScroll(){ 
             // alert(window.pageYOffset);
             if(window.pageYOffset>600){ 
-                if(this.view.atTopOfPage) this.view.atTopOfPage = false
+                if(this.atTopOfPage) this.atTopOfPage = false
             }else{ 
-                if(!this.view.atTopOfPage) this.view.atTopOfPage = true
+                if(!this.atTopOfPage) this.atTopOfPage = true
             }
         }
     },

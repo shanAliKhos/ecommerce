@@ -100,9 +100,7 @@ __webpack_require__.r(__webpack_exports__);
       mobileMenu: false,
       categories: false,
       subcategory: false,
-      view: {
-        atTopOfPage: true
-      }
+      atTopOfPage: true
     };
   },
   beforeMount: function beforeMount() {
@@ -112,9 +110,9 @@ __webpack_require__.r(__webpack_exports__);
     handleScroll: function handleScroll() {
       // alert(window.pageYOffset);
       if (window.pageYOffset > 600) {
-        if (this.view.atTopOfPage) this.view.atTopOfPage = false;
+        if (this.atTopOfPage) this.atTopOfPage = false;
       } else {
-        if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
+        if (!this.atTopOfPage) this.atTopOfPage = true;
       }
     }
   },
@@ -345,13 +343,13 @@ var render = function() {
     {
       staticClass:
         "xxstheme-header transition duration-700 ease-in left-0 top-0  bg-white z-50 w-full px-2",
-      class: { "fixed scrolled": !_vm.view.atTopOfPage }
+      class: { "fixed scrolled": !_vm.atTopOfPage }
     },
     [
       _c("nav-bar", {
         staticClass: "z-50",
         attrs: {
-          atTopOfPage: _vm.view.atTopOfPage,
+          atTopOfPage: _vm.atTopOfPage,
           mobileMenu: _vm.mobileMenu,
           categories: _vm.categories,
           subcategory: _vm.subcategory

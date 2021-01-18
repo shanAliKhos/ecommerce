@@ -36,6 +36,9 @@ __webpack_require__.r(__webpack_exports__);
         },
         onSuccess: function onSuccess() {
           return self.loading = false;
+        },
+        onCancel: function onCancel() {
+          return self.loading = false;
         }
       });
     }
