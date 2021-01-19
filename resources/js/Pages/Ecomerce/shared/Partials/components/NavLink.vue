@@ -23,9 +23,7 @@
     </svg>
     <slot />
   </div>    
-    <!-- <inertia-link :href="href" class="transition duration-500 ease-in-out transform  px-2" :class="classes"> -->
-        <!-- <slot></slot> -->
-    <!-- </inertia-link>      -->
+ 
 </li> 
 </template>
 
