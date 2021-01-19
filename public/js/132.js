@@ -1,1 +1,424 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[132,156,170],{0:function(t,e,s){"use strict";function i(t,e,s,i,n,l,o,a){var r,c="function"==typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=s,c._compiled=!0),i&&(c.functional=!0),l&&(c._scopeId="data-v-"+l),o?(r=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),n&&n.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(o)},c._ssrRegister=r):n&&(r=a?function(){n.call(this,(c.functional?this.parent:this).$root.$options.shadowRoot)}:n),r)if(c.functional){c._injectStyles=r;var x=c.render;c.render=function(t,e){return r.call(e),x(t,e)}}else{var m=c.beforeCreate;c.beforeCreate=m?[].concat(m,r):[r]}return{exports:t,options:c}}s.d(e,"a",(function(){return i}))},62:function(t,e,s){"use strict";s.r(e);var i=s(0),n=Object(i.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between font-mono"},[this._m(0),this._v(" "),e("div",{staticClass:"w-full lg:w-1/2 mt-6 sm:mt-10 lg:mt-0"},[e("div",{staticClass:"px-10 h-56 sm:h-76 bg-left sm:bg-center bg-no-repeat bg-cover relative",style:"background-image:url('./img/collection/collection (1).jpg')"},[this._m(1)])]),this._v(" "),this._m(2),this._v(" "),this._m(3)])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"lg:w-1/2 px-10 mx-auto lg:mx-0 text-center lg:text-left"},[e("div",{staticClass:"lg:w-3/4 xl:w-2/3 lg:pt-10 pb-4 md:pb-10"},[e("p",{staticClass:"font-semibold text-gray-800 text-3xl md:text-4xl lg:text-7xl"},[this._v("Trending Collections")]),this._v(" "),e("p",{staticClass:"font-semibold text-gray-500 text-lg pt-4"},[this._v("Checkout our newest trends this coming season")])])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"w-2/3 absolute inset-0 px-6 md:px-10 py-14 "},[e("p",{staticClass:"font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"},[this._v("Passion Pearl "),e("br"),this._v(" Collection")]),this._v(" "),e("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/shop"}},[e("div",{staticClass:"bg-white rounded-full h-8 w-8 flex items-center justify-center"},[e("i",{staticClass:"transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"})]),this._v(" "),e("span",[e("p",{staticClass:"transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[this._v("Get it now")])])])])},function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"w-full lg:w-1/2 lg:px-10 mt-8 sm:mt-10"},[s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68",staticStyle:{"background-image":"url('./img/collection/collection (2).jpg')"}},[s("div",{staticClass:"md:w-2/3 absolute inset-0 px-6 md:px-10 py-14"},[s("p",{staticClass:"font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"},[t._v("Hoodie your way! For Men")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"})]),t._v(" "),s("p",{staticClass:"transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("Get it now")])])])]),t._v(" "),s("div",{staticClass:"bg-left sm:bg-center bg-no-repeat bg-cover relative h-56 sm:h-76 lg:h-68 mt-8 sm:mt-10",staticStyle:{"background-image":"url('./img/collection/collection (3).jpg')"}},[s("div",{staticClass:"w-2/3 absolute inset-0 px-6 md:px-10 py-14"},[s("p",{staticClass:"font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"},[t._v("\n                    Anabelle Purses  \n                ")]),t._v(" "),s("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[s("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[s("i",{staticClass:"transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"})]),t._v(" "),s("p",{staticClass:"transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[t._v("Get it now")])])])])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"w-full lg:w-1/2 px-10 h-82 sm:h-94 lg:h-96 bg-left sm:bg-center bg-no-repeat bg-cover relative mt-8 sm:mt-10",staticStyle:{"background-image":"url('./img/collection/collection (4).jpg')"}},[e("div",{staticClass:"w-2/3 absolute inse t-0 px-6 md:px-10 py-14 sm:py-16"},[e("p",{staticClass:"font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"},[this._v("W.W. Shoes ")]),this._v(" "),e("a",{staticClass:"flex items-center pt-5 group",attrs:{href:"/collection-list"}},[e("div",{staticClass:"bg-white rounded-full p-2 h-8 w-8 flex items-center justify-center"},[e("i",{staticClass:"transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"})]),this._v(" "),e("p",{staticClass:"transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"},[this._v("Get it now")])])])])}],!1,null,null,null);e.default=n.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[132],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-glide-js */ "./node_modules/vue-glide-js/dist/vue-glide.common.js");
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_glide_js__WEBPACK_IMPORTED_MODULE_0__);
+var _components;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+ // import ShopProduct from './../Product/Product'
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _defineProperty(_components, "ShopProduct", function ShopProduct() {
+    return __webpack_require__.e(/*! import() */ 47).then(__webpack_require__.bind(null, /*! ./../Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue"));
+  }), _components),
+  computed: {
+    TrendingSliderProducts: function TrendingSliderProducts() {
+      return this.$page.FeaturedSliders ? this.$page.FeaturedSliders.trending_slider : [];
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.TrendingSliderProducts.length > 0
+      ? _c(
+          "div",
+          [
+            _c(
+              "vue-glide",
+              {
+                attrs: {
+                  type: "carousel",
+                  perView: 4,
+                  hoverpause: true,
+                  bound: true,
+                  animationDuration: 200,
+                  peek: { before: 100, after: 100 },
+                  breakpoints: {
+                    1024: {
+                      perView: 3,
+                      peek: {
+                        before: 20,
+                        after: 20
+                      }
+                    },
+                    768: {
+                      perView: 2,
+                      peek: {
+                        before: 10,
+                        after: 10
+                      }
+                    },
+                    600: {
+                      perView: 1,
+                      peek: {
+                        before: 0,
+                        after: 0
+                      }
+                    }
+                  },
+                  autoplay: 2000
+                }
+              },
+              [
+                _vm._l(_vm.TrendingSliderProducts, function(
+                  Product,
+                  ProductIndex
+                ) {
+                  return _c(
+                    "vue-glide-slide",
+                    { key: ProductIndex },
+                    [
+                      _c("shop-product", {
+                        staticClass: "relative mt-2 mb-5 pb-2 z-30",
+                        attrs: { Product: Product }
+                      })
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _c("template", { slot: "control" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "transition duration-300 ease-in-out transform  hover:-translate-x-2 hover:scale-125 shadow-md rounded-full absolute left-25  left-35 md:left-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
+                      attrs: { "data-glide-dir": "<" }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "bx bx-chevron-left text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "transition duration-300 ease-in-out transform  hover:translate-x-2 hover:scale-125 shadow-md rounded-full absolute right-25 right-35 md:right-0 top-0 md:top-40 transform -translate-y-1/2 bg-gray-50 hover:bg-orange-500 border border-gray-200 z-10 md:cursor-pointer group",
+                      attrs: { "data-glide-dir": ">" }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "bx bx-chevron-right text-orange-500 transition-colors group-hover:text-white text-2xl p-4 md:p-2 lg:p-4"
+                      })
+                    ]
+                  )
+                ])
+              ],
+              2
+            )
+          ],
+          1
+        )
+      : _c(
+          "div",
+          {
+            staticClass:
+              "p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+          },
+          [_vm._m(0)]
+        )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-row group animate-pulse" }, [
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-6xl text-gray-50 uppercase"
+        },
+        [_vm._v("EMPTY SLIDER")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "flex item-center justify-center text-2xl text-gray-200 uppercase"
+        },
+        [_vm._v("add some slide to see slider")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functional component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=template&id=9430ddd6& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&");
+/* harmony import */ var _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=template&id=9430ddd6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue?vue&type=template&id=9430ddd6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_9430ddd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

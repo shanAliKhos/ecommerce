@@ -19,18 +19,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       loading: false
     };
   },
-  props: ['href', 'active'],
+  props: ["href", "active"],
   methods: {
     send: function send() {
       var self = this;
       self.$inertia.visit(this.href, {
-        method: 'get',
+        method: "get",
         onStart: function onStart() {
           return self.loading = true;
         },
@@ -45,7 +62,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? 'text-orange-500' : '';
+      return this.active ? "text-orange-500" : "";
     }
   }
 });
@@ -86,7 +103,7 @@ var render = function() {
         "svg",
         {
           staticClass:
-            "transition ease-in-out pointer-events-none h-7 w-auto fill-current ",
+            "transition ease-in-out pointer-events-none h-7 w-auto fill-current",
           class: { "animate-spin": _vm.loading },
           attrs: {
             xmlns: "http://www.w3.org/2000/svg",

@@ -3,7 +3,7 @@
     <div class="w-full">
          <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center" v-for="tab in tabs" :key="`${tab.name}-tab`" :class="{ 'is-active': tab.isActive }">
-                <a :href="tab.href" @click="selectTab(tab)" class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" :class="{ 'text-white bg-pink-600 ': tab.isActive,'text-pink-600':!tab.isActive }"> 
+                <a :href="tab.href" @click="selectTab(tab)" class="text-xs font-bold uppercase px-5 py-2 shadow-lg rounded block leading-normal" :class="{ 'text-white bg-orange-600 ': tab.isActive,'text-orange-600':!tab.isActive }"> 
                     <i class="fas fa-space-shuttle text-base mr-1"></i>  
                     {{ tab.name }}</a>
             </li>

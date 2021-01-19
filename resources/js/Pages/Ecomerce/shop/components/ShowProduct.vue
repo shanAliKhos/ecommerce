@@ -213,10 +213,10 @@ export default {
     return {
       CartItem: {
         id: this.$page.Product ? this.$page.Product.id : null,
-        Sku_id: null,
+        Sku_id: this.Sku_id,
         name: this.$page.Product ? this.$page.Product.name : "",
         slug: this.$page.Product ? this.$page.Product.slug : "",
-        Instock: this.Sku_id,
+        Instock:0,
         Qty: 1,
         price: this.$page.Product ? this.$page.Product.current_price : 0,
         image: this.$page.Product ? this.$page.Product.mainphoto_url : "",

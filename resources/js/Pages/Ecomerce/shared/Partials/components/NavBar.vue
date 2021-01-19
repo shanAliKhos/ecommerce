@@ -1,64 +1,58 @@
 <template>
     <div class="container mx-auto  relative ">
         
-        <div class="transition duration-300 ease-in-out transform flex justify-between items-center" :class="{'md:h-10':!atTopOfPage}">
-            <div class="hidden lg:block h-10">
-                <div class="flex items-center">
-                    
-                    <a href="javascript:;" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 mr-8">
-                        <span :class="IsAtTop" class="w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover"></span>
-                    </a>
-
-                    <a href="javascript:;"
-                        class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group">
-                        <span :class="IsAtTop" class="w-7 h-7 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover"></span>
-                    </a>
-
-                </div>
-            </div>
-            <button @click="back" type="button" class="lg:hidden">
-                <svg  class=" hover:text-gray-800 text-xs w-7 h-7" :class="IsAtTop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="transition duration-300 ease-in-out transform flex justify-between items-center" :class="{'md:h-16':!atTopOfPage}">
+            <button @click="back" type="button" class="md:hidden">
+                <svg  class=" hover:text-gray-800 text-xs w-6  h-6" :class="IsAtTop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>                       
             </button>
-            <inertia-link :href="route('welcome')" >
+            <inertia-link :href="route('welcome')" class="flex items-center flex-inline justify-center" >
                 <ApplicationLogo :atTopOfPage="atTopOfPage"/> 
             </inertia-link>
-            <div class="hidden lg:block h-10">
-                <div class="flex items-center">
-                    
-                    <inertia-link v-if="!$page.user"  :href="route('login')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group relative">
-                        <span class="flex h-3 w-3 absolute right-5">
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                        </span>                        
-                        <span :class="IsAtTop" class="w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover"></span>
-                    </inertia-link>
+            <div class="hidden md:block flex" >
+                <div class="flex items-center  justify-end flex-inline">
 
-                    <inertia-link v-if="$page.user?$page.user.is_admin:false" :href="route('admin.dashboard')" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group relative" >
-                        <span class="flex h-3 w-3 absolute right-5">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "></span>
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
-                        </span>                            
-                        <span  :class="IsAtTop" class="w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover"></span>
-                    </inertia-link>
+                    <a href="javascript:;" class="border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 ">
+                        <span :class="IsAtTop" class="w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover"></span>
+                    </a>
 
-                    <inertia-link v-if="$page.user?!$page.user.is_admin:false"  :href="route('dashboard.index')" :class="{'border-green-400':$page.currentRouteName == 'dashboard.index'}" class="border-2 transition-all border-transparent hover:border-primary rounded-full px-4 py-4 group relative">
-                        <span class="flex h-3 w-3 absolute right-5">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "></span>
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
-                        </span>                        
-                        <span  :class="IsAtTop" class="w-7 h-7 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover"></span>
-                    </inertia-link>
+                    <a href="javascript:;"
+                        class="border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group">
+                        <span :class="IsAtTop" class="w-6  h-6 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover"></span>
+                    </a>
                     
                     <nav-cart :IsAtTop="IsAtTop"></nav-cart>
 
+                    <inertia-link v-if="!$page.user"  :href="route('login')" class="border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group relative">
+                        <span class="flex h-3 w-3 absolute right-2">
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                        </span>                        
+                        <span :class="IsAtTop" class="w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover"></span>
+                    </inertia-link>
+
+                    <inertia-link v-if="$page.user?$page.user.is_admin:false" :href="route('admin.dashboard')" class="border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group relative" >
+                        <span class="flex h-3 w-3 absolute right-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                        </span>                            
+                        <span  :class="IsAtTop" class="w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover"></span>
+                    </inertia-link>
+
+                    <inertia-link v-if="$page.user?!$page.user.is_admin:false"  :href="route('dashboard.index')" :class="{'border-green-400':$page.currentRouteName == 'dashboard.index'}" class="border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group relative">
+                        <span class="flex h-3 w-3 absolute right-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                        </span>                        
+                        <span  :class="IsAtTop" class="w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover"></span>
+                    </inertia-link>
                 </div>
             </div>
-            <div class="block lg:hidden h-10">
-                <div class="ml-3 relative">
+            <div class="block md:hidden flex" >
+                <div class="relative">
                     <dropdown align="right" width="48">
                         <template #trigger> 
-                            <svg :class="IsAtTop" class="w-7 h-7 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg :class="IsAtTop" class="w-6  h-6 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                             </svg>        
                         </template>
@@ -90,27 +84,53 @@
                 </div>             
             </div>
         </div>
-        <div class="flex justify-center  font-semibold" >
-            <ul class="list-reset flex items-center lg:ml-8">
+        <div class="flex items-center justify-around font-semibold hidden md:block">
+            <ul class="flex items-center justify-center  " :class="{'fixed top-4 w-1/2':!atTopOfPage,'w-full':atTopOfPage}" >
             
-                <cus-nav-link 
+                <cus-nav-link  
                     :href="route('welcome')" 
                     :active="$page.currentRouteName == 'welcome'" 
                     :atTopOfPage="atTopOfPage"
-                >Home</cus-nav-link>
+                >
+                    <template #icon> 
+                        <svg class="pointer-events-none	 h-6 w-auto fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>                        
+                    </template>
 
-                <cus-nav-link  
+                    <span >Home</span>                
+                </cus-nav-link>
+
+                <cus-nav-link   
+
                     :href="route('shop.index')" 
                     :active="$page.currentRouteName == 'shop.index'" 
                     :atTopOfPage="atTopOfPage"
-                >Shop</cus-nav-link>                     
+                >
+                    <template #icon> 
+                    <svg class="pointer-events-none	 h-6 w-auto "  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>                    
+                    </template>
 
-                <cus-nav-link 
+                    <span >Shop</span>                
+                </cus-nav-link>                     
+
+                <cus-nav-link  
+
                     :href="route('blog.index')" 
                     :active="$page.currentRouteName == 'blog.index'" 
                     :atTopOfPage="atTopOfPage"
 
-                >Blog</cus-nav-link>                  
+                >
+                    <template #icon>      
+                        <svg class="pointer-events-none	 h-6 w-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        </svg>                            
+                    </template>
+
+                    <span >Blog</span>                
+                </cus-nav-link>                  
  
             </ul>
         </div>

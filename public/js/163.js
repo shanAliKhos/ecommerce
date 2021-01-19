@@ -1,1 +1,305 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[163],{269:function(t,e,n){"use strict";n.r(e);var o={props:["mobileMenu","categories","subcategory"],components:{MobileNavLink:function(){return n.e(162).then(n.bind(null,268))}},computed:{IsMenuVisible:function(){return this.$page.currentRouteName,!0},CountCartItems:function(){return this.$page.Cart.Items?this.$page.Cart.Items.reduce((function(t,e){return t+e.Qty}),0):0}}},r=n(0),s=Object(r.a)(o,(function(){var t=this,e=t.$createElement,n=t._self._c||e;return t.IsMenuVisible?n("div",{staticClass:"z-50 bg-white block lg:hidden fixed bottom-0 right-0 left-0 border-t-2 border-gray-200 text-gray-400 px-2"},[n("div",{staticClass:"flex justify-around"},[n("MobileNavLink",{attrs:{active:"welcome"==t.$page.currentRouteName,href:t.route("welcome")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"pointer-events-none\t h-6 w-auto fill-current",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"}})])]},proxy:!0}],null,!1,4253584250)},[t._v(" "),n("span",{staticClass:"pointer-events-none"},[t._v("Home")])]),t._v(" "),n("MobileNavLink",{attrs:{active:"shop.index"==t.$page.currentRouteName,href:t.route("shop.index")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"h-6 w-auto",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"}})])]},proxy:!0}],null,!1,3146536351)},[t._v(" "),n("span",[t._v("Shop")])]),t._v(" "),n("MobileNavLink",{staticClass:"group relative",attrs:{active:"cart.index"==t.$page.currentRouteName,href:t.route("cart.index")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"h-6 w-auto",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}})])]},proxy:!0}],null,!1,1014159630)},[t.CountCartItems>0?n("span",{staticClass:"text-white border border-white shadow  absolute top-0 left-7 py-auto  px-2 rounded-full",class:{"bg-green-400":t.CountCartItems>0}},[t._v(t._s(t.CountCartItems))]):t._e(),t._v(" "),t._v(" "),n("span",[t._v("Cart")])]),t._v(" "),t.$page.user?t._e():n("MobileNavLink",{staticClass:"relative",attrs:{active:"login"==t.$page.currentRouteName,href:t.route("login")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"flex justify-center transition duration-700 ease-in-out h-6 w-auto",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"}})])]},proxy:!0}],null,!1,103016370)},[t._v(" "),n("span",[t._v("Login")])]),t._v(" "),t.$page.user&&t.$page.user.is_admin?n("MobileNavLink",{staticClass:"relative",attrs:{active:"admin.dashboard"==t.$page.currentRouteName,href:t.route("admin.dashboard")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"flex justify-center transition duration-700 ease-in-out h-6 w-auto",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"}})])]},proxy:!0}],null,!1,103016370)},[n("span",{staticClass:"flex h-6 w-auto absolute top-0 right-0 "},[n("span",{staticClass:"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "}),t._v(" "),n("span",{staticClass:"relative inline-flex rounded-full h-3 w-3 bg-green-400"})]),t._v(" "),t._v(" "),n("span",[t._v("Account")])]):t._e(),t._v(" "),t.$page.user&&!t.$page.user.is_admin?n("MobileNavLink",{staticClass:"relative",attrs:{active:"dashboard.index"==t.$page.currentRouteName,href:t.route("dashboard.index")},scopedSlots:t._u([{key:"icon",fn:function(){return[n("svg",{staticClass:"flex justify-center transition duration-700 ease-in-out h-6 w-auto",attrs:{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"}},[n("path",{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"}})])]},proxy:!0}],null,!1,103016370)},[n("span",{staticClass:"flex h-6 w-auto absolute top-0 right-0 "},[n("span",{staticClass:"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "}),t._v(" "),n("span",{staticClass:"relative inline-flex rounded-full h-3 w-3 bg-green-400"})]),t._v(" "),t._v(" "),n("span",[t._v("Account")])]):t._e()],1)]):t._e()}),[],!1,null,null,null);e.default=s.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[163],{
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex flex-col md:flex-row py-20 md:py-24" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-shipping"
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-semibold text-orange-500 text-xl tracking-wide"
+                },
+                [_vm._v(" Free shipping")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-regular text-gray-500 text-base tracking-wide"
+                },
+                [_vm._v(" On all orders over only $50 ")]
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-support"
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-semibold text-orange-500 text-xl tracking-wide"
+                },
+                [_vm._v(" Always available")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-regular text-gray-500 text-base tracking-wide"
+                },
+                [_vm._v(" 24/7 call center availabl e")]
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left  pb-3 md:pb-0"
+          },
+          [
+            _c("span", {
+              staticClass:
+                "bg-contain bg-center bg-no-repeat h-12 w-12 bg-icon-return"
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-6 mt-3 lg:mt-0" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-semibold text-orange-500 text-xl tracking-wide"
+                },
+                [_vm._v(" Free returns")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "font-regular text-gray-500 text-base tracking-wide"
+                },
+                [_vm._v(" 7 days free return policy")]
+              )
+            ])
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functional component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeIcons.vue?vue&type=template&id=03024d7a& */ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeIcons.vue?vue&type=template&id=03024d7a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue?vue&type=template&id=03024d7a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeIcons_vue_vue_type_template_id_03024d7a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
