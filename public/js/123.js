@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['Pagination'],
   components: {
     PaginationLink: function PaginationLink() {
-      return __webpack_require__.e(/*! import() */ 194).then(__webpack_require__.bind(null, /*! ./components/PaginationLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/PaginationLink.vue"));
+      return __webpack_require__.e(/*! import() */ 195).then(__webpack_require__.bind(null, /*! ./components/PaginationLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/PaginationLink.vue"));
     }
   },
   computed: {

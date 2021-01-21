@@ -109,11 +109,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Blogs'
+    title: "Blogs"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -121,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   },
   computed: {
     Blogs: function Blogs() {
@@ -144,6 +224,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -242,7 +350,7 @@ var render = function() {
                 staticClass:
                   "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center lg:text-left"
               },
-              [_vm._v(" Our Blog")]
+              [_vm._v("\n        Our Blog\n      ")]
             ),
             _vm._v(" "),
             _vm._l(_vm.Blogs, function(Blog, Blogindex) {
@@ -296,9 +404,15 @@ var render = function() {
                         "h4",
                         {
                           staticClass:
-                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                            "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5"
                         },
-                        [_vm._v(" " + _vm._s(Blog.title))]
+                        [
+                          _vm._v(
+                            "\n              " +
+                              _vm._s(Blog.title) +
+                              "\n            "
+                          )
+                        ]
                       )
                     ]),
                     _vm._v(" "),
@@ -323,7 +437,7 @@ var render = function() {
                           staticClass:
                             "font-hksemibold transition-colors text-grey-darkest group-hover:text-primary sm:text-lg pl-3 sm:pl-5"
                         },
-                        [_vm._v("Read\n                            more")]
+                        [_vm._v("Read more")]
                       )
                     ])
                   ])
@@ -345,7 +459,7 @@ var render = function() {
                         staticClass:
                           "font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"
                       },
-                      [_vm._v(" No Record Found")]
+                      [_vm._v("\n          No Record Found\n        ")]
                     )
                   ]
                 )
@@ -378,7 +492,7 @@ var render = function() {
             staticClass:
               "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl text-center"
           },
-          [_vm._v(" Top Feature Blog")]
+          [_vm._v("\n      Top Feature Blog\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -432,7 +546,7 @@ var render = function() {
                           },
                           [
                             _c("span", [
-                              _vm._v("By "),
+                              _vm._v("By\n                "),
                               _c("span", { staticClass: "font-hkbold" }, [
                                 _vm._v(_vm._s(FeaturedBlog.user.name))
                               ])
@@ -451,9 +565,15 @@ var render = function() {
                             "h4",
                             {
                               staticClass:
-                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5 "
+                                "font-butlermedium text-secondary text-xl md:text-2xl pt-5 pb-5"
                             },
-                            [_vm._v(_vm._s(FeaturedBlog.title))]
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(FeaturedBlog.title) +
+                                  "\n              "
+                              )
+                            ]
                           )
                         ]),
                         _vm._v(" "),
@@ -462,7 +582,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors   rounded-full h-8 w-8 flex items-center justify-center"
+                                "bg-white group-hover:bg-primary border border-grey-darkest group-hover:border-primary transition-colors rounded-full h-8 w-8 flex items-center justify-center"
                             },
                             [
                               _c("i", {
@@ -492,7 +612,7 @@ var render = function() {
             !_vm.FeaturedBlogs.length > 0
               ? _c(
                   "div",
-                  { staticClass: "w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10 " },
+                  { staticClass: "w-full mx-auto md:mx-0 px-2 xl:px-5 mb-10" },
                   [
                     _c(
                       "h4",
@@ -500,7 +620,7 @@ var render = function() {
                         staticClass:
                           "font-semibold text-gray-500 text-2xl pt-5 pb-5 flex item-center justify-center"
                       },
-                      [_vm._v(" No Record Found")]
+                      [_vm._v("\n          No Record Found\n        ")]
                     )
                   ]
                 )
@@ -547,7 +667,7 @@ var render = function() {
             staticClass:
               "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
           },
-          [_vm._v(" Categories")]
+          [_vm._v("\n      Categories\n    ")]
         ),
         _vm._v(" "),
         _vm._l(_vm.Categories, function(Category, CategoryIndex) {
@@ -566,7 +686,7 @@ var render = function() {
                   staticClass:
                     "font-hkregular transition-colors group-hover:font-hkbold text-gray-400 group-hover:text-primary text-base capitalize"
                 },
-                [_vm._v(" " + _vm._s(Category.name) + " ")]
+                [_vm._v("\n        " + _vm._s(Category.name) + "\n      ")]
               )
             ]
           )
@@ -598,7 +718,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("input", {
           staticClass:
-            "form-input   transition-all pr-10 text-grey-darkest text-base",
+            "form-input transition-all pr-10 text-grey-darkest text-base",
           attrs: {
             type: "text",
             id: "search_form",
@@ -628,7 +748,7 @@ var staticRenderFns = [
           staticClass:
             "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
         },
-        [_vm._v("\n            Follow Us")]
+        [_vm._v("\n      Follow Us\n    ")]
       ),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center sm:justify-start pt-8" }, [

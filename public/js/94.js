@@ -86,12 +86,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Payment Form'
+    title: "Payment Form"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -124,6 +161,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -266,7 +319,13 @@ var render = function() {
                       _c(
                         "p",
                         { staticClass: "font-hkregular text-secondary" },
-                        [_vm._v(_vm._s(_vm.CustomerInformation.email))]
+                        [
+                          _vm._v(
+                            "\n              " +
+                              _vm._s(_vm.CustomerInformation.email) +
+                              "\n            "
+                          )
+                        ]
                       )
                     ]),
                     _vm._v(" "),
@@ -284,7 +343,13 @@ var render = function() {
                       _c(
                         "p",
                         { staticClass: "font-hkregular text-secondary" },
-                        [_vm._v(_vm._s(_vm.CustomerInformation.address))]
+                        [
+                          _vm._v(
+                            "\n              " +
+                              _vm._s(_vm.CustomerInformation.address) +
+                              "\n            "
+                          )
+                        ]
                       )
                     ]),
                     _vm._v(" "),
@@ -296,7 +361,11 @@ var render = function() {
                   _vm._m(5),
                   _vm._v(" "),
                   _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                    _vm._v(_vm._s(_vm.ShipmentInformation.shipment_type))
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(_vm.ShipmentInformation.shipment_type) +
+                        "\n          "
+                    )
                   ])
                 ])
               ]
@@ -309,11 +378,13 @@ var render = function() {
                   staticClass:
                     "font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
                 },
-                [_vm._v("Payment method")]
+                [_vm._v("\n          Payment method\n        ")]
               ),
               _vm._v(" "),
               _c("p", { staticClass: "font-hkregular text-secondary pt-2" }, [
-                _vm._v("All transactionsare secure and encrypted")
+                _vm._v(
+                  "\n          All transactionsare secure and encrypted\n        "
+                )
               ]),
               _vm._v(" "),
               _c(
@@ -346,9 +417,7 @@ var render = function() {
                       staticClass:
                         "bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
                     }),
-                    _vm._v(
-                      "\n                    Return to Cart\n                "
-                    )
+                    _vm._v("\n          Return to Cart\n        ")
                   ]
                 )
               ],
@@ -373,7 +442,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/" }
         },
         [_vm._v("Cart")]
@@ -387,7 +456,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold",
           attrs: { href: "/cart/customer-info" }
         },
         [_vm._v("Customer information")]
@@ -401,7 +470,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/shipping-method" }
         },
         [_vm._v("Shipping method")]
@@ -415,7 +484,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/payment-method" }
         },
         [_vm._v("Payment method")]
@@ -430,7 +499,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/5 " }, [
+    return _c("div", { staticClass: "w-1/5" }, [
       _c("p", { staticClass: "font-hkregular text-secondary" }, [
         _vm._v("Contact")
       ])
@@ -455,7 +524,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/5 " }, [
+    return _c("div", { staticClass: "w-1/5" }, [
       _c("p", { staticClass: "font-hkregular text-secondary" }, [
         _vm._v("Ship to")
       ])
@@ -480,7 +549,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/5 " }, [
+    return _c("div", { staticClass: "w-1/5" }, [
       _c("p", { staticClass: "font-hkregular text-secondary" }, [
         _vm._v("Method")
       ])
@@ -519,7 +588,7 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
           },
-          [_vm._v(" Your Order ")]
+          [_vm._v("\n      Your Order\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -528,7 +597,11 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary uppercase text-center sm:text-left"
           },
-          [_vm._v(" PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")")]
+          [
+            _vm._v(
+              "\n      PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")\n    "
+            )
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -573,10 +646,11 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      _vm._s(CartItem.name.substring(0, 12) + "..") +
+                      "\n          " +
+                        _vm._s(CartItem.name.substring(0, 12) + "..") +
                         " $" +
                         _vm._s(CartItem.price) +
-                        " "
+                        "\n        "
                     )
                   ]
                 )

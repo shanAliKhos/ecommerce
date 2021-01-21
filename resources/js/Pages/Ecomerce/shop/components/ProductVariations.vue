@@ -1,18 +1,18 @@
 <template>
-  <div class="product-attrbute-variation text-gray-500 text-xs md:w-3/5 ">
+  <div class="product-attrbute-variation text-xs font-semibold">
     <div class="flex items-center justify-between pb-4">
       <div class="flex flex-wrap items-center">
         <p>SKU</p>
       </div>
-      <div class="w-2/3 flex flex-wrap items-center text-blue-700 font-semibold"> 
+      <div class="flex flex-wrap items-center text-blue-700 font-semibold"> 
         <p>{{ SkuCode }}</p>
       </div>
     </div>
-    <div class="flex items-center justify-between pb-4 block lg:hidden">
+    <div class="flex items-center justify-between pb-4"> 
       <div class="flex flex-wrap items-center">
-        <p>Availablity</p>
+          <p>Availablity</p>
       </div>
-      <div class="w-2/3 flex flex-wrap items-center">
+      <div class="flex flex-wrap items-center">
         <p
           class="font-semibold"
           :class="{

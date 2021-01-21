@@ -17,8 +17,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['IsAtTop'],
+  props: ["IsAtTop"],
   data: function data() {
     return {
       CartTotalPricess: 0
@@ -29,18 +40,18 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var self = this;
-      self.$inertia.post(route('cart.store'), Item, {
+      self.$inertia.post(route("cart.store"), Item, {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           if (Object.keys(_this.$page.errors).length === 0) {
-            _this.$root.$emit('item-is-added-to-cart');
+            _this.$root.$emit("item-is-added-to-cart");
           }
         }
       });
     },
     update: function update(Items) {
       self = this;
-      this.$inertia.put(route('cart.update', 'update'), Items, {
+      this.$inertia.put(route("cart.update", "update"), Items, {
         preserveState: true,
         preserveScroll: true
       });
@@ -48,16 +59,16 @@ __webpack_require__.r(__webpack_exports__);
     destory: function destory(Index) {
       var self = this;
       self.$swal.fire({
-        title: 'Are you sure?',
+        title: "Are you sure?",
         text: "You will be able to revert this!",
-        icon: 'warning',
+        icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, remove it!'
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, remove it!"
       }).then(function (result) {
         if (result.isConfirmed) {
-          self.$inertia["delete"](route('cart.destroy', Index), {
+          self.$inertia["delete"](route("cart.destroy", Index), {
             preserveState: true,
             preserveScroll: true
           });
@@ -69,26 +80,26 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     self = this;
-    this.$root.$on('Add-To-Cart', function (Item) {
+    this.$root.$on("Add-To-Cart", function (Item) {
       _this2.store(Item);
     });
-    this.$root.$on('destory-this-item', function (Item) {
+    this.$root.$on("destory-this-item", function (Item) {
       _this2.destory(Item);
     });
-    this.$root.$on('update-cart', function (Items) {
+    this.$root.$on("update-cart", function (Items) {
       _this2.update(Items);
     });
   },
   computed: {
     CountCartItems: function CountCartItems() {
       var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
+        return TotalItems + Item.quantity;
       }, 0) : 0;
       return Qty;
     },
     CartTotalPrice: function CartTotalPrice() {
       var sum = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-        return TotalPrice + Item.Qty * Item.price;
+        return TotalPrice + Item.quantity * Item.price;
       }, 0) : 0;
       return sum;
     }
@@ -272,13 +283,116 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['mobileMenu', 'categories', 'subcategory', 'atTopOfPage'],
+  props: ["mobileMenu", "categories", "subcategory", "atTopOfPage"],
   components: {
     ApplicationLogo: _ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"],
     CusNavLink: _NavLink__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -288,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     IsAtTop: function IsAtTop() {
-      return this.atTopOfPage ? 'transition duration-300 ease-in-out transform scale-100 md:scale-100' : 'transition duration-300 ease-in-out transform scale-75 md:scale-75';
+      return this.atTopOfPage ? "transition duration-300 ease-in-out transform scale-100 md:scale-100" : "transition duration-300 ease-in-out transform scale-75 md:scale-75";
     }
   },
   methods: {
@@ -514,13 +628,13 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-3 py-3 group",
+        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group",
       attrs: { href: _vm.route("cart.index") }
     },
     [
       _c("span", {
         staticClass:
-          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-6 h-6",
+          "transition duration-500 ease-in-out bg-icon-cart bg-contain bg-center bg-no-repeat block hover:bg-icon-cart-hover w-6 h-6",
         class: _vm.IsAtTop
       }),
       _vm._v(" "),
@@ -528,7 +642,7 @@ var render = function() {
         "span",
         {
           staticClass:
-            "text-white border border-white shadow  absolute py-auto px-2 my-0 mx-1 rounded-full",
+            "text-white border border-white shadow absolute py-auto px-2 my-0 mx-1 rounded-full",
           class: {
             "bg-green-400": _vm.CountCartItems > 0,
             hidden: _vm.CountCartItems === 0
@@ -589,7 +703,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mx-auto  relative " }, [
+  return _c("div", { staticClass: "container mx-auto relative" }, [
     _c(
       "div",
       {
@@ -609,7 +723,7 @@ var render = function() {
             _c(
               "svg",
               {
-                staticClass: " hover:text-gray-800 text-xs w-6  h-6",
+                staticClass: "hover:text-gray-800 text-xs w-6 h-6",
                 class: _vm.IsAtTop,
                 attrs: {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -645,19 +759,19 @@ var render = function() {
         _c("div", { staticClass: "hidden md:block flex" }, [
           _c(
             "div",
-            { staticClass: "flex items-center  justify-end flex-inline" },
+            { staticClass: "flex items-center justify-end flex-inline" },
             [
               _c(
                 "a",
                 {
                   staticClass:
-                    "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 ",
+                    "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4",
                   attrs: { href: "javascript:;" }
                 },
                 [
                   _c("span", {
                     staticClass:
-                      "w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block  bg-icon-search hover:bg-icon-search-hover",
+                      "w-6 h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-search hover:bg-icon-search-hover",
                     class: _vm.IsAtTop
                   })
                 ]
@@ -673,7 +787,7 @@ var render = function() {
                 [
                   _c("span", {
                     staticClass:
-                      "w-6  h-6 transition duration-500 ease-in-out  bg-contain bg-center bg-no-repeat  bg-icon-heart  block hover:bg-icon-heart-hover",
+                      "w-6 h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat bg-icon-heart block hover:bg-icon-heart-hover",
                     class: _vm.IsAtTop
                   })
                 ]
@@ -703,7 +817,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-6 h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -727,7 +841,7 @@ var render = function() {
                         [
                           _c("span", {
                             staticClass:
-                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
                           }),
                           _vm._v(" "),
                           _c("span", {
@@ -739,7 +853,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user  hover:bg-icon-user-hover",
+                          "w-6 h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -767,7 +881,7 @@ var render = function() {
                         [
                           _c("span", {
                             staticClass:
-                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 "
+                              "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
                           }),
                           _vm._v(" "),
                           _c("span", {
@@ -779,7 +893,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", {
                         staticClass:
-                          "w-6  h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat  block bg-icon-user hover:bg-icon-user-hover",
+                          "w-6 h-6 transition duration-500 ease-in-out bg-contain bg-center bg-no-repeat block bg-icon-user hover:bg-icon-user-hover",
                         class: _vm.IsAtTop
                       })
                     ]
@@ -805,7 +919,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "w-6  h-6 ",
+                            staticClass: "w-6 h-6",
                             class: _vm.IsAtTop,
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
@@ -834,10 +948,8 @@ var render = function() {
                     key: "content",
                     fn: function() {
                       return [
-                        _c("div", { staticClass: "block px-4 py-2 text-xs " }, [
-                          _vm._v(
-                            "\n                            Menu\n                        "
-                          )
+                        _c("div", { staticClass: "block px-4 py-2 text-xs" }, [
+                          _vm._v("Menu")
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "border-t border-gray-100" }),
@@ -845,22 +957,14 @@ var render = function() {
                         _c(
                           "dropdown-link",
                           { attrs: { href: _vm.route("blog.index") } },
-                          [
-                            _vm._v(
-                              "\n                                Blog\n                            "
-                            )
-                          ]
+                          [_vm._v(" Blog ")]
                         ),
                         _vm._v(" "),
                         !_vm.$page.user
                           ? _c(
                               "dropdown-link",
                               { attrs: { href: _vm.route("login") } },
-                              [
-                                _vm._v(
-                                  "\n                                LogIn\n                            "
-                                )
-                              ]
+                              [_vm._v("\n              LogIn\n            ")]
                             )
                           : _vm._e(),
                         _vm._v(" "),
@@ -873,11 +977,7 @@ var render = function() {
                                   method: "post"
                                 }
                               },
-                              [
-                                _vm._v(
-                                  "\n                                Logout\n                            "
-                                )
-                              ]
+                              [_vm._v("\n              Logout\n            ")]
                             )
                           : _vm._e(),
                         _vm._v(" "),
@@ -886,12 +986,12 @@ var render = function() {
                         _vm.$page.user
                           ? _c(
                               "div",
-                              { staticClass: "block px-4 py-2 text-xs " },
+                              { staticClass: "block px-4 py-2 text-xs" },
                               [
                                 _vm._v(
-                                  "\n                            " +
+                                  "\n              " +
                                     _vm._s(_vm.$page.user.name) +
-                                    " is logged In\n                        "
+                                    " is logged In\n            "
                                 )
                               ]
                             )
@@ -920,7 +1020,7 @@ var render = function() {
         _c(
           "ul",
           {
-            staticClass: "flex items-center justify-center  ",
+            staticClass: "flex items-center justify-center",
             class: {
               "fixed top-4 w-1/2": !_vm.atTopOfPage,
               "w-full": _vm.atTopOfPage
@@ -944,7 +1044,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "pointer-events-none\t h-6 w-auto fill-current",
+                              "pointer-events-none h-6 w-auto fill-current",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -989,7 +1089,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "pointer-events-none\t h-6 w-auto ",
+                            staticClass: "pointer-events-none h-6 w-auto",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -1033,7 +1133,7 @@ var render = function() {
                         _c(
                           "svg",
                           {
-                            staticClass: "pointer-events-none\t h-6 w-auto",
+                            staticClass: "pointer-events-none h-6 w-auto",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",

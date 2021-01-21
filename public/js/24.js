@@ -163,9 +163,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "product-attrbute-variation text-gray-500 text-xs md:w-3/5 "
-    },
+    { staticClass: "product-attrbute-variation text-xs font-semibold" },
     [
       _c("div", { staticClass: "flex items-center justify-between pb-4" }, [
         _vm._m(0),
@@ -174,43 +172,37 @@ var render = function() {
           "div",
           {
             staticClass:
-              "w-2/3 flex flex-wrap items-center text-blue-700 font-semibold"
+              "flex flex-wrap items-center text-blue-700 font-semibold"
           },
           [_c("p", [_vm._v(_vm._s(_vm.SkuCode))])]
         )
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "flex items-center justify-between pb-4 block lg:hidden"
-        },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-2/3 flex flex-wrap items-center" }, [
-            _c(
-              "p",
-              {
-                staticClass: "font-semibold",
-                class: {
-                  "text-green-400": _vm.ProductQuantity > 0,
-                  "text-red-400": _vm.ProductQuantity < 1
-                }
-              },
-              [
-                _vm._v(
+      _c("div", { staticClass: "flex items-center justify-between pb-4" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex flex-wrap items-center" }, [
+          _c(
+            "p",
+            {
+              staticClass: "font-semibold",
+              class: {
+                "text-green-400": _vm.ProductQuantity > 0,
+                "text-red-400": _vm.ProductQuantity < 1
+              }
+            },
+            [
+              _vm._v(
+                "\n        " +
+                  _vm._s(_vm.ProductQuantity > 0 ? "In Stock" : "OutStock") +
                   "\n        " +
-                    _vm._s(_vm.ProductQuantity > 0 ? "In Stock" : "OutStock") +
-                    "\n        " +
-                    _vm._s(_vm.ProductQuantity) +
-                    "\n      "
-                )
-              ]
-            )
-          ])
-        ]
-      ),
+                  _vm._s(_vm.ProductQuantity) +
+                  "\n      "
+              )
+            ]
+          )
+        ])
+      ]),
       _vm._v(" "),
       _vm._l(_vm.ProductVariations, function(
         ProductVariation,

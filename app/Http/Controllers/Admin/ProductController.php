@@ -205,7 +205,7 @@ class ProductController extends Controller
             } catch (\Throwable $th) {
             } 
             $Product->update(['image' => $NewFile]);
-        }
+        } 
         if (empty($request->image) && $Product->image) {
             try {
                 if (Storage::disk('s3')->exists($Product->image)) {

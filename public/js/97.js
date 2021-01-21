@@ -33,10 +33,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Thanks for shopping'
+    title: "Thanks for shopping"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
@@ -55,7 +79,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".display-3[data-v-07664c0e]{\n  color:#7fad39 !important;\n  font-size: 4.5rem !important;\n  font-weight: 500 !important;\n  line-height: 1.5 !important;\n}\r\n    \r\n", ""]);
+exports.push([module.i, ".display-3[data-v-07664c0e] {\n  color: #7fad39 !important;\n  font-size: 4.5rem !important;\n  font-weight: 500 !important;\n  line-height: 1.5 !important;\n}\r\n", ""]);
 
 // exports
 
@@ -109,13 +133,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "flex flex-col items-center justify-center " },
+    { staticClass: "flex flex-col items-center justify-center" },
     [
       _c(
         "div",
         {
           staticClass:
-            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10  rounded-md w-full max-w-md mt-20 py-10"
+            "flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 rounded-md w-full max-w-md mt-20 py-10"
         },
         [
           _c(
@@ -124,7 +148,7 @@ var render = function() {
               staticClass:
                 "font-medium self-center text-xl sm:text-2xl uppercase text-orange-500"
             },
-            [_vm._v("Thank You For Shopping !")]
+            [_vm._v("\n      Thank You For Shopping !\n    ")]
           ),
           _vm._v(" "),
           _vm._m(0),
@@ -195,7 +219,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "mt-10" }, [
       _c("p", { staticClass: "lead p-10 text-gray-500" }, [
         _c("strong", [_vm._v("Please check your email")]),
-        _vm._v(" for further.")
+        _vm._v(" for further.\n      ")
       ])
     ])
   }

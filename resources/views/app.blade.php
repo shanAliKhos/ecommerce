@@ -9,7 +9,7 @@
         @routes
     </head>  
     
-    <body x-data="{ modal: false, mobileMenu: false }" :class="{ 'overflow-hidden max-h-screen': modal || mobileMenu }">
+    <body >
        
         @inertia
 

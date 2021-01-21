@@ -139,12 +139,149 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   metaInfo: {
-    title: 'Contact'
+    title: "Contact"
   },
   components: {
     WelcomeIcons: _shared_Partials_components_WelcomeIcons__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -165,11 +302,11 @@ __webpack_require__.r(__webpack_exports__);
     store: function store() {
       var self = this;
       var formData = new FormData();
-      formData.append("name", self.form.name || '');
-      formData.append("email", self.form.email || '');
-      formData.append("subject", self.form.subject || '');
-      formData.append("message", self.form.message || ''); // self.$inertia.post(route('contact.store'), formData,{
-      //     preserveState: true, 
+      formData.append("name", self.form.name || "");
+      formData.append("email", self.form.email || "");
+      formData.append("subject", self.form.subject || "");
+      formData.append("message", self.form.message || ""); // self.$inertia.post(route('contact.store'), formData,{
+      //     preserveState: true,
       //     onStart: () => this.sending = true,
       //     onFinish: () => this.sending = false,
       //     onSuccess: () => {
@@ -179,13 +316,13 @@ __webpack_require__.r(__webpack_exports__);
       //             this.form.subject = null
       //             this.form.message = null
       //         }
-      //     },             
+      //     },
       // });
     }
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   }
 });
 
@@ -230,7 +367,7 @@ var render = function() {
                   staticClass:
                     "font-butlerregular border-b border-grey-dark pb-6 text-secondary text-2xl sm:text-3xl md:text-4xl"
                 },
-                [_vm._v(" Quick contact")]
+                [_vm._v("\n        Quick contact\n      ")]
               ),
               _vm._v(" "),
               _c(
@@ -239,11 +376,15 @@ var render = function() {
                   staticClass:
                     "font-hkbold text-secondary text-lg sm:text-xl uppercase pt-8"
                 },
-                [_vm._v(" Email")]
+                [_vm._v("\n        Email\n      ")]
               ),
               _vm._v(" "),
               _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                _vm._v(" " + _vm._s(_vm.$page.SiteOptions.Email) + " ")
+                _vm._v(
+                  "\n        " +
+                    _vm._s(_vm.$page.SiteOptions.Email) +
+                    "\n      "
+                )
               ]),
               _vm._v(" "),
               _c(
@@ -252,11 +393,11 @@ var render = function() {
                   staticClass:
                     "font-hkbold text-secondary text-lg sm:text-xl uppercase pt-8"
                 },
-                [_vm._v(" Phone")]
+                [_vm._v("\n        Phone\n      ")]
               ),
               _vm._v(" "),
               _c("p", { staticClass: "font-hkregular text-secondary" }, [
-                _vm._v("+0 321-654-0987 ")
+                _vm._v("+0 321-654-0987")
               ]),
               _vm._v(" "),
               _vm._m(0)
@@ -288,7 +429,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        " Any questions? Contact us through whats app or on our contact from below."
+                        "\n          Any questions? Contact us through whats app or on our contact from\n          below.\n        "
                       )
                     ]
                   ),
@@ -341,7 +482,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.name))]
+                              [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(_vm.$page.errors.name) +
+                                    "\n            "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ]),
@@ -387,7 +534,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.email))]
+                              [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(_vm.$page.errors.email) +
+                                    "\n            "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ])
@@ -434,7 +587,13 @@ var render = function() {
                       ? _c(
                           "p",
                           { staticClass: "text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.subject))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(_vm.$page.errors.subject) +
+                                "\n          "
+                            )
+                          ]
                         )
                       : _vm._e()
                   ]),
@@ -479,7 +638,13 @@ var render = function() {
                       ? _c(
                           "p",
                           { staticClass: "text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.message))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(_vm.$page.errors.message) +
+                                "\n          "
+                            )
+                          ]
                         )
                       : _vm._e()
                   ]),
@@ -495,7 +660,7 @@ var render = function() {
                         "button",
                         {
                           staticClass:
-                            "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full lg:w-1/2  ",
+                            "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full lg:w-1/2",
                           attrs: { type: "submit" }
                         },
                         [
@@ -504,7 +669,7 @@ var render = function() {
                                 "svg",
                                 {
                                   staticClass:
-                                    "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                                    "transition ease-in-out animate-spin h-5 w-5 mr-1",
                                   attrs: {
                                     xmlns: "http://www.w3.org/2000/svg",
                                     viewBox: "0 0 20 20",
@@ -529,7 +694,7 @@ var render = function() {
                                 "svg",
                                 {
                                   staticClass:
-                                    "transition duration-700 ease-in-out  h-5 w-5 mr-2",
+                                    "transition duration-700 ease-in-out h-5 w-5 mr-2",
                                   attrs: {
                                     xmlns: "http://www.w3.org/2000/svg",
                                     viewBox: "0 0 20 20",
@@ -548,9 +713,7 @@ var render = function() {
                                 ]
                               )
                             : _vm._e(),
-                          _vm._v(
-                            "                           \n                        SUBMIT\n                    "
-                          )
+                          _vm._v("\n            SUBMIT\n          ")
                         ]
                       )
                     ]
@@ -578,7 +741,7 @@ var render = function() {
                   staticClass:
                     "font-butlerregular text-secondary text-2xl sm:text-3xl md:text-7xl lg:text-5xl"
                 },
-                [_vm._v("\n                Frequently Asked Questions")]
+                [_vm._v("\n        Frequently Asked Questions\n      ")]
               ),
               _vm._v(" "),
               _c(
@@ -589,7 +752,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n                Get the latest news & updates from Ciloe"
+                    "\n        Get the latest news & updates from Ciloe\n      "
                   )
                 ]
               ),
@@ -612,7 +775,7 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "faq-question   transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
+                            "faq-question transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
                           class: { "border-b": _vm.faqIndex === 1 },
                           on: {
                             click: function($event) {
@@ -638,7 +801,7 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "item-height   transition-all overflow-auto cursor-text",
+                            "item-height transition-all overflow-auto cursor-text",
                           class: { active: _vm.faqIndex === 1 }
                         },
                         [_vm._m(2)]
@@ -657,7 +820,7 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "faq-question   transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
+                            "faq-question transition-all bg-primary-lightest flex justify-between items-center px-5 md:px-8 py-5 border-primary",
                           class: { "border-b": _vm.faqIndex === 2 },
                           on: {
                             click: function($event) {
@@ -668,11 +831,7 @@ var render = function() {
                           }
                         },
                         [
-                          _c("div", { staticClass: "w-5/6 text-left" }, [
-                            _vm._v(
-                              '\n                        <   span class="font-hkmedium text-secondary md:text-lg uppercase">How much is shipping?'
-                            )
-                          ]),
+                          _vm._m(3),
                           _vm._v(" "),
                           _c("div", { staticClass: "w-1/6 text-right" }, [
                             _c("i", {
@@ -687,10 +846,10 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "item-height   transition-all overflow-auto cursor-text",
+                            "item-height transition-all overflow-auto cursor-text",
                           class: { active: _vm.faqIndex === 2 }
                         },
-                        [_vm._m(3)]
+                        [_vm._m(4)]
                       )
                     ]
                   )
@@ -715,7 +874,7 @@ var staticRenderFns = [
         {
           staticClass: "font-hkbold text-secondary text-lg sm:text-xl uppercase"
         },
-        [_vm._v(" Follow Us")]
+        [_vm._v("\n          Follow Us\n        ")]
       ),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center lg:justify-start pt-3" }, [
@@ -784,7 +943,23 @@ var staticRenderFns = [
           staticClass:
             "font-hkregular text-secondary text-sm leading-loose text-left"
         },
-        [_vm._v("It depends on the product, but it can take 3-5 days max.")]
+        [
+          _vm._v(
+            "\n                It depends on the product, but it can take 3-5 days max.\n              "
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-5/6 text-left" }, [
+      _c(
+        "span",
+        { staticClass: "font-hkmedium text-secondary md:text-lg uppercase" },
+        [_vm._v("How much is shipping?")]
       )
     ])
   },
@@ -801,7 +976,7 @@ var staticRenderFns = [
         },
         [
           _vm._v(
-            "\n                                It depends on a lot of factors like where you're located and how many things you buy. We do have a free shipping special if you buy more than $50.\n                            "
+            "\n                It depends on a lot of factors like where you're located and\n                how many things you buy. We do have a free shipping special if\n                you buy more than $50.\n              "
           )
         ]
       )

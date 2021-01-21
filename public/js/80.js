@@ -252,11 +252,101 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'WishList Items'
+    title: "WishList Items"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -264,7 +354,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   }
 });
 
@@ -327,7 +417,7 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary text-2xl pb-6 text-center sm:text-left"
           },
-          [_vm._v("\r\n                My Wishlist")]
+          [_vm._v("\n        My Wishlist\n      ")]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "hidden sm:block" }, [
@@ -336,7 +426,7 @@ var render = function() {
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\r\n                            Product Name")]
+                [_vm._v("\n              Product Name\n            ")]
               )
             ]),
             _vm._v(" "),
@@ -344,7 +434,7 @@ var render = function() {
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\r\n                            Quantity")]
+                [_vm._v("\n              Quantity\n            ")]
               )
             ]),
             _vm._v(" "),
@@ -352,7 +442,7 @@ var render = function() {
               _c(
                 "p",
                 { staticClass: "font-hkbold text-secondary text-sm uppercase" },
-                [_vm._v("\r\n                            Price")]
+                [_vm._v("Price")]
               )
             ]),
             _vm._v(" "),
@@ -363,7 +453,7 @@ var render = function() {
                   staticClass:
                     "font-hkbold text-secondary text-sm uppercase pr-8 md:pr-16 xl:pr-8"
                 },
-                [_vm._v("\r\n                            Action")]
+                [_vm._v("\n              Action\n            ")]
               )
             ])
           ])
@@ -389,7 +479,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -478,7 +568,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -503,7 +593,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -592,7 +682,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -617,7 +707,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -706,7 +796,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -731,7 +821,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -820,7 +910,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -845,7 +935,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -934,7 +1024,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -959,7 +1049,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                   },
-                  [_vm._v("Product\r\n                        Name")]
+                  [_vm._v("Product Name")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -1048,7 +1138,7 @@ var render = function() {
                 staticClass: "btn btn-primary whitespace-no-wrap",
                 attrs: { href: "/" }
               },
-              [_vm._v("\r\n                    Order Now\r\n                ")]
+              [_vm._v(" Order Now ")]
             )
           ]
         ),
@@ -1094,7 +1184,7 @@ var render = function() {
             "span",
             {
               staticClass:
-                " font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
+                "font-hksemibold text-grey-darkest transition-colors hover:text-black pl-5 cursor-pointer"
             },
             [_vm._v("Next")]
           )

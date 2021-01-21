@@ -4,7 +4,7 @@
     v-bind="$attrs"
     :class="IsActiveLink"
     @click="send"
-    class="antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50"
+    class="antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50 "
   >
     <svg
       :class="{ 'animate-spin': loading }"
@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     IsActiveLink() {
-      return this.active ? "text-orange-500" : "";
+      return this.active ? "text-orange-500" : " focus:text-orange-500";
     },
   },
 };

@@ -32,12 +32,11 @@ class ShopController extends Controller
     public function index(Request $request, Product $Product)
     {        
         $Products = $Product->where('quantity','>',0)
-                    ->where('regular_price','>',0.00)
-                    ->orwhere('sale_price','>',0.00)
-                    ->latest()->paginate(20);
+        ->where('regular_price','>',0.00)
+        ->orwhere('sale_price','>',0.00)
+        ->latest()->paginate(20); 
 
-              
-
+         
         return Inertia::render('Ecomerce/shop/Index',compact('Products'));
     }
 

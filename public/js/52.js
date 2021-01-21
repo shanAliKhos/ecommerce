@@ -86,7 +86,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['mobileMenu', 'categories', 'subcategory'],
   components: {
     MobileNavLink: function MobileNavLink() {
-      return __webpack_require__.e(/*! import() */ 193).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
+      return __webpack_require__.e(/*! import() */ 194).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
     }
   },
   computed: {
@@ -128,7 +128,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "z-50 bg-white block lg:hidden fixed bottom-0 right-0 left-0 border-t-2 border-gray-200 text-gray-400 px-2"
+            "z-50 bg-white block lg:hidden fixed bottom-0 right-0 left-0 border-t-2 border-gray-200 text-gray-700 px-2 py-1"
         },
         [
           _c(
@@ -152,7 +152,7 @@ var render = function() {
                               "svg",
                               {
                                 staticClass:
-                                  "pointer-events-none\t h-6 w-auto fill-current",
+                                  "pointer-events-none\t h-5 w-auto fill-current",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -179,7 +179,7 @@ var render = function() {
                     ],
                     null,
                     false,
-                    4253584250
+                    3439117657
                   )
                 },
                 [
@@ -206,7 +206,7 @@ var render = function() {
                             _c(
                               "svg",
                               {
-                                staticClass: "h-6 w-auto",
+                                staticClass: "h-5 w-auto",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -233,7 +233,7 @@ var render = function() {
                     ],
                     null,
                     false,
-                    3146536351
+                    1425120508
                   )
                 },
                 [_vm._v(" "), _c("span", [_vm._v("Shop")])]
@@ -256,7 +256,7 @@ var render = function() {
                             _c(
                               "svg",
                               {
-                                staticClass: "h-6 w-auto",
+                                staticClass: "h-5 w-auto",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -283,7 +283,7 @@ var render = function() {
                     ],
                     null,
                     false,
-                    1014159630
+                    1054847405
                   )
                 },
                 [
@@ -323,7 +323,7 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "flex justify-center transition duration-700 ease-in-out h-6 w-auto",
+                                      "flex justify-center transition duration-700 ease-in-out h-5 w-auto",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
                                       fill: "none",
@@ -350,7 +350,7 @@ var render = function() {
                         ],
                         null,
                         false,
-                        103016370
+                        1579237073
                       )
                     },
                     [_vm._v(" "), _c("span", [_vm._v("Login")])]
@@ -378,7 +378,7 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "flex justify-center transition duration-700 ease-in-out h-6 w-auto",
+                                      "flex justify-center transition duration-700 ease-in-out h-5 w-auto",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
                                       fill: "none",
@@ -405,14 +405,14 @@ var render = function() {
                         ],
                         null,
                         false,
-                        103016370
+                        1579237073
                       )
                     },
                     [
                       _c(
                         "span",
                         {
-                          staticClass: "flex h-6 w-auto absolute top-0 right-0 "
+                          staticClass: "flex h-5 w-auto absolute top-0 right-0 "
                         },
                         [
                           _c("span", {
@@ -454,7 +454,7 @@ var render = function() {
                                   "svg",
                                   {
                                     staticClass:
-                                      "flex justify-center transition duration-700 ease-in-out h-6 w-auto",
+                                      "flex justify-center transition duration-700 ease-in-out h-5 w-auto",
                                     attrs: {
                                       xmlns: "http://www.w3.org/2000/svg",
                                       fill: "none",
@@ -481,14 +481,14 @@ var render = function() {
                         ],
                         null,
                         false,
-                        103016370
+                        1579237073
                       )
                     },
                     [
                       _c(
                         "span",
                         {
-                          staticClass: "flex h-6 w-auto absolute top-0 right-0 "
+                          staticClass: "flex h-5 w-auto absolute top-0 right-0 "
                         },
                         [
                           _c("span", {

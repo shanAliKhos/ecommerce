@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-around" >
+  <div class="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-around w-full" >
     <div
       class="sm:pl-5 md:pl-4 lg:pl-0 lg:pr-2 xl:pr-3 flex flex-row sm:flex-col justify-between"
     >
@@ -36,5 +36,7 @@ export default {
       selectedImage: `url('${this.$page.Product.mainphoto_url}')`,
     };
   },
+
+
 };
 </script>

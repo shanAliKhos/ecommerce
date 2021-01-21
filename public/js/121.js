@@ -73,6 +73,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: {
     CountCartItems: function CountCartItems() {
@@ -131,7 +147,7 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
           },
-          [_vm._v(" Your Order ")]
+          [_vm._v("\n      Your Order\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -140,7 +156,11 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary uppercase text-center sm:text-left"
           },
-          [_vm._v(" PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")")]
+          [
+            _vm._v(
+              "\n      PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")\n    "
+            )
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -185,10 +205,11 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      _vm._s(CartItem.name.substring(0, 12) + "..") +
+                      "\n          " +
+                        _vm._s(CartItem.name.substring(0, 12) + "..") +
                         " $" +
                         _vm._s(CartItem.price) +
-                        " "
+                        "\n        "
                     )
                   ]
                 )

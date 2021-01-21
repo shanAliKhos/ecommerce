@@ -323,6 +323,183 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -340,7 +517,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     SectionBorder: _Shared_SectionBorder__WEBPACK_IMPORTED_MODULE_6__["default"],
     VueEditor: vue2_editor__WEBPACK_IMPORTED_MODULE_1__["VueEditor"]
   },
-  remember: 'form',
+  remember: "form",
   data: function data() {
     var _ref;
 
@@ -370,29 +547,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       self = this;
       var formData = new FormData();
-      formData.append("name", self.form.name || '');
+      formData.append("name", self.form.name || "");
       formData.append("sku", self.form.sku || null);
-      formData.append("brand_id", self.form.brand ? self.form.brand.id :  false || '');
-      formData.append("categories", JSON.stringify(self.form.categories) || '');
+      formData.append("brand_id", self.form.brand ? self.form.brand.id :  false || "");
+      formData.append("categories", JSON.stringify(self.form.categories) || "");
       formData.append("is_variable", self.form.is_variable ? 1 :  false || 0);
       formData.append("Attributes", JSON.stringify(self.form.attributes) || null);
       formData.append("regular_price", self.form.regular_price || 0);
       formData.append("sale_price", self.form.sale_price || 0);
       formData.append("quantity", self.form.quantity || 0);
       formData.append("weight", self.form.weight || 0);
-      formData.append("description", self.form.description || '');
+      formData.append("description", self.form.description || "");
       formData.append("is_active", self.form.is_active ? 1 :  false || 0);
       formData.append("is_featured", self.form.is_featured ? 1 :  false || 0);
-      formData.append("ProductSkus", JSON.stringify(self.ProductSkus) || '');
-      formData.append("image", self.form.image || '');
+      formData.append("ProductSkus", JSON.stringify(self.ProductSkus) || "");
+      formData.append("image", self.form.image || "");
 
       if (self.$page.Product) {
-        formData.append('_method', 'put');
+        formData.append("_method", "put");
       }
 
-      self.$inertia.post(self.$page.Product ? route('admin.product.update', self.$page.Product.id) : route('admin.product.store'), formData, {
+      self.$inertia.post(self.$page.Product ? route("admin.product.update", self.$page.Product.id) : route("admin.product.store"), formData, {
         preserveState: true,
-        // preserveScroll: true,                
+        // preserveScroll: true,
         onStart: function onStart() {
           return _this.sending = true;
         },
@@ -407,10 +584,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               brand: null,
               categories: [],
               regular_price: 0.01,
-              sale_price: 0.00,
+              sale_price: 0.0,
               quantity: 1,
               is_variable: 0,
-              weight: 0.00,
+              weight: 0.0,
               description: null,
               is_active: 1,
               is_featured: 0,
@@ -437,15 +614,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return this.$page.Product ? this.$page.Product.skus : [];
     },
     ProductStatus: function ProductStatus() {
-      return this.form.is_active ? 'Active' : 'Deactive';
+      return this.form.is_active ? "Active" : "Deactive";
     },
     ProductIsFeatured: function ProductIsFeatured() {
-      return this.form.is_featured ? 'Featured' : 'Not Featured';
+      return this.form.is_featured ? "Featured" : "Not Featured";
     }
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   }
 });
 
@@ -463,7 +640,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".slide-fade-enter-active {\n  transition: all 0.5s ease-in-out;\n}\n.slide-fade-leave-active {\n  transition: all 0.2s ease-in-out;\n}\n.slide-fade-enter, .slide-fade-leave-to{\n  transform: translateY(100px);\n  opacity: 0;\n}\n#DescriptionEditor {\n  height: 270px !important;\n}    \n", ""]);
+exports.push([module.i, ".slide-fade-enter-active {\n  transition: all 0.5s ease-in-out;\n}\n.slide-fade-leave-active {\n  transition: all 0.2s ease-in-out;\n}\n.slide-fade-enter,\r\n.slide-fade-leave-to {\n  transform: translateY(100px);\n  opacity: 0;\n}\n#DescriptionEditor {\n  height: 270px !important;\n}\r\n", ""]);
 
 // exports
 
@@ -532,13 +709,13 @@ var render = function() {
             _c(
               "p",
               { staticClass: "pb-6 flex font-semibold text-xl text-gray-400" },
-              [_vm._v("Product Create")]
+              [_vm._v("\n          Product Create\n        ")]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "flex flex-wrap  mb-2" }, [
+            _c("div", { staticClass: "flex flex-wrap mb-2" }, [
               _c(
                 "div",
-                { staticClass: "w-full md:w-1/3 px-2  md:mb-0" },
+                { staticClass: "w-full md:w-1/3 px-2 md:mb-0" },
                 [
                   _c("file-input", {
                     staticClass:
@@ -564,10 +741,10 @@ var render = function() {
                   _c(
                     "div",
                     {
-                      staticClass: "flex flex-wrap item-center md:justify-end  "
+                      staticClass: "flex flex-wrap item-center md:justify-end"
                     },
                     [
-                      _c("div", { staticClass: " w-1/2 " }, [
+                      _c("div", { staticClass: "w-1/2" }, [
                         _c(
                           "label",
                           {
@@ -578,13 +755,17 @@ var render = function() {
                             _c(
                               "div",
                               {
-                                staticClass: "px-2 font-semibold ",
+                                staticClass: "px-2 font-semibold",
                                 class: {
                                   "text-green-400": _vm.form.is_active,
                                   "text-red-500": !_vm.form.is_active
                                 }
                               },
-                              [_vm._v("Active")]
+                              [
+                                _vm._v(
+                                  "\n                    Active\n                  "
+                                )
+                              ]
                             ),
                             _vm._v(" "),
                             _c("div", { staticClass: "relative" }, [
@@ -653,7 +834,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.is_active))]
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.$page.errors.is_active) +
+                                    "\n                "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ]),
@@ -669,13 +856,17 @@ var render = function() {
                             _c(
                               "div",
                               {
-                                staticClass: " px-2 font-semibold ",
+                                staticClass: "px-2 font-semibold",
                                 class: {
                                   "text-green-400": _vm.form.is_featured,
                                   "text-red-500": !_vm.form.is_featured
                                 }
                               },
-                              [_vm._v("Featured")]
+                              [
+                                _vm._v(
+                                  "\n                    Featured\n                  "
+                                )
+                              ]
                             ),
                             _vm._v(" "),
                             _c("div", { staticClass: "relative" }, [
@@ -744,7 +935,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.is_featured))]
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.$page.errors.is_featured) +
+                                    "\n                "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ])
@@ -753,7 +950,7 @@ var render = function() {
                   _vm._v(" "),
                   !_vm.form.is_variable
                     ? _c("text-input", {
-                        staticClass: "w-full ",
+                        staticClass: "w-full",
                         attrs: {
                           id: "sku",
                           type: "text",
@@ -773,7 +970,7 @@ var render = function() {
                     : _vm._e(),
                   _vm._v(" "),
                   _c("text-input", {
-                    staticClass: "w-full ",
+                    staticClass: "w-full",
                     attrs: {
                       id: "quantity",
                       type: "text",
@@ -794,7 +991,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("text-input", {
-                    staticClass: "w-full ",
+                    staticClass: "w-full",
                     attrs: {
                       id: "regular_price",
                       type: "text",
@@ -815,7 +1012,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("text-input", {
-                    staticClass: "w-full ",
+                    staticClass: "w-full",
                     attrs: {
                       id: "sale_price",
                       type: "text",
@@ -892,13 +1089,17 @@ var render = function() {
                         _c(
                           "div",
                           {
-                            staticClass: " px-2 font-semibold ",
+                            staticClass: "px-2 font-semibold",
                             class: {
                               "text-green-400": _vm.form.is_variable,
                               "text-red-500": !_vm.form.is_variable
                             }
                           },
-                          [_vm._v("Variations")]
+                          [
+                            _vm._v(
+                              "\n                  Variations\n                "
+                            )
+                          ]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "relative" }, [
@@ -967,7 +1168,13 @@ var render = function() {
                       ? _c(
                           "p",
                           { staticClass: "text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.is_variable))]
+                          [
+                            _vm._v(
+                              "\n                " +
+                                _vm._s(_vm.$page.errors.is_variable) +
+                                "\n              "
+                            )
+                          ]
                         )
                       : _vm._e()
                   ]),
@@ -981,7 +1188,7 @@ var render = function() {
                             "div",
                             {
                               key: "add-attribute-multiselect",
-                              staticClass: "relative "
+                              staticClass: "relative"
                             },
                             [
                               _c(
@@ -1025,7 +1232,9 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        _vm._s(_vm.$page.errors.attributes)
+                                        "\n                  " +
+                                          _vm._s(_vm.$page.errors.attributes) +
+                                          "\n                "
                                       )
                                     ]
                                   )
@@ -1120,7 +1329,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "w-full  md:mb-0 relative mt-2" },
+                    { staticClass: "w-full md:mb-0 relative mt-2" },
                     [
                       _c(
                         "label",
@@ -1158,7 +1367,13 @@ var render = function() {
                               staticClass:
                                 "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
                             },
-                            [_vm._v(_vm._s(_vm.$page.errors.brand))]
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.$page.errors.brand) +
+                                  "\n              "
+                              )
+                            ]
                           )
                         : _vm._e()
                     ],
@@ -1206,7 +1421,13 @@ var render = function() {
                               staticClass:
                                 "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
                             },
-                            [_vm._v(_vm._s(_vm.$page.errors.categories))]
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.$page.errors.categories) +
+                                  "\n              "
+                              )
+                            ]
                           )
                         : _vm._e()
                     ],
@@ -1215,13 +1436,13 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "mt-5 mb-5 relative " },
+                    { staticClass: "mt-5 mb-5 relative" },
                     [
                       _c(
                         "label",
                         {
                           staticClass:
-                            "absolute top-0 right-3  text-purple-600 px-1 py-0 text-xs font-bold uppercase",
+                            "absolute top-0 right-3 text-purple-600 px-1 py-0 text-xs font-bold uppercase",
                           attrs: { for: "weight" }
                         },
                         [_vm._v("Description")]
@@ -1247,7 +1468,13 @@ var render = function() {
                               staticClass:
                                 "z-20 absolute bottom-0 right-3 text-red-500 text-xs italic"
                             },
-                            [_vm._v(_vm._s(_vm.$page.errors.description))]
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.$page.errors.description) +
+                                  "\n              "
+                              )
+                            ]
                           )
                         : _vm._e()
                     ],
@@ -1270,12 +1497,16 @@ var render = function() {
                       staticClass:
                         "pb-6 flex font-semibold text-xl text-gray-400"
                     },
-                    [_vm._v("Product Possible variations")]
+                    [
+                      _vm._v(
+                        "\n            Product Possible variations\n          "
+                      )
+                    ]
                   ),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "flex flex-wrap " },
+                    { staticClass: "flex flex-wrap" },
                     _vm._l(_vm.ProductSkus, function(
                       ProductSku,
                       ProductSkuIndex
@@ -1285,7 +1516,7 @@ var render = function() {
                         {
                           key: ProductSkuIndex,
                           staticClass:
-                            "w-full md:w-1/2   bg-white   mb-4 rounded shadow"
+                            "w-full md:w-1/2 bg-white mb-4 rounded shadow"
                         },
                         [
                           _c(
@@ -1294,7 +1525,13 @@ var render = function() {
                               staticClass:
                                 "px-2 py-2 rounded-lg bg-gray-50 text-blue-800 font-semibold"
                             },
-                            [_vm._v(_vm._s(ProductSku.sku))]
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(ProductSku.sku) +
+                                  "\n              "
+                              )
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -1324,16 +1561,17 @@ var render = function() {
                                               skus_option.variant_option
                                                 .attributes_option.attribute
                                                 .name
-                                            ) + " -"
+                                            ) + "\n                      -"
                                           )
                                         ]
                                       ),
                                       _vm._v(
-                                        " " +
+                                        "\n                    " +
                                           _vm._s(
                                             skus_option.variant_option
                                               .attributes_option.name
-                                          )
+                                          ) +
+                                          "\n                  "
                                       )
                                     ]
                                   )
@@ -1371,7 +1609,7 @@ var render = function() {
                                   }),
                                   _vm._v(" "),
                                   _c("text-input", {
-                                    staticClass: "w-full  px-2",
+                                    staticClass: "w-full px-2",
                                     attrs: {
                                       type: "number",
                                       autocomplete: "regular_price",
@@ -1436,15 +1674,13 @@ var render = function() {
               [
                 _c(
                   "div",
-                  {
-                    staticClass: " flex items-center md:justify-end px-2 py-2"
-                  },
+                  { staticClass: "flex items-center md:justify-end px-2 py-2" },
                   [
                     _c(
                       "loading-button",
                       {
                         staticClass:
-                          "uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1  text-white font-semibold shadow inline-flex",
+                          "uppercase w-full flex items-center justify-center transition duration-700 ease-in-out bg-green-400 hover:bg-green-600 focus:outline-none rounded-lg px-2 py-1 text-white font-semibold shadow inline-flex",
                         attrs: {
                           loading: _vm.sending,
                           type: "submit",
@@ -1453,16 +1689,16 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\r\n                            " +
+                          "\n              " +
                             _vm._s(_vm.$page.Product ? "update" : "save") +
-                            "\r\n                            "
+                            "\n              "
                         ),
                         !_vm.sending
                           ? _c(
                               "svg",
                               {
                                 staticClass:
-                                  "transition duration-700 ease-in-out  h-5 w-5 ml-2",
+                                  "transition duration-700 ease-in-out h-5 w-5 ml-2",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   viewBox: "0 0 20 20",

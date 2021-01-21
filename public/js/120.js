@@ -17,8 +17,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['IsAtTop'],
+  props: ["IsAtTop"],
   data: function data() {
     return {
       CartTotalPricess: 0
@@ -29,18 +40,18 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var self = this;
-      self.$inertia.post(route('cart.store'), Item, {
+      self.$inertia.post(route("cart.store"), Item, {
         preserveScroll: true,
         onSuccess: function onSuccess() {
           if (Object.keys(_this.$page.errors).length === 0) {
-            _this.$root.$emit('item-is-added-to-cart');
+            _this.$root.$emit("item-is-added-to-cart");
           }
         }
       });
     },
     update: function update(Items) {
       self = this;
-      this.$inertia.put(route('cart.update', 'update'), Items, {
+      this.$inertia.put(route("cart.update", "update"), Items, {
         preserveState: true,
         preserveScroll: true
       });
@@ -48,16 +59,16 @@ __webpack_require__.r(__webpack_exports__);
     destory: function destory(Index) {
       var self = this;
       self.$swal.fire({
-        title: 'Are you sure?',
+        title: "Are you sure?",
         text: "You will be able to revert this!",
-        icon: 'warning',
+        icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, remove it!'
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, remove it!"
       }).then(function (result) {
         if (result.isConfirmed) {
-          self.$inertia["delete"](route('cart.destroy', Index), {
+          self.$inertia["delete"](route("cart.destroy", Index), {
             preserveState: true,
             preserveScroll: true
           });
@@ -69,26 +80,26 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     self = this;
-    this.$root.$on('Add-To-Cart', function (Item) {
+    this.$root.$on("Add-To-Cart", function (Item) {
       _this2.store(Item);
     });
-    this.$root.$on('destory-this-item', function (Item) {
+    this.$root.$on("destory-this-item", function (Item) {
       _this2.destory(Item);
     });
-    this.$root.$on('update-cart', function (Items) {
+    this.$root.$on("update-cart", function (Items) {
       _this2.update(Items);
     });
   },
   computed: {
     CountCartItems: function CountCartItems() {
       var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
+        return TotalItems + Item.quantity;
       }, 0) : 0;
       return Qty;
     },
     CartTotalPrice: function CartTotalPrice() {
       var sum = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-        return TotalPrice + Item.Qty * Item.price;
+        return TotalPrice + Item.quantity * Item.price;
       }, 0) : 0;
       return sum;
     }
@@ -116,13 +127,13 @@ var render = function() {
     "inertia-link",
     {
       staticClass:
-        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-3 py-3 group",
+        "border-2 transition-all border-transparent hover:border-orange-500 rounded-full px-4 py-4 group",
       attrs: { href: _vm.route("cart.index") }
     },
     [
       _c("span", {
         staticClass:
-          "transition duration-500 ease-in-out  bg-icon-cart bg-contain bg-center bg-no-repeat  block hover:bg-icon-cart-hover w-6 h-6",
+          "transition duration-500 ease-in-out bg-icon-cart bg-contain bg-center bg-no-repeat block hover:bg-icon-cart-hover w-6 h-6",
         class: _vm.IsAtTop
       }),
       _vm._v(" "),
@@ -130,7 +141,7 @@ var render = function() {
         "span",
         {
           staticClass:
-            "text-white border border-white shadow  absolute py-auto px-2 my-0 mx-1 rounded-full",
+            "text-white border border-white shadow absolute py-auto px-2 my-0 mx-1 rounded-full",
           class: {
             "bg-green-400": _vm.CountCartItems > 0,
             hidden: _vm.CountCartItems === 0

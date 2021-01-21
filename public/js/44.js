@@ -85,16 +85,16 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('update-this-item', self.cartindex);
     },
     minus: function minus() {
-      this.CartItem.Qty--;
+      this.CartItem.quantity--;
     },
     plus: function plus() {
-      this.CartItem.Qty++;
+      this.CartItem.quantity++;
     }
   },
   watch: {
     CartQty: function CartQty(newQty, oldQty) {
       if (newQty > this.CartItem.Instock || newQty < 1) {
-        this.CartItem.Qty = oldQty;
+        this.CartItem.quantity = oldQty;
       }
 
       this.update();
@@ -103,13 +103,16 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     CartQty: function CartQty() {
       self = this;
-      return self.CartItem.Qty;
+      return self.CartItem.quantity;
     },
     ProductImage: function ProductImage() {
-      return this.CartItem.image;
+      return this.CartItem.product_image;
     },
     InStock: function InStock() {
       return this.CartItem.Instock;
+    },
+    Currency: function Currency() {
+      return this.$page.SiteOptions.Currency.Symbol;
     }
   }
 });
@@ -192,7 +195,7 @@ var render = function() {
           [
             _c("i", {
               staticClass:
-                "transition duration-500 ease-in-out transform hover:scale-125 bx bx-x hover:text-red-500 text-grey-darkest text-2xl sm:text-3xl mr-6 cursor-pointer",
+                "transition duration-500 ease-in-out transform hover:scale-125 bx bx-x hover:text-red-500  text-2xl sm:text-3xl mr-6 cursor-pointer",
               on: { click: _vm.RemoveCartItem }
             }),
             _vm._v(" "),
@@ -223,11 +226,8 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "span",
-                  {
-                    staticClass:
-                      "font-semibold text-lg text-gray-400 capitalize"
-                  },
-                  [_vm._v(_vm._s(_vm.CartItem.name))]
+                  { staticClass: "font-semibold text-lg   capitalize" },
+                  [_vm._v(_vm._s(_vm.CartItem.product_name))]
                 )
               ]
             ),
@@ -246,8 +246,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model.number",
-                          value: _vm.CartItem.Qty,
-                          expression: "CartItem.Qty",
+                          value: _vm.CartItem.quantity,
+                          expression: "CartItem.quantity",
                           modifiers: { number: true }
                         }
                       ],
@@ -258,7 +258,7 @@ var render = function() {
                         id: "quantity-form-desktop",
                         min: "1"
                       },
-                      domProps: { value: _vm.CartItem.Qty },
+                      domProps: { value: _vm.CartItem.quantity },
                       on: {
                         change: _vm.update,
                         input: function($event) {
@@ -267,7 +267,7 @@ var render = function() {
                           }
                           _vm.$set(
                             _vm.CartItem,
-                            "Qty",
+                            "quantity",
                             _vm._n($event.target.value)
                           )
                         },
@@ -307,16 +307,11 @@ var render = function() {
                           })
                         ]
                       )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "font-semibold text-xs text-gray-400 absolute top-13 left-10"
-                      },
-                      [_vm._v("Stock/" + _vm._s(_vm.InStock))]
-                    )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "font-semibold text-xs " }, [
+                    _vm._v("Stock/" + _vm._s(_vm.InStock))
                   ])
                 ])
               ]
@@ -329,11 +324,13 @@ var render = function() {
                   "w-1/4 lg:w-1/5 xl:w-1/4 text-right pr-10 xl:pr-10 pb-4"
               },
               [
-                _c("span", { staticClass: "font-hkregular text-secondary" }, [
+                _c("span", { staticClass: "font-regular " }, [
                   _vm._v(
-                    _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
+                    _vm._s(_vm.Currency) +
                       " " +
-                      _vm._s(_vm.CartItem.price * _vm.CartItem.Qty) +
+                      _vm._s(
+                        _vm.CartItem.current_price * _vm.CartItem.quantity
+                      ) +
                       " "
                   )
                 ])
@@ -360,7 +357,7 @@ var render = function() {
               _vm._v(" "),
               _c("i", {
                 staticClass:
-                  "bx bx-x text-grey-darkest text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow",
+                  "bx bx-x  text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow",
                 on: { click: _vm.RemoveCartItem }
               })
             ]),
@@ -368,25 +365,18 @@ var render = function() {
             _c("div", { staticClass: "pl-4" }, [
               _c(
                 "span",
-                {
-                  staticClass:
-                    "font-hkregular text-secondary text-base mt-2 font-bold"
-                },
-                [_vm._v(_vm._s(_vm.CartItem.name))]
+                { staticClass: "font-regular   text-base mt-2 font-bold" },
+                [_vm._v(_vm._s(_vm.CartItem.product_name))]
               ),
               _vm._v(" "),
-              _c(
-                "span",
-                { staticClass: "font-hkregular text-secondary block" },
-                [
-                  _vm._v(
-                    _vm._s(_vm.$page.SiteOptions.Currency.Symbol) +
-                      " " +
-                      _vm._s(_vm.CartItem.price * _vm.CartItem.Qty) +
-                      " "
-                  )
-                ]
-              ),
+              _c("span", { staticClass: "font-regular   block" }, [
+                _vm._v(
+                  _vm._s(_vm.Currency) +
+                    " " +
+                    _vm._s(_vm.CartItem.current_price * _vm.CartItem.quantity) +
+                    " "
+                )
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "w-2/3 sm:w-5/6 flex mt-2" }, [
                 _c("input", {
@@ -394,8 +384,8 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model.number",
-                      value: _vm.CartItem.Qty,
-                      expression: "CartItem.Qty",
+                      value: _vm.CartItem.quantity,
+                      expression: "CartItem.quantity",
                       modifiers: { number: true }
                     }
                   ],
@@ -406,13 +396,17 @@ var render = function() {
                     id: "quantity-form-mobile",
                     min: "1"
                   },
-                  domProps: { value: _vm.CartItem.Qty },
+                  domProps: { value: _vm.CartItem.quantity },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.CartItem, "Qty", _vm._n($event.target.value))
+                      _vm.$set(
+                        _vm.CartItem,
+                        "quantity",
+                        _vm._n($event.target.value)
+                      )
                     },
                     blur: function($event) {
                       return _vm.$forceUpdate()

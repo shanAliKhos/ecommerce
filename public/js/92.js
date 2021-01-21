@@ -68,6 +68,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -84,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   },
   computed: {
     Blog: function Blog() {
@@ -107,6 +123,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -209,7 +253,7 @@ var render = function() {
         },
         [
           _c("span", [
-            _vm._v("By\n                "),
+            _vm._v("By "),
             _c("span", { staticClass: "font-hkbold" }, [
               _vm._v(_vm._s(_vm.Blog.user.name))
             ])
@@ -272,7 +316,7 @@ var render = function() {
             staticClass:
               "font-butlerregular text-secondary text-3xl sm:text-4xl md:text-7xl lg:text-5xl pb-2 md:pb-3 text-center"
           },
-          [_vm._v(" Related Blogs ")]
+          [_vm._v("\n      Related Blogs\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -283,7 +327,7 @@ var render = function() {
           },
           [
             _vm._v(
-              " For powerful features, great design and support from the developer."
+              "\n      For powerful features, great design and support from the developer.\n    "
             )
           ]
         ),
@@ -381,7 +425,7 @@ var render = function() {
             staticClass:
               "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
           },
-          [_vm._v(" Categories")]
+          [_vm._v("\n      Categories\n    ")]
         ),
         _vm._v(" "),
         _vm._l(_vm.Categories, function(Category, CategoryIndex) {
@@ -400,7 +444,7 @@ var render = function() {
                   staticClass:
                     "font-hkregular transition-colors group-hover:font-hkbold text-gray-400 group-hover:text-primary text-base capitalize"
                 },
-                [_vm._v(" " + _vm._s(Category.name) + " ")]
+                [_vm._v("\n        " + _vm._s(Category.name) + "\n      ")]
               )
             ]
           )
@@ -432,7 +476,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("input", {
           staticClass:
-            "form-input   transition-all pr-10 text-grey-darkest text-base",
+            "form-input transition-all pr-10 text-grey-darkest text-base",
           attrs: {
             type: "text",
             id: "search_form",
@@ -462,7 +506,7 @@ var staticRenderFns = [
           staticClass:
             "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
         },
-        [_vm._v("\n            Follow Us")]
+        [_vm._v("\n      Follow Us\n    ")]
       ),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center sm:justify-start pt-8" }, [

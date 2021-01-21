@@ -301,11 +301,68 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Your Orders'
+    title: "Your Orders"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -314,20 +371,20 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     Stutus: function Stutus(Status) {
       switch (Status) {
-        case 'pending':
-          return 'bg-primary-lightest border-primary-light text-primary';
+        case "pending":
+          return "bg-primary-lightest border-primary-light text-primary";
           break;
 
-        case 'processing':
-          return 'bg-v-blue-light  border-v-blue text-v-blue';
+        case "processing":
+          return "bg-v-blue-light  border-v-blue text-v-blue";
           break;
 
-        case 'completed':
-          return 'bg-v-green-light  border-v-green text-v-green';
+        case "completed":
+          return "bg-v-green-light  border-v-green text-v-green";
           break;
 
-        case 'decline':
-          return 'bg-red-lightest border-red-light text-red';
+        case "decline":
+          return "bg-red-lightest border-red-light text-red";
           break;
       }
 
@@ -335,11 +392,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     Image: function Image(item) {
       self = this;
-      var img = item.ProductImage ? '/' + item.ProductImage.replace("public", "storage") : this.defaultPhotoUrl(item.ProductName);
+      var img = item.ProductImage ? "/" + item.ProductImage.replace("public", "storage") : this.defaultPhotoUrl(item.ProductName);
       return img;
     },
     defaultPhotoUrl: function defaultPhotoUrl(text) {
-      return 'https://ui-avatars.com/api/?name=' + text + '&color=7F9CF5&background=EBF4FF';
+      return "https://ui-avatars.com/api/?name=" + text + "&color=7F9CF5&background=EBF4FF";
     }
   },
   computed: {
@@ -349,7 +406,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   }
 });
 
@@ -415,7 +472,7 @@ var render = function() {
               staticClass:
                 "font-hkbold text-secondary text-2xl pb-6 text-center sm:text-left"
             },
-            [_vm._v("Order List")]
+            [_vm._v("\n        Order List\n      ")]
           ),
           _vm._v(" "),
           _c("div", { staticClass: "hidden sm:block" }, [
@@ -426,7 +483,7 @@ var render = function() {
                   {
                     staticClass: "font-hkbold text-secondary text-sm uppercase"
                   },
-                  [_vm._v("Product Name")]
+                  [_vm._v("\n              Product Name\n            ")]
                 )
               ]),
               _vm._v(" "),
@@ -436,7 +493,7 @@ var render = function() {
                   {
                     staticClass: "font-hkbold text-secondary text-sm uppercase"
                   },
-                  [_vm._v("Quantity")]
+                  [_vm._v("\n              Quantity\n            ")]
                 )
               ]),
               _vm._v(" "),
@@ -467,7 +524,7 @@ var render = function() {
                     staticClass:
                       "font-hkbold text-secondary text-sm uppercase pr-8 md:pr-16 xl:pr-8"
                   },
-                  [_vm._v("Status")]
+                  [_vm._v("\n              Status\n            ")]
                 )
               ])
             ])
@@ -537,7 +594,7 @@ var render = function() {
                           "span",
                           {
                             staticClass:
-                              "transition duration-500 ease-in-out hover:text-blue-600  font-hkregular text-primary text-base mt-2 text-lg text-bold  "
+                              "transition duration-500 ease-in-out hover:text-blue-600 font-hkregular text-primary text-base mt-2 text-lg text-bold"
                           },
                           [_vm._v(_vm._s(OrderItem.ProductName))]
                         )
@@ -590,8 +647,7 @@ var render = function() {
                     _c(
                       "span",
                       {
-                        staticClass:
-                          "font-hkregular text-secondary text-v-blue "
+                        staticClass: "font-hkregular text-secondary text-v-blue"
                       },
                       [_vm._v(_vm._s(OrderItem.OrderNumber))]
                     )
@@ -618,7 +674,7 @@ var render = function() {
                       "span",
                       {
                         staticClass:
-                          "font-hkregular text-secondary font-semibold oldstyle-nums "
+                          "font-hkregular text-secondary font-semibold oldstyle-nums"
                       },
                       [_vm._v(_vm._s(OrderItem.Price))]
                     )
@@ -629,7 +685,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "w-full sm:w-3/10 md:w-1/4 xl:w-1/5 text-center sm:text-right "
+                      "w-full sm:w-3/10 md:w-1/4 xl:w-1/5 text-center sm:text-right"
                   },
                   [
                     _c("div", { staticClass: "pt-3 sm:pt-0" }, [
@@ -639,21 +695,21 @@ var render = function() {
                           staticClass:
                             "font-hkbold text-secondary text-sm uppercase text-center pb-2 block sm:hidden"
                         },
-                        [_vm._v(" Status")]
+                        [_vm._v("\n              Status\n            ")]
                       ),
                       _vm._v(" "),
                       _c(
                         "span",
                         {
                           staticClass:
-                            "px-4 py-3 inline-block rounded font-hkregular border ",
+                            "px-4 py-3 inline-block rounded font-hkregular border",
                           class: _vm.Stutus(OrderItem.OrderStatus)
                         },
                         [
                           _vm._v(
-                            "\r\n                            " +
+                            "\n              " +
                               _vm._s(OrderItem.OrderStatus) +
-                              "\r\n                        "
+                              "\n            "
                           )
                         ]
                       )
@@ -681,7 +737,7 @@ var render = function() {
                     [
                       _c(
                         "span",
-                        { staticClass: "font-semibold  text-gray-400" },
+                        { staticClass: "font-semibold text-gray-400" },
                         [_vm._v("No Item in List")]
                       )
                     ]

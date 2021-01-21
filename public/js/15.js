@@ -181,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Tabs: function Tabs() {
-      return __webpack_require__.e(/*! import() */ 198).then(__webpack_require__.bind(null, /*! @/Pages/Shared/Tabs */ "./resources/js/Pages/Shared/Tabs.vue"));
+      return __webpack_require__.e(/*! import() */ 199).then(__webpack_require__.bind(null, /*! @/Pages/Shared/Tabs */ "./resources/js/Pages/Shared/Tabs.vue"));
     },
     Tab: _Pages_Shared_Tab__WEBPACK_IMPORTED_MODULE_0__["default"]
   },

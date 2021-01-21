@@ -67,6 +67,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -96,8 +151,8 @@ __webpack_require__.r(__webpack_exports__);
         if (result.error) {
           _this.$swal({
             showConfirmButton: true,
-            icon: 'error',
-            title: 'Opps something went wrong ! contact support '
+            icon: "error",
+            title: "Opps something went wrong ! contact support "
           });
 
           return false;
@@ -118,7 +173,7 @@ __webpack_require__.r(__webpack_exports__);
             NameOnCard: options.NameOnCard
           };
 
-          _this.$inertia.post(_this.route('cart.checkout'), payment_Form, {
+          _this.$inertia.post(_this.route("cart.checkout"), payment_Form, {
             preserveState: true,
             onStart: function onStart() {
               return _this.sending = true;
@@ -233,7 +288,7 @@ var render = function() {
   return _c(
     "form",
     {
-      staticClass: "bg-white rounded lg:px-20 pt-6 pb-8 needs-validation ",
+      staticClass: "bg-white rounded lg:px-20 pt-6 pb-8 needs-validation",
       attrs: { id: "payment-form", novalidate: "" },
       on: {
         submit: function($event) {
@@ -300,13 +355,13 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex items-center justify-end  hidden lg:block" },
+        { staticClass: "flex items-center justify-end hidden lg:block" },
         [
           _c(
             "button",
             {
               staticClass:
-                "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
+                "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full",
               attrs: { type: "submit" }
             },
             [
@@ -315,7 +370,7 @@ var render = function() {
                     "svg",
                     {
                       staticClass:
-                        "transition  ease-in-out  animate-spin h-5 w-5 mr-1",
+                        "transition ease-in-out animate-spin h-5 w-5 mr-1",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         viewBox: "0 0 20 20",
@@ -337,7 +392,7 @@ var render = function() {
                     "svg",
                     {
                       staticClass:
-                        "transition duration-700 ease-in-out  h-5 w-5 mr-2",
+                        "transition duration-700 ease-in-out h-5 w-5 mr-2",
                       attrs: {
                         xmlns: "http://www.w3.org/2000/svg",
                         viewBox: "0 0 20 20",
@@ -355,7 +410,7 @@ var render = function() {
                       })
                     ]
                   ),
-              _vm._v("      \r\n            PAY NOW\r\n        ")
+              _vm._v("\n      PAY NOW\n    ")
             ]
           )
         ]
@@ -365,7 +420,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+            "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
         },
         [
           _c("div", { staticClass: "flex justify-around" }, [
@@ -394,7 +449,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                              "animate-pulse transition duration-700 ease-in-out h-5 w-auto mr-1",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",
@@ -417,7 +472,7 @@ var render = function() {
                           "svg",
                           {
                             staticClass:
-                              "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                              "transition duration-700 ease-in-out h-5 w-auto mr-1",
                             attrs: {
                               xmlns: "http://www.w3.org/2000/svg",
                               fill: "none",

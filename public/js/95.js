@@ -133,12 +133,117 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Shipping Method'
+    title: "Shipping Method"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -148,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        shipment_type: 'Normal 3 days delivery'
+        shipment_type: "Normal 3 days delivery"
       },
       sending: false
     };
@@ -164,8 +269,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       var formData = new FormData();
-      formData.append("shipment_type", self.form.shipment_type || '');
-      self.$inertia.post(this.route('cart.ShippingMethodStore'), formData, {
+      formData.append("shipment_type", self.form.shipment_type || "");
+      self.$inertia.post(this.route("cart.ShippingMethodStore"), formData, {
         onStart: function onStart() {
           return _this.sending = true;
         },
@@ -188,6 +293,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -335,11 +456,13 @@ var render = function() {
                         { staticClass: "font-hkregular text-secondary" },
                         [
                           _vm._v(
-                            _vm._s(
-                              _vm.CustomerInformation
-                                ? _vm.CustomerInformation.email
-                                : ""
-                            )
+                            "\n              " +
+                              _vm._s(
+                                _vm.CustomerInformation
+                                  ? _vm.CustomerInformation.email
+                                  : ""
+                              ) +
+                              "\n            "
                           )
                         ]
                       )
@@ -372,11 +495,13 @@ var render = function() {
                   _c("div", { staticClass: "w-3/5" }, [
                     _c("p", { staticClass: "font-hkregular text-secondary" }, [
                       _vm._v(
-                        _vm._s(
-                          _vm.CustomerInformation
-                            ? _vm.CustomerInformation.address
-                            : ""
-                        )
+                        "\n              " +
+                          _vm._s(
+                            _vm.CustomerInformation
+                              ? _vm.CustomerInformation.address
+                              : ""
+                          ) +
+                          "\n            "
                       )
                     ])
                   ]),
@@ -407,7 +532,7 @@ var render = function() {
                   staticClass:
                     "font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
                 },
-                [_vm._v("Shipping Type ")]
+                [_vm._v("\n          Shipping Type\n        ")]
               ),
               _vm._v(" "),
               _c(
@@ -463,7 +588,11 @@ var render = function() {
                       _c(
                         "p",
                         { staticClass: "ml-3 font-hkregular text-secondary" },
-                        [_vm._v(" Normal 3 days delivery")]
+                        [
+                          _vm._v(
+                            "\n                Normal 3 days delivery\n              "
+                          )
+                        ]
                       )
                     ]),
                     _vm._v(" "),
@@ -501,9 +630,7 @@ var render = function() {
                       staticClass:
                         "bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
                     }),
-                    _vm._v(
-                      "\n                    Return to Cart\n                "
-                    )
+                    _vm._v("\n          Return to Cart\n        ")
                   ]
                 ),
                 _vm._v(" "),
@@ -518,7 +645,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
+                          "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full",
                         attrs: { type: "button" },
                         on: { click: _vm.store }
                       },
@@ -528,7 +655,7 @@ var render = function() {
                               "svg",
                               {
                                 staticClass:
-                                  "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                  "animate-pulse transition duration-700 ease-in-out h-5 w-auto mr-1",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -551,7 +678,7 @@ var render = function() {
                               "svg",
                               {
                                 staticClass:
-                                  "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                  "transition duration-700 ease-in-out h-5 w-auto mr-1",
                                 attrs: {
                                   xmlns: "http://www.w3.org/2000/svg",
                                   fill: "none",
@@ -570,9 +697,7 @@ var render = function() {
                                 })
                               ]
                             ),
-                        _vm._v(
-                          "                                       \n                        Proceed\n                    "
-                        )
+                        _vm._v("\n            Proceed\n          ")
                       ]
                     )
                   ]
@@ -582,7 +707,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+                      "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
                   },
                   [
                     _c("div", { staticClass: "flex justify-around" }, [
@@ -614,7 +739,7 @@ var render = function() {
                                     "svg",
                                     {
                                       staticClass:
-                                        "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                        "animate-pulse transition duration-700 ease-in-out h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         fill: "none",
@@ -637,7 +762,7 @@ var render = function() {
                                     "svg",
                                     {
                                       staticClass:
-                                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                        "transition duration-700 ease-in-out h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         fill: "none",
@@ -689,7 +814,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/" }
         },
         [_vm._v("Cart")]
@@ -703,7 +828,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold",
           attrs: { href: "/cart/customer-info" }
         },
         [_vm._v("Customer information")]
@@ -717,7 +842,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/shipping-method" }
         },
         [_vm._v("Shipping method")]
@@ -731,7 +856,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/payment-method" }
         },
         [_vm._v("Payment method")]
@@ -795,7 +920,7 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
           },
-          [_vm._v(" Your Order ")]
+          [_vm._v("\n      Your Order\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -804,7 +929,11 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary uppercase text-center sm:text-left"
           },
-          [_vm._v(" PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")")]
+          [
+            _vm._v(
+              "\n      PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")\n    "
+            )
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -849,10 +978,11 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      _vm._s(CartItem.name.substring(0, 12) + "..") +
+                      "\n          " +
+                        _vm._s(CartItem.name.substring(0, 12) + "..") +
                         " $" +
                         _vm._s(CartItem.price) +
-                        " "
+                        "\n        "
                     )
                   ]
                 )

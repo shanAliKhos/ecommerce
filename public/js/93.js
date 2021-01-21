@@ -167,19 +167,210 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Customer Information'
+    title: "Customer Information"
   },
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
     YourOrder: _YourOrder__WEBPACK_IMPORTED_MODULE_1__["default"],
     PaymentForm: _PaymentForm__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  remember: 'form',
+  remember: "form",
   data: function data() {
     return {
       form: {
@@ -202,16 +393,16 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       var formData = new FormData();
-      formData.append("email", self.form.email || '');
-      formData.append("full_name", self.form.full_name || '');
-      formData.append("get_updates", self.form.get_updates || '');
-      formData.append("address", self.form.address || '');
-      formData.append("city", self.form.city || '');
-      formData.append("country", self.form.country || '');
-      formData.append("postal_code", self.form.postal_code || '');
-      formData.append("mobile", self.form.mobile || '');
-      formData.append("saveinformation", self.form.saveinformation || '');
-      self.$inertia.post(this.route('cart.CustomerInfomationStore'), formData, {
+      formData.append("email", self.form.email || "");
+      formData.append("full_name", self.form.full_name || "");
+      formData.append("get_updates", self.form.get_updates || "");
+      formData.append("address", self.form.address || "");
+      formData.append("city", self.form.city || "");
+      formData.append("country", self.form.country || "");
+      formData.append("postal_code", self.form.postal_code || "");
+      formData.append("mobile", self.form.mobile || "");
+      formData.append("saveinformation", self.form.saveinformation || "");
+      self.$inertia.post(this.route("cart.CustomerInfomationStore"), formData, {
         preserveState: true,
         onStart: function onStart() {
           return _this.sending = true;
@@ -235,6 +426,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -394,7 +601,7 @@ var render = function() {
                             "span",
                             {
                               staticClass:
-                                "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed"
+                                "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight cursor-not-allowed"
                             },
                             [_vm._v(_vm._s(_vm.form.email))]
                           ),
@@ -403,7 +610,13 @@ var render = function() {
                             ? _c(
                                 "p",
                                 { staticClass: "text-red-500 text-xs italic" },
-                                [_vm._v(_vm._s(_vm.$page.errors.email))]
+                                [
+                                  _vm._v(
+                                    "\n                  " +
+                                      _vm._s(_vm.$page.errors.email) +
+                                      "\n                "
+                                  )
+                                ]
                               )
                             : _vm._e()
                         ]
@@ -417,7 +630,11 @@ var render = function() {
                               "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2",
                             attrs: { for: "grid-last-mobile" }
                           },
-                          [_vm._v(" Mobile ")]
+                          [
+                            _vm._v(
+                              "\n                  Mobile\n                "
+                            )
+                          ]
                         ),
                         _vm._v(" "),
                         _c("input", {
@@ -430,7 +647,7 @@ var render = function() {
                               modifiers: { number: true }
                             }
                           ],
-                          staticClass: "form-input ",
+                          staticClass: "form-input",
                           attrs: {
                             placeholder: "Mobile Number",
                             id: "grid-last-name",
@@ -458,7 +675,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.mobile))]
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.$page.errors.mobile) +
+                                    "\n                "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ])
@@ -473,7 +696,7 @@ var render = function() {
                       staticClass:
                         "font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
                     },
-                    [_vm._v("Shipping address")]
+                    [_vm._v("\n            Shipping address\n          ")]
                   ),
                   _vm._v(" "),
                   _c("div", { staticClass: "pt-4 md:pt-5" }, [
@@ -493,7 +716,7 @@ var render = function() {
                           "span",
                           {
                             staticClass:
-                              "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight   cursor-not-allowed"
+                              "appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight cursor-not-allowed"
                           },
                           [_vm._v(_vm._s(_vm.form.full_name))]
                         ),
@@ -502,7 +725,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.full_name))]
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.$page.errors.full_name) +
+                                    "\n                "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ])
@@ -529,7 +758,7 @@ var render = function() {
                               expression: "form.address"
                             }
                           ],
-                          staticClass: "form-input ",
+                          staticClass: "form-input",
                           attrs: {
                             placeholder: "You address",
                             id: "grid-address",
@@ -550,7 +779,13 @@ var render = function() {
                           ? _c(
                               "p",
                               { staticClass: "text-red-500 text-xs italic" },
-                              [_vm._v(_vm._s(_vm.$page.errors.address))]
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.$page.errors.address) +
+                                    "\n                "
+                                )
+                              ]
                             )
                           : _vm._e()
                       ])
@@ -601,7 +836,13 @@ var render = function() {
                             ? _c(
                                 "p",
                                 { staticClass: "text-red-500 text-xs italic" },
-                                [_vm._v(_vm._s(_vm.$page.errors.city))]
+                                [
+                                  _vm._v(
+                                    "\n                  " +
+                                      _vm._s(_vm.$page.errors.city) +
+                                      "\n                "
+                                  )
+                                ]
                               )
                             : _vm._e()
                         ]
@@ -671,7 +912,13 @@ var render = function() {
                                   {
                                     staticClass: "text-red-500 text-xs italic"
                                   },
-                                  [_vm._v(_vm._s(_vm.$page.errors.country))]
+                                  [
+                                    _vm._v(
+                                      "\n                    " +
+                                        _vm._s(_vm.$page.errors.country) +
+                                        "\n                  "
+                                    )
+                                  ]
                                 )
                               : _vm._e(),
                             _vm._v(" "),
@@ -730,7 +977,7 @@ var render = function() {
                                 modifiers: { number: true }
                               }
                             ],
-                            staticClass: "form-input ",
+                            staticClass: "form-input",
                             attrs: {
                               id: "grid-zip",
                               type: "text",
@@ -758,7 +1005,13 @@ var render = function() {
                             ? _c(
                                 "p",
                                 { staticClass: "text-red-500 text-xs italic" },
-                                [_vm._v(_vm._s(_vm.$page.errors.postal_code))]
+                                [
+                                  _vm._v(
+                                    "\n                  " +
+                                      _vm._s(_vm.$page.errors.postal_code) +
+                                      "\n                "
+                                  )
+                                ]
                               )
                             : _vm._e()
                         ]
@@ -829,7 +1082,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                                Keep me up to date on news and exclusive offers\n                            "
+                            "\n                Keep me up to date on news and exclusive offers\n              "
                           )
                         ]
                       )
@@ -858,9 +1111,7 @@ var render = function() {
                             staticClass:
                               "bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
                           }),
-                          _vm._v(
-                            "\n                            Return to Cart\n                        "
-                          )
+                          _vm._v("\n              Return to Cart\n            ")
                         ]
                       ),
                       _vm._v(" "),
@@ -875,7 +1126,7 @@ var render = function() {
                             "button",
                             {
                               staticClass:
-                                "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full  ",
+                                "flex items-center justify-center uppercase transition duration-700 ease-in-out bg-orange-400 hover:bg-orange-500 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow inline-flex items-center w-full",
                               attrs: { type: "submit" }
                             },
                             [
@@ -884,7 +1135,7 @@ var render = function() {
                                     "svg",
                                     {
                                       staticClass:
-                                        "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                        "animate-pulse transition duration-700 ease-in-out h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         fill: "none",
@@ -907,7 +1158,7 @@ var render = function() {
                                     "svg",
                                     {
                                       staticClass:
-                                        "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                        "transition duration-700 ease-in-out h-5 w-auto mr-1",
                                       attrs: {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         fill: "none",
@@ -927,7 +1178,7 @@ var render = function() {
                                     ]
                                   ),
                               _vm._v(
-                                "                        \n                                Proceed\n                            "
+                                "\n                Proceed\n              "
                               )
                             ]
                           )
@@ -941,7 +1192,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0  border-t-2 border-gray-200 text-gray-400 "
+                        "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
                     },
                     [
                       _c("div", { staticClass: "flex justify-around" }, [
@@ -973,7 +1224,7 @@ var render = function() {
                                       "svg",
                                       {
                                         staticClass:
-                                          "animate-pulse transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                          "animate-pulse transition duration-700 ease-in-out h-5 w-auto mr-1",
                                         attrs: {
                                           xmlns: "http://www.w3.org/2000/svg",
                                           fill: "none",
@@ -996,7 +1247,7 @@ var render = function() {
                                       "svg",
                                       {
                                         staticClass:
-                                          "transition duration-700 ease-in-out  h-5 w-auto mr-1",
+                                          "transition duration-700 ease-in-out h-5 w-auto mr-1",
                                         attrs: {
                                           xmlns: "http://www.w3.org/2000/svg",
                                           fill: "none",
@@ -1050,7 +1301,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/" }
         },
         [_vm._v("Cart")]
@@ -1064,7 +1315,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold",
           attrs: { href: "/cart/customer-info" }
         },
         [_vm._v("Customer information")]
@@ -1078,7 +1329,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/shipping-method" }
         },
         [_vm._v("Shipping method")]
@@ -1092,7 +1343,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass:
-            "  transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular  ",
+            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
           attrs: { href: "/cart/payment-method" }
         },
         [_vm._v("Payment method")]
@@ -1117,7 +1368,7 @@ var staticRenderFns = [
         _c(
           "h1",
           { staticClass: "font-hkmedium text-secondary text-xl md:text-2xl" },
-          [_vm._v(" Contact information ")]
+          [_vm._v("\n              Contact information\n            ")]
         )
       ]
     )
@@ -1155,7 +1406,7 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
           },
-          [_vm._v(" Your Order ")]
+          [_vm._v("\n      Your Order\n    ")]
         ),
         _vm._v(" "),
         _c(
@@ -1164,7 +1415,11 @@ var render = function() {
             staticClass:
               "font-hkbold text-secondary uppercase text-center sm:text-left"
           },
-          [_vm._v(" PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")")]
+          [
+            _vm._v(
+              "\n      PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")\n    "
+            )
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -1209,10 +1464,11 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      _vm._s(CartItem.name.substring(0, 12) + "..") +
+                      "\n          " +
+                        _vm._s(CartItem.name.substring(0, 12) + "..") +
                         " $" +
                         _vm._s(CartItem.price) +
-                        " "
+                        "\n        "
                     )
                   ]
                 )

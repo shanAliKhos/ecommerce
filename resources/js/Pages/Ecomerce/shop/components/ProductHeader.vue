@@ -13,23 +13,32 @@
       <div class="flex items-center ">
         <span class="font-semibold text-red-600 text-2xl">{{ Currency }} {{ ProductCurrentPrice }}</span>
         <span class="font-semibold text-grey-darker text-xl line-through pl-5" v-if="ProductIsOnSale">{{ Currency }} {{ ProductRegularPrice }}</span>
-      </div>
-      <div class="flex items-center text-gray-500 border-b border-t py-2">
-        <div class=" mb-1 text-xs">
-          <span class="pr-2 font-semibold">Categories:</span>
-          <span v-if="ProductCategories.length<1" >N/A</span>
-          <span v-for="(ProductCategory, index) in ProductCategories" :key="index" class="capitalize" >
-              <span>{{ ProductCategory }}</span>
-              <span v-if="ProductCategories.length > index + 1">| </span> 
-          </span>
+      </div> 
+      <div class="flex items-center justify-between border-t text-xs py-1 font-semibold ">
+        <div class="flex flex-wrap items-center">
+          <p>Brand</p>
         </div>
-      </div>
-      <div class="flex items-center text-gray-500 py-2">
-        <div class="text-xs">
-          <span class="pr-2 font-semibold">Brands:</span>
-          <span class="capitalize">{{ ProductBrand?ProductBrand:'N/A' }} </span>
+        <div class="flex flex-wrap items-center  "> 
+          <div>
+            <p>{{ ProductBrand?ProductBrand:'N/A' }} </p>
+                
+          </div>
         </div>
-      </div>
+      </div>    
+      <div class="flex  items-center justify-between border-t text-xs py-1 font-semibold ">
+        <div class="flex flex-wrap items-center">
+          <p>Categories</p>
+        </div>
+        <div class="flex flex-wrap items-center w-3/4 "> 
+          <div>
+            <p v-if="ProductCategories.length<1" >N/A</p>
+            <span v-for="(ProductCategory, index) in ProductCategories" :key="index"  >
+                <span>{{ ProductCategory }}</span>
+                <span v-if="ProductCategories.length > index + 1">| </span> 
+            </span>            
+          </div>
+        </div>
+      </div>              
     </div>
   </div>
 </template>
@@ -64,7 +73,15 @@ export default {
       return this.$page.SiteOptions.Currency.Symbol;
     },
     ProductLabel(){
-      return this.$page.Product.label
+      if(this.ProductCurrentPrice > 0){
+          return this.$page.Product.label
+      }else{
+          return {
+              bg_color:'bg-red-500',
+              active:'true',
+              title:'De-activated Product'
+          };
+      }
     },
     
  

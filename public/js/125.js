@@ -62,7 +62,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     IsActiveLink: function IsActiveLink() {
-      return this.active ? "text-orange-500" : "";
+      return this.active ? "text-orange-500" : " focus:text-orange-500";
     }
   }
 });
@@ -89,7 +89,7 @@ var render = function() {
     _vm._b(
       {
         staticClass:
-          "antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50",
+          "antialiased text-center focus:outline-none cursor-pointer text-xs appearance-none z-50 ",
         class: _vm.IsActiveLink,
         attrs: { disabled: _vm.loading },
         on: { click: _vm.send }

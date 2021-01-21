@@ -64,6 +64,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: {
     Categories: function Categories() {
@@ -102,7 +130,7 @@ var render = function() {
             staticClass:
               "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark text-center sm:text-left"
           },
-          [_vm._v(" Categories")]
+          [_vm._v("\n      Categories\n    ")]
         ),
         _vm._v(" "),
         _vm._l(_vm.Categories, function(Category, CategoryIndex) {
@@ -121,7 +149,7 @@ var render = function() {
                   staticClass:
                     "font-hkregular transition-colors group-hover:font-hkbold text-gray-400 group-hover:text-primary text-base capitalize"
                 },
-                [_vm._v(" " + _vm._s(Category.name) + " ")]
+                [_vm._v("\n        " + _vm._s(Category.name) + "\n      ")]
               )
             ]
           )
@@ -153,7 +181,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("input", {
           staticClass:
-            "form-input   transition-all pr-10 text-grey-darkest text-base",
+            "form-input transition-all pr-10 text-grey-darkest text-base",
           attrs: {
             type: "text",
             id: "search_form",
@@ -183,7 +211,7 @@ var staticRenderFns = [
           staticClass:
             "font-regular text-gray-400 text-xl md:text-2xl lg:text-3xl pb-2 border-b border-grey-dark"
         },
-        [_vm._v("\n            Follow Us")]
+        [_vm._v("\n      Follow Us\n    ")]
       ),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center sm:justify-start pt-8" }, [

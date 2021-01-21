@@ -60,11 +60,13 @@ var staticRenderFns = [
               staticClass:
                 "font-semibold text-gray-800 text-3xl md:text-4xl lg:text-7xl"
             },
-            [_vm._v("Trending Collections")]
+            [_vm._v("\n        Trending Collections\n      ")]
           ),
           _vm._v(" "),
           _c("p", { staticClass: "font-semibold text-gray-500 text-lg pt-4" }, [
-            _vm._v("Checkout our newest trends this coming season")
+            _vm._v(
+              "\n        Checkout our newest trends this coming season\n      "
+            )
           ])
         ])
       ]
@@ -76,7 +78,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "w-2/3 absolute inset-0 px-6 md:px-10 py-14 " },
+      { staticClass: "w-2/3 absolute inset-0 px-6 md:px-10 py-14" },
       [
         _c(
           "p",
@@ -84,7 +86,11 @@ var staticRenderFns = [
             staticClass:
               "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
           },
-          [_vm._v("Passion Pearl "), _c("br"), _vm._v(" Collection")]
+          [
+            _vm._v("\n          Passion Pearl "),
+            _c("br"),
+            _vm._v("\n          Collection\n        ")
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -103,7 +109,7 @@ var staticRenderFns = [
               [
                 _c("i", {
                   staticClass:
-                    "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
+                    "transition duration-300 ease-in-out transform bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                 })
               ]
             ),
@@ -113,9 +119,9 @@ var staticRenderFns = [
                 "p",
                 {
                   staticClass:
-                    "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                    "transition duration-300 ease-in-out transform font-semibold text-orange-600 group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                 },
-                [_vm._v("Get it now")]
+                [_vm._v("\n              Get it now\n            ")]
               )
             ])
           ]
@@ -151,7 +157,7 @@ var staticRenderFns = [
                     staticClass:
                       "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
                   },
-                  [_vm._v("Hoodie your way! For Men")]
+                  [_vm._v("\n          Hoodie your way! For Men\n        ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -170,7 +176,7 @@ var staticRenderFns = [
                       [
                         _c("i", {
                           staticClass:
-                            "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
+                            "transition duration-300 ease-in-out transform bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                         })
                       ]
                     ),
@@ -179,9 +185,9 @@ var staticRenderFns = [
                       "p",
                       {
                         staticClass:
-                          "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                          "transition duration-300 ease-in-out transform font-semibold text-orange-600 group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                       },
-                      [_vm._v("Get it now")]
+                      [_vm._v("\n            Get it now\n          ")]
                     )
                   ]
                 )
@@ -210,11 +216,7 @@ var staticRenderFns = [
                     staticClass:
                       "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
                   },
-                  [
-                    _vm._v(
-                      "\n                    Anabelle Purses  \n                "
-                    )
-                  ]
+                  [_vm._v("\n          Anabelle Purses\n        ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -233,7 +235,7 @@ var staticRenderFns = [
                       [
                         _c("i", {
                           staticClass:
-                            "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
+                            "transition duration-300 ease-in-out transform bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                         })
                       ]
                     ),
@@ -242,9 +244,9 @@ var staticRenderFns = [
                       "p",
                       {
                         staticClass:
-                          "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                          "transition duration-300 ease-in-out transform font-semibold text-orange-600 group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                       },
-                      [_vm._v("Get it now")]
+                      [_vm._v("\n            Get it now\n          ")]
                     )
                   ]
                 )
@@ -281,7 +283,7 @@ var staticRenderFns = [
                 staticClass:
                   "font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl"
               },
-              [_vm._v("W.W. Shoes ")]
+              [_vm._v("\n        W.W. Shoes\n      ")]
             ),
             _vm._v(" "),
             _c(
@@ -300,7 +302,7 @@ var staticRenderFns = [
                   [
                     _c("i", {
                       staticClass:
-                        "transition duration-300 ease-in-out transform   bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
+                        "transition duration-300 ease-in-out transform bx bx-chevron-right text-xl text-orange-400 group-hover:text-blue-600"
                     })
                   ]
                 ),
@@ -309,9 +311,9 @@ var staticRenderFns = [
                   "p",
                   {
                     staticClass:
-                      "transition duration-300 ease-in-out transform   font-semibold text-orange-600   group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
+                      "transition duration-300 ease-in-out transform font-semibold text-orange-600 group-hover:text-green-400 sm:text-lg pl-3 sm:pl-5 leading-none -mt-1"
                   },
-                  [_vm._v("Get it now")]
+                  [_vm._v("\n          Get it now\n        ")]
                 )
               ]
             )

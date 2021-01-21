@@ -21,12 +21,14 @@ class Product extends Model
         'quantity'  =>  'integer', 
         'brand_id'  =>  'integer',
         'is_active'    =>  'boolean',
+        'is_variable'    =>  'boolean',
         'is_featured'  =>  'boolean'
     ];
  
     protected $appends = [ 
         'mainphoto_url',
         'current_price',          
+        'is_variable',          
         'on_sale',          
         'label',
         'rating',
@@ -70,6 +72,11 @@ class Product extends Model
         return rand(1,5);
     }
 
+    public function getIsVariableAttribute()
+    {  
+        return $this->Skus->count()>0;
+    }
+
     public function getOnSaleAttribute()
     { 
         return $this->sale_price > 0;
@@ -77,9 +84,12 @@ class Product extends Model
 
     public function getMainphotoUrlAttribute()
     { 
-        try {
+        try { 
             if (Storage::disk('s3')->exists($this->image)) { 
                 return Storage::disk('s3')->url($this->image);
+            }else{
+                return $this->defaultPhotoUrl();
+
             }
         } catch (\Throwable $th) {
             return $this->defaultPhotoUrl();
@@ -95,6 +105,7 @@ class Product extends Model
     
     protected function defaultPhotoUrl()
     {
+         
         return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
     }    
  
