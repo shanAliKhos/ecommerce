@@ -189,7 +189,7 @@ class CheckOutController extends Controller
                     'order_id' => $CreatedOrder->id,
                     'product_id' => $OrderItem['product_id'],
                     'Quantity' => $OrderItem['Quantity'],
-                    'variation' => $OrderItem['variation'],
+                    // 'variation' => $OrderItem['variation'],
                     'Price' => $OrderItem['Price'],
                 ]);
 
