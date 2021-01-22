@@ -22,11 +22,7 @@ class ShopController extends Controller
             'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),
             'HeroSliders'=> $slider->where('name','hero')->with('hero_slider')->first(),
         ]);        
-        // return Inertia::render('Ecomerce/welcome/Welcome',[
-        //     'SaleSliders'=> $slider->where('name','sale')->with('sale_slider')->first(),
-        //     'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),
-        //     'HeroSliders'=> $slider->where('name','hero')->with('hero_slider')->first(),
-        // ]);        
+       
     }    
      
     public function index(Request $request, Product $Product)
@@ -35,8 +31,7 @@ class ShopController extends Controller
         ->where('regular_price','>',0.00)
         ->orwhere('sale_price','>',0.00)
         ->latest()->paginate(20); 
-
-         
+ 
         return Inertia::render('Ecomerce/shop/Index',compact('Products'));
     }
 
@@ -54,9 +49,8 @@ class ShopController extends Controller
         $Product->variations->map(function($variation){
             $variation->selected = $variation->attribute_options[0]->id;
             return $variation->load('attribute_options')->Attribute;
-        })->toArray();
-         
-  
+        })->toArray(); 
+        
         return Inertia::render('Ecomerce/shop/Show', [
             'Product'=> $Product,
             'RelatedProducts'=>$Product->get()->random(1,10),

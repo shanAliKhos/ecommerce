@@ -98,13 +98,10 @@ class CheckOutController extends Controller
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
         }
-        
         $this->validate($request,[ 
             "NameOnCard" => "required",
             "stripeToken" => "required",
         ]); 
-
-
         if(Setting::get('stripe_payment_method') == 1){
             config([
                 'services.stripe.key'=>Setting::get('stripe_key'),
@@ -113,7 +110,7 @@ class CheckOutController extends Controller
         }else{
             return back()->with('error','OPPs ! something went wrong contact support. Thanks!');
         }         
-            
+         
         $Product = new Product; 
         $NewOrder = []; 
         $NewOrder['GrandTotal']= 0;
@@ -124,38 +121,51 @@ class CheckOutController extends Controller
 
             $OrderdProduct = $Product->findOrFail($CartItem['product_id']);
             $NewOrderItems[$key]['product_id'] = $OrderdProduct->id;
- 
+
             if ($CartItem['sku_id']) {
-                $OrderdProduct = $OrderdProduct->skus()->find($CartItem['sku_id']);  
+ 
+                
+            // dd($OrderdProduct->variations->load('attribute_options'),data_get($OrderdProduct->variations->load('attribute_options'),'*.attribute_options.*.name'));
+
+                // $OrderdProduct = $OrderdProduct->skus()->find($CartItem['sku_id']);  
+                $Product = $OrderdProduct;  
+
+                $product_attributes = $Product->variations->map(function ($variation) {
+                    return $variation->Attribute->load('attribute_values');
+                })->toArray();
+        
+                $product_attribute_values = $Product->variations->map(function ($variation) {
+                    return $variation->attribute_options;
+                })->toArray();
+ 
+                foreach ($product_attributes as $key => $product_attribute) {
+                    $product_attributes[$key]['product_attribute_values'] = $product_attribute_values[$key];
+                }
+                        
+
+                dd($OrderdProduct->load('skus_options')->toArray());
 
                 if(( $OrderdProduct->quantity >= $CartItem['quantity']) == false){ 
                     return back()->with('error','product quantity left ' .$OrderdProduct->quantity.' only');
                 }
+
             }else{ 
                 if(($OrderdProduct->quantity >= $CartItem['quantity'])== false){
                     return back()->with('error','product left' .$OrderdProduct->quantity.' only');
                 }            
             }             
+
+            // dd($OrderdProduct);
+            
+            $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['quantity'];
             $NewOrderItems[$key]['Quantity'] = $CartItem['quantity'];
+            $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
             
+            $NewOrder['GrandTotal'] += $NewOrderItems[$key]['Price'] * $NewOrderItems[$key]['Quantity'];
+            $NewOrder['ItemCount'] += $NewOrderItems[$key]['Quantity'];
             
-            
-            if($OrderdProduct->quantity >= $CartItem['quantity']){
-                
-                $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['quantity']; 
-                $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
-
-                $NewOrder['GrandTotal'] += $NewOrderItems[$key]['Price'] * $NewOrderItems[$key]['Quantity'];
-                $NewOrder['ItemCount'] += $NewOrderItems[$key]['Quantity'];
-
-            }else{
-
-                return back()->with('error',$OrderdProduct->name.' is sold out only remaining '.$OrderdProduct->quantity);
-
-            }
-            
-
-
+            $OrderdProduct->save();
+         
         }
         $NewOrder['OrderNumber'] = Str::random(4).Auth()->user()->id.(Order::all()->Count()+1).'-'.uniqid(Auth()->user()->id.(Order::all()->Count()+1));
         
@@ -194,16 +204,17 @@ class CheckOutController extends Controller
             ]);
             foreach ($NewOrderItems as $key => $OrderItem) { 
 
+                dd($OrderItem);
                 $CreatedOrder->items()->create([
                     'order_id' => $CreatedOrder->id,
                     'product_id' => $OrderItem['product_id'],
                     'Quantity' => $OrderItem['Quantity'],
+                    'variation' => $OrderItem['variation'],
                     'Price' => $OrderItem['Price'],
                 ]);
 
             }       
-            
-
+             
             $notification = [ 
                 'OrderNumber'=>$CreatedOrder->OrderNumber,
                 'CustomerName'=>$CreatedOrder->CardHolderName,
@@ -224,11 +235,7 @@ class CheckOutController extends Controller
             return redirect()->route('cart.success')->with('success','Thank you! Your payment has been accepted.');
   
 
-        } catch (CardErrorException $e) {
-
-            // save info to database for failed
-            
-            // save info to database for failed
+        } catch (CardErrorException $e) { 
             return back()->withErrors('Error! ' . $e->getMessage());
         }
     }    
