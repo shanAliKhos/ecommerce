@@ -123,28 +123,10 @@ class CheckOutController extends Controller
             $NewOrderItems[$key]['product_id'] = $OrderdProduct->id;
 
             if ($CartItem['sku_id']) {
- 
-                
+   
             // dd($OrderdProduct->variations->load('attribute_options'),data_get($OrderdProduct->variations->load('attribute_options'),'*.attribute_options.*.name'));
 
-                // $OrderdProduct = $OrderdProduct->skus()->find($CartItem['sku_id']);  
-                $Product = $OrderdProduct;  
-
-                $product_attributes = $Product->variations->map(function ($variation) {
-                    return $variation->Attribute->load('attribute_values');
-                })->toArray();
-        
-                $product_attribute_values = $Product->variations->map(function ($variation) {
-                    return $variation->attribute_options;
-                })->toArray();
- 
-                foreach ($product_attributes as $key => $product_attribute) {
-                    $product_attributes[$key]['product_attribute_values'] = $product_attribute_values[$key];
-                }
-                        
-
-                dd($OrderdProduct->load('skus_options')->toArray());
-
+                $OrderdProduct = $OrderdProduct->skus()->find($CartItem['sku_id']);  
                 if(( $OrderdProduct->quantity >= $CartItem['quantity']) == false){ 
                     return back()->with('error','product quantity left ' .$OrderdProduct->quantity.' only');
                 }
@@ -155,8 +137,7 @@ class CheckOutController extends Controller
                 }            
             }             
 
-            // dd($OrderdProduct);
-            
+             
             $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['quantity'];
             $NewOrderItems[$key]['Quantity'] = $CartItem['quantity'];
             $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
@@ -203,8 +184,7 @@ class CheckOutController extends Controller
                 'ItemCount'=>$NewOrder['ItemCount'],                
             ]);
             foreach ($NewOrderItems as $key => $OrderItem) { 
-
-                dd($OrderItem);
+ 
                 $CreatedOrder->items()->create([
                     'order_id' => $CreatedOrder->id,
                     'product_id' => $OrderItem['product_id'],
