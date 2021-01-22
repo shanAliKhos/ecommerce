@@ -362,8 +362,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -1077,7 +1075,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-11 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+                          "mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
                       },
                       [
                         _c("div", { staticClass: "flex justify-around" }, [

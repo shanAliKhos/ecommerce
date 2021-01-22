@@ -74,9 +74,7 @@
                     </svg>
                   </button>
                 </div>
-              </div> 
-         
-
+              </div>  
               
               <div class="flex flex-wrap items-center bg-white">
                 <button
@@ -122,7 +120,7 @@
           </div>
 
           <div
-            class="mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-11 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+            class="mobile-addtocart-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
           >
             <div class="flex justify-around">
               <div class="w-1/2 relative px-2 py-2">
