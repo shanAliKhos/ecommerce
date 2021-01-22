@@ -248,7 +248,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$page.Cart.Items.length > 0) {
         Qty = this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-          return TotalItems + Item.Qty;
+          return TotalItems + Item.quantity;
         }, 0);
       }
 
@@ -259,7 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$page.Cart.Items.length > 0) {
         sum = this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-          return TotalPrice + Item.Qty * Item.price;
+          return TotalPrice + Item.quantity * Item.current_price;
         }, 0);
       }
 
@@ -290,7 +290,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container border-t border-grey-dark mb-20 lg:mb-0" },
+    { staticClass: "container border-t border-grey-400 mb-20  px-5 py-5 " },
     [
       _c(
         "div",
@@ -623,7 +623,10 @@ var render = function() {
                       _c("div", {
                         staticClass:
                           "w-12 h-16 bg-center bg-no-repeat bg-cover",
-                        style: "background-image:url('" + CartItem.image + "')"
+                        style:
+                          "background-image:url('" +
+                          CartItem.product_image +
+                          "')"
                       }),
                       _vm._v(" "),
                       _c(
@@ -647,9 +650,9 @@ var render = function() {
                   [
                     _vm._v(
                       "\n          " +
-                        _vm._s(CartItem.name.substring(0, 12) + "..") +
+                        _vm._s(CartItem.product_name.substring(0, 12) + "..") +
                         " $" +
-                        _vm._s(CartItem.price) +
+                        _vm._s(CartItem.current_price) +
                         "\n        "
                     )
                   ]

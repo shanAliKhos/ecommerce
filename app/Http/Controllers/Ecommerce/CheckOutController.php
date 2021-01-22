@@ -122,13 +122,27 @@ class CheckOutController extends Controller
  
         foreach($CartItems as $key => $CartItem){
 
-            $OrderdProduct = $Product->findOrFail($CartItem['id']);
+            $OrderdProduct = $Product->findOrFail($CartItem['product_id']);
             $NewOrderItems[$key]['product_id'] = $OrderdProduct->id;
-            $NewOrderItems[$key]['Quantity'] = $CartItem['Qty'];
-            
-            if($OrderdProduct->quantity >= $CartItem['Qty']){
+ 
+            if ($CartItem['sku_id']) {
+                $OrderdProduct = $OrderdProduct->skus()->find($CartItem['sku_id']);  
 
-                $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['Qty']; 
+                if(( $OrderdProduct->quantity >= $CartItem['quantity']) == false){ 
+                    return back()->with('error','product quantity left ' .$OrderdProduct->quantity.' only');
+                }
+            }else{ 
+                if(($OrderdProduct->quantity >= $CartItem['quantity'])== false){
+                    return back()->with('error','product left' .$OrderdProduct->quantity.' only');
+                }            
+            }             
+            $NewOrderItems[$key]['Quantity'] = $CartItem['quantity'];
+            
+            
+            
+            if($OrderdProduct->quantity >= $CartItem['quantity']){
+                
+                $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['quantity']; 
                 $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
 
                 $NewOrder['GrandTotal'] += $NewOrderItems[$key]['Price'] * $NewOrderItems[$key]['Quantity'];

@@ -513,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$page.Cart.Items.length > 0) {
         Qty = this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-          return TotalItems + Item.Qty;
+          return TotalItems + Item.quantity;
         }, 0);
       }
 
@@ -524,7 +524,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$page.Cart.Items.length > 0) {
         sum = this.$page.Cart.Items.reduce(function (TotalPrice, Item) {
-          return TotalPrice + Item.Qty * Item.price;
+          return TotalPrice + Item.quantity * Item.current_price;
         }, 0);
       }
 
@@ -555,7 +555,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container border-t border-grey-dark mb-20 lg:mb-0" },
+    { staticClass: "container border-t border-grey-400 mb-20  px-5 py-5  " },
     [
       _c(
         "div",
@@ -573,7 +573,7 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.store()
+                    return _vm.store($event)
                   }
                 }
               },
@@ -647,7 +647,7 @@ var render = function() {
                               modifiers: { number: true }
                             }
                           ],
-                          staticClass: "form-input",
+                          staticClass: "form-input w-full ",
                           attrs: {
                             placeholder: "Mobile Number",
                             id: "grid-last-name",
@@ -758,7 +758,7 @@ var render = function() {
                               expression: "form.address"
                             }
                           ],
-                          staticClass: "form-input",
+                          staticClass: "form-input w-full ",
                           attrs: {
                             placeholder: "You address",
                             id: "grid-address",
@@ -815,7 +815,7 @@ var render = function() {
                                 expression: "form.city"
                               }
                             ],
-                            staticClass: "form-input",
+                            staticClass: "form-input  w-full",
                             attrs: {
                               id: "grid-city",
                               type: "text",
@@ -874,7 +874,7 @@ var render = function() {
                                     expression: "form.country"
                                   }
                                 ],
-                                staticClass: "form-input",
+                                staticClass: "form-input  w-full",
                                 attrs: { id: "grid-state" },
                                 on: {
                                   change: function($event) {
@@ -977,7 +977,7 @@ var render = function() {
                                 modifiers: { number: true }
                               }
                             ],
-                            staticClass: "form-input",
+                            staticClass: "form-input  w-full",
                             attrs: {
                               id: "grid-zip",
                               type: "text",
@@ -1192,7 +1192,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+                        "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
                     },
                     [
                       _c("div", { staticClass: "flex justify-around" }, [
@@ -1212,7 +1212,7 @@ var render = function() {
                               "button",
                               {
                                 staticClass:
-                                  "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                                  "flex items-center transition duration-500 ease-in-out bg-green-500 hover:bg-green-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
                                 class: {
                                   "opacity-50 pointer-events-none": _vm.sending
                                 },
@@ -1441,7 +1441,10 @@ var render = function() {
                       _c("div", {
                         staticClass:
                           "w-12 h-16 bg-center bg-no-repeat bg-cover",
-                        style: "background-image:url('" + CartItem.image + "')"
+                        style:
+                          "background-image:url('" +
+                          CartItem.product_image +
+                          "')"
                       }),
                       _vm._v(" "),
                       _c(
@@ -1465,9 +1468,9 @@ var render = function() {
                   [
                     _vm._v(
                       "\n          " +
-                        _vm._s(CartItem.name.substring(0, 12) + "..") +
+                        _vm._s(CartItem.product_name.substring(0, 12) + "..") +
                         " $" +
-                        _vm._s(CartItem.price) +
+                        _vm._s(CartItem.current_price) +
                         "\n        "
                     )
                   ]

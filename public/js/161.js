@@ -380,7 +380,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-500"
+                  "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-500"
               },
               [
                 _c("div", { staticClass: "flex justify-around" }, [

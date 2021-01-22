@@ -10,7 +10,7 @@
         >Name on Card</label
       >
       <input
-        class="form-input"
+        class="form-input w-full"
         v-model="name_on_card"
         id="nameoncard"
         type="text"
@@ -59,7 +59,7 @@
     </div>
 
     <div
-      class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+      class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
     >
       <div class="flex justify-around">
         <div class="w-1/2 relative px-2 py-2 flex item-center"></div>
@@ -68,7 +68,7 @@
             :disabled="sending"
             type="submit"
             :class="{ 'opacity-50 pointer-events-none': sending }"
-            class="flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow"
+            class="flex items-center transition duration-500 ease-in-out bg-green-500 hover:bg-green-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow"
           >
             <svg
               v-if="sending"
@@ -133,12 +133,9 @@ export default {
         NameOnCard: this.name_on_card,
       };
       createToken(options).then((result) => {
+        console.log(result)
         if (result.error) {
-          this.$swal({
-            showConfirmButton: true,
-            icon: "error",
-            title: "Opps something went wrong ! contact support ",
-          });
+    
           return false;
         }
 

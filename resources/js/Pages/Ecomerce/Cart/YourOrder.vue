@@ -20,7 +20,7 @@
             <div class="h-20 rounded flex items-center justify-center">
               <div
                 class="w-12 h-16 bg-center bg-no-repeat bg-cover"
-                :style="'background-image:url(\'' + CartItem.image + '\')'"
+                :style="'background-image:url(\'' + CartItem.product_image + '\')'"
               ></div>
               <span
                 class="font-hkregular text-white text-xs px-2 leading-none absolute top-0 right-0 bg-primary flex items-center justify-center rounded-full -mt-2 -mr-2 h-6 w-6"
@@ -32,7 +32,7 @@
             class="font-hkregular text-secondary text-md"
             :title="CartItem.name"
           >
-            {{ CartItem.name.substring(0, 12) + ".." }} ${{ CartItem.price }}
+            {{ CartItem.product_name.substring(0, 12) + ".." }} ${{ CartItem.current_price }}
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default {
       let Qty = 0;
       if (this.$page.Cart.Items.length > 0) {
         Qty = this.$page.Cart.Items.reduce(
-          (TotalItems, Item) => TotalItems + Item.Qty,
+          (TotalItems, Item) => TotalItems + Item.quantity,
           0
         );
       }
@@ -95,7 +95,7 @@ export default {
       let sum = 0;
       if (this.$page.Cart.Items.length > 0) {
         sum = this.$page.Cart.Items.reduce(
-          (TotalPrice, Item) => TotalPrice + Item.Qty * Item.price,
+          (TotalPrice, Item) => TotalPrice + Item.quantity * Item.current_price,
           0
         );
       }

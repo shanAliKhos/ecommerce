@@ -278,7 +278,7 @@ export default {
       const self = this;
       self.selectedSku = optSku.id?optSku:this.$page.Product;
       self.form.sku_id = optSku.id?optSku.id:null;
-      this.CartButtonName();
+      self.CartButtonName ; 
       return true;
     },
   
@@ -310,14 +310,16 @@ export default {
       return self.form.quantity;
     },
     CartButtonName() {
+      self = this;
       let button;
       button = "Add to cart";
-      if (this.$page.Cart.Items) {
-        this.$page.Cart.Items.filter((Item) => {
-          if (Item.product_id == this.$page.Product.id && Item.sku_id == this.form.sku_id) {
-            button = "Update to cart";
-            this.form.quantity = Item.quantity;
-          } 
+       self.form.quantity = 0; 
+      if (self.$page.Cart.Items) {
+        self.$page.Cart.Items.filter((Item) => {
+          if (Item.product_id == self.$page.Product.id && Item.sku_id == self.form.sku_id) {
+            button = "Update to cart"; 
+            self.form.quantity = Item.quantity;
+          }  
         });
       }
       return button;

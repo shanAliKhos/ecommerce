@@ -148,13 +148,9 @@ __webpack_require__.r(__webpack_exports__);
         NameOnCard: this.name_on_card
       };
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])(options).then(function (result) {
-        if (result.error) {
-          _this.$swal({
-            showConfirmButton: true,
-            icon: "error",
-            title: "Opps something went wrong ! contact support "
-          });
+        console.log(result);
 
+        if (result.error) {
           return false;
         }
 
@@ -317,7 +313,7 @@ var render = function() {
               expression: "name_on_card"
             }
           ],
-          staticClass: "form-input",
+          staticClass: "form-input w-full",
           attrs: {
             id: "nameoncard",
             type: "text",
@@ -420,7 +416,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+            "mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
         },
         [
           _c("div", { staticClass: "flex justify-around" }, [
@@ -439,7 +435,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
+                      "flex items-center transition duration-500 ease-in-out bg-green-500 hover:bg-green-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow",
                     class: { "opacity-50 pointer-events-none": _vm.sending },
                     attrs: { disabled: _vm.sending, type: "submit" }
                   },

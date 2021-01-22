@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen border-t border-grey-dark mb-20 lg:mb-0">
+  <div class="h-screen border-t border-grey-400 mb-20 px-5 py-5 ">
     <div
       class="flex flex-col lg:flex-row justify-between items-center pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24"
     >
@@ -169,7 +169,7 @@
           </div>
 
           <div
-            class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-12 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
+            class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-400"
           >
             <div class="flex justify-around">
               <div class="w-1/2 relative px-2 py-2 flex item-center"></div>
@@ -181,7 +181,7 @@
                   @click="store"
                   type="button"
                   :class="{ 'opacity-50 pointer-events-none': sending }"
-                  class="flex items-center transition duration-500 ease-in-out bg-orange-500 hover:bg-orange-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow"
+                  class="flex items-center transition duration-500 ease-in-out bg-green-500 hover:bg-green-600 focus:outline-none rounded px-2 py-2 text-white text-sm font-semibold uppercase shadow"
                 >
                   <svg
                     v-if="sending"

@@ -81,6 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 // import MobileNavLink from './MobileNavLink'
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['mobileMenu', 'categories', 'subcategory'],
@@ -99,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     CountCartItems: function CountCartItems() {
       var Qty = this.$page.Cart.Items ? this.$page.Cart.Items.reduce(function (TotalItems, Item) {
-        return TotalItems + Item.Qty;
+        return TotalItems + Item.quantity;
       }, 0) : 0;
       return Qty;
     }

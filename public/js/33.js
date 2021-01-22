@@ -441,7 +441,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var self = this;
       self.selectedSku = optSku.id ? optSku : this.$page.Product;
       self.form.sku_id = optSku.id ? optSku.id : null;
-      this.CartButtonName();
+      self.CartButtonName;
       return true;
     }
   },
@@ -467,16 +467,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return self.form.quantity;
     },
     CartButtonName: function CartButtonName() {
-      var _this = this;
-
+      self = this;
       var button;
       button = "Add to cart";
+      self.form.quantity = 0;
 
-      if (this.$page.Cart.Items) {
-        this.$page.Cart.Items.filter(function (Item) {
-          if (Item.product_id == _this.$page.Product.id && Item.sku_id == _this.form.sku_id) {
+      if (self.$page.Cart.Items) {
+        self.$page.Cart.Items.filter(function (Item) {
+          if (Item.product_id == self.$page.Product.id && Item.sku_id == self.form.sku_id) {
             button = "Update to cart";
-            _this.form.quantity = Item.quantity;
+            self.form.quantity = Item.quantity;
           }
         });
       }

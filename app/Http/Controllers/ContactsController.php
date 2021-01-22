@@ -20,7 +20,7 @@ class ContactsController extends Controller
     {
         return Inertia::render('Messenger/MessengerApp');
     }
-
+ 
     public function get()
     {  
         $contacts = User::where('id', '!=', auth()->id())->get();
