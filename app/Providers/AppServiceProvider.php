@@ -46,8 +46,8 @@ class AppServiceProvider extends ServiceProvider
         Inertia::share([  
             "SiteOptions" =>  [
                 "Title" => isset($Settings['site_title'])?$Settings['site_title']:'',
-                "Logo" => isset($Settings['site_logo'])?Storage::disk('s3')->url($Settings['site_logo']):'https://ui-avatars.com/api/?name='.urlencode(isset($Settings['site_title'])?$Settings['site_title']:'').'&color=7F9CF5&background=EBF4FF',
-                "Favicon" => isset($Settings['site_favicon'])?Storage::disk('s3')->url($Settings['site_favicon']):'https://ui-avatars.com/api/?name='.urlencode(isset($Settings['site_title'])?$Settings['site_title']:'').'&color=7F9CF5&background=EBF4FF',
+                "Logo" => isset($Settings['site_logo'])?Storage::disk('s3')->url($Settings['site_logo']):'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF',
+                "Favicon" => isset($Settings['site_favicon'])?Storage::disk('s3')->url($Settings['site_favicon']):'https://ui-avatars.com/api/?name=FI&color=7F9CF5&background=EBF4FF',
                 "Email" => isset($Settings['default_email_address'])?$Settings['default_email_address']:'',
                 "Phone" => isset($Settings['phone'])?$Settings['phone']:'',
                 "Currency" => [  
