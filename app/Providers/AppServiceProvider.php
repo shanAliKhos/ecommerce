@@ -38,9 +38,9 @@ class AppServiceProvider extends ServiceProvider
     { 
         $dbSetting = false; 
 
-        $Settings = Arr::pluck(Setting::all(), 'value','key'); 
         if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
             $dbSetting = true;
+            $Settings = Arr::pluck(Setting::all(), 'value','key'); 
         } 
         
         Inertia::share([  
