@@ -83,15 +83,15 @@ class HeroSliderController extends Controller
             } catch (\Throwable $th) {    }
 
             $hero->update([
-                'image' => $request->file('image')->store('HeroSlider','public')
+                'image' => $request->file('image')->store('HeroSlider','s3')
             ]);               
 
         } 
 
         if(empty($request->image) && $hero->image){
             try {                
-                if(Storage::disk('public')->exists($hero->image)){                
-                    Storage::disk('public')->delete($hero->image);
+                if(Storage::disk('s3')->exists($hero->image)){                
+                    Storage::disk('s3')->delete($hero->image);
                 }        
             } catch (\Throwable $th) {    }
             $hero->update(['image' => null]);
@@ -106,8 +106,8 @@ class HeroSliderController extends Controller
 
     public function destroy(HeroSlider $hero)
     {  
-        if(Storage::disk('public')->exists($hero->image)){
-            Storage::disk('public')->delete($hero->image);
+        if(Storage::disk('s3')->exists($hero->image)){
+            Storage::disk('s3')->delete($hero->image);
         } 
 
         try { 
