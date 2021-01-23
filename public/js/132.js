@@ -111,7 +111,7 @@ var render = function() {
               "vue-glide",
               {
                 attrs: {
-                  type: "carousel",
+                  type: "slider",
                   perView: 4,
                   hoverpause: true,
                   bound: true,

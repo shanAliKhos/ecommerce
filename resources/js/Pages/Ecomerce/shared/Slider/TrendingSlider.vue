@@ -2,7 +2,7 @@
 <div>
     <div v-if="TrendingSliderProducts.length>0">
         <vue-glide 
-           :type="'carousel'" 
+           :type="'slider'" 
             :perView="4" 
             :hoverpause="true" 
             :bound="true" 
