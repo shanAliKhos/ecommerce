@@ -23,6 +23,7 @@ class CartController extends Controller
  
     public function store(Request $request,Product $product)
     {    
+       
       
         $this->validate($request,[
             'quantity'=>'required|numeric|min:1',
@@ -41,6 +42,7 @@ class CartController extends Controller
                 return back()->with('error','product left' .$RequestProduct->quantity.' only');
             }            
         } 
+        // dd($RequestProduct->load('skus_options')->toArray());
         
         $request->current_price = $RequestProduct->current_price;  
             
@@ -53,6 +55,7 @@ class CartController extends Controller
             
             if($existsAtKey !== false && $SkuexistsAtKey !== false){ 
                 $UpdateCartItem[$SkuexistsAtKey?$SkuexistsAtKey:$existsAtKey]['quantity'] = $request->quantity; 
+                $UpdateCartItem[$SkuexistsAtKey?$SkuexistsAtKey:$existsAtKey]['Instock'] = $RequestProduct->quantity;
             }else{ 
 
                 $UpdateCartItem[] = $request->all();
@@ -79,7 +82,7 @@ class CartController extends Controller
     } 
   
     public function update(Request $request,$Type)
-    {  
+    {   
         if($Type == "update"){
 
             session()->put('CartItems', $request->all()); 

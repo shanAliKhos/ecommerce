@@ -96,6 +96,7 @@ export default {
         return color.concat(selected);
     },   
   },
+ remember:'SelectedSku',
   watch:{
     SelectedSku(val){
       this.$emit('sku:changed',val);

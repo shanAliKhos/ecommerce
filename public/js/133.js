@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
       return __webpack_require__.e(/*! import() */ 47).then(__webpack_require__.bind(null, /*! ./../shared/Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue"));
     },
     Pagination: function Pagination() {
-      return __webpack_require__.e(/*! import() */ 192).then(__webpack_require__.bind(null, /*! ./../shared/Partials/Pagination */ "./resources/js/Pages/Ecomerce/shared/Partials/Pagination.vue"));
+      return __webpack_require__.e(/*! import() */ 193).then(__webpack_require__.bind(null, /*! ./../shared/Partials/Pagination */ "./resources/js/Pages/Ecomerce/shared/Partials/Pagination.vue"));
     }
   },
   data: function data() {

@@ -4,6 +4,16 @@
       class="flex flex-col lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24"
     >
       <div class="lg:w-3/5">
+        <div class="flex flex-wrap items-center">
+          <a
+            href="javascript:;"
+            class="transition-all border-b border-transparent border-orange-500 text-sm text-gray-500 text-orange-500 font-hkregular"
+            >Cart</a
+
+
+          > 
+        </div>
+
         <div
           class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-500"
         >
@@ -65,20 +75,20 @@
             <div class="hidden sm:block">
               <div class="flex justify-between border-b border-grey-darker">
                 <div class="w-1/2 lg:w-3/5 xl:w-1/2 pl-8 sm:pl-12 pb-2">
-                  <p class="font-hkbold text-secondary text-sm uppercase">
+                  <p class="font-bold text-gray-500 text-sm uppercase">
                     Product Name
                   </p>
                 </div>
                 <div
                   class="w-1/4 sm:w-1/6 lg:w-1/5 xl:w-1/4 pb-2 text-right sm:mr-2 md:mr-18 lg:mr-12 xl:mr-18"
                 >
-                  <p class="font-hkbold text-secondary text-sm uppercase">
+                  <p class="font-bold text-gray-500 text-sm uppercase">
                     Quantity
                   </p>
                 </div>
 
                 <div class="w-1/4 lg:w-1/5 xl:w-1/4 pb-2 text-right md:pr-10">
-                  <p class="font-hkbold text-secondary text-sm uppercase">
+                  <p class="font-bold text-gray-500 text-sm uppercase">
                     Price
                   </p>
                 </div>
@@ -188,6 +198,26 @@
               </button>
             </div>
 
+
+            <div class="flex  item-center justify-center py-2">
+              <div class="w-full">
+                <p class="font-semibold text-sm text-blue-500">
+                  Any Cart Note Special instructions for us?  
+                </p>
+                <label
+                  for="cart_note"
+                  class="block relative h-0 w-0 overflow-hidden"
+                  >Cart Note</label
+                >
+                <textarea
+                  rows="5"
+                  placeholder="Enter your text"
+                  class="form-textarea w-full"
+                  id="cart_note"
+                ></textarea>
+              </div>
+            </div>
+
             <button
               @click="ProceedToCheckOut"
               type="button"
@@ -226,24 +256,6 @@
           </div>
         </div>
 
-        <div class="bg-grey-light py-8 px-8">
-          <div>
-            <p class="font-semibold text-sm pb-4">
-              Cart Note Special instructions for us
-            </p>
-            <label
-              for="cart_note"
-              class="block relative h-0 w-0 overflow-hidden"
-              >Cart Note</label
-            >
-            <textarea
-              rows="5"
-              placeholder="Enter your text"
-              class="form-textarea"
-              id="cart_note"
-            ></textarea>
-          </div>
-        </div>
       </div>
     </div>
   </div>

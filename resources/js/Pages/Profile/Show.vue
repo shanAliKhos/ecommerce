@@ -2,6 +2,9 @@
 <acounts-layout>
     <div class="lg:w-3/4 mt-12 lg:mt-0">
         <update-profile-information-form :user="$page.user" />
+        <jet-section-border />
+        
+        <update-address-information-form :user="$page.user" />
 
         <jet-section-border />
 
@@ -31,6 +34,7 @@
     import JetSectionBorder from '@/Jetstream/SectionBorder'
     import LogoutOtherBrowserSessionsForm from './LogoutOtherBrowserSessionsForm'
     import TwoFactorAuthenticationForm from './TwoFactorAuthenticationForm'
+    import UpdateAddressInformationForm from './UpdateAddressInformationForm'
     import UpdatePasswordForm from './UpdatePasswordForm'
     import UpdateProfileInformationForm from './UpdateProfileInformationForm'
 
@@ -45,6 +49,7 @@
             TwoFactorAuthenticationForm,
             UpdatePasswordForm,
             UpdateProfileInformationForm,
+            UpdateAddressInformationForm,
         },
     
         mounted() {

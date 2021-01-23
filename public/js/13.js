@@ -148,9 +148,18 @@ __webpack_require__.r(__webpack_exports__);
         NameOnCard: this.name_on_card
       };
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])(options).then(function (result) {
-        console.log(result);
-
         if (result.error) {
+          _this.$swal({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 7000,
+            timerProgressBar: true,
+            icon: 'error',
+            title: result.error.type
+          });
+
           return false;
         }
 

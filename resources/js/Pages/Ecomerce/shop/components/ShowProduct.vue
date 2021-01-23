@@ -218,9 +218,11 @@ export default {
         product_id:this.$page.Product ? this.$page.Product.id : null,
         product_image: this.$page.Product ? this.$page.Product.mainphoto_url : "",
         product_name:this.$page.Product.name,
-        product_name:this.$page.Product.name,
+        product_slug:this.$page.Product.slug,
+        Instock:0,
         current_price:0,
         quantity:0,
+        attribute_options_ids:null,
       },
   
       selectedSku: {},
@@ -228,7 +230,7 @@ export default {
       CanAddToCart: true,
     };
   },
- 
+ remember:'selectedSku',
   watch: {
     SelectedQuantity: function (newQty, oldQty) {
       const self = this;
@@ -241,7 +243,9 @@ export default {
       const self = this;
       if (newQty < 0) {
         self.form.quantity = oldQty;
+        return ;
       }
+      self.form.Instock = newQty;
     },
     ProductCurrentPrice(val){
       const self =  this ;
@@ -276,6 +280,7 @@ export default {
       const self = this;
       self.selectedSku = optSku.id?optSku:this.$page.Product;
       self.form.sku_id = optSku.id?optSku.id:null;
+      self.form.attribute_options_ids = optSku.attribute_options_ids?optSku.attribute_options_ids:null;
       self.CartButtonName ; 
       return true;
     },

@@ -261,6 +261,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -376,6 +388,8 @@ var render = function() {
         },
         [
           _c("div", { staticClass: "lg:w-3/5" }, [
+            _vm._m(0),
+            _vm._v(" "),
             _c(
               "div",
               {
@@ -496,7 +510,7 @@ var render = function() {
                 "div",
                 { staticClass: "pt-8" },
                 [
-                  _vm._m(0),
+                  _vm._m(1),
                   _vm._v(" "),
                   _vm._l(_vm.CartItems, function(item, index) {
                     return _c("cart-item", {
@@ -633,7 +647,7 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _vm._m(1),
+                    _vm._m(2),
                     _vm._v(" "),
                     _c("div", { staticClass: "pt-3 flex justify-between" }, [
                       _c("span", { staticClass: "font-semibold" }, [
@@ -652,7 +666,9 @@ var render = function() {
                   ? _vm.CartItems.length
                   : false)
                     ? _c("div", [
-                        _vm._m(2),
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _vm._m(4),
                         _vm._v(" "),
                         _c(
                           "button",
@@ -715,9 +731,7 @@ var render = function() {
                       ])
                     : _vm._e()
                 ]
-              ),
-              _vm._v(" "),
-              _vm._m(3)
+              )
             ]
           )
         ]
@@ -726,6 +740,22 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "transition-all border-b border-transparent border-orange-500 text-sm text-gray-500 text-orange-500 font-hkregular",
+          attrs: { href: "javascript:;" }
+        },
+        [_vm._v("Cart")]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -741,7 +771,7 @@ var staticRenderFns = [
             [
               _c(
                 "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
+                { staticClass: "font-bold text-gray-500 text-sm uppercase" },
                 [_vm._v("\n                  Product Name\n                ")]
               )
             ]
@@ -756,7 +786,7 @@ var staticRenderFns = [
             [
               _c(
                 "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
+                { staticClass: "font-bold text-gray-500 text-sm uppercase" },
                 [_vm._v("\n                  Quantity\n                ")]
               )
             ]
@@ -768,7 +798,7 @@ var staticRenderFns = [
             [
               _c(
                 "p",
-                { staticClass: "font-hkbold text-secondary text-sm uppercase" },
+                { staticClass: "font-bold text-gray-500 text-sm uppercase" },
                 [_vm._v("\n                  Price\n                ")]
               )
             ]
@@ -834,11 +864,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bg-grey-light py-8 px-8" }, [
-      _c("div", [
-        _c("p", { staticClass: "font-semibold text-sm pb-4" }, [
+    return _c("div", { staticClass: "flex  item-center justify-center py-2" }, [
+      _c("div", { staticClass: "w-full" }, [
+        _c("p", { staticClass: "font-semibold text-sm text-blue-500" }, [
           _vm._v(
-            "\n            Cart Note Special instructions for us\n          "
+            "\n                Any Cart Note Special instructions for us?  \n              "
           )
         ]),
         _vm._v(" "),
@@ -852,7 +882,7 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("textarea", {
-          staticClass: "form-textarea",
+          staticClass: "form-textarea w-full",
           attrs: { rows: "5", placeholder: "Enter your text", id: "cart_note" }
         })
       ])

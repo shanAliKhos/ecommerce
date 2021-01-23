@@ -60,5 +60,11 @@ class AccountController extends Controller
         return Inertia::render('Ecomerce/dashboard/Order',compact('OrderItems'));
     }
 
+    public function UpdateAddress(Request $request){
+        $request->user()->address = $request->address;
+        $request->user()->phone = $request->phone; 
+        $request->user()->save(); 
+        return back();
+    }
   
 }

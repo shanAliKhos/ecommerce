@@ -132,10 +132,19 @@ export default {
       var options = {
         NameOnCard: this.name_on_card,
       };
-      createToken(options).then((result) => {
-        console.log(result)
+      createToken(options).then((result) => { 
+
         if (result.error) {
-    
+            this.$swal({
+              toast: true,
+              position: 'top',
+              showConfirmButton: false,
+              showCloseButton: true,
+              timer: 7000,
+              timerProgressBar: true,
+              icon: 'error',
+              title: result.error.type,
+            })     
           return false;
         }
 

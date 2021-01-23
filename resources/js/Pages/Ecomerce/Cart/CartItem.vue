@@ -10,7 +10,10 @@
                         <div class="w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url(\'' + ProductImage + '\')'"> </div>
                     </div>
                 </div>
-                <span class="font-semibold text-lg   capitalize">{{CartItem.product_name}}</span>
+
+                <inertia-link :href="route('shop.show',CartItem.product_slug)" class="focus:outline-none">
+                    <span class="font-semibold text-lg   capitalize">{{CartItem.product_name}}</span>
+                </inertia-link>
             </div>
             <div class="w-full sm:w-1/5 xl:w-1/4 text-center border-b-0 border-grey-dark pb-0">
                 <div class="mx-auto mr-8 xl:mr-4">
@@ -42,7 +45,9 @@
                 <i class="bx bx-x  text-xl cursor-pointer absolute top-0 right-0 -mt-2 -mr-2 bg-white border border-grey-dark  rounded-full shadow" @click="RemoveCartItem"></i>
             </div>
             <div class="pl-4">
-                <span class="font-regular   text-base mt-2 font-bold">{{CartItem.product_name}}</span>
+                <inertia-link :href="route('shop.show',CartItem.product_slug)" class="focus:outline-none">
+                    <span class="font-regular   text-base mt-2 font-bold">{{CartItem.product_name}}</span>
+                </inertia-link>                
                 <span class="font-regular   block">{{Currency}} {{ CartItem.current_price * CartItem.quantity}} </span>
                 <div class="w-2/3 sm:w-5/6 flex mt-2"  >
                     <input v-model.number="CartItem.quantity" type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
@@ -98,7 +103,7 @@ export default {
             return this.CartItem.product_image;
         },
         InStock(){
-            return this.CartItem.Instock;
+            return this.CartItem.Instock - this.CartItem.quantity;
         },  
         Currency(){
           return this.$page.SiteOptions.Currency.Symbol;

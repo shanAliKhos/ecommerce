@@ -195,7 +195,7 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "flex flex-col mb-6" }, [
+                _c("div", { staticClass: "flex flex-col py-2" }, [
                   _c(
                     "label",
                     {
@@ -277,7 +277,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex flex-col mb-6" }, [
+                _c("div", { staticClass: "flex flex-col py-2" }, [
                   _c(
                     "label",
                     {
@@ -360,7 +360,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex items-center mb-6 -mt-4" }, [
+                _c("div", { staticClass: "flex items-center py-2" }, [
                   _c(
                     "div",
                     { staticClass: "flex ml-auto" },
@@ -382,7 +382,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex w-full" }, [
+                _c("div", { staticClass: "flex w-full py-2" }, [
                   _c(
                     "button",
                     {
@@ -451,7 +451,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "flex justify-center items-center mt-6" },
+            { staticClass: "flex justify-center items-center py-2" },
             [
               _c(
                 "inertia-link",
@@ -508,7 +508,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "relative mt-10 h-px bg-gray-300" }, [
+    return _c("div", { staticClass: "relative  h-px bg-gray-300" }, [
       _c(
         "div",
         {
@@ -518,7 +518,7 @@ var staticRenderFns = [
           _c(
             "span",
             { staticClass: "bg-white px-4 text-xs text-gray-500 uppercase" },
-            [_vm._v("Or Login With Email")]
+            [_vm._v("Login With Email")]
           )
         ]
       )

@@ -1,5 +1,5 @@
 <template> 
-    <div class="transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo transition duration-300 ease-in-out transform w-20 h-20" :class="IsAtTop"  ></div>
+    <img :src="$page.SiteOptions.Logo" class="transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat  transition duration-300 ease-in-out transform w-20 h-20" :class="IsAtTop"  /> 
 </template>
 <script>
 export default { 

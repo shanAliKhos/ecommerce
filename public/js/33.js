@@ -162,8 +162,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductHeader */ "./resources/js/Pages/Ecomerce/shop/components/ProductHeader.vue");
 /* harmony import */ var _ProductVariations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductVariations */ "./resources/js/Pages/Ecomerce/shop/components/ProductVariations.vue");
 /* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -376,20 +374,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     SectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
-    var _form;
-
     return {
-      form: (_form = {
+      form: {
         sku_id: null,
         product_id: this.$page.Product ? this.$page.Product.id : null,
         product_image: this.$page.Product ? this.$page.Product.mainphoto_url : "",
-        product_name: this.$page.Product.name
-      }, _defineProperty(_form, "product_name", this.$page.Product.name), _defineProperty(_form, "current_price", 0), _defineProperty(_form, "quantity", 0), _form),
+        product_name: this.$page.Product.name,
+        product_slug: this.$page.Product.slug,
+        Instock: 0,
+        current_price: 0,
+        quantity: 0,
+        attribute_options_ids: null
+      },
       selectedSku: {},
       sending: false,
       CanAddToCart: true
     };
   },
+  remember: 'selectedSku',
   watch: {
     SelectedQuantity: function SelectedQuantity(newQty, oldQty) {
       var self = this;
@@ -403,7 +405,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       if (newQty < 0) {
         self.form.quantity = oldQty;
+        return;
       }
+
+      self.form.Instock = newQty;
     },
     ProductCurrentPrice: function ProductCurrentPrice(val) {
       var self = this;
@@ -439,6 +444,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var self = this;
       self.selectedSku = optSku.id ? optSku : this.$page.Product;
       self.form.sku_id = optSku.id ? optSku.id : null;
+      self.form.attribute_options_ids = optSku.attribute_options_ids ? optSku.attribute_options_ids : null;
       self.CartButtonName;
       return true;
     }

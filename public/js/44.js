@@ -73,6 +73,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['CartItem', 'cartindex'],
   methods: {
@@ -109,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.CartItem.product_image;
     },
     InStock: function InStock() {
-      return this.CartItem.Instock;
+      return this.CartItem.Instock - this.CartItem.quantity;
     },
     Currency: function Currency() {
       return this.$page.SiteOptions.Currency.Symbol;
@@ -225,11 +230,23 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c(
-                  "span",
-                  { staticClass: "font-semibold text-lg   capitalize" },
-                  [_vm._v(_vm._s(_vm.CartItem.product_name))]
+                  "inertia-link",
+                  {
+                    staticClass: "focus:outline-none",
+                    attrs: {
+                      href: _vm.route("shop.show", _vm.CartItem.product_slug)
+                    }
+                  },
+                  [
+                    _c(
+                      "span",
+                      { staticClass: "font-semibold text-lg   capitalize" },
+                      [_vm._v(_vm._s(_vm.CartItem.product_name))]
+                    )
+                  ]
                 )
-              ]
+              ],
+              1
             ),
             _vm._v(" "),
             _c(
@@ -362,91 +379,111 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "pl-4" }, [
-              _c(
-                "span",
-                { staticClass: "font-regular   text-base mt-2 font-bold" },
-                [_vm._v(_vm._s(_vm.CartItem.product_name))]
-              ),
-              _vm._v(" "),
-              _c("span", { staticClass: "font-regular   block" }, [
-                _vm._v(
-                  _vm._s(_vm.Currency) +
-                    " " +
-                    _vm._s(_vm.CartItem.current_price * _vm.CartItem.quantity) +
-                    " "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "w-2/3 sm:w-5/6 flex mt-2" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model.number",
-                      value: _vm.CartItem.quantity,
-                      expression: "CartItem.quantity",
-                      modifiers: { number: true }
+            _c(
+              "div",
+              { staticClass: "pl-4" },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass: "focus:outline-none",
+                    attrs: {
+                      href: _vm.route("shop.show", _vm.CartItem.product_slug)
                     }
-                  ],
-                  staticClass:
-                    "form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center",
-                  attrs: {
-                    type: "number",
-                    id: "quantity-form-mobile",
-                    min: "1"
                   },
-                  domProps: { value: _vm.CartItem.quantity },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(
-                        _vm.CartItem,
-                        "quantity",
-                        _vm._n($event.target.value)
-                      )
-                    },
-                    blur: function($event) {
-                      return _vm.$forceUpdate()
-                    }
-                  }
-                }),
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "font-regular   text-base mt-2 font-bold"
+                      },
+                      [_vm._v(_vm._s(_vm.CartItem.product_name))]
+                    )
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex flex-row" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "px-2 bg-white flex-1 border  border-l-0 border-grey-darker cursor-pointer flex items-center justify-center",
-                      on: { click: _vm.minus }
-                    },
-                    [
-                      _c("i", {
-                        staticClass:
-                          "bx bxs-down-arrow text-xs text-primary pointer-events-none"
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "px-2 bg-white border border-l-0 border-grey-darker flex-1 rounded-r cursor-pointer flex items-center justify-center",
-                      on: { click: _vm.plus }
-                    },
-                    [
-                      _c("i", {
-                        staticClass:
-                          "bx bxs-up-arrow text-xs text-primary pointer-events-none"
-                      })
-                    ]
+                _c("span", { staticClass: "font-regular   block" }, [
+                  _vm._v(
+                    _vm._s(_vm.Currency) +
+                      " " +
+                      _vm._s(
+                        _vm.CartItem.current_price * _vm.CartItem.quantity
+                      ) +
+                      " "
                   )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "w-2/3 sm:w-5/6 flex mt-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model.number",
+                        value: _vm.CartItem.quantity,
+                        expression: "CartItem.quantity",
+                        modifiers: { number: true }
+                      }
+                    ],
+                    staticClass:
+                      "form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center",
+                    attrs: {
+                      type: "number",
+                      id: "quantity-form-mobile",
+                      min: "1"
+                    },
+                    domProps: { value: _vm.CartItem.quantity },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.CartItem,
+                          "quantity",
+                          _vm._n($event.target.value)
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex flex-row" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "px-2 bg-white flex-1 border  border-l-0 border-grey-darker cursor-pointer flex items-center justify-center",
+                        on: { click: _vm.minus }
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bxs-down-arrow text-xs text-primary pointer-events-none"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "px-2 bg-white border border-l-0 border-grey-darker flex-1 rounded-r cursor-pointer flex items-center justify-center",
+                        on: { click: _vm.plus }
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bx bxs-up-arrow text-xs text-primary pointer-events-none"
+                        })
+                      ]
+                    )
+                  ])
                 ])
-              ])
-            ])
+              ],
+              1
+            )
           ]
         )
       ])

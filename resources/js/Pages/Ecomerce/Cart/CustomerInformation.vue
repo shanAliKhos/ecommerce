@@ -5,30 +5,32 @@
     >
       <div class="lg:w-2/3 lg:pr-16 xl:pr-20">
         <div class="flex flex-wrap items-center">
-          <a
-            href="/cart/"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
-            >Cart</a
-          >
+          <inertia-link
+            :href="route('cart.index')"
+            class="transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular"
+          > 
+            Cart
+          </inertia-link>           
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
           <a
-            href="/cart/customer-info"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold"
+            href="javascript:;"
+            class="transition-all border-b border-transparent border-orange-500 text-sm text-orange-500 font-bold"
             >Customer information</a
           >
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
           <a
-            href="/cart/shipping-method"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
+            href="javascript:;"
+            class="transition-all border-b border-transparent  text-sm text-gray-300  font-regular cursor-not-allowed"
             >Shipping method</a
-          >
+          >          
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
           <a
-            href="/cart/payment-method"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
+            href="javascript:;"
+            class="transition-all border-b border-transparent  text-sm text-gray-300  font-regular cursor-not-allowed	"
             >Payment method</a
           >
-          <i class="bx bx-chevron-right text-sm text-transparent px-2"></i>
+          <i class="bx bx-chevron-right text-sm text-transparent px-2"></i>          
+         
         </div>
 
         <form @submit.prevent="store">
@@ -213,7 +215,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center pt-4">
+              <!-- <div class="flex items-center pt-4">
                 <label
                   for="offers"
                   class="block relative h-0 w-0 overflow-hidden"
@@ -225,10 +227,10 @@
                   class="form-checkbox"
                   id="offers"
                 />
-                <p class="font-hkregular text-sm pl-3 text-secondary">
+                <p class="font-regular text-sm pl-3 text-secondary">
                   Keep me up to date on news and exclusive offers
                 </p>
-              </div>
+              </div> -->
             </div>
 
             <div
@@ -237,10 +239,10 @@
               <inertia-link
                 preserve-scroll
                 :href="route('cart.index')"
-                class="flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all"
+                class="flex items-center mb-3 sm:mb-0 font-regular group-hover:font-bold text-sm text-secondary hover:text-orange-500 group transition-all"
               >
                 <i
-                  class="bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
+                  class="bx bx-chevron-left text-secondary group-hover:text-orange-500 pr-2 text-xl transition-colors"
                 ></i>
                 Return to Cart
               </inertia-link>
@@ -363,28 +365,13 @@ export default {
     return {
       form: {
         email: this.$page.user ? this.$page.user.email : null,
-        full_name: this.$page.user ? this.$page.user.name : null,
-        get_updates: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.get_updates
-          : null,
-        address: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.address
-          : null,
-        city: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.city
-          : null,
-        country: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.country
-          : null,
-        postal_code: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.postal_code
-          : null,
-        mobile: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.mobile
-          : null,
-        saveinformation: this.$page.CustomerInformation
-          ? this.$page.CustomerInformation.saveinformation
-          : null,
+        full_name: this.$page.user ? this.$page.user.name : null, 
+        address: this.$page.user ? this.$page.user.address: null,
+        city: this.$page.user? this.$page.user.city: null,
+        country: this.$page.user? this.$page.user.country: null,
+        postal_code: this.$page.user?this.$page.user.postal_code: null,
+        mobile: this.$page.user?this.$page.user.phone: null,
+        
       },
       sending: false,
     };
@@ -394,14 +381,12 @@ export default {
       const self = this;
       let formData = new FormData();
       formData.append("email", self.form.email || "");
-      formData.append("full_name", self.form.full_name || "");
-      formData.append("get_updates", self.form.get_updates || "");
+      formData.append("full_name", self.form.full_name || ""); 
       formData.append("address", self.form.address || "");
       formData.append("city", self.form.city || "");
       formData.append("country", self.form.country || "");
       formData.append("postal_code", self.form.postal_code || "");
-      formData.append("mobile", self.form.mobile || "");
-      formData.append("saveinformation", self.form.saveinformation || "");
+      formData.append("phone", self.form.mobile || ""); 
 
       self.$inertia.post(this.route("cart.CustomerInfomationStore"), formData, {
         preserveState: true,

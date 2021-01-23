@@ -38,10 +38,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {
+  return _c("img", {
     staticClass:
-      "transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat bg-application-logo transition duration-300 ease-in-out transform w-20 h-20",
-    class: _vm.IsAtTop
+      "transition duration-700 ease-in-out transform  bg-contain bg-center bg-no-repeat  transition duration-300 ease-in-out transform w-20 h-20",
+    class: _vm.IsAtTop,
+    attrs: { src: _vm.$page.SiteOptions.Logo }
   })
 }
 var staticRenderFns = []

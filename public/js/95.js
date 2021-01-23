@@ -238,6 +238,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -432,7 +435,69 @@ var render = function() {
         },
         [
           _c("div", { staticClass: "lg:w-2/3 lg:pr-16 xl:pr-20" }, [
-            _vm._m(0),
+            _c(
+              "div",
+              { staticClass: "flex flex-wrap items-center" },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular",
+                    attrs: { href: _vm.route("cart.index") }
+                  },
+                  [_vm._v(" \n          Cart\n        ")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular",
+                    attrs: { href: _vm.route("cart.CustomerInfomation") }
+                  },
+                  [_vm._v(" \n          Customer information\n        ")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent border-orange-500 text-sm text-orange-500 font-bold",
+                    attrs: { href: "javascript:;" }
+                  },
+                  [_vm._v("Shipping method")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent  text-sm text-gray-300  font-regular cursor-not-allowed\t",
+                    attrs: { href: "javascript:;" }
+                  },
+                  [_vm._v("Payment method")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass:
+                    "bx bx-chevron-right text-sm text-transparent px-2"
+                })
+              ],
+              1
+            ),
             _vm._v(" "),
             _c(
               "div",
@@ -448,7 +513,7 @@ var render = function() {
                       "flex justify-between py-2 border-b border-grey-dark"
                   },
                   [
-                    _vm._m(1),
+                    _vm._m(0),
                     _vm._v(" "),
                     _c("div", { staticClass: "w-3/5" }, [
                       _c(
@@ -490,7 +555,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "flex justify-between py-2" }, [
-                  _vm._m(2),
+                  _vm._m(1),
                   _vm._v(" "),
                   _c("div", { staticClass: "w-3/5" }, [
                     _c("p", { staticClass: "font-hkregular text-secondary" }, [
@@ -805,68 +870,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/" }
-        },
-        [_vm._v("Cart")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold",
-          attrs: { href: "/cart/customer-info" }
-        },
-        [_vm._v("Customer information")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/shipping-method" }
-        },
-        [_vm._v("Shipping method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/payment-method" }
-        },
-        [_vm._v("Payment method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-transparent px-2"
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

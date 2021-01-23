@@ -105,6 +105,7 @@ __webpack_require__.r(__webpack_exports__);
       return color.concat(selected);
     }
   },
+  remember: 'SelectedSku',
   watch: {
     SelectedSku: function SelectedSku(val) {
       this.$emit('sku:changed', val);

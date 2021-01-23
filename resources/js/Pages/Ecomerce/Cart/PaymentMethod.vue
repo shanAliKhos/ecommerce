@@ -5,30 +5,35 @@
     >
       <div class="lg:w-2/3 lg:pr-16 xl:pr-20">
         <div class="flex flex-wrap items-center">
-          <a
-            href="/cart/"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
-            >Cart</a
-          >
+          <inertia-link
+            :href="route('cart.index')"
+            class="transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular"
+          > 
+            Cart
+          </inertia-link>           
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
-          <a
-            href="/cart/customer-info"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold"
-            >Customer information</a
-          >
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
-          <a
-            href="/cart/shipping-method"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
-            >Shipping method</a
-          >
+          <inertia-link
+            :href="route('cart.CustomerInfomation')"
+            class="transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular"
+          > 
+            Customer information
+          </inertia-link>             
           <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
+          <inertia-link
+            :href="route('cart.ShippingMethod')"
+            class="transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular"
+          > 
+          Shipping method
+          </inertia-link>                       
+          <i class="bx bx-chevron-right text-sm text-secondary px-2"></i>
+ 
           <a
-            href="/cart/payment-method"
-            class="transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular"
+            href="javascript:;"
+            class="transition-all border-b border-transparent border-orange-500 text-sm text-orange-500 font-bold"
             >Payment method</a
-          >
-          <i class="bx bx-chevron-right text-sm text-transparent px-2"></i>
+          >             
+          <i class="bx bx-chevron-right text-sm text-transparent px-2"></i>       
         </div>
 
         <div

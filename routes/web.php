@@ -35,6 +35,8 @@ use Illuminate\Support\Facades\Password;
             Route::get('/','Ecommerce\AccountController@index')->name('dashboard.index');
             Route::get('/orders','Ecommerce\AccountController@Orders')->name('dashboard.order');
             Route::get('/wishList',function(){return Inertia\Inertia::render('Ecomerce/dashboard/WishList');})->name('dashboard.wishlist');
+            Route::put('/address-update','Ecommerce\AccountController@UpdateAddress')->name('dashboard.user-address-information.update');
+
 
         });
         
@@ -65,6 +67,8 @@ use Illuminate\Support\Facades\Password;
         Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
         Route::post('/conversation/send', 'ContactsController@send');
         //////////////////////////////////////// MESSENGER ////////////////////////////////////////        
+        
+
         
     });
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////

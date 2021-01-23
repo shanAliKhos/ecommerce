@@ -183,5 +183,7 @@ export default {
     mounted() {
         this.$root.$on('sending-finished',()=>this.sending=false );
     },
+
+    
 }
 </script>

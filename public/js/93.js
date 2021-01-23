@@ -358,6 +358,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -376,13 +378,11 @@ __webpack_require__.r(__webpack_exports__);
       form: {
         email: this.$page.user ? this.$page.user.email : null,
         full_name: this.$page.user ? this.$page.user.name : null,
-        get_updates: this.$page.CustomerInformation ? this.$page.CustomerInformation.get_updates : null,
-        address: this.$page.CustomerInformation ? this.$page.CustomerInformation.address : null,
-        city: this.$page.CustomerInformation ? this.$page.CustomerInformation.city : null,
-        country: this.$page.CustomerInformation ? this.$page.CustomerInformation.country : null,
-        postal_code: this.$page.CustomerInformation ? this.$page.CustomerInformation.postal_code : null,
-        mobile: this.$page.CustomerInformation ? this.$page.CustomerInformation.mobile : null,
-        saveinformation: this.$page.CustomerInformation ? this.$page.CustomerInformation.saveinformation : null
+        address: this.$page.user ? this.$page.user.address : null,
+        city: this.$page.user ? this.$page.user.city : null,
+        country: this.$page.user ? this.$page.user.country : null,
+        postal_code: this.$page.user ? this.$page.user.postal_code : null,
+        mobile: this.$page.user ? this.$page.user.phone : null
       },
       sending: false
     };
@@ -395,13 +395,11 @@ __webpack_require__.r(__webpack_exports__);
       var formData = new FormData();
       formData.append("email", self.form.email || "");
       formData.append("full_name", self.form.full_name || "");
-      formData.append("get_updates", self.form.get_updates || "");
       formData.append("address", self.form.address || "");
       formData.append("city", self.form.city || "");
       formData.append("country", self.form.country || "");
       formData.append("postal_code", self.form.postal_code || "");
-      formData.append("mobile", self.form.mobile || "");
-      formData.append("saveinformation", self.form.saveinformation || "");
+      formData.append("phone", self.form.mobile || "");
       self.$inertia.post(this.route("cart.CustomerInfomationStore"), formData, {
         preserveState: true,
         onStart: function onStart() {
@@ -565,7 +563,69 @@ var render = function() {
         },
         [
           _c("div", { staticClass: "lg:w-2/3 lg:pr-16 xl:pr-20" }, [
-            _vm._m(0),
+            _c(
+              "div",
+              { staticClass: "flex flex-wrap items-center" },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent hover:border-orange-500 text-sm text-gray-500 hover:text-orange-500 font-regular",
+                    attrs: { href: _vm.route("cart.index") }
+                  },
+                  [_vm._v(" \n          Cart\n        ")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent border-orange-500 text-sm text-orange-500 font-bold",
+                    attrs: { href: "javascript:;" }
+                  },
+                  [_vm._v("Customer information")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent  text-sm text-gray-300  font-regular cursor-not-allowed",
+                    attrs: { href: "javascript:;" }
+                  },
+                  [_vm._v("Shipping method")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "transition-all border-b border-transparent  text-sm text-gray-300  font-regular cursor-not-allowed\t",
+                    attrs: { href: "javascript:;" }
+                  },
+                  [_vm._v("Payment method")]
+                ),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass:
+                    "bx bx-chevron-right text-sm text-transparent px-2"
+                })
+              ],
+              1
+            ),
             _vm._v(" "),
             _c(
               "form",
@@ -579,7 +639,7 @@ var render = function() {
               },
               [
                 _c("div", { staticClass: "pt-10 md:pt-12" }, [
-                  _vm._m(1),
+                  _vm._m(0),
                   _vm._v(" "),
                   _c("div", { staticClass: "pt-4 md:pt-5" }, [
                     _c("div", { staticClass: "flex flex-wrap -mx-3 mb-6" }, [
@@ -1016,76 +1076,6 @@ var render = function() {
                             : _vm._e()
                         ]
                       )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "flex items-center pt-4" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "block relative h-0 w-0 overflow-hidden",
-                          attrs: { for: "offers" }
-                        },
-                        [_vm._v("Sign up to exclusive offers")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.get_updates,
-                            expression: "form.get_updates"
-                          }
-                        ],
-                        staticClass: "form-checkbox",
-                        attrs: { type: "checkbox", id: "offers" },
-                        domProps: {
-                          checked: Array.isArray(_vm.form.get_updates)
-                            ? _vm._i(_vm.form.get_updates, null) > -1
-                            : _vm.form.get_updates
-                        },
-                        on: {
-                          change: function($event) {
-                            var $$a = _vm.form.get_updates,
-                              $$el = $event.target,
-                              $$c = $$el.checked ? true : false
-                            if (Array.isArray($$a)) {
-                              var $$v = null,
-                                $$i = _vm._i($$a, $$v)
-                              if ($$el.checked) {
-                                $$i < 0 &&
-                                  _vm.$set(
-                                    _vm.form,
-                                    "get_updates",
-                                    $$a.concat([$$v])
-                                  )
-                              } else {
-                                $$i > -1 &&
-                                  _vm.$set(
-                                    _vm.form,
-                                    "get_updates",
-                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                                  )
-                              }
-                            } else {
-                              _vm.$set(_vm.form, "get_updates", $$c)
-                            }
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          staticClass:
-                            "font-hkregular text-sm pl-3 text-secondary"
-                        },
-                        [
-                          _vm._v(
-                            "\n                Keep me up to date on news and exclusive offers\n              "
-                          )
-                        ]
-                      )
                     ])
                   ]),
                   _vm._v(" "),
@@ -1100,7 +1090,7 @@ var render = function() {
                         "inertia-link",
                         {
                           staticClass:
-                            "flex items-center mb-3 sm:mb-0 font-hkregular group-hover:font-hkbold text-sm text-secondary hover:text-primary group transition-all",
+                            "flex items-center mb-3 sm:mb-0 font-regular group-hover:font-bold text-sm text-secondary hover:text-orange-500 group transition-all",
                           attrs: {
                             "preserve-scroll": "",
                             href: _vm.route("cart.index")
@@ -1109,7 +1099,7 @@ var render = function() {
                         [
                           _c("i", {
                             staticClass:
-                              "bx bx-chevron-left text-secondary group-hover:text-primary pr-2 text-xl transition-colors"
+                              "bx bx-chevron-left text-secondary group-hover:text-orange-500 pr-2 text-xl transition-colors"
                           }),
                           _vm._v("\n              Return to Cart\n            ")
                         ]
@@ -1292,68 +1282,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex flex-wrap items-center" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/" }
-        },
-        [_vm._v("Cart")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkbold",
-          attrs: { href: "/cart/customer-info" }
-        },
-        [_vm._v("Customer information")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/shipping-method" }
-        },
-        [_vm._v("Shipping method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-secondary px-2"
-      }),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "transition-all border-b border-transparent hover:border-primary text-sm text-secondary hover:text-primary font-hkregular",
-          attrs: { href: "/cart/payment-method" }
-        },
-        [_vm._v("Payment method")]
-      ),
-      _vm._v(" "),
-      _c("i", {
-        staticClass: "bx bx-chevron-right text-sm text-transparent px-2"
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

@@ -7,14 +7,14 @@
       <span class="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500"><i class="fab fa-facebook-f"></i></span>
       <span>Login with Facebook</span>
     </button> -->
-    <div class="relative mt-10 h-px bg-gray-300">
+    <div class="relative  h-px bg-gray-300">
       <div class="absolute left-0 top-0 flex justify-center w-full -mt-2">
-        <span class="bg-white px-4 text-xs text-gray-500 uppercase">Or Login With Email</span>
+        <span class="bg-white px-4 text-xs text-gray-500 uppercase">Login With Email</span>
       </div>
     </div>
     <div class="mt-10">
       <form @submit.prevent="submit">
-        <div class="flex flex-col mb-6">
+        <div class="flex flex-col py-2">
           <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
           <div class="relative">
             <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
@@ -26,7 +26,7 @@
               <p class=" text-red-500 text-xs italic" v-if="$page.errors.email">{{$page.errors.email}}</p>
           </div>
         </div>
-        <div class="flex flex-col mb-6">
+        <div class="flex flex-col py-2">
           <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Password:</label>
           <div class="relative">
             <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
@@ -42,13 +42,13 @@
           </div>
         </div>
 
-        <div class="flex items-center mb-6 -mt-4">
+        <div class="flex items-center py-2">
           <div class="flex ml-auto">
             <inertia-link preserve-scroll :href="route('password.request')" class="inline-flex text-xs sm:text-sm text-blue-500 hover:text-blue-700">Forgot Your Password?</inertia-link>
           </div>
         </div>
 
-        <div class="flex w-full">
+        <div class="flex w-full py-2">
           <button type="submit" :disabled="sending" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-orange-400 hover:bg-red-600 rounded py-2 w-full transition duration-150 ease-in ">
             <span class="mr-2 uppercase">Login</span>
             <span class="relative">
@@ -63,7 +63,7 @@
         </div>
       </form>
     </div>
-    <div class="flex justify-center items-center mt-6">
+    <div class="flex justify-center items-center py-2">
    
       <inertia-link preserve-scroll  :href="route('register')" target="_blank" class="flex w-full items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-600 rounded py-2 w-full transition duration-150 ease-in ">
         <span>

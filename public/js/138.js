@@ -79,28 +79,28 @@ __webpack_require__.r(__webpack_exports__);
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
     HeroSlider: function HeroSlider() {
-      return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(196)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/HeroSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(197)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/HeroSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/HeroSlider.vue"));
     },
     WelcomeIcons: function WelcomeIcons() {
-      return __webpack_require__.e(/*! import() */ 200).then(__webpack_require__.bind(null, /*! ./../shared/Partials/components/WelcomeIcons */ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue"));
+      return __webpack_require__.e(/*! import() */ 201).then(__webpack_require__.bind(null, /*! ./../shared/Partials/components/WelcomeIcons */ "./resources/js/Pages/Ecomerce/shared/Partials/components/WelcomeIcons.vue"));
     },
     SaleSlider: function SaleSlider() {
-      return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(197)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/SaleSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(198)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/SaleSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/SaleSlider.vue"));
     },
     TrendingCollection: function TrendingCollection() {
       return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./components/TrendingCollection */ "./resources/js/Pages/Ecomerce/welcome/components/TrendingCollection.vue"));
     },
     TrendingSlider: function TrendingSlider() {
-      return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(198)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/TrendingSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(199)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/TrendingSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingSlider.vue"));
     },
     TrendingMultiSlider: function TrendingMultiSlider() {
-      return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(53)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/TrendingMultiSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(53)]).then(__webpack_require__.bind(null, /*! ./../shared/Slider/TrendingMultiSlider */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue"));
     },
     WelcomeBrands: function WelcomeBrands() {
-      return __webpack_require__.e(/*! import() */ 202).then(__webpack_require__.bind(null, /*! ./components/WelcomeBrands */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue"));
+      return __webpack_require__.e(/*! import() */ 203).then(__webpack_require__.bind(null, /*! ./components/WelcomeBrands */ "./resources/js/Pages/Ecomerce/welcome/components/WelcomeBrands.vue"));
     },
     SaleBanner: function SaleBanner() {
-      return __webpack_require__.e(/*! import() */ 201).then(__webpack_require__.bind(null, /*! ./components/SaleBanner */ "./resources/js/Pages/Ecomerce/welcome/components/SaleBanner.vue"));
+      return __webpack_require__.e(/*! import() */ 202).then(__webpack_require__.bind(null, /*! ./components/SaleBanner */ "./resources/js/Pages/Ecomerce/welcome/components/SaleBanner.vue"));
     }
   },
   mounted: function mounted() {

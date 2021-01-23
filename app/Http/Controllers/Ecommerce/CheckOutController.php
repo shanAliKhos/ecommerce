@@ -31,8 +31,8 @@ class CheckOutController extends Controller
     }
 
     public function CustomerInformStore(Request $request)
-    {   
-      
+    {    
+       
         $CartItems = session()->get('CartItems'); 
 
         if(!$CartItems){
@@ -45,7 +45,7 @@ class CheckOutController extends Controller
             "city" => "required",
             "country" => "required",
             "postal_code" => "required",
-            "mobile" => "required", 
+            "phone" => "required", 
         ]);  
   
         session()->put('CustomerInformation', $request->all()); 
@@ -176,7 +176,7 @@ class CheckOutController extends Controller
                 'Country' => $request->CustomerInformation['country'],
                 'PostalCode' => $request->CustomerInformation['postal_code'],
                 'CardHolderName'=>$request->NameOnCard,
-                'PhoneNumber' => $request->CustomerInformation['mobile'],
+                'PhoneNumber' => $request->CustomerInformation['phone'],
                 'Notes' => null,
                 'PaymentMethod' => "stripe",
                 'PaymentStatus' => 1,                

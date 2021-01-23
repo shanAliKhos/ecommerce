@@ -22,6 +22,28 @@ class SettingController extends Controller
     public function index()
     {  
         $settings = config('settings');  
+        
+        try { 
+            if (Storage::disk('s3')->exists($settings['site_logo'])) { 
+                $settings['site_logo'] = Storage::disk('s3')->url($settings['site_logo']);
+            }else{
+                $settings['site_logo'] = 'https://ui-avatars.com/api/?name='.urlencode($settings['site_title']).'&color=7F9CF5&background=EBF4FF'; 
+            }
+        } catch (\Throwable $th) {
+            $settings['site_logo'] = 'https://ui-avatars.com/api/?name='.urlencode($settings['site_title']).'&color=7F9CF5&background=EBF4FF';
+        }   
+
+        try { 
+            if (Storage::disk('s3')->exists($settings['site_favicon'])) { 
+                $settings['site_favicon'] = Storage::disk('s3')->url($settings['site_favicon']);
+            }else{
+                $settings['site_favicon'] = 'https://ui-avatars.com/api/?name='.urlencode($settings['site_title']).'&color=7F9CF5&background=EBF4FF'; 
+            }
+        } catch (\Throwable $th) {
+            $settings['site_favicon'] = 'https://ui-avatars.com/api/?name='.urlencode($settings['site_title']).'&color=7F9CF5&background=EBF4FF';
+        }   
+
+         
         return Inertia::render('Admin/settings/Index',compact('settings')); 
     }
  
@@ -44,13 +66,11 @@ class SettingController extends Controller
             Setting::set('site_logo', null);             
         }               
         
-        if($request->hasFile('site_favicon')){             
-            $OldSiteFavicon =  config('settings.site_favicon');      
-            $NewPath = $request->file('site_favicon')->store('setting','s3');  
-            if(Storage::disk('s3')->exists($OldSiteFavicon)){
-                Storage::disk('s3')->delete($OldSiteFavicon);
+        if($request->hasFile('site_favicon')){               
+            if(Storage::disk('s3')->exists(config('settings.site_favicon'))){
+                Storage::disk('s3')->delete(config('settings.site_favicon'));
             }  
-            Setting::set('site_favicon', $NewPath);             
+            Setting::set('site_favicon', $request->file('site_favicon')->store('setting','s3'));             
         } 
 
         if(empty($request->site_favicon) && config('settings.site_favicon')){
