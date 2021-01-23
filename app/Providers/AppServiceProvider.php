@@ -42,12 +42,37 @@ class AppServiceProvider extends ServiceProvider
             $dbSetting = true;
             $Settings = Arr::pluck(Setting::all(), 'value','key'); 
         } 
+
+        $Logo = null;
+        $Favicon = null;
+
+        try { 
+            if (Storage::disk('s3')->exists($Settings['site_logo'])) { 
+                $Logo =  Storage::disk('s3')->url($Settings['site_logo']);
+            }else{
+                $Logo =  'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF';
+
+            }
+        } catch (\Throwable $th) {
+            $Logo =  'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF';
+        }            
+
+        try { 
+            if (Storage::disk('s3')->exists($Settings['site_favicon'])) { 
+                $Favicon =  Storage::disk('s3')->url($Settings['site_favicon']);
+            }else{
+                $Favicon =  'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF';
+
+            }
+        } catch (\Throwable $th) {
+            $Favicon =  'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF';
+        }                    
         
         Inertia::share([  
             "SiteOptions" =>  [
                 "Title" => isset($Settings['site_title'])?$Settings['site_title']:'',
-                // "Logo" => isset($Settings['site_logo'])?Storage::disk('s3')->url($Settings['site_logo']):'https://ui-avatars.com/api/?name=logo&color=7F9CF5&background=EBF4FF',
-                // "Favicon" => isset($Settings['site_favicon'])?Storage::disk('s3')->url($Settings['site_favicon']):'https://ui-avatars.com/api/?name=FI&color=7F9CF5&background=EBF4FF',
+                "Logo" =>  $Logo,
+                "Favicon" => $Favicon,
                 "Email" => isset($Settings['default_email_address'])?$Settings['default_email_address']:'',
                 "Phone" => isset($Settings['phone'])?$Settings['phone']:'',
                 "Currency" => [  
