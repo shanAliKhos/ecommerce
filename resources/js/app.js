@@ -13,9 +13,7 @@ import 'boxicons'
  
 // Vue.config.productionTip = false 
 
-Vue.mixin({ methods: { route: window.route } })
-
-// Vue.prototype.$route = (...args) => route(...args).url()
+Vue.mixin({ methods: { route: window.route } }) 
  
 Vue.use(InertiaApp)
 
