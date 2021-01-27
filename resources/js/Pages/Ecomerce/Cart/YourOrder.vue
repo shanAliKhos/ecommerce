@@ -1,13 +1,13 @@
 <template>
-  <div class="sm:w-2/3 md:w-1/2 lg:w-1/3 bg-grey-light mt-8 lg:mt-0">
-    <div class="p-8">
+  <div class="sm:w-2/3 md:w-1/2 lg:w-1/3 bg-gray-100">
+    <div class="px-5 py-5">
       <h4
-        class="font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
+        class="font-bold text-gray-600 text-2xl pb-3 text-center sm:text-left"
       >
         Your Order
       </h4>
-      <p class="font-hkbold text-secondary uppercase text-center sm:text-left">
-        PRODUCTS ({{ CountCartItems }})
+      <p class="font-bold text-gray-600 uppercase text-center sm:text-left">
+        #Products ({{ CountCartItems }})
       </p>
 
       <div class="mt-5 mb-8">
@@ -23,31 +23,36 @@
                 :style="'background-image:url(\'' + CartItem.product_image + '\')'"
               ></div>
               <span
-                class="font-hkregular text-white text-xs px-2 leading-none absolute top-0 right-0 bg-primary flex items-center justify-center rounded-full -mt-2 -mr-2 h-6 w-6"
+                class="font-regular text-white text-xs px-2 leading-none absolute top-0 right-0 bg-primary flex items-center justify-center rounded-full -mt-2 -mr-2 h-6 w-6"
                 >2</span
               >
             </div>
           </div>
           <p
-            class="font-hkregular text-secondary text-md"
+            class="font-regular text-gray-600 text-md"
             :title="CartItem.name"
           >
             {{ CartItem.product_name.substring(0, 12) + ".." }} ${{ CartItem.current_price }}
           </p>
+            <p class="font-regular text-xs text-gray-400" v-if="CartItem.sku_name">SKU : {{CartItem.sku_name}}</p>
+            <p class="font-regular text-xs text-gray-400" v-if="CartItem.variation_options">
+                <span>variation : </span> 
+                <span v-for="(variation_option,variation_option_index) in CartItem.variation_options" :key="(variation_option_index+1)" >{{variation_option_index}} -  {{variation_option}}, </span>
+            </p>          
         </div>
       </div>
-      <p class="font-hkbold text-secondary pt-1 pb-2">Cart Totals</p>
+      <p class="font-bold text-gray-600 pt-1 pb-2">Cart Totals</p>
       <div class="border-b border-grey-darker pb-1 flex justify-between">
-        <span class="font-hkregular text-secondary">Subtotal</span>
-        <span class="font-hkregular text-secondary">${{ CartTotalPrice }}</span>
+        <span class="font-regular text-gray-600">Subtotal</span>
+        <span class="font-regular text-gray-600">${{ CartTotalPrice }}</span>
       </div>
       <div class="border-b border-grey-darker pt-2 pb-1 flex justify-between">
-        <span class="font-hkregular text-secondary">Coupon apply</span>
-        <span class="font-hkregular text-secondary">-$0</span>
+        <span class="font-regular text-gray-600">Coupon apply</span>
+        <span class="font-regular text-gray-600">-$0</span>
       </div>
       <div class="pt-3 flex justify-between">
-        <span class="font-hkbold text-secondary">Total</span>
-        <span class="font-hkbold text-secondary">${{ CartTotalPrice }}</span>
+        <span class="font-bold text-gray-600">Total</span>
+        <span class="font-bold text-gray-600">${{ CartTotalPrice }}</span>
       </div>
     </div>
   </div>

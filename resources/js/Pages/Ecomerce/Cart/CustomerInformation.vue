@@ -1,7 +1,7 @@
 <template>
-  <div class="container border-t border-grey-400 mb-20  px-5 py-5  ">
+  <div class="container border-t border-grey-400 mb-20  px-5 py-5">
     <div
-      class="flex flex-col lg:flex-row justify-between items-center pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24"
+      class="flex flex-col lg:flex-row justify-between pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24"
     >
       <div class="lg:w-2/3 lg:pr-16 xl:pr-20">
         <div class="flex flex-wrap items-center">
@@ -69,7 +69,7 @@
                     Mobile
                   </label>
                   <input
-                    v-model.number="form.mobile"
+                    v-model.number="form.phone"
                     placeholder="Mobile Number"
                     class="form-input w-full "
                     id="grid-last-name"
@@ -77,9 +77,9 @@
                   />
                   <p
                     class="text-red-500 text-xs italic"
-                    v-if="$page.errors.mobile"
+                    v-if="$page.errors.phone"
                   >
-                    {{ $page.errors.mobile }}
+                    {{ $page.errors.phone }}
                   </p>
                 </div>
               </div>
@@ -200,7 +200,7 @@
                     >Zip/Postal Code</label
                   >
                   <input
-                    v-model.number="form.postal_code"
+                    v-model.number="form.zipcode"
                     class="form-input  w-full"
                     id="grid-zip"
                     type="text"
@@ -208,9 +208,9 @@
                   />
                   <p
                     class="text-red-500 text-xs italic"
-                    v-if="$page.errors.postal_code"
+                    v-if="$page.errors.zipcode"
                   >
-                    {{ $page.errors.postal_code }}
+                    {{ $page.errors.zipcode }}
                   </p>
                 </div>
               </div>
@@ -369,8 +369,8 @@ export default {
         address: this.$page.user ? this.$page.user.address: null,
         city: this.$page.user? this.$page.user.city: null,
         country: this.$page.user? this.$page.user.country: null,
-        postal_code: this.$page.user?this.$page.user.postal_code: null,
-        mobile: this.$page.user?this.$page.user.phone: null,
+        zipcode: this.$page.user?this.$page.user.zipcode: null,
+        phone: this.$page.user?this.$page.user.phone: null,
         
       },
       sending: false,
@@ -385,8 +385,8 @@ export default {
       formData.append("address", self.form.address || "");
       formData.append("city", self.form.city || "");
       formData.append("country", self.form.country || "");
-      formData.append("postal_code", self.form.postal_code || "");
-      formData.append("phone", self.form.mobile || ""); 
+      formData.append("zipcode", self.form.zipcode || "");
+      formData.append("phone", self.form.phone || ""); 
 
       self.$inertia.post(this.route("cart.CustomerInfomationStore"), formData, {
         preserveState: true,

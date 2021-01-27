@@ -3,7 +3,7 @@
         <card
             class="stripe-card form-input "
             :class="{ complete }"
-            :stripe="$page.stripekey"
+            :stripe="Key"
             :options="stripeOptions"
             @change="change($event)" 
         />
@@ -47,6 +47,11 @@ export default {
         change(event) {
             this.errorMessage = event.error ? event.error.message : "";
         }
-    }
+    },
+    computed:{
+        Key(){
+            return this.$page.stripekey;
+        }
+    },
 };
 </script>

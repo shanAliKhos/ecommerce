@@ -108,7 +108,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     handleScroll: function handleScroll() {
-      // alert(window.pageYOffset);
       if (window.pageYOffset > 600) {
         if (this.atTopOfPage) this.atTopOfPage = false;
       } else {

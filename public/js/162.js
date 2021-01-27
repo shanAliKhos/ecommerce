@@ -60,6 +60,11 @@ __webpack_require__.r(__webpack_exports__);
     change: function change(event) {
       this.errorMessage = event.error ? event.error.message : "";
     }
+  },
+  computed: {
+    Key: function Key() {
+      return this.$page.stripekey;
+    }
   }
 });
 
@@ -86,7 +91,7 @@ var render = function() {
       _c("card", {
         staticClass: "stripe-card form-input ",
         class: { complete: _vm.complete },
-        attrs: { stripe: _vm.$page.stripekey, options: _vm.stripeOptions },
+        attrs: { stripe: _vm.Key, options: _vm.stripeOptions },
         on: {
           change: function($event) {
             return _vm.change($event)

@@ -13,28 +13,25 @@ use App\Models\Order;
 use Illuminate\Support\Str;
 use App\Notifications\InvoicePaid;
 use Config;
-
+use Auth;
+use App\Jobs\SendCheckoutEmail;
+use Carbon\Carbon;
 
 
 class CheckOutController extends Controller
-{
-
+{ 
     public function CustomerInformation()
     {  
         $CartItems = session()->get('CartItems'); 
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Add some items to cart');
-        }         
-
-        $CustomerInformation = session()->get('CustomerInformation'); 
-        return Inertia::render('Ecomerce/Cart/CustomerInformation',compact('CustomerInformation'));         
+        }          
+        return Inertia::render('Ecomerce/Cart/CustomerInformation');         
     }
 
     public function CustomerInformStore(Request $request)
     {    
-       
         $CartItems = session()->get('CartItems'); 
-
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
         }        
@@ -44,11 +41,18 @@ class CheckOutController extends Controller
             "address" => "required",
             "city" => "required",
             "country" => "required",
-            "postal_code" => "required",
+            "zipcode" => "required",
             "phone" => "required", 
         ]);  
-  
-        session()->put('CustomerInformation', $request->all()); 
+        
+        Auth()->user()->address = $request->address;
+        Auth()->user()->city = $request->city;
+        Auth()->user()->phone = $request->phone;
+        Auth()->user()->country = $request->country;
+        Auth()->user()->zipcode = $request->zipcode;
+        Auth()->user()->save();
+         
+ 
         return redirect()->route('cart.ShippingMethod')->with('success','information saved');           
     }
 
@@ -57,9 +61,8 @@ class CheckOutController extends Controller
         $CartItems = session()->get('CartItems'); 
         if(!$CartItems){
             return redirect()->route('shop')->with('info','Okay ! Add some items to cart');
-        }        
-        $CustomerInformation = session()->get('CustomerInformation'); 
-        return Inertia::render('Ecomerce/Cart/ShippingMethod',compact('CustomerInformation'));         
+        }         
+        return Inertia::render('Ecomerce/Cart/ShippingMethod' );         
     }
 
     public function ShippingMethodStore(Request $request)
@@ -83,17 +86,14 @@ class CheckOutController extends Controller
         $CartItems = session()->get('CartItems'); 
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
-        }            
-        $stripekey = Setting::get('stripe_key');
-        $CustomerInformation = session()->get('CustomerInformation'); 
+        }             
         $ShipmentInformation = session()->get('ShipmentInformation');  
-        return Inertia::render('Ecomerce/Cart/PaymentMethod',compact('CustomerInformation','ShipmentInformation','stripekey'));         
+        return Inertia::render('Ecomerce/Cart/PaymentMethod',compact('ShipmentInformation'));         
  
     }
 
     public function CheckOut(Request $request)
-    {          
-        
+    {           
         $CartItems = session()->get('CartItems'); 
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
@@ -118,7 +118,7 @@ class CheckOutController extends Controller
         $NewOrderItems = [];
  
         foreach($CartItems as $key => $CartItem){
-
+            
             $OrderdProduct = $Product->findOrFail($CartItem['product_id']);
             $NewOrderItems[$key]['product_id'] = $OrderdProduct->id;
 
@@ -136,11 +136,13 @@ class CheckOutController extends Controller
                     return back()->with('error','product left' .$OrderdProduct->quantity.' only');
                 }            
             }             
-
+ 
              
             $OrderdProduct->quantity = $OrderdProduct->quantity - $CartItem['quantity'];
             $NewOrderItems[$key]['Quantity'] = $CartItem['quantity'];
+            $NewOrderItems[$key]['Quantity'] = $CartItem['quantity'];
             $NewOrderItems[$key]['Price'] = $OrderdProduct->current_price;
+            $NewOrderItems[$key]['variation_options'] = $CartItem['variation_options'];
             
             $NewOrder['GrandTotal'] += $NewOrderItems[$key]['Price'] * $NewOrderItems[$key]['Quantity'];
             $NewOrder['ItemCount'] += $NewOrderItems[$key]['Quantity'];
@@ -149,15 +151,14 @@ class CheckOutController extends Controller
          
         }
         $NewOrder['OrderNumber'] = Str::random(4).Auth()->user()->id.(Order::all()->Count()+1).'-'.uniqid(Auth()->user()->id.(Order::all()->Count()+1));
-        
-  
+         
         try {
             $charge = Stripe::charges()->create([
                 'amount' => $NewOrder['GrandTotal'],
                 'currency' => 'USD',
                 'source' => $request->stripeToken,
                 'description' => 'Description goes here',
-                'receipt_email' => $request->CustomerInformation['email'],
+                'receipt_email' => Auth()->user()->email,
                 'metadata' => [
                     'OrderNumber' => $NewOrder['OrderNumber'], 
                     'TotalItems' => $NewOrder['ItemCount'], 
@@ -170,13 +171,13 @@ class CheckOutController extends Controller
             $CreatedOrder = $Order->create([
                 'user_id'=>Auth()->user()->id,
                 'OrderNumber'=>$NewOrder['OrderNumber'],
-                'Address' => $request->CustomerInformation['address'],
+                'Address' => Auth()->user()->address,
                 'PaymentToken' => $charge['payment_method'],
-                'City' => $request->CustomerInformation['city'],
-                'Country' => $request->CustomerInformation['country'],
-                'PostalCode' => $request->CustomerInformation['postal_code'],
+                'City' => Auth()->user()->city,
+                'Country' => Auth()->user()->country,
+                'PostalCode' => Auth()->user()->zipcode,
                 'CardHolderName'=>$request->NameOnCard,
-                'PhoneNumber' => $request->CustomerInformation['phone'],
+                'PhoneNumber' => Auth()->user()->phone,
                 'Notes' => null,
                 'PaymentMethod' => "stripe",
                 'PaymentStatus' => 1,                
@@ -184,12 +185,12 @@ class CheckOutController extends Controller
                 'ItemCount'=>$NewOrder['ItemCount'],                
             ]);
             foreach ($NewOrderItems as $key => $OrderItem) { 
- 
+  
                 $CreatedOrder->items()->create([
                     'order_id' => $CreatedOrder->id,
                     'product_id' => $OrderItem['product_id'],
                     'Quantity' => $OrderItem['Quantity'],
-                    // 'variation' => $OrderItem['variation'],
+                    'variation' => json_encode($OrderItem['variation_options']),
                     'Price' => $OrderItem['Price'],
                 ]);
 
@@ -198,15 +199,15 @@ class CheckOutController extends Controller
             $notification = [ 
                 'OrderNumber'=>$CreatedOrder->OrderNumber,
                 'CustomerName'=>$CreatedOrder->CardHolderName,
-                'CustomerEmail' => $request->CustomerInformation['email'],
-                'Address' => $request->CustomerInformation['address'],
+                'CustomerEmail' => Auth()->user()->email,
+                'Address' => Auth()->user()->address,
                 'GrandTotal'=>$CreatedOrder->GrandTotal,
                 'OderItems'=> $CreatedOrder->items,
             ];
             
             try { 
-
-                $request->user()->notify(new InvoicePaid($notification));
+ 
+                SendCheckoutEmail::dispatch($notification);  
 
             } catch (\Throwable $th) {
                  

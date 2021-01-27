@@ -241,6 +241,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -263,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     CustomerInformation: function CustomerInformation() {
-      return this.$page.CustomerInformation;
+      return this.$page.user;
     }
   },
   methods: {
@@ -296,6 +297,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -425,7 +431,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "h-screen border-t border-grey-400 mb-20 px-5 py-5 " },
+    { staticClass: "container border-t border-grey-400 mb-20 px-5 py-5 " },
     [
       _c(
         "div",
@@ -912,126 +918,147 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "sm:w-2/3 md:w-1/2 lg:w-1/3 bg-grey-light mt-8 lg:mt-0" },
-    [
-      _c("div", { staticClass: "p-8" }, [
-        _c(
-          "h4",
-          {
-            staticClass:
-              "font-hkbold text-secondary text-2xl pb-3 text-center sm:text-left"
-          },
-          [_vm._v("\n      Your Order\n    ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass:
-              "font-hkbold text-secondary uppercase text-center sm:text-left"
-          },
-          [
-            _vm._v(
-              "\n      PRODUCTS (" + _vm._s(_vm.CountCartItems) + ")\n    "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "mt-5 mb-8" },
-          _vm._l(_vm.CartItems, function(CartItem, index) {
-            return _c(
-              "div",
-              { key: index, staticClass: "flex items-center mb-5" },
-              [
-                _c("div", { staticClass: "w-20 relative mr-3 sm:pr-0" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "h-20 rounded flex items-center justify-center"
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "w-12 h-16 bg-center bg-no-repeat bg-cover",
-                        style:
-                          "background-image:url('" +
-                          CartItem.product_image +
-                          "')"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "font-hkregular text-white text-xs px-2 leading-none absolute top-0 right-0 bg-primary flex items-center justify-center rounded-full -mt-2 -mr-2 h-6 w-6"
-                        },
-                        [_vm._v("2")]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
+  return _c("div", { staticClass: "sm:w-2/3 md:w-1/2 lg:w-1/3 bg-gray-100" }, [
+    _c("div", { staticClass: "px-5 py-5" }, [
+      _c(
+        "h4",
+        {
+          staticClass:
+            "font-bold text-gray-600 text-2xl pb-3 text-center sm:text-left"
+        },
+        [_vm._v("\n      Your Order\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        {
+          staticClass:
+            "font-bold text-gray-600 uppercase text-center sm:text-left"
+        },
+        [_vm._v("\n      #Products (" + _vm._s(_vm.CountCartItems) + ")\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mt-5 mb-8" },
+        _vm._l(_vm.CartItems, function(CartItem, index) {
+          return _c(
+            "div",
+            { key: index, staticClass: "flex items-center mb-5" },
+            [
+              _c("div", { staticClass: "w-20 relative mr-3 sm:pr-0" }, [
                 _c(
-                  "p",
+                  "div",
                   {
-                    staticClass: "font-hkregular text-secondary text-md",
-                    attrs: { title: CartItem.name }
+                    staticClass: "h-20 rounded flex items-center justify-center"
                   },
                   [
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(CartItem.product_name.substring(0, 12) + "..") +
-                        " $" +
-                        _vm._s(CartItem.current_price) +
-                        "\n        "
+                    _c("div", {
+                      staticClass: "w-12 h-16 bg-center bg-no-repeat bg-cover",
+                      style:
+                        "background-image:url('" + CartItem.product_image + "')"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "font-regular text-white text-xs px-2 leading-none absolute top-0 right-0 bg-primary flex items-center justify-center rounded-full -mt-2 -mr-2 h-6 w-6"
+                      },
+                      [_vm._v("2")]
                     )
                   ]
                 )
-              ]
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "font-hkbold text-secondary pt-1 pb-2" }, [
-          _vm._v("Cart Totals")
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "border-b border-grey-darker pb-1 flex justify-between"
-          },
-          [
-            _c("span", { staticClass: "font-hkregular text-secondary" }, [
-              _vm._v("Subtotal")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "font-hkregular text-secondary" }, [
-              _vm._v("$" + _vm._s(_vm.CartTotalPrice))
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "pt-3 flex justify-between" }, [
-          _c("span", { staticClass: "font-hkbold text-secondary" }, [
-            _vm._v("Total")
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "font-regular text-gray-600 text-md",
+                  attrs: { title: CartItem.name }
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(CartItem.product_name.substring(0, 12) + "..") +
+                      " $" +
+                      _vm._s(CartItem.current_price) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              CartItem.sku_name
+                ? _c(
+                    "p",
+                    { staticClass: "font-regular text-xs text-gray-400" },
+                    [_vm._v("SKU : " + _vm._s(CartItem.sku_name))]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              CartItem.variation_options
+                ? _c(
+                    "p",
+                    { staticClass: "font-regular text-xs text-gray-400" },
+                    [
+                      _c("span", [_vm._v("variation : ")]),
+                      _vm._v(" "),
+                      _vm._l(CartItem.variation_options, function(
+                        variation_option,
+                        variation_option_index
+                      ) {
+                        return _c("span", { key: variation_option_index + 1 }, [
+                          _vm._v(
+                            _vm._s(variation_option_index) +
+                              " -  " +
+                              _vm._s(variation_option) +
+                              ", "
+                          )
+                        ])
+                      })
+                    ],
+                    2
+                  )
+                : _vm._e()
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-bold text-gray-600 pt-1 pb-2" }, [
+        _vm._v("Cart Totals")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "border-b border-grey-darker pb-1 flex justify-between"
+        },
+        [
+          _c("span", { staticClass: "font-regular text-gray-600" }, [
+            _vm._v("Subtotal")
           ]),
           _vm._v(" "),
-          _c("span", { staticClass: "font-hkbold text-secondary" }, [
+          _c("span", { staticClass: "font-regular text-gray-600" }, [
             _vm._v("$" + _vm._s(_vm.CartTotalPrice))
           ])
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "pt-3 flex justify-between" }, [
+        _c("span", { staticClass: "font-bold text-gray-600" }, [
+          _vm._v("Total")
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "font-bold text-gray-600" }, [
+          _vm._v("$" + _vm._s(_vm.CartTotalPrice))
         ])
       ])
-    ]
-  )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -1045,11 +1072,11 @@ var staticRenderFns = [
           "border-b border-grey-darker pt-2 pb-1 flex justify-between"
       },
       [
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
+        _c("span", { staticClass: "font-regular text-gray-600" }, [
           _vm._v("Coupon apply")
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "font-hkregular text-secondary" }, [
+        _c("span", { staticClass: "font-regular text-gray-600" }, [
           _vm._v("-$0")
         ])
       ]

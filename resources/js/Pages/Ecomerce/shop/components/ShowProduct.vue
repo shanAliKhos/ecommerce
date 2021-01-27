@@ -3,15 +3,14 @@
     <div
       class="flex flex-col lg:flex-row justify-between md:mx-5 md:py-5 md:mt-5"
     >
-      <ProductImages />
+      <ProductImages/>
 
       <div class="px-5 py-5  w-full">
         
-        <ProductHeader :selectedSku="selectedSku" />
+        <ProductHeader :selectedSku="selectedSku"/>
 
-        <ProductVariations :ProductQuantity="ProductQuantity" @sku:changed="UpdateSku"  />
-        
-
+        <ProductVariations :ProductQuantity="ProductQuantity" @sku:changed="UpdateSku"/>
+          
         <div v-if="CanAddToCart">
           <div class="text-xs fixed bottom-1 right-1 flex flex-wrap justify-end items-center hidden md:block py-4 px-2 z-50 bg-white shadow-2xl border border-gray-200 rounded">
                
@@ -260,7 +259,7 @@ export default {
     AddToCart() {
       const self = this;
       if (self.form.quantity>0) {
-        self.sending = true;
+        // self.sending = true;
         self.$root.$emit("Add-To-Cart", this.form);
       }else{
         this.$swal({

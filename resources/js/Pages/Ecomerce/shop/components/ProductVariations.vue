@@ -80,15 +80,7 @@
 <script>
 export default {
   props: ["ProductQuantity"],
-  data() {
-    return {
-      form: {
-        id: this.$page.Product ? this.$page.Product.id : null,
-        sku_id: {},
-      },
-    };
-  },
-  
+ 
   methods: {
     AttrColor(clr,sel,oid){
         let color = `bg-${clr}-400 text-${clr}-400`;
@@ -107,8 +99,8 @@ export default {
       const self = this;
       let selectedSku = { }; 
       this.$page.Product.skus.filter(sku =>{
-        if(JSON.stringify(sku.attribute_options_ids)== JSON.stringify(this.selctedOption)){
-          selectedSku= sku;
+        if(JSON.stringify(sku.attribute_options_ids)== JSON.stringify( this.selctedOption)){
+          selectedSku = sku;
         }
       }); 
       return selectedSku;
@@ -121,12 +113,13 @@ export default {
       return this.$page.Product.variations;
     },
     selctedOption() { 
-      let selectedOptios= []; 
+      let selectedOptions= []; 
       this.$page.Product.variations.filter((variation) =>{
-          selectedOptios.push(variation.selected);
+          selectedOptions.push(variation.selected);
       });
-      return selectedOptios;
+      return selectedOptions;
     },
+    
   },
 
   mounted(){

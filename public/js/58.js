@@ -326,14 +326,16 @@ __webpack_require__.r(__webpack_exports__);
       self.$inertia.post(route('dashboard.user-address-information.update'), self.form, {
         preserveScroll: true,
         onStart: function onStart() {
-          return self.sending = true;
+          self.sending = true;
         },
         onFinish: function onFinish() {
           return self.sending = false;
         },
         onSuccess: function onSuccess() {
           self.Success = true;
-          alert('ko');
+          setTimeout(function () {
+            self.Success = false;
+          }, 500);
         }
       });
     }
@@ -872,11 +874,11 @@ var render = function() {
         key: "actions",
         fn: function() {
           return [
-            _vm.Success
-              ? _c("jet-action-message", { staticClass: "mr-3" }, [
-                  _vm._v("\n            Saved.\n        ")
-                ])
-              : _vm._e(),
+            _c(
+              "jet-action-message",
+              { staticClass: "mr-3", attrs: { on: _vm.Success } },
+              [_vm._v("\n            Saved.\n        ")]
+            ),
             _vm._v(" "),
             _c(
               "jet-button",

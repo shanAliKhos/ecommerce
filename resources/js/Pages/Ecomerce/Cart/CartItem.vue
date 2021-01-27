@@ -12,7 +12,12 @@
                 </div>
 
                 <inertia-link :href="route('shop.show',CartItem.product_slug)" class="focus:outline-none">
-                    <span class="font-semibold text-lg   capitalize">{{CartItem.product_name}}</span>
+                    <p class="font-semibold text-lg capitalize">{{CartItem.product_name}}</p>
+                    <p class="font-regular text-xs text-gray-400" v-if="CartItem.sku_name">SKU : {{CartItem.sku_name}}</p>
+                    <p class="font-regular text-xs text-gray-400" v-if="CartItem.variation_options">
+                        <span>variation : </span> 
+                        <span v-for="(variation_option,variation_option_index) in CartItem.variation_options" :key="(variation_option_index+1)" >{{variation_option_index}} -  {{variation_option}}, </span>
+                    </p>
                 </inertia-link>
             </div>
             <div class="w-full sm:w-1/5 xl:w-1/4 text-center border-b-0 border-grey-dark pb-0">
@@ -36,9 +41,8 @@
             </div>
         </div>
     </div>
-
     <div class="mobile-display-item">
-        <div class="flex md:hidden mb-5 pb-5 border-b border-grey-dark items-center justify-center">
+        <div class="flex md:hidden mb-5 pb-5 border-b border-grey-dark items-center">
             <div class="relative">
                 <div class="w-24 h-24 mx-auto bg-center bg-no-repeat bg-cover" :style="'background-image:url(\'' + ProductImage + '\')'">
                 </div>
@@ -46,11 +50,13 @@
             </div>
             <div class="pl-4">
                 <inertia-link :href="route('shop.show',CartItem.product_slug)" class="focus:outline-none">
-                    <span class="font-regular   text-base mt-2 font-bold">{{CartItem.product_name}}</span>
+                    <p class="font-regular text-base font-bold">{{CartItem.product_name}}</p>
+                    <p class="font-regular text-xs text-gray-400">SKU {{CartItem.sku_name}}</p>
+                    <p class="font-regular text-xs text-gray-400" v-if="CartItem.variation_options">variation {{CartItem.variation_options}}</p>
                 </inertia-link>                
                 <span class="font-regular   block">{{Currency}} {{ CartItem.current_price * CartItem.quantity}} </span>
                 <div class="w-2/3 sm:w-5/6 flex mt-2"  >
-                    <input v-model.number="CartItem.quantity" type="number" id="quantity-form-mobile" class="form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
+                    <input v-model.number="CartItem.quantity" type="number" id="quantity-form-mobile" class="w-full form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center" min="1" />
                     <div class="flex flex-row">
                         <span class="px-2 bg-white flex-1 border  border-l-0 border-grey-darker cursor-pointer flex items-center justify-center" @click="minus">
                             <i class="bx bxs-down-arrow text-xs text-primary pointer-events-none"></i>
@@ -63,6 +69,8 @@
             </div>
         </div>
     </div>
+
+ 
 
 </div> 
 </transition>        

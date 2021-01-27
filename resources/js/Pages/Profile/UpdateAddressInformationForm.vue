@@ -28,7 +28,7 @@
         </template>
 
         <template #actions>
-            <jet-action-message v-if="Success" class="mr-3">
+            <jet-action-message :on="Success" class="mr-3">
                 Saved.
             </jet-action-message>
 
@@ -80,11 +80,15 @@
                 const self = this;
                 self.$inertia.post( route('dashboard.user-address-information.update'),self.form, {
                     preserveScroll: true,
-                    onStart: () => self.sending = true,
+                    onStart: () => {
+                        self.sending = true 
+                    },
                     onFinish: () => self.sending = false,                    
                     onSuccess: () => {
-                       self.Success = true;
-                       alert('ko')
+                       self.Success = true; 
+                       setTimeout(() => {
+                           self.Success = false;
+                       }, 500);
                     },
                 });                
  
@@ -93,3 +97,4 @@
         },
     }
 </script>
+

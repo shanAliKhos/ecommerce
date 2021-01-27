@@ -46,7 +46,7 @@ class AccountController extends Controller
                 return [
                     'id' => $item->id, 
                     "ProductSlug" => $item->Product->slug,
-                    "ProductImage" => $item->Product->image,
+                    "ProductImage" => $item->Product->mainphoto_url,
                     "ProductID" => $item->Product->id,
                     "ProductName" => $item->Product->name,
                     "Quantity" => $item->Quantity,               

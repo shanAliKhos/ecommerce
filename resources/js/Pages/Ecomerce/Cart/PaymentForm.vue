@@ -110,10 +110,10 @@
 
 <script>
 import { createToken } from "vue-stripe-elements-plus";
-import StripeCardElement from "./stripe/StripeCardElement";
+// import StripeCardElement from "./stripe/StripeCardElement";
 export default {
   components: {
-    StripeCardElement,
+    StripeCardElement: () => import("./stripe/StripeCardElement"),
   },
   data() {
     return {

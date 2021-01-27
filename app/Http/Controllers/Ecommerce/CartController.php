@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Setting;   
 use App\Models\Product;   
+use App\Models\AttributeValue;   
 use Auth;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 
@@ -21,51 +22,65 @@ class CartController extends Controller
         return Inertia::render('Ecomerce/Cart/Index'); 
     }  
  
-    public function store(Request $request,Product $product)
+    public function store(Request $request)
     {    
-       
-      
         $this->validate($request,[
             'quantity'=>'required|numeric|min:1',
             'product_id'=>'required|numeric',     
         ]);
+        
         $SessionCartItem = session()->get('CartItems'); 
-        $RequestProduct = $product->find($request->product_id);
+        $Product = Product::find($request->product_id);
+        $NewItem = $request->all();
+        $NewItem['variation_options'] = null;
 
         if ($request->sku_id) {
-            $RequestProduct = $RequestProduct->skus()->find($request->sku_id);  
-            if(( $RequestProduct->quantity >= $request->quantity) == false){ 
-                return back()->with('error','product quantity left ' .$RequestProduct->quantity.' only');
+            $Product = $Product->skus()->find($request->sku_id);  
+            if( ( $Product->quantity >= $request->quantity) == false ){ 
+                return back()->with('error','product quantity left ' .$Product->quantity.' only');
             }
-        }else{ 
-            if(($RequestProduct->quantity >= $request->quantity)== false){
-                return back()->with('error','product left' .$RequestProduct->quantity.' only');
-            }            
-        } 
-        // dd($RequestProduct->load('skus_options')->toArray());
-        
-        $request->current_price = $RequestProduct->current_price;  
+
+            $AttributeValue = new AttributeValue;
+            $NewItem['variation_options'] = $AttributeValue->with('attribute')->find($request->attribute_options_ids)->pluck('name','attribute.name')->toArray();
+            $NewItem['sku_name'] = $Product->name; 
             
+        }else{ 
+
+            if(($Product->quantity >= $request->quantity) == false){
+                return back()->with('error','product left' .$Product->quantity.' only');
+            }            
  
-        if($SessionCartItem){  
+            $NewItem['sku_name'] = $Product->sku; 
+        }
+
+        $NewItem['current_price'] = $Product->current_price;
+
+        $NewItem['Instock'] = $Product->quantity;
+ 
+         
+        if($SessionCartItem){
+            
             $UpdateCartItem = $SessionCartItem;
 
             $existsAtKey =  array_search($request->product_id, array_column($UpdateCartItem, 'product_id'));
+
             $SkuexistsAtKey =  array_search($request->sku_id, array_column($UpdateCartItem, 'sku_id'));
-            
+           
             if($existsAtKey !== false && $SkuexistsAtKey !== false){ 
+ 
                 $UpdateCartItem[$SkuexistsAtKey?$SkuexistsAtKey:$existsAtKey]['quantity'] = $request->quantity; 
-                $UpdateCartItem[$SkuexistsAtKey?$SkuexistsAtKey:$existsAtKey]['Instock'] = $RequestProduct->quantity;
+
             }else{ 
 
-                $UpdateCartItem[] = $request->all();
+                $UpdateCartItem[] = $NewItem;
+
             }   
  
             session()->put('CartItems', $UpdateCartItem);
 
         }else{
-            session()->put('CartItems', [$request->all()]);
-        } 
+            session()->put('CartItems', [$NewItem]);
+        }    
 
         return back()->with('success', ($request->quantity > 1)?$request->quantity.' Items added To cart' :$request->quantity.' Item added To cart');
  

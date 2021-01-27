@@ -359,7 +359,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -425,7 +424,7 @@ __webpack_require__.r(__webpack_exports__);
       var self = this;
 
       if (self.form.quantity > 0) {
-        self.sending = true;
+        // self.sending = true;
         self.$root.$emit("Add-To-Cart", this.form);
       } else {
         this.$swal({

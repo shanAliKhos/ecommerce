@@ -90,14 +90,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["ProductQuantity"],
-  data: function data() {
-    return {
-      form: {
-        id: this.$page.Product ? this.$page.Product.id : null,
-        sku_id: {}
-      }
-    };
-  },
   methods: {
     AttrColor: function AttrColor(clr, sel, oid) {
       var color = "bg-".concat(clr, "-400 text-").concat(clr, "-400");
@@ -132,11 +124,11 @@ __webpack_require__.r(__webpack_exports__);
       return this.$page.Product.variations;
     },
     selctedOption: function selctedOption() {
-      var selectedOptios = [];
+      var selectedOptions = [];
       this.$page.Product.variations.filter(function (variation) {
-        selectedOptios.push(variation.selected);
+        selectedOptions.push(variation.selected);
       });
-      return selectedOptios;
+      return selectedOptions;
     }
   },
   mounted: function mounted() {

@@ -51,7 +51,8 @@
               <div class="h-20 rounded flex items-center justify-center">
                 <div
                   class="w-12 h-16 mx-auto bg-center bg-no-repeat bg-cover"
-                  :style="'background-image:url(' + Image(OrderItem) + ')'"
+                  :style="`background-image:url('${OrderItem.ProductImage}')`"
+ 
                 ></div>
               </div>
             </div>
@@ -359,34 +360,21 @@ export default {
     Stutus(Status) {
       switch (Status) {
         case "pending":
-          return "bg-primary-lightest border-primary-light text-primary";
+          return "bg-orange-50 border-orange-500 text-orange-500";
           break;
         case "processing":
-          return "bg-v-blue-light  border-v-blue text-v-blue";
+          return "bg-blue-50  border-blue-500 text-blue-500";
           break;
         case "completed":
-          return "bg-v-green-light  border-v-green text-v-green";
+          return "bg-green-50  border-green-500 text-green-500";
           break;
         case "decline":
-          return "bg-red-lightest border-red-light text-red";
+          return "bg-red-50 border-red-500 text-red-500";
           break;
       }
       return;
     },
-    Image(item) {
-      self = this;
-      var img = item.ProductImage
-        ? "/" + item.ProductImage.replace("public", "storage")
-        : this.defaultPhotoUrl(item.ProductName);
-      return img;
-    },
-    defaultPhotoUrl(text) {
-      return (
-        "https://ui-avatars.com/api/?name=" +
-        text +
-        "&color=7F9CF5&background=EBF4FF"
-      );
-    },
+ 
   },
   computed: {
     OrderItems() {

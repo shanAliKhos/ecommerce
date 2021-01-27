@@ -69,6 +69,7 @@ class AppServiceProvider extends ServiceProvider
         }                    
         
         Inertia::share([  
+            'stripekey'=>Setting::get('stripe_key'),
             "SiteOptions" =>  [
                 "Title" => isset($Settings['site_title'])?$Settings['site_title']:'',
                 "Logo" =>  $Logo,

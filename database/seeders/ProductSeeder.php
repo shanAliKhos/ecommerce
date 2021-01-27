@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     { 
-        for ($i=1; $i <= 6; $i++) {
+        for ($i=1; $i <= 6000; $i++) {
             
             $extension = "jpg"; 
             

@@ -51,13 +51,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
- // import Pagination from './../shared/Partials/Pagination'  
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+ // import Pagination from './../shared/Partials/Pagination'
 // import ShopProduct from './../shared/Product/Product'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _shared_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   metaInfo: {
-    title: 'Shop'
+    title: "Shop"
   },
   components: {
     ShopProduct: function ShopProduct() {
@@ -69,27 +80,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      sortBy: 'current_price',
-      sortDirection: 'desc'
+      sortBy: "current_price",
+      sortDirection: "desc"
     };
   },
-  // remember:'sortDirection',
-  // methods: {
-  // sort(s){ 
-  // if(s === this.sortBy) {
-  //     this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
-  // }
-  //         this.sortBy = s;
-  //     }        
-  // },
   computed: {
     Products: function Products() {
       var _this = this;
 
-      // return this.$page.Products.data;
       return this.$page.Products.data.sort(function (p1, p2) {
         var modifier = 1;
-        if (_this.sortDirection === 'desc') modifier = -1;
+        if (_this.sortDirection === "desc") modifier = -1;
         if (p1[_this.sortBy] < p2[_this.sortBy]) return -1 * modifier;
         if (p1[_this.sortBy] > p2[_this.sortBy]) return 1 * modifier;
         return 0;
@@ -110,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var self = this;
-    self.$root.$emit('sidebar-close');
+    self.$root.$emit("sidebar-close");
   }
 });
 
@@ -133,15 +134,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "shop-section " },
+    { staticClass: "shop-section" },
     [
       _c(
         "div",
         { staticClass: "py-4 flex flex-col sm:flex-row justify-between" },
         [
-          _c("div", {
-            staticClass: "flex items-center justify-center sm:justify-start"
-          }),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
@@ -156,7 +155,7 @@ var render = function() {
                   staticClass:
                     "font-hkregular text-secondary md:text-lg mr-2 -mt-2"
                 },
-                [_vm._v("Sort by:\n                ")]
+                [_vm._v("\n        Sort by:\n      ")]
               ),
               _vm._v(" "),
               _c(
@@ -220,7 +219,29 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex items-center justify-center sm:justify-start" },
+      [
+        _c("i", { staticClass: "bx bxs-filter-alt text-primary text-xl" }),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass:
+              "font-hkregular text-secondary md:text-lg px-2 leading-none block"
+          },
+          [_vm._v("\n        Filter\n      ")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 

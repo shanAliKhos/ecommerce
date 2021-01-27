@@ -1,22 +1,15 @@
 <template>
-  <div class="container border-t pt-10 sm:pt-12 mb-20 lg:mb-0">
+  <div class="container border-t px-5 py-5">
     <div
       class="flex flex-col lg:flex-row justify-between pb-16 sm:pb-20 lg:pb-24"
     >
-      <div class="lg:w-3/5">
-        <div class="flex flex-wrap items-center">
-          <a
-            href="javascript:;"
-            class="transition-all border-b border-transparent border-orange-500 text-sm text-gray-500 text-orange-500 font-hkregular"
-            >Cart</a
-
-
-          > 
+      <div class="lg:w-3/5 mb-5">
+        <div class="flex flex-wrap items-center mb-5">
+          <a href="javascript:;" class="transition-all border-b border-transparent border-orange-500 text-sm text-gray-500 text-orange-500 font-hkregular"
+            >Cart</a> 
         </div>
 
-        <div
-          class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-500"
-        >
+        <div class="mobile-secondary-menu z-50 bg-white block lg:hidden fixed bottom-14 right-0 left-0 border-t-2 border-gray-200 text-gray-500">
           <div class="flex justify-around">
             <div class="w-1/2 relative px-2 py-2 flex item-center">
               <div class="pt-3 flex justify-between">
@@ -69,9 +62,8 @@
             </div>
           </div>
         </div>
-
-        <div class="pt-10">
-          <div class="pt-8">
+ 
+          <div class="container">
             <div class="hidden sm:block">
               <div class="flex justify-between border-b border-grey-darker">
                 <div class="w-1/2 lg:w-3/5 xl:w-1/2 pl-8 sm:pl-12 pb-2">
@@ -102,8 +94,15 @@
               :cartindex="index"
               @update-this-item="update"
             ></cart-item>
+  
+            <p v-if="!CartItems" class="py-5 mt-10 lg:p-1 text-lg text-gray-300 text-semibold uppercase flex justify-center inline-flex items-center w-full"> 
+                <svg class="flex justify-center inline-flex items-center h-10 w-10 mr-5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                        
+                <span> Cart is empty   </span>
+            </p>               
           </div>
-        </div>
+       
       </div>
       <div class="sm:w-2/3 md:w-full lg:w-1/3 mx-auto lg:mx-0 mt-16 lg:mt-0">
         <div

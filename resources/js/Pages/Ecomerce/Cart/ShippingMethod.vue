@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen border-t border-grey-400 mb-20 px-5 py-5 ">
+  <div class="container border-t border-grey-400 mb-20 px-5 py-5 ">
     <div
       class="flex flex-col lg:flex-row justify-between items-center pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pb-24"
     >
@@ -223,6 +223,7 @@
           </div>
         </div>
       </div>
+      
       <your-order></your-order>
     </div>
   </div>
@@ -250,7 +251,7 @@ export default {
   },
   computed: {
     CustomerInformation() {
-      return this.$page.CustomerInformation;
+      return this.$page.user;
     },
   },
   methods: {

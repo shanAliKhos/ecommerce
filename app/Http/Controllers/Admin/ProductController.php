@@ -42,6 +42,7 @@ class ProductController extends Controller
     public function store(Request $request, Product $Product)
     {
      
+        dd(Str::limit(Str::random(40), 5,rand(1,10000)));
         $this->validate($request, [
             "name" => 'required|string|min:2|max:255',
             "sku" => ($request->is_variable>0)?'required':'|string|min:2|max:255',

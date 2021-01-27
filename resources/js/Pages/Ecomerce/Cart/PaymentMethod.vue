@@ -45,7 +45,7 @@
             </div>
             <div class="w-3/5">
               <p class="font-hkregular text-secondary">
-                {{ CustomerInformation.email }}
+                {{ CustomerEmail }} / {{CustomerPhone}}
               </p>
             </div>
             <div class="w-1/5 text-right">
@@ -62,7 +62,7 @@
             </div>
             <div class="w-3/5">
               <p class="font-hkregular text-secondary">
-                {{ CustomerInformation.address }}
+                {{ CustomerAddress }}
               </p>
             </div>
             <div class="w-1/5 text-right">
@@ -133,8 +133,14 @@ export default {
     };
   },
   computed: {
-    CustomerInformation() {
-      return this.$page.CustomerInformation;
+    CustomerAddress() {
+      return this.$page.user.address;
+    },
+    CustomerEmail() {
+      return this.$page.user.email;
+    },
+    CustomerPhone() {
+      return this.$page.user.phone;
     },
     ShipmentInformation() {
       return this.$page.ShipmentInformation;

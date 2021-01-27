@@ -78,6 +78,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['CartItem', 'cartindex'],
   methods: {
@@ -239,10 +247,47 @@ var render = function() {
                   },
                   [
                     _c(
-                      "span",
-                      { staticClass: "font-semibold text-lg   capitalize" },
+                      "p",
+                      { staticClass: "font-semibold text-lg capitalize" },
                       [_vm._v(_vm._s(_vm.CartItem.product_name))]
-                    )
+                    ),
+                    _vm._v(" "),
+                    _vm.CartItem.sku_name
+                      ? _c(
+                          "p",
+                          { staticClass: "font-regular text-xs text-gray-400" },
+                          [_vm._v("SKU : " + _vm._s(_vm.CartItem.sku_name))]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.CartItem.variation_options
+                      ? _c(
+                          "p",
+                          { staticClass: "font-regular text-xs text-gray-400" },
+                          [
+                            _c("span", [_vm._v("variation : ")]),
+                            _vm._v(" "),
+                            _vm._l(_vm.CartItem.variation_options, function(
+                              variation_option,
+                              variation_option_index
+                            ) {
+                              return _c(
+                                "span",
+                                { key: variation_option_index + 1 },
+                                [
+                                  _vm._v(
+                                    _vm._s(variation_option_index) +
+                                      " -  " +
+                                      _vm._s(variation_option) +
+                                      ", "
+                                  )
+                                ]
+                              )
+                            })
+                          ],
+                          2
+                        )
+                      : _vm._e()
                   ]
                 )
               ],
@@ -362,7 +407,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex md:hidden mb-5 pb-5 border-b border-grey-dark items-center justify-center"
+              "flex md:hidden mb-5 pb-5 border-b border-grey-dark items-center"
           },
           [
             _c("div", { staticClass: "relative" }, [
@@ -393,12 +438,29 @@ var render = function() {
                   },
                   [
                     _c(
-                      "span",
-                      {
-                        staticClass: "font-regular   text-base mt-2 font-bold"
-                      },
+                      "p",
+                      { staticClass: "font-regular text-base font-bold" },
                       [_vm._v(_vm._s(_vm.CartItem.product_name))]
-                    )
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      { staticClass: "font-regular text-xs text-gray-400" },
+                      [_vm._v("SKU " + _vm._s(_vm.CartItem.sku_name))]
+                    ),
+                    _vm._v(" "),
+                    _vm.CartItem.variation_options
+                      ? _c(
+                          "p",
+                          { staticClass: "font-regular text-xs text-gray-400" },
+                          [
+                            _vm._v(
+                              "variation " +
+                                _vm._s(_vm.CartItem.variation_options)
+                            )
+                          ]
+                        )
+                      : _vm._e()
                   ]
                 ),
                 _vm._v(" "),
@@ -425,7 +487,7 @@ var render = function() {
                       }
                     ],
                     staticClass:
-                      "form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center",
+                      "w-full form-input form-quantity rounded-r-none w-12 py-1 px-2 text-center",
                     attrs: {
                       type: "number",
                       id: "quantity-form-mobile",

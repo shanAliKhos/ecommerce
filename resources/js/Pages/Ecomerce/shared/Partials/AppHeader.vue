@@ -44,7 +44,6 @@ export default {
     },
     methods: { 
         handleScroll(){ 
-            // alert(window.pageYOffset);
             if(window.pageYOffset>600){ 
                 if(this.atTopOfPage) this.atTopOfPage = false
             }else{ 

@@ -16,7 +16,7 @@ class Variant extends Model
     public function Attribute()
     {
         return $this->belongsTo(Attribute::class);
-    }//this is related attributes      
+    } 
 
     public function attribute_options()
     {

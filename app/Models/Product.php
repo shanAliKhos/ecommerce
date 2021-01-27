@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 // use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage; 
+// use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory; 
  
     protected $fillable = [
         'brand_id', 'sku', 'name', 'slug', 'description', 'quantity','image',

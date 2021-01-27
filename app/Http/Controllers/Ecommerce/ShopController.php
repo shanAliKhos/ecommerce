@@ -27,7 +27,9 @@ class ShopController extends Controller
      
     public function index(Request $request, Product $Product)
     {        
-        $Products = $Product->where('quantity','>',0)
+        $Products = $Product
+        ->where('is_active',true)
+        ->where('quantity','>',0)
         ->where('regular_price','>',0.00)
         ->orwhere('sale_price','>',0.00)
         ->latest()->paginate(20); 
@@ -39,13 +41,13 @@ class ShopController extends Controller
     {    
         $Product = $Product->where('slug',$slug)->with('images','categories','brand')->firstOrFail();
           
-        $skuOptions =  $Product->Skus->map(function($sku) use($Product){
-            return $sku->skus_options->map(function($skudsOption) use($Product,$sku){  
+        $Product->Skus->map(function($sku) {
+            return $sku->skus_options->map(function($skudsOption) use($sku){  
                 Arr::add($sku, 'attribute_options_ids', data_get($sku->skus_options->load('variant_option')->toArray(), '*.variant_option.attribute_value_id'));
                 return $skudsOption->variant_option = $skudsOption->variant_option->attribute_value_id;
             });
         });
-   
+          
         $Product->variations->map(function($variation){
             $variation->selected = $variation->attribute_options[0]->id;
             return $variation->load('attribute_options')->Attribute;
