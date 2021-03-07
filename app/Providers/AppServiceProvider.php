@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider; 
 use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
-// use Auth;
+use Auth;
 // use Config; 
 // use App\Models\User;
 // use App\Models\Message;
@@ -35,8 +35,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    { 
-        $dbSetting = false; 
+    {        
         $Settings = [];
         if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
             $dbSetting = true;

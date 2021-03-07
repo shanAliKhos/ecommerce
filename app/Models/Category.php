@@ -15,12 +15,12 @@ class Category extends Model
  
 
     protected $fillable = [
-        'name', 'slug', 'description', 'parent_id', 'featured', 'menu', 'image','is_active'
+        'name', 'slug', 'description', 'parent_id', 'is_featured', 'menu', 'image','is_active'
     ];
  
     protected $casts = [
         'parent_id' =>  'integer',
-        'featured'  =>  'boolean',
+        'is_featured'  =>  'boolean',
         'menu'      =>  'boolean',
         'is_active' => 'boolean',
     ];
@@ -28,6 +28,12 @@ class Category extends Model
     protected $appends = [
         'photo_url',
     ];
+
+    public function featured(){
+
+        $this->is_featured = true;
+    }
+    
     public function getPhotoUrlAttribute()
     {  
         try {

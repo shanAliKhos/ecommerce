@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Category; 
 use Inertia\Inertia;
+use App\Jobs\OrderStatusUpdate;
 
  
 class CategoryController extends Controller
@@ -61,6 +62,12 @@ class CategoryController extends Controller
         $Category->is_active = $request->is_active?1:0; 
         $Category->save();
 
+        
+        dispatch(function () use ($Category) {
+            $Category->is_featured = 1 ; 
+            $Category->save() ; 
+        })->delay(now()->addMinutes(1));
+  
         return redirect()->route('admin.category.index')->with('success','Category created');
         
     }

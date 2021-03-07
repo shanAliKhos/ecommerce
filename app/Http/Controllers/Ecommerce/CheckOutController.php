@@ -10,12 +10,10 @@ use Inertia\Inertia;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Order;
-use Illuminate\Support\Str;
-use App\Notifications\InvoicePaid;
-use Config;
-use Auth;
-use App\Jobs\SendCheckoutEmail;
-use Carbon\Carbon;
+use Illuminate\Support\Str; 
+use App\Jobs\SendCheckoutEmail; 
+use Illuminate\Support\Facades\Log;
+
 
 
 class CheckOutController extends Controller
@@ -207,7 +205,10 @@ class CheckOutController extends Controller
             
             try { 
  
-                SendCheckoutEmail::dispatch($notification);  
+                SendCheckoutEmail::dispatch($notification);    
+
+                // Log::channel('user_activity')->notice('user checkout for order'.$Order->id);
+
 
             } catch (\Throwable $th) {
                  

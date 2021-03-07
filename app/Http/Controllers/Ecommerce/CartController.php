@@ -2,14 +2,10 @@
 namespace App\Http\Controllers\Ecommerce;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use App\Models\Setting;   
+use Inertia\Inertia; 
 use App\Models\Product;   
-use App\Models\AttributeValue;   
-use Auth;
-use Cartalyst\Stripe\Laravel\Facades\Stripe;
-
-
+use App\Models\AttributeValue;    
+ 
 class CartController extends Controller
 { 
     public function __construct()
@@ -81,6 +77,7 @@ class CartController extends Controller
         }else{
             session()->put('CartItems', [$NewItem]);
         }    
+
 
         return back()->with('success', ($request->quantity > 1)?$request->quantity.' Items added To cart' :$request->quantity.' Item added To cart');
  

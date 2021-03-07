@@ -3,12 +3,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;  
 use Illuminate\Http\Request; 
-
-use App\Models\Product;
-use App\Models\Order;
-use App\Models\OrderItem;
-use Inertia\Inertia;
-use Carbon\Carbon;
+use Inertia\Inertia; 
+ 
+use App\Models\Order; 
 
 class OrderController extends Controller
 {
@@ -18,21 +15,21 @@ class OrderController extends Controller
         $this->middleware('admin');  
     }    
 
-    public function index()
-    {    
-        $Order = new Order; 
-        $Orders = $Order->with('user')->orderBy('Status', 'asc')->latest()->paginate(8); 
-           
-        return Inertia::render('Admin/orders/index',compact('Orders')); 
+    public function index(Order $Order)
+    {       
+        return Inertia::render('Admin/orders/index',[
+            'Orders' =>$Order->with('user')->orderBy('Status', 'asc')->latest()->paginate(8),
+        ]); 
     }
 
     public function show(Order $Order)
-    {  
-        $Order->user;  
-        $Order->items->map(function($item){
+    {   
+        $Order->load('user')->items->map(function($item){
             return $item->product;
         });     
-        return Inertia::render('Admin/orders/show',compact('Order')); 
+        return Inertia::render('Admin/orders/show',[
+            'Order'=> $Order,
+        ]); 
 
     }
 

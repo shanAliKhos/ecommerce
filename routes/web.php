@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
+Route::middleware(['log.route'])->group(function () {
+
   
 //////////////////////////////////////// BLOG //////////////////////////////////// 
     Route::prefix('blog')->group(function () { 
@@ -40,6 +42,8 @@ use Illuminate\Support\Facades\Password;
 
         });
         
+        Route::post('product/{product}/comments','CommentController@store')->name('product.comment.post'); 
+
         Route::Resource('/cart','Ecommerce\CartController')->except('create'); 
         
         Route::prefix('/cart')->group(function () {
@@ -58,18 +62,16 @@ use Illuminate\Support\Facades\Password;
         });
 
         //////////////////////////////////////// MESSENGER ////////////////////////////////////////
-        Route::get('/support', 'ContactsController@SupportMesseges')->name('support.index');
-        Route::post('/support', 'ContactsController@SupportMessegesend')->name('support.store');
-        
-        
-        Route::get('/messenger', 'ContactsController@index');
-        Route::get('/contacts', 'ContactsController@get');
-        Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
-        Route::post('/conversation/send', 'ContactsController@send');
+            Route::get('/support', 'ContactsController@SupportMesseges')->name('support.index');
+            Route::post('/support', 'ContactsController@SupportMessegesend')->name('support.store');
+            
+            
+            Route::get('/messenger', 'ContactsController@index');
+            Route::get('/contacts', 'ContactsController@get');
+            Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
+            Route::post('/conversation/send', 'ContactsController@send');
         //////////////////////////////////////// MESSENGER ////////////////////////////////////////        
-        
-
-        
+         
     });
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////
 
@@ -214,3 +216,4 @@ use Illuminate\Support\Facades\Password;
 
  
 
+});

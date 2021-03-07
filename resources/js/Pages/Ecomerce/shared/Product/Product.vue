@@ -20,6 +20,12 @@
                 <p class="font-semibold text-red-500 text-normal">{{Currency}} {{CurrentPrice}} </p>
                 <p v-if="SalePrice>0" class="font-semibold line-through text-gray-400 text-xs ml-3">{{Currency}}{{RegularPrice}} </p>
             </div>       
+                        <a href="/account/wishlist/"
+                            class="bg-white hover:bg-primary-light  rounded-full px-3 py-3 flex items-center transition-all">
+                            <img src="https://d33wubrfki0l68.cloudfront.net/f7c995473e0c29c1578cd00a2b7baa1562456ad9/b584a/assets/img/icons/icon-heart.svg"
+                                    class="h-6 w-6"
+                                    alt="icon heart"/>
+                        </a>            
         </inertia-link>
     </div> 
 

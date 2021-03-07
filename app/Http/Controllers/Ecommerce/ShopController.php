@@ -9,14 +9,17 @@ use App\Models\Category;
 use App\Models\Slider;
 use Inertia\Inertia;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\URL;
+use Carbon\Carbon;
 
+
+// use Illuminate\Support\Facades\Log;
+// use Auth;
 
 class ShopController extends Controller
 {
     public function Home(Slider $slider)
-    {
-        $Product = new Product;
- 
+    { 
         return Inertia::render('Ecomerce/welcome/Welcome',[
             'SaleSliders'=> $slider->where('name','sale')->with('sale_slider')->first(),
             'FeaturedSliders'=> $slider->where('name','trending')->with('trending_slider')->first(),

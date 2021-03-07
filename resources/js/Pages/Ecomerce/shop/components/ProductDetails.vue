@@ -90,61 +90,8 @@
         </div>
 
         <form class="w-5/6 mx-auto">
-          <div class="flex flex-col sm:flex-row justify-between pt-10 -mx-5">
-            <div class="sm:w-1/2 px-5">
-              <label
-                class="font-hkregular text-secondary text-sm block mb-2"
-                for="name"
-                >Name</label
-              >
-              <input
-                type="text"
-                placeholder="Enter your Name"
-                class="form-input"
-                id="name"
-              />
-            </div>
-            <div class="sm:w-1/2 px-5 pt-10 sm:pt-0">
-              <label
-                class="font-hkregular text-secondary text-sm block mb-2"
-                for="email"
-                >Email address</label
-              >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="form-input"
-                id="email"
-              />
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row justify-between pt-10 -mx-5">
-            <div class="sm:w-1/2 px-5">
-              <label
-                class="font-hkregular text-secondary text-sm block mb-2"
-                for="review_title"
-                >Review Title</label
-              >
-              <input
-                type="text"
-                placeholder="Enter your review title"
-                class="form-input"
-                id="review_title"
-              />
-            </div>
-            <div class="sm:w-1/2 px-5 pt-10 sm:pt-0">
-              <label class="font-hkregular text-secondary text-sm block mb-2"
-                >Rating</label
-              >
-              <div class="flex pt-4">
-                <i class="bx bxs-star text-grey-darker text-xl pr-1"></i>
-                <i class="bx bxs-star text-grey-darker text-xl pr-1"></i>
-                <i class="bx bxs-star text-grey-darker text-xl pr-1"></i>
-                <i class="bx bxs-star text-grey-darker text-xl pr-1"></i>
-                <i class="bx bxs-star text-grey-darker text-xl"></i>
-              </div>
-            </div>
-          </div>
+    
+           
           <div class="sm:w-12/25 pt-10">
             <label
               for="message"
@@ -152,14 +99,16 @@
               >ReviewMessage</label
             >
             <textarea
-              placeholder="Give your review tittle"
+              placeholder="Give your review tittle w-full"
               class="form-textarea"
+              v-model="form.message"
               id="message"
             ></textarea>
+            {{this.$page.errors.message}}
           </div>
         </form>
         <div class="w-5/6 mx-auto pt-8 md:pt-10 pb-4 text-center sm:text-left">
-          <a href="/" class="btn btn-primary">Submit Review</a>
+          <button  type="button" @click="postComment" class=" bg-orange-500 py-2 px-1  rounded border-orange-400 text-white">Submit Review</button>
         </div>
       </div>
     </tab>
@@ -177,7 +126,28 @@ export default {
   data() {
     return {
       activeTab: "description",
+      form:{
+        message:'',
+      }
     };
+  },
+  methods:{
+    postComment(){ 
+          const self = this; 
+            let formData = new FormData()
+            formData.append('message', self.form.message || '') 
+            self.$inertia.post(route('product.comment.post',self.$page.Product.id), formData, {
+                preserveState: true,        
+                onStart: () => this.sending = true,
+                onFinish: () => this.sending = false,                
+                onSuccess: () => {
+                    if (Object.keys(this.$page.errors).length === 0) {
+                        this.form.message = null 
+                    }
+                },                  
+            })
+
+    },
   },
   computed: {
     ProductDescription() {

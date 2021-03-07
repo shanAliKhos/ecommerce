@@ -10,8 +10,7 @@ module.exports = {
 
     theme: {
         extend: {
-            backgroundImage: theme => ({
-                'application-logo': "url('/img/partials/icons/logo.jpg')", 
+            backgroundImage: theme => ({ 
                 'icon-search': "url('/img/partials/icons/icon-search.svg')", 
                 'icon-search-hover': "url('/img/partials/icons/icon-search-hover.svg')", 
                 'icon-heart': "url('/img/partials/icons/icon-heart.svg')", 
@@ -56,6 +55,7 @@ module.exports = {
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
         fontSize: ['responsive', 'hover', 'focus', 'disabled'],
+        transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
         backgroundImage: ['hover', 'focus'],    
         extend: {
            transform: ['hover', 'focus'],
