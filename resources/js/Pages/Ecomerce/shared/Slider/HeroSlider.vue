@@ -25,7 +25,7 @@
             </vue-glide-slide>   
         </vue-glide>
     </div>
-    <div v-else class="h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg">
+    <div v-else class="h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gray-200 hover:bg-300 hover:animate-pulse relative shadow-lg">
         <div class="flex-row group animate-pulse">
             <p class="flex item-center justify-center text-6xl text-gray-50 uppercase">EMPTY SLIDER</p>
             <p class="flex item-center justify-center text-2xl text-gray-200 uppercase">add some slide to see slider</p>
