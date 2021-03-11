@@ -163,7 +163,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 relative shadow-lg"
+            "h-screen p-10 flex item-center justify-center border-dashed border-4 border-gray-50 py-24 bg-gray-200 hover:bg-300 hover:animate-pulse relative shadow-lg"
         },
         [_vm._m(0)]
       )
