@@ -106,7 +106,6 @@ class Product extends Model
     
     protected function defaultPhotoUrl()
     {
-         
         return 'https://ui-avatars.com/api/?name='.urlencode($this->name).'&color=7F9CF5&background=EBF4FF';
     }    
  
@@ -155,11 +154,7 @@ class Product extends Model
         return $this->hasMany(SkuValue::class,'product_id');
     }    
   
-
-    
     public function comments(){
-
         return $this->hasMany(Comment::class,'product_id');
-
     }
 }

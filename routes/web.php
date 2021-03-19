@@ -59,6 +59,7 @@ Route::middleware(['log.route'])->group(function () {
             Route::get('/checkout/payment','Ecommerce\CheckOutController@PaymentMethod')->name('cart.PaymentMethod');   
             Route::post('/checkout/payment', 'Ecommerce\CheckOutController@CheckOut')->name('cart.checkout');
             Route::get('/checkout/success', 'Ecommerce\CheckOutController@CheckOutSuccess')->name('cart.success');
+
         });
 
         //////////////////////////////////////// MESSENGER ////////////////////////////////////////
@@ -113,6 +114,15 @@ Route::middleware(['log.route'])->group(function () {
 
                     Route::get('/trending', 'Admin\Silders\TrendingSliderController@edit')->name('trending.index');
                     Route::post('/trending', 'Admin\Silders\TrendingSliderController@update')->name('trending.store');
+
+                    Route::get('/multi-slider-a', 'Admin\Silders\MultiSliderAController@edit')->name('multiSlider.a');
+                    Route::post('//multi-slider-a', 'Admin\Silders\MultiSliderAController@update')->name('multiSlider.a');
+
+                    Route::get('/multi-slider-b', 'Admin\Silders\MultiSliderBController@edit')->name('multiSlider.b');
+                    Route::post('//multi-slider-b', 'Admin\Silders\MultiSliderBController@update')->name('multiSlider.b');
+
+                    Route::get('/multi-slider-c', 'Admin\Silders\MultiSliderCController@edit')->name('multiSlider.c');
+                    Route::post('//multi-slider-c', 'Admin\Silders\MultiSliderCController@update')->name('multiSlider.c');
                     
                 });                 
                 
