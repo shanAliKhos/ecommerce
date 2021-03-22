@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['mobileMenu', 'categories', 'subcategory'],
   components: {
     MobileNavLink: function MobileNavLink() {
-      return __webpack_require__.e(/*! import() */ 196).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
+      return __webpack_require__.e(/*! import() */ 199).then(__webpack_require__.bind(null, /*! ./MobileNavLink */ "./resources/js/Pages/Ecomerce/shared/Partials/components/MobileNavLink.vue"));
     }
   },
   computed: {

@@ -31,6 +31,7 @@ class CreateOrdersTable extends Migration
             $table->string('PostalCode');
             $table->string('PhoneNumber');
             $table->text('Notes')->nullable();            
+            $table->longText('api_response');
             $table->timestamps();
         });
     }

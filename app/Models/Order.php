@@ -26,6 +26,7 @@ class Order extends Model
         'PostalCode', 
         'PhoneNumber',
         'Notes',
+        'api_response',
     ];
  
  

@@ -91,7 +91,7 @@ class CheckOutController extends Controller
     }
 
     public function CheckOut(Request $request)
-    {           
+    {            
         $CartItems = session()->get('CartItems'); 
         if(!$CartItems){
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
@@ -181,6 +181,7 @@ class CheckOutController extends Controller
                 'PaymentStatus' => 1,                
                 'GrandTotal'=>$NewOrder['GrandTotal'],
                 'ItemCount'=>$NewOrder['ItemCount'],                
+                'api_response'=>json_encode($request->API_RESPONSE),                
             ]);
             foreach ($NewOrderItems as $key => $OrderItem) { 
   

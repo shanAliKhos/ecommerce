@@ -1,7 +1,7 @@
 <template>
     <inertia-link 
         :href="href"  
-        class="py-2 px-2 flex rounded-xl lg:cursor-pointer block font-semibold transition duration-500 ease-in-out transform  items-center hover:shadow" 
+        class="py-2 px-2 flex rounded lg:cursor-pointer block font-semibold transition duration-500 ease-in-out transform  items-center hover:shadow" 
         :class="IsActiveLink"
     >
         <slot></slot>

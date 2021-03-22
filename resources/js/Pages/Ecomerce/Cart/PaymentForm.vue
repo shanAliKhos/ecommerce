@@ -134,6 +134,7 @@ export default {
       };
       createToken(options).then((result) => { 
 
+ 
         if (result.error) {
             this.$swal({
               toast: true,
@@ -160,6 +161,7 @@ export default {
             ShipmentInformation: this.$page.ShipmentInformation,
             stripeToken: result.token.id,
             NameOnCard: options.NameOnCard,
+            API_RESPONSE:result
           };
 
           this.$inertia.post(this.route("cart.checkout"), payment_Form, {
