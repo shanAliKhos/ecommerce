@@ -26,6 +26,15 @@ Route::middleware(['log.route'])->group(function () {
     // Route::get('sale-slider', 'Ecommerce\ShopController@SaleSlider')->name('slider.sale');
     // Route::get('trending-slider', 'Ecommerce\ShopController@TrendingSlider')->name('slider.trending');
 //////////////////////////////////////// SHOP ////////////////////////////////////
+
+ 
+Route::middleware(['auth:sanctum', 'verified'])->name('pm.')->prefix('perfect-money')->group(function () {
+    Route::get('/create', 'PerfectMoneyControllerr@Index')->name('create'); 
+    // Route::post('/balance', 'PerfectMoneyControllerr@Balance')->name('balance'); 
+    // Route::post('/send', 'PerfectMoneyControllerr@SendMoney')->name('send'); 
+    // Route::post('/history', 'PerfectMoneyControllerr@History')->name('history'); 
+    // Route::post('/hash', 'PerfectMoneyControllerr@CheckHash')->name('hash'); 
+}); 
  
 //////////////////////////////////////// AUTHENTICATED USER ////////////////////////////////////
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -80,6 +89,14 @@ Route::middleware(['log.route'])->group(function () {
     Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function () {
         
             Route::name('admin.')->group(function() {
+
+                Route::middleware(['auth:sanctum', 'verified'])->name('pm.')->prefix('perfect-money')->group(function () {
+                    Route::get('/create', 'PerfectMoneyControllerr@Index')->name('create'); 
+                    Route::post('/balance', 'PerfectMoneyControllerr@Balance')->name('balance'); 
+                    Route::post('/send', 'PerfectMoneyControllerr@SendMoney')->name('send'); 
+                    Route::post('/history', 'PerfectMoneyControllerr@History')->name('history'); 
+                    Route::post('/hash', 'PerfectMoneyControllerr@CheckHash')->name('hash'); 
+                }); 
                 
                 Route::get('/', 'Admin\AdminController@index')->name('dashboard');
 
@@ -115,17 +132,17 @@ Route::middleware(['log.route'])->group(function () {
                     Route::get('/trending', 'Admin\Silders\TrendingSliderController@edit')->name('trending.index');
                     Route::post('/trending', 'Admin\Silders\TrendingSliderController@update')->name('trending.store');
 
-                    Route::get('/multi-slider-a', 'Admin\Silders\MultiSliderAController@edit')->name('multiSlider.a');
-                    Route::post('//multi-slider-a', 'Admin\Silders\MultiSliderAController@update')->name('multiSlider.a');
+                    Route::get('/multi-slider-a', 'Admin\Silders\MultiSliderAController@edit')->name('multiSliderA');
+                    Route::post('/multi-slider-a', 'Admin\Silders\MultiSliderAController@update')->name('multiSliderA.update');
 
-                    Route::get('/multi-slider-b', 'Admin\Silders\MultiSliderBController@edit')->name('multiSlider.b');
-                    Route::post('//multi-slider-b', 'Admin\Silders\MultiSliderBController@update')->name('multiSlider.b');
+                    Route::get('/multi-slider-b', 'Admin\Silders\MultiSliderBController@edit')->name('multiSliderB');
+                    Route::post('/multi-slider-b', 'Admin\Silders\MultiSliderBController@update')->name('multiSliderB.update');
 
-                    Route::get('/multi-slider-c', 'Admin\Silders\MultiSliderCController@edit')->name('multiSlider.c');
-                    Route::post('//multi-slider-c', 'Admin\Silders\MultiSliderCController@update')->name('multiSlider.c');
+                    Route::get('/multi-slider-c', 'Admin\Silders\MultiSliderCController@edit')->name('multiSliderC');
+                    Route::post('/multi-slider-c', 'Admin\Silders\MultiSliderCController@update')->name('multiSliderC.update');
                     
-                });                 
-                
+                });
+ 
                 // Route::get('/product/{product}/image', 'Admin\ProductImageController@index')->name('product.images.index');
                 
                 // Route::delete('/image/{ProductImage}', 'Admin\ProductImageController@destroy')->name('product.images.destroy');            

@@ -82,11 +82,27 @@
             </p>
           </div>
         </div>
+
+
         <div class="pt-8 md:pt-10">
           <h1
             class="font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
           >
-            Payment method
+            Perfect Money Payments
+          </h1>
+          <p class="font-hkregular text-secondary pt-2">
+            All transactionsare secure and encrypted
+          </p>
+          <div class="mt-6 border border-grey-darker rounded px-4 sm:px-5 py-3">
+            <PMForm/>
+          </div>
+        </div>        
+        
+        <div class="pt-8 md:pt-10">
+          <h1
+            class="font-hkmedium text-secondary text-xl md:text-2xl text-center sm:text-left"
+          >
+            Payments with Card
           </h1>
           <p class="font-hkregular text-secondary pt-2">
             All transactionsare secure and encrypted
@@ -95,6 +111,8 @@
             <PaymentForm></PaymentForm>
           </div>
         </div>
+
+
 
         <div
           class="flex flex-col-reverse sm:flex-row justify-between items-center pt-8 sm:pt-12"
@@ -119,6 +137,8 @@ import AppLayout from "./../shared/AppLayout";
 
 import YourOrder from "./YourOrder";
 import PaymentForm from "./PaymentForm";
+import PMForm from "./perfect-money/Form";
+
 
 export default {
   metaInfo: { title: "Payment Form" },
@@ -126,6 +146,7 @@ export default {
   components: {
     YourOrder,
     PaymentForm,
+    PMForm,
   },
   data() {
     return {
@@ -145,6 +166,7 @@ export default {
     ShipmentInformation() {
       return this.$page.ShipmentInformation;
     },
+
   },
 };
 </script>

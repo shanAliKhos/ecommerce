@@ -1,9 +1,195 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[54],{
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc&":
-/*!******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc& ***!
-  \******************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-glide-js */ "./node_modules/vue-glide-js/dist/vue-glide.common.js");
+/* harmony import */ var vue_glide_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_glide_js__WEBPACK_IMPORTED_MODULE_0__);
+var _components;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: (_components = {}, _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["Glide"]), _defineProperty(_components, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"].name, vue_glide_js__WEBPACK_IMPORTED_MODULE_0__["GlideSlide"]), _defineProperty(_components, "ShopProduct", function ShopProduct() {
+    return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./../Product/Product */ "./resources/js/Pages/Ecomerce/shared/Product/Product.vue"));
+  }), _components),
+  computed: {
+    TrendingSliderProducts: function TrendingSliderProducts() {
+      return this.$page.FeaturedSliders ? this.$page.FeaturedSliders.trending_slider : [];
+    },
+    SaleSliderProducts: function SaleSliderProducts() {
+      return this.$page.SaleSliders ? this.$page.SaleSliders.sale_slider : [];
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15,308 +201,355 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "lg:w-1/4" }, [
-    _c(
-      "p",
-      {
-        staticClass:
-          "font-butlerregular text-secondary text-2xl sm:text-3xl lg:text-4xl pb-6"
-      },
-      [_vm._v("My Account")]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "pl-3 flex flex-col" },
-      [
-        _vm.$page.user.is_admin
-          ? _c(
-              "inertia-link",
-              {
-                staticClass:
-                  "transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-                class: {
-                  "text-primary border-primary":
-                    _vm.$page.currentRouteName == "admin.dashboard",
-                  "font-hkregular text-grey-darkest":
-                    _vm.$page.currentRouteName != "admin.dashboard"
-                },
-                attrs: {
-                  href: _vm.route("admin.dashboard"),
-                  as: "button",
-                  type: "button"
-                }
-              },
-              [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-8 h-8 mr-2",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 20 20",
-                      fill: "currentColor"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        "fill-rule": "evenodd",
-                        d:
-                          "M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z",
-                        "clip-rule": "evenodd"
-                      }
-                    })
-                  ]
-                ),
-                _vm._v("                 \n        Adminstration\n        ")
-              ]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        (_vm.$page
-        ? !_vm.$page.user.is_admin
-        : false)
-          ? _c(
-              "inertia-link",
-              {
-                staticClass:
-                  "transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-                class: {
-                  "text-primary border-primary":
-                    _vm.$page.currentRouteName == "dashboard.index",
-                  "font-hkregular text-grey-darkest":
-                    _vm.$page.currentRouteName != "dashboard.index"
-                },
-                attrs: {
-                  href: _vm.route("dashboard.index"),
-                  "preserve-scroll": "",
-                  "preserve-state": "",
-                  as: "button",
-                  type: "button"
-                }
-              },
-              [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-8 h-8 mr-2",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      fill: "none",
-                      viewBox: "0 0 24 24",
-                      stroke: "currentColor"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        d:
-                          "M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
-                      }
-                    })
-                  ]
-                ),
-                _vm._v("\n        Dashboard\n        ")
-              ]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _c(
-          "inertia-link",
-          {
-            staticClass:
-              "transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-            class: {
-              "text-primary border-primary":
-                _vm.$page.currentRouteName == "dashboard.order",
-              "font-hkregular text-grey-darkest":
-                _vm.$page.currentRouteName != "dashboard.order"
-            },
-            attrs: {
-              href: _vm.route("dashboard.order"),
-              "preserve-scroll": "",
-              "preserve-state": "",
-              as: "button",
-              type: "button"
-            }
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 mr-2",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  fill: "none",
-                  viewBox: "0 0 24 24",
-                  stroke: "currentColor"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    d:
-                      "M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"
-                  }
-                })
-              ]
-            ),
-            _vm._v("            \n\n        Orders\n        ")
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "inertia-link",
-          {
-            staticClass:
-              "transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-            class: {
-              "text-primary border-primary":
-                _vm.$page.currentRouteName == "dashboard.wishlist",
-              "font-hkregular text-grey-darkest":
-                _vm.$page.currentRouteName != "dashboard.wishlist"
-            },
-            attrs: {
-              href: _vm.route("dashboard.wishlist"),
-              "preserve-scroll": "",
-              "preserve-state": "",
-              as: "button",
-              type: "button"
-            }
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 mr-2",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  fill: "none",
-                  viewBox: "0 0 24 24",
-                  stroke: "currentColor"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    d:
-                      "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  }
-                })
-              ]
-            ),
-            _vm._v("                \n        Wishlist\n        ")
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "inertia-link",
-          {
-            staticClass:
-              "transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-            class: {
-              "text-primary border-primary":
-                _vm.$page.currentRouteName == "profile.show",
-              "font-hkregular text-grey-darkest":
-                _vm.$page.currentRouteName != "profile.show"
-            },
-            attrs: {
-              href: _vm.route("profile.show"),
-              "preserve-scroll": "",
-              "preserve-state": "",
-              as: "button",
-              type: "button"
-            }
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 mr-2",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  fill: "none",
-                  viewBox: "0 0 24 24",
-                  stroke: "currentColor"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    d:
-                      "M16 7a4 4 0 11-8 0 4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  }
-                })
-              ]
-            ),
-            _vm._v("                \n        Account Details\n        ")
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "inertia-link",
-          {
-            staticClass:
-              "font-hkregular text-grey-darkest transition-all hover:font-hkbold hover:text-primary px-4 py-3 border-l-2 border-primary-lighter hover:border-primary inline-flex items-center",
-            attrs: {
-              href: _vm.route("logout"),
-              method: "post",
-              as: "button",
-              type: "button"
-            }
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 mr-2",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20",
-                  fill: "currentColor"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    "fill-rule": "evenodd",
-                    d:
-                      "M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z",
-                    "clip-rule": "evenodd"
-                  }
-                })
-              ]
-            ),
-            _vm._v("                 \n        Logout\n        ")
-          ]
-        )
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    {
+      staticClass: "w-full relative",
+      class: {
+        "bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 ": true
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-2/3 md:max-w-screen-sm lg:w-5/6 lg:max-w-full xl:w-5/6 xxl:max-w-screen-xxl mx-auto lg:ml-auto lg:mr-10 xl:mr-16 xxl:mx-auto relative z-10"
+        },
+        [
+          _c("div", { staticClass: "py-16" }, [
+            _c("div", { staticClass: "ml-0 flex justify-between" }, [
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4  " },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        _vm._l(_vm.SaleSliderProducts, function(
+                          Product,
+                          ProductIndex
+                        ) {
+                          return _c(
+                            "vue-glide-slide",
+                            { key: ProductIndex },
+                            [
+                              _c("shop-product", {
+                                staticClass: "relative mt-2 mb-5 pb-2 z-30 ",
+                                attrs: { Product: Product }
+                              })
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "pb-16" }, [
+            _c("div", { staticClass: "ml-auto flex justify-between" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4" },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        _vm._l(_vm.TrendingSliderProducts, function(
+                          Product,
+                          ProductIndex
+                        ) {
+                          return _c(
+                            "vue-glide-slide",
+                            { key: ProductIndex },
+                            [
+                              _c("shop-product", {
+                                staticClass: "relative mt-2 mb-5 pb-2 z-30 ",
+                                attrs: { Product: Product }
+                              })
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "pb-16" }, [
+            _c("div", { staticClass: "ml-0 flex justify-between" }, [
+              _c(
+                "div",
+                { staticClass: "hidden lg:block w-3/4 bg-white shadow-2xl" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "py-12 px-4  " },
+                    [
+                      _c(
+                        "vue-glide",
+                        {
+                          attrs: {
+                            type: "carousel",
+                            perView: 3,
+                            hoverpause: true,
+                            gap: 30,
+                            animationDuration: 1000,
+                            breakpoints: {
+                              1024: {
+                                perView: 2
+                              }
+                            },
+                            autoplay: 2000
+                          }
+                        },
+                        _vm._l(_vm.SaleSliderProducts, function(
+                          Product,
+                          ProductIndex
+                        ) {
+                          return _c(
+                            "vue-glide-slide",
+                            { key: ProductIndex },
+                            [
+                              _c("shop-product", {
+                                staticClass: "relative mt-2 mb-5 pb-2 z-30 ",
+                                attrs: { Product: Product }
+                              })
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "divide-y divide-blue-300" }, [
-      _c("div", { staticClass: "text-center py-2" })
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pl-6 xl:pl-8" }, [
+      _c("div", { staticClass: "text-right" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v(" New season, matching shoes ")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v(" Featured Collection ")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14",
+          staticStyle: {
+            "background-image": "url('/img/product/product (14).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group transition-opacity"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pr-6 xl:pr-8 " }, [
+      _c("div", { staticClass: "text-left" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v(" Stylish Backpacks, Only For You")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14 relative",
+          staticStyle: {
+            "background-image": "url('/img/product/product (21).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/3 lg:pl-6 xl:pl-8" }, [
+      _c("div", { staticClass: "text-right" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "font-bold text-white text-2xl lg:text-xl xl:text-2xl xxl:text-3xl tracking-wide"
+          },
+          [_vm._v("Summer? You need chick sunglasses")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-regular text-gray-50 text-lg pt-1" }, [
+          _vm._v("Featured Collection")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "relative group shadow-2xl" }, [
+        _c("div", {
+          staticClass:
+            "h-80 sm:h-90 lg:h-76 ml-auto mb-auto bg-center bg-no-repeat bg-cover mt-14",
+          staticStyle: {
+            "background-image": "url('/img/product/product (22).jpg')"
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute inset-0 bg-secondary opacity-0 group-hover:opacity-75 pointer-events-none group-hover:pointer-events-auto   transition-all overflow-hidden"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 mx-auto group"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-primary hover:bg-primary-light font-hksemibold transition-colors text-sm text-white px-5 md:px-8 py-4 md:py-5 rounded uppercase focus:outline-none inline-block tracking-wide",
+                attrs: { href: "/" }
+              },
+              [_vm._v("View All Product")]
+            )
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -326,27 +559,29 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue ***!
-  \*****************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue ***!
+  \***************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DashboardNavigation.vue?vue&type=template&id=c67911cc& */ "./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingMultiSlider.vue?vue&type=template&id=7530c476& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&");
+/* harmony import */ var _TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingMultiSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -356,24 +591,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue"
+component.options.__file = "resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc&":
-/*!************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc& ***!
-  \************************************************************************************************************/
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingMultiSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476& ***!
+  \**********************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./DashboardNavigation.vue?vue&type=template&id=c67911cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Partials/DashboardNavigation.vue?vue&type=template&id=c67911cc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingMultiSlider.vue?vue&type=template&id=7530c476& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Ecomerce/shared/Slider/TrendingMultiSlider.vue?vue&type=template&id=7530c476&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardNavigation_vue_vue_type_template_id_c67911cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingMultiSlider_vue_vue_type_template_id_7530c476___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

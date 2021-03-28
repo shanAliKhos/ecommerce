@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[67],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,13 +87,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -101,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    title: 'Trending Slider'
+    title: 'SaleSlider'
   },
   layout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
@@ -114,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        TrendingProducts: this.$page.slider ? this.$page.slider.trending_slider : null
+        SaleProducts: this.$page.slider ? this.$page.slider.sale_slider : null
       },
       sending: false
     };
@@ -125,8 +118,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       var formData = new FormData();
-      formData.append("TrendingProducts", JSON.stringify(self.form.TrendingProducts) || '');
-      self.$inertia.post(route('admin.slider.trending.store'), formData, {
+      formData.append("SaleProducts", JSON.stringify(self.form.SaleProducts) || '');
+      self.$inertia.post(route('admin.slider.sale.store'), formData, {
         preserveState: true,
         onStart: function onStart() {
           return _this.sending = true;
@@ -138,11 +131,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    ProductsOnTrending: function ProductsOnTrending() {
-      return this.$page.trending_products;
+    ProductsOnSale: function ProductsOnSale() {
+      return this.$page.sale_products;
     },
     SliderProducts: function SliderProducts() {
-      return this.form.TrendingProducts;
+      return this.form.SaleProducts;
     }
   },
   mounted: function mounted() {
@@ -352,10 +345,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec& ***!
-  \**************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -439,7 +432,7 @@ var render = function() {
                 {
                   staticClass: "pb-6 flex font-semibold text-xl text-gray-400"
                 },
-                [_vm._v("Trending Slider")]
+                [_vm._v("Sale Slider")]
               ),
               _vm._v(" "),
               _c("div", { staticClass: "md:flex" }, [
@@ -453,7 +446,7 @@ var render = function() {
                       "label",
                       {
                         staticClass:
-                          "z-30 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
+                          "z-50 absolute top-0 right-3 bg-blue-200 px-1 py-0 text-xs font-bold uppercase",
                         attrs: { for: "weight" }
                       },
                       [_vm._v("Products")]
@@ -465,28 +458,28 @@ var render = function() {
                         "deselect-label": "Can't remove this value",
                         "track-by": "name",
                         label: "name",
-                        placeholder: "Select from Trending Products",
-                        options: _vm.ProductsOnTrending,
+                        placeholder: "Select Produt Sale",
+                        options: _vm.ProductsOnSale,
                         searchable: true,
                         multiple: true,
                         "close-on-select": false,
                         "clear-on-select": false,
-                        "allow-empty": false
+                        "allow-empty": true
                       },
                       model: {
-                        value: _vm.form.TrendingProducts,
+                        value: _vm.form.SaleProducts,
                         callback: function($$v) {
-                          _vm.$set(_vm.form, "TrendingProducts", $$v)
+                          _vm.$set(_vm.form, "SaleProducts", $$v)
                         },
-                        expression: "form.TrendingProducts"
+                        expression: "form.SaleProducts"
                       }
                     }),
                     _vm._v(" "),
-                    _vm.$page.errors.TrendingProducts
+                    _vm.$page.errors.SaleProducts
                       ? _c(
                           "p",
                           { staticClass: "text-red-500 text-xs italic" },
-                          [_vm._v(_vm._s(_vm.$page.errors.TrendingProducts))]
+                          [_vm._v(_vm._s(_vm.$page.errors.SaleProducts))]
                         )
                       : _vm._e()
                   ],
@@ -549,21 +542,17 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "flex flex-wrap justify-between pb-6 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5 -mx-4 mt-10"
+                    "flex flex-wrap justify-between pb-5 md:pb-5 sm:-px-3 md:-mx-5 -mx-4"
                 },
-                _vm._l(_vm.SliderProducts, function(Product, ProductIndex) {
-                  return _c(
-                    "div",
-                    {
-                      key: ProductIndex,
-                      staticClass:
-                        "w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block"
-                    },
-                    [_c("shop-product", { attrs: { Product: Product } })],
-                    1
-                  )
+                _vm._l(_vm.SliderProducts, function(Product, index) {
+                  return _c("shop-product", {
+                    key: index,
+                    staticClass:
+                      "w-1/2 lg:w-1/5 xl:w-1/5 relative group pb-12 lg:last:hidden xl:last:block",
+                    attrs: { Product: Product }
+                  })
                 }),
-                0
+                1
               )
             ]
           )
@@ -579,7 +568,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "flex items-center" }, [
       _c("a", { staticClass: "text-gray-600", attrs: { href: "#" } }, [
-        _vm._v("Trending Slider")
+        _vm._v("Sale Slider")
       ])
     ])
   }
@@ -876,17 +865,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue ***!
-  \*************************************************************/
+/***/ "./resources/js/Pages/Admin/sliders/SaleSlider.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Admin/sliders/SaleSlider.vue ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=template&id=3892abec& */ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&");
-/* harmony import */ var _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrendingSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&");
+/* harmony import */ var _SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SaleSlider.vue?vue&type=template&id=0f0988e4& */ "./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4&");
+/* harmony import */ var _SaleSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SaleSlider.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -896,9 +885,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _SaleSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -908,38 +897,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Admin/sliders/TrendingSlider.vue"
+component.options.__file = "resources/js/Pages/Admin/sliders/SaleSlider.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************/
+/***/ "./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SaleSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./SaleSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SaleSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec& ***!
-  \********************************************************************************************/
+/***/ "./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4& ***!
+  \****************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TrendingSlider.vue?vue&type=template&id=3892abec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/TrendingSlider.vue?vue&type=template&id=3892abec&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./SaleSlider.vue?vue&type=template&id=0f0988e4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Admin/sliders/SaleSlider.vue?vue&type=template&id=0f0988e4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrendingSlider_vue_vue_type_template_id_3892abec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SaleSlider_vue_vue_type_template_id_0f0988e4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

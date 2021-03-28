@@ -12,6 +12,8 @@ use App\Models\Setting;
 use App\Models\Order;
 use Illuminate\Support\Str; 
 use App\Jobs\SendCheckoutEmail; 
+use App\Payments\PerfectMoney; 
+
 use Illuminate\Support\Facades\Log;
 
 
@@ -86,7 +88,10 @@ class CheckOutController extends Controller
             return redirect()->route('shop.index')->with('info','Okay ! Add some items to cart');
         }             
         $ShipmentInformation = session()->get('ShipmentInformation');  
-        return Inertia::render('Ecomerce/Cart/PaymentMethod',compact('ShipmentInformation'));         
+
+        $PerfectMoney = PerfectMoney::render();
+
+        return Inertia::render('Ecomerce/Cart/PaymentMethod',compact('ShipmentInformation','PerfectMoney'));         
  
     }
 
